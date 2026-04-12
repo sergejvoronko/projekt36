@@ -28,22 +28,33 @@ const tools = [
   <section class="tools-section">
     <div class="inner">
       <div class="tools-grid">
-        {tools.map(t => (
-          t.ready
-            ? <a href={t.href} class="tool-card">
-                <div class="tool-badge">{t.badge}</div>
-                <h3 class="tool-title">{t.title}</h3>
-                <p class="tool-desc">{t.desc}</p>
-                <span class="tool-cta">Open →</span>
-              </a>
-            : <div class="tool-card soon">
+        {tools.filter(t => t.ready).map(t => (
+          <a href={t.href} class="tool-card">
+            <div class="tool-badge">{t.badge}</div>
+            <h3 class="tool-title">{t.title}</h3>
+            <p class="tool-desc">{t.desc}</p>
+            <span class="tool-cta">Open →</span>
+          </a>
+        ))}
+      </div>
+
+      {tools.some(t => !t.ready) && (
+        <div class="coming-soon-section">
+          <div class="coming-soon-header">
+            <span class="coming-soon-label">In development</span>
+          </div>
+          <div class="tools-grid soon-grid">
+            {tools.filter(t => !t.ready).map(t => (
+              <div class="tool-card soon">
                 <div class="tool-badge">{t.badge}</div>
                 <h3 class="tool-title">{t.title}</h3>
                 <p class="tool-desc">{t.desc}</p>
                 <span class="tool-soon">Coming soon</span>
               </div>
-        ))}
-      </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   </section>
 </BaseLayout>
@@ -68,13 +79,36 @@ const tools = [
     transition: border-color 0.15s, border-left-color 0.15s;
   }
   .tool-card:not(.soon):hover { border-left-color: var(--accent); border-color: var(--border-mid); }
-  .tool-card.soon { opacity: 0.5; cursor: default; }
+  .tool-card.soon { opacity: 0.45; cursor: default; }
+
+  .coming-soon-section { margin-top: 3rem; }
+  .coming-soon-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+  .coming-soon-header::before,
+  .coming-soon-header::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+  .coming-soon-label {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    white-space: nowrap;
+  }
 
   .tool-badge {
     display: inline-block; font-family: var(--font-mono); font-size: 0.62rem;
     font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
     color: var(--accent); background: var(--accent-dim);
-    border: 1px solid rgba(87,141,255,0.2); padding: 0.18em 0.55em;
+    border: 1px solid rgba(212,149,42,0.25); padding: 0.18em 0.55em;
     margin-bottom: 0.8rem;
   }
   .tool-title { font-size: 0.95rem; font-weight: 600; color: var(--text); margin-bottom: 0.45rem; }
