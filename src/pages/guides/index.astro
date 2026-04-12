@@ -16,6 +16,13 @@ const pillars = [
 const byPillar = Object.fromEntries(
   pillars.map(p => [p.key, articles.filter(a => a.data.pillar === p.key)])
 );
+
+const pillarImages: Record<string, string> = {
+  engine:     '/images/blueprint-m50-engine.png',
+  swap:       '/images/blueprint-m52-anatomy.png',
+  suspension: '/images/blueprint-front-suspension.png',
+  reference:  '/images/blueprint-rear-suspension.png',
+};
 ---
 
 <BaseLayout
@@ -47,14 +54,14 @@ const byPillar = Object.fromEntries(
 
   <!-- Articles by pillar -->
   {pillars.map(p => byPillar[p.key]?.length > 0 && (
-    <section class="pillar-section">
+    <section class="pillar-section" style={pillarImages[p.key] ? `--pillar-bg: url(${pillarImages[p.key]})` : ''}>
       <div class="pillar-head">
         <div class="pillar-title">{p.label}</div>
         <div class="pillar-desc">{p.desc}</div>
       </div>
       <div class="articles-list">
         {byPillar[p.key].map(a => (
-          <a href={`/guides/${a.slug}`} class="article-row">
+          <a href={`/guides/${a.id}`} class="article-row">
             <div class="article-info">
               <h3 class="article-title">{a.data.title}</h3>
               <p class="article-desc">{a.data.description}</p>
@@ -119,7 +126,25 @@ const byPillar = Object.fromEntries(
   .sb-cta { font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent); flex-shrink: 0; white-space: nowrap; }
 
   /* Pillar sections */
-  .pillar-section { margin-bottom: 3rem; }
+  .pillar-section {
+    margin-bottom: 3rem;
+    position: relative;
+  }
+  .pillar-section[style] {
+    overflow: hidden;
+  }
+  .pillar-section[style]::after {
+    content: '';
+    position: absolute;
+    top: 0; right: -1rem; bottom: 0;
+    width: 260px;
+    background-image: var(--pillar-bg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center right;
+    opacity: 0.04;
+    pointer-events: none;
+  }
   .pillar-head {
     display: flex;
     align-items: baseline;
