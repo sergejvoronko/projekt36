@@ -1,0 +1,165 @@
+---
+// src/layouts/BaseLayout.astro
+interface Props {
+  title:        string;
+  description?: string;
+  heroImage?:   string;
+}
+const {
+  title,
+  description = 'BMW E36 build journal, retrofit guides, and practical tools for E36 owners.',
+  heroImage,
+} = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  {heroImage && <meta property="og:image" content={heroImage} />}
+  <meta property="og:title"       content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content={canonical} />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="sitemap" href="/sitemap-index.xml" />
+</head>
+<body>
+  <slot name="nav">
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="/" class="site-logo">
+          <span class="logo-mark">///</span> projekt36
+        </a>
+        <nav class="site-nav">
+          <a href="/build">Build</a>
+          <a href="/guides">Guides</a>
+          <a href="/tools">Tools</a>
+          <a href="/gallery">Gallery</a>
+          <a href="/about">About</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle menu" id="nav-toggle">☰</button>
+      </div>
+    </header>
+  </slot>
+
+  <slot />
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark">///</span> projekt36.com
+        <p class="footer-sub">BMW E36 build journal · retrofit guides · practical tools</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="/build">Build</a>
+        <a href="/guides">Guides</a>
+        <a href="/tools">Tools</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/about">About</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
+
+<style is:global>
+  @import '/src/styles/global.css';
+</style>
+
+<style>
+  /* Header */
+  .site-header {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(11,14,18,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .header-inner {
+    max-width: var(--wide-w);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .site-logo {
+    font-family: var(--font-mono);
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+  }
+  .logo-mark { color: var(--accent); }
+  .site-nav {
+    display: flex;
+    gap: 1.75rem;
+    margin-left: auto;
+  }
+  .site-nav a {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--text-mid);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    transition: color 0.15s;
+  }
+  .site-nav a:hover { color: var(--text); }
+  .nav-toggle { display: none; background: none; border: none; color: var(--text-mid); font-size: 1.2rem; cursor: pointer; margin-left: auto; }
+
+  @media (max-width: 680px) {
+    .site-nav { display: none; }
+    .nav-toggle { display: block; }
+  }
+
+  /* Footer */
+  .site-footer {
+    border-top: 1px solid var(--border);
+    padding: 3rem 1.5rem;
+    margin-top: 5rem;
+  }
+  .footer-inner {
+    max-width: var(--wide-w);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .footer-brand {
+    font-family: var(--font-mono);
+    font-size: 0.88rem;
+    color: var(--text);
+    font-weight: 600;
+  }
+  .footer-sub {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    margin-top: 0.4rem;
+    font-weight: 400;
+  }
+  .footer-nav {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .footer-nav a {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .footer-nav a:hover { color: var(--accent); }
+</style>

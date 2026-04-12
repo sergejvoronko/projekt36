@@ -1,0 +1,109 @@
+/* projekt36.com — global design system
+   Dark BMW-technical aesthetic: near-black bg, steel borders, blue accent.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Canvas */
+  --bg:        #0b0e12;
+  --bg2:       #11161c;
+  --bg3:       #171d25;
+
+  /* Borders */
+  --border:      #2c3642;
+  --border-mid:  #3a4756;
+
+  /* Text */
+  --text:        #eff3f8;
+  --text-mid:    #93a0ae;
+  --text-dim:    #5a6a7a;
+
+  /* Accent */
+  --accent:       #578dff;
+  --accent-soft:  rgba(87, 141, 255, 0.14);
+  --accent-dim:   rgba(87, 141, 255, 0.08);
+
+  /* Status */
+  --green:   #38c793;
+  --amber:   #f0b24b;
+  --red:     #ff7c87;
+
+  /* Typography */
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', 'Fira Code', monospace;
+  --font-display: 'Inter', system-ui, sans-serif;
+
+  /* Layout */
+  --wide-w: 1160px;
+  --content-w: 760px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--text);
+  line-height: 1.15;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--text); }
+
+img { max-width: 100%; height: auto; display: block; }
+
+code, pre {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+}
+
+pre {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  padding: 1.25rem;
+  overflow-x: auto;
+  border-radius: 4px;
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 0.65rem 1.4rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s, opacity 0.15s;
+}
+.btn-primary:hover { background: #6fa0ff; color: #fff; }
+
+.btn-outline {
+  display: inline-block;
+  background: transparent;
+  color: var(--text-mid);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 0.65rem 1.4rem;
+  text-decoration: none;
+  border: 1px solid var(--border-mid);
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); }

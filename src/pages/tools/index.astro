@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const tools = [
+  { title: 'Wheel Fitment Calculator', badge: 'Calculator', desc: 'Compare wheel width, ET, tire size, and spacers.', href: '/tools/wheel-fitment', ready: true },
+  { title: 'Tire Size Compare',        badge: 'Calculator', desc: 'Compare two tire sizes — diameter, sidewall, speedo diff.', href: '/tools/tire-size', ready: false },
+  { title: 'Offset & Spacer Tool',     badge: 'Calculator', desc: 'See how spacers and offset changes affect stance.', href: '/tools/offset-spacer', ready: false },
+  { title: 'M43 → M50 Swap Checklist',badge: 'Swap',       desc: 'Parts, wiring, cooling, exhaust, first startup.', href: '/tools/m43-to-m50-swap', ready: false },
+  { title: 'Build Budget Planner',     badge: 'Planning',   desc: 'Estimate costs across all build modules.', href: '/tools/build-budget', ready: false },
+  { title: 'Build Progress Tracker',   badge: 'Planning',   desc: 'Break your build into modules, track status.', href: '/tools/progress-tracker', ready: false },
+  { title: 'Electric Windows Retrofit',badge: 'Retrofit',   desc: 'Switches, regulators, wiring, install progress.', href: '/tools/electric-windows-retrofit', ready: false },
+  { title: 'Climate Control Retrofit', badge: 'Retrofit',   desc: 'Stages and parts for climate control conversion.', href: '/tools/climate-control-retrofit', ready: false },
+  { title: 'Sound Deadening Planner',  badge: 'Retrofit',   desc: 'Floor, trunk, doors, firewall, rear sections.', href: '/tools/sound-deadening', ready: false },
+  { title: 'Air Suspension Checklist', badge: 'Suspension', desc: 'Management, bags, compressor, tank, lines, wiring.', href: '/tools/air-suspension', ready: false },
+  { title: 'INPA Check Log',           badge: 'Diagnostics',desc: 'Store notes from scans, active and resolved faults.', href: '/tools/inpa-log', ready: false },
+  { title: 'Restoration Checklist',    badge: 'Planning',   desc: 'Rust, trim, paint, interior, electrical, engine.', href: '/tools/restoration-checklist', ready: false },
+];
+---
+
+<BaseLayout title="BMW E36 Tools — projekt36" description="Practical calculators, checklists, and planners for BMW E36 owners.">
+  <section class="tools-hero">
+    <div class="inner">
+      <div class="hero-label"><span class="sh-host">root@e36</span><span class="sh-sep">:~#</span> ls -la tools/</div>
+      <h1 class="hero-title">BMW E36 Tools</h1>
+      <p class="hero-sub">Practical tools for fitment, swaps, retrofits, budgeting, and build planning. Built around real E36 projects.</p>
+    </div>
+  </section>
+
+  <section class="tools-section">
+    <div class="inner">
+      <div class="tools-grid">
+        {tools.map(t => (
+          t.ready
+            ? <a href={t.href} class="tool-card">
+                <div class="tool-badge">{t.badge}</div>
+                <h3 class="tool-title">{t.title}</h3>
+                <p class="tool-desc">{t.desc}</p>
+                <span class="tool-cta">Open →</span>
+              </a>
+            : <div class="tool-card soon">
+                <div class="tool-badge">{t.badge}</div>
+                <h3 class="tool-title">{t.title}</h3>
+                <p class="tool-desc">{t.desc}</p>
+                <span class="tool-soon">Coming soon</span>
+              </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tools-hero { padding: 5rem 1.5rem 3rem; background: var(--bg2); border-bottom: 1px solid var(--border); }
+  .inner { max-width: var(--wide-w); margin: 0 auto; }
+  .hero-label { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-dim); margin-bottom: 1rem; }
+  .sh-host { color: var(--accent); }
+  .sh-sep { color: var(--text-dim); }
+  .hero-title { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; margin-bottom: 0.75rem; }
+  .hero-sub { font-size: 1rem; color: var(--text-mid); max-width: 56ch; line-height: 1.7; }
+
+  .tools-section { padding: 3rem 1.5rem 5rem; }
+  .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+
+  .tool-card {
+    display: block; padding: 1.5rem;
+    background: var(--bg2); border: 1px solid var(--border);
+    border-left: 3px solid transparent;
+    text-decoration: none;
+    transition: border-color 0.15s, border-left-color 0.15s;
+  }
+  .tool-card:not(.soon):hover { border-left-color: var(--accent); border-color: var(--border-mid); }
+  .tool-card.soon { opacity: 0.5; cursor: default; }
+
+  .tool-badge {
+    display: inline-block; font-family: var(--font-mono); font-size: 0.62rem;
+    font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--accent); background: var(--accent-dim);
+    border: 1px solid rgba(87,141,255,0.2); padding: 0.18em 0.55em;
+    margin-bottom: 0.8rem;
+  }
+  .tool-title { font-size: 0.95rem; font-weight: 600; color: var(--text); margin-bottom: 0.45rem; }
+  .tool-card:not(.soon):hover .tool-title { color: var(--accent); }
+  .tool-desc { font-size: 0.82rem; color: var(--text-mid); line-height: 1.55; margin-bottom: 0.75rem; }
+  .tool-cta { font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent); opacity: 0; transition: opacity 0.15s; }
+  .tool-card:hover .tool-cta { opacity: 1; }
+  .tool-soon { font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-dim); }
+</style>

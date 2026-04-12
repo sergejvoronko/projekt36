@@ -1,0 +1,725 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Wheel Fitment Calculator — BMW E36 — projekt36"
+  description="Compare wheel width, ET, spacers, and tire size for your BMW E36. Estimate inner clearance and outer poke changes."
+>
+  <div class="tool-page">
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      <a href="/tools">Tools</a>
+      <span class="sep">/</span>
+      <span>Wheel Fitment Calculator</span>
+    </div>
+
+    <!-- Hero -->
+    <section class="tool-hero">
+      <div class="tool-hero-inner">
+        <div class="hero-label">
+          <span class="sh-host">root@e36</span><span class="sh-sep">:~#</span>
+          <span class="sh-cmd">./wheel-fitment --interactive</span>
+        </div>
+        <span class="badge">Calculator</span>
+        <h1 class="tool-title">Wheel Fitment Calculator</h1>
+        <p class="tool-lead">
+          Compare your current and new wheel setup — ET, spacers, tire size. Calculates inner clearance change,
+          outer poke, effective offset, and tire diameter difference.
+        </p>
+        <div class="hero-btns">
+          <button id="loadDemo" class="btn-primary">Load demo setup</button>
+          <button id="resetAll" class="btn-outline">Reset</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calculator layout -->
+    <section class="calc-layout">
+      <!-- Left: inputs -->
+      <div class="inputs-col">
+
+        <!-- Current setup -->
+        <div class="card">
+          <div class="card-head">
+            <h2 class="card-title">Current setup</h2>
+          </div>
+          <div class="form-grid">
+            <label class="field">
+              <span class="field-label">Wheel width (in)</span>
+              <input type="number" step="0.5" id="cWidth" placeholder="7.5" class="field-input" />
+            </label>
+            <label class="field">
+              <span class="field-label">ET / offset (mm)</span>
+              <input type="number" step="1" id="cEt" placeholder="41" class="field-input" />
+            </label>
+            <label class="field">
+              <span class="field-label">Spacer (mm)</span>
+              <input type="number" step="1" min="0" id="cSpacer" placeholder="0" class="field-input" />
+            </label>
+            <label class="field">
+              <span class="field-label">Wheel diameter (in)</span>
+              <input type="number" step="1" id="cDiam" placeholder="16" class="field-input" />
+            </label>
+            <label class="field">
+              <span class="field-label">Tire width (mm)</span>
+              <input type="number" step="1" id="cTireW" placeholder="205" class="field-input" />
+            </label>
+            <label class="field">
+              <span class="field-label">Tire profile (%)</span>
+              <input type="number" step="1" id="cTireP" placeholder="55" class="field-input" />
+            </label>
+          </div>
+        </div>
+
+        <!-- New setup -->
+        <div class="card">
+          <div class="card-head">
+            <h2 class="card-title">New setup</h2>
+          </div>
+          <div class="form-grid">
+            <label class="field">
+              <span class="field-label">Wheel width (in)</span>
+              <input type="number" step="0.5" id="nWidth" placeholder="8.5" class="field-input" />
+            </label>
+            <label class="field">
+              <span class="field-label">ET / offset (mm)</span>
+              <input type="number" step="1" id="nEt" placeholder="35" class="field-input" />
+            </label>
+            <label class="field">
+              <span class="field-label">Spacer (mm)</span>
+              <input type="number" step="1" min="0" id="nSpacer" placeholder="0" class="field-input" />
+            </label>
+            <label class="field">
+              <span class="field-label">Wheel diameter (in)</span>
+              <input type="number" step="1" id="nDiam" placeholder="17" class="field-input" />
+            </label>
+            <label class="field">
+              <span class="field-label">Tire width (mm)</span>
+              <input type="number" step="1" id="nTireW" placeholder="225" class="field-input" />
+            </label>
+            <label class="field">
+              <span class="field-label">Tire profile (%)</span>
+              <input type="number" step="1" id="nTireP" placeholder="45" class="field-input" />
+            </label>
+          </div>
+        </div>
+
+        <!-- Context -->
+        <div class="card">
+          <div class="card-head">
+            <h2 class="card-title">Fitment context</h2>
+          </div>
+          <div class="form-grid">
+            <label class="field">
+              <span class="field-label">Axle</span>
+              <select id="axle" class="field-input">
+                <option value="front">Front</option>
+                <option value="rear">Rear</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="field-label">Lowered</span>
+              <select id="lowered" class="field-input">
+                <option value="false">No</option>
+                <option value="true">Yes</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="field-label">Rolled fenders</span>
+              <select id="rolled" class="field-input">
+                <option value="false">No</option>
+                <option value="true">Yes</option>
+              </select>
+            </label>
+          </div>
+          <div class="action-row">
+            <button id="calculate" class="btn-primary">Calculate fitment</button>
+            <button id="resetForm" class="btn-outline">Reset form</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: results -->
+      <aside class="results-col">
+
+        <!-- Result summary -->
+        <div class="card" id="resultCard">
+          <div class="card-head">
+            <h2 class="card-title">Result summary</h2>
+            <span class="status-dot" id="statusDot">Ready</span>
+          </div>
+          <div class="metrics-grid">
+            <div class="metric">
+              <span class="metric-label">Inner clearance change</span>
+              <strong class="metric-val" id="innerChange">—</strong>
+              <small class="metric-hint" id="innerHint">Fill in both setups to calculate.</small>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Outer poke change</span>
+              <strong class="metric-val" id="outerChange">—</strong>
+              <small class="metric-hint" id="outerHint">Fill in both setups to calculate.</small>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Current effective ET</span>
+              <strong class="metric-val" id="cEffET">—</strong>
+            </div>
+            <div class="metric">
+              <span class="metric-label">New effective ET</span>
+              <strong class="metric-val" id="nEffET">—</strong>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Tire diameter Δ</span>
+              <strong class="metric-val" id="diamDiff">—</strong>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Diameter % diff</span>
+              <strong class="metric-val" id="pctDiff">—</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual comparison -->
+        <div class="card">
+          <div class="card-head">
+            <h2 class="card-title">Visual comparison</h2>
+          </div>
+          <div class="visual-wrap">
+            <div class="visual-labels">
+              <span>Suspension side</span>
+              <span>Fender side</span>
+            </div>
+            <div class="visual-track" id="visualTrack">
+              <div class="visual-hub"></div>
+              <div class="visual-bar current-bar" id="vCurrent"></div>
+              <div class="visual-bar new-bar" id="vNew"></div>
+              <div class="visual-fender"></div>
+            </div>
+            <div class="visual-legend">
+              <span class="legend-item current-legend">Current</span>
+              <span class="legend-item new-legend">New</span>
+            </div>
+            <p class="visual-note">Simple visual guide — not a precise geometry model.</p>
+          </div>
+        </div>
+
+        <!-- Fitment notes -->
+        <div class="card">
+          <div class="card-head">
+            <h2 class="card-title">Fitment notes</h2>
+          </div>
+          <ul class="notes-list" id="notesList">
+            <li class="note-item note-info">Fill in both setups to see fitment hints.</li>
+          </ul>
+        </div>
+
+      </aside>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .tool-page {
+    max-width: var(--wide-w);
+    margin: 0 auto;
+    padding: 2rem 1.5rem 5rem;
+  }
+
+  /* Breadcrumb */
+  .breadcrumb {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+  }
+  .breadcrumb a { color: var(--text-dim); transition: color 0.15s; }
+  .breadcrumb a:hover { color: var(--accent); }
+  .breadcrumb .sep { color: var(--border-mid); }
+
+  /* Hero */
+  .tool-hero {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    padding: 2.5rem 2rem;
+    margin-bottom: 2rem;
+  }
+  .hero-label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 0.35em;
+    align-items: center;
+  }
+  .sh-host { color: var(--accent); }
+  .sh-sep  { color: var(--text-dim); }
+  .sh-cmd  { color: var(--text-mid); }
+  .badge {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-dim);
+    border: 1px solid rgba(87,141,255,0.2);
+    padding: 0.18em 0.55em;
+    margin-bottom: 0.75rem;
+  }
+  .tool-title {
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+  }
+  .tool-lead {
+    font-size: 0.95rem;
+    color: var(--text-mid);
+    line-height: 1.7;
+    max-width: 60ch;
+    margin-bottom: 1.5rem;
+  }
+  .hero-btns { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+  /* Layout */
+  .calc-layout {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 1.5rem;
+    align-items: start;
+  }
+  @media (max-width: 900px) {
+    .calc-layout { grid-template-columns: 1fr; }
+    .results-col { order: -1; }
+  }
+
+  /* Cards */
+  .card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .card:last-child { margin-bottom: 0; }
+  .card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .card-title {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: 0.04em;
+  }
+
+  /* Form */
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .field { display: flex; flex-direction: column; gap: 0.4rem; }
+  .field-label {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .field-input {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.15s;
+    -moz-appearance: textfield;
+  }
+  .field-input::-webkit-outer-spin-button,
+  .field-input::-webkit-inner-spin-button { -webkit-appearance: none; }
+  .field-input:focus { border-color: var(--accent); }
+  select.field-input { cursor: pointer; }
+  .action-row {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    padding: 0.65rem 1.4rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .btn-primary:hover { background: #6fa0ff; }
+  .btn-outline {
+    display: inline-block;
+    background: transparent;
+    color: var(--text-mid);
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    padding: 0.65rem 1.4rem;
+    border: 1px solid var(--border-mid);
+    cursor: pointer;
+    transition: border-color 0.15s, color 0.15s;
+  }
+  .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* Status dot */
+  .status-dot {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--text-dim);
+    padding: 0.2em 0.6em;
+    border: 1px solid var(--border);
+  }
+  .status-dot.ok { color: var(--green); border-color: rgba(56,199,147,0.3); background: rgba(56,199,147,0.06); }
+  .status-dot.warn { color: var(--amber); border-color: rgba(240,178,75,0.3); background: rgba(240,178,75,0.06); }
+  .status-dot.err { color: var(--red); border-color: rgba(255,124,135,0.3); background: rgba(255,124,135,0.06); }
+
+  /* Metrics */
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .metric { padding: 0.75rem; background: var(--bg); border: 1px solid var(--border); }
+  .metric-label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.4rem;
+  }
+  .metric-val {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1;
+    margin-bottom: 0.35rem;
+  }
+  .metric-val.pos { color: var(--green); }
+  .metric-val.neg { color: var(--red); }
+  .metric-val.neutral { color: var(--amber); }
+  .metric-hint {
+    display: block;
+    font-size: 0.68rem;
+    color: var(--text-dim);
+    line-height: 1.4;
+  }
+
+  /* Visual */
+  .visual-wrap { padding: 0.5rem 0; }
+  .visual-labels {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    color: var(--text-dim);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+  }
+  .visual-track {
+    position: relative;
+    height: 80px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+  }
+  .visual-hub {
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: var(--border-mid);
+  }
+  .visual-fender {
+    position: absolute;
+    right: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: var(--border-mid);
+  }
+  .visual-bar {
+    position: absolute;
+    top: 50%;
+    height: 12px;
+    transform: translateY(-50%);
+    transition: left 0.3s, width 0.3s;
+    border-radius: 2px;
+  }
+  .current-bar { background: var(--border-mid); top: calc(50% - 8px); height: 10px; }
+  .new-bar { background: var(--accent); opacity: 0.8; top: calc(50% + 4px); height: 10px; }
+  .visual-legend {
+    display: flex;
+    gap: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  .legend-item {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--text-dim);
+  }
+  .legend-item::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 4px;
+    border-radius: 2px;
+  }
+  .current-legend::before { background: var(--border-mid); }
+  .new-legend::before { background: var(--accent); }
+  .visual-note { font-size: 0.72rem; color: var(--text-dim); line-height: 1.5; }
+
+  /* Notes */
+  .notes-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+  .note-item {
+    font-size: 0.82rem;
+    padding: 0.6rem 0.75rem;
+    border-left: 3px solid transparent;
+    background: var(--bg);
+    color: var(--text-mid);
+    line-height: 1.5;
+  }
+  .note-info { border-left-color: var(--accent); }
+  .note-ok { border-left-color: var(--green); color: var(--text); }
+  .note-warn { border-left-color: var(--amber); color: var(--text); }
+  .note-err { border-left-color: var(--red); color: var(--text); }
+</style>
+
+<script>
+  const $ = (id) => document.getElementById(id);
+
+  const DEMO = {
+    cWidth: 7, cEt: 41, cSpacer: 0, cDiam: 16, cTireW: 205, cTireP: 55,
+    nWidth: 8, nEt: 35, nSpacer: 0, nDiam: 17, nTireW: 225, nTireP: 45,
+    axle: 'rear', lowered: 'true', rolled: 'false',
+  };
+
+  function getVal(id) { return parseFloat($(''+id)?.value) || 0; }
+
+  function setVal(id, v) { if ($(id)) $(id).value = v; }
+
+  function fmt(mm, decimals = 1) {
+    const sign = mm > 0 ? '+' : '';
+    return `${sign}${mm.toFixed(decimals)} mm`;
+  }
+
+  function calcTireDiam(diam, tireW, tireP) {
+    // diameter in inches, tireW in mm, tireP in %
+    return diam * 25.4 + 2 * (tireW * tireP / 100);
+  }
+
+  function calculate() {
+    const cW = getVal('cWidth') * 25.4;   // inches → mm
+    const cET = getVal('cEt');
+    const cSp = getVal('cSpacer');
+    const cD = getVal('cDiam');
+    const cTW = getVal('cTireW');
+    const cTP = getVal('cTireP');
+
+    const nW = getVal('nWidth') * 25.4;
+    const nET = getVal('nEt');
+    const nSp = getVal('nSpacer');
+    const nD = getVal('nDiam');
+    const nTW = getVal('nTireW');
+    const nTP = getVal('nTireP');
+
+    const axle = $('axle').value;
+    const lowered = $('lowered').value === 'true';
+    const rolled = $('rolled').value === 'true';
+
+    if (!cW || !nW || !cET || !nET) {
+      $('statusDot').textContent = 'Incomplete';
+      $('statusDot').className = 'status-dot';
+      return;
+    }
+
+    const cEffET = cET - cSp;
+    const nEffET = nET - nSp;
+
+    // Inner lip position from hub (positive = outboard)
+    // inner_lip = effectiveET - wheelWidth/2
+    const cInnerLip = cEffET - cW / 2;
+    const nInnerLip = nEffET - nW / 2;
+
+    // Outer lip from hub
+    const cOuterLip = cEffET + cW / 2;
+    const nOuterLip = nEffET + nW / 2;
+
+    // Clearance change: positive = inner lip moved outboard = more clearance
+    const deltaInner = nInnerLip - cInnerLip;
+    // Poke change: positive = outer lip moved outboard = more poke
+    const deltaOuter = nOuterLip - cOuterLip;
+
+    // Tire diameter
+    const cDiam = calcTireDiam(cD, cTW, cTP);
+    const nDiam = calcTireDiam(nD, nTW, nTP);
+    const diamDiff = nDiam - cDiam;
+    const pctDiff = cDiam > 0 ? (diamDiff / cDiam) * 100 : 0;
+
+    // Update metrics
+    $('cEffET').textContent = `${cEffET.toFixed(0)} mm`;
+    $('nEffET').textContent = `${nEffET.toFixed(0)} mm`;
+
+    const innerEl = $('innerChange');
+    innerEl.textContent = fmt(deltaInner);
+    innerEl.className = 'metric-val ' + (deltaInner > 2 ? 'pos' : deltaInner < -2 ? 'neg' : 'neutral');
+    $('innerHint').textContent = deltaInner > 0
+      ? 'More clearance from strut/suspension.'
+      : deltaInner < 0
+      ? 'Less clearance — watch for rubbing on turns.'
+      : 'Clearance unchanged.';
+
+    const outerEl = $('outerChange');
+    outerEl.textContent = fmt(deltaOuter);
+    outerEl.className = 'metric-val ' + (deltaOuter > 2 ? 'neg' : deltaOuter < -2 ? 'pos' : 'neutral');
+    $('outerHint').textContent = deltaOuter > 0
+      ? 'Wheel sticks out more — check fender clearance.'
+      : deltaOuter < 0
+      ? 'Wheel tucked in more.'
+      : 'Outer position unchanged.';
+
+    const diamEl = $('diamDiff');
+    diamEl.textContent = fmt(diamDiff);
+    diamEl.className = 'metric-val ' + (Math.abs(pctDiff) > 2.5 ? 'warn' : 'neutral');
+
+    const pctEl = $('pctDiff');
+    pctEl.textContent = `${pctDiff >= 0 ? '+' : ''}${pctDiff.toFixed(2)}%`;
+    pctEl.className = 'metric-val ' + (Math.abs(pctDiff) > 2.5 ? 'neg' : 'pos');
+
+    // Fitment notes
+    const notes = [];
+    if (deltaInner < -5) notes.push({ type: 'err', text: `Inner clearance decreased by ${Math.abs(deltaInner).toFixed(1)} mm — risk of strut contact, especially under compression.` });
+    else if (deltaInner < 0) notes.push({ type: 'warn', text: `Minor inner clearance reduction (${Math.abs(deltaInner).toFixed(1)} mm). Test with full suspension travel.` });
+    else notes.push({ type: 'ok', text: `Inner clearance OK — gained ${deltaInner.toFixed(1)} mm.` });
+
+    if (deltaOuter > 8) notes.push({ type: 'err', text: `Outer poke increased by ${deltaOuter.toFixed(1)} mm — fender modification likely needed.` });
+    else if (deltaOuter > 3) notes.push({ type: 'warn', text: `Outer poke +${deltaOuter.toFixed(1)} mm — check fender liner clearance, especially when lowered.` });
+
+    if (lowered && axle === 'front') notes.push({ type: 'warn', text: 'Car is lowered — front arch clearance at full lock is critical. Test at ride height.' });
+    if (lowered && axle === 'rear') notes.push({ type: 'warn', text: 'Car is lowered — check rear arch clearance at full compression over bumps.' });
+
+    if (Math.abs(pctDiff) > 2.5) notes.push({ type: 'warn', text: `Tire diameter differs by ${Math.abs(pctDiff).toFixed(1)}% — speedometer reading will be affected.` });
+
+    if (rolled) notes.push({ type: 'ok', text: 'Rolled fenders give extra outer clearance buffer.' });
+
+    if (nSp > 0) notes.push({ type: 'info', text: `${nSp} mm spacer used — verify hub-centric fitment and use quality hardware (ARP studs recommended).` });
+
+    const list = $('notesList');
+    list.innerHTML = notes.map(n =>
+      `<li class="note-item note-${n.type}">${n.text}</li>`
+    ).join('');
+
+    // Update visual
+    updateVisual(cEffET, cW, nEffET, nW);
+
+    const worst = notes.some(n => n.type === 'err') ? 'err'
+                : notes.some(n => n.type === 'warn') ? 'warn' : 'ok';
+    const dot = $('statusDot');
+    dot.className = `status-dot ${worst}`;
+    dot.textContent = worst === 'ok' ? 'OK' : worst === 'warn' ? 'Review' : 'Warning';
+  }
+
+  function updateVisual(cET, cW, nET, nW) {
+    // Represent in a 300px track
+    // Hub at left (0), max reference = 200mm from hub
+    const TRACK_W = $('visualTrack').offsetWidth || 360;
+    const scale = (TRACK_W - 20) / 250; // 250mm = full visual range
+
+    // Hub reference line at left edge
+    // Wheel bars start at inner lip, end at outer lip
+    const cInner = cET - cW / 2;
+    const cOuter = cET + cW / 2;
+    const nInner = nET - nW / 2;
+    const nOuter = nET + nW / 2;
+
+    // Shift so 0mm (hub) is at 10px
+    const offset = 10;
+    const clamp = (v, min, max) => Math.max(min, Math.min(max, v));
+
+    const cLeft = clamp(offset + cInner * scale, 4, TRACK_W - 4);
+    const cRight = clamp(offset + cOuter * scale, 4, TRACK_W - 4);
+    const nLeft = clamp(offset + nInner * scale, 4, TRACK_W - 4);
+    const nRight = clamp(offset + nOuter * scale, 4, TRACK_W - 4);
+
+    const vc = $('vCurrent');
+    const vn = $('vNew');
+    vc.style.left = `${cLeft}px`;
+    vc.style.width = `${Math.max(8, cRight - cLeft)}px`;
+    vn.style.left = `${nLeft}px`;
+    vn.style.width = `${Math.max(8, nRight - nLeft)}px`;
+  }
+
+  $('calculate').addEventListener('click', calculate);
+
+  $('loadDemo').addEventListener('click', () => {
+    Object.entries(DEMO).forEach(([k, v]) => setVal(k, v));
+    calculate();
+  });
+
+  function resetForm() {
+    ['cWidth','cEt','cSpacer','cDiam','cTireW','cTireP',
+     'nWidth','nEt','nSpacer','nDiam','nTireW','nTireP'].forEach(id => {
+      $(id).value = '';
+    });
+    $('axle').value = 'front';
+    $('lowered').value = 'false';
+    $('rolled').value = 'false';
+    ['innerChange','outerChange','cEffET','nEffET','diamDiff','pctDiff'].forEach(id => {
+      $(id).textContent = '—';
+      $(id).className = 'metric-val';
+    });
+    $('innerHint').textContent = 'Fill in both setups to calculate.';
+    $('outerHint').textContent = 'Fill in both setups to calculate.';
+    $('notesList').innerHTML = '<li class="note-item note-info">Fill in both setups to see fitment hints.</li>';
+    $('statusDot').textContent = 'Ready';
+    $('statusDot').className = 'status-dot';
+    $('vCurrent').style.width = '0';
+    $('vNew').style.width = '0';
+  }
+
+  $('resetAll').addEventListener('click', resetForm);
+  $('resetForm').addEventListener('click', resetForm);
+
+  // Auto-calculate on input change
+  ['cWidth','cEt','cSpacer','cDiam','cTireW','cTireP',
+   'nWidth','nEt','nSpacer','nDiam','nTireW','nTireP'].forEach(id => {
+    $(id)?.addEventListener('input', calculate);
+  });
+  ['axle','lowered','rolled'].forEach(id => {
+    $(id)?.addEventListener('change', calculate);
+  });
+</script>
