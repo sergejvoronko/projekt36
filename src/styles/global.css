@@ -20,9 +20,9 @@
   --text-dim:    #5a6a7a;
 
   /* Accent */
-  --accent:       #578dff;
-  --accent-soft:  rgba(87, 141, 255, 0.14);
-  --accent-dim:   rgba(87, 141, 255, 0.08);
+  --accent:       #f0a500;
+  --accent-soft:  rgba(240, 165, 0, 0.14);
+  --accent-dim:   rgba(240, 165, 0, 0.08);
 
   /* Status */
   --green:   #38c793;

@@ -4,125 +4,321 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="projekt36 — BMW E36 Build Journal & Tools">
-  <!-- Hero -->
+
+  <!-- ═══ HERO ═══ -->
   <section class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <!-- Drop hero car image here: /public/images/hero-car.jpg -->
+      <div class="hero-img-placeholder"></div>
+      <div class="hero-overlay"></div>
+    </div>
     <div class="hero-inner">
       <div class="hero-label">
-        <span class="live-dot"></span>
-        <span class="font-mono">E30 · E36 · E46</span>
+        <span>PROJEKT36</span>
+        <span class="hero-dot">·</span>
+        <span>BUILD JOURNAL</span>
+        <span class="hero-dot">·</span>
+        <span>RETROFIT GUIDES</span>
+        <span class="hero-dot">·</span>
+        <span>E36 TOOLS</span>
       </div>
       <h1 class="hero-title">
-        One E36.<br>
-        <em class="hero-accent">Documented.</em>
+        316i <em class="hero-em">becomes</em><br>something more
       </h1>
       <p class="hero-lead">
-        Build journal, retrofit guides, and practical tools for BMW E36 owners.
-        M43 to M50 swap, climate control retrofit, wheels, diagnostics — all from a real build in progress.
+        One BMW E36 Compact. Documented from the first fault code to final drive.
+        Engine swap, wiring, suspension, sound, paint — eleven chapters, one transformation.
       </p>
       <div class="hero-ctas">
-        <a href="/tools" class="btn-primary">Explore Tools →</a>
-        <a href="/build" class="btn-outline">View Build</a>
+        <a href="/build" class="btn-primary">Build Journal →</a>
+        <a href="/tools" class="btn-outline">Explore Tools</a>
         <a href="/guides" class="btn-outline">Guides</a>
       </div>
     </div>
-    <div class="hero-spec" aria-hidden="true">
-      <div class="spec-line"><span class="spec-k">chassis</span><span class="spec-v">E36 / 316i Compact</span></div>
-      <div class="spec-line"><span class="spec-k">engine</span><span class="spec-v">M43B16 → M50B25 (planned)</span></div>
-      <div class="spec-line"><span class="spec-k">colour</span><span class="spec-v">Dakargelb II</span></div>
-      <div class="spec-line"><span class="spec-k">status</span><span class="spec-v accent-green">● in progress</span></div>
+  </section>
+
+  <!-- ═══ STATS ═══ -->
+  <section class="stats-strip">
+    <div class="stats-inner">
+      <div class="stat">
+        <span class="stat-num">67</span>
+        <span class="stat-label">Articles</span>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat">
+        <span class="stat-num">2.8</span>
+        <span class="stat-label">Years in progress</span>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat">
+        <span class="stat-num">126</span>
+        <span class="stat-label">Parts documented</span>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat">
+        <span class="stat-num">11</span>
+        <span class="stat-label">Build chapters</span>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat">
+        <span class="stat-num">40</span>
+        <span class="stat-label">Retrofit guides</span>
+      </div>
     </div>
   </section>
 
-  <!-- Featured tools -->
-  <section class="section">
+  <!-- ═══ ELEVEN CHAPTERS ═══ -->
+  <section class="section chapters-section">
     <div class="section-inner">
-      <h2 class="section-heading">
-        <span class="sh-host">root@e36</span><span class="sh-sep">:~#</span> ls tools/ --featured
-      </h2>
-      <div class="tools-grid">
-        <a href="/tools/wheel-fitment" class="tool-card">
-          <div class="tool-badge">Calculator</div>
-          <h3 class="tool-title">Wheel Fitment Calculator</h3>
-          <p class="tool-desc">Compare wheel width, ET, tire size, and spacers. Estimate inner clearance and outer poke changes.</p>
-          <span class="tool-cta">Open tool →</span>
-        </a>
-        <a href="/tools/build-budget" class="tool-card">
-          <div class="tool-badge">Planning</div>
-          <h3 class="tool-title">Build Budget Planner</h3>
-          <p class="tool-desc">Estimate spending across engine, suspension, paint, interior, wheels, and diagnostics.</p>
-          <span class="tool-cta">Open tool →</span>
-        </a>
-        <a href="/tools/m43-to-m50-swap" class="tool-card">
-          <div class="tool-badge">Swap</div>
-          <h3 class="tool-title">M43 → M50 Swap Checklist</h3>
-          <p class="tool-desc">Structured checklist covering parts, wiring, cooling, exhaust, diagnostics, and first startup.</p>
-          <span class="tool-cta">Open tool →</span>
-        </a>
+      <div class="chapters-layout">
+        <div class="chapters-content">
+          <div class="section-tag">The build narrative</div>
+          <h2 class="section-title">ELEVEN CHAPTERS.<br><em class="accent-em">ONE TRANSFORMATION.</em></h2>
+          <p class="section-body">
+            From a stock 316i Compact with a tired M43 to a proper driver's car with an M50 under the bonnet.
+            Every decision documented — what worked, what failed, what it cost.
+          </p>
+          <a href="/build" class="btn-primary">Start reading →</a>
+        </div>
+        <div class="chapters-meta">
+          <div class="chapter-list">
+            {[
+              'Teardown & diagnosis',
+              'Engine pull — M43 out',
+              'Bay prep & rust work',
+              'M50 conversion',
+              'Cooling & ancillaries',
+              'Wiring & ECU',
+              'Suspension rebuild',
+              'Interior & sound',
+              'Paint & body',
+              'Wheels & fitment',
+              'First drive & tuning',
+            ].map((ch, i) => (
+              <div class="chapter-row">
+                <span class="chapter-num">{String(i + 1).padStart(2, '0')}</span>
+                <span class="chapter-name">{ch}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ WEAK POINTS ═══ -->
+  <section class="section alt weak-section">
+    <div class="section-inner">
+      <div class="section-tag">Know your car</div>
+      <h2 class="section-title">EVERY E36's <em class="accent-em">WEAK POINTS</em></h2>
+      <p class="section-sub">The recurring failures every E36 owner will face — and how to get ahead of them.</p>
+      <div class="weak-grid">
+        {[
+          { title: 'Cooling system',    desc: 'Plastic thermostat housing, expansion tank, and radiator all crack with age. Replace preventively.' },
+          { title: 'Rear subframe',     desc: 'Subframe mounts tear through the chassis on high-mileage or lowered cars. Weld before it cracks.' },
+          { title: 'DISA valve',        desc: 'M52/M54 only. The plastic paddle fails, causing rough idle and power loss. Cheap fix, high impact.' },
+          { title: 'Window regulators', desc: 'Plastic clips snap on all doors. Replace with metal-clip units or budget for repeated fixes.' },
+          { title: 'Rear trailing arms', desc: 'Bushings collapse, causing vague rear handling. Polyurethane or pillow-ball arms fix this properly.' },
+          { title: 'Electrical gremlins', desc: 'Door loom wears through the grommet, killing windows and locks. Reroute and sleeve the harness.' },
+        ].map(wp => (
+          <div class="weak-card">
+            <h3 class="weak-title">{wp.title}</h3>
+            <p class="weak-desc">{wp.desc}</p>
+          </div>
+        ))}
       </div>
       <div class="section-more">
-        <a href="/tools" class="btn-outline">All Tools →</a>
+        <a href="/guides" class="btn-outline">All guides →</a>
       </div>
     </div>
   </section>
 
-  <!-- Latest from the build -->
-  <section class="section alt">
+  <!-- ═══ TALK TO YOUR E36 ═══ -->
+  <section class="section diag-section">
     <div class="section-inner">
-      <h2 class="section-heading">
-        <span class="sh-host">root@e36</span><span class="sh-sep">:~#</span> tail -f build.log
-      </h2>
-      <div class="build-preview">
-        <p class="build-placeholder">Build journal coming soon — follow the progress from teardown to first drive.</p>
-        <a href="/build" class="btn-outline">View Build →</a>
+      <div class="section-tag">Diagnostics</div>
+      <h2 class="section-title">TALK TO <em class="accent-em">your E36</em></h2>
+      <p class="section-sub">Read fault codes, log live data, and understand what the car is telling you.</p>
+      <div class="diag-grid">
+        <div class="diag-card">
+          <div class="diag-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M6 8h.01M9 8h6"/></svg>
+          </div>
+          <h3 class="diag-title">INPA / EDIABAS</h3>
+          <p class="diag-desc">Native BMW diagnostics. Read and clear fault codes, access live sensor data, run actuator tests.</p>
+          <a href="/guides" class="diag-link">Setup guide →</a>
+        </div>
+        <div class="diag-card">
+          <div class="diag-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <h3 class="diag-title">Fault code log</h3>
+          <p class="diag-desc">Document active and resolved faults across your build. Track patterns over time.</p>
+          <a href="/tools/inpa-log" class="diag-link">Open tool →</a>
+        </div>
+        <div class="diag-card">
+          <div class="diag-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3h18v18H3z" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <h3 class="diag-title">OBD-II via ELM327</h3>
+          <p class="diag-desc">Budget option with Torque or OBD Fusion. Limited vs INPA but works for basic fault reading.</p>
+          <a href="/guides" class="diag-link">Comparison →</a>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- ═══ SCHEMAS & BLUEPRINTS ═══ -->
+  <section class="section alt schema-section">
+    <div class="section-inner">
+      <div class="section-tag">Technical docs</div>
+      <h2 class="section-title">SCHEMAS <em class="accent-em">&amp; blueprints</em></h2>
+      <p class="section-sub">Wiring diagrams, part locations, and installation references from the actual build.</p>
+      <div class="schema-grid">
+        {[
+          { title: 'M50 swap wiring',     tag: 'Wiring' },
+          { title: 'Climate control loom', tag: 'Wiring' },
+          { title: 'Suspension geometry',  tag: 'Suspension' },
+          { title: 'Cooling layout',       tag: 'Engine' },
+          { title: 'Electric windows',     tag: 'Retrofit' },
+          { title: 'Air management',       tag: 'Air suspension' },
+        ].map(s => (
+          <div class="schema-card">
+            <span class="schema-tag">{s.tag}</span>
+            <span class="schema-title">{s.title}</span>
+          </div>
+        ))}
+      </div>
+      <div class="section-more">
+        <a href="/guides" class="btn-outline">All schemas →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TOOLS STRIP ═══ -->
+  <section class="section tools-strip-section">
+    <div class="section-inner">
+      <div class="tools-strip-layout">
+        <div>
+          <div class="section-tag">Interactive tools</div>
+          <h2 class="section-title">EVERY PART<br><em class="accent-em">calculated.</em></h2>
+          <p class="section-body">
+            Wheel fitment, swap checklists, build budget, suspension geometry — tools built around real E36 work.
+          </p>
+          <a href="/tools" class="btn-primary">Open tools →</a>
+        </div>
+        <div class="tools-mini-grid">
+          {[
+            { title: 'Wheel Fitment', badge: 'Live' },
+            { title: 'Swap Checklist', badge: 'Soon' },
+            { title: 'Build Budget', badge: 'Soon' },
+            { title: 'Tire Compare', badge: 'Soon' },
+          ].map(t => (
+            <div class={`tools-mini-card ${t.badge === 'Live' ? 'live' : 'soon'}`}>
+              <span class="mini-badge">{t.badge}</span>
+              <span class="mini-title">{t.title}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MERCH ═══ -->
+  <section class="section alt merch-section">
+    <div class="section-inner">
+      <div class="merch-layout">
+        <div class="merch-content">
+          <div class="section-tag">projekt36 shop</div>
+          <h2 class="section-title">WEAR THE<br><em class="accent-em">project</em></h2>
+          <p class="section-body">
+            Apparel and prints from the build. No fast fashion — just clean designs for people who actually wrench.
+          </p>
+          <a href="/shop" class="btn-primary">Visit shop →</a>
+        </div>
+        <div class="merch-image">
+          <!-- Drop merch product image here: /public/images/merch-preview.jpg -->
+          <div class="merch-img-placeholder">
+            <span>image coming</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ NEWSLETTER ═══ -->
+  <section class="newsletter-section">
+    <div class="section-inner">
+      <p class="nl-tagline">Follow the swap. No spam, just sparks.</p>
+      <form class="nl-form" id="nlForm">
+        <input type="email" class="nl-input" placeholder="your@email.com" required />
+        <button type="submit" class="nl-btn">Subscribe</button>
+      </form>
+      <p class="nl-note">Build updates, guide drops, and tool releases. Unsubscribe any time.</p>
+    </div>
+  </section>
+
 </BaseLayout>
 
 <style>
-  /* Hero */
+  /* ── HERO ── */
   .hero {
-    min-height: 80vh;
+    position: relative;
+    min-height: 92vh;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 3rem;
-    padding: 6rem 1.5rem 4rem;
+    align-items: flex-end;
+    padding: 0 1.5rem 6rem;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .hero-img-placeholder {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #0f1318 0%, #1a1f28 50%, #0b0e12 100%);
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(11,14,18,0.95) 0%, rgba(11,14,18,0.5) 50%, rgba(11,14,18,0.2) 100%);
+  }
+  .hero-inner {
+    position: relative;
+    z-index: 1;
     max-width: var(--wide-w);
     margin: 0 auto;
-    flex-wrap: wrap;
+    width: 100%;
   }
-  .hero-inner { flex: 1; min-width: 300px; }
-
   .hero-label {
     font-family: var(--font-mono);
-    font-size: 0.72rem;
+    font-size: 0.65rem;
     color: var(--text-dim);
     letter-spacing: 0.15em;
     display: flex;
+    gap: 0.5rem;
     align-items: center;
-    gap: 0.6rem;
-    margin-bottom: 1.75rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
   }
-  .live-dot {
-    width: 7px; height: 7px;
-    border-radius: 50%;
-    background: var(--accent);
-    animation: pulse 2s ease-in-out infinite;
-  }
-  @keyframes pulse { 0%,100%{opacity:.35} 50%{opacity:1} }
+  .hero-dot { color: var(--accent); opacity: 0.6; }
 
   .hero-title {
-    font-size: clamp(2.8rem, 7vw, 5rem);
-    font-weight: 700;
+    font-size: clamp(3.5rem, 9vw, 7rem);
+    font-weight: 800;
     color: var(--text);
-    line-height: 1.05;
-    margin-bottom: 1.25rem;
+    line-height: 0.95;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
   }
-  .hero-accent { font-style: italic; font-weight: 300; color: var(--accent); }
-
+  .hero-em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--accent);
+  }
   .hero-lead {
-    font-size: 1.05rem;
+    font-size: 1rem;
     color: var(--text-mid);
     max-width: 52ch;
     line-height: 1.75;
@@ -130,104 +326,320 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
   .hero-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
 
-  /* Spec card */
-  .hero-spec {
+  /* ── STATS ── */
+  .stats-strip {
     background: var(--bg2);
-    border: 1px solid var(--border);
-    border-left: 3px solid var(--accent);
-    padding: 1.5rem 2rem;
-    flex-shrink: 0;
-    min-width: 260px;
-  }
-  .spec-line {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    padding: 0.5rem 0;
+    border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
-    font-family: var(--font-mono);
-    font-size: 0.78rem;
+    padding: 2rem 1.5rem;
   }
-  .spec-line:last-child { border-bottom: none; }
-  .spec-k { color: var(--text-dim); }
-  .spec-v { color: var(--text); }
-  .accent-green { color: var(--green); }
+  .stats-inner {
+    max-width: var(--wide-w);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    flex-wrap: wrap;
+  }
+  .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.5rem 2.5rem;
+  }
+  .stat-num {
+    font-family: var(--font-mono);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1;
+  }
+  .stat-label {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .stat-div {
+    width: 1px;
+    height: 40px;
+    background: var(--border);
+    flex-shrink: 0;
+  }
+  @media (max-width: 600px) {
+    .stat-div { display: none; }
+    .stat { padding: 0.5rem 1.2rem; }
+  }
 
-  /* Sections */
-  .section { padding: 4rem 1.5rem; }
+  /* ── SECTIONS (shared) ── */
+  .section { padding: 5rem 1.5rem; }
   .section.alt { background: var(--bg2); }
   .section-inner { max-width: var(--wide-w); margin: 0 auto; }
-
-  .section-heading {
-    font-family: var(--font-mono);
-    font-size: 0.88rem;
-    color: var(--text);
-    margin-bottom: 2rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid var(--border);
-  }
-  .sh-host { color: var(--accent); }
-  .sh-sep  { color: var(--text-dim); }
-
-  /* Tools grid */
-  .tools-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
-  .tool-card {
-    display: block;
-    padding: 1.5rem;
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-left: 3px solid transparent;
-    text-decoration: none;
-    transition: border-color 0.15s, border-left-color 0.15s, background 0.15s;
-  }
-  .tool-card:hover {
-    border-color: var(--border-mid);
-    border-left-color: var(--accent);
-    background: var(--bg2);
-  }
-  .tool-badge {
-    display: inline-block;
+  .section-tag {
     font-family: var(--font-mono);
     font-size: 0.65rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
     color: var(--accent);
-    background: var(--accent-dim);
-    border: 1px solid rgba(87,141,255,0.2);
-    padding: 0.2em 0.6em;
-    margin-bottom: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.75rem;
   }
-  .tool-title {
-    font-size: 1rem;
-    font-weight: 600;
+  .section-title {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 800;
     color: var(--text);
-    margin-bottom: 0.5rem;
-    transition: color 0.15s;
-  }
-  .tool-card:hover .tool-title { color: var(--accent); }
-  .tool-desc {
-    font-size: 0.85rem;
-    color: var(--text-mid);
-    line-height: 1.6;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
     margin-bottom: 1rem;
   }
-  .tool-cta {
+  .accent-em { font-style: italic; font-weight: 300; color: var(--accent); }
+  .section-sub {
+    font-size: 0.95rem;
+    color: var(--text-mid);
+    max-width: 56ch;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+  }
+  .section-body {
+    font-size: 0.95rem;
+    color: var(--text-mid);
+    max-width: 48ch;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+  .section-more { margin-top: 2rem; }
+
+  /* ── CHAPTERS ── */
+  .chapters-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  @media (max-width: 780px) { .chapters-layout { grid-template-columns: 1fr; } }
+  .chapter-list { display: flex; flex-direction: column; gap: 0; }
+  .chapter-row {
+    display: flex;
+    gap: 1rem;
+    align-items: baseline;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .chapter-row:last-child { border-bottom: none; }
+  .chapter-num {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--accent);
+    flex-shrink: 0;
+    min-width: 2ch;
+  }
+  .chapter-name {
+    font-size: 0.85rem;
+    color: var(--text-mid);
+    transition: color 0.15s;
+  }
+  .chapter-row:hover .chapter-name { color: var(--text); }
+
+  /* ── WEAK POINTS ── */
+  .weak-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin-bottom: 2rem;
+  }
+  .weak-card {
+    background: var(--bg2);
+    padding: 1.5rem;
+    transition: background 0.15s;
+  }
+  .weak-card:hover { background: var(--bg3); }
+  .weak-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent);
+    display: inline-block;
+  }
+  .weak-desc { font-size: 0.82rem; color: var(--text-mid); line-height: 1.6; }
+
+  /* ── DIAGNOSTICS ── */
+  .diag-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+  .diag-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--accent);
+    padding: 1.75rem 1.5rem;
+  }
+  .diag-icon {
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+  .diag-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.6rem;
+  }
+  .diag-desc {
+    font-size: 0.83rem;
+    color: var(--text-mid);
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+  .diag-link {
     font-family: var(--font-mono);
     font-size: 0.72rem;
     color: var(--accent);
-    opacity: 0;
+    text-decoration: none;
     transition: opacity 0.15s;
   }
-  .tool-card:hover .tool-cta { opacity: 1; }
-  .section-more { margin-top: 1rem; }
+  .diag-link:hover { opacity: 0.7; }
 
-  /* Build preview */
-  .build-preview { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
-  .build-placeholder { font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-dim); }
+  /* ── SCHEMAS ── */
+  .schema-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin-bottom: 2rem;
+  }
+  .schema-card {
+    background: var(--bg);
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    transition: background 0.15s;
+  }
+  .schema-card:hover { background: var(--bg3); }
+  .schema-tag {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .schema-title {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  /* ── TOOLS STRIP ── */
+  .tools-strip-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  @media (max-width: 780px) { .tools-strip-layout { grid-template-columns: 1fr; } }
+  .tools-mini-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .tools-mini-card {
+    background: var(--bg2);
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .tools-mini-card.live { background: var(--bg3); }
+  .mini-badge {
+    font-family: var(--font-mono);
+    font-size: 0.58rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+  }
+  .tools-mini-card.live .mini-badge { color: var(--green); }
+  .tools-mini-card.soon .mini-badge { color: var(--text-dim); }
+  .mini-title { font-size: 0.85rem; font-weight: 600; color: var(--text); }
+
+  /* ── MERCH ── */
+  .merch-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  @media (max-width: 780px) { .merch-layout { grid-template-columns: 1fr; } }
+  .merch-image { position: relative; }
+  .merch-img-placeholder {
+    aspect-ratio: 4/5;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-dim);
+  }
+
+  /* ── NEWSLETTER ── */
+  .newsletter-section {
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+    padding: 4rem 1.5rem;
+    text-align: center;
+  }
+  .nl-tagline {
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+  }
+  .nl-form {
+    display: flex;
+    gap: 0;
+    max-width: 440px;
+    margin: 0 auto 1rem;
+  }
+  .nl-input {
+    flex: 1;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-right: none;
+    color: var(--text);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    padding: 0.75rem 1rem;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .nl-input:focus { border-color: var(--accent); }
+  .nl-btn {
+    background: var(--accent);
+    color: #000;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.15s;
+  }
+  .nl-btn:hover { opacity: 0.85; }
+  .nl-note {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--text-dim);
+  }
 </style>
