@@ -1,0 +1,292 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Offset & Spacer Tool — projekt36"
+  description="See how a spacer changes your effective ET and where the wheel sits relative to the hub."
+>
+<div class="tool-page">
+  <div class="breadcrumb">
+    <a href="/tools">Tools</a>
+    <span class="sep">/</span>
+    <span>Offset & Spacer Tool</span>
+  </div>
+
+  <div class="tool-header">
+    <span class="tool-badge badge-calc">Calculator</span>
+    <h1>Offset & Spacer Tool</h1>
+    <p class="tool-desc">See how a spacer changes your effective ET and where the wheel sits relative to the hub.</p>
+  </div>
+
+  <div class="tool-layout">
+    <div class="tool-main">
+      <div class="tool-form">
+        <h3>Wheel Setup</h3>
+        <div class="field-grid">
+          <div class="field">
+            <label class="field-label" for="os-w">Wheel width (J)</label>
+            <input type="number" id="os-w" value="8" step="0.5" min="4" max="12" />
+          </div>
+          <div class="field">
+            <label class="field-label" for="os-et">Original ET (mm)</label>
+            <input type="number" id="os-et" value="35" min="-50" max="80" />
+          </div>
+          <div class="field">
+            <label class="field-label" for="os-sp">Spacer thickness (mm)</label>
+            <input type="number" id="os-sp" value="10" min="0" max="50" />
+          </div>
+        </div>
+        <button class="btn-calc" id="calc-btn">Calculate</button>
+      </div>
+
+      <div class="result-box" id="offset-result">
+        <p class="result-placeholder">Enter your wheel setup and press Calculate.</p>
+      </div>
+    </div>
+
+    <aside class="tool-sidebar">
+      <div class="sidebar-card">
+        <h4>E36 Stock Offsets</h4>
+        <div class="ref-table">
+          <div class="ref-row"><span class="ref-key">316i / 318i</span><span class="ref-val">ET42</span></div>
+          <div class="ref-row"><span class="ref-key">320i / 323i</span><span class="ref-val">ET47</span></div>
+          <div class="ref-row"><span class="ref-key">325i / 328i</span><span class="ref-val">ET47</span></div>
+          <div class="ref-row"><span class="ref-key">M3 (front)</span><span class="ref-val">ET41</span></div>
+          <div class="ref-row"><span class="ref-key">M3 (rear)</span><span class="ref-val">ET15</span></div>
+        </div>
+      </div>
+      <div class="sidebar-card">
+        <h4>Quick Rules</h4>
+        <ul class="tip-list">
+          <li>Under 15mm → bolt-on spacers OK</li>
+          <li>15mm+ → use hub-centric spacers with extended studs</li>
+          <li>Spacer = wheel moves outward by spacer thickness</li>
+          <li>Effective ET = original ET − spacer</li>
+        </ul>
+      </div>
+      <div class="sidebar-card">
+        <h4>Related Tools</h4>
+        <ul class="tool-links">
+          <li><a href="/tools/wheel-fitment">Wheel Fitment Calculator</a></li>
+          <li><a href="/tools/tire-compare">Tire Size Compare</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</div>
+</BaseLayout>
+
+<script>
+  const $ = id => document.getElementById(id);
+
+  function calc() {
+    const w  = parseFloat($('os-w').value)  || 0;
+    const et = parseFloat($('os-et').value) || 0;
+    const sp = parseFloat($('os-sp').value) || 0;
+
+    const effET   = et - sp;
+    const halfW   = w * 25.4 / 2;   // half width in mm
+    const innerOrig = halfW + et;    // distance from hub centerline to inner lip
+    const outerOrig = halfW - et;    // distance from hub centerline to outer lip
+    const innerNew  = halfW + effET;
+    const outerNew  = halfW - effET;
+
+    const warn  = sp > 20 ? 'result-warn' : '';
+    const stud  = sp >= 15 ? '<p class="result-note warn-note">⚠ 15mm+ spacer — use hub-centric adapter with extended studs.</p>' : '<p class="result-note">Bolt-on spacer acceptable at this thickness.</p>';
+
+    $('offset-result').innerHTML = `
+      <h4>Results</h4>
+      <div class="result-row"><span class="result-label">Original offset</span><span class="result-value">ET${et}</span></div>
+      <div class="result-row"><span class="result-label">Effective offset with ${sp}mm spacer</span><span class="result-value ${warn}">ET${effET}</span></div>
+      <div class="result-row"><span class="result-label">Wheel shifts outward</span><span class="result-value">+${sp} mm</span></div>
+      <div class="result-row"><span class="result-label">Inner clearance change</span><span class="result-value good">+${sp} mm more room</span></div>
+      <div class="result-row"><span class="result-label">Outer poke change</span><span class="result-value ${sp > 15 ? 'warn' : ''}">+${sp} mm more poke</span></div>
+      ${stud}
+    `;
+
+    localStorage.setItem('p36-offset-spacer', JSON.stringify({ w, et, sp }));
+  }
+
+  $('calc-btn').addEventListener('click', calc);
+  ['os-w','os-et','os-sp'].forEach(id => $$(id)?.addEventListener('keydown', e => e.key === 'Enter' && calc()));
+
+  function $$(id) { return document.getElementById(id); }
+
+  // Restore saved values
+  try {
+    const s = JSON.parse(localStorage.getItem('p36-offset-spacer') || 'null');
+    if (s) {
+      if (s.w  != null) $('os-w').value  = s.w;
+      if (s.et != null) $('os-et').value = s.et;
+      if (s.sp != null) $('os-sp').value = s.sp;
+    }
+  } catch {}
+</script>
+
+<style>
+  .tool-page {
+    max-width: var(--wide-w);
+    margin: 0 auto;
+    padding: 2rem 1.5rem 5rem;
+  }
+
+  .breadcrumb {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  .breadcrumb a { color: var(--text-dim); transition: color 0.15s; }
+  .breadcrumb a:hover { color: var(--accent); }
+  .breadcrumb .sep { color: var(--border-mid); }
+
+  .tool-header { margin-bottom: 2rem; }
+  .tool-badge {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.15em 0.55em;
+    border: 1px solid;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+  }
+  .badge-calc { color: var(--accent); border-color: rgba(212,149,42,0.35); background: var(--accent-dim); }
+  h1 {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  .tool-desc { color: var(--text-mid); font-size: 0.95rem; line-height: 1.65; max-width: 56ch; }
+
+  .tool-layout {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 2.5rem;
+    align-items: start;
+  }
+  @media (max-width: 768px) {
+    .tool-layout { grid-template-columns: 1fr; }
+  }
+
+  .tool-form {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .tool-form h3 {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 1.25rem;
+  }
+
+  .field-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+  @media (max-width: 540px) { .field-grid { grid-template-columns: 1fr 1fr; } }
+
+  .field { display: flex; flex-direction: column; gap: 0.4rem; }
+  .field-label {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  input[type="number"] {
+    background: var(--bg3);
+    border: 1px solid var(--border-mid);
+    color: var(--text);
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    padding: 0.5rem 0.75rem;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  input[type="number"]:focus { border-color: var(--accent); }
+
+  .btn-calc {
+    background: var(--accent);
+    color: #0d0f14;
+    border: none;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    padding: 0.65rem 1.5rem;
+    cursor: pointer;
+    transition: opacity 0.15s;
+  }
+  .btn-calc:hover { opacity: 0.85; }
+
+  .result-box {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    padding: 1.5rem;
+    min-height: 120px;
+  }
+  .result-box h4 {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+  }
+  .result-placeholder { color: var(--text-dim); font-size: 0.85rem; }
+  .result-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.45rem 0;
+    border-bottom: 1px solid var(--border);
+    gap: 1rem;
+  }
+  .result-row:last-of-type { border-bottom: none; }
+  .result-label { font-size: 0.85rem; color: var(--text-mid); }
+  .result-value { font-family: var(--font-mono); font-size: 0.9rem; color: var(--text); flex-shrink: 0; }
+  .result-value.good { color: #5cb85c; }
+  .result-value.warn, .result-value.result-warn { color: var(--accent); }
+  .result-note { margin-top: 1rem; font-size: 0.8rem; color: var(--text-dim); line-height: 1.5; }
+  .warn-note { color: var(--accent); }
+
+  /* Sidebar */
+  .sidebar-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  .sidebar-card h4 {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.9rem;
+  }
+  .ref-table { display: flex; flex-direction: column; gap: 0.3rem; }
+  .ref-row { display: flex; justify-content: space-between; font-size: 0.8rem; }
+  .ref-key { color: var(--text-mid); }
+  .ref-val { font-family: var(--font-mono); color: var(--text); }
+  .tip-list { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+  .tip-list li { font-size: 0.8rem; color: var(--text-mid); padding-left: 0.75rem; position: relative; line-height: 1.5; }
+  .tip-list li::before { content: '—'; position: absolute; left: 0; color: var(--accent); }
+  .tool-links { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+  .tool-links a { font-size: 0.82rem; color: var(--accent); transition: color 0.15s; }
+  .tool-links a:hover { color: var(--text); }
+</style>

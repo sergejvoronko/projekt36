@@ -1,0 +1,200 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Tire Size Compare — projekt36"
+  description="Compare two tire sizes — diameter, sidewall height, and speedometer correction."
+>
+<div class="tool-page">
+  <div class="breadcrumb">
+    <a href="/tools">Tools</a>
+    <span class="sep">/</span>
+    <span>Tire Size Compare</span>
+  </div>
+
+  <div class="tool-header">
+    <span class="tool-badge badge-calc">Calculator</span>
+    <h1>Tire Size Compare</h1>
+    <p class="tool-desc">Compare two tire sizes — see diameter change, sidewall difference, and speedometer correction.</p>
+  </div>
+
+  <div class="tool-layout">
+    <div class="tool-main">
+      <div class="tool-form">
+        <h3>Tire Sizes</h3>
+        <div class="field-grid">
+          <div class="field">
+            <label class="field-label" for="tc-t1">Current tire</label>
+            <input type="text" id="tc-t1" value="225/45R17" placeholder="225/45R17" />
+          </div>
+          <div class="field">
+            <label class="field-label" for="tc-t2">New tire</label>
+            <input type="text" id="tc-t2" value="235/40R17" placeholder="235/40R17" />
+          </div>
+        </div>
+        <button class="btn-calc" id="calc-btn">Compare Sizes</button>
+      </div>
+
+      <div class="result-box" id="tire-result">
+        <p class="result-placeholder">Enter two tire sizes and press Compare.</p>
+      </div>
+    </div>
+
+    <aside class="tool-sidebar">
+      <div class="sidebar-card">
+        <h4>Format</h4>
+        <p class="sidebar-text">Use standard format:<br><code>225/45R17</code></p>
+        <p class="sidebar-text" style="margin-top:0.5rem">Width / Aspect / Rim</p>
+      </div>
+      <div class="sidebar-card">
+        <h4>Common E36 Sizes</h4>
+        <div class="ref-table">
+          <div class="ref-row"><span class="ref-key">Stock 15"</span><span class="ref-val">195/65R15</span></div>
+          <div class="ref-row"><span class="ref-key">Stock 16"</span><span class="ref-val">205/55R16</span></div>
+          <div class="ref-row"><span class="ref-key">Popular 17"</span><span class="ref-val">225/45R17</span></div>
+          <div class="ref-row"><span class="ref-key">M3 front</span><span class="ref-val">235/40R17</span></div>
+          <div class="ref-row"><span class="ref-key">M3 rear</span><span class="ref-val">255/40R17</span></div>
+          <div class="ref-row"><span class="ref-key">Stretched 18"</span><span class="ref-val">215/35R18</span></div>
+        </div>
+      </div>
+      <div class="sidebar-card">
+        <h4>Rules of Thumb</h4>
+        <ul class="tip-list">
+          <li>Keep diameter change under 3% for safe speedo accuracy</li>
+          <li>Wider tire = more traction but higher load on wheel bearings</li>
+          <li>Lower profile = sharper turn-in, rougher ride</li>
+        </ul>
+      </div>
+      <div class="sidebar-card">
+        <h4>Related</h4>
+        <ul class="tool-links">
+          <li><a href="/tools/wheel-fitment">Wheel Fitment Calculator</a></li>
+          <li><a href="/tools/offset-spacer">Offset & Spacer Tool</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</div>
+</BaseLayout>
+
+<script>
+  function parseTire(s) {
+    const m = String(s).trim().match(/^(\d{3})\/(\d{2,3})R?(\d{2})$/i);
+    if (!m) return null;
+    return { w: +m[1], a: +m[2], r: +m[3] };
+  }
+  function tireDia(t) { return t.r * 25.4 + t.w * (t.a / 100) * 2; }
+
+  function calc() {
+    const t1 = parseTire(document.getElementById('tc-t1').value);
+    const t2 = parseTire(document.getElementById('tc-t2').value);
+    const out = document.getElementById('tire-result');
+
+    if (!t1 || !t2) {
+      out.innerHTML = '<h4>Results</h4><p style="color:var(--accent)">Use format: 225/45R17</p>';
+      return;
+    }
+
+    const d1     = tireDia(t1), d2 = tireDia(t2);
+    const diff   = +(d2 - d1).toFixed(1);
+    const pct    = +(((d2 - d1) / d1) * 100).toFixed(2);
+    const sw1    = +(t1.w * (t1.a / 100)).toFixed(1);
+    const sw2    = +(t2.w * (t2.a / 100)).toFixed(1);
+    const swDiff = +(sw2 - sw1).toFixed(1);
+    const speedo = +(100 * (d2 / d1)).toFixed(1);
+    const speedoDiff = Math.abs(+(speedo - 100).toFixed(1));
+    const bigChange  = Math.abs(pct) > 3;
+
+    out.innerHTML = `
+      <h4>Tire Comparison</h4>
+      <div class="result-row"><span class="result-label">Current diameter</span><span class="result-value">${d1.toFixed(1)} mm</span></div>
+      <div class="result-row"><span class="result-label">New diameter</span><span class="result-value">${d2.toFixed(1)} mm</span></div>
+      <div class="result-row"><span class="result-label">Diameter change</span>
+        <span class="result-value ${bigChange ? 'warn' : ''}">${diff > 0 ? '+' : ''}${diff} mm (${pct > 0 ? '+' : ''}${pct}%)</span>
+      </div>
+      <div class="result-row"><span class="result-label">Sidewall height change</span>
+        <span class="result-value">${swDiff > 0 ? '+' : ''}${swDiff} mm</span>
+      </div>
+      <div class="result-row"><span class="result-label">At indicated 100 km/h</span>
+        <span class="result-value ${speedoDiff > 5 ? 'warn' : ''}">${speedo} km/h actual</span>
+      </div>
+      <p class="result-note ${bigChange ? 'warn-note' : ''}">
+        Speedometer reads ${speedoDiff} km/h ${speedo > 100 ? 'slow (speedo shows less than actual)' : 'fast (speedo shows more than actual)'}.
+        ${bigChange ? '⚠ Diameter change over 3% — consider recalibration.' : 'Within safe range.'}
+      </p>
+    `;
+
+    localStorage.setItem('p36-tire-compare', JSON.stringify({
+      t1: document.getElementById('tc-t1').value,
+      t2: document.getElementById('tc-t2').value,
+    }));
+  }
+
+  document.getElementById('calc-btn').addEventListener('click', calc);
+
+  try {
+    const s = JSON.parse(localStorage.getItem('p36-tire-compare') || 'null');
+    if (s) {
+      if (s.t1) document.getElementById('tc-t1').value = s.t1;
+      if (s.t2) document.getElementById('tc-t2').value = s.t2;
+    }
+  } catch {}
+</script>
+
+<style>
+  .tool-page { max-width: var(--wide-w); margin: 0 auto; padding: 2rem 1.5rem 5rem; }
+
+  .breadcrumb { font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-dim); display: flex; gap: 0.4rem; align-items: center; margin-bottom: 1.5rem; }
+  .breadcrumb a { color: var(--text-dim); transition: color 0.15s; }
+  .breadcrumb a:hover { color: var(--accent); }
+  .breadcrumb .sep { color: var(--border-mid); }
+
+  .tool-header { margin-bottom: 2rem; }
+  .tool-badge { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.15em 0.55em; border: 1px solid; display: inline-block; margin-bottom: 0.75rem; }
+  .badge-calc { color: var(--accent); border-color: rgba(212,149,42,0.35); background: var(--accent-dim); }
+  h1 { font-family: var(--font-display); font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 700; margin-bottom: 0.5rem; }
+  .tool-desc { color: var(--text-mid); font-size: 0.95rem; line-height: 1.65; max-width: 56ch; }
+
+  .tool-layout { display: grid; grid-template-columns: 1fr 280px; gap: 2.5rem; align-items: start; }
+  @media (max-width: 768px) { .tool-layout { grid-template-columns: 1fr; } }
+
+  .tool-form { background: var(--bg2); border: 1px solid var(--border); padding: 1.5rem; margin-bottom: 1.5rem; }
+  .tool-form h3 { font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 1.25rem; }
+
+  .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem; }
+  .field { display: flex; flex-direction: column; gap: 0.4rem; }
+  .field-label { font-family: var(--font-mono); font-size: 0.68rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.08em; }
+
+  input[type="text"] { background: var(--bg3); border: 1px solid var(--border-mid); color: var(--text); font-family: var(--font-mono); font-size: 1rem; padding: 0.5rem 0.75rem; width: 100%; outline: none; transition: border-color 0.15s; }
+  input[type="text"]:focus { border-color: var(--accent); }
+
+  .btn-calc { background: var(--accent); color: #0d0f14; border: none; font-family: var(--font-mono); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; padding: 0.65rem 1.5rem; cursor: pointer; transition: opacity 0.15s; }
+  .btn-calc:hover { opacity: 0.85; }
+
+  .result-box { background: var(--bg2); border: 1px solid var(--border); border-left: 3px solid var(--accent); padding: 1.5rem; min-height: 120px; }
+  .result-box h4 { font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; }
+  .result-placeholder { color: var(--text-dim); font-size: 0.85rem; }
+  .result-row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.45rem 0; border-bottom: 1px solid var(--border); gap: 1rem; }
+  .result-row:last-of-type { border-bottom: none; }
+  .result-label { font-size: 0.85rem; color: var(--text-mid); }
+  .result-value { font-family: var(--font-mono); font-size: 0.9rem; color: var(--text); flex-shrink: 0; }
+  .result-value.warn { color: var(--accent); }
+  .result-note { margin-top: 1rem; font-size: 0.8rem; color: var(--text-dim); line-height: 1.5; }
+  .warn-note { color: var(--accent); }
+
+  .sidebar-card { background: var(--bg2); border: 1px solid var(--border); padding: 1.25rem; margin-bottom: 1rem; }
+  .sidebar-card h4 { font-family: var(--font-mono); font-size: 0.68rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.9rem; }
+  .sidebar-text { font-size: 0.82rem; color: var(--text-mid); line-height: 1.5; }
+  code { font-family: var(--font-mono); color: var(--accent); background: var(--bg3); padding: 0.1em 0.35em; }
+  .ref-table { display: flex; flex-direction: column; gap: 0.3rem; }
+  .ref-row { display: flex; justify-content: space-between; font-size: 0.8rem; }
+  .ref-key { color: var(--text-mid); }
+  .ref-val { font-family: var(--font-mono); color: var(--text); }
+  .tip-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+  .tip-list li { font-size: 0.8rem; color: var(--text-mid); padding-left: 0.75rem; position: relative; line-height: 1.5; }
+  .tip-list li::before { content: '—'; position: absolute; left: 0; color: var(--accent); }
+  .tool-links { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+  .tool-links a { font-size: 0.82rem; color: var(--accent); transition: color 0.15s; }
+  .tool-links a:hover { color: var(--text); }
+</style>

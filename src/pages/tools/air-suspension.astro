@@ -1,0 +1,216 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const groups = [
+  {
+    title: '1 — Management & Controller',
+    items: [
+      { text: 'Choose management system (4S+, 2S+, or Y1)', note: '4S+ = 4-wheel independent with memory + sensors. 2S+ = 2-wheel independent. Y1 = basic no-memory control.' },
+      { text: 'Choose sensor type: air pressure vs. height gauge', note: 'Pressure: simpler install, ±30mm accuracy. Height gauge: complex install, ±1mm accuracy, enables auto-leveling.' },
+      { text: 'Mount controller in a dry, accessible location', note: 'Wire +12V, GND, and ACC (ignition line). ACC required for auto lift/drop on start/stop.' },
+      { text: 'Install Bluetooth antenna and pair with app', note: 'Default password: 8888. Red LED flashing = BT active. Solid red = connected.' },
+    ]
+  },
+  {
+    title: '2 — Air Supply',
+    items: [
+      { text: 'Mount air compressor(s) — single or dual pump', note: 'Dual recommended if adjusting height frequently. Mount with vibration isolators.' },
+      { text: 'Install air tank(s) and pressure switch', note: 'Default max: 130 PSI (adjustable to 230 PSI in app). Larger/more tanks = more operations between pump cycles.' },
+      { text: 'Wire compressor relay through controller S port' },
+      { text: 'Install temperature sensor on pump/tank', note: 'Set upper limit in app to protect compressor life.' },
+    ]
+  },
+  {
+    title: '3 — Valve Body & Lines',
+    items: [
+      { text: 'Mount solenoid valve body — IN port to tank, EXH to muffler', note: 'Valve bore: 2.8mm. Min air line inner diameter: 4mm (6mm outer).' },
+      { text: 'Run air lines to all 4 corners (FL, FR, RL, RR)' },
+      { text: 'Install exhaust muffler on EXH port', note: 'Reduces noise during deflation.' },
+      { text: 'Connect valve body wiring harness to controller', note: '4S+: ports 2–10 (rise/drop per wheel). 2S+: ports 2–6 (front/rear).' },
+    ]
+  },
+  {
+    title: '4 — Bags & Sensors',
+    items: [
+      { text: 'Install air bags at all corners — replace existing springs/shocks' },
+      { text: 'Mount pressure or height gauge sensors', note: 'Height gauges: mount at suspension travel point, extend pull rod and harness to each wheel.' },
+      { text: 'If using height gauges: calibrate min/max in app', note: 'Drop to lowest → save front/rear minimum. Raise to highest → save maximum. Click Save.' },
+      { text: 'Leak test all fittings — soap test every connection' },
+    ]
+  },
+  {
+    title: '5 — App Config & Testing',
+    items: [
+      { text: 'Set memory presets 1–5 (ride height positions)', note: 'Preset 3 is used for auto-lift on ignition if that feature is enabled.' },
+      { text: 'Configure flameout-drop and ignition-lift', note: 'Flameout: car drops after engine off. Ignition: rises to preset 3 on start. Both need ACC wire connected.' },
+      { text: 'Set crossing value (minimum height for auto-drop)', note: 'e.g. value 10 = one-click-down stops at position 10 instead of fully slammed.' },
+      { text: 'Road test — adjust presets for drive height, daily use, show position' },
+    ]
+  },
+];
+
+const total = groups.reduce((s, g) => s + g.items.length, 0);
+---
+
+<BaseLayout
+  title="Air Suspension Checklist — projekt36"
+  description="Plan your E36 air suspension install — management, bags, compressor, tank, lines, wiring, and controller setup."
+>
+<div class="tool-page">
+  <div class="breadcrumb">
+    <a href="/tools">Tools</a>
+    <span class="sep">/</span>
+    <span>Air Suspension Checklist</span>
+  </div>
+
+  <div class="tool-header">
+    <span class="tool-badge badge-susp">Suspension</span>
+    <h1>Air Suspension Checklist</h1>
+    <p class="tool-desc">Plan your air suspension install — management, bags, compressor, tank, lines, wiring, and controller setup. Based on real install data from LEVEL DOWN systems.</p>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-header">
+      <span class="progress-label">Install progress</span>
+      <span class="progress-count" id="air-pct">0 / {total}</span>
+    </div>
+    <div class="progress-track">
+      <div class="progress-fill" id="air-bar" style="width:0%"></div>
+    </div>
+  </div>
+
+  <div class="tool-layout">
+    <div class="checklist-wrap">
+      {groups.map((g, gi) => (
+        <div class="checklist-group">
+          <h3 class="group-title">{g.title}</h3>
+          {g.items.map((item, ii) => (
+            <label class="check-item">
+              <input type="checkbox" data-id={`${gi}-${ii}`} onchange="updateProgress()" />
+              <div class="check-content">
+                <span class="check-text">{item.text}</span>
+                {item.note && <span class="check-note">{item.note}</span>}
+              </div>
+            </label>
+          ))}
+        </div>
+      ))}
+    </div>
+
+    <aside class="tool-sidebar">
+      <div class="sidebar-card">
+        <h4>Controller Wiring</h4>
+        <div class="pn-list">
+          <div class="pn-row"><span class="pn-key">+12V (constant)</span><span class="pn-val">Port 1</span></div>
+          <div class="pn-row"><span class="pn-key">GND</span><span class="pn-val">Port 12</span></div>
+          <div class="pn-row"><span class="pn-key">ACC (ignition)</span><span class="pn-val">Port 11</span></div>
+          <div class="pn-row"><span class="pn-key">Compressor relay</span><span class="pn-val">S port</span></div>
+          <div class="pn-row"><span class="pn-key">FL rise/drop</span><span class="pn-val">Ports 2/3</span></div>
+          <div class="pn-row"><span class="pn-key">FR rise/drop</span><span class="pn-val">Ports 4/5</span></div>
+          <div class="pn-row"><span class="pn-key">RL rise/drop</span><span class="pn-val">Ports 6/7</span></div>
+          <div class="pn-row"><span class="pn-key">RR rise/drop</span><span class="pn-val">Ports 8/9</span></div>
+        </div>
+      </div>
+      <div class="sidebar-card">
+        <h4>Pressure Defaults</h4>
+        <div class="pn-list">
+          <div class="pn-row"><span class="pn-key">Max tank pressure</span><span class="pn-val">130 PSI</span></div>
+          <div class="pn-row"><span class="pn-key">App max settable</span><span class="pn-val">230 PSI</span></div>
+          <div class="pn-row"><span class="pn-key">Min line ID</span><span class="pn-val">4mm</span></div>
+          <div class="pn-row"><span class="pn-key">Valve bore</span><span class="pn-val">2.8mm</span></div>
+          <div class="pn-row"><span class="pn-key">BT password</span><span class="pn-val">8888</span></div>
+        </div>
+      </div>
+      <div class="sidebar-card">
+        <h4>Related</h4>
+        <ul class="tool-links">
+          <li><a href="/tools/swap-checklist">M43→M50 Swap Checklist</a></li>
+          <li><a href="/tools/build-budget">Build Budget Planner</a></li>
+          <li><a href="/guides/e36-air-ride-kit-comparison-2026">Air Ride Kit Comparison</a></li>
+        </ul>
+      </div>
+      <button class="btn-reset" onclick="resetChecklist()">Reset checklist</button>
+    </aside>
+  </div>
+</div>
+</BaseLayout>
+
+<script define:vars={{ total }}>
+  const SLUG = 'p36-air-suspension';
+
+  function updateProgress() {
+    const boxes = document.querySelectorAll('input[type=checkbox]');
+    const done  = [...boxes].filter(b => b.checked).length;
+    document.getElementById('air-pct').textContent = `${done} / ${total}`;
+    document.getElementById('air-bar').style.width = `${(done / total * 100).toFixed(1)}%`;
+    boxes.forEach(cb => cb.closest('.check-item')?.classList.toggle('done', cb.checked));
+    localStorage.setItem(SLUG, JSON.stringify([...boxes].map(b => b.checked)));
+  }
+
+  function resetChecklist() {
+    if (!confirm('Reset all items?')) return;
+    document.querySelectorAll('input[type=checkbox]').forEach(b => { b.checked = false; });
+    localStorage.removeItem(SLUG);
+    updateProgress();
+  }
+
+  window.updateProgress = updateProgress;
+  window.resetChecklist  = resetChecklist;
+
+  try {
+    const saved = JSON.parse(localStorage.getItem(SLUG) || 'null');
+    if (saved) {
+      document.querySelectorAll('input[type=checkbox]').forEach((b, i) => { b.checked = !!saved[i]; });
+      updateProgress();
+    }
+  } catch {}
+</script>
+
+<style>
+  .tool-page { max-width: var(--wide-w); margin: 0 auto; padding: 2rem 1.5rem 5rem; }
+
+  .breadcrumb { font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-dim); display: flex; gap: 0.4rem; align-items: center; margin-bottom: 1.5rem; }
+  .breadcrumb a { color: var(--text-dim); transition: color 0.15s; }
+  .breadcrumb a:hover { color: var(--accent); }
+  .breadcrumb .sep { color: var(--border-mid); }
+
+  .tool-header { margin-bottom: 1.5rem; }
+  .tool-badge { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.15em 0.55em; border: 1px solid; display: inline-block; margin-bottom: 0.75rem; }
+  .badge-susp { color: #5cb85c; border-color: rgba(92,184,92,0.35); background: rgba(92,184,92,0.06); }
+  h1 { font-family: var(--font-display); font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 700; margin-bottom: 0.5rem; }
+  .tool-desc { color: var(--text-mid); font-size: 0.95rem; line-height: 1.65; max-width: 58ch; }
+
+  .progress-wrap { background: var(--bg2); border: 1px solid var(--border); padding: 1.25rem 1.5rem; margin-bottom: 2rem; }
+  .progress-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
+  .progress-label { font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.1em; }
+  .progress-count { font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent); }
+  .progress-track { height: 6px; background: var(--border); }
+  .progress-fill { height: 100%; background: var(--accent); transition: width 0.3s ease; }
+
+  .tool-layout { display: grid; grid-template-columns: 1fr 260px; gap: 2.5rem; align-items: start; }
+  @media (max-width: 768px) { .tool-layout { grid-template-columns: 1fr; } }
+
+  .checklist-group { margin-bottom: 2rem; }
+  .group-title { font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+
+  .check-item { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.75rem 0; border-bottom: 1px solid var(--border); cursor: pointer; transition: background 0.12s; }
+  .check-item:hover { background: var(--bg2); margin: 0 -0.75rem; padding-left: 0.75rem; padding-right: 0.75rem; }
+  .check-item:last-child { border-bottom: none; }
+  .check-item input[type=checkbox] { width: 16px; height: 16px; flex-shrink: 0; margin-top: 2px; accent-color: var(--accent); cursor: pointer; }
+  .check-content { display: flex; flex-direction: column; gap: 0.2rem; }
+  .check-text { font-size: 0.9rem; color: var(--text); line-height: 1.5; transition: color 0.15s; }
+  .check-note { font-size: 0.78rem; color: var(--text-dim); line-height: 1.45; font-style: italic; }
+  .check-item.done .check-text { color: var(--text-dim); text-decoration: line-through; }
+
+  .sidebar-card { background: var(--bg2); border: 1px solid var(--border); padding: 1.25rem; margin-bottom: 1rem; }
+  .sidebar-card h4 { font-family: var(--font-mono); font-size: 0.68rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.9rem; }
+  .pn-list { display: flex; flex-direction: column; gap: 0.35rem; }
+  .pn-row { display: flex; justify-content: space-between; gap: 0.5rem; }
+  .pn-key { font-size: 0.78rem; color: var(--text-dim); }
+  .pn-val { font-family: var(--font-mono); font-size: 0.75rem; color: var(--text); }
+  .tool-links { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+  .tool-links a { font-size: 0.82rem; color: var(--accent); transition: color 0.15s; }
+  .tool-links a:hover { color: var(--text); }
+  .btn-reset { width: 100%; background: transparent; border: 1px solid var(--border-mid); color: var(--text-dim); font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.06em; padding: 0.55rem; cursor: pointer; transition: border-color 0.15s, color 0.15s; }
+  .btn-reset:hover { border-color: var(--red); color: var(--red); }
+</style>
