@@ -1,0 +1,160 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const articles = await getCollection('articles');
+
+const pillars = [
+  { key: 'engine',    label: 'Engine',     desc: 'M50 rebuild, failure points, comparisons' },
+  { key: 'swap',      label: 'Swap',       desc: 'M43 → M50 conversion guides' },
+  { key: 'body',      label: 'Body & Paint', desc: 'Rust, metalwork, PPF, paint' },
+  { key: 'suspension',label: 'Suspension', desc: 'Air ride, geometry, bushings' },
+  { key: 'interior',  label: 'Interior',   desc: 'Sound deadening, leather, trim' },
+  { key: 'reference', label: 'Reference',  desc: 'Torque specs, part numbers, suppliers' },
+];
+
+const byPillar = Object.fromEntries(
+  pillars.map(p => [p.key, articles.filter(a => a.data.pillar === p.key)])
+);
+---
+
+<BaseLayout
+  title="BMW E36 Guides — projekt36"
+  description="Technical guides for BMW E36 owners. Engine swaps, rust repair, cooling, suspension, sound deadening, and more."
+>
+<div class="guides-page">
+
+  <div class="page-hero">
+    <div class="page-tag">PROJEKT36 · TECHNICAL LIBRARY</div>
+    <h1 class="page-title">E36 <em>Guides</em></h1>
+    <p class="page-lead">
+      {articles.length} technical guides covering the full E36 build — from engine swaps and rust to
+      sound deadening and parts sourcing. Written from real build experience, not forum hearsay.
+    </p>
+  </div>
+
+  <!-- Schemas link -->
+  <a href="/schemas/e36-wiring.html" target="_blank" class="schemas-banner">
+    <div class="schemas-banner-inner">
+      <div>
+        <div class="sb-tag">Interactive viewer</div>
+        <div class="sb-title">BMW E36 Wiring Schemas</div>
+        <div class="sb-desc">5 schemas, 10 SVG diagrams. Starting, charging, cooling, EWS, OBD, wipers, central locking, mirrors, seat heaters. Simplified + detailed views.</div>
+      </div>
+      <span class="sb-cta">Open viewer →</span>
+    </div>
+  </a>
+
+  <!-- Articles by pillar -->
+  {pillars.map(p => byPillar[p.key]?.length > 0 && (
+    <section class="pillar-section">
+      <div class="pillar-head">
+        <div class="pillar-title">{p.label}</div>
+        <div class="pillar-desc">{p.desc}</div>
+      </div>
+      <div class="articles-list">
+        {byPillar[p.key].map(a => (
+          <a href={`/guides/${a.slug}`} class="article-row">
+            <div class="article-info">
+              <h3 class="article-title">{a.data.title}</h3>
+              <p class="article-desc">{a.data.description}</p>
+            </div>
+            <span class="article-arrow">→</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  ))}
+
+</div>
+</BaseLayout>
+
+<style>
+  .guides-page {
+    max-width: var(--wide-w);
+    margin: 0 auto;
+    padding: 2rem 1.5rem 5rem;
+  }
+
+  .page-hero { margin-bottom: 2.5rem; }
+  .page-tag {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--accent);
+    letter-spacing: 0.22em;
+    margin-bottom: 0.75rem;
+  }
+  .page-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    line-height: 1.05;
+  }
+  .page-title em { font-style: italic; font-weight: 400; color: var(--accent); }
+  .page-lead { font-size: 0.95rem; color: var(--text-mid); max-width: 58ch; line-height: 1.75; }
+
+  /* Schemas banner */
+  .schemas-banner {
+    display: block;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    text-decoration: none;
+    margin-bottom: 3rem;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .schemas-banner:hover { background: var(--bg3); border-color: var(--border-mid); border-left-color: var(--accent); }
+  .schemas-banner-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .sb-tag { font-family: var(--font-mono); font-size: 0.6rem; color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.3rem; }
+  .sb-title { font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 0.35rem; }
+  .sb-desc { font-size: 0.82rem; color: var(--text-mid); line-height: 1.5; max-width: 56ch; }
+  .sb-cta { font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent); flex-shrink: 0; white-space: nowrap; }
+
+  /* Pillar sections */
+  .pillar-section { margin-bottom: 3rem; }
+  .pillar-head {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 0.5rem;
+  }
+  .pillar-title {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .pillar-desc { font-size: 0.8rem; color: var(--text-dim); }
+
+  .articles-list { display: flex; flex-direction: column; }
+  .article-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+    text-decoration: none;
+    transition: background 0.12s;
+  }
+  .article-row:last-child { border-bottom: none; }
+  .article-row:hover { background: var(--bg2); margin: 0 -1rem; padding-left: 1rem; padding-right: 1rem; }
+  .article-info { flex: 1; min-width: 0; }
+  .article-title { font-size: 0.95rem; font-weight: 600; color: var(--text); margin-bottom: 0.25rem; transition: color 0.15s; }
+  .article-row:hover .article-title { color: var(--accent); }
+  .article-desc { font-size: 0.8rem; color: var(--text-dim); line-height: 1.5; }
+  .article-arrow { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-dim); flex-shrink: 0; transition: color 0.15s; }
+  .article-row:hover .article-arrow { color: var(--accent); }
+</style>
