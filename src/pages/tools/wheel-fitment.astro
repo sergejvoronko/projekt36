@@ -3,219 +3,168 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="Wheel Fitment Calculator — BMW E36 — projekt36"
-  description="Compare wheel width, ET, spacers, and tire size for your BMW E36. Estimate inner clearance and outer poke changes."
+  title="E36 Wheel & Tire Calculator — projekt36"
+  description="Check if your wheel and tire combination fits the BMW E36. Bolt pattern 5×120, hub bore 72.6mm. Accounts for suspension height, staggered setups, and speedo deviation."
 >
-  <div class="tool-page">
-    <!-- Breadcrumb -->
-    <div class="breadcrumb">
-      <a href="/tools">Tools</a>
-      <span class="sep">/</span>
-      <span>Wheel Fitment Calculator</span>
+<div class="tool-page">
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="/tools">Tools</a><span class="sep">/</span><span>Wheel & Tire Calculator</span>
+  </div>
+
+  <!-- Header -->
+  <div class="tool-header">
+    <div class="tool-tag">PROJEKT36 · TOOL</div>
+    <h1 class="tool-title">E36 Wheel & Tire <em>Calculator</em></h1>
+    <p class="tool-lead">Check if your wheel and tire setup fits the BMW E36. Bolt pattern: 5×120 · Hub bore: 72.6mm</p>
+  </div>
+
+  <div class="calc-wrap">
+    <!-- Left: Controls -->
+    <div class="controls-col">
+
+      <!-- Suspension mode -->
+      <div class="card">
+        <div class="card-label">Suspension Setup</div>
+        <div class="mode-btns" id="modeBtns">
+          <button class="mode-btn" data-mode="stock">Stock Height</button>
+          <button class="mode-btn active" data-mode="rolled">Lowered + Rolled</button>
+          <button class="mode-btn" data-mode="aired">Air Ride</button>
+        </div>
+      </div>
+
+      <!-- Diameter -->
+      <div class="card">
+        <div class="card-label">Wheel Diameter</div>
+        <div class="slider-row">
+          <span class="slider-label">Diameter</span>
+          <span class="slider-val" id="diamVal">16"</span>
+        </div>
+        <input type="range" class="slider" id="diamSlider" min="15" max="18" step="1" value="16" />
+        <div class="slider-bounds"><span>15"</span><span class="note">Most common: 16–17</span><span>18"</span></div>
+      </div>
+
+      <!-- Staggered toggle -->
+      <div class="card staggered-row">
+        <button class="toggle-btn" id="staggerToggle" aria-pressed="false">
+          <span class="toggle-track"><span class="toggle-thumb"></span></span>
+        </button>
+        <span class="toggle-label">Staggered setup (different front / rear)</span>
+      </div>
+
+      <!-- Width & Offset -->
+      <div class="card" id="frontCard">
+        <div class="card-label" id="frontLabel">Wheel Setup</div>
+        <div class="slider-row">
+          <span class="slider-label">Width</span>
+          <span class="slider-val" id="wFVal">8J</span>
+        </div>
+        <input type="range" class="slider" id="wFSlider" min="6" max="10.5" step="0.5" value="8" />
+        <div class="slider-bounds"><span>6J</span><span class="note">Stock: 6.5–7.5J</span><span>10.5J</span></div>
+
+        <div class="slider-row" style="margin-top:1rem">
+          <span class="slider-label">Offset (ET)</span>
+          <span class="slider-val" id="etFVal">ET30</span>
+        </div>
+        <input type="range" class="slider" id="etFSlider" min="5" max="50" step="1" value="30" />
+        <div class="slider-bounds"><span>ET5</span><span class="note">Stock: ET42–47</span><span>ET50</span></div>
+
+        <div style="margin-top:1rem">
+          <div class="slider-label" style="margin-bottom:0.4rem">Tire Size</div>
+          <select class="field-select" id="tireFSelect">
+            <option value="">Select tire...</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Rear (staggered only) -->
+      <div class="card hidden" id="rearCard">
+        <div class="card-label">Rear Setup</div>
+        <div class="slider-row">
+          <span class="slider-label">Width</span>
+          <span class="slider-val" id="wRVal">9J</span>
+        </div>
+        <input type="range" class="slider" id="wRSlider" min="6" max="10.5" step="0.5" value="9" />
+        <div class="slider-bounds"><span>6J</span><span>10.5J</span></div>
+
+        <div class="slider-row" style="margin-top:1rem">
+          <span class="slider-label">Offset (ET)</span>
+          <span class="slider-val" id="etRVal">ET25</span>
+        </div>
+        <input type="range" class="slider" id="etRSlider" min="5" max="50" step="1" value="25" />
+        <div class="slider-bounds"><span>ET5</span><span>ET50</span></div>
+
+        <div style="margin-top:1rem">
+          <div class="slider-label" style="margin-bottom:0.4rem">Rear Tire Size</div>
+          <select class="field-select" id="tireRSelect">
+            <option value="">Select tire...</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Stock comparison -->
+      <div class="card">
+        <div class="card-label">Compare to Stock</div>
+        <select class="field-select" id="stockModel">
+          <option value="316i/318i">316i / 318i</option>
+          <option value="320i/323i">320i / 323i</option>
+          <option value="325i/328i" selected>325i / 328i</option>
+          <option value="M3">M3</option>
+        </select>
+        <div class="stock-compare" id="stockCompare"></div>
+      </div>
+
     </div>
 
-    <!-- Hero -->
-    <section class="tool-hero">
-      <div class="tool-hero-inner">
-        <div class="hero-label">
-          <span class="sh-host">root@e36</span><span class="sh-sep">:~#</span>
-          <span class="sh-cmd">./wheel-fitment --interactive</span>
-        </div>
-        <span class="badge">Calculator</span>
-        <h1 class="tool-title">Wheel Fitment Calculator</h1>
-        <p class="tool-lead">
-          Compare your current and new wheel setup — ET, spacers, tire size. Calculates inner clearance change,
-          outer poke, effective offset, and tire diameter difference.
-        </p>
-        <div class="hero-btns">
-          <button id="loadDemo" class="btn-primary">Load demo setup</button>
-          <button id="resetAll" class="btn-outline">Reset</button>
-        </div>
-      </div>
-    </section>
+    <!-- Right: Results -->
+    <div class="results-col">
 
-    <!-- Calculator layout -->
-    <section class="calc-layout">
-      <!-- Left: inputs -->
-      <div class="inputs-col">
-
-        <!-- Current setup -->
-        <div class="card">
-          <div class="card-head">
-            <h2 class="card-title">Current setup</h2>
-          </div>
-          <div class="form-grid">
-            <label class="field">
-              <span class="field-label">Wheel width (in)</span>
-              <input type="number" step="0.5" id="cWidth" placeholder="7.5" class="field-input" />
-            </label>
-            <label class="field">
-              <span class="field-label">ET / offset (mm)</span>
-              <input type="number" step="1" id="cEt" placeholder="41" class="field-input" />
-            </label>
-            <label class="field">
-              <span class="field-label">Spacer (mm)</span>
-              <input type="number" step="1" min="0" id="cSpacer" placeholder="0" class="field-input" />
-            </label>
-            <label class="field">
-              <span class="field-label">Wheel diameter (in)</span>
-              <input type="number" step="1" id="cDiam" placeholder="16" class="field-input" />
-            </label>
-            <label class="field">
-              <span class="field-label">Tire width (mm)</span>
-              <input type="number" step="1" id="cTireW" placeholder="205" class="field-input" />
-            </label>
-            <label class="field">
-              <span class="field-label">Tire profile (%)</span>
-              <input type="number" step="1" id="cTireP" placeholder="55" class="field-input" />
-            </label>
-          </div>
-        </div>
-
-        <!-- New setup -->
-        <div class="card">
-          <div class="card-head">
-            <h2 class="card-title">New setup</h2>
-          </div>
-          <div class="form-grid">
-            <label class="field">
-              <span class="field-label">Wheel width (in)</span>
-              <input type="number" step="0.5" id="nWidth" placeholder="8.5" class="field-input" />
-            </label>
-            <label class="field">
-              <span class="field-label">ET / offset (mm)</span>
-              <input type="number" step="1" id="nEt" placeholder="35" class="field-input" />
-            </label>
-            <label class="field">
-              <span class="field-label">Spacer (mm)</span>
-              <input type="number" step="1" min="0" id="nSpacer" placeholder="0" class="field-input" />
-            </label>
-            <label class="field">
-              <span class="field-label">Wheel diameter (in)</span>
-              <input type="number" step="1" id="nDiam" placeholder="17" class="field-input" />
-            </label>
-            <label class="field">
-              <span class="field-label">Tire width (mm)</span>
-              <input type="number" step="1" id="nTireW" placeholder="225" class="field-input" />
-            </label>
-            <label class="field">
-              <span class="field-label">Tire profile (%)</span>
-              <input type="number" step="1" id="nTireP" placeholder="45" class="field-input" />
-            </label>
-          </div>
-        </div>
-
-        <!-- Context -->
-        <div class="card">
-          <div class="card-head">
-            <h2 class="card-title">Fitment context</h2>
-          </div>
-          <div class="form-grid">
-            <label class="field">
-              <span class="field-label">Axle</span>
-              <select id="axle" class="field-input">
-                <option value="front">Front</option>
-                <option value="rear">Rear</option>
-              </select>
-            </label>
-            <label class="field">
-              <span class="field-label">Lowered</span>
-              <select id="lowered" class="field-input">
-                <option value="false">No</option>
-                <option value="true">Yes</option>
-              </select>
-            </label>
-            <label class="field">
-              <span class="field-label">Rolled fenders</span>
-              <select id="rolled" class="field-input">
-                <option value="false">No</option>
-                <option value="true">Yes</option>
-              </select>
-            </label>
-          </div>
-          <div class="action-row">
-            <button id="calculate" class="btn-primary">Calculate fitment</button>
-            <button id="resetForm" class="btn-outline">Reset form</button>
+      <!-- Overall verdict -->
+      <div class="card verdict-card" id="verdictCard">
+        <div class="verdict-inner">
+          <div class="card-label">Fitment Result</div>
+          <div class="verdict-badge" id="verdictBadge">
+            <span class="verdict-dot" id="verdictDot"></span>
+            <span class="verdict-text" id="verdictText">—</span>
           </div>
         </div>
       </div>
 
-      <!-- Right: results -->
-      <aside class="results-col">
-
-        <!-- Result summary -->
-        <div class="card" id="resultCard">
-          <div class="card-head">
-            <h2 class="card-title">Result summary</h2>
-            <span class="status-dot" id="statusDot">Ready</span>
+      <!-- SVG Visualizations -->
+      <div class="card">
+        <div class="card-label">Cross-Section View</div>
+        <div class="viz-grid">
+          <div class="viz-wrap">
+            <div class="viz-axle-label">FRONT AXLE</div>
+            <svg id="svgFront" viewBox="0 0 240 180" width="100%" class="wheel-svg"></svg>
+            <div class="viz-verdict" id="vFrontVerdict"></div>
           </div>
-          <div class="metrics-grid">
-            <div class="metric">
-              <span class="metric-label">Inner clearance change</span>
-              <strong class="metric-val" id="innerChange">—</strong>
-              <small class="metric-hint" id="innerHint">Fill in both setups to calculate.</small>
-            </div>
-            <div class="metric">
-              <span class="metric-label">Outer poke change</span>
-              <strong class="metric-val" id="outerChange">—</strong>
-              <small class="metric-hint" id="outerHint">Fill in both setups to calculate.</small>
-            </div>
-            <div class="metric">
-              <span class="metric-label">Current effective ET</span>
-              <strong class="metric-val" id="cEffET">—</strong>
-            </div>
-            <div class="metric">
-              <span class="metric-label">New effective ET</span>
-              <strong class="metric-val" id="nEffET">—</strong>
-            </div>
-            <div class="metric">
-              <span class="metric-label">Tire diameter Δ</span>
-              <strong class="metric-val" id="diamDiff">—</strong>
-            </div>
-            <div class="metric">
-              <span class="metric-label">Diameter % diff</span>
-              <strong class="metric-val" id="pctDiff">—</strong>
-            </div>
+          <div class="viz-wrap">
+            <div class="viz-axle-label">REAR AXLE</div>
+            <svg id="svgRear" viewBox="0 0 240 180" width="100%" class="wheel-svg"></svg>
+            <div class="viz-verdict" id="vRearVerdict"></div>
           </div>
         </div>
+      </div>
 
-        <!-- Visual comparison -->
-        <div class="card">
-          <div class="card-head">
-            <h2 class="card-title">Visual comparison</h2>
-          </div>
-          <div class="visual-wrap">
-            <div class="visual-labels">
-              <span>Suspension side</span>
-              <span>Fender side</span>
-            </div>
-            <div class="visual-track" id="visualTrack">
-              <div class="visual-hub"></div>
-              <div class="visual-bar current-bar" id="vCurrent"></div>
-              <div class="visual-bar new-bar" id="vNew"></div>
-              <div class="visual-fender"></div>
-            </div>
-            <div class="visual-legend">
-              <span class="legend-item current-legend">Current</span>
-              <span class="legend-item new-legend">New</span>
-            </div>
-            <p class="visual-note">Simple visual guide — not a precise geometry model.</p>
-          </div>
-        </div>
+      <!-- Measurements -->
+      <div class="card">
+        <div class="card-label">Detailed Measurements</div>
+        <div class="measurements" id="measurements"></div>
+      </div>
 
-        <!-- Fitment notes -->
-        <div class="card">
-          <div class="card-head">
-            <h2 class="card-title">Fitment notes</h2>
-          </div>
-          <ul class="notes-list" id="notesList">
-            <li class="note-item note-info">Fill in both setups to see fitment hints.</li>
-          </ul>
-        </div>
+      <!-- Note -->
+      <div class="note-block">
+        <div class="note-tag">NOTE</div>
+        <p>This calculator provides estimates based on common E36 fitment data. Actual clearance varies with tire brand, fender condition, and suspension geometry. Always test-fit before committing. Air ride users: fitment is calculated at show height — raise for driving clearance. Hub-centric rings required if wheel bore exceeds 72.6mm.</p>
+      </div>
 
-      </aside>
-    </section>
+      <div class="tool-footer">PROJEKT 36 · E36 WHEEL CALCULATOR · 5×120 · 72.6mm HUB</div>
+
+    </div>
   </div>
+</div>
 </BaseLayout>
 
 <style>
@@ -228,75 +177,46 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   /* Breadcrumb */
   .breadcrumb {
     font-family: var(--font-mono);
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     color: var(--text-dim);
-    margin-bottom: 2rem;
     display: flex;
     gap: 0.4rem;
     align-items: center;
+    margin-bottom: 2rem;
   }
   .breadcrumb a { color: var(--text-dim); transition: color 0.15s; }
   .breadcrumb a:hover { color: var(--accent); }
   .breadcrumb .sep { color: var(--border-mid); }
 
-  /* Hero */
-  .tool-hero {
-    background: var(--bg2);
-    border: 1px solid var(--border);
-    border-left: 3px solid var(--accent);
-    padding: 2.5rem 2rem;
-    margin-bottom: 2rem;
-  }
-  .hero-label {
+  /* Header */
+  .tool-header { margin-bottom: 2.5rem; }
+  .tool-tag {
     font-family: var(--font-mono);
-    font-size: 0.72rem;
-    color: var(--text-dim);
-    margin-bottom: 1rem;
-    display: flex;
-    gap: 0.35em;
-    align-items: center;
-  }
-  .sh-host { color: var(--accent); }
-  .sh-sep  { color: var(--text-dim); }
-  .sh-cmd  { color: var(--text-mid); }
-  .badge {
-    display: inline-block;
-    font-family: var(--font-mono);
-    font-size: 0.62rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    font-size: 0.65rem;
     color: var(--accent);
-    background: var(--accent-dim);
-    border: 1px solid rgba(87,141,255,0.2);
-    padding: 0.18em 0.55em;
+    letter-spacing: 0.22em;
     margin-bottom: 0.75rem;
   }
   .tool-title {
-    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
     font-weight: 700;
     color: var(--text);
-    margin-bottom: 0.75rem;
     line-height: 1.1;
+    margin-bottom: 0.6rem;
   }
-  .tool-lead {
-    font-size: 0.95rem;
-    color: var(--text-mid);
-    line-height: 1.7;
-    max-width: 60ch;
-    margin-bottom: 1.5rem;
-  }
-  .hero-btns { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .tool-title em { font-style: italic; font-weight: 400; color: var(--accent); }
+  .tool-lead { font-size: 0.9rem; color: var(--text-mid); max-width: 54ch; line-height: 1.7; }
 
   /* Layout */
-  .calc-layout {
+  .calc-wrap {
     display: grid;
     grid-template-columns: 1fr 420px;
-    gap: 1.5rem;
+    gap: 1.25rem;
     align-items: start;
   }
-  @media (max-width: 900px) {
-    .calc-layout { grid-template-columns: 1fr; }
+  @media (max-width: 920px) {
+    .calc-wrap { grid-template-columns: 1fr; }
     .results-col { order: -1; }
   }
 
@@ -304,422 +224,493 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   .card {
     background: var(--bg2);
     border: 1px solid var(--border);
-    padding: 1.5rem;
+    padding: 1.25rem 1.5rem;
     margin-bottom: 1rem;
   }
   .card:last-child { margin-bottom: 0; }
-  .card-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.25rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid var(--border);
-  }
-  .card-title {
-    font-family: var(--font-mono);
-    font-size: 0.82rem;
-    font-weight: 600;
-    color: var(--text);
-    letter-spacing: 0.04em;
-  }
-
-  /* Form */
-  .form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-  .field { display: flex; flex-direction: column; gap: 0.4rem; }
-  .field-label {
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    color: var(--text-dim);
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
-  .field-input {
-    background: var(--bg);
-    border: 1px solid var(--border);
-    color: var(--text);
-    font-family: var(--font-mono);
-    font-size: 0.9rem;
-    padding: 0.5rem 0.75rem;
-    width: 100%;
-    outline: none;
-    transition: border-color 0.15s;
-    -moz-appearance: textfield;
-  }
-  .field-input::-webkit-outer-spin-button,
-  .field-input::-webkit-inner-spin-button { -webkit-appearance: none; }
-  .field-input:focus { border-color: var(--accent); }
-  select.field-input { cursor: pointer; }
-  .action-row {
-    display: flex;
-    gap: 0.75rem;
-    margin-top: 1.25rem;
-    flex-wrap: wrap;
-  }
-
-  /* Buttons */
-  .btn-primary {
-    display: inline-block;
-    background: var(--accent);
-    color: #fff;
-    font-family: var(--font-mono);
-    font-size: 0.78rem;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    padding: 0.65rem 1.4rem;
-    border: none;
-    cursor: pointer;
-    transition: background 0.15s;
-  }
-  .btn-primary:hover { background: #6fa0ff; }
-  .btn-outline {
-    display: inline-block;
-    background: transparent;
-    color: var(--text-mid);
-    font-family: var(--font-mono);
-    font-size: 0.78rem;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    padding: 0.65rem 1.4rem;
-    border: 1px solid var(--border-mid);
-    cursor: pointer;
-    transition: border-color 0.15s, color 0.15s;
-  }
-  .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
-
-  /* Status dot */
-  .status-dot {
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    color: var(--text-dim);
-    padding: 0.2em 0.6em;
-    border: 1px solid var(--border);
-  }
-  .status-dot.ok { color: var(--green); border-color: rgba(56,199,147,0.3); background: rgba(56,199,147,0.06); }
-  .status-dot.warn { color: var(--amber); border-color: rgba(240,178,75,0.3); background: rgba(240,178,75,0.06); }
-  .status-dot.err { color: var(--red); border-color: rgba(255,124,135,0.3); background: rgba(255,124,135,0.06); }
-
-  /* Metrics */
-  .metrics-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-  .metric { padding: 0.75rem; background: var(--bg); border: 1px solid var(--border); }
-  .metric-label {
-    display: block;
-    font-family: var(--font-mono);
-    font-size: 0.62rem;
-    color: var(--text-dim);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    margin-bottom: 0.4rem;
-  }
-  .metric-val {
-    display: block;
-    font-family: var(--font-mono);
-    font-size: 1.15rem;
-    font-weight: 600;
-    color: var(--text);
-    line-height: 1;
-    margin-bottom: 0.35rem;
-  }
-  .metric-val.pos { color: var(--green); }
-  .metric-val.neg { color: var(--red); }
-  .metric-val.neutral { color: var(--amber); }
-  .metric-hint {
-    display: block;
-    font-size: 0.68rem;
-    color: var(--text-dim);
-    line-height: 1.4;
-  }
-
-  /* Visual */
-  .visual-wrap { padding: 0.5rem 0; }
-  .visual-labels {
-    display: flex;
-    justify-content: space-between;
-    font-family: var(--font-mono);
-    font-size: 0.62rem;
-    color: var(--text-dim);
-    margin-bottom: 0.5rem;
-    letter-spacing: 0.05em;
-  }
-  .visual-track {
-    position: relative;
-    height: 80px;
-    background: var(--bg);
-    border: 1px solid var(--border);
-    margin-bottom: 0.75rem;
-    overflow: hidden;
-  }
-  .visual-hub {
-    position: absolute;
-    left: 0; top: 0; bottom: 0;
-    width: 3px;
-    background: var(--border-mid);
-  }
-  .visual-fender {
-    position: absolute;
-    right: 0; top: 0; bottom: 0;
-    width: 3px;
-    background: var(--border-mid);
-  }
-  .visual-bar {
-    position: absolute;
-    top: 50%;
-    height: 12px;
-    transform: translateY(-50%);
-    transition: left 0.3s, width 0.3s;
-    border-radius: 2px;
-  }
-  .current-bar { background: var(--border-mid); top: calc(50% - 8px); height: 10px; }
-  .new-bar { background: var(--accent); opacity: 0.8; top: calc(50% + 4px); height: 10px; }
-  .visual-legend {
-    display: flex;
-    gap: 1.25rem;
-    margin-bottom: 0.5rem;
-  }
-  .legend-item {
+  .card-label {
     font-family: var(--font-mono);
     font-size: 0.65rem;
+    color: var(--accent);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 0.9rem;
+  }
+  .hidden { display: none !important; }
+
+  /* Mode buttons */
+  .mode-btns { display: flex; gap: 0.5rem; }
+  .mode-btn {
+    flex: 1;
+    padding: 0.55rem 0.4rem;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.06);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--text-dim);
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .mode-btn.active {
+    background: rgba(212,149,42,0.1);
+    border-color: rgba(212,149,42,0.4);
+    color: var(--accent);
+  }
+  .mode-btn:hover:not(.active) { border-color: var(--border-mid); color: var(--text-mid); }
+
+  /* Sliders */
+  .slider-row {
     display: flex;
-    align-items: center;
-    gap: 0.4rem;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.4rem;
+  }
+  .slider-label { font-size: 0.85rem; color: var(--text-mid); }
+  .slider-val { font-family: var(--font-mono); font-size: 1rem; color: var(--accent); font-weight: 500; }
+  .slider {
+    width: 100%;
+    height: 4px;
+    appearance: none;
+    background: var(--bg3);
+    outline: none;
+    cursor: pointer;
+    accent-color: var(--accent);
+  }
+  .slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px; height: 16px;
+    border-radius: 50%;
+    background: var(--accent);
+    cursor: pointer;
+    border: 2px solid var(--bg2);
+    box-shadow: 0 0 8px rgba(212,149,42,0.3);
+  }
+  .slider::-moz-range-thumb {
+    width: 16px; height: 16px;
+    border-radius: 50%;
+    background: var(--accent);
+    cursor: pointer;
+    border: 2px solid var(--bg2);
+  }
+  .slider-bounds {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
     color: var(--text-dim);
   }
-  .legend-item::before {
-    content: '';
-    display: inline-block;
-    width: 20px;
-    height: 4px;
-    border-radius: 2px;
-  }
-  .current-legend::before { background: var(--border-mid); }
-  .new-legend::before { background: var(--accent); }
-  .visual-note { font-size: 0.72rem; color: var(--text-dim); line-height: 1.5; }
+  .slider-bounds .note { color: var(--text-dim); opacity: 0.7; }
 
-  /* Notes */
-  .notes-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
-  .note-item {
-    font-size: 0.82rem;
-    padding: 0.6rem 0.75rem;
-    border-left: 3px solid transparent;
-    background: var(--bg);
-    color: var(--text-mid);
-    line-height: 1.5;
+  /* Toggle */
+  .staggered-row { display: flex; align-items: center; gap: 0.85rem; padding: 0.9rem 1.5rem; }
+  .toggle-btn { background: none; border: none; cursor: pointer; flex-shrink: 0; }
+  .toggle-track {
+    display: block;
+    width: 40px; height: 22px;
+    border-radius: 11px;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    position: relative;
+    transition: background 0.25s, border-color 0.25s;
   }
-  .note-info { border-left-color: var(--accent); }
-  .note-ok { border-left-color: var(--green); color: var(--text); }
-  .note-warn { border-left-color: var(--amber); color: var(--text); }
-  .note-err { border-left-color: var(--red); color: var(--text); }
+  .toggle-btn[aria-pressed="true"] .toggle-track { background: var(--accent); border-color: var(--accent); }
+  .toggle-thumb {
+    display: block;
+    position: absolute;
+    top: 3px; left: 3px;
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    background: var(--text-mid);
+    transition: left 0.25s, background 0.25s;
+  }
+  .toggle-btn[aria-pressed="true"] .toggle-thumb { left: 21px; background: #0d0f14; }
+  .toggle-label { font-size: 0.85rem; color: var(--text-mid); }
+
+  /* Select */
+  .field-select {
+    width: 100%;
+    background: var(--bg3);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 0.5rem 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.15s;
+  }
+  .field-select:focus { border-color: rgba(212,149,42,0.4); }
+
+  /* Verdict */
+  .verdict-card { margin-bottom: 1rem; }
+  .verdict-inner { display: flex; justify-content: space-between; align-items: center; }
+  .verdict-inner .card-label { margin-bottom: 0; }
+  .verdict-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.3rem 0.85rem;
+    border: 1px solid var(--border);
+    background: var(--bg3);
+  }
+  .verdict-dot {
+    display: inline-block;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--text-dim);
+  }
+  .verdict-text {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+  }
+
+  /* SVG viz */
+  .viz-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .viz-wrap { text-align: center; }
+  .viz-axle-label {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    color: var(--text-dim);
+    letter-spacing: 0.15em;
+    margin-bottom: 0.25rem;
+  }
+  .wheel-svg { display: block; }
+  .viz-verdict {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    margin-top: 0.25rem;
+  }
+
+  /* Stock compare */
+  .stock-compare {
+    margin-top: 0.85rem;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 0.5rem;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    line-height: 1.9;
+  }
+  .sc-col { }
+  .sc-label { font-size: 0.6rem; letter-spacing: 0.1em; color: var(--text-dim); margin-bottom: 0.25rem; }
+  .sc-arrow { color: var(--accent); font-size: 1.1rem; text-align: center; }
+  .sc-stock { color: var(--text-dim); }
+  .sc-yours { color: var(--text); }
+
+  /* Measurements */
+  .measurements {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    line-height: 2.1;
+    color: var(--text-mid);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 1.5rem;
+  }
+  .m-label { color: var(--text-dim); }
+  .m-val { color: var(--text); }
+  .m-warn { color: var(--amber); }
+  .m-good { color: var(--green); }
+
+  /* Note block */
+  .note-block {
+    border-left: 2px solid rgba(212,149,42,0.3);
+    background: rgba(212,149,42,0.03);
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+  }
+  .note-tag {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    color: var(--accent);
+    letter-spacing: 0.12em;
+    margin-bottom: 0.4rem;
+  }
+  .note-block p { font-size: 0.82rem; color: var(--text-dim); line-height: 1.7; }
+
+  /* Footer */
+  .tool-footer {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    color: var(--text-dim);
+    letter-spacing: 0.1em;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
 </style>
 
 <script>
-  const $ = (id) => document.getElementById(id);
+// ── E36 DATA ──────────────────────────────────────────────────────────
+const E36 = {
+  boltPattern: '5×120',
+  hubBore: 72.6,
+  stock: {
+    '316i/318i': { front: { w: 6.5, d: 15, et: 42 }, rear: { w: 6.5, d: 15, et: 42 }, tire: '195/65R15' },
+    '320i/323i': { front: { w: 7,   d: 15, et: 47 }, rear: { w: 7,   d: 15, et: 47 }, tire: '205/60R15' },
+    '325i/328i': { front: { w: 7,   d: 15, et: 47 }, rear: { w: 7,   d: 15, et: 47 }, tire: '205/60R15' },
+    'M3':        { front: { w: 7.5, d: 17, et: 41 }, rear: { w: 8.5, d: 17, et: 41 }, tire: '235/40R17' },
+  },
+  limits: {
+    stock:  { front: { inner: 90, outer: 25 }, rear: { inner: 95, outer: 20 } },
+    rolled: { front: { inner: 90, outer: 10 }, rear: { inner: 95, outer:  5 } },
+    aired:  { front: { inner: 90, outer: -5 }, rear: { inner: 95, outer:-15 } },
+  },
+};
 
-  const DEMO = {
-    cWidth: 7, cEt: 41, cSpacer: 0, cDiam: 16, cTireW: 205, cTireP: 55,
-    nWidth: 8, nEt: 35, nSpacer: 0, nDiam: 17, nTireW: 225, nTireP: 45,
-    axle: 'rear', lowered: 'true', rolled: 'false',
-  };
+const TIRES = {
+  15: ['185/65','195/65','195/60','205/60','205/55','215/55'],
+  16: ['195/55','205/50','205/55','215/45','215/50','225/45','225/50'],
+  17: ['205/45','205/40','215/40','215/45','225/40','225/45','235/40','245/35'],
+  18: ['205/35','215/35','215/40','225/35','225/40','235/35','245/35'],
+};
 
-  function getVal(id) { return parseFloat($(''+id)?.value) || 0; }
+// ── STATE ──────────────────────────────────────────────────────────────
+let state = {
+  suspension: 'rolled',
+  diameter: 16,
+  widthF: 8, etF: 30, tireF: '',
+  widthR: 9, etR: 25, tireR: '',
+  staggered: false,
+  stockModel: '325i/328i',
+};
 
-  function setVal(id, v) { if ($(id)) $(id).value = v; }
+// ── UTILS ──────────────────────────────────────────────────────────────
+function geo(wInch, et) {
+  const wMM = wInch * 25.4;
+  return { wMM, inner: wMM / 2 + et, outer: wMM / 2 - et };
+}
 
-  function fmt(mm, decimals = 1) {
-    const sign = mm > 0 ? '+' : '';
-    return `${sign}${mm.toFixed(decimals)} mm`;
+function verdict(g, susp, pos) {
+  const lim = E36.limits[susp][pos];
+  let status = 'good'; const issues = [];
+  if (g.inner > lim.inner + 10) { issues.push('Inner lip may contact strut/spring'); status = 'bad'; }
+  else if (g.inner > lim.inner) { issues.push('Tight inner clearance — measure carefully'); status = 'warn'; }
+  if (g.outer > lim.outer + 15) { issues.push('Significant poke — likely illegal in EU'); if (status !== 'bad') status = 'bad'; }
+  else if (g.outer > lim.outer) { issues.push('Slight poke — may need fender rolling'); if (status === 'good') status = 'warn'; }
+  return { status, issues };
+}
+
+function parseTire(s) {
+  const m = s.match(/(\d+)\/(\d+)/); if (!m) return null;
+  const sw = +m[1] * (+m[2] / 100);
+  return { width: +m[1], aspect: +m[2], sidewall: sw };
+}
+
+function tireDiam(s, dInch) {
+  const t = parseTire(s); if (!t) return null;
+  return t.sidewall * 2 + dInch * 25.4;
+}
+
+const statusColor = { good: '#5cb85c', warn: '#e8a83e', bad: '#d9534f' };
+const statusLabel = { good: 'FITS', warn: 'TIGHT', bad: 'NO FIT' };
+
+// ── SVG DRAW ──────────────────────────────────────────────────────────
+function drawSVG(svgEl, g, v, susp, pos, diam, wInch, et, tireStr) {
+  const W = 240, H = 180, cx = W / 2;
+  const scale = 0.65;
+  const rimTop = 28, rimBot = H - 18;
+  const rimH = rimBot - rimTop;
+  const col = statusColor[v.status];
+  const lim = E36.limits[susp][pos];
+
+  const innerX = cx - g.inner * scale;
+  const outerX = cx + g.outer * scale;
+  const fenderX = cx + lim.outer * scale;
+
+  const tireData = tireStr ? parseTire(tireStr) : null;
+  const tireW = tireData ? tireData.sidewall * scale * 0.4 : 0;
+
+  const ns = 'http://www.w3.org/2000/svg';
+  function el(tag, attrs, text) {
+    const e = document.createElementNS(ns, tag);
+    for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v);
+    if (text !== undefined) e.textContent = text;
+    return e;
   }
 
-  function calcTireDiam(diam, tireW, tireP) {
-    // diameter in inches, tireW in mm, tireP in %
-    return diam * 25.4 + 2 * (tireW * tireP / 100);
+  svgEl.innerHTML = '';
+
+  // Background
+  svgEl.appendChild(el('rect', { x: 0, y: 0, width: W, height: H, fill: '#0d1017' }));
+
+  // Fender line
+  svgEl.appendChild(el('line', { x1: fenderX, y1: rimTop - 12, x2: fenderX, y2: rimBot + 6, stroke: '#444', 'stroke-width': 1, 'stroke-dasharray': '4,3' }));
+  svgEl.appendChild(el('text', { x: fenderX, y: rimTop - 15, 'text-anchor': 'middle', fill: '#444', 'font-size': 7, 'font-family': 'IBM Plex Mono,monospace' }, 'FENDER'));
+
+  // Hub center
+  svgEl.appendChild(el('line', { x1: cx, y1: rimTop, x2: cx, y2: rimBot, stroke: `${col}33`, 'stroke-width': 1, 'stroke-dasharray': '2,4' }));
+
+  // Tire outline
+  if (tireData) {
+    svgEl.appendChild(el('rect', { x: innerX - tireW, y: rimTop - 5, width: outerX - innerX + tireW * 2, height: rimH + 10, rx: 5, fill: 'none', stroke: '#33333355', 'stroke-width': 2 }));
   }
 
-  function calculate() {
-    const cW = getVal('cWidth') * 25.4;   // inches → mm
-    const cET = getVal('cEt');
-    const cSp = getVal('cSpacer');
-    const cD = getVal('cDiam');
-    const cTW = getVal('cTireW');
-    const cTP = getVal('cTireP');
+  // Wheel barrel fill
+  svgEl.appendChild(el('rect', { x: innerX, y: rimTop, width: outerX - innerX, height: rimH, rx: 2, fill: `${col}0a`, stroke: col, 'stroke-width': 1.5 }));
 
-    const nW = getVal('nWidth') * 25.4;
-    const nET = getVal('nEt');
-    const nSp = getVal('nSpacer');
-    const nD = getVal('nDiam');
-    const nTW = getVal('nTireW');
-    const nTP = getVal('nTireP');
+  // Inner / outer lips
+  svgEl.appendChild(el('line', { x1: innerX, y1: rimTop, x2: innerX, y2: rimBot, stroke: col, 'stroke-width': 2 }));
+  svgEl.appendChild(el('line', { x1: outerX, y1: rimTop, x2: outerX, y2: rimBot, stroke: col, 'stroke-width': 2 }));
 
-    const axle = $('axle').value;
-    const lowered = $('lowered').value === 'true';
-    const rolled = $('rolled').value === 'true';
-
-    if (!cW || !nW || !cET || !nET) {
-      $('statusDot').textContent = 'Incomplete';
-      $('statusDot').className = 'status-dot';
-      return;
-    }
-
-    const cEffET = cET - cSp;
-    const nEffET = nET - nSp;
-
-    // Inner lip position from hub (positive = outboard)
-    // inner_lip = effectiveET - wheelWidth/2
-    const cInnerLip = cEffET - cW / 2;
-    const nInnerLip = nEffET - nW / 2;
-
-    // Outer lip from hub
-    const cOuterLip = cEffET + cW / 2;
-    const nOuterLip = nEffET + nW / 2;
-
-    // Clearance change: positive = inner lip moved outboard = more clearance
-    const deltaInner = nInnerLip - cInnerLip;
-    // Poke change: positive = outer lip moved outboard = more poke
-    const deltaOuter = nOuterLip - cOuterLip;
-
-    // Tire diameter
-    const cDiam = calcTireDiam(cD, cTW, cTP);
-    const nDiam = calcTireDiam(nD, nTW, nTP);
-    const diamDiff = nDiam - cDiam;
-    const pctDiff = cDiam > 0 ? (diamDiff / cDiam) * 100 : 0;
-
-    // Update metrics
-    $('cEffET').textContent = `${cEffET.toFixed(0)} mm`;
-    $('nEffET').textContent = `${nEffET.toFixed(0)} mm`;
-
-    const innerEl = $('innerChange');
-    innerEl.textContent = fmt(deltaInner);
-    innerEl.className = 'metric-val ' + (deltaInner > 2 ? 'pos' : deltaInner < -2 ? 'neg' : 'neutral');
-    $('innerHint').textContent = deltaInner > 0
-      ? 'More clearance from strut/suspension.'
-      : deltaInner < 0
-      ? 'Less clearance — watch for rubbing on turns.'
-      : 'Clearance unchanged.';
-
-    const outerEl = $('outerChange');
-    outerEl.textContent = fmt(deltaOuter);
-    outerEl.className = 'metric-val ' + (deltaOuter > 2 ? 'neg' : deltaOuter < -2 ? 'pos' : 'neutral');
-    $('outerHint').textContent = deltaOuter > 0
-      ? 'Wheel sticks out more — check fender clearance.'
-      : deltaOuter < 0
-      ? 'Wheel tucked in more.'
-      : 'Outer position unchanged.';
-
-    const diamEl = $('diamDiff');
-    diamEl.textContent = fmt(diamDiff);
-    diamEl.className = 'metric-val ' + (Math.abs(pctDiff) > 2.5 ? 'warn' : 'neutral');
-
-    const pctEl = $('pctDiff');
-    pctEl.textContent = `${pctDiff >= 0 ? '+' : ''}${pctDiff.toFixed(2)}%`;
-    pctEl.className = 'metric-val ' + (Math.abs(pctDiff) > 2.5 ? 'neg' : 'pos');
-
-    // Fitment notes
-    const notes = [];
-    if (deltaInner < -5) notes.push({ type: 'err', text: `Inner clearance decreased by ${Math.abs(deltaInner).toFixed(1)} mm — risk of strut contact, especially under compression.` });
-    else if (deltaInner < 0) notes.push({ type: 'warn', text: `Minor inner clearance reduction (${Math.abs(deltaInner).toFixed(1)} mm). Test with full suspension travel.` });
-    else notes.push({ type: 'ok', text: `Inner clearance OK — gained ${deltaInner.toFixed(1)} mm.` });
-
-    if (deltaOuter > 8) notes.push({ type: 'err', text: `Outer poke increased by ${deltaOuter.toFixed(1)} mm — fender modification likely needed.` });
-    else if (deltaOuter > 3) notes.push({ type: 'warn', text: `Outer poke +${deltaOuter.toFixed(1)} mm — check fender liner clearance, especially when lowered.` });
-
-    if (lowered && axle === 'front') notes.push({ type: 'warn', text: 'Car is lowered — front arch clearance at full lock is critical. Test at ride height.' });
-    if (lowered && axle === 'rear') notes.push({ type: 'warn', text: 'Car is lowered — check rear arch clearance at full compression over bumps.' });
-
-    if (Math.abs(pctDiff) > 2.5) notes.push({ type: 'warn', text: `Tire diameter differs by ${Math.abs(pctDiff).toFixed(1)}% — speedometer reading will be affected.` });
-
-    if (rolled) notes.push({ type: 'ok', text: 'Rolled fenders give extra outer clearance buffer.' });
-
-    if (nSp > 0) notes.push({ type: 'info', text: `${nSp} mm spacer used — verify hub-centric fitment and use quality hardware (ARP studs recommended).` });
-
-    const list = $('notesList');
-    list.innerHTML = notes.map(n =>
-      `<li class="note-item note-${n.type}">${n.text}</li>`
-    ).join('');
-
-    // Update visual
-    updateVisual(cEffET, cW, nEffET, nW);
-
-    const worst = notes.some(n => n.type === 'err') ? 'err'
-                : notes.some(n => n.type === 'warn') ? 'warn' : 'ok';
-    const dot = $('statusDot');
-    dot.className = `status-dot ${worst}`;
-    dot.textContent = worst === 'ok' ? 'OK' : worst === 'warn' ? 'Review' : 'Warning';
-  }
-
-  function updateVisual(cET, cW, nET, nW) {
-    // Represent in a 300px track
-    // Hub at left (0), max reference = 200mm from hub
-    const TRACK_W = $('visualTrack').offsetWidth || 360;
-    const scale = (TRACK_W - 20) / 250; // 250mm = full visual range
-
-    // Hub reference line at left edge
-    // Wheel bars start at inner lip, end at outer lip
-    const cInner = cET - cW / 2;
-    const cOuter = cET + cW / 2;
-    const nInner = nET - nW / 2;
-    const nOuter = nET + nW / 2;
-
-    // Shift so 0mm (hub) is at 10px
-    const offset = 10;
-    const clamp = (v, min, max) => Math.max(min, Math.min(max, v));
-
-    const cLeft = clamp(offset + cInner * scale, 4, TRACK_W - 4);
-    const cRight = clamp(offset + cOuter * scale, 4, TRACK_W - 4);
-    const nLeft = clamp(offset + nInner * scale, 4, TRACK_W - 4);
-    const nRight = clamp(offset + nOuter * scale, 4, TRACK_W - 4);
-
-    const vc = $('vCurrent');
-    const vn = $('vNew');
-    vc.style.left = `${cLeft}px`;
-    vc.style.width = `${Math.max(8, cRight - cLeft)}px`;
-    vn.style.left = `${nLeft}px`;
-    vn.style.width = `${Math.max(8, nRight - nLeft)}px`;
-  }
-
-  $('calculate').addEventListener('click', calculate);
-
-  $('loadDemo').addEventListener('click', () => {
-    Object.entries(DEMO).forEach(([k, v]) => setVal(k, v));
-    calculate();
+  // Spokes hint
+  [[cx, rimTop+10, innerX+5, rimTop+5],[cx, rimBot-10, innerX+5, rimBot-5],
+   [cx, rimTop+10, outerX-5, rimTop+5],[cx, rimBot-10, outerX-5, rimBot-5]].forEach(([x1,y1,x2,y2]) => {
+    svgEl.appendChild(el('line', { x1, y1, x2, y2, stroke: `${col}44`, 'stroke-width': 0.8 }));
   });
 
-  function resetForm() {
-    ['cWidth','cEt','cSpacer','cDiam','cTireW','cTireP',
-     'nWidth','nEt','nSpacer','nDiam','nTireW','nTireP'].forEach(id => {
-      $(id).value = '';
+  // Hub dot
+  svgEl.appendChild(el('circle', { cx, cy: H / 2, r: 3, fill: '#d4952a', opacity: 0.7 }));
+
+  // ET label
+  svgEl.appendChild(el('line', { x1: cx, y1: rimBot + 8, x2: outerX, y2: rimBot + 8, stroke: '#555', 'stroke-width': 0.5 }));
+  svgEl.appendChild(el('text', { x: (cx + outerX) / 2, y: rimBot + 17, 'text-anchor': 'middle', fill: '#555', 'font-size': 7, 'font-family': 'IBM Plex Mono,monospace' }, `ET${et}`));
+
+  // Spec label
+  svgEl.appendChild(el('text', { x: (innerX + outerX) / 2, y: H / 2 + 4, 'text-anchor': 'middle', fill: `${col}99`, 'font-size': 9, 'font-family': 'IBM Plex Mono,monospace', 'font-weight': 500 }, `${wInch}J×${diam}`));
+}
+
+// ── RENDER ──────────────────────────────────────────────────────────────
+function render() {
+  const { suspension, diameter, widthF, etF, tireF, staggered, stockModel } = state;
+  const widthR = staggered ? state.widthR : widthF;
+  const etR    = staggered ? state.etR    : etF;
+  const tireR  = staggered ? state.tireR  : tireF;
+
+  const gF = geo(widthF, etF);
+  const gR = geo(widthR, etR);
+  const vF = verdict(gF, suspension, 'front');
+  const vR = verdict(gR, suspension, 'rear');
+  const overall = vF.status === 'bad' || vR.status === 'bad' ? 'bad'
+                : vF.status === 'warn' || vR.status === 'warn' ? 'warn' : 'good';
+
+  // Verdict badge
+  const dot = document.getElementById('verdictDot');
+  const txt = document.getElementById('verdictText');
+  const col = statusColor[overall];
+  dot.style.background = col;
+  dot.style.boxShadow = `0 0 8px ${col}66`;
+  txt.textContent = statusLabel[overall];
+  txt.style.color = col;
+  document.getElementById('verdictCard').style.borderColor = `${col}33`;
+
+  // SVGs
+  drawSVG(document.getElementById('svgFront'), gF, vF, suspension, 'front', diameter, widthF, etF, tireF);
+  drawSVG(document.getElementById('svgRear'),  gR, vR, suspension, 'rear',  diameter, widthR, etR, tireR);
+
+  // Verdict labels
+  ['Front','Rear'].forEach((side, i) => {
+    const v = i === 0 ? vF : vR;
+    const el = document.getElementById(`v${side}Verdict`);
+    el.textContent = statusLabel[v.status];
+    el.style.color = statusColor[v.status];
+    if (v.issues.length) el.title = v.issues.join(' | ');
+  });
+
+  // Measurements
+  const dF = tireF ? tireDiam(tireF, diameter) : null;
+  const dR = tireR ? tireDiam(tireR, diameter) : null;
+  const stock = E36.stock[stockModel];
+  const dStock = stock ? tireDiam(stock.tire.replace(/R\d+/, ''), +stock.tire.match(/R(\d+)/)?.[1]) : null;
+  const speedoDiff = dF && dStock ? ((dF / dStock - 1) * 100) : null;
+
+  const mEl = document.getElementById('measurements');
+  mEl.innerHTML = `
+    <span class="m-label">Front spec:</span><span class="m-val">${widthF}J×${diameter} ET${etF}${tireF ? ' + ' + tireF + 'R' + diameter : ''}</span>
+    <span class="m-label">Rear spec:</span><span class="m-val">${widthR}J×${diameter} ET${etR}${tireR ? ' + ' + tireR + 'R' + diameter : ''}</span>
+    <span class="m-label">Front inner/outer:</span><span class="m-val">${gF.inner.toFixed(0)}mm / ${gF.outer.toFixed(0)}mm</span>
+    <span class="m-label">Rear inner/outer:</span><span class="m-val">${gR.inner.toFixed(0)}mm / ${gR.outer.toFixed(0)}mm</span>
+    ${dF ? `<span class="m-label">Tire diameter:</span><span class="m-val">${dF.toFixed(0)}mm (${(dF/25.4).toFixed(1)}")</span>` : ''}
+    ${speedoDiff !== null ? `<span class="m-label">Speedo vs stock:</span><span class="${Math.abs(speedoDiff) > 3 ? 'm-warn' : 'm-good'}">${speedoDiff > 0 ? '+' : ''}${speedoDiff.toFixed(1)}%${Math.abs(speedoDiff) > 3 ? ' ⚠ recalibrate' : ''}</span>` : ''}
+  `;
+
+  // Stock comparison
+  const sc = document.getElementById('stockCompare');
+  if (stock) {
+    sc.innerHTML = `
+      <div class="sc-col">
+        <div class="sc-label">STOCK</div>
+        <div class="sc-stock">F: ${stock.front.w}J×${stock.front.d} ET${stock.front.et}</div>
+        <div class="sc-stock">R: ${stock.rear.w}J×${stock.rear.d} ET${stock.rear.et}</div>
+        <div class="sc-stock" style="font-size:0.65rem;opacity:0.5">${stock.tire}</div>
+      </div>
+      <div class="sc-arrow">→</div>
+      <div class="sc-col">
+        <div class="sc-label" style="color:var(--accent)">YOURS</div>
+        <div class="sc-yours">F: ${widthF}J×${diameter} ET${etF}</div>
+        <div class="sc-yours">R: ${widthR}J×${diameter} ET${etR}</div>
+        ${tireF ? `<div class="sc-yours" style="font-size:0.65rem;opacity:0.7">${tireF}R${diameter}${staggered && tireR ? ' / ' + tireR + 'R' + diameter : ''}</div>` : ''}
+      </div>
+    `;
+  }
+}
+
+// ── TIRE DROPDOWN ──────────────────────────────────────────────────────
+function populateTires() {
+  const opts = TIRES[state.diameter] || [];
+  ['tireFSelect','tireRSelect'].forEach(id => {
+    const sel = document.getElementById(id);
+    const cur = sel.value;
+    sel.innerHTML = '<option value="">Select tire...</option>' +
+      opts.map(t => `<option value="${t}" ${t === cur ? 'selected' : ''}>${t}R${state.diameter}</option>`).join('');
+  });
+}
+
+// ── INIT ──────────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+
+  // Suspension buttons
+  document.getElementById('modeBtns').addEventListener('click', e => {
+    const btn = e.target.closest('.mode-btn'); if (!btn) return;
+    document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    state.suspension = btn.dataset.mode;
+    render();
+  });
+
+  // Slider helpers
+  function bindSlider(sliderId, valId, fmt, key) {
+    const s = document.getElementById(sliderId);
+    const v = document.getElementById(valId);
+    s.addEventListener('input', () => {
+      state[key] = +s.value; v.textContent = fmt(+s.value); render();
     });
-    $('axle').value = 'front';
-    $('lowered').value = 'false';
-    $('rolled').value = 'false';
-    ['innerChange','outerChange','cEffET','nEffET','diamDiff','pctDiff'].forEach(id => {
-      $(id).textContent = '—';
-      $(id).className = 'metric-val';
-    });
-    $('innerHint').textContent = 'Fill in both setups to calculate.';
-    $('outerHint').textContent = 'Fill in both setups to calculate.';
-    $('notesList').innerHTML = '<li class="note-item note-info">Fill in both setups to see fitment hints.</li>';
-    $('statusDot').textContent = 'Ready';
-    $('statusDot').className = 'status-dot';
-    $('vCurrent').style.width = '0';
-    $('vNew').style.width = '0';
+    v.textContent = fmt(+s.value);
   }
+  bindSlider('diamSlider', 'diamVal', v => `${v}"`, 'diameter');
+  bindSlider('wFSlider',   'wFVal',   v => `${v}J`, 'widthF');
+  bindSlider('etFSlider',  'etFVal',  v => `ET${v}`, 'etF');
+  bindSlider('wRSlider',   'wRVal',   v => `${v}J`, 'widthR');
+  bindSlider('etRSlider',  'etRVal',  v => `ET${v}`, 'etR');
 
-  $('resetAll').addEventListener('click', resetForm);
-  $('resetForm').addEventListener('click', resetForm);
+  // Diameter change: repopulate tires
+  document.getElementById('diamSlider').addEventListener('input', () => populateTires());
 
-  // Auto-calculate on input change
-  ['cWidth','cEt','cSpacer','cDiam','cTireW','cTireP',
-   'nWidth','nEt','nSpacer','nDiam','nTireW','nTireP'].forEach(id => {
-    $(id)?.addEventListener('input', calculate);
+  // Tire selects
+  document.getElementById('tireFSelect').addEventListener('change', e => { state.tireF = e.target.value; render(); });
+  document.getElementById('tireRSelect').addEventListener('change', e => { state.tireR = e.target.value; render(); });
+
+  // Staggered toggle
+  const tog = document.getElementById('staggerToggle');
+  tog.addEventListener('click', () => {
+    state.staggered = !state.staggered;
+    tog.setAttribute('aria-pressed', state.staggered);
+    document.getElementById('rearCard').classList.toggle('hidden', !state.staggered);
+    document.getElementById('frontLabel').textContent = state.staggered ? 'Front Setup' : 'Wheel Setup';
+    render();
   });
-  ['axle','lowered','rolled'].forEach(id => {
-    $(id)?.addEventListener('change', calculate);
-  });
+
+  // Stock model
+  document.getElementById('stockModel').addEventListener('change', e => { state.stockModel = e.target.value; render(); });
+
+  populateTires();
+  render();
+});
 </script>
