@@ -8,9 +8,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <!-- ═══ HERO ═══ -->
   <section class="hero">
     <div class="hero-bg" aria-hidden="true">
-      <!-- Drop hero car image here: /public/images/hero-car.jpg -->
-      <div class="hero-img-placeholder"></div>
       <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-car" aria-hidden="true">
+      <img src="/images/IMG_0511 (1).jpg" alt="" width="900" height="400" />
     </div>
     <div class="hero-inner">
       <div class="hero-label">
@@ -169,8 +170,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <!-- ═══ SCHEMAS & BLUEPRINTS ═══ -->
-  <section class="section alt schema-section">
-    <div class="section-inner">
+  <section class="section alt schema-section" style="position:relative;overflow:hidden;">
+    <div class="schema-bg-img" aria-hidden="true">
+      <img src="/images/IMG_0511.jpg" alt="" width="900" height="400" />
+    </div>
+    <div class="section-inner" style="position:relative;z-index:1;">
       <div class="section-tag">Technical docs</div>
       <h2 class="section-title">SCHEMAS <em class="accent-em">&amp; blueprints</em></h2>
       <p class="section-sub">Wiring diagrams, part locations, and installation references from the actual build.</p>
@@ -237,9 +241,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <a href="/shop" class="btn-primary">Visit shop →</a>
         </div>
         <div class="merch-image">
-          <!-- Drop merch product image here: /public/images/merch-preview.jpg -->
-          <div class="merch-img-placeholder">
-            <span>image coming</span>
+          <img src="/images/merch-mockup.png" alt="STATUS: PROJECT. t-shirt and mug" width="600" height="600" />
+          <div class="merch-products">
+            <img src="/images/merch-10mm.png" alt="The 10mm" width="200" height="200" />
+            <img src="/images/merch-coolant.png" alt="The Coolant System" width="200" height="200" />
           </div>
         </div>
       </div>
@@ -274,16 +279,28 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     inset: 0;
     z-index: 0;
   }
-  .hero-img-placeholder {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, #0f1318 0%, #1a1f28 50%, #0b0e12 100%);
-  }
   .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(11,14,18,0.95) 0%, rgba(11,14,18,0.5) 50%, rgba(11,14,18,0.2) 100%);
+    background: linear-gradient(to top, rgba(11,14,18,1) 0%, rgba(11,14,18,0.6) 40%, rgba(11,14,18,0.3) 100%);
   }
+  .hero-car {
+    position: absolute;
+    right: 0;
+    bottom: 4rem;
+    width: 55%;
+    max-width: 780px;
+    opacity: 0.18;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .hero-car img {
+    width: 100%;
+    height: auto;
+    display: block;
+    mix-blend-mode: screen;
+  }
+  @media (max-width: 768px) { .hero-car { width: 100%; opacity: 0.1; } }
   .hero-inner {
     position: relative;
     z-index: 1;
@@ -570,6 +587,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .tools-mini-card.soon .mini-badge { color: var(--text-dim); }
   .mini-title { font-size: 0.85rem; font-weight: 600; color: var(--text); }
 
+  /* ── SCHEMA BG ── */
+  .schema-bg-img {
+    position: absolute;
+    bottom: 0; right: 0;
+    width: 60%;
+    opacity: 0.06;
+    pointer-events: none;
+    mix-blend-mode: screen;
+  }
+  .schema-bg-img img { width: 100%; height: auto; }
+
   /* ── MERCH ── */
   .merch-layout {
     display: grid;
@@ -579,17 +607,27 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
   @media (max-width: 780px) { .merch-layout { grid-template-columns: 1fr; } }
   .merch-image { position: relative; }
-  .merch-img-placeholder {
-    aspect-ratio: 4/5;
-    background: var(--bg3);
+  .merch-image > img {
+    width: 100%;
+    height: auto;
+    display: block;
     border: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    color: var(--text-dim);
   }
+  .merch-products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+    margin-top: 1px;
+  }
+  .merch-products img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(0.9);
+    transition: filter 0.2s;
+  }
+  .merch-products img:hover { filter: brightness(1.05); }
 
   /* ── NEWSLETTER ── */
   .newsletter-section {
