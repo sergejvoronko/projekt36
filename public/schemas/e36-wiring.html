@@ -125,7 +125,7 @@ body{background:var(--bg);color:var(--t1);font-family:'IBM Plex Sans',sans-serif
 <header class="page-header">
   <div class="mono" style="margin-bottom:.5rem">projekt36.com · Technical Library</div>
   <h1>BMW E36 Wiring Schemas</h1>
-  <p>Official BMW E36 electrical schematics. Toggle between a simplified SVG overview and the original service manual scan.</p>
+  <p>Official BMW E36 electrical schematics. Clean English SVG diagrams based on original BMW E36 service manual. Toggle to view the original Russian scan for reference.</p>
 </header>
 
 <!-- Wire color legend - shared -->
@@ -146,11 +146,11 @@ body{background:var(--bg);color:var(--t1);font-family:'IBM Plex Sans',sans-serif
 
 <!-- Schema navigation -->
 <nav class="schema-nav">
-  <button class="active" onclick="showSchema(2)">Schema 2</button>
-  <button onclick="showSchema(4)">Schema 4</button>
-  <button onclick="showSchema(6)">Schema 6</button>
-  <button onclick="showSchema(8)">Schema 8</button>
-  <button onclick="showSchema(10)">Schema 10</button>
+  <button class="active" onclick="showSchema(2)">Starting &amp; Charging</button>
+  <button onclick="showSchema(4)">Exterior Lighting</button>
+  <button onclick="showSchema(6)">Interior Lighting</button>
+  <button onclick="showSchema(8)">Wipers &amp; Horn</button>
+  <button onclick="showSchema(10)">Windows &amp; Locks</button>
 </nav>
 
 <!-- ================================================================ -->
@@ -159,7 +159,7 @@ body{background:var(--bg);color:var(--t1);font-family:'IBM Plex Sans',sans-serif
 <section class="schema-section active" id="schema-2">
   <div class="schema-head">
     <div>
-      <h2>Schema 2 — <span>Starting, Charging, Diagnostics</span></h2>
+      <h2>Starting &amp; Charging</h2>
       <div class="schema-meta">Starting system · Alternator · Cooling fan · EWS immobilizer · 16-pin OBD2 · 20-pin ADS</div>
     </div>
     <div class="toggle-wrap">
@@ -188,12 +188,11 @@ body{background:var(--bg);color:var(--t1);font-family:'IBM Plex Sans',sans-serif
 
 <!-- Background -->
 <rect width="1200" height="760" fill="#131720"/>
-<rect width="1200" height="760" fill="url(#grid2)"/>
 
 <!-- ── HEADER ── -->
 <rect x="0" y="0" width="1200" height="26" fill="#1a1f2b"/>
 <rect x="0" y="25" width="1200" height="1" fill="#d4952a" opacity=".4"/>
-<text x="12" y="17" fill="#d4952a" font-size="9" font-weight="600" letter-spacing="2">SCHEMA 2</text>
+<text x="12" y="17" fill="#d4952a" font-size="9" font-weight="600" letter-spacing="2">STARTING &amp; CHARGING</text>
 <text x="88" y="17" fill="#84817a" font-size="9">STARTING · CHARGING · COOLING FAN · EWS · DIAGNOSTICS</text>
 <text x="1100" y="17" fill="#58564f" font-size="8" text-anchor="end">BMW E36 ETM · projekt36.com</text>
 
@@ -446,7 +445,7 @@ body{background:var(--bg);color:var(--t1);font-family:'IBM Plex Sans',sans-serif
      BOTTOM: SWAP NOTES + COMPONENT INDEX
 ═══════════════════════════════════════════════ -->
 <rect x="8" y="600" width="1184" height="148" fill="#181d28" stroke="rgba(212,149,42,.2)"/>
-<text x="20" y="618" fill="#d4952a" font-size="8" font-weight="600" letter-spacing="1">M43 → M50 SWAP NOTES  —  SCHEMA 2</text>
+<text x="20" y="618" fill="#d4952a" font-size="8" font-weight="600" letter-spacing="1">M43 → M50 SWAP NOTES  —  STARTING &amp; CHARGING</text>
 
 <g font-size="7.5">
   <text x="20" y="636" fill="#cc3333" font-weight="600">EWS:</text>
@@ -461,7 +460,7 @@ body{background:var(--bg);color:var(--t1);font-family:'IBM Plex Sans',sans-serif
 
 <!-- Component index -->
 <rect x="760" y="604" width="430" height="140" fill="#161b26" stroke="rgba(212,149,42,.15)"/>
-<text x="770" y="620" fill="#d4952a" font-size="7.5" font-weight="600" letter-spacing="1">COMPONENT INDEX — SCHEMA 2</text>
+<text x="770" y="620" fill="#d4952a" font-size="7.5" font-weight="600" letter-spacing="1">COMPONENT INDEX</text>
 <g font-size="7" fill="#84817a">
   <text x="770" y="636">[1] Battery</text>
   <text x="850" y="636">[2] Ignition switch</text>
@@ -510,7 +509,7 @@ body{background:var(--bg);color:var(--t1);font-family:'IBM Plex Sans',sans-serif
 <section class="schema-section" id="schema-4">
   <div class="schema-head">
     <div>
-      <h2>Schema 4 — <span>Exterior Lighting</span></h2>
+      <h2>Exterior Lighting</h2>
       <div class="schema-meta">Light control module · Headlights · Turn signals · Brake lights · Tail lights · License plate</div>
     </div>
     <div class="toggle-wrap">
@@ -539,11 +538,10 @@ body{background:var(--bg);color:var(--t1);font-family:'IBM Plex Sans',sans-serif
 </defs>
 <!-- Background -->
 <rect width="1200" height="700" fill="#131720"/>
-<rect width="1200" height="700" fill="url(#grid4)"/>
 <!-- HEADER -->
 <rect x="0" y="0" width="1200" height="26" fill="#1a1f2b"/>
 <rect x="0" y="25" width="1200" height="1" fill="#d4952a" opacity=".4"/>
-<text x="12" y="17" fill="#d4952a" font-size="9" font-weight="600" letter-spacing="2">SCHEMA 4</text>
+<text x="12" y="17" fill="#d4952a" font-size="9" font-weight="600" letter-spacing="2">EXTERIOR LIGHTING</text>
 <text x="84" y="17" fill="#84817a" font-size="9">EXTERIOR LIGHTING · LCM · HEADLIGHTS · TURN SIGNALS · BRAKE &amp; TAIL</text>
 <text x="1188" y="17" fill="#58564f" font-size="8" text-anchor="end">BMW E36 ETM · projekt36.com</text>
 
@@ -826,7 +824,7 @@ body{background:var(--bg);color:var(--t1);font-family:'IBM Plex Sans',sans-serif
 
 <section class="schema-section" id="schema-6">
   <div class="schema-head">
-    <div><h2>Schema 6 — <span>Interior Lighting</span></h2><div class="schema-meta">ZKE IV module · Dome/map lights · Footwell · Trunk · Vanity mirrors · Lighter</div></div>
+    <div><h2>Interior Lighting</h2><div class="schema-meta">ZKE IV module · Dome/map lights · Footwell · Trunk · Vanity mirrors · Lighter</div></div>
     <div class="toggle-wrap"><button class="toggle-btn active" onclick="toggleView(6,'simple')"><div class="dot"></div>Simplified</button><button class="toggle-btn" onclick="toggleView(6,'detail')"><div class="dot"></div>ETM ref (RU)</button></div>
   </div>
   <div class="svg-frame" id="s6-simple">
@@ -848,11 +846,10 @@ body{background:var(--bg);color:var(--t1);font-family:'IBM Plex Sans',sans-serif
   </symbol>
 </defs>
 <rect width="1200" height="650" fill="#131720"/>
-<rect width="1200" height="650" fill="url(#grid6)"/>
 <!-- HEADER -->
 <rect x="0" y="0" width="1200" height="26" fill="#1a1f2b"/>
 <rect x="0" y="25" width="1200" height="1" fill="#d4952a" opacity=".4"/>
-<text x="12" y="17" fill="#d4952a" font-size="9" font-weight="600" letter-spacing="2">SCHEMA 6</text>
+<text x="12" y="17" fill="#d4952a" font-size="9" font-weight="600" letter-spacing="2">INTERIOR LIGHTING</text>
 <text x="84" y="17" fill="#84817a" font-size="9">INTERIOR LIGHTING · ZKE IV · DOME · FOOTWELL · VANITY MIRRORS · LIGHTER</text>
 <text x="1188" y="17" fill="#58564f" font-size="8" text-anchor="end">BMW E36 ETM · projekt36.com</text>
 
@@ -1078,7 +1075,7 @@ body{background:var(--bg);color:var(--t1);font-family:'IBM Plex Sans',sans-serif
 
 <section class="schema-section" id="schema-8">
   <div class="schema-head">
-    <div><h2>Schema 8 — <span>Horn, Wipers, Heater</span></h2><div class="schema-meta">Horn circuit · Washer jet heaters · Headlight washers · Blower fan · Windshield wipers · Rear wiper</div></div>
+    <div><h2>Wipers, Horn &amp; HVAC</h2><div class="schema-meta">Horn circuit · Washer jet heaters · Headlight washers · Blower fan · Windshield wipers · Rear wiper</div></div>
     <div class="toggle-wrap"><button class="toggle-btn active" onclick="toggleView(8,'simple')"><div class="dot"></div>Simplified</button><button class="toggle-btn" onclick="toggleView(8,'detail')"><div class="dot"></div>ETM ref (RU)</button></div>
   </div>
   <div class="svg-frame" id="s8-simple">
@@ -1106,11 +1103,10 @@ body{background:var(--bg);color:var(--t1);font-family:'IBM Plex Sans',sans-serif
   </symbol>
 </defs>
 <rect width="1200" height="700" fill="#131720"/>
-<rect width="1200" height="700" fill="url(#grid8)"/>
 <!-- HEADER -->
 <rect x="0" y="0" width="1200" height="26" fill="#1a1f2b"/>
 <rect x="0" y="25" width="1200" height="1" fill="#d4952a" opacity=".4"/>
-<text x="12" y="17" fill="#d4952a" font-size="9" font-weight="600" letter-spacing="2">SCHEMA 8</text>
+<text x="12" y="17" fill="#d4952a" font-size="9" font-weight="600" letter-spacing="2">WIPERS, HORN &amp; HVAC</text>
 <text x="84" y="17" fill="#84817a" font-size="9">HORN · WASHER JET HEATERS · HEADLIGHT WASHERS · BLOWER · WIPERS · REAR WIPER</text>
 <text x="1188" y="17" fill="#58564f" font-size="8" text-anchor="end">BMW E36 ETM · projekt36.com</text>
 
@@ -1372,7 +1368,7 @@ body{background:var(--bg);color:var(--t1);font-family:'IBM Plex Sans',sans-serif
 
 <section class="schema-section" id="schema-10">
   <div class="schema-head">
-    <div><h2>Schema 10 — <span>Windows, Mirrors, Locks, Seats</span></h2><div class="schema-meta">Power windows · Electric mirrors · Central locking · Heated seats · ZKE IV integration</div></div>
+    <div><h2>Windows, Locks &amp; Mirrors</h2><div class="schema-meta">Power windows · Electric mirrors · Central locking · Heated seats · ZKE IV integration</div></div>
     <div class="toggle-wrap"><button class="toggle-btn active" onclick="toggleView(10,'simple')"><div class="dot"></div>Simplified</button><button class="toggle-btn" onclick="toggleView(10,'detail')"><div class="dot"></div>ETM ref (RU)</button></div>
   </div>
   <div class="svg-frame" id="s10-simple">
@@ -1393,11 +1389,10 @@ body{background:var(--bg);color:var(--t1);font-family:'IBM Plex Sans',sans-serif
   </symbol>
 </defs>
 <rect width="1200" height="730" fill="#131720"/>
-<rect width="1200" height="730" fill="url(#grid10)"/>
 <!-- HEADER -->
 <rect x="0" y="0" width="1200" height="26" fill="#1a1f2b"/>
 <rect x="0" y="25" width="1200" height="1" fill="#d4952a" opacity=".4"/>
-<text x="12" y="17" fill="#d4952a" font-size="9" font-weight="600" letter-spacing="2">SCHEMA 10</text>
+<text x="12" y="17" fill="#d4952a" font-size="9" font-weight="600" letter-spacing="2">WINDOWS, LOCKS &amp; MIRRORS</text>
 <text x="96" y="17" fill="#84817a" font-size="9">POWER WINDOWS · ELECTRIC MIRRORS · CENTRAL LOCKING · HEATED SEATS</text>
 <text x="1188" y="17" fill="#58564f" font-size="8" text-anchor="end">BMW E36 ETM · projekt36.com</text>
 
@@ -1670,11 +1665,11 @@ body{background:var(--bg);color:var(--t1);font-family:'IBM Plex Sans',sans-serif
 <script>
 const SCAN_IMAGES = { 2:'002.webp', 4:'004.webp', 6:'006.webp', 8:'008.webp', 10:'010.webp' };
 const SCAN_TITLES = {
-  2:'Schema 2 — Starting, Charging, Cooling Fan, EWS, Diagnostic Connectors',
-  4:'Schema 4 — Lighting Control, External Lights, Fog Lights',
-  6:'Schema 6 — Interior Lighting, Vanity Mirrors, Cigarette Lighter',
-  8:'Schema 8 — Horn, Washer Heaters, Headlight Washers, Cooling Fan, Wipers',
-  10:'Schema 10 — Door Locks, Electric Mirrors, Heated Seats'
+  2:'Starting & Charging — Starter, Alternator, Cooling Fan, EWS, Diagnostics',
+  4:'Exterior Lighting — LCM, Headlights, Turn Signals, Brake & Tail',
+  6:'Interior Lighting — ZKE IV, Dome, Footwell, Vanity Mirrors, Lighter',
+  8:'Wipers, Horn & HVAC — Washer Heaters, Headlight Washers, Blower, Wipers',
+  10:'Windows, Locks & Mirrors — Power Windows, Central Locking, Heated Seats'
 };
 const scaleState = {};
 
