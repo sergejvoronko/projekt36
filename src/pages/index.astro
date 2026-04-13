@@ -115,14 +115,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <p class="section-sub">The recurring failures every E36 owner will face — and how to get ahead of them.</p>
       <div class="weak-grid">
         {[
-          { title: 'Cooling system',    desc: 'Plastic thermostat housing, expansion tank, and radiator all crack with age. Replace preventively.' },
-          { title: 'Rear subframe',     desc: 'Subframe mounts tear through the chassis on high-mileage or lowered cars. Weld before it cracks.' },
-          { title: 'DISA valve',        desc: 'M52/M54 only. The plastic paddle fails, causing rough idle and power loss. Cheap fix, high impact.' },
-          { title: 'Window regulators', desc: 'Plastic clips snap on all doors. Replace with metal-clip units or budget for repeated fixes.' },
-          { title: 'Rear trailing arms', desc: 'Bushings collapse, causing vague rear handling. Polyurethane or pillow-ball arms fix this properly.' },
-          { title: 'Electrical gremlins', desc: 'Door loom wears through the grommet, killing windows and locks. Reroute and sleeve the harness.' },
+          { n: '01', title: 'Cooling system',      desc: 'Plastic thermostat housing, expansion tank, and radiator all crack with age. Replace preventively.' },
+          { n: '02', title: 'Rear subframe',        desc: 'Subframe mounts tear through the chassis on high-mileage or lowered cars. Weld before it cracks.' },
+          { n: '03', title: 'DISA valve',           desc: 'M52/M54 only. The plastic paddle fails, causing rough idle and power loss. Cheap fix, high impact.' },
+          { n: '04', title: 'Window regulators',    desc: 'Plastic clips snap on all doors. Replace with metal-clip units or budget for repeated fixes.' },
+          { n: '05', title: 'Rear trailing arms',   desc: 'Bushings collapse, causing vague rear handling. Polyurethane or pillow-ball arms fix this properly.' },
+          { n: '06', title: 'Electrical gremlins',  desc: 'Door loom wears through the grommet, killing windows and locks. Reroute and sleeve the harness.' },
         ].map(wp => (
           <div class="weak-card">
+            <span class="weak-num">{wp.n}</span>
             <h3 class="weak-title">{wp.title}</h3>
             <p class="weak-desc">{wp.desc}</p>
           </div>
@@ -170,26 +171,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <!-- ═══ SCHEMAS & BLUEPRINTS ═══ -->
-  <section class="section alt schema-section" style="position:relative;overflow:hidden;">
-    <div class="schema-bg-img" aria-hidden="true">
-      <img src="/images/IMG_0511.webp" alt="" width="900" height="400" />
-    </div>
-    <div class="section-inner" style="position:relative;z-index:1;">
+  <section class="section alt schema-section">
+    <div class="section-inner">
       <div class="section-tag">Technical docs</div>
       <h2 class="section-title">SCHEMAS <em class="accent-em">&amp; blueprints</em></h2>
       <p class="section-sub">Wiring diagrams, part locations, and installation references from the actual build.</p>
-      <div class="schema-grid">
+      <div class="schema-list">
         {[
-          { title: 'M50 swap wiring',     tag: 'Wiring' },
-          { title: 'Climate control loom', tag: 'Wiring' },
-          { title: 'Suspension geometry',  tag: 'Suspension' },
-          { title: 'Cooling layout',       tag: 'Engine' },
-          { title: 'Electric windows',     tag: 'Retrofit' },
-          { title: 'Air management',       tag: 'Air suspension' },
+          { num: '01', title: 'M50 swap wiring',      tag: 'Wiring',         avail: true  },
+          { num: '02', title: 'Climate control loom',  tag: 'Wiring',         avail: true  },
+          { num: '03', title: 'Suspension geometry',   tag: 'Suspension',     avail: true  },
+          { num: '04', title: 'Cooling layout',        tag: 'Engine',         avail: true  },
+          { num: '05', title: 'Electric windows',      tag: 'Retrofit',       avail: false },
+          { num: '06', title: 'Air management',        tag: 'Air suspension', avail: false },
         ].map(s => (
-          <div class="schema-card">
-            <span class="schema-tag">{s.tag}</span>
-            <span class="schema-title">{s.title}</span>
+          <div class={`schema-row ${s.avail ? 'avail' : 'draft'}`}>
+            <span class="schema-num">{s.num}</span>
+            <span class="schema-name">{s.title}</span>
+            <span class="schema-cat">{s.tag}</span>
+            <span class={`schema-status ${s.avail ? 'avail' : 'draft'}`}>{s.avail ? 'Available' : 'In progress'}</span>
           </div>
         ))}
       </div>
@@ -509,19 +509,29 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     border: 1px solid var(--border);
     margin-bottom: 2rem;
   }
+  /* Section is bg2, cards must be bg (darker) to be visible */
   .weak-card {
-    background: var(--bg2);
+    background: var(--bg);
     padding: 1.5rem;
     transition: background 0.15s;
+    position: relative;
   }
   .weak-card:hover { background: var(--bg3); }
+  .weak-num {
+    font-family: var(--font-mono);
+    font-size: 0.58rem;
+    color: var(--text-dim);
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 0.6rem;
+  }
   .weak-title {
     font-size: 0.9rem;
     font-weight: 600;
     color: var(--text);
     margin-bottom: 0.6rem;
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--accent);
+    border-bottom: 1px solid var(--accent);
     display: inline-block;
   }
   .weak-desc { font-size: 0.82rem; color: var(--text-mid); line-height: 1.6; }
@@ -564,34 +574,56 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .diag-link:hover { opacity: 0.7; }
 
   /* ── SCHEMAS ── */
-  .schema-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 1px;
-    background: var(--border);
+  .schema-list {
     border: 1px solid var(--border);
     margin-bottom: 2rem;
   }
-  .schema-card {
+  .schema-row {
+    display: grid;
+    grid-template-columns: 2.5rem 1fr auto auto;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.9rem 1.25rem;
+    border-bottom: 1px solid var(--border);
     background: var(--bg);
-    padding: 1.25rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
     transition: background 0.15s;
   }
-  .schema-card:hover { background: var(--bg3); }
-  .schema-tag {
+  .schema-row:last-child { border-bottom: none; }
+  .schema-row.avail:hover { background: var(--bg3); }
+  .schema-row.draft { opacity: 0.5; }
+  .schema-num {
     font-family: var(--font-mono);
     font-size: 0.6rem;
     color: var(--accent);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
   }
-  .schema-title {
+  .schema-name {
     font-size: 0.88rem;
     font-weight: 600;
     color: var(--text);
+  }
+  .schema-cat {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+  .schema-status {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding: 0.15em 0.5em;
+    border: 1px solid;
+  }
+  .schema-status.avail { color: var(--green); border-color: rgba(92,184,92,0.3); background: rgba(92,184,92,0.05); }
+  .schema-status.draft { color: var(--text-dim); border-color: var(--border); }
+  @media (max-width: 540px) {
+    .schema-row { grid-template-columns: 2rem 1fr auto; }
+    .schema-cat { display: none; }
   }
 
   /* ── TOOLS STRIP ── */
@@ -629,16 +661,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
   .mini-title { font-size: 0.82rem; font-weight: 600; color: var(--text); transition: color 0.15s; }
   .tools-mini-card:hover .mini-title { color: var(--accent); }
-
-  /* ── SCHEMA BG ── */
-  .schema-bg-img {
-    position: absolute;
-    bottom: 0; right: 0;
-    width: 60%;
-    opacity: 0.12;
-    pointer-events: none;
-  }
-  .schema-bg-img img { width: 100%; height: auto; }
 
   /* ── MERCH ── */
   .merch-layout {
