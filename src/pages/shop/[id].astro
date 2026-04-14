@@ -1,0 +1,376 @@
+---
+export const prerender = false;
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+interface PrintifyOption {
+  name: string;
+  type: string;
+  values: { id: number; title: string; colors?: string[] }[];
+}
+interface PrintifyVariant {
+  id: number;
+  title: string;
+  price: number;
+  is_enabled: boolean;
+  is_available: boolean;
+  options: number[];
+}
+interface PrintifyImage {
+  src: string;
+  is_default: boolean;
+  position: string;
+  variant_ids: number[];
+}
+interface PrintifyProduct {
+  id: string;
+  title: string;
+  description: string;
+  tags: string[];
+  images: PrintifyImage[];
+  variants: PrintifyVariant[];
+  options: PrintifyOption[];
+}
+
+const { id } = Astro.params;
+const runtime = (Astro.locals as any).runtime;
+const token  = runtime?.env?.PRINTIFY_API_TOKEN  ?? import.meta.env.PRINTIFY_API_TOKEN;
+const shopId = runtime?.env?.PRINTIFY_SHOP_ID    ?? import.meta.env.PRINTIFY_SHOP_ID;
+
+let product: PrintifyProduct | null = null;
+let fetchError = '';
+
+if (token && shopId && id) {
+  try {
+    const res = await fetch(
+      `https://api.printify.com/v1/shops/${shopId}/products/${id}.json`,
+      { headers: { Authorization: `Bearer ${token}` } }
+    );
+    if (res.ok) {
+      product = await res.json() as PrintifyProduct;
+    } else if (res.status === 404) {
+      return Astro.redirect('/shop', 302);
+    } else {
+      fetchError = `${res.status} ${res.statusText}`;
+    }
+  } catch {
+    fetchError = 'Network error';
+  }
+}
+
+if (!product && !fetchError) {
+  return Astro.redirect('/shop', 302);
+}
+
+function fmtPrice(cents: number) {
+  return `€\u202f${(cents / 100).toFixed(2)}`;
+}
+
+const defaultImage = product?.images.find(i => i.is_default)?.src ?? product?.images[0]?.src ?? '';
+const availableVariants = product?.variants.filter(v => v.is_enabled && v.is_available) ?? [];
+const minPrice = availableVariants.length ? Math.min(...availableVariants.map(v => v.price)) : 0;
+
+// Serialize product data for client-side variant JS
+const productJson = product ? JSON.stringify({
+  variants: product.variants,
+  images: product.images,
+}) : 'null';
+---
+
+<BaseLayout
+  title={product ? `${product.title} — projekt36 Shop` : 'Product — projekt36 Shop'}
+  description={product?.description?.replace(/<[^>]+>/g, '').slice(0, 160) ?? ''}
+  heroImage={defaultImage}
+>
+  <div class="product-page">
+    {fetchError && (
+      <div class="inner">
+        <div class="fetch-error">
+          <span class="fe-label">API</span> Could not load product ({fetchError})
+          <a href="/shop" class="back-link">← Back to shop</a>
+        </div>
+      </div>
+    )}
+
+    {product && (
+      <>
+        <div class="breadcrumb">
+          <div class="inner breadcrumb-inner">
+            <a href="/shop">Shop</a>
+            <span class="bc-sep">/</span>
+            <span>{product.title}</span>
+          </div>
+        </div>
+
+        <div class="inner product-layout">
+
+          <!-- Left: image gallery -->
+          <div class="gallery">
+            <div class="gallery-main">
+              <img
+                id="main-image"
+                src={defaultImage}
+                alt={product.title}
+                loading="eager"
+                decoding="async"
+                width="600"
+                height="600"
+              />
+            </div>
+            {product.images.length > 1 && (
+              <div class="gallery-thumbs">
+                {product.images.slice(0, 8).map((img, i) => (
+                  <button
+                    class:list={['thumb-btn', { active: img.is_default || i === 0 }]}
+                    data-src={img.src}
+                    aria-label={`View image ${i + 1}`}
+                  >
+                    <img src={img.src} alt="" loading="lazy" width="72" height="72" />
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <!-- Right: product info -->
+          <div class="product-info">
+            {product.tags?.[0] && <div class="pi-tag">{product.tags[0]}</div>}
+            <h1 class="pi-title">{product.title}</h1>
+            <div class="pi-price" id="price-display">{fmtPrice(minPrice)}</div>
+
+            <!-- Options / variant selector -->
+            {product.options.map(opt => (
+              <div class="option-group">
+                <div class="option-label">{opt.name}</div>
+                <div class="option-values">
+                  {opt.values.map((val, vi) => (
+                    <button
+                      class:list={['opt-btn', { 'is-color': opt.type === 'color', selected: vi === 0 }]}
+                      data-option-name={opt.name}
+                      data-option-id={val.id}
+                      style={opt.type === 'color' && val.colors?.[0] ? `--swatch: ${val.colors[0]}` : ''}
+                    >
+                      {opt.type === 'color'
+                        ? <span class="swatch" style={`background:${val.colors?.[0] ?? '#888'}`}></span>
+                        : null}
+                      {val.title}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            ))}
+
+            <div class="buy-row">
+              <a href={`/go/${product.id}`} class="btn-buy" id="buy-btn">
+                Order now →
+              </a>
+              <span class="fulfil-note">Fulfilled by Printify · Print on demand</span>
+            </div>
+
+            <details class="pi-desc">
+              <summary>Product details</summary>
+              <div class="pi-desc-body" set:html={product.description}></div>
+            </details>
+
+            <div class="gpsr-mini">
+              <span class="gpsr-mini-label">EU GPSR</span>
+              EU responsible person: HONSON VENTURES LIMITED, Cyprus —
+              <a href="/legal#gpsr">details</a>
+            </div>
+          </div>
+
+        </div>
+      </>
+    )}
+  </div>
+</BaseLayout>
+
+<!-- Thumbnail + variant selection JS -->
+<script define:vars={{ productJson }}>
+  // Thumbnail switcher
+  const mainImg = document.getElementById('main-image');
+  document.querySelectorAll('.thumb-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.thumb-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      if (mainImg) mainImg.src = btn.dataset.src;
+    });
+  });
+
+  // Variant option selector
+  const product = productJson;
+  if (!product) return;
+
+  const selectedOptions = {};
+
+  // Init with first value of each option
+  document.querySelectorAll('.option-group').forEach(group => {
+    const first = group.querySelector('.opt-btn');
+    if (first) selectedOptions[first.dataset.optionName] = parseInt(first.dataset.optionId, 10);
+  });
+
+  function updateVariant() {
+    const match = product.variants.find(v => {
+      return v.is_enabled && v.is_available &&
+        Object.values(selectedOptions).every(id => v.options.includes(id));
+    });
+
+    const priceEl = document.getElementById('price-display');
+    if (priceEl) {
+      if (match) {
+        priceEl.textContent = '\u20AC\u202f' + (match.price / 100).toFixed(2);
+        priceEl.classList.remove('unavailable');
+      } else {
+        priceEl.textContent = 'Unavailable';
+        priceEl.classList.add('unavailable');
+      }
+    }
+  }
+
+  document.querySelectorAll('.opt-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const name = btn.dataset.optionName;
+      // Deselect siblings
+      btn.closest('.option-values')?.querySelectorAll('.opt-btn').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      selectedOptions[name] = parseInt(btn.dataset.optionId, 10);
+      updateVariant();
+    });
+  });
+</script>
+
+<style>
+  .product-page {
+    padding-bottom: 6rem;
+  }
+  .inner { max-width: var(--wide-w); margin: 0 auto; padding: 0 1.5rem; }
+
+  /* Breadcrumb */
+  .breadcrumb { border-bottom: 1px solid var(--border); margin-bottom: 0; }
+  .breadcrumb-inner {
+    display: flex; align-items: center; gap: 0.5rem;
+    font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dim);
+    padding-top: 1.25rem; padding-bottom: 1.25rem;
+  }
+  .breadcrumb-inner a { color: var(--text-dim); text-decoration: none; }
+  .breadcrumb-inner a:hover { color: var(--accent); }
+  .bc-sep { color: var(--border-mid); }
+
+  /* Error */
+  .fetch-error {
+    font-family: var(--font-mono); font-size: 0.78rem; color: var(--red);
+    background: rgba(217,83,79,0.06); border: 1px solid rgba(217,83,79,0.2);
+    padding: 0.65rem 1rem; margin: 2rem 0;
+    display: flex; align-items: center; gap: 1rem;
+  }
+  .fe-label { color: var(--accent); }
+  .back-link { margin-left: auto; color: var(--text-dim); font-size: 0.72rem; text-decoration: none; }
+  .back-link:hover { color: var(--accent); }
+
+  /* Layout */
+  .product-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    padding-top: 3rem;
+    align-items: start;
+  }
+  @media (max-width: 800px) {
+    .product-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+  }
+
+  /* Gallery */
+  .gallery-main {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    aspect-ratio: 1;
+    overflow: hidden;
+  }
+  .gallery-main img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  .gallery-main:hover img { transform: scale(1.03); }
+
+  .gallery-thumbs {
+    display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.75rem;
+  }
+  .thumb-btn {
+    width: 60px; height: 60px; padding: 0;
+    background: var(--bg2); border: 1px solid var(--border);
+    cursor: pointer; overflow: hidden; transition: border-color 0.15s;
+    flex-shrink: 0;
+  }
+  .thumb-btn img { width: 100%; height: 100%; object-fit: cover; }
+  .thumb-btn:hover, .thumb-btn.active { border-color: var(--accent); }
+
+  /* Product info */
+  .product-info { display: flex; flex-direction: column; gap: 1.25rem; }
+
+  .pi-tag { font-family: var(--font-mono); font-size: 0.6rem; color: var(--accent); letter-spacing: 0.16em; text-transform: uppercase; }
+  .pi-title { font-family: var(--font-display); font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 700; line-height: 1.15; }
+  .pi-price {
+    font-family: var(--font-mono); font-size: 1.5rem; font-weight: 600;
+    color: var(--accent); letter-spacing: 0.02em;
+  }
+  .pi-price.unavailable { color: var(--text-dim); font-size: 1rem; }
+
+  /* Options */
+  .option-group { display: flex; flex-direction: column; gap: 0.6rem; }
+  .option-label { font-family: var(--font-mono); font-size: 0.68rem; color: var(--text-mid); letter-spacing: 0.08em; text-transform: uppercase; }
+  .option-values { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+  .opt-btn {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-mid);
+    background: var(--bg2); border: 1px solid var(--border);
+    padding: 0.35rem 0.75rem; cursor: pointer;
+    transition: border-color 0.12s, color 0.12s;
+  }
+  .opt-btn:hover { border-color: var(--border-mid); color: var(--text); }
+  .opt-btn.selected { border-color: var(--accent); color: var(--text); }
+
+  .swatch { display: inline-block; width: 12px; height: 12px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.15); flex-shrink: 0; }
+
+  /* Buy row */
+  .buy-row { display: flex; flex-direction: column; gap: 0.6rem; }
+  .btn-buy {
+    display: inline-block;
+    background: var(--accent); color: #0d0f14;
+    font-family: var(--font-mono); font-size: 0.82rem; font-weight: 700;
+    letter-spacing: 0.08em; padding: 0.85rem 2rem;
+    text-decoration: none; border: none; cursor: pointer;
+    transition: opacity 0.15s; text-align: center;
+  }
+  .btn-buy:hover { opacity: 0.85; color: #0d0f14; }
+  .fulfil-note { font-family: var(--font-mono); font-size: 0.65rem; color: var(--text-dim); }
+
+  /* Description */
+  .pi-desc {
+    border-top: 1px solid var(--border);
+    padding-top: 0.75rem;
+  }
+  .pi-desc summary {
+    font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-mid);
+    cursor: pointer; list-style: none; display: flex; align-items: center; gap: 0.5rem;
+  }
+  .pi-desc summary::-webkit-details-marker { display: none; }
+  .pi-desc summary::after { content: '+'; color: var(--accent); font-size: 1rem; margin-left: auto; }
+  details[open].pi-desc summary::after { content: '−'; }
+  .pi-desc-body {
+    font-size: 0.85rem; color: var(--text-mid); line-height: 1.8;
+    padding: 1rem 0 0.25rem; max-width: 52ch;
+  }
+  .pi-desc-body p { margin-bottom: 0.75rem; }
+  .pi-desc-body strong { color: var(--text); }
+
+  /* GPSR mini notice */
+  .gpsr-mini {
+    font-family: var(--font-mono); font-size: 0.65rem; color: var(--text-dim);
+    border-top: 1px solid var(--border); padding-top: 0.75rem;
+    line-height: 1.7;
+  }
+  .gpsr-mini-label { color: var(--accent); margin-right: 0.4rem; }
+  .gpsr-mini a { color: var(--text-dim); text-decoration: underline; }
+  .gpsr-mini a:hover { color: var(--accent); }
+</style>
