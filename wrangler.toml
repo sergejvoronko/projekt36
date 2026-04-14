@@ -1,0 +1,12 @@
+name = "projekt36"
+compatibility_date = "2026-04-09"
+compatibility_flags = ["nodejs_compat"]
+main = "dist/_worker.js/index.js"
+
+[vars]
+PRINTIFY_SHOP_ID = ""
+PRINTIFY_API_TOKEN = ""
+
+[assets]
+directory = "dist"
+binding = "ASSETS"
