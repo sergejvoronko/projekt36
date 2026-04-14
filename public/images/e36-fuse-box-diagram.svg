@@ -1,4 +1,4 @@
-<svg viewBox="0 0 760 565" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 760 620" xmlns="http://www.w3.org/2000/svg">
 <defs>
   <style>
     text { font-family: 'IBM Plex Mono',monospace; font-size: 9px; fill: #e8eaed; }
@@ -10,7 +10,7 @@
 </defs>
 
 <!-- bg -->
-<rect width="760" height="565" fill="#131720"/>
+<rect width="760" height="620" fill="#131720"/>
 
 <!-- left strip box -->
 <path d="M14,78 L70,78 L70,510 L14,510 Z" fill="#1a1f2b" stroke="#d4952a" stroke-width="1.5"/>
@@ -133,21 +133,20 @@
 <text x="17" y="70" style="font-size:8px;fill:#d4952a;font-family:monospace">31–46</text>
 
 <!-- ══════════════════════════════════════════
-     LEGEND
+     LEGEND — outside the diagram box
 ═══════════════════════════════════════════ -->
-<rect x="88" y="405" width="390" height="110" rx="6" fill="#0f1218" stroke="#252c3a" stroke-width="1"/>
-<text x="100" y="421" style="font-size:8px;fill:#d4952a;font-family:monospace;font-weight:700">FUSE COLOR CODE (ATO BLADE)</text>
-<!-- row 1 -->
-<rect x="100" y="430" width="16" height="16" rx="2" fill="#b8813a"/><text x="120" y="442" style="font-size:8px;fill:#8a8f9e;font-family:monospace">5A</text>
-<rect x="155" y="430" width="16" height="16" rx="2" fill="#bb2222"/><text x="175" y="442" style="font-size:8px;fill:#8a8f9e;font-family:monospace">10A</text>
-<rect x="215" y="430" width="16" height="16" rx="2" fill="#2244aa"/><text x="235" y="442" style="font-size:8px;fill:#8a8f9e;font-family:monospace">15A</text>
-<rect x="275" y="430" width="16" height="16" rx="2" fill="#bbaa00"/><text x="295" y="442" style="font-size:8px;fill:#8a8f9e;font-family:monospace">20A</text>
-<rect x="335" y="430" width="16" height="16" rx="2" fill="#1e7a1e"/><text x="355" y="442" style="font-size:8px;fill:#8a8f9e;font-family:monospace">30A</text>
-<rect x="395" y="430" width="16" height="16" rx="2" fill="#cc6600"/><text x="415" y="442" style="font-size:8px;fill:#8a8f9e;font-family:monospace">40A</text>
-<!-- row 2 -->
-<rect x="100" y="453" width="16" height="16" rx="2" fill="#4a5060"/><text x="120" y="465" style="font-size:8px;fill:#8a8f9e;font-family:monospace">F31–46: ETM required</text>
-<rect x="335" y="453" width="16" height="16" rx="2" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text x="355" y="465" style="font-size:8px;fill:#8a8f9e;font-family:monospace">Relay</text>
+<line x1="14" y1="541" x2="746" y2="541" stroke="#252c3a" stroke-width="1"/>
+<text x="14" y="557" style="font-size:8px;fill:#d4952a;font-family:monospace;font-weight:700">FUSE COLOR CODE (ATO BLADE)</text>
 
-<text x="100" y="487" style="font-size:7.5px;fill:#4e5568;font-family:monospace">Positions 31–46 vary by production year and market spec. Cross-reference ETM Schema 1.</text>
-<text x="100" y="500" style="font-size:7.5px;fill:#4e5568;font-family:monospace">Relay descriptions: see Relay Reference table in article.</text>
+<!-- swatch row -->
+<rect x="14"  y="566" width="14" height="14" rx="2" fill="#b8813a"/><text x="32"  y="577" style="font-size:8px;fill:#8a8f9e;font-family:monospace">5A</text>
+<rect x="70"  y="566" width="14" height="14" rx="2" fill="#bb2222"/><text x="88"  y="577" style="font-size:8px;fill:#8a8f9e;font-family:monospace">10A</text>
+<rect x="130" y="566" width="14" height="14" rx="2" fill="#2244aa"/><text x="148" y="577" style="font-size:8px;fill:#8a8f9e;font-family:monospace">15A</text>
+<rect x="190" y="566" width="14" height="14" rx="2" fill="#bbaa00"/><text x="208" y="577" style="font-size:8px;fill:#8a8f9e;font-family:monospace">20A</text>
+<rect x="250" y="566" width="14" height="14" rx="2" fill="#1e7a1e"/><text x="268" y="577" style="font-size:8px;fill:#8a8f9e;font-family:monospace">30A</text>
+<rect x="310" y="566" width="14" height="14" rx="2" fill="#cc6600"/><text x="328" y="577" style="font-size:8px;fill:#8a8f9e;font-family:monospace">40A</text>
+<rect x="370" y="566" width="14" height="14" rx="2" fill="#4a5060"/><text x="388" y="577" style="font-size:8px;fill:#8a8f9e;font-family:monospace">F31–46 (ETM)</text>
+<rect x="490" y="566" width="14" height="14" rx="2" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text x="508" y="577" style="font-size:8px;fill:#8a8f9e;font-family:monospace">Relay</text>
+
+<text x="14" y="600" style="font-size:7px;fill:#4e5568;font-family:monospace">F31–46 positions vary by year and market spec — cross-reference ETM Schema 1. Relay descriptions in table below.</text>
 </svg>
