@@ -1,0 +1,153 @@
+<svg viewBox="0 0 760 565" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <style>
+    text { font-family: 'IBM Plex Mono',monospace; font-size: 9px; fill: #e8eaed; }
+    .rl  { font-size: 11px; font-weight: 700; fill: #e8eaed; dominant-baseline: middle; text-anchor: middle; }
+    .fn  { font-size: 8px; fill: #e8eaed; dominant-baseline: middle; text-anchor: middle; }
+    .amp { font-size: 7px; fill: rgba(232,234,237,0.6); dominant-baseline: middle; text-anchor: middle; }
+    .sl  { font-size: 7.5px; fill: #8a8f9e; dominant-baseline: middle; text-anchor: end; }
+  </style>
+</defs>
+
+<!-- bg -->
+<rect width="760" height="565" fill="#131720"/>
+
+<!-- left strip box -->
+<path d="M14,78 L70,78 L70,510 L14,510 Z" fill="#1a1f2b" stroke="#d4952a" stroke-width="1.5"/>
+
+<!-- main box with notch (upper-right) -->
+<path d="M70,22 L508,22 L508,88 L737,88 L737,528 L70,528 Z" fill="#1a1f2b" stroke="#d4952a" stroke-width="1.5"/>
+
+<!-- divider right section -->
+<line x1="508" y1="88" x2="508" y2="528" stroke="#2f3a4d" stroke-width="1"/>
+
+<!-- upper fuse area border -->
+<rect x="84" y="30" width="290" height="168" rx="8" fill="none" stroke="#2f3a4d" stroke-width="1"/>
+
+<!-- grommet -->
+<circle cx="415" cy="145" r="24" fill="#0f1218" stroke="#4a5568" stroke-width="1.5"/>
+<circle cx="415" cy="145" r="8"  fill="none"   stroke="#4a5568" stroke-width="1"/>
+
+<!-- ══════════════════════════════════════════
+     LEFT STRIP — F31-F46 (unknown, gray)
+     stride=27, h=24, x=16, y_start=83
+     order top→bottom: 46,45,...,31
+═══════════════════════════════════════════ -->
+<!-- F46 --><rect x="16" y="83"  width="52" height="24" rx="2" fill="#4a5060"/><text class="fn" x="42" y="95">46</text>
+<!-- F45 --><rect x="16" y="110" width="52" height="24" rx="2" fill="#4a5060"/><text class="fn" x="42" y="122">45</text>
+<!-- F44 --><rect x="16" y="137" width="52" height="24" rx="2" fill="#4a5060"/><text class="fn" x="42" y="149">44</text>
+<!-- F43 --><rect x="16" y="164" width="52" height="24" rx="2" fill="#4a5060"/><text class="fn" x="42" y="176">43</text>
+<!-- F42 --><rect x="16" y="191" width="52" height="24" rx="2" fill="#4a5060"/><text class="fn" x="42" y="203">42</text>
+<!-- F41 --><rect x="16" y="218" width="52" height="24" rx="2" fill="#4a5060"/><text class="fn" x="42" y="230">41</text>
+<!-- F40 --><rect x="16" y="245" width="52" height="24" rx="2" fill="#4a5060"/><text class="fn" x="42" y="257">40</text>
+<!-- F39 --><rect x="16" y="272" width="52" height="24" rx="2" fill="#4a5060"/><text class="fn" x="42" y="284">39</text>
+<!-- F38 --><rect x="16" y="299" width="52" height="24" rx="2" fill="#4a5060"/><text class="fn" x="42" y="311">38</text>
+<!-- F37 --><rect x="16" y="326" width="52" height="24" rx="2" fill="#4a5060"/><text class="fn" x="42" y="338">37</text>
+<!-- F36 --><rect x="16" y="353" width="52" height="24" rx="2" fill="#4a5060"/><text class="fn" x="42" y="365">36</text>
+<!-- F35 --><rect x="16" y="380" width="52" height="24" rx="2" fill="#4a5060"/><text class="fn" x="42" y="392">35</text>
+<!-- F34 --><rect x="16" y="407" width="52" height="24" rx="2" fill="#4a5060"/><text class="fn" x="42" y="419">34</text>
+<!-- F33 --><rect x="16" y="434" width="52" height="24" rx="2" fill="#4a5060"/><text class="fn" x="42" y="446">33</text>
+<!-- F32 --><rect x="16" y="461" width="52" height="24" rx="2" fill="#4a5060"/><text class="fn" x="42" y="473">32</text>
+<!-- F31 --><rect x="16" y="488" width="52" height="24" rx="2" fill="#4a5060"/><text class="fn" x="42" y="500">31</text>
+
+<!-- ══════════════════════════════════════════
+     ROW 1–10  (y=42, h=52)  stride_x=27
+     F1=5A tan, F2=5A tan, F3=10A red, F4=10A red, F5=15A blue
+     F6=10A red, F7=10A red, F8=20A yel, F9=10A red, F10=15A blue
+═══════════════════════════════════════════ -->
+<!-- F1  5A  --><rect x="93"  y="42" width="22" height="52" rx="3" fill="#b8813a"/><text class="fn" x="104" y="62">1</text><text class="amp" x="104" y="80">5A</text>
+<!-- F2  5A  --><rect x="120" y="42" width="22" height="52" rx="3" fill="#b8813a"/><text class="fn" x="131" y="62">2</text><text class="amp" x="131" y="80">5A</text>
+<!-- F3  10A --><rect x="147" y="42" width="22" height="52" rx="3" fill="#bb2222"/><text class="fn" x="158" y="62">3</text><text class="amp" x="158" y="80">10</text>
+<!-- F4  10A --><rect x="174" y="42" width="22" height="52" rx="3" fill="#bb2222"/><text class="fn" x="185" y="62">4</text><text class="amp" x="185" y="80">10</text>
+<!-- F5  15A --><rect x="201" y="42" width="22" height="52" rx="3" fill="#2244aa"/><text class="fn" x="212" y="62">5</text><text class="amp" x="212" y="80">15</text>
+<!-- F6  10A --><rect x="228" y="42" width="22" height="52" rx="3" fill="#bb2222"/><text class="fn" x="239" y="62">6</text><text class="amp" x="239" y="80">10</text>
+<!-- F7  10A --><rect x="255" y="42" width="22" height="52" rx="3" fill="#bb2222"/><text class="fn" x="266" y="62">7</text><text class="amp" x="266" y="80">10</text>
+<!-- F8  20A --><rect x="282" y="42" width="22" height="52" rx="3" fill="#bbaa00"/><text class="fn" x="293" y="62">8</text><text class="amp" x="293" y="80">20</text>
+<!-- F9  10A --><rect x="309" y="42" width="22" height="52" rx="3" fill="#bb2222"/><text class="fn" x="320" y="62">9</text><text class="amp" x="320" y="80">10</text>
+<!-- F10 15A --><rect x="336" y="42" width="22" height="52" rx="3" fill="#2244aa"/><text class="fn" x="347" y="62">10</text><text class="amp" x="347" y="80">15</text>
+
+<!-- ══════════════════════════════════════════
+     ROW 11–20  (y=108, h=52)
+     F11=15A blue, F12=10A red, F13=20A yel, F14=10A red, F15=5A tan
+     F16=15A blue, F17=10A red, F18=10A red, F19=30A grn, F20=10A red
+═══════════════════════════════════════════ -->
+<!-- F11 15A --><rect x="93"  y="108" width="22" height="52" rx="3" fill="#2244aa"/><text class="fn" x="104" y="128">11</text><text class="amp" x="104" y="146">15</text>
+<!-- F12 10A --><rect x="120" y="108" width="22" height="52" rx="3" fill="#bb2222"/><text class="fn" x="131" y="128">12</text><text class="amp" x="131" y="146">10</text>
+<!-- F13 20A --><rect x="147" y="108" width="22" height="52" rx="3" fill="#bbaa00"/><text class="fn" x="158" y="128">13</text><text class="amp" x="158" y="146">20</text>
+<!-- F14 10A --><rect x="174" y="108" width="22" height="52" rx="3" fill="#bb2222"/><text class="fn" x="185" y="128">14</text><text class="amp" x="185" y="146">10</text>
+<!-- F15 5A  --><rect x="201" y="108" width="22" height="52" rx="3" fill="#b8813a"/><text class="fn" x="212" y="128">15</text><text class="amp" x="212" y="146">5A</text>
+<!-- F16 15A --><rect x="228" y="108" width="22" height="52" rx="3" fill="#2244aa"/><text class="fn" x="239" y="128">16</text><text class="amp" x="239" y="146">15</text>
+<!-- F17 10A --><rect x="255" y="108" width="22" height="52" rx="3" fill="#bb2222"/><text class="fn" x="266" y="128">17</text><text class="amp" x="266" y="146">10</text>
+<!-- F18 10A --><rect x="282" y="108" width="22" height="52" rx="3" fill="#bb2222"/><text class="fn" x="293" y="128">18</text><text class="amp" x="293" y="146">10</text>
+<!-- F19 30A --><rect x="309" y="108" width="22" height="52" rx="3" fill="#1e7a1e"/><text class="fn" x="320" y="128">19</text><text class="amp" x="320" y="146">30</text>
+<!-- F20 10A --><rect x="336" y="108" width="22" height="52" rx="3" fill="#bb2222"/><text class="fn" x="347" y="128">20</text><text class="amp" x="347" y="146">10</text>
+
+<!-- ══════════════════════════════════════════
+     LEFT RELAY AREA — R4-R6, R10-R12
+═══════════════════════════════════════════ -->
+<!-- R4  --><rect x="88"  y="200" width="87" height="80" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="131" y="240">R4</text>
+<!-- R5  --><rect x="190" y="200" width="87" height="80" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="233" y="240">R5</text>
+<!-- R6  --><rect x="292" y="200" width="87" height="80" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="335" y="240">R6</text>
+<!-- R10 --><rect x="88"  y="298" width="87" height="80" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="131" y="338">R10</text>
+<!-- R11 --><rect x="190" y="298" width="87" height="80" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="233" y="338">R11</text>
+<!-- R12 --><rect x="292" y="298" width="87" height="80" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="335" y="338">R12</text>
+
+<!-- ══════════════════════════════════════════
+     RIGHT SECTION — R1-R3, R7-R9, R13-R15
+     col x: 518, 596, 674  w=64 h=64  gap=14
+═══════════════════════════════════════════ -->
+<!-- R1  --><rect x="518" y="93"  width="64" height="64" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="550" y="125">R1</text>
+<!-- R2  --><rect x="596" y="93"  width="64" height="64" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="628" y="125">R2</text>
+<!-- R3  --><rect x="674" y="93"  width="64" height="64" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="706" y="125">R3</text>
+<!-- R7  --><rect x="518" y="172" width="64" height="64" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="550" y="204">R7</text>
+<!-- R8  --><rect x="596" y="172" width="64" height="64" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="628" y="204">R8</text>
+<!-- R9  --><rect x="674" y="172" width="64" height="64" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="706" y="204">R9</text>
+<!-- R13 --><rect x="518" y="252" width="64" height="64" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="550" y="284">R13</text>
+<!-- R14 --><rect x="596" y="252" width="64" height="64" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="628" y="284">R14</text>
+<!-- R15 --><rect x="674" y="252" width="64" height="64" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="706" y="284">R15</text>
+
+<!-- ══════════════════════════════════════════
+     ROW 21-30 (bottom right)  y=362 h=52
+     F21=10A, F22=10A, F23=15A, F24=10A, F25=30A
+     F26=40A, F27=30A, F28=10A, F29=5A,  F30=5A
+     stride_x=24, w=20
+═══════════════════════════════════════════ -->
+<!-- border for fuse row 21-30 -->
+<rect x="514" y="355" width="220" height="70" rx="6" fill="none" stroke="#2f3a4d" stroke-width="1"/>
+<!-- F21 10A --><rect x="519" y="362" width="20" height="52" rx="3" fill="#bb2222"/><text class="fn" x="529" y="382">21</text><text class="amp" x="529" y="400">10</text>
+<!-- F22 10A --><rect x="543" y="362" width="20" height="52" rx="3" fill="#bb2222"/><text class="fn" x="553" y="382">22</text><text class="amp" x="553" y="400">10</text>
+<!-- F23 15A --><rect x="567" y="362" width="20" height="52" rx="3" fill="#2244aa"/><text class="fn" x="577" y="382">23</text><text class="amp" x="577" y="400">15</text>
+<!-- F24 10A --><rect x="591" y="362" width="20" height="52" rx="3" fill="#bb2222"/><text class="fn" x="601" y="382">24</text><text class="amp" x="601" y="400">10</text>
+<!-- F25 30A --><rect x="615" y="362" width="20" height="52" rx="3" fill="#1e7a1e"/><text class="fn" x="625" y="382">25</text><text class="amp" x="625" y="400">30</text>
+<!-- F26 40A --><rect x="639" y="362" width="20" height="52" rx="3" fill="#cc6600"/><text class="fn" x="649" y="382">26</text><text class="amp" x="649" y="400">40</text>
+<!-- F27 30A --><rect x="663" y="362" width="20" height="52" rx="3" fill="#1e7a1e"/><text class="fn" x="673" y="382">27</text><text class="amp" x="673" y="400">30</text>
+<!-- F28 10A --><rect x="687" y="362" width="20" height="52" rx="3" fill="#bb2222"/><text class="fn" x="697" y="382">28</text><text class="amp" x="697" y="400">10</text>
+<!-- F29  5A --><rect x="711" y="362" width="20" height="52" rx="3" fill="#b8813a"/><text class="fn" x="721" y="382">29</text><text class="amp" x="721" y="400">5A</text>
+<!-- F30  5A --><rect x="735" y="362" width="20" height="52" rx="3" fill="#b8813a"/><text class="fn" x="745" y="382">30</text><text class="amp" x="745" y="400">5A</text>
+
+<!-- section labels -->
+<text x="104" y="22" style="font-size:8px;fill:#d4952a;font-family:monospace">FUSES 1–10</text>
+<text x="104" y="207" style="font-size:8px;fill:#d4952a;font-family:monospace">RELAYS</text>
+<text x="519" y="85" style="font-size:8px;fill:#d4952a;font-family:monospace">RELAYS</text>
+<text x="519" y="352" style="font-size:8px;fill:#d4952a;font-family:monospace">FUSES 21–30</text>
+<text x="17" y="70" style="font-size:8px;fill:#d4952a;font-family:monospace">31–46</text>
+
+<!-- ══════════════════════════════════════════
+     LEGEND
+═══════════════════════════════════════════ -->
+<rect x="88" y="405" width="390" height="110" rx="6" fill="#0f1218" stroke="#252c3a" stroke-width="1"/>
+<text x="100" y="421" style="font-size:8px;fill:#d4952a;font-family:monospace;font-weight:700">FUSE COLOR CODE (ATO BLADE)</text>
+<!-- row 1 -->
+<rect x="100" y="430" width="16" height="16" rx="2" fill="#b8813a"/><text x="120" y="442" style="font-size:8px;fill:#8a8f9e;font-family:monospace">5A</text>
+<rect x="155" y="430" width="16" height="16" rx="2" fill="#bb2222"/><text x="175" y="442" style="font-size:8px;fill:#8a8f9e;font-family:monospace">10A</text>
+<rect x="215" y="430" width="16" height="16" rx="2" fill="#2244aa"/><text x="235" y="442" style="font-size:8px;fill:#8a8f9e;font-family:monospace">15A</text>
+<rect x="275" y="430" width="16" height="16" rx="2" fill="#bbaa00"/><text x="295" y="442" style="font-size:8px;fill:#8a8f9e;font-family:monospace">20A</text>
+<rect x="335" y="430" width="16" height="16" rx="2" fill="#1e7a1e"/><text x="355" y="442" style="font-size:8px;fill:#8a8f9e;font-family:monospace">30A</text>
+<rect x="395" y="430" width="16" height="16" rx="2" fill="#cc6600"/><text x="415" y="442" style="font-size:8px;fill:#8a8f9e;font-family:monospace">40A</text>
+<!-- row 2 -->
+<rect x="100" y="453" width="16" height="16" rx="2" fill="#4a5060"/><text x="120" y="465" style="font-size:8px;fill:#8a8f9e;font-family:monospace">F31–46: ETM required</text>
+<rect x="335" y="453" width="16" height="16" rx="2" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text x="355" y="465" style="font-size:8px;fill:#8a8f9e;font-family:monospace">Relay</text>
+
+<text x="100" y="487" style="font-size:7.5px;fill:#4e5568;font-family:monospace">Positions 31–46 vary by production year and market spec. Cross-reference ETM Schema 1.</text>
+<text x="100" y="500" style="font-size:7.5px;fill:#4e5568;font-family:monospace">Relay descriptions: see Relay Reference table in article.</text>
+</svg>

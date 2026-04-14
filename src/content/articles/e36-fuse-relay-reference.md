@@ -27,6 +27,8 @@ The E36 fuse box is on the left side of the engine bay, under a cover. There's a
 
 Fuse positions vary slightly between production years (pre-facelift 1993–1995 vs post-facelift 1996–1999) and market specifications. The table below covers the most common 1993–1999 E36 layout. Always cross-reference with the ETM Schema 1 for your specific build date.
 
+<img src="/images/e36-fuse-box-diagram.svg" alt="BMW E36 fuse box diagram with color-coded fuse positions" style="width:100%;max-width:760px;display:block;margin:1.5rem 0" />
+
 ### Blade Fuses — Main Box
 
 | Position | Rating | Circuit |
