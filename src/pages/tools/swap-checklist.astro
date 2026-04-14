@@ -59,12 +59,32 @@ const groups = [
 ];
 
 const total = groups.reduce((s, g) => s + g.items.length, 0);
+const siteBase = 'https://projekt36.com';
+const breadcrumbLd = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home',  item: siteBase },
+    { '@type': 'ListItem', position: 2, name: 'Tools', item: `${siteBase}/tools` },
+    { '@type': 'ListItem', position: 3, name: 'M43 → M50 Swap Checklist', item: `${siteBase}/tools/swap-checklist` },
+  ],
+};
+const appLd = {
+  '@context': 'https://schema.org', '@type': 'WebApplication',
+  name: 'M43 → M50 Swap Checklist',
+  description: 'Track every stage of the M43 to M50 engine swap — from sourcing the donor to first startup.',
+  url: `${siteBase}/tools/swap-checklist`,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Any',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+};
 ---
 
 <BaseLayout
   title="M43 → M50 Swap Checklist — projekt36"
   description="Track every stage of the M43 to M50 engine swap — from sourcing the donor to first startup."
 >
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} slot="head" />
+<script type="application/ld+json" set:html={JSON.stringify(appLd)} slot="head" />
 <div class="tool-page">
   <div class="breadcrumb">
     <a href="/tools">Tools</a>
@@ -129,6 +149,28 @@ const total = groups.reduce((s, g) => s + g.items.length, 0);
       </div>
       <button class="btn-reset" onclick="resetChecklist()">Reset checklist</button>
     </aside>
+  </div>
+
+  <div class="tool-explainer">
+    <h2>About the M43 to M50 swap</h2>
+    <p>
+      Swapping the single-cam M43 for a twin-cam M50 or M52 is the most common E36 engine upgrade.
+      The M43 and M50 share the same block dimensions and mounting points, which makes this a
+      straightforward swap for a four-cylinder car. The M50B25 (170 hp) and M52B28 (193 hp) are
+      the most popular choices — both fit without chassis modification.
+    </p>
+    <p>
+      The main complexity is electrical. The M50/M52 uses a Siemens DME (MS41/MS42) with a
+      dedicated engine loom that does not share connectors with the M43 setup. You need the complete
+      loom from the donor car, plus the matching ECU (DME) and instrument cluster for correct
+      speedometer and rev counter calibration. The M50 also brings EWS (engine immobiliser) from
+      1994 onwards — the EWS module and key must match the DME.
+    </p>
+    <p>
+      Check all items before first startup: coolant system bleed (the M50 bleeds from the expansion
+      tank, not the thermostat housing), clutch pedal travel, and engine bay wiring routing. Allow
+      two to three weekends for a first-time swap in a clean shell with all parts on hand.
+    </p>
   </div>
 </div>
 </BaseLayout>
@@ -234,4 +276,24 @@ const total = groups.reduce((s, g) => s + g.items.length, 0);
   .tool-links a:hover { color: var(--text); }
   .btn-reset { width: 100%; background: transparent; border: 1px solid var(--border-mid); color: var(--text-dim); font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.06em; padding: 0.55rem; cursor: pointer; transition: border-color 0.15s, color 0.15s; }
   .btn-reset:hover { border-color: var(--red); color: var(--red); }
+
+  .tool-explainer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+  .tool-explainer h2 {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.25rem;
+  }
+  .tool-explainer p { font-size: 0.88rem; color: var(--text-mid); line-height: 1.75; }
+  .tool-explainer strong { color: var(--text); font-weight: 600; }
 </style>

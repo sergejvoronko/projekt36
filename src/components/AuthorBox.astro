@@ -1,0 +1,79 @@
+---
+// AuthorBox.astro — shown at the bottom of every article
+---
+
+<div class="author-box">
+  <div class="author-avatar">
+    <img src="/images/projekt36-mark.svg" alt="projekt36" width="48" height="48" />
+  </div>
+  <div class="author-body">
+    <div class="author-name">projekt36</div>
+    <p class="author-bio">
+      Building and documenting a 1994 BMW E36 316i Sedan — M50 swap, wiring, air suspension,
+      paint, and everything in between. All guides are written from hands-on experience
+      and cross-referenced against BMW ETM documentation.
+    </p>
+    <div class="author-links">
+      <a href="/about">About the build →</a>
+      <a href="/guides">All guides →</a>
+      <a href="/build">Build journal →</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .author-box {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    padding: 1.75rem;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    margin: 3rem 0 0;
+  }
+  .author-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--bg3);
+    border: 1px solid var(--border-mid);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .author-avatar img {
+    width: 30px;
+    height: 30px;
+    opacity: 0.8;
+  }
+  .author-body { flex: 1; min-width: 0; }
+  .author-name {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.45rem;
+  }
+  .author-bio {
+    font-size: 0.83rem;
+    color: var(--text-dim);
+    line-height: 1.65;
+    margin-bottom: 0.85rem;
+  }
+  .author-links {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+  .author-links a {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--accent);
+    text-decoration: none;
+    transition: opacity 0.15s;
+  }
+  .author-links a:hover { opacity: 0.7; }
+</style>

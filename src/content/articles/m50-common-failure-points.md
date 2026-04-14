@@ -1,9 +1,10 @@
 ---
 title: "BMW M50 Common Failure Points & How to Prevent Them"
-description: "Every known M50 engine failure point ranked by likelihood and severity. Prevention strategies, symptoms to watch for, and what to replace preventively during a rebuild or swap."
+description: "Every M50 failure ranked by likelihood and severity — prevention, symptoms, and what to replace during a rebuild or swap."
 pillar: engine
 keywords: "m50 reliability, m50 problems, m50 common issues, bmw m50 failure points, m50 engine problems"
 date: "2026-03-16"
+hero: "m50-failures.webp"
 ---
 
 ## TL;DR

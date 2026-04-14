@@ -1,9 +1,10 @@
 ---
 title: "E36 OBD1 Diagnostics: The Complete Setup Guide"
-description: "Complete guide to setting up OBD1 diagnostics on your BMW E36. Hardware interfaces, INPA/EDIABAS software installation, ADS vs OBD explained, and real-world troubleshooting for pre-facelift and facelift models."
+description: "Setting up OBD1 diagnostics on the BMW E36: hardware, INPA/EDIABAS software, ADS vs OBD, and real-world troubleshooting."
 pillar: reference
 keywords: "e36 obd1 diagnostic, bmw e36 inpa setup, e36 diagnostic software, bmw obd1 scanner e36"
 date: "2026-03-16"
+hero: "obd1-diag.webp"
 ---
 
 ## Why This Guide Exists

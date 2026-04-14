@@ -1,9 +1,10 @@
 ---
 title: "BMW E36 Rust Map: Every Spot to Check Before You Buy (or Before You Weld)"
-description: "Complete visual rust map for the BMW E36. Every known rust hotspot ranked by severity with inspection tips, repair difficulty, and what it means for your project."
+description: "BMW E36 rust map: every known hotspot ranked by severity with inspection tips and repair difficulty."
 pillar: body
 keywords: "e36 rust spots, e36 rust inspection, e36 common rust areas, bmw e36 rust guide"
 date: "2026-03-16"
+hero: "rust-map.webp"
 ---
 
 ## TL;DR

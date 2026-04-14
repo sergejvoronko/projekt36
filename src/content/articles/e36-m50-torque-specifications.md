@@ -4,6 +4,7 @@ description: "Complete searchable torque specification table for the BMW E36 wit
 pillar: reference
 keywords: "e36 torque specs, m50 torque specs, bmw e36 bolt torques, m50 engine torque values"
 date: "2026-03-16"
+hero: "torque-specs.webp"
 ---
 
 ## TL;DR

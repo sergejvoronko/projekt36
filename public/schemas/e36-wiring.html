@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>BMW E36 Wiring Schemas — projekt36.com</title>
+<meta name="description" content="Interactive BMW E36 wiring diagrams: starting, charging, cooling fan, EWS, OBD, wipers, central locking, mirrors, seat heaters. Simplified and detailed views." />
+<link rel="canonical" href="https://projekt36.com/schemas/e36-wiring.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -17,6 +21,46 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--t1);font-family:'IBM Plex Sans',sans-serif;line-height:1.6}
 .wrap{max-width:1400px;margin:0 auto;padding:1.5rem}
+
+/* Site nav bar */
+.site-nav-bar{
+  position:sticky;top:0;z-index:200;
+  background:rgba(11,14,18,0.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--bdr);
+}
+.site-nav-inner{
+  max-width:1400px;margin:0 auto;
+  padding:0 1.5rem;height:52px;
+  display:flex;align-items:center;gap:2rem;
+}
+.site-nav-back{
+  display:flex;align-items:center;gap:0.5rem;
+  font-family:'IBM Plex Mono',monospace;font-size:0.72rem;
+  color:var(--t3);text-decoration:none;letter-spacing:0.06em;
+  transition:color .15s;flex-shrink:0;
+}
+.site-nav-back:hover{color:var(--acc)}
+.site-nav-back svg{opacity:.6}
+.site-nav-logo{
+  display:flex;align-items:center;
+  text-decoration:none;
+}
+.site-nav-logo img{height:30px;width:auto;display:block}
+.site-nav-links{
+  display:flex;gap:1.5rem;margin-left:auto;
+}
+.site-nav-links a{
+  font-family:'IBM Plex Mono',monospace;font-size:0.72rem;
+  color:var(--t3);text-decoration:none;letter-spacing:0.06em;
+  transition:color .15s;
+}
+.site-nav-links a:hover{color:var(--t1)}
+.site-nav-links a.current{color:var(--acc)}
+@media(max-width:600px){
+  .site-nav-links{display:none}
+  .site-nav-back span{display:none}
+}
 
 /* Header */
 .page-header{padding:2rem 0 1.5rem;border-bottom:1px solid var(--bdr);margin-bottom:2rem}
@@ -117,9 +161,54 @@ body{background:var(--bg);color:var(--t1);font-family:'IBM Plex Sans',sans-serif
   .comp-index{grid-template-columns:1fr}
   .scan-info{display:none}
 }
+
+/* Translation reference section */
+.ref-section{margin-bottom:2.5rem}
+.ref-section h2{font-size:1rem;font-weight:600;color:var(--acc);margin-bottom:.35rem;
+  font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase}
+.ref-section p{font-size:.82rem;color:var(--t3);margin-bottom:.75rem}
+.ref-table{width:100%;border-collapse:collapse;margin:.75rem 0;font-size:.82rem}
+.ref-table th{background:var(--bg3);padding:.5rem .75rem;text-align:left;
+  font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--acc);border-bottom:2px solid var(--bdra)}
+.ref-table td{padding:.4rem .75rem;border-bottom:1px solid var(--bdr);color:var(--t2);vertical-align:top}
+.ref-table tr:hover td{background:var(--bg3)}
+.ref-table td:first-child{font-family:'IBM Plex Mono',monospace;color:var(--acc);font-weight:600;white-space:nowrap}
+.ref-table td:nth-child(2){color:var(--t3);font-size:.78rem}
+.ref-note{padding:.85rem 1.1rem;background:var(--bg3);border-left:3px solid var(--acc);
+  margin:1.25rem 0;font-size:.84rem;color:var(--t2);line-height:1.7}
+.ref-note strong{color:var(--acc)}
+.swap-note-item{padding:.3rem 0;font-size:.82rem;line-height:1.55}
+.swap-note-item.warn{color:var(--red)}
+.swap-note-item.ok{color:var(--green)}
+.swap-note-item.info{color:var(--blue)}
+.ref-divider{height:1px;background:linear-gradient(90deg,rgba(212,149,42,.2),transparent);margin:2rem 0}
 </style>
 </head>
 <body>
+
+<nav class="site-nav-bar">
+  <div class="site-nav-inner">
+    <a href="/" class="site-nav-back">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 2L4 7L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>projekt36.com</span>
+    </a>
+    <a href="/" class="site-nav-logo">
+      <img src="/images/projekt36-logo-horizontal.svg" alt="projekt36" width="120" height="30" />
+    </a>
+    <div class="site-nav-links">
+      <a href="/build">Build</a>
+      <a href="/guides">Guides</a>
+      <a href="/tools">Tools</a>
+      <a href="/shop">Shop</a>
+      <a href="/about">About</a>
+      <a href="/schemas/e36-wiring.html" class="current">Schemas</a>
+    </div>
+  </div>
+</nav>
+
 <div class="wrap">
 
 <header class="page-header">
@@ -151,6 +240,7 @@ body{background:var(--bg);color:var(--t1);font-family:'IBM Plex Sans',sans-serif
   <button onclick="showSchema(6)">Interior Lighting</button>
   <button onclick="showSchema(8)">Wipers &amp; Horn</button>
   <button onclick="showSchema(10)">Windows &amp; Locks</button>
+  <button onclick="showSchema('ref')" style="margin-left:.5rem;border-left:1px solid var(--bdra)">Translation Ref</button>
 </nav>
 
 <!-- ================================================================ -->
@@ -1778,6 +1868,208 @@ body{background:var(--bg);color:var(--t1);font-family:'IBM Plex Sans',sans-serif
   </div>
 </section>
 
+<!-- ================================================================ -->
+<!-- TRANSLATION REFERENCE -->
+<!-- ================================================================ -->
+<section class="schema-section" id="schema-ref">
+  <div class="schema-head">
+    <div>
+      <h2>Translation Reference</h2>
+      <div class="schema-meta">Russian → English component labels · All 5 schemas · Fuse index · M43→M50 swap notes</div>
+    </div>
+  </div>
+
+  <!-- SWAP NOTES -->
+  <div class="ref-note" style="margin-bottom:1.5rem">
+    <strong>M43 → M50/M52 Swap — Wiring Differences</strong><br><br>
+    <div class="swap-note-item warn">• EWS: M43 (Bosch M1.7.3) uses OBD1 — NO EWS on pre-1/96 cars</div>
+    <div class="swap-note-item warn">• EWS: M50TU (Bosch M3.3.1 "413") — check for red label = no EWS variant</div>
+    <div class="swap-note-item warn">• EWS: M52 (Siemens MS41) — always has EWS, requires delete or alignment with car's EWS module</div>
+    <div class="swap-note-item ok">• Cooling fan: 4-cyl uses smaller fan assembly — swap to 6-cyl fan + shroud</div>
+    <div class="swap-note-item ok">• Fan relay wiring: same fuse positions (F37/F101), different thermal switch calibration</div>
+    <div class="swap-note-item info">• 16-pin OBD2 port: works with K+DCAN USB cable on 1/96+ cars (post-EWS)</div>
+    <div class="swap-note-item info">• 20-pin ADS port: required for pre-1/96 OBD1 diagnostics (round connector, under hood left)</div>
+    <div class="swap-note-item info">• Pre-1/96: use ADS serial interface with INPA, NOT K+DCAN USB adapter</div>
+  </div>
+
+  <!-- SCHEMA 2 TRANSLATION -->
+  <div class="ref-section">
+    <h2>Schema 2 — Starting, Charging, Diagnostics</h2>
+    <p>Page 12•26 · Drawing H32734 · Система пуска и зарядки / Диагностика</p>
+    <table class="ref-table">
+      <tr><th>#</th><th>Russian (original)</th><th>English</th><th>Notes</th></tr>
+      <tr><td>1</td><td>Аккумулятор</td><td>Battery</td><td>Trunk-mounted · 35.0mm² ground cable</td></tr>
+      <tr><td>2</td><td>Выключатель зажигания</td><td>Ignition switch</td><td>Positions: 0 · I · II · III (start)</td></tr>
+      <tr><td>3</td><td>Стартер</td><td>Starter motor</td><td>25.0mm² B+ feed from battery</td></tr>
+      <tr><td>4</td><td>Генератор</td><td>Alternator</td><td>Charge wire + excitation (DF terminal)</td></tr>
+      <tr><td>5</td><td>Блок управления двигателем</td><td>Engine control unit (DME)</td><td>M1.7.3 (M43) / M3.3.1 (M50TU) / MS41 (M52)</td></tr>
+      <tr><td>6</td><td>Блок управления приборной доски</td><td>Instrument cluster</td><td>Receives speed, RPM, coolant temp</td></tr>
+      <tr><td>7</td><td>Диагностический разъем 16-штыревой</td><td>16-pin diagnostic connector (OBD2)</td><td>Under dashboard, driver side</td></tr>
+      <tr><td>8</td><td>Разъем передачи данных 20-штыревой</td><td>20-pin data connector (ADS/OBD1)</td><td>Under hood, left side, round connector</td></tr>
+      <tr><td>9</td><td>Вентилятор системы охлаждения</td><td>Cooling system fan</td><td>2-speed: F37 50A (low) + F101 50A (high)</td></tr>
+      <tr><td>10</td><td>Термодатчик вентилятора</td><td>Fan thermal switch</td><td>Triggers low / high speed relay</td></tr>
+      <tr><td>11</td><td>Выключатель иммобилайзера стартера</td><td>Starter immobilizer switch (EWS)</td><td>Blocks starter — OBD2/post-1996 cars only</td></tr>
+    </table>
+  </div>
+
+  <div class="ref-divider"></div>
+
+  <!-- SCHEMA 4 TRANSLATION -->
+  <div class="ref-section">
+    <h2>Schema 4 — Exterior Lighting</h2>
+    <p>Page 12•28 · Drawing H32736 · Наружное освещение</p>
+    <table class="ref-table">
+      <tr><th>#</th><th>Russian</th><th>English</th></tr>
+      <tr><td>37</td><td>Блок управления освещением</td><td>Light control module (LCM)</td></tr>
+      <tr><td>38</td><td>Датчик нагрузки на ось</td><td>Axle load sensor (headlight leveling)</td></tr>
+      <tr><td>39</td><td>Электродвигатель регулировки света левой фары</td><td>Left headlight leveling motor</td></tr>
+      <tr><td>40</td><td>Электродвигатель регулировки света правой фары</td><td>Right headlight leveling motor</td></tr>
+      <tr><td>41</td><td>Выключатель аварийной сигнализации / ЦЗ</td><td>Hazard / central locking switch</td></tr>
+      <tr><td>42</td><td>Лампы освещения номерного знака / выключатель крышки багажника</td><td>License plate lamps / trunk open switch</td></tr>
+      <tr><td>43</td><td>Выключатель указателей поворота / ближнего света</td><td>Turn signal / low beam stalk switch</td></tr>
+      <tr><td>44</td><td>Передний левый парковочный огонь</td><td>Front left parking light</td></tr>
+      <tr><td>45</td><td>Передний правый парковочный огонь</td><td>Front right parking light</td></tr>
+      <tr><td>46</td><td>Левая фара (ближний свет)</td><td>Left headlight (low beam)</td></tr>
+      <tr><td>47</td><td>Правая фара (ближний свет)</td><td>Right headlight (low beam)</td></tr>
+      <tr><td>48</td><td>Левая фара (дальний свет)</td><td>Left headlight (high beam)</td></tr>
+      <tr><td>49</td><td>Правая фара (дальний свет)</td><td>Right headlight (high beam)</td></tr>
+      <tr><td>50</td><td>Передний левый указатель поворота</td><td>Front left turn signal</td></tr>
+      <tr><td>51</td><td>Левый боковой указатель поворота</td><td>Left fender turn signal repeater</td></tr>
+      <tr><td>52</td><td>Передний правый указатель поворота</td><td>Front right turn signal</td></tr>
+      <tr><td>53</td><td>Правый боковой указатель поворота</td><td>Right fender turn signal repeater</td></tr>
+      <tr><td>54</td><td>Левый задний указатель поворота</td><td>Left rear turn signal</td></tr>
+      <tr><td>55</td><td>Правый задний противотуманный фонарь</td><td>Right rear fog light</td></tr>
+      <tr><td>56</td><td>Правый стоп-сигнал</td><td>Right brake light</td></tr>
+      <tr><td>57</td><td>Левый стоп-сигнал</td><td>Left brake light</td></tr>
+      <tr><td>58</td><td>Правый задний габаритный огонь</td><td>Right rear tail light</td></tr>
+      <tr><td>59</td><td>Левый задний габаритный огонь</td><td>Left rear tail light</td></tr>
+      <tr><td>60</td><td>Правый задний габаритный огонь (доп.)</td><td>Right rear marker — Sedan / Touring variant</td></tr>
+    </table>
+  </div>
+
+  <div class="ref-divider"></div>
+
+  <!-- SCHEMA 6 TRANSLATION -->
+  <div class="ref-section">
+    <h2>Schema 6 — Interior Lighting</h2>
+    <p>Page 12•30 · Drawing H32738 · Внутреннее освещение · Прикуриватель</p>
+    <table class="ref-table">
+      <tr><th>#</th><th>Russian</th><th>English</th></tr>
+      <tr><td>78</td><td>Лампа освещения салона / лампа для чтения карт</td><td>Interior light / map reading lamp</td></tr>
+      <tr><td>79</td><td>Выключатель системы центральной блокировки</td><td>Central locking switch</td></tr>
+      <tr><td>80</td><td>Левая задняя лампа освещения салона</td><td>Left rear interior light</td></tr>
+      <tr><td>81</td><td>Правая задняя лампа освещения салона</td><td>Right rear interior light</td></tr>
+      <tr><td>82</td><td>Левая лампа освещения багажного отделения</td><td>Left trunk light</td></tr>
+      <tr><td>83</td><td>Правая лампа освещения багажного отделения</td><td>Right trunk light</td></tr>
+      <tr><td>84</td><td>Выключатель лампы освещения ящика для перчаток</td><td>Glove box light switch</td></tr>
+      <tr><td>85</td><td>Нижняя подсветка салона пассажира</td><td>Passenger footwell light</td></tr>
+      <tr><td>86</td><td>Нижняя подсветка салона водителя</td><td>Driver footwell light</td></tr>
+      <tr><td>87</td><td>Подсветка переднего прикуривателя</td><td>Front cigarette lighter illumination</td></tr>
+      <tr><td>88</td><td>Подсветка заднего прикуривателя</td><td>Rear cigarette lighter illumination</td></tr>
+      <tr><td>89–90</td><td>Дополнительная лампа освещения багажника</td><td>Additional trunk lights (left/right)</td></tr>
+      <tr><td>91</td><td>Подсветка зеркала водителя</td><td>Driver vanity mirror light</td></tr>
+      <tr><td>92</td><td>Выключатель подсветки зеркала водителя</td><td>Driver vanity mirror switch</td></tr>
+      <tr><td>93</td><td>Подсветка зеркала пассажира</td><td>Passenger vanity mirror light</td></tr>
+      <tr><td>94</td><td>Выключатель подсветки зеркала пассажира</td><td>Passenger vanity mirror switch</td></tr>
+      <tr><td>95</td><td>Прикуриватель</td><td>Cigarette lighter (power)</td></tr>
+      <tr><td>96</td><td>Разъем для зарядки</td><td>Accessory / charging socket</td></tr>
+    </table>
+  </div>
+
+  <div class="ref-divider"></div>
+
+  <!-- SCHEMA 8 TRANSLATION -->
+  <div class="ref-section">
+    <h2>Schema 8 — Horn, Wipers, Washers, Heater Fan</h2>
+    <p>Page 12•32 · Drawing H32740 · Звуковой сигнал · Стеклоочистители · Вентилятор отопителя</p>
+    <table class="ref-table">
+      <tr><th>#</th><th>Russian</th><th>English</th></tr>
+      <tr><td>118</td><td>Основной блок управления</td><td>General control module (ZKE IV)</td></tr>
+      <tr><td>119</td><td>Звуковой сигнал</td><td>Horn</td></tr>
+      <tr><td>120</td><td>Спиральная пружина рулевого колеса</td><td>Steering wheel clock spring</td></tr>
+      <tr><td>121</td><td>Выключатель звукового сигнала</td><td>Horn button / switch</td></tr>
+      <tr><td>122</td><td>Обогреватель форсунки омывателя</td><td>Washer jet heater</td></tr>
+      <tr><td>123</td><td>Термовыключатель</td><td>Thermal cut-off switch</td></tr>
+      <tr><td>124</td><td>Реле омывателей фар</td><td>Headlight washer relay</td></tr>
+      <tr><td>125</td><td>Насос омывателей фар</td><td>Headlight washer pump</td></tr>
+      <tr><td>126</td><td>Блок управления вентилятором отопителя</td><td>Heater fan control module (blower resistor)</td></tr>
+      <tr><td>127</td><td>Электродвигатель вентилятора отопителя</td><td>Heater blower fan motor</td></tr>
+      <tr><td>128</td><td>Выключатель омывателя / стеклоочистителей</td><td>Washer / wiper stalk switch</td></tr>
+      <tr><td>129</td><td>Блок управления отопителем и кондиционером</td><td>HVAC control unit (IHKA / standard heater)</td></tr>
+      <tr><td>130</td><td>Электродвигатель стеклоочистителя</td><td>Windshield wiper motor</td></tr>
+      <tr><td>131</td><td>Насос омывателя ветрового стекла</td><td>Windshield washer pump</td></tr>
+      <tr><td>132</td><td>Блок управления стеклоочистителя заднего стекла</td><td>Rear wiper / washer control module</td></tr>
+      <tr><td>133</td><td>Выключатель двери багажного отделения</td><td>Trunk door switch (triggers rear wiper)</td></tr>
+      <tr><td>134</td><td>Насос омывателя заднего стекла</td><td>Rear window washer pump</td></tr>
+    </table>
+  </div>
+
+  <div class="ref-divider"></div>
+
+  <!-- SCHEMA 10 TRANSLATION -->
+  <div class="ref-section">
+    <h2>Schema 10 — Windows, Mirrors, Central Locking, Heated Seats</h2>
+    <p>Page 12•34 · Drawing H32742 · Стеклоподъемники · Зеркала · ЦЗ · Обогрев сидений</p>
+    <table class="ref-table">
+      <tr><th>#</th><th>Russian</th><th>English</th></tr>
+      <tr><td>44</td><td>Выключатель аварийной сигнализации / ЦЗ</td><td>Hazard switch / central locking button</td></tr>
+      <tr><td>77</td><td>Основной блок управления</td><td>General module (ZKE IV / GM4)</td></tr>
+      <tr><td>151</td><td>Узел замка двери водителя</td><td>Driver door lock assembly</td></tr>
+      <tr><td>152</td><td>Узел замка двери пассажира</td><td>Passenger door lock assembly</td></tr>
+      <tr><td>153</td><td>Замок левой задней двери</td><td>Left rear door lock</td></tr>
+      <tr><td>154</td><td>Замок правой задней двери</td><td>Right rear door lock</td></tr>
+      <tr><td>155</td><td>Выключатель управления зеркалами</td><td>Mirror control switch</td></tr>
+      <tr><td>156</td><td>Узел зеркала на двери водителя</td><td>Driver side mirror assembly (motor + heater)</td></tr>
+      <tr><td>157</td><td>Узел зеркала на двери пассажира</td><td>Passenger side mirror assembly</td></tr>
+      <tr><td>158</td><td>Блок управления центральными выключателями</td><td>Central switch control module</td></tr>
+      <tr><td>159</td><td>Обогреватель подушки сиденья водителя</td><td>Driver seat heater (cushion element)</td></tr>
+      <tr><td>160</td><td>Обогреватель спинки сиденья водителя</td><td>Driver seat heater (backrest element)</td></tr>
+      <tr><td>161</td><td>Обогреватель подушки сиденья пассажира</td><td>Passenger seat heater (cushion element)</td></tr>
+      <tr><td>162</td><td>Обогреватель спинки сиденья пассажира</td><td>Passenger seat heater (backrest element)</td></tr>
+    </table>
+    <div class="ref-note">
+      <strong>ZKE connector note:</strong> The ZKE IV module (item 77) appears across Schemas 6, 8, and 10 — it controls interior lighting, central locking, power windows, and mirror heating.
+      Connector pin assignments shown across all three schemas must be cross-referenced for complete ZKE wiring.
+      Fuse F60 (25A) feeds power window motors. Fuse F42 (30A) feeds central locking actuators.
+      Heated seats use fuse F12 (7.5A) and communicate on the K-bus for temperature feedback to IHKA.
+    </div>
+  </div>
+
+  <div class="ref-divider"></div>
+
+  <!-- FUSE REFERENCE -->
+  <div class="ref-section">
+    <h2>Common Fuse Reference</h2>
+    <p>Fuses from all 5 schemas — engine bay fuse box + passenger compartment fuse box</p>
+    <table class="ref-table">
+      <tr><th>Fuse</th><th>Rating</th><th>Circuit</th></tr>
+      <tr><td>F5</td><td>5A</td><td>Horn relay coil</td></tr>
+      <tr><td>F6</td><td>5A</td><td>Interior lighting (via ZKE)</td></tr>
+      <tr><td>F9</td><td>5A</td><td>Rear wiper / washer</td></tr>
+      <tr><td>F12</td><td>7.5A</td><td>Heated seats</td></tr>
+      <tr><td>F14</td><td>5A</td><td>EWS immobilizer module</td></tr>
+      <tr><td>F15</td><td>5A</td><td>Rear wiper motor</td></tr>
+      <tr><td>F25</td><td>5A</td><td>Mirror adjustment</td></tr>
+      <tr><td>F30</td><td>7.5A</td><td>OBD diagnostic port +12V (pin 16)</td></tr>
+      <tr><td>F31</td><td>5A</td><td>Mirror heating elements</td></tr>
+      <tr><td>F37</td><td>50A</td><td>Cooling fan — low speed</td></tr>
+      <tr><td>F42</td><td>30A</td><td>Central locking actuators</td></tr>
+      <tr><td>F43</td><td>5A</td><td>DME power supply</td></tr>
+      <tr><td>F47</td><td>20A</td><td>Cigarette lighter / power socket</td></tr>
+      <tr><td>F50</td><td>40A</td><td>Heater blower motor</td></tr>
+      <tr><td>F52</td><td>30A</td><td>Interior lighting master feed</td></tr>
+      <tr><td>F55</td><td>15A</td><td>Horn</td></tr>
+      <tr><td>F60</td><td>25A</td><td>Power windows</td></tr>
+      <tr><td>F101</td><td>50A</td><td>Cooling fan — high speed</td></tr>
+      <tr><td>F105</td><td>50A</td><td>Starter relay / EWS</td></tr>
+      <tr><td>F106</td><td>50A</td><td>Main engine fuse</td></tr>
+      <tr><td>F107</td><td>50A</td><td>Lighting master feed</td></tr>
+      <tr><td>F108</td><td>200A</td><td>Fusible link — battery to fuse box</td></tr>
+    </table>
+  </div>
+
+</section>
+
 <div class="schema-footer">
   <strong>About these diagrams:</strong> Translated and vectorized from Russian BMW E36 repair manual electrical schematics (Электрические схемы). 
   Original drawings H32734–H32742. Wire colors, gauges, and pin assignments faithfully reproduced from source material.
@@ -1802,7 +2094,8 @@ const scaleState = {};
 function showSchema(num) {
   document.querySelectorAll('.schema-section').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.schema-nav button').forEach(b => b.classList.remove('active'));
-  document.getElementById('schema-' + num).classList.add('active');
+  const section = document.getElementById('schema-' + num);
+  if (section) section.classList.add('active');
   event.target.classList.add('active');
 }
 

@@ -1,9 +1,10 @@
 ---
 title: "BMW E36 M43 to M50 Engine Swap: Complete Parts List & Guide"
-description: "The definitive M43 to M50B25 swap parts list for BMW E36. Every bracket, wire, sensor, and adapter you need. OBD1 European sedan focus with real EU supplier prices."
+description: "Complete M43-to-M50B25 swap parts list for BMW E36: every bracket, sensor, and adapter with EU supplier prices."
 pillar: swap
 keywords: "e36 m43 to m50 swap, e36 engine swap guide, m50 swap parts list, 316i to 325i swap"
 date: "2026-03-16"
+hero: "parts-list.webp"
 ---
 
 ## TL;DR

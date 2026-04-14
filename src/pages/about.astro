@@ -1,9 +1,409 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const title = 'About';
+import SubscribeBox from '../components/SubscribeBox.astro';
 ---
-<BaseLayout title={title}>
-  <div style="max-width:var(--wide-w);margin:0 auto;padding:6rem 1.5rem;font-family:var(--font-mono);color:var(--text-dim)">
-    <p>// {title} — coming soon</p>
+<BaseLayout
+  title="About the Car — projekt36"
+  description="The story of a 1994 BMW E36 316i Sedan — where it came from, what it is, and what it's becoming. A complete transformation documented from first fault code to final drive."
+>
+
+<div class="about-page">
+
+  <!-- ═══ HERO ═══ -->
+  <div class="about-hero">
+    <div class="about-hero-tag">PROJEKT36 · THE CAR</div>
+    <h1 class="about-title">One E36.<br><em>One transformation.</em></h1>
+    <p class="about-lead">
+      A 1994 BMW E36 316i Sedan — bought tired, with 230,000 kilometres on the clock
+      and a list of faults longer than the service history. Not a pristine shell. Not a
+      competition car. A real car, with real problems, being fixed the right way.
+    </p>
   </div>
+
+  <!-- ═══ IMAGE SLOT 1 — full-width car photo ═══ -->
+  <!-- SUGGESTED IMAGE: wide exterior shot of the car as-found / arrival condition -->
+  <!-- dimensions: 1200×600px or wider, showing the car from the front-three-quarter -->
+  <div class="about-img-slot about-img-wide">
+    <div class="img-placeholder">
+      <span class="img-placeholder-label">[ Photo — Car as found, exterior, front ¾ ]</span>
+    </div>
+  </div>
+
+  <!-- ═══ THE CAR ═══ -->
+  <div class="about-section">
+    <div class="about-section-tag">The machine</div>
+    <h2 class="about-h2">What it is</h2>
+    <p>
+      E36 316i Sedan, built in 1994. Munich steel, four-cylinder M43B16 engine producing
+      102 hp, five-speed manual gearbox, rear-wheel drive. Alpine White over Anthracite cloth.
+      The E36 was BMW's bread-and-butter car of the nineties — not exotic, but engineered
+      with the same fundamentals as the M3 that shared its platform.
+    </p>
+    <p>
+      The 316i was the entry-level variant. That is precisely the point. The bones are
+      identical to the six-cylinder cars — same suspension geometry, same subframe, same
+      body shell. The M43 is a placeholder. Everything else is the foundation.
+    </p>
+
+    <!-- SUGGESTED IMAGE: engine bay photo showing the M43 in situ, before any work -->
+    <!-- dimensions: 900×600px, well-lit engine bay shot -->
+    <div class="about-img-slot">
+      <div class="img-placeholder">
+        <span class="img-placeholder-label">[ Photo — Original M43 engine bay ]</span>
+      </div>
+    </div>
+
+    <div class="about-spec-table">
+      <div class="spec-row"><span class="spec-key">Model</span><span class="spec-val">BMW 316i Sedan (E36)</span></div>
+      <div class="spec-row"><span class="spec-key">Year</span><span class="spec-val">1994</span></div>
+      <div class="spec-row"><span class="spec-key">Engine</span><span class="spec-val">M43B16 · 1,596 cc · 102 hp</span></div>
+      <div class="spec-row"><span class="spec-key">Gearbox</span><span class="spec-val">Getrag 5-speed manual</span></div>
+      <div class="spec-row"><span class="spec-key">Colour</span><span class="spec-val">Alpine White (300)</span></div>
+      <div class="spec-row"><span class="spec-key">Odometer</span><span class="spec-val">230,000+ km at acquisition</span></div>
+    </div>
+  </div>
+
+  <!-- ═══ THE CONDITION ═══ -->
+  <div class="about-section about-section-alt">
+    <div class="about-section-tag">Starting point</div>
+    <h2 class="about-h2">Where it came from</h2>
+    <p>
+      The car arrived with the kind of history common to high-mileage E36s: cooling system
+      leaks deferred too long, rust starting in the sills and rear arches, electrical faults
+      never traced to root cause, and a service record that stopped being stamped around
+      150,000 kilometres. Driveable. Far from right.
+    </p>
+    <p>
+      The structural condition was assessed first. Sill rust was surface-level on one side,
+      deeper on the other. The rear arch lips had bubbled but not perforated. The floor and
+      inner sills were clean. A car worth saving — but only if done properly.
+    </p>
+
+    <!-- SUGGESTED IMAGE: pair of photos — rust detail on sill / rear arch close-up -->
+    <!-- dimensions: two images side by side, each ~600×400px -->
+    <div class="about-img-slot about-img-pair">
+      <div class="img-placeholder">
+        <span class="img-placeholder-label">[ Photo — Sill rust detail ]</span>
+      </div>
+      <div class="img-placeholder">
+        <span class="img-placeholder-label">[ Photo — Rear arch bubbling ]</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ THE PLAN ═══ -->
+  <div class="about-section">
+    <div class="about-section-tag">The transformation</div>
+    <h2 class="about-h2">What it's becoming</h2>
+    <p>
+      The goal is a complete transformation across eleven chapters — not a show car,
+      not a track car, but a genuinely sorted driver's machine built to last another
+      200,000 kilometres. Every system addressed, nothing bodged.
+    </p>
+
+    <div class="about-transform-grid">
+      <div class="transform-col transform-now">
+        <div class="transform-label">Now</div>
+        <ul>
+          <li>M43B16 · 102 hp · 4-cylinder</li>
+          <li>Stock suspension · worn bushings</li>
+          <li>Grey cloth interior · no insulation</li>
+          <li>Rust in sills and arches</li>
+          <li>Manual windows · no climate control</li>
+          <li>Steel 15" wheels</li>
+        </ul>
+      </div>
+      <div class="transform-col transform-become">
+        <div class="transform-label">Becoming</div>
+        <ul>
+          <li>M50B25 NV · 189 hp · inline-6</li>
+          <li>Air suspension · full geometry reset</li>
+          <li>Black leather · full sound deadening</li>
+          <li>Rust-free · fresh paint + PPF</li>
+          <li>Climate control retrofit</li>
+          <li>Custom 3-piece wheels</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SUGGESTED IMAGE: mood/inspiration photo — a clean E36 Sedan showing the target aesthetic -->
+    <!-- dimensions: 900×500px, ideally a side-on or rear ¾ shot of a similar-spec finished car -->
+    <div class="about-img-slot">
+      <div class="img-placeholder">
+        <span class="img-placeholder-label">[ Photo — Target aesthetic reference or inspiration ]</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ WHY DOCUMENTED ═══ -->
+  <div class="about-section about-section-alt">
+    <div class="about-section-tag">Why this site exists</div>
+    <h2 class="about-h2">The documentation</h2>
+    <p>
+      The E36 is a well-understood car — thirty years of ownership, a deep parts network,
+      and plenty of forum threads. What it lacks is documentation that is structured,
+      accurate, and honest about the failures as much as the successes.
+    </p>
+    <p>
+      Every decision on this car is written down: what was done, why, what it cost, what
+      went wrong, and what was learned. The guides come from that work directly — not copied
+      from forums, not speculative, but tested on this specific car and cross-referenced
+      against BMW's own ETM and repair documentation.
+    </p>
+    <p>
+      The tools section exists because the same calculations kept coming up — wheel fitment,
+      offset, tire diameter, swap compatibility — and a spreadsheet gets old quickly.
+    </p>
+  </div>
+
+  <!-- ═══ ABOUT THE PERSON ═══ -->
+  <div class="about-section">
+    <div class="about-section-tag">Behind the build</div>
+    <h2 class="about-h2">Who's doing this</h2>
+
+    <!-- SUGGESTED IMAGE: portrait or workshop photo — informal, working on the car -->
+    <!-- dimensions: 320×320px square, or 400×300px, positioned float-right on desktop -->
+    <div class="about-img-slot about-img-person">
+      <div class="img-placeholder">
+        <span class="img-placeholder-label">[ Photo — Portrait or workshop shot ]</span>
+      </div>
+    </div>
+
+    <p>
+      <!-- FILL IN: your name or handle, where you're based, a line about background -->
+      I'm [your name], based in [location]. [One sentence about your background — what you do,
+      how long you've been into cars, or how you ended up with an E36.]
+    </p>
+    <p>
+      <!-- FILL IN: how you got into the E36 specifically, what drew you to this project -->
+      [A paragraph about why this specific car — why the E36, why a 316i as the starting point,
+      what the project means to you beyond just having a working car at the end of it.]
+    </p>
+    <p>
+      <!-- FILL IN: your approach, skills, what you do yourself vs. outsource -->
+      [A paragraph about how you work — what you do yourself, what you outsource, your
+      philosophy on how the build should be done. Readers find this context useful when
+      deciding how much to trust the guides.]
+    </p>
+  </div>
+
+  <!-- ═══ SUBSCRIBE ═══ -->
+  <SubscribeBox />
+
+  <!-- ═══ FOOTER NOTE ═══ -->
+  <div class="about-footer-note">
+    <span class="about-footer-mono">// build in progress · documentation updated as work completes</span>
+    <a href="/build" class="btn-primary">Follow the build →</a>
+  </div>
+
+</div>
+
 </BaseLayout>
+
+<style>
+  .about-page {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 6rem;
+  }
+
+  /* Hero */
+  .about-hero {
+    margin-bottom: 3rem;
+  }
+  .about-hero-tag {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    color: var(--accent);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .about-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.25rem;
+  }
+  .about-title em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+  .about-lead {
+    font-size: 1rem;
+    color: var(--text-mid);
+    line-height: 1.8;
+    max-width: 60ch;
+  }
+
+  /* Sections */
+  .about-section {
+    padding: 3rem 0;
+    border-top: 1px solid var(--border);
+  }
+  .about-section-alt {
+    background: var(--bg2);
+    padding: 3rem 2rem;
+    margin: 0 -2rem;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .about-section-tag {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    color: var(--accent);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+  }
+  .about-h2 {
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    color: var(--text);
+  }
+  .about-section p,
+  .about-section-alt p {
+    color: var(--text-mid);
+    line-height: 1.85;
+    font-size: 0.97rem;
+    margin-bottom: 1.1rem;
+    max-width: 64ch;
+  }
+
+  /* Image placeholders */
+  .about-img-slot {
+    margin: 2rem 0;
+  }
+  .about-img-wide {
+    margin: 0 0 3rem;
+  }
+  .about-img-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+  }
+  @media (max-width: 560px) {
+    .about-img-pair { grid-template-columns: 1fr; }
+  }
+  .img-placeholder {
+    background: var(--bg2);
+    border: 1px dashed var(--border-mid);
+    aspect-ratio: 3/2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  .about-img-wide .img-placeholder { aspect-ratio: 21/9; }
+  .img-placeholder-label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--text-dim);
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  /* Spec table */
+  .about-spec-table {
+    border: 1px solid var(--border);
+    margin: 1.75rem 0;
+  }
+  .spec-row {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.85rem;
+  }
+  .spec-row:last-child { border-bottom: none; }
+  .spec-key {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.65rem 1rem;
+    background: var(--bg2);
+    border-right: 1px solid var(--border);
+  }
+  .spec-val {
+    font-family: var(--font-mono);
+    color: var(--text-mid);
+    padding: 0.65rem 1rem;
+  }
+
+  /* Transformation grid */
+  .about-transform-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin: 1.75rem 0;
+  }
+  @media (max-width: 560px) {
+    .about-transform-grid { grid-template-columns: 1fr; }
+  }
+  .transform-col {
+    background: var(--bg);
+    padding: 1.5rem;
+  }
+  .transform-label {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    margin-bottom: 1rem;
+  }
+  .transform-now  .transform-label { color: var(--text-dim); }
+  .transform-become .transform-label { color: var(--accent); }
+  .transform-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .transform-col li {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    padding: 0.45rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    line-height: 1.4;
+  }
+  .transform-col li:last-child { border-bottom: none; }
+  .transform-now     li { color: var(--text-dim); }
+  .transform-become  li { color: var(--text-mid); }
+
+  /* Footer note */
+  .about-footer-note {
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .about-footer-mono {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--text-dim);
+  }
+
+  .about-img-person {
+    float: right;
+    width: 220px;
+    margin: 0 0 1.5rem 2rem;
+  }
+  .about-img-person .img-placeholder { aspect-ratio: 4/3; }
+
+  @media (max-width: 560px) {
+    .about-section-alt { margin: 0 -1.5rem; padding: 2.5rem 1.5rem; }
+    .about-img-person { float: none; width: 100%; margin: 0 0 1.5rem; }
+  }
+</style>

@@ -50,12 +50,32 @@ const groups = [
 ];
 
 const total = groups.reduce((s, g) => s + g.items.length, 0);
+const siteBase = 'https://projekt36.com';
+const breadcrumbLd = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home',  item: siteBase },
+    { '@type': 'ListItem', position: 2, name: 'Tools', item: `${siteBase}/tools` },
+    { '@type': 'ListItem', position: 3, name: 'Air Suspension Checklist', item: `${siteBase}/tools/air-suspension` },
+  ],
+};
+const appLd = {
+  '@context': 'https://schema.org', '@type': 'WebApplication',
+  name: 'Air Suspension Checklist',
+  description: 'Plan your E36 air suspension install — management, bags, compressor, tank, lines, wiring, and controller setup.',
+  url: `${siteBase}/tools/air-suspension`,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Any',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+};
 ---
 
 <BaseLayout
   title="Air Suspension Checklist — projekt36"
   description="Plan your E36 air suspension install — management, bags, compressor, tank, lines, wiring, and controller setup."
 >
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} slot="head" />
+<script type="application/ld+json" set:html={JSON.stringify(appLd)} slot="head" />
 <div class="tool-page">
   <div class="breadcrumb">
     <a href="/tools">Tools</a>

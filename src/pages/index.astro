@@ -4,15 +4,55 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="projekt36 — BMW E36 Build Journal & Tools">
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "projekt36",
+  "url": "https://projekt36.com",
+  "description": "BMW E36 build journal, retrofit guides, and practical tools for E36 owners.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://projekt36.com/guides?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+})} slot="head" />
 
   <!-- ═══ HERO ═══ -->
   <section class="hero">
     <div class="hero-bg" aria-hidden="true">
+      <div class="hero-grid"></div>
+      <div class="hero-blueprint">
+        <img src="/images/blueprint-engine.webp" alt="" width="1408" height="768" loading="lazy" decoding="async" />
+      </div>
       <div class="hero-overlay"></div>
     </div>
     <div class="hero-car" aria-hidden="true">
       <img src="/images/IMG_0511 (1).webp" alt="" width="900" height="400" />
     </div>
+    <!-- HUD telemetry chips — upper-left area -->
+    <div class="hero-hud" aria-hidden="true">
+      <div class="hud-chip">
+        <span class="hud-key">Chassis</span>
+        <span class="hud-val">E36 Sedan</span>
+      </div>
+      <div class="hud-chip">
+        <span class="hud-key">Engine</span>
+        <span class="hud-val">M43B16</span>
+      </div>
+      <div class="hud-chip">
+        <span class="hud-key">Year</span>
+        <span class="hud-val">1994</span>
+      </div>
+      <div class="hud-chip">
+        <span class="hud-key">Odometer</span>
+        <span class="hud-val">230,000+ km</span>
+      </div>
+      <div class="hud-chip hud-status">
+        <span class="hud-dot"></span>
+        <span class="hud-val">Build in progress</span>
+      </div>
+    </div>
+
     <div class="hero-inner">
       <div class="hero-label">
         <span>PROJEKT36</span>
@@ -24,10 +64,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <span>E36 TOOLS</span>
       </div>
       <h1 class="hero-title">
-        316i <em class="hero-em">becomes</em><br>something more
+        <span>316i </span><em class="hero-em">becomes</em><br><span>something more</span>
       </h1>
       <p class="hero-lead">
-        One BMW E36 Compact. Documented from the first fault code to final drive.
+        One BMW E36 Sedan. Documented from the first fault code to final drive.
         Engine swap, wiring, suspension, sound, paint — eleven chapters, one transformation.
       </p>
       <div class="hero-ctas">
@@ -42,7 +82,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="stats-strip">
     <div class="stats-inner">
       <div class="stat">
-        <span class="stat-num">11</span>
+        <span class="stat-num">25</span>
         <span class="stat-label">Technical guides</span>
       </div>
       <div class="stat-div"></div>
@@ -68,6 +108,78 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <!-- ═══ BUILD STATUS ═══ -->
+  <section class="build-status-section">
+    <div class="section-inner">
+
+      <div class="bs-top">
+        <div class="bs-chapter-block">
+          <span class="bs-meta-label">Current Chapter</span>
+          <span class="bs-chapter-val">01 — Teardown</span>
+        </div>
+        <div class="bs-status-block">
+          <span class="bs-meta-label">Status</span>
+          <span class="bs-status-val"><span class="bs-dot"></span>In Progress</span>
+        </div>
+      </div>
+
+      <div class="bs-progress-row">
+        <span class="bs-prog-label">Overall Progress</span>
+        <span class="bs-prog-pct">15%</span>
+      </div>
+      <div class="bs-track">
+        <div class="bs-fill" style="width:15%">
+          <div class="bs-thumb"></div>
+        </div>
+      </div>
+
+      <!-- Logo badge between progress bar and grille — like BMW roundel between kidneys -->
+      <div class="grill-logo-bridge">
+        <div class="grill-logo-line"></div>
+        <div class="grill-logo-badge">
+          <img src="/images/projekt36-mark.svg" alt="projekt36" width="48" height="48" />
+        </div>
+        <div class="grill-logo-line"></div>
+      </div>
+
+      <!-- Kidney grille comparison -->
+      <div class="grill-compare">
+        <div class="grill-kidney grill-now">
+          <div class="grill-kidney-label">What it is now</div>
+          <div class="grill-slats">
+            <div class="grill-slat">M43B16 · 102 hp · 4-cyl</div>
+            <div class="grill-slat">Manual windows · No A/C</div>
+            <div class="grill-slat">Stock springs · No damping</div>
+            <div class="grill-slat">Grey cloth · Zero insulation</div>
+            <div class="grill-slat">Rust in sills &amp; arches</div>
+            <div class="grill-slat">Steel stock 15&quot; wheels</div>
+          </div>
+        </div>
+
+        <div class="grill-bridge">
+          <span class="grill-arrow">→</span>
+        </div>
+
+        <div class="grill-kidney grill-become">
+          <div class="grill-kidney-label">What it will become</div>
+          <div class="grill-slats">
+            <div class="grill-slat">M50B25 NV · 189 hp · I6</div>
+            <div class="grill-slat">Climate control retrofit</div>
+            <div class="grill-slat">Air suspension · Adjustable</div>
+            <div class="grill-slat">Black leather · Full sound deadening</div>
+            <div class="grill-slat">Fresh paint + PPF protection</div>
+            <div class="grill-slat">Custom 3-piece wheels</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bs-cta">
+        <a href="/build" class="btn-primary">Follow the build →</a>
+      </div>
+
+    </div>
+  </section>
+
   <!-- ═══ ELEVEN CHAPTERS ═══ -->
   <section class="section chapters-section">
     <div class="section-inner">
@@ -76,7 +188,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="section-tag">The build narrative</div>
           <h2 class="section-title">ELEVEN CHAPTERS.<br><em class="accent-em">ONE TRANSFORMATION.</em></h2>
           <p class="section-body">
-            From a stock 316i Compact with a tired M43 to a proper driver's car with an M50 under the bonnet.
+            From a stock 316i Sedan with a tired M43 to a proper driver's car with an M50 under the bonnet.
             Every decision documented — what worked, what failed, what it cost.
           </p>
           <a href="/build" class="btn-primary">Start reading →</a>
@@ -148,7 +260,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
           <h3 class="diag-title">INPA / EDIABAS</h3>
           <p class="diag-desc">Native BMW diagnostics. Read and clear fault codes, access live sensor data, run actuator tests.</p>
-          <a href="/guides" class="diag-link">Setup guide →</a>
+          <a href="/guides/e36-inpa-setup-guide" class="diag-link">Setup guide →</a>
         </div>
         <div class="diag-card">
           <div class="diag-icon">
@@ -156,7 +268,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
           <h3 class="diag-title">Fault code log</h3>
           <p class="diag-desc">Document active and resolved faults across your build. Track patterns over time.</p>
-          <a href="/tools/inpa-log" class="diag-link">Open tool →</a>
+          <a href="/tools" class="diag-link">Explore tools →</a>
         </div>
         <div class="diag-card">
           <div class="diag-icon">
@@ -164,7 +276,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
           <h3 class="diag-title">OBD-II via ELM327</h3>
           <p class="diag-desc">Budget option with Torque or OBD Fusion. Limited vs INPA but works for basic fault reading.</p>
-          <a href="/guides" class="diag-link">Comparison →</a>
+          <a href="/guides/e36-obd1-diagnostic-setup" class="diag-link">Comparison →</a>
         </div>
       </div>
     </div>
@@ -194,7 +306,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         ))}
       </div>
       <div class="section-more">
-        <a href="/guides" class="btn-outline">All schemas →</a>
+        <a href="/schemas/e36-wiring.html" target="_blank" class="btn-outline">Open wiring viewer →</a>
       </div>
     </div>
   </section>
@@ -296,6 +408,33 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     inset: 0;
     z-index: 0;
   }
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(212,149,42,0.055) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(212,149,42,0.055) 1px, transparent 1px),
+      linear-gradient(rgba(212,149,42,0.022) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(212,149,42,0.022) 1px, transparent 1px);
+    background-size: 80px 80px, 80px 80px, 20px 20px, 20px 20px;
+    pointer-events: none;
+  }
+  .hero-blueprint {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    opacity: 0.22;
+  }
+  .hero-blueprint img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
   .hero-overlay {
     position: absolute;
     inset: 0;
@@ -323,6 +462,55 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     display: block;
   }
   @media (max-width: 768px) { .hero-car { width: 100%; opacity: 0.2; } }
+  /* HUD chips */
+  .hero-hud {
+    position: absolute;
+    top: clamp(5rem, 12vw, 8rem);
+    left: clamp(1.5rem, 4vw, 3rem);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    animation: hero-fade-up 0.9s ease both;
+    animation-delay: 0.6s;
+  }
+  .hud-chip {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    background: rgba(19, 23, 32, 0.55);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-left: 2px solid rgba(212,149,42,0.35);
+    padding: 0.3rem 0.75rem 0.3rem 0.6rem;
+    backdrop-filter: blur(6px);
+    width: fit-content;
+  }
+  .hud-key {
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.58rem;
+    flex-shrink: 0;
+  }
+  .hud-val {
+    color: var(--text-mid);
+    letter-spacing: 0.04em;
+  }
+  .hud-status .hud-val {
+    color: var(--green);
+  }
+  .hud-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--green);
+    flex-shrink: 0;
+    animation: bs-pulse 2s ease-in-out infinite;
+  }
+  @media (max-width: 768px) { .hero-hud { display: none; } }
+
   .hero-inner {
     position: relative;
     z-index: 1;
@@ -468,6 +656,206 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin-bottom: 2rem;
   }
   .section-more { margin-top: 2rem; }
+
+  /* ── BUILD STATUS ── */
+  .build-status-section {
+    padding: 4rem 1.5rem;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+  }
+  .bs-top {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  .bs-meta-label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    margin-bottom: 0.35rem;
+  }
+  .bs-chapter-val {
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.04em;
+  }
+  .bs-status-val {
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .bs-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--green);
+    display: inline-block;
+    animation: bs-pulse 2s ease-in-out infinite;
+  }
+  @keyframes bs-pulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.3; }
+  }
+  .bs-progress-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+  }
+  .bs-prog-label {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+  }
+  .bs-prog-pct {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--accent);
+  }
+  .bs-track {
+    height: 3px;
+    background: var(--border-mid);
+    border-radius: 2px;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+  .bs-fill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 2px;
+    position: relative;
+  }
+  .bs-thumb {
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 3px rgba(212,149,42,0.2);
+  }
+
+  /* ── Logo bridge ── */
+  .grill-logo-bridge {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin: 2rem 0 1.5rem;
+  }
+  .grill-logo-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+  .grill-logo-badge {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 1px solid var(--border-mid);
+    background: var(--bg3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 4px var(--bg), 0 0 0 5px var(--border);
+  }
+  .grill-logo-badge img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    opacity: 0.85;
+  }
+
+  /* ── Kidney grille comparison ── */
+  .grill-compare {
+    display: grid;
+    grid-template-columns: 1fr 3rem 1fr;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 2rem;
+  }
+
+  .grill-kidney {
+    border-radius: 44px;
+    overflow: hidden;
+    background: var(--bg2);
+    position: relative;
+  }
+  /* "Now" kidney: muted border */
+  .grill-now {
+    border: 2px solid var(--border-mid);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.03);
+  }
+  /* "Become" kidney: amber frame with glow — the target state */
+  .grill-become {
+    border: 2px solid rgba(212,149,42,0.55);
+    box-shadow:
+      inset 0 0 0 1px rgba(212,149,42,0.08),
+      0 0 18px rgba(212,149,42,0.08);
+  }
+
+  .grill-kidney-label {
+    font-family: var(--font-mono);
+    font-size: 0.58rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 0.85rem 1.5rem 0.65rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .grill-now    .grill-kidney-label { color: var(--text-dim); }
+  .grill-become .grill-kidney-label { color: var(--accent); }
+
+  .grill-slat {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    padding: 0.65rem 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .grill-slat:last-child { border-bottom: none; }
+  .grill-now    .grill-slat { color: var(--text-dim); }
+  .grill-become .grill-slat { color: var(--text-mid); }
+
+  .grill-bridge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .grill-arrow {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--accent);
+    opacity: 0.7;
+  }
+
+  @media (max-width: 640px) {
+    .grill-compare {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+    .grill-bridge { padding: 0.25rem; }
+    .grill-arrow { display: block; transform: rotate(90deg); }
+    .grill-slat { white-space: normal; }
+  }
+
+  .bs-cta { margin-top: 0.5rem; text-align: center; }
 
   /* ── CHAPTERS ── */
   .chapters-layout {

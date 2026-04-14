@@ -1,9 +1,10 @@
 ---
 title: "BMW E36 Air Ride Kit Comparison (2026): Which Kit to Buy"
-description: "Comprehensive comparison of BMW E36 air suspension kits for 2026. Bag Riders, Air Lift Performance, D2 Racing, CEIKA, and DOLUD compared on price, quality, ride, and EU availability."
+description: "BMW E36 air suspension kit comparison 2026: Bag Riders, Air Lift, D2, CEIKA, and DOLUD on price, quality, and EU availability."
 pillar: suspension
 keywords: "e36 air ride kit, best e36 air suspension, bag riders e36 vs air lift, e36 air suspension comparison"
 date: "2026-03-16"
+hero: "air-suspension.webp"
 ---
 
 ## TL;DR

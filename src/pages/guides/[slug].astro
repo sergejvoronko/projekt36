@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection, render } from 'astro:content';
+import AuthorBox from '../../components/AuthorBox.astro';
+import SubscribeBox from '../../components/SubscribeBox.astro';
 
 export async function getStaticPaths() {
   const articles = await getCollection('articles');
@@ -18,39 +20,218 @@ const pillarLabels: Record<string, string> = {
   interior:  'Interior',
   reference: 'Reference',
 };
+
+const siteBase = 'https://projekt36.com';
+const ogImage  = article.data.hero ? `${siteBase}/heroes/${article.data.hero}` : undefined;
+
+// Breadcrumb JSON-LD
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home',   item: siteBase },
+    { '@type': 'ListItem', position: 2, name: 'Guides', item: `${siteBase}/guides` },
+    { '@type': 'ListItem', position: 3, name: article.data.title, item: `${siteBase}/guides/${article.id}` },
+  ],
+};
+
+// Article JSON-LD
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: article.data.title,
+  description: article.data.description,
+  datePublished: article.data.date ?? '',
+  dateModified:  article.data.date ?? '',
+  author: { '@type': 'Person', name: 'projekt36' },
+  publisher: { '@type': 'Organization', name: 'projekt36', url: siteBase },
+  ...(ogImage ? { image: ogImage } : {}),
+  mainEntityOfPage: { '@type': 'WebPage', '@id': `${siteBase}/guides/${article.id}` },
+};
 ---
 
-<BaseLayout title={`${article.data.title} — projekt36`} description={article.data.description}>
-<article class="article-page">
+<BaseLayout
+  title={article.data.title}
+  description={article.data.description}
+  heroImage={ogImage}
+>
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} slot="head" />
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} slot="head" />
+<div class="article-wrap">
 
-  <div class="article-header">
-    <div class="breadcrumb">
-      <a href="/guides">Guides</a>
-      <span class="sep">/</span>
-      <span class="pillar-tag">{pillarLabels[article.data.pillar]}</span>
+  <article class="article-main">
+
+    {article.data.hero && (
+      <div class="article-hero">
+        <img src={`/heroes/${article.data.hero}`} alt="" role="presentation" width="1344" height="768" loading="eager" decoding="async" />
+        <div class="article-hero-fade"></div>
+      </div>
+    )}
+
+    <div class="article-header">
+      <div class="breadcrumb">
+        <a href="/guides">Guides</a>
+        <span class="sep">/</span>
+        <span class="pillar-tag">{pillarLabels[article.data.pillar]}</span>
+      </div>
+      <h1 class="article-title">{article.data.title}</h1>
+      <p class="article-desc">{article.data.description}</p>
+      <div class="article-meta">
+        {article.data.date && <span class="meta-date">{article.data.date}</span>}
+        <button class="btn-print" onclick="window.print()" title="Print / Save as PDF">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          PDF
+        </button>
+      </div>
     </div>
-    <h1 class="article-title">{article.data.title}</h1>
-    <p class="article-desc">{article.data.description}</p>
-  </div>
 
-  <div class="article-body">
-    <Content />
-  </div>
+    <div class="article-body" id="article-body">
+      <Content />
+    </div>
 
-  <div class="article-footer">
-    <a href="/guides" class="btn-outline">← Back to guides</a>
-  </div>
+    <AuthorBox />
+    <SubscribeBox />
 
-</article>
+    <div class="article-footer">
+      <a href="/guides" class="btn-outline">← Back to guides</a>
+    </div>
+
+  </article>
+
+  <!-- TOC sidebar -->
+  <aside class="toc-sidebar" id="toc-sidebar" aria-label="Table of contents">
+    <div class="toc-inner" id="toc-inner">
+      <p class="toc-label">Contents</p>
+      <nav id="toc-nav"></nav>
+    </div>
+  </aside>
+
+</div>
 </BaseLayout>
 
-<style>
-  .article-page {
-    max-width: var(--content-w);
-    margin: 0 auto;
-    padding: 2rem 1.5rem 5rem;
+<script>
+  // Build TOC from headings
+  const body   = document.getElementById('article-body');
+  const tocNav = document.getElementById('toc-nav');
+  const sidebar = document.getElementById('toc-sidebar');
+  if (!body || !tocNav) throw new Error();
+
+  // Style TL;DR as a callout box
+  const allH2 = Array.from(body.querySelectorAll('h2'));
+  for (const h of allH2) {
+    if (/tl.?dr/i.test(h.textContent || '')) {
+      h.classList.add('tldr-heading');
+      const wrapper = document.createElement('div');
+      wrapper.className = 'tldr-body';
+      h.after(wrapper);
+      let next = wrapper.nextElementSibling;
+      while (next && next.tagName !== 'H2' && next.tagName !== 'HR') {
+        const node = next;
+        next = next.nextElementSibling;
+        wrapper.appendChild(node);
+      }
+      break; // only first TL;DR
+    }
   }
 
+  const headings = Array.from(body.querySelectorAll('h2, h3'));
+
+  if (headings.length < 3) {
+    sidebar?.style.setProperty('display', 'none');
+  } else {
+    const ul = document.createElement('ul');
+    headings.forEach(h => {
+      // Ensure heading has an id
+      if (!h.id) {
+        h.id = h.textContent!.trim()
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, '-')
+          .replace(/^-|-$/g, '');
+      }
+      const li = document.createElement('li');
+      li.dataset.level = h.tagName.toLowerCase();
+      const a = document.createElement('a');
+      a.href = `#${h.id}`;
+      a.textContent = h.textContent!.replace(/^#+\s*/, '');
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+    tocNav.appendChild(ul);
+
+    // Highlight active section via IntersectionObserver
+    const links = tocNav.querySelectorAll<HTMLAnchorElement>('a');
+    let activeLink: HTMLAnchorElement | null = null;
+
+    const setActive = (link: HTMLAnchorElement | null) => {
+      activeLink?.classList.remove('active');
+      activeLink = link;
+      link?.classList.add('active');
+      // Scroll TOC link into view within sidebar
+      link?.scrollIntoView({ block: 'nearest' });
+    };
+
+    const observer = new IntersectionObserver(entries => {
+      // Find topmost visible heading
+      const visible = entries
+        .filter(e => e.isIntersecting)
+        .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+      if (visible.length) {
+        const id = visible[0].target.id;
+        const link = tocNav.querySelector<HTMLAnchorElement>(`a[href="#${id}"]`);
+        setActive(link);
+      }
+    }, { rootMargin: '-60px 0px -70% 0px', threshold: 0 });
+
+    headings.forEach(h => observer.observe(h));
+
+    // Smooth scroll on TOC click
+    tocNav.addEventListener('click', e => {
+      const a = (e.target as Element).closest('a');
+      if (!a) return;
+      e.preventDefault();
+      const target = document.getElementById(a.getAttribute('href')!.slice(1));
+      target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.pushState(null, '', a.href);
+    });
+  }
+</script>
+
+<style>
+  /* ── Layout ──────────────────────────────────────────────── */
+  .article-wrap {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 5rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 220px;
+    gap: 3.5rem;
+    align-items: start;
+  }
+
+  /* ── Hero image ─────────────────────────────────────────── */
+  .article-hero {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .article-hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    filter: brightness(0.82) saturate(0.9);
+  }
+  .article-hero-fade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 50%, var(--bg) 100%);
+    pointer-events: none;
+  }
+
+  /* ── Header ─────────────────────────────────────────────── */
   .breadcrumb {
     font-family: var(--font-mono);
     font-size: 0.7rem;
@@ -74,63 +255,134 @@ const pillarLabels: Record<string, string> = {
     padding: 0.15em 0.5em;
   }
 
-  .article-header { margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
-  .article-title {
-    font-family: var(--font-display);
-    font-size: clamp(1.6rem, 4vw, 2.4rem);
-    font-weight: 700;
-    line-height: 1.1;
-    margin-bottom: 0.75rem;
-  }
-  .article-desc { font-size: 0.95rem; color: var(--text-mid); line-height: 1.7; max-width: 58ch; }
-
-  /* Article body typography */
-  .article-body { line-height: 1.8; }
-
-  .article-body :global(h2) {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--text);
-    margin: 2.5rem 0 0.75rem;
-    padding-bottom: 0.4rem;
+  .article-header {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
     border-bottom: 1px solid var(--border);
   }
+  .article-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 0.85rem;
+  }
+  .article-desc {
+    font-size: 1rem;
+    color: var(--text-mid);
+    line-height: 1.7;
+    max-width: 64ch;
+    margin-bottom: 1.25rem;
+  }
+  .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .meta-date {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-dim);
+  }
+  .btn-print {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    color: var(--text-dim);
+    background: none;
+    border: 1px solid var(--border-mid);
+    padding: 0.25em 0.65em;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .btn-print:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* ── Article body typography ─────────────────────────────── */
+  .article-body {
+    line-height: 1.85;
+    font-size: 1.02rem;
+  }
+
+  /* ── TL;DR callout ──────────────────────────────────────── */
+  .article-body :global(.tldr-heading) {
+    font-family: var(--font-mono);
+    font-size: 0.65rem !important;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent) !important;
+    border-bottom: none !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+  }
+  .article-body :global(.tldr-body) {
+    background: var(--accent-dim);
+    border: 1px solid rgba(212,149,42,0.25);
+    border-left: 3px solid var(--accent);
+    padding: 1rem 1.35rem;
+    margin-bottom: 2.25rem;
+    border-radius: 0 2px 2px 0;
+  }
+  .article-body :global(.tldr-body p),
+  .article-body :global(.tldr-body li) {
+    font-size: 0.97rem;
+    color: var(--text-mid);
+    margin-bottom: 0.5rem;
+  }
+  .article-body :global(.tldr-body p:last-child),
+  .article-body :global(.tldr-body li:last-child) { margin-bottom: 0; }
+
+  .article-body :global(h2) {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+    margin: 2.75rem 0 0.8rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--border);
+    scroll-margin-top: 72px;
+  }
   .article-body :global(h3) {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-weight: 600;
     color: var(--text);
-    margin: 1.75rem 0 0.5rem;
+    margin: 2rem 0 0.6rem;
+    scroll-margin-top: 72px;
   }
   .article-body :global(h4) {
-    font-size: 0.95rem;
+    font-size: 0.88rem;
     font-weight: 600;
     color: var(--accent);
     font-family: var(--font-mono);
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    margin: 1.5rem 0 0.5rem;
+    margin: 1.75rem 0 0.5rem;
+    scroll-margin-top: 72px;
   }
   .article-body :global(p) {
     color: var(--text-mid);
-    margin-bottom: 1.1rem;
-    font-size: 0.97rem;
+    margin-bottom: 1.2rem;
+    font-size: 1.02rem;
   }
   .article-body :global(strong) { color: var(--text); font-weight: 600; }
   .article-body :global(em) { color: var(--accent); font-style: italic; }
 
   .article-body :global(ul),
   .article-body :global(ol) {
-    margin: 0.75rem 0 1.25rem 1.5rem;
+    margin: 0.75rem 0 1.35rem 1.6rem;
     color: var(--text-mid);
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
-  .article-body :global(li) { margin-bottom: 0.4rem; line-height: 1.65; }
+  .article-body :global(li) { margin-bottom: 0.45rem; line-height: 1.7; }
 
   .article-body :global(table) {
     width: 100%;
     border-collapse: collapse;
-    margin: 1.5rem 0;
-    font-size: 0.85rem;
+    margin: 1.75rem 0;
+    font-size: 0.88rem;
     font-family: var(--font-mono);
   }
   .article-body :global(th) {
@@ -138,23 +390,24 @@ const pillarLabels: Record<string, string> = {
     color: var(--accent);
     font-weight: 600;
     text-align: left;
-    padding: 0.6rem 0.75rem;
+    padding: 0.6rem 0.9rem;
     border: 1px solid var(--border);
     letter-spacing: 0.04em;
   }
   .article-body :global(td) {
-    padding: 0.5rem 0.75rem;
+    padding: 0.55rem 0.9rem;
     border: 1px solid var(--border);
     color: var(--text-mid);
     vertical-align: top;
+    line-height: 1.55;
   }
   .article-body :global(tr:nth-child(even) td) { background: var(--bg2); }
 
   .article-body :global(blockquote) {
     border-left: 3px solid var(--accent);
     background: var(--accent-dim);
-    padding: 0.75rem 1.25rem;
-    margin: 1.5rem 0;
+    padding: 0.85rem 1.4rem;
+    margin: 1.75rem 0;
     font-style: italic;
     color: var(--text-mid);
   }
@@ -162,7 +415,7 @@ const pillarLabels: Record<string, string> = {
   .article-body :global(code) {
     background: var(--bg2);
     border: 1px solid var(--border);
-    padding: 0.15em 0.4em;
+    padding: 0.15em 0.45em;
     font-size: 0.85em;
     color: var(--accent);
   }
@@ -170,8 +423,115 @@ const pillarLabels: Record<string, string> = {
   .article-body :global(hr) {
     border: none;
     border-top: 1px solid var(--border);
-    margin: 2rem 0;
+    margin: 2.25rem 0;
   }
 
-  .article-footer { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+  /* ── Footer ─────────────────────────────────────────────── */
+  .article-footer {
+    margin-top: 3.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+  }
+
+  /* ── TOC Sidebar ─────────────────────────────────────────── */
+  .toc-sidebar {
+    position: sticky;
+    top: 76px;
+    max-height: calc(100vh - 96px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+  .toc-sidebar::-webkit-scrollbar { width: 4px; }
+  .toc-sidebar::-webkit-scrollbar-track { background: transparent; }
+  .toc-sidebar::-webkit-scrollbar-thumb { background: var(--border); }
+
+  .toc-inner {
+    border-left: 1px solid var(--border);
+    padding-left: 1.25rem;
+  }
+
+  .toc-label {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 0.85rem;
+  }
+
+  #toc-nav :global(ul) {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  #toc-nav :global(li) {
+    margin: 0;
+    padding: 0;
+  }
+  #toc-nav :global(li[data-level="h3"]) {
+    padding-left: 0.9rem;
+  }
+  #toc-nav :global(a) {
+    display: block;
+    font-size: 0.76rem;
+    line-height: 1.4;
+    color: var(--text-dim);
+    padding: 0.28rem 0;
+    text-decoration: none;
+    transition: color 0.15s;
+    border-left: 2px solid transparent;
+    margin-left: -1.27rem;
+    padding-left: 1.05rem;
+  }
+  #toc-nav :global(li[data-level="h3"] a) {
+    margin-left: -2.17rem;
+    padding-left: 1.95rem;
+    font-size: 0.72rem;
+  }
+  #toc-nav :global(a:hover) { color: var(--text); }
+  #toc-nav :global(a.active) {
+    color: var(--accent);
+    border-left-color: var(--accent);
+  }
+
+  /* ── Responsive ─────────────────────────────────────────── */
+  @media (max-width: 900px) {
+    .article-wrap {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    .toc-sidebar {
+      display: none;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .article-wrap { padding: 1.5rem 1rem 4rem; }
+    .article-title { font-size: 1.5rem; }
+  }
+
+  /* ── Print / PDF ─────────────────────────────────────────── */
+  @media print {
+    .toc-sidebar,
+    .btn-print,
+    .article-footer { display: none !important; }
+
+    .article-wrap {
+      display: block;
+      max-width: 100%;
+      padding: 0;
+    }
+    .article-body :global(h2),
+    .article-body :global(h3) {
+      break-after: avoid;
+    }
+    .article-body :global(table) {
+      break-inside: avoid;
+    }
+    .article-body :global(p) { color: #333; }
+    .article-body :global(td),
+    .article-body :global(th) { color: #222; }
+    body { background: #fff !important; color: #111 !important; }
+  }
 </style>

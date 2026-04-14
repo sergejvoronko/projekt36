@@ -1,11 +1,31 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+const siteBase = 'https://projekt36.com';
+const breadcrumbLd = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home',  item: siteBase },
+    { '@type': 'ListItem', position: 2, name: 'Tools', item: `${siteBase}/tools` },
+    { '@type': 'ListItem', position: 3, name: 'Tire Size Compare', item: `${siteBase}/tools/tire-compare` },
+  ],
+};
+const appLd = {
+  '@context': 'https://schema.org', '@type': 'WebApplication',
+  name: 'Tire Size Compare',
+  description: 'Compare two tire sizes — diameter, sidewall height, and speedometer correction.',
+  url: `${siteBase}/tools/tire-compare`,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Any',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+};
 ---
 
 <BaseLayout
   title="Tire Size Compare — projekt36"
   description="Compare two tire sizes — diameter, sidewall height, and speedometer correction."
 >
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} slot="head" />
+<script type="application/ld+json" set:html={JSON.stringify(appLd)} slot="head" />
 <div class="tool-page">
   <div class="breadcrumb">
     <a href="/tools">Tools</a>
@@ -74,6 +94,27 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </ul>
       </div>
     </aside>
+  </div>
+
+  <div class="tool-explainer">
+    <h2>How tire sizing works</h2>
+    <p>
+      Tire sizes follow the format <strong>Width/Aspect R Rim</strong> — for example, 225/45R17 means
+      225 mm wide, with a sidewall that is 45% of the width, on a 17-inch rim. Total diameter is
+      calculated as: <code>(rim × 25.4) + (width × aspect/100 × 2)</code>.
+    </p>
+    <p>
+      When switching tire sizes on a BMW E36, the most important number is <strong>overall diameter</strong>.
+      A larger diameter raises the actual speed versus what the speedometer reads; a smaller one does
+      the opposite. The BMW factory tolerance is ±1.5%, but most TÜV guidelines allow up to 3%.
+      Going beyond that risks failed inspection and inaccurate ABS calibration.
+    </p>
+    <p>
+      On the E36, the stock 16-inch setup is 205/55R16 (634 mm diameter). Moving to a 225/45R17
+      gives 632 mm — virtually identical, which is why it remains the most common upgrade.
+      Stretching to a 215/35R18 drops diameter to around 610 mm, which is a 3.8% change and
+      will push the speedometer high by about 4 km/h at every indicated speed.
+    </p>
   </div>
 </div>
 </BaseLayout>
@@ -197,4 +238,24 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   .tool-links { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
   .tool-links a { font-size: 0.82rem; color: var(--accent); transition: color 0.15s; }
   .tool-links a:hover { color: var(--text); }
+
+  .tool-explainer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+  .tool-explainer h2 {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.25rem;
+  }
+  .tool-explainer p { font-size: 0.88rem; color: var(--text-mid); line-height: 1.75; }
+  .tool-explainer strong { color: var(--text); font-weight: 600; }
 </style>

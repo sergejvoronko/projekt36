@@ -1,11 +1,31 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+const siteBase = 'https://projekt36.com';
+const breadcrumbLd = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home',  item: siteBase },
+    { '@type': 'ListItem', position: 2, name: 'Tools', item: `${siteBase}/tools` },
+    { '@type': 'ListItem', position: 3, name: 'Wheel Fitment Calculator', item: `${siteBase}/tools/wheel-fitment` },
+  ],
+};
+const appLd = {
+  '@context': 'https://schema.org', '@type': 'WebApplication',
+  name: 'E36 Wheel Fitment Calculator',
+  description: 'Check if your wheel and tire combination fits the BMW E36. Bolt pattern 5×120, hub bore 72.6mm.',
+  url: `${siteBase}/tools/wheel-fitment`,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Any',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+};
 ---
 
 <BaseLayout
   title="E36 Wheel & Tire Calculator — projekt36"
   description="Check if your wheel and tire combination fits the BMW E36. Bolt pattern 5×120, hub bore 72.6mm. Accounts for suspension height, staggered setups, and speedo deviation."
 >
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} slot="head" />
+<script type="application/ld+json" set:html={JSON.stringify(appLd)} slot="head" />
 <div class="tool-page">
 
   <!-- Breadcrumb -->

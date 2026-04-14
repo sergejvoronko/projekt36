@@ -4,6 +4,7 @@ description: "Complete E36 cooling system replacement guide. Every part number, 
 pillar: engine
 keywords: "e36 cooling system, m50 cooling system overhaul, e36 water pump replacement, e36 overheating fix"
 date: "2026-03-16"
+hero: "cooling.webp"
 ---
 
 ## TL;DR

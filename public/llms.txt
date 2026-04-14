@@ -1,0 +1,53 @@
+# projekt36 — BMW E36 Build Journal & Reference
+
+> Practical technical guides for BMW E36 owners covering engine swaps, electrical systems,
+> OBD diagnostics, suspension, fuelling, and restoration. Written by an E36 owner documenting
+> a 316i-to-M50 transformation from first fault code to final drive.
+
+## About
+
+projekt36 documents the full rebuild of a BMW E36 Compact (316i) through eleven chapters.
+The site covers hands-on technical topics: M50/M52 engine swaps, EWS immobiliser systems,
+VANOS repair, INPA diagnostics, wiring differences, ground distribution, and more.
+All content is based on direct experience and verified against BMW ETM documentation.
+
+## Guides
+
+- /guides/m50tu-vanos-guide: M50TU VANOS mechanism, helical gear operation, seal kit repair, torque specs
+- /guides/m50-vs-m50tu-vs-m52-comparison: Detailed comparison of M50, M50TU, and M52 engines — differences, VANOS, displacement
+- /guides/m50-common-failure-points: Every known M50 failure ranked by likelihood — coolant system, VANOS, head gasket
+- /guides/e36-ews-immobilizer-guide: How EWS works, rolling code handshake, bypass options, swap considerations
+- /guides/e36-inpa-setup-guide: INPA diagnostic software setup for BMW E36 — cable, software, live data, actuator tests
+- /guides/e36-obd1-diagnostic-setup: OBD1 vs ADS explained, hardware interfaces, fault code reading on pre-OBD2 E36
+- /guides/e36-how-to-read-etm: BMW E36 ETM navigation — wire colours, component codes, tracing circuits
+- /guides/e36-ground-distribution-guide: All E36 chassis ground points (G100, G101, G200, G201) located and explained
+- /guides/e36-fuse-relay-reference: Complete E36 fuse box map — every fuse position, rating, and circuit
+- /guides/e36-lcm-guide: Light Control Module — what it controls, current monitoring, failure modes, NCS coding
+- /guides/e36-charging-system-diagnosis: Alternator diagnosis — voltage regulator, belt, D+ circuit, misdiagnosis traps
+- /guides/m43-to-m50-wiring-differences: Electrical differences between M43 and M50 — loom strategy, EWS options, sensor compatibility
+- /guides/m43-to-m50-complete-parts-list: Complete M43-to-M50 swap parts list with EU supplier prices
+- /guides/e36-cooling-system-overhaul: Full cooling system replacement — all parts, correct order, M50/M52 focus
+- /guides/e36-m50-torque-specifications: Every M50/M52 torque specification in one reference table
+- /guides/e36-gearbox-selection-swap: ZF 310 vs Getrag 420G vs S5D-320Z — ratios, compatibility, which to choose
+- /guides/e36-fuel-system-guide: Fuel pump testing, filter replacement, pressure testing, injector diagnosis
+- /guides/e36-suspension-refresh: Front and rear suspension refresh — what to replace, OEM brands, alignment specs
+- /guides/e36-zke-body-module-guide: ZKE central body electronics — central locking, remote re-sync, NCS coding
+- /guides/e36-sunroof-drain-guide: Sunroof drain paths, how to clear blockages, downstream electrical damage
+- /guides/e36-rust-map-every-spot: Complete E36 rust map — every hotspot ranked by severity
+- /guides/e36-sound-deadening-guide: Sound deadening guide — where to apply, materials, how much for a sedan
+- /guides/e36-parts-sourcing-europe-2026: Best EU suppliers for E36 parts in 2026
+- /guides/e36-air-ride-kit-comparison-2026: E36 air suspension kit comparison — Bag Riders, Air Lift, D2, CEIKA
+- /guides/ppf-on-freshly-painted-classic-car: PPF on a freshly painted classic — timing, cost, DIY vs professional
+
+## Tools
+
+- /tools/wheel-fitment: BMW E36 wheel fitment calculator — ET, hub bore, arch clearance
+- /tools/tire-compare: Tyre size comparison tool — diameter, speedometer deviation
+- /tools/offset-spacer: Wheel spacer and offset calculator for E36
+- /tools/build-budget: E36 build budget planner
+- /tools/swap-checklist: M43-to-M50 swap checklist
+- /tools/air-suspension: E36 air suspension ride height calculator
+
+## Wiring Schemas
+
+- /schemas/e36-wiring.html: Interactive BMW E36 wiring diagram viewer

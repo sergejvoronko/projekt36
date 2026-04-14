@@ -1,9 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const title = 'Build Journal';
 ---
-<BaseLayout title={title}>
-  <div style="max-width:var(--wide-w);margin:0 auto;padding:6rem 1.5rem;font-family:var(--font-mono);color:var(--text-dim)">
-    <p>// {title} — coming soon</p>
+<BaseLayout
+  title="BMW E36 Build Journal — projekt36"
+  description="Full documentation of a BMW E36 316i Sedan transformation — M50 engine swap, wiring, suspension, paint, and interior. Eleven chapters from first fault code to final drive."
+>
+  <div style="max-width:var(--wide-w);margin:0 auto;padding:6rem 1.5rem;">
+    <h1 style="font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;margin-bottom:1rem;">Build Journal</h1>
+    <p style="font-family:var(--font-mono);font-size:0.82rem;color:var(--text-dim);margin-bottom:3rem;">// documentation in progress</p>
   </div>
 </BaseLayout>

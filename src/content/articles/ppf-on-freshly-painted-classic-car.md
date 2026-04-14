@@ -1,9 +1,10 @@
 ---
 title: "PPF on a Freshly Painted Classic Car: Is It Worth It?"
-description: "Should you apply PPF to a freshly painted classic or restored car? Complete guide covering timing, cost, DIY vs professional, and whether the investment makes sense for a project build."
+description: "Should you apply PPF to a freshly painted classic? Timing, cost, DIY vs professional, and whether it makes sense for a project build."
 pillar: body
 keywords: "ppf classic car, ppf after restoration, paint protection film restored car, ppf cost classic car"
 date: "2026-03-16"
+hero: "ppf.webp"
 ---
 
 ## TL;DR

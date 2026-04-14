@@ -1,9 +1,10 @@
 ---
 title: "BMW E36 Parts Sourcing in Europe (2026 Guide)"
-description: "The complete guide to sourcing BMW E36 parts in Europe in 2026. Best online suppliers, specialist shops, junkyards, and how to find the cheapest parts without sacrificing quality."
+description: "Best EU sources for BMW E36 parts in 2026: online suppliers, specialists, junkyards, and how to find quality without overpaying."
 pillar: reference
 keywords: "e36 parts europe, autodoc bmw parts, e36 parts suppliers, bmw e36 parts online europe"
 date: "2026-03-16"
+hero: "parts-sourcing.webp"
 ---
 
 ## TL;DR

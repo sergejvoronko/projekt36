@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://projekt36.com/sitemap-index.xml

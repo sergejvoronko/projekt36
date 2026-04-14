@@ -2,7 +2,7 @@
    BMW E36 build journal: dark amber-technical aesthetic.
 */
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,700;1,400&display=swap');
+/* Fonts loaded via <link> in BaseLayout for non-render-blocking delivery */
 
 :root {
   /* Canvas */

@@ -1,9 +1,10 @@
 ---
 title: "BMW E36 Sound Deadening Guide: From Tin Can to Quiet Cruiser"
-description: "Complete BMW E36 sound deadening guide. Where to apply, which materials to use, how much you need for a sedan, and the massive difference it makes on a base-spec 316i. EU product sourcing included."
+description: "BMW E36 sound deadening: where to apply, which materials, how much for a sedan, and EU product sourcing."
 pillar: interior
 keywords: "e36 sound deadening, bmw e36 sound insulation, e36 noise reduction diy, e36 road noise fix"
 date: "2026-03-16"
+hero: "sound-deadening.webp"
 ---
 
 ## TL;DR

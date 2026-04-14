@@ -9,6 +9,7 @@ const articles = defineCollection({
     pillar:      z.enum(['engine', 'swap', 'body', 'suspension', 'interior', 'reference']),
     keywords:    z.string().optional(),
     date:        z.string().optional(),
+    hero:        z.string().optional(),
     draft:       z.boolean().optional().default(false),
   }),
 });

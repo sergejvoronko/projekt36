@@ -1,5 +1,7 @@
 ---
 // src/layouts/BaseLayout.astro
+import CookieConsent from '../components/CookieConsent.astro';
+
 interface Props {
   title:        string;
   description?: string;
@@ -28,10 +30,12 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content={canonical} />
   <meta name="twitter:card"       content="summary_large_image" />
+  <!-- Google Fonts injected by CookieConsent.astro after user consent (GDPR/TTDSG) -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" href="/images/projekt36-mark-180.png" />
   <link rel="sitemap" href="/sitemap-index.xml" />
+  <slot name="head" />
 </head>
 <body>
   <slot name="nav">
@@ -78,7 +82,15 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
         <a href="/about">About</a>
       </nav>
     </div>
+    <div class="footer-legal">
+      <a href="/legal">Privacy &amp; Cookies</a>
+      <a href="/legal#gpsr">GPSR</a>
+      <a href="/legal#affiliate">Affiliate Policy</a>
+      <span>© {new Date().getFullYear()} projekt36.com</span>
+    </div>
   </footer>
+
+  <CookieConsent />
 </body>
 </html>
 
@@ -221,4 +233,33 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     transition: color 0.15s;
   }
   .footer-nav a:hover { color: var(--accent); }
+
+  .footer-legal {
+    max-width: var(--wide-w);
+    margin: 1.5rem auto 0;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .footer-legal a {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: color 0.15s;
+  }
+  .footer-legal a:hover { color: var(--accent); }
+  .footer-legal span {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--text-dim);
+    margin-left: auto;
+  }
+  @media (max-width: 560px) {
+    .footer-legal span { margin-left: 0; width: 100%; }
+  }
 </style>

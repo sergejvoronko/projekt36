@@ -16,12 +16,16 @@ const tools = [
 ];
 ---
 
-<BaseLayout title="BMW E36 Tools — projekt36" description="Practical calculators, checklists, and planners for BMW E36 owners.">
+<BaseLayout title="BMW E36 Tools &amp; Calculators — projekt36" description="Practical calculators, checklists, and planners for BMW E36 owners.">
   <section class="tools-hero">
-    <div class="inner">
-      <div class="hero-label"><span class="sh-host">root@e36</span><span class="sh-sep">:~#</span> ls -la tools/</div>
-      <h1 class="hero-title">BMW E36 Tools</h1>
-      <p class="hero-sub">Practical tools for fitment, swaps, retrofits, budgeting, and build planning. Built around real E36 projects.</p>
+    <div class="tools-hero-img" aria-hidden="true">
+      <img src="/images/blueprint-m52-anatomy.webp" alt="" width="1200" height="600" loading="eager" decoding="async" />
+      <div class="tools-hero-overlay"></div>
+    </div>
+    <div class="inner tools-hero-inner">
+      <div class="page-tag">PROJEKT36 · TOOLS &amp; CALCULATORS</div>
+      <h1 class="hero-title">E36 <em>Tools</em></h1>
+      <p class="hero-sub">Practical calculators, checklists, and planners built around real E36 work — fitment, swaps, retrofits, and build planning.</p>
     </div>
   </section>
 
@@ -60,13 +64,55 @@ const tools = [
 </BaseLayout>
 
 <style>
-  .tools-hero { padding: 5rem 1.5rem 3rem; background: var(--bg2); border-bottom: 1px solid var(--border); }
+  .tools-hero {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border);
+    min-height: 320px;
+    display: flex;
+    align-items: flex-end;
+  }
+  .tools-hero-img {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .tools-hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.35) saturate(0.6);
+  }
+  .tools-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(19,23,32,1) 0%, rgba(19,23,32,0.55) 60%, rgba(19,23,32,0.3) 100%);
+  }
   .inner { max-width: var(--wide-w); margin: 0 auto; }
-  .hero-label { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-dim); margin-bottom: 1rem; }
-  .sh-host { color: var(--accent); }
-  .sh-sep { color: var(--text-dim); }
-  .hero-title { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; margin-bottom: 0.75rem; }
-  .hero-sub { font-size: 1rem; color: var(--text-mid); max-width: 56ch; line-height: 1.7; }
+  .tools-hero-inner {
+    position: relative;
+    z-index: 1;
+    padding: 5rem 1.5rem 3rem;
+    width: 100%;
+  }
+  .page-tag {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--accent);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    line-height: 1.05;
+  }
+  .hero-title em { font-style: italic; font-weight: 400; color: var(--accent); }
+  .hero-sub { font-size: 0.95rem; color: var(--text-mid); max-width: 56ch; line-height: 1.75; }
 
   .tools-section { padding: 3rem 1.5rem 5rem; }
   .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }

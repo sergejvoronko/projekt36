@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import SubscribeBox from '../../components/SubscribeBox.astro';
 
 const articles = await getCollection('articles');
 
@@ -26,7 +27,7 @@ const pillarImages: Record<string, string> = {
 ---
 
 <BaseLayout
-  title="BMW E36 Guides — projekt36"
+  title="BMW E36 Technical Guides — projekt36"
   description="Technical guides for BMW E36 owners. Engine swaps, rust repair, cooling, suspension, sound deadening, and more."
 >
 <div class="guides-page">
@@ -72,6 +73,10 @@ const pillarImages: Record<string, string> = {
       </div>
     </section>
   ))}
+
+  <div style="margin-top: 1rem;">
+    <SubscribeBox compact={true} />
+  </div>
 
 </div>
 </BaseLayout>

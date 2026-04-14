@@ -1,11 +1,31 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+const siteBase = 'https://projekt36.com';
+const breadcrumbLd = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home',  item: siteBase },
+    { '@type': 'ListItem', position: 2, name: 'Tools', item: `${siteBase}/tools` },
+    { '@type': 'ListItem', position: 3, name: 'Offset & Spacer Tool', item: `${siteBase}/tools/offset-spacer` },
+  ],
+};
+const appLd = {
+  '@context': 'https://schema.org', '@type': 'WebApplication',
+  name: 'Offset & Spacer Tool',
+  description: 'See how a spacer changes your effective ET and where the wheel sits relative to the hub.',
+  url: `${siteBase}/tools/offset-spacer`,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Any',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+};
 ---
 
 <BaseLayout
   title="Offset & Spacer Tool — projekt36"
   description="See how a spacer changes your effective ET and where the wheel sits relative to the hub."
 >
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} slot="head" />
+<script type="application/ld+json" set:html={JSON.stringify(appLd)} slot="head" />
 <div class="tool-page">
   <div class="breadcrumb">
     <a href="/tools">Tools</a>
@@ -73,6 +93,26 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </ul>
       </div>
     </aside>
+  </div>
+
+  <div class="tool-explainer">
+    <h2>Understanding offset and spacers</h2>
+    <p>
+      Wheel offset (ET) is the distance in millimetres from the wheel's centreline to its mounting face.
+      A higher ET pushes the wheel inward; a lower ET moves it outward. On a BMW E36, the stock front
+      hubs run ET41 (sedan/coupe) with a 5×120 bolt pattern. Rear ET is 20 on most variants.
+    </p>
+    <p>
+      A spacer reduces the effective ET by exactly its thickness. Fitting a 20 mm spacer on a front
+      wheel with ET41 gives an effective ET of 21 — 20 mm more poke than stock. This also increases
+      the scrub radius, which adds steering feedback (and load) through the hub and wheel bearing.
+    </p>
+    <p>
+      The outer limit is your arch and fender. Most E36 sedans can run 20–25 mm rear spacers before
+      rubbing at full compression. On the front, arch clearance is tighter due to the strut; 10–15 mm
+      is usually the practical maximum before you need rolled fenders. Always use hub-centric spacers
+      and the correct seat type (ball seat for most E36 aftermarket wheels, conical for OEM).
+    </p>
   </div>
 </div>
 </BaseLayout>
@@ -289,4 +329,24 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   .tool-links { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
   .tool-links a { font-size: 0.82rem; color: var(--accent); transition: color 0.15s; }
   .tool-links a:hover { color: var(--text); }
+
+  .tool-explainer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+  .tool-explainer h2 {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.25rem;
+  }
+  .tool-explainer p { font-size: 0.88rem; color: var(--text-mid); line-height: 1.75; }
+  .tool-explainer strong { color: var(--text); font-weight: 600; }
 </style>
