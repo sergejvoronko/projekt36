@@ -4,7 +4,7 @@ description: "Complete technical comparison of the BMW M50, M50TU, and M52 engin
 pillar: engine
 keywords: "m50 vs m52, m50tu differences, m50 vs m50tu, bmw m50 engine guide"
 date: "2026-03-16"
-hero: "engine-compare.webp"
+hero: "engine-compare-v2.webp"
 ---
 
 ## TL;DR
