@@ -252,32 +252,50 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="section-inner">
       <div class="section-tag">Diagnostics</div>
       <h2 class="section-title">TALK TO <em class="accent-em">your E36</em></h2>
-      <p class="section-sub">Read fault codes, log live data, and understand what the car is telling you.</p>
+      <p class="section-sub">Pre-facelift E36s don't speak standard OBD2. They use BMW's proprietary ADS protocol through the round 20-pin connector. Here's what you actually need to read codes, monitor sensors, and verify your swap.</p>
       <div class="diag-grid">
         <div class="diag-card">
           <div class="diag-icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M6 8h.01M9 8h6"/></svg>
           </div>
           <h3 class="diag-title">INPA / EDIABAS</h3>
-          <p class="diag-desc">Native BMW diagnostics. Read and clear fault codes, access live sensor data, run actuator tests.</p>
+          <div class="diag-type">SOFTWARE</div>
+          <p class="diag-desc">BMW's own dealer diagnostic software. Reads every sensor, every fault code, every live parameter the DME knows. Essential for verifying the M50 swap — confirming O2 readings, idle control, VANOS timing (if TU), and cooling fan triggers.</p>
           <a href="/guides/e36-inpa-setup-guide" class="diag-link">Setup guide →</a>
         </div>
         <div class="diag-card">
           <div class="diag-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/><circle cx="12" cy="12" r="4"/></svg>
           </div>
-          <h3 class="diag-title">Fault code log</h3>
-          <p class="diag-desc">Document active and resolved faults across your build. Track patterns over time.</p>
-          <a href="/tools" class="diag-link">Explore tools →</a>
+          <h3 class="diag-title">ADS Serial Interface</h3>
+          <div class="diag-type">HARDWARE</div>
+          <p class="diag-desc">Not a K+DCAN cable — those won't work on pre-facelift OBD1 cars. You need a true ADS serial interface that connects to the round 20-pin diagnostic connector and speaks BMW's DS2 protocol via RS232.</p>
+          <a href="/guides/e36-obd1-diagnostic-setup" class="diag-link">Which interface to buy →</a>
         </div>
         <div class="diag-card">
           <div class="diag-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M8 10h8M8 7h3"/></svg>
           </div>
-          <h3 class="diag-title">OBD-II via ELM327</h3>
-          <p class="diag-desc">Budget option with Torque or OBD Fusion. Limited vs INPA but works for basic fault reading.</p>
-          <a href="/guides/e36-obd1-diagnostic-setup" class="diag-link">Comparison →</a>
+          <h3 class="diag-title">Old ThinkPad + RS232</h3>
+          <div class="diag-type">SETUP</div>
+          <p class="diag-desc">A used ThinkPad T60/T61 with native serial port running Windows XP is the most reliable INPA setup. No USB-serial adapter headaches. Available on bazos.sk for €20–40.</p>
+          <a href="/guides/e36-inpa-setup-guide" class="diag-link">Full setup guide →</a>
         </div>
+      </div>
+
+      <div class="diag-terminal">
+        <div class="dt-line"><span class="dt-prompt">&gt;</span> <span class="dt-input">your car: E36 sedan, Jan 1994, pre-facelift</span></div>
+        <div class="dt-line"><span class="dt-key">Protocol:</span> <span class="dt-hl">ADS only</span> <span class="dt-comment">(no K-line on this chassis)</span></div>
+        <div class="dt-line"><span class="dt-key">Connector:</span> <span class="dt-hl">20-pin round</span> <span class="dt-comment">(under hood, left side)</span></div>
+        <div class="dt-line"><span class="dt-key">DME after swap:</span> <span class="dt-hl">Bosch M3.1 or M3.3</span> <span class="dt-comment">(M50 NV)</span></div>
+        <div class="dt-line"><span class="dt-key">Interface needed:</span> <span class="dt-hl dt-warn">ADS serial → NOT K+DCAN USB</span></div>
+        <div class="dt-line"><span class="dt-key">Software:</span> <span class="dt-hl">INPA 5.0.2 + EDIABAS 7.3.0</span></div>
+        <div class="dt-spacer"></div>
+        <div class="dt-line dt-dim"><span class="dt-comment">Stomp test (no laptop): Turn key to pos. 2 → floor gas 5x in 5 sec → CEL flashes codes</span></div>
+      </div>
+
+      <div class="section-more">
+        <a href="/guides/e36-obd1-diagnostic-setup" class="btn-outline">Read full diagnostic guide →</a>
       </div>
     </div>
   </section>
@@ -954,6 +972,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     line-height: 1.6;
     margin-bottom: 1.25rem;
   }
+  .diag-type {
+    font-family: var(--font-mono);
+    font-size: 0.58rem;
+    color: var(--accent);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
   .diag-link {
     font-family: var(--font-mono);
     font-size: 0.72rem;
@@ -962,6 +988,26 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     transition: opacity 0.15s;
   }
   .diag-link:hover { opacity: 0.7; }
+
+  /* terminal readout */
+  .diag-terminal {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    padding: 1.5rem 1.75rem;
+    margin-top: 1.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    line-height: 2;
+  }
+  .dt-line { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: baseline; }
+  .dt-prompt { color: var(--accent); user-select: none; }
+  .dt-input  { color: var(--text); }
+  .dt-key    { color: var(--text-mid); }
+  .dt-hl     { color: var(--text); font-weight: 600; }
+  .dt-warn   { color: var(--accent); }
+  .dt-comment{ color: var(--text-dim); }
+  .dt-dim    { opacity: 0.6; }
+  .dt-spacer { height: 0.75rem; }
 
   /* ── SCHEMAS ── */
   .schema-list {
