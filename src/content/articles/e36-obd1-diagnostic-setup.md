@@ -4,7 +4,7 @@ description: "Setting up OBD1 diagnostics on the BMW E36: hardware, INPA/EDIABAS
 pillar: reference
 keywords: "e36 obd1 diagnostic, bmw e36 inpa setup, e36 diagnostic software, bmw obd1 scanner e36"
 date: "2026-03-16"
-hero: "obd1-diag.webp"
+hero: "obd1-diag-v2.webp"
 ---
 
 ## Why This Guide Exists
