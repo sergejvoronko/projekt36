@@ -947,9 +947,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   /* ── DIAGNOSTICS ── */
   .diag-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
   }
+  @media (max-width: 800px) { .diag-grid { grid-template-columns: 1fr; } }
   .diag-card {
     background: var(--bg2);
     border: 1px solid var(--border);
