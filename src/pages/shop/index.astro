@@ -23,9 +23,9 @@ interface PrintifyProduct {
   visible: boolean;
 }
 
-const runtime = (Astro.locals as any).runtime;
-const token   = runtime?.env?.PRINTIFY_API_TOKEN   ?? import.meta.env.PRINTIFY_API_TOKEN;
-const shopId  = runtime?.env?.PRINTIFY_SHOP_ID      ?? import.meta.env.PRINTIFY_SHOP_ID;
+const { env } = Astro.locals.runtime;
+const token   = env?.PRINTIFY_API_TOKEN;
+const shopId  = env?.PRINTIFY_SHOP_ID;
 
 let products: PrintifyProduct[] = [];
 let fetchError = '';

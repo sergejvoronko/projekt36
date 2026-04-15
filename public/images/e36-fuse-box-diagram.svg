@@ -24,9 +24,9 @@
 <!-- upper fuse area border -->
 <rect x="84" y="30" width="290" height="168" rx="8" fill="none" stroke="#2f3a4d" stroke-width="1"/>
 
-<!-- grommet -->
-<circle cx="415" cy="145" r="24" fill="#0f1218" stroke="#4a5568" stroke-width="1.5"/>
-<circle cx="415" cy="145" r="8"  fill="none"   stroke="#4a5568" stroke-width="1"/>
+<!-- grommet — right of fuse rows, vertically centred in fuse border -->
+<circle cx="441" cy="112" r="24" fill="#0f1218" stroke="#4a5568" stroke-width="1.5"/>
+<circle cx="441" cy="112" r="8"  fill="none"   stroke="#4a5568" stroke-width="1"/>
 
 <!-- ══════════════════════════════════════════
      LEFT STRIP — F31-F46 (unknown, gray)
@@ -84,27 +84,30 @@
 
 <!-- ══════════════════════════════════════════
      LEFT RELAY AREA — R4-R6, R10-R12
+     3 relays × 118px + 15px gaps, filling x=82..496
 ═══════════════════════════════════════════ -->
-<!-- R4  --><rect x="88"  y="200" width="87" height="80" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="131" y="240">R4</text>
-<!-- R5  --><rect x="190" y="200" width="87" height="80" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="233" y="240">R5</text>
-<!-- R6  --><rect x="292" y="200" width="87" height="80" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="335" y="240">R6</text>
-<!-- R10 --><rect x="88"  y="298" width="87" height="80" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="131" y="338">R10</text>
-<!-- R11 --><rect x="190" y="298" width="87" height="80" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="233" y="338">R11</text>
-<!-- R12 --><rect x="292" y="298" width="87" height="80" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="335" y="338">R12</text>
+<!-- R4  --><rect x="97"  y="200" width="118" height="80" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="156" y="240">R4</text>
+<!-- R5  --><rect x="230" y="200" width="118" height="80" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="289" y="240">R5</text>
+<!-- R6  --><rect x="363" y="200" width="118" height="80" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="422" y="240">R6</text>
+<!-- R10 --><rect x="97"  y="298" width="118" height="80" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="156" y="338">R10</text>
+<!-- R11 --><rect x="230" y="298" width="118" height="80" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="289" y="338">R11</text>
+<!-- R12 --><rect x="363" y="298" width="118" height="80" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="422" y="338">R12</text>
 
 <!-- ══════════════════════════════════════════
      RIGHT SECTION — R1-R3, R7-R9, R13-R15
-     col x: 518, 596, 674  w=64 h=64  gap=14
+     section x=508..737 (229px), 3 cols × 64px h=80 (matches left)
+     col x: 520, 590, 660  row y: 93, 181, 269  gap=8
+     centers x: 552, 622, 692  centers y: 133, 221, 309
 ═══════════════════════════════════════════ -->
-<!-- R1  --><rect x="518" y="93"  width="64" height="64" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="550" y="125">R1</text>
-<!-- R2  --><rect x="596" y="93"  width="64" height="64" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="628" y="125">R2</text>
-<!-- R3  --><rect x="674" y="93"  width="64" height="64" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="706" y="125">R3</text>
-<!-- R7  --><rect x="518" y="172" width="64" height="64" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="550" y="204">R7</text>
-<!-- R8  --><rect x="596" y="172" width="64" height="64" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="628" y="204">R8</text>
-<!-- R9  --><rect x="674" y="172" width="64" height="64" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="706" y="204">R9</text>
-<!-- R13 --><rect x="518" y="252" width="64" height="64" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="550" y="284">R13</text>
-<!-- R14 --><rect x="596" y="252" width="64" height="64" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="628" y="284">R14</text>
-<!-- R15 --><rect x="674" y="252" width="64" height="64" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="706" y="284">R15</text>
+<!-- R1  --><rect x="520" y="93"  width="64" height="80" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="552" y="133">R1</text>
+<!-- R2  --><rect x="590" y="93"  width="64" height="80" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="622" y="133">R2</text>
+<!-- R3  --><rect x="660" y="93"  width="64" height="80" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="692" y="133">R3</text>
+<!-- R7  --><rect x="520" y="181" width="64" height="80" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="552" y="221">R7</text>
+<!-- R8  --><rect x="590" y="181" width="64" height="80" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="622" y="221">R8</text>
+<!-- R9  --><rect x="660" y="181" width="64" height="80" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="692" y="221">R9</text>
+<!-- R13 --><rect x="520" y="269" width="64" height="80" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="552" y="309">R13</text>
+<!-- R14 --><rect x="590" y="269" width="64" height="80" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="622" y="309">R14</text>
+<!-- R15 --><rect x="660" y="269" width="64" height="80" rx="5" fill="#1f2838" stroke="#3a4a5a" stroke-width="1"/><text class="rl" x="692" y="309">R15</text>
 
 <!-- ══════════════════════════════════════════
      ROW 21-30 (bottom right)  y=362 h=52
@@ -127,7 +130,7 @@
 
 <!-- section labels -->
 <text x="104" y="22" style="font-size:8px;fill:#d4952a;font-family:monospace">FUSES 1–10</text>
-<text x="104" y="207" style="font-size:8px;fill:#d4952a;font-family:monospace">RELAYS</text>
+<text x="104" y="196" style="font-size:8px;fill:#d4952a;font-family:monospace">RELAYS</text>
 <text x="519" y="85" style="font-size:8px;fill:#d4952a;font-family:monospace">RELAYS</text>
 <text x="519" y="352" style="font-size:8px;fill:#d4952a;font-family:monospace">FUSES 21–30</text>
 <text x="17" y="70" style="font-size:8px;fill:#d4952a;font-family:monospace">31–46</text>

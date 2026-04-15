@@ -11,10 +11,10 @@ export const GET: APIRoute = async ({ params, locals, redirect }) => {
   const { id } = params;
   if (!id) return redirect('/shop', 302);
 
-  const runtime = (locals as any).runtime;
-  const token  = runtime?.env?.PRINTIFY_API_TOKEN  ?? import.meta.env.PRINTIFY_API_TOKEN;
-  const shopId = runtime?.env?.PRINTIFY_SHOP_ID    ?? import.meta.env.PRINTIFY_SHOP_ID;
-  const storeUrl = runtime?.env?.PRINTIFY_STORE_URL ?? import.meta.env.PRINTIFY_STORE_URL ?? '';
+  const { env } = locals.runtime;
+  const token    = env?.PRINTIFY_API_TOKEN;
+  const shopId   = env?.PRINTIFY_SHOP_ID;
+  const storeUrl = env?.PRINTIFY_STORE_URL ?? '';
 
   if (!token || !shopId) return redirect('/shop', 302);
 

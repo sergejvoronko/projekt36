@@ -1,7 +1,7 @@
 {
+	"name": "projekt36",
 	"compatibility_date": "2026-04-14",
-	"compatibility_flags": ["global_fetch_strictly_public"],
-	"name": "projekt36-astro",
+	"compatibility_flags": ["nodejs_compat"],
 	"main": "@astrojs/cloudflare/entrypoints/server",
 	"assets": {
 		"directory": "./dist",
@@ -10,4 +10,9 @@
 	"observability": {
 		"enabled": true
 	}
+	// Secrets live in Cloudflare dashboard:
+	// Pages → projekt36 → Settings → Environment variables → Production
+	//   PRINTIFY_API_TOKEN  (type: Secret)
+	//   PRINTIFY_SHOP_ID    (type: Secret)
+	//   PRINTIFY_STORE_URL  (type: Text, optional)
 }
