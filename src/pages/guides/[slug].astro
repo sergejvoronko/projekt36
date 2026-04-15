@@ -206,6 +206,7 @@ const jsonLd = {
     grid-template-columns: minmax(0, 1fr) 220px;
     gap: 3.5rem;
     align-items: start;
+    overflow-x: hidden;
   }
 
   /* ── Hero image ─────────────────────────────────────────── */
@@ -304,6 +305,10 @@ const jsonLd = {
   .article-body {
     line-height: 1.85;
     font-size: 1.02rem;
+    min-width: 0;
+    overflow-x: hidden;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 
   /* ── TL;DR callout ──────────────────────────────────────── */
@@ -379,6 +384,9 @@ const jsonLd = {
   .article-body :global(li) { margin-bottom: 0.45rem; line-height: 1.7; }
 
   .article-body :global(table) {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     width: 100%;
     border-collapse: collapse;
     margin: 1.75rem 0;
@@ -393,6 +401,7 @@ const jsonLd = {
     padding: 0.6rem 0.9rem;
     border: 1px solid var(--border);
     letter-spacing: 0.04em;
+    white-space: nowrap;
   }
   .article-body :global(td) {
     padding: 0.55rem 0.9rem;
@@ -400,6 +409,7 @@ const jsonLd = {
     color: var(--text-mid);
     vertical-align: top;
     line-height: 1.55;
+    min-width: 80px;
   }
   .article-body :global(tr:nth-child(even) td) { background: var(--bg2); }
 

@@ -529,6 +529,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
   @media (max-width: 768px) { .hero-hud { display: none; } }
 
+  @media (max-width: 600px) {
+    /* hide decorative breadcrumb text — wastes vertical space on small screens */
+    .hero-label { display: none; }
+    /* darken top of overlay so blueprint image text doesn't bleed through */
+    .hero-overlay {
+      background: linear-gradient(to top, rgba(11,14,18,1) 0%, rgba(11,14,18,0.82) 40%, rgba(11,14,18,0.72) 100%);
+    }
+    /* reduce blueprint opacity further on mobile */
+    .hero-blueprint { opacity: 0.12; }
+  }
+
   .hero-inner {
     position: relative;
     z-index: 1;
