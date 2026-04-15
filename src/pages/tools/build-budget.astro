@@ -212,15 +212,15 @@ const appLd = {
   .result-box { background: var(--bg2); border: 1px solid var(--border); border-left: 3px solid var(--accent); padding: 1.5rem; min-height: 120px; }
   .result-box h4 { font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; }
   .result-placeholder { color: var(--text-dim); font-size: 0.85rem; }
-  .result-row { display: flex; align-items: center; gap: 0.75rem; padding: 0.4rem 0; border-bottom: 1px solid var(--border); }
-  .result-label { font-size: 0.82rem; color: var(--text-mid); min-width: 130px; }
-  .result-bar-wrap { flex: 1; height: 4px; background: var(--border); min-width: 40px; }
-  .result-bar { height: 100%; background: var(--accent); opacity: 0.6; transition: width 0.3s; }
-  .result-value { font-family: var(--font-mono); font-size: 0.85rem; color: var(--text); min-width: 90px; text-align: right; flex-shrink: 0; }
-  .result-pct { color: var(--text-dim); font-size: 0.75rem; }
-  .result-total { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 0 0; margin-top: 0.5rem; border-top: 1px solid var(--border-mid); }
-  .total-val { font-size: 1rem; color: var(--accent); }
-  .result-note { margin-top: 1rem; font-size: 0.8rem; color: var(--text-dim); line-height: 1.5; }
+  .result-box :global(.result-row) { display: flex; align-items: center; gap: 0.75rem; padding: 0.4rem 0; border-bottom: 1px solid var(--border); }
+  .result-box :global(.result-label) { font-size: 0.82rem; color: var(--text-mid); min-width: 130px; }
+  .result-box :global(.result-bar-wrap) { flex: 1; height: 4px; background: var(--border); min-width: 40px; }
+  .result-box :global(.result-bar) { height: 100%; background: var(--accent); opacity: 0.6; transition: width 0.3s; }
+  .result-box :global(.result-value) { font-family: var(--font-mono); font-size: 0.85rem; color: var(--text); min-width: 90px; text-align: right; flex-shrink: 0; }
+  .result-box :global(.result-pct) { color: var(--text-dim); font-size: 0.75rem; }
+  .result-box :global(.result-total) { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 0 0; margin-top: 0.5rem; border-top: 1px solid var(--border-mid); }
+  .result-box :global(.total-val) { font-size: 1rem; color: var(--accent); }
+  .result-box :global(.result-note) { margin-top: 1rem; font-size: 0.8rem; color: var(--text-dim); line-height: 1.5; }
 
   .sidebar-card { background: var(--bg2); border: 1px solid var(--border); padding: 1.25rem; margin-bottom: 1rem; }
   .sidebar-card h4 { font-family: var(--font-mono); font-size: 0.68rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.9rem; }

@@ -216,13 +216,14 @@ const appLd = {
   .result-box { background: var(--bg2); border: 1px solid var(--border); border-left: 3px solid var(--accent); padding: 1.5rem; min-height: 120px; }
   .result-box h4 { font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; }
   .result-placeholder { color: var(--text-dim); font-size: 0.85rem; }
-  .result-row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.45rem 0; border-bottom: 1px solid var(--border); gap: 1rem; }
-  .result-row:last-of-type { border-bottom: none; }
-  .result-label { font-size: 0.85rem; color: var(--text-mid); }
-  .result-value { font-family: var(--font-mono); font-size: 0.9rem; color: var(--text); flex-shrink: 0; }
-  .result-value.warn { color: var(--accent); }
-  .result-note { margin-top: 1rem; font-size: 0.8rem; color: var(--text-dim); line-height: 1.5; }
-  .warn-note { color: var(--accent); }
+  /* These classes are injected via JS so need :global() to bypass Astro scoping */
+  .result-box :global(.result-row) { display: flex; justify-content: space-between; align-items: baseline; padding: 0.45rem 0; border-bottom: 1px solid var(--border); gap: 1rem; }
+  .result-box :global(.result-row:last-of-type) { border-bottom: none; }
+  .result-box :global(.result-label) { font-size: 0.85rem; color: var(--text-mid); }
+  .result-box :global(.result-value) { font-family: var(--font-mono); font-size: 0.9rem; color: var(--text); flex-shrink: 0; }
+  .result-box :global(.result-value.warn) { color: var(--accent); }
+  .result-box :global(.result-note) { margin-top: 1rem; font-size: 0.8rem; color: var(--text-dim); line-height: 1.5; }
+  .result-box :global(.warn-note) { color: var(--accent); }
 
   .sidebar-card { background: var(--bg2); border: 1px solid var(--border); padding: 1.25rem; margin-bottom: 1rem; }
   .sidebar-card h4 { font-family: var(--font-mono); font-size: 0.68rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.9rem; }

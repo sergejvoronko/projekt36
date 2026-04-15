@@ -419,11 +419,11 @@ const appLd = {
     font-size: 0.75rem;
     line-height: 1.9;
   }
-  .sc-col { }
-  .sc-label { font-size: 0.6rem; letter-spacing: 0.1em; color: var(--text-dim); margin-bottom: 0.25rem; }
-  .sc-arrow { color: var(--accent); font-size: 1.1rem; text-align: center; }
-  .sc-stock { color: var(--text-dim); }
-  .sc-yours { color: var(--text); }
+  .stock-compare :global(.sc-col) { }
+  .stock-compare :global(.sc-label) { font-size: 0.6rem; letter-spacing: 0.1em; color: var(--text-dim); margin-bottom: 0.25rem; }
+  .stock-compare :global(.sc-arrow) { color: var(--accent); font-size: 1.1rem; text-align: center; }
+  .stock-compare :global(.sc-stock) { color: var(--text-dim); }
+  .stock-compare :global(.sc-yours) { color: var(--text); }
 
   /* Measurements */
   .measurements {
@@ -435,10 +435,10 @@ const appLd = {
     grid-template-columns: 1fr 1fr;
     gap: 0 1.5rem;
   }
-  .m-label { color: var(--text-dim); }
-  .m-val { color: var(--text); }
-  .m-warn { color: var(--amber); }
-  .m-good { color: var(--green); }
+  .measurements :global(.m-label) { color: var(--text-dim); }
+  .measurements :global(.m-val) { color: var(--text); }
+  .measurements :global(.m-warn) { color: var(--amber); }
+  .measurements :global(.m-good) { color: var(--green); }
 
   /* Note block */
   .note-block {
