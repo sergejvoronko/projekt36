@@ -538,6 +538,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
     /* reduce blueprint opacity further on mobile */
     .hero-blueprint { opacity: 0.12; }
+    /* btn-outline on hero: add solid background so car illustration doesn't bleed through */
+    .hero-ctas .btn-outline {
+      background: rgba(19,23,32,0.85);
+      border-color: var(--border-mid);
+    }
+    .hero-ctas .btn-outline:hover {
+      background: rgba(19,23,32,0.95);
+      border-color: var(--accent);
+    }
   }
 
   .hero-inner {

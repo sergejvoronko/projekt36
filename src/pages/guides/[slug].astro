@@ -209,6 +209,12 @@ const jsonLd = {
     overflow-x: hidden;
   }
 
+  /* grid child must have min-width:0 to respect minmax(0,1fr) */
+  .article-main {
+    min-width: 0;
+    overflow-x: hidden;
+  }
+
   /* ── Hero image ─────────────────────────────────────────── */
   .article-hero {
     position: relative;
