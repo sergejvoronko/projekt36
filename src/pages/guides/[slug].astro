@@ -166,8 +166,15 @@ const jsonLd = {
       activeLink?.classList.remove('active');
       activeLink = link;
       link?.classList.add('active');
-      // Scroll TOC link into view within sidebar
-      link?.scrollIntoView({ block: 'nearest' });
+      // Scroll only the TOC sidebar, never the main page
+      if (link && sidebar) {
+        const linkOffset = link.offsetTop;
+        const sidebarHeight = sidebar.clientHeight;
+        const scrollTop = sidebar.scrollTop;
+        if (linkOffset < scrollTop || linkOffset > scrollTop + sidebarHeight - 48) {
+          sidebar.scrollTop = linkOffset - sidebarHeight / 2;
+        }
+      }
     };
 
     const observer = new IntersectionObserver(entries => {
