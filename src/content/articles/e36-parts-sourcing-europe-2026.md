@@ -227,4 +227,4 @@ These are the parts that kill engines when they fail. Buy quality brands (Graf w
 
 *This guide is part of the Projekt 36 Reference series. All prices reflect 2026 EU market conditions and include our real purchasing experience from Košice, Slovakia.*
 
-*→ Related: [M43 to M50 Swap Parts List](#) | [E36 Maintenance Schedule](#) | [OEM vs Aftermarket Guide](#)*
+*→ Related: [M43 to M50 Swap Parts List](/guides/m43-to-m50-complete-parts-list) | [M50 Common Failure Points](/guides/m50-common-failure-points)*

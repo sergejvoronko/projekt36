@@ -4,2171 +4,713 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex, nofollow" />
-<title>BMW E36 Wiring Schemas — projekt36.com</title>
-<meta name="description" content="Interactive BMW E36 wiring diagrams: starting, charging, cooling fan, EWS, OBD, wipers, central locking, mirrors, seat heaters. Simplified and detailed views." />
+<title>BMW E36 Electrical Troubleshooting Manual — projekt36.com</title>
+<meta name="description" content="BMW E36 ETM 1998 — complete electrical schematics: engine management, fuse charts, body electronics, lighting, climate, and connector views." />
 <link rel="canonical" href="https://projekt36.com/schemas/e36-wiring.html" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#131720;--bg2:#181d28;--bg3:#1d2330;--bg4:#242b3a;
-  --t1:#ecebe6;--t2:#b8b5ae;--t3:#84817a;--t4:#58564f;
-  --acc:#d4952a;--acc2:#e8b04a;
-  --red:#e85454;--blue:#5488cc;--green:#6abf69;--purple:#a878d0;
-  --orange:#ee8833;--yellow:#cccc33;
-  --bdr:rgba(255,255,255,.06);--bdra:rgba(212,149,42,.25);
+:root {
+  --bg:  #131720; --bg2: #181d28; --bg3: #1d2330; --bg4: #242b3a;
+  --t1:  #ecebe6; --t2:  #b8b5ae; --t3:  #84817a; --t4:  #58564f;
+  --acc: #d4952a; --acc2: #e8b04a; --acc-dim: rgba(212,149,42,.08);
+  --bdr: rgba(255,255,255,.06); --bdra: rgba(212,149,42,.25);
+  --red: #e85454; --green: #6abf69;
+  --sidebar-w: 280px;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--t1);font-family:'IBM Plex Sans',sans-serif;line-height:1.6}
-.wrap{max-width:1400px;margin:0 auto;padding:1.5rem}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body { background: var(--bg); color: var(--t1); font-family: 'IBM Plex Sans', sans-serif; display: flex; flex-direction: column; }
 
-/* Site nav bar */
-.site-nav-bar{
-  position:sticky;top:0;z-index:200;
-  background:rgba(11,14,18,0.92);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--bdr);
+/* ── Site nav ── */
+.site-nav {
+  position: sticky; top: 0; z-index: 200;
+  background: rgba(11,14,18,.94); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--bdr); flex-shrink: 0;
 }
-.site-nav-inner{
-  max-width:1400px;margin:0 auto;
-  padding:0 1.5rem;height:52px;
-  display:flex;align-items:center;gap:2rem;
+.site-nav-inner {
+  max-width: 1600px; margin: 0 auto; padding: 0 1.5rem;
+  height: 52px; display: flex; align-items: center; gap: 1.5rem;
 }
-.site-nav-back{
-  display:flex;align-items:center;gap:0.5rem;
-  font-family:'IBM Plex Mono',monospace;font-size:0.72rem;
-  color:var(--t3);text-decoration:none;letter-spacing:0.06em;
-  transition:color .15s;flex-shrink:0;
+.nav-back {
+  display: flex; align-items: center; gap: .5rem;
+  font-family: 'IBM Plex Mono', monospace; font-size: .72rem;
+  color: var(--t3); text-decoration: none; letter-spacing: .06em;
+  transition: color .15s; flex-shrink: 0;
 }
-.site-nav-back:hover{color:var(--acc)}
-.site-nav-back svg{opacity:.6}
-.site-nav-logo{
-  display:flex;align-items:center;
-  text-decoration:none;
+.nav-back:hover { color: var(--acc); }
+.nav-back svg { opacity: .6; }
+.nav-logo { display: flex; align-items: center; text-decoration: none; }
+.nav-logo img { height: 28px; width: auto; display: block; }
+.nav-links { display: flex; gap: 1.5rem; margin-left: auto; }
+.nav-links a {
+  font-family: 'IBM Plex Mono', monospace; font-size: .72rem;
+  color: var(--t3); text-decoration: none; letter-spacing: .06em; transition: color .15s;
 }
-.site-nav-logo img{height:30px;width:auto;display:block}
-.site-nav-links{
-  display:flex;gap:1.5rem;margin-left:auto;
-}
-.site-nav-links a{
-  font-family:'IBM Plex Mono',monospace;font-size:0.72rem;
-  color:var(--t3);text-decoration:none;letter-spacing:0.06em;
-  transition:color .15s;
-}
-.site-nav-links a:hover{color:var(--t1)}
-.site-nav-links a.current{color:var(--acc)}
-@media(max-width:600px){
-  .site-nav-links{display:none}
-  .site-nav-back span{display:none}
-}
+.nav-links a:hover { color: var(--t1); }
+.nav-links a.cur { color: var(--acc); }
+@media (max-width:640px) { .nav-links { display: none; } .nav-back span { display: none; } }
 
-/* Header */
-.page-header{padding:2rem 0 1.5rem;border-bottom:1px solid var(--bdr);margin-bottom:2rem}
-.page-header h1{font-size:1.8rem;font-weight:700;margin-bottom:.3rem}
-.page-header p{color:var(--t3);font-size:.9rem}
-.mono{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--acc)}
-
-/* Schema navigation */
-.schema-nav{display:flex;gap:.5rem;margin-bottom:2rem;flex-wrap:wrap}
-.schema-nav button{
-  padding:.6rem 1.2rem;background:var(--bg3);border:1px solid var(--bdr);
-  color:var(--t3);font-family:'IBM Plex Mono',monospace;font-size:.75rem;
-  letter-spacing:.06em;cursor:pointer;border-radius:3px;transition:all .2s;
+/* ── Page header ── */
+.page-hd {
+  flex-shrink: 0; padding: 1.25rem 1.5rem 1rem;
+  border-bottom: 1px solid var(--bdr);
+  display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
 }
-.schema-nav button:hover{border-color:var(--acc);color:var(--t2)}
-.schema-nav button.active{background:rgba(212,149,42,.08);border-color:var(--acc);color:var(--acc)}
-
-/* Schema container */
-.schema-section{display:none}
-.schema-section.active{display:block}
-
-/* Schema header with toggle */
-.schema-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.5rem;gap:1rem;flex-wrap:wrap}
-.schema-head h2{font-size:1.3rem;font-weight:600}
-.schema-head h2 span{color:var(--acc);font-weight:400}
-.schema-meta{color:var(--t3);font-size:.85rem;margin-top:.25rem}
-
-/* Detail toggle button */
-.toggle-wrap{display:flex;gap:.5rem;align-items:center}
-.toggle-btn{
-  padding:.5rem 1.2rem;border:1px solid var(--bdr);background:var(--bg3);
-  color:var(--t3);font-family:'IBM Plex Mono',monospace;font-size:.72rem;
-  letter-spacing:.06em;cursor:pointer;border-radius:3px;transition:all .25s;
-  display:flex;align-items:center;gap:.5rem;
+.page-hd-text {}
+.page-hd-tag {
+  font-family: 'IBM Plex Mono', monospace; font-size: .65rem;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--acc);
+  margin-bottom: .3rem;
 }
-.toggle-btn:hover{border-color:var(--t3);color:var(--t2)}
-.toggle-btn.active{background:rgba(212,149,42,.1);border-color:var(--acc);color:var(--acc)}
-.toggle-btn .dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+.page-hd h1 { font-size: 1.25rem; font-weight: 700; line-height: 1.2; }
+.page-hd-sub { font-size: .82rem; color: var(--t3); margin-top: .2rem; }
+.page-hd-meta { font-family: 'IBM Plex Mono', monospace; font-size: .65rem; color: var(--t4); text-align: right; flex-shrink: 0; }
 
-/* SVG container */
-.svg-frame{
-  background:var(--bg2);border:1px solid var(--bdr);border-radius:3px;
-  padding:1rem;overflow-x:auto;position:relative;
-  transition:opacity .3s;
+/* ── Category tabs ── */
+.cat-bar {
+  flex-shrink: 0; display: flex; gap: 0; overflow-x: auto;
+  border-bottom: 1px solid var(--bdr); background: var(--bg2);
 }
-.svg-frame svg{width:100%;height:auto;display:block}
+.cat-bar::-webkit-scrollbar { height: 0; }
+.cat-btn {
+  padding: .55rem 1.1rem; border: none; border-bottom: 2px solid transparent;
+  background: transparent; color: var(--t3); cursor: pointer;
+  font-family: 'IBM Plex Mono', monospace; font-size: .7rem; letter-spacing: .07em;
+  text-transform: uppercase; white-space: nowrap; transition: color .15s, border-color .15s;
+}
+.cat-btn:hover { color: var(--t2); }
+.cat-btn.active { color: var(--acc); border-bottom-color: var(--acc); }
 
-/* Legend bar */
-.legend-bar{
-  display:flex;gap:1rem;flex-wrap:wrap;padding:.75rem 1rem;
-  background:var(--bg3);border:1px solid var(--bdr);border-radius:3px;
-  margin-bottom:1rem;align-items:center;
-}
-.legend-item{display:flex;align-items:center;gap:.35rem;font-size:.75rem;color:var(--t3)}
-.legend-swatch{width:18px;height:3px;border-radius:1px}
-
-/* Component index */
-.comp-index{
-  display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
-  gap:.5rem;margin-top:1.5rem;
-}
-.comp-item{
-  display:flex;gap:.75rem;padding:.5rem .75rem;font-size:.8rem;
-  border-left:2px solid var(--bdr);
-}
-.comp-item:hover{border-left-color:var(--acc);background:rgba(212,149,42,.03)}
-.comp-num{font-family:'IBM Plex Mono',monospace;color:var(--acc);font-weight:600;min-width:28px}
-.comp-name{color:var(--t2)}
-
-/* Footer */
-.schema-footer{
-  margin-top:2rem;padding:1.5rem;background:var(--bg3);border:1px solid var(--bdr);
-  border-radius:3px;font-size:.82rem;color:var(--t3);
-}
-.schema-footer strong{color:var(--acc)}
-
-/* Original scan viewer */
-.scan-viewer{background:#f5f3ef;border:1px solid var(--bdr);border-radius:3px;overflow:hidden}
-.scan-controls{
-  display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;
-  padding:.6rem 1rem;background:var(--bg3);border-bottom:1px solid var(--bdr);
-}
-.scan-zoom-btn{
-  padding:.3rem .8rem;background:var(--bg4);border:1px solid var(--bdr);
-  color:var(--t2);font-family:'IBM Plex Mono',monospace;font-size:.72rem;
-  cursor:pointer;transition:all .15s;
-}
-.scan-zoom-btn:hover{border-color:var(--acc);color:var(--acc)}
-.scan-info{font-family:'IBM Plex Mono',monospace;font-size:.62rem;color:var(--t4);margin-left:auto;text-align:right}
-.scan-pan-wrap{overflow:auto;max-height:78vh;cursor:grab;background:#f5f3ef;position:relative;user-select:none}
-.scan-pan-wrap:active{cursor:grabbing}
-.scan-pan-wrap img{display:block;width:100%;transform-origin:top left}
-
-@media(max-width:768px){
-  .schema-head{flex-direction:column}
-  .schema-nav{overflow-x:auto;flex-wrap:nowrap}
-  .schema-nav button{white-space:nowrap}
-  .comp-index{grid-template-columns:1fr}
-  .scan-info{display:none}
+/* ── Main layout ── */
+.main-layout {
+  flex: 1; display: flex; overflow: hidden; min-height: 0;
 }
 
-/* Translation reference section */
-.ref-section{margin-bottom:2.5rem}
-.ref-section h2{font-size:1rem;font-weight:600;color:var(--acc);margin-bottom:.35rem;
-  font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase}
-.ref-section p{font-size:.82rem;color:var(--t3);margin-bottom:.75rem}
-.ref-table{width:100%;border-collapse:collapse;margin:.75rem 0;font-size:.82rem}
-.ref-table th{background:var(--bg3);padding:.5rem .75rem;text-align:left;
-  font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.06em;
-  text-transform:uppercase;color:var(--acc);border-bottom:2px solid var(--bdra)}
-.ref-table td{padding:.4rem .75rem;border-bottom:1px solid var(--bdr);color:var(--t2);vertical-align:top}
-.ref-table tr:hover td{background:var(--bg3)}
-.ref-table td:first-child{font-family:'IBM Plex Mono',monospace;color:var(--acc);font-weight:600;white-space:nowrap}
-.ref-table td:nth-child(2){color:var(--t3);font-size:.78rem}
-.ref-note{padding:.85rem 1.1rem;background:var(--bg3);border-left:3px solid var(--acc);
-  margin:1.25rem 0;font-size:.84rem;color:var(--t2);line-height:1.7}
-.ref-note strong{color:var(--acc)}
-.swap-note-item{padding:.3rem 0;font-size:.82rem;line-height:1.55}
-.swap-note-item.warn{color:var(--red)}
-.swap-note-item.ok{color:var(--green)}
-.swap-note-item.info{color:var(--blue)}
-.ref-divider{height:1px;background:linear-gradient(90deg,rgba(212,149,42,.2),transparent);margin:2rem 0}
+/* ── Chapter sidebar ── */
+.ch-sidebar {
+  width: var(--sidebar-w); flex-shrink: 0; overflow-y: auto;
+  border-right: 1px solid var(--bdr); background: var(--bg2);
+  display: flex; flex-direction: column;
+}
+.ch-sidebar::-webkit-scrollbar { width: 4px; }
+.ch-sidebar::-webkit-scrollbar-track { background: transparent; }
+.ch-sidebar::-webkit-scrollbar-thumb { background: var(--bdr); }
+.ch-list { flex: 1; padding: .5rem 0; }
+.ch-item {
+  display: flex; align-items: flex-start; gap: .6rem;
+  padding: .55rem 1rem; cursor: pointer; transition: background .12s;
+  border-left: 2px solid transparent;
+}
+.ch-item:hover { background: var(--bg3); }
+.ch-item.active { background: var(--acc-dim); border-left-color: var(--acc); }
+.ch-code {
+  font-family: 'IBM Plex Mono', monospace; font-size: .65rem;
+  color: var(--acc); font-weight: 600; flex-shrink: 0; padding-top: .1rem;
+  min-width: 52px;
+}
+.ch-name { font-size: .78rem; color: var(--t2); line-height: 1.35; }
+.ch-item.active .ch-name { color: var(--t1); }
+.ch-sidebar-hd {
+  padding: .6rem 1rem; border-bottom: 1px solid var(--bdr);
+  font-family: 'IBM Plex Mono', monospace; font-size: .62rem;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--t4);
+  flex-shrink: 0;
+}
+
+/* ── Viewer ── */
+.viewer {
+  flex: 1; overflow: hidden; display: flex; flex-direction: column;
+  background: var(--bg);
+}
+.viewer-bar {
+  flex-shrink: 0; padding: .5rem 1rem;
+  display: flex; align-items: center; gap: .75rem; flex-wrap: wrap;
+  border-bottom: 1px solid var(--bdr); background: var(--bg3);
+}
+.viewer-title {
+  font-family: 'IBM Plex Mono', monospace; font-size: .72rem; color: var(--t1);
+}
+.viewer-title span { color: var(--acc); }
+.viewer-pages {
+  font-family: 'IBM Plex Mono', monospace; font-size: .65rem; color: var(--t3);
+  margin-left: auto;
+}
+.nav-btn {
+  padding: .3rem .7rem; background: var(--bg4); border: 1px solid var(--bdr);
+  color: var(--t2); font-family: 'IBM Plex Mono', monospace; font-size: .72rem;
+  cursor: pointer; transition: border-color .15s, color .15s; flex-shrink: 0;
+}
+.nav-btn:hover { border-color: var(--acc); color: var(--acc); }
+.nav-btn:disabled { opacity: .3; cursor: default; }
+.nav-btn:disabled:hover { border-color: var(--bdr); color: var(--t2); }
+.zoom-btn {
+  padding: .3rem .65rem; background: transparent; border: 1px solid var(--bdr);
+  color: var(--t3); font-size: .8rem; cursor: pointer; transition: all .15s;
+}
+.zoom-btn:hover { border-color: var(--acc); color: var(--acc); }
+
+.viewer-scroll {
+  flex: 1; overflow: auto;
+  padding: 1rem;
+}
+.viewer-scroll.pannable { cursor: grab; }
+.viewer-scroll.panning  { cursor: grabbing; }
+.viewer-scroll::-webkit-scrollbar { width: 6px; height: 6px; }
+.viewer-scroll::-webkit-scrollbar-track { background: transparent; }
+.viewer-scroll::-webkit-scrollbar-thumb { background: var(--bdr); }
+
+.page-img {
+  display: block; max-width: 100%; height: auto;
+  background: #f5f3ef; border: 1px solid rgba(255,255,255,.04);
+  user-select: none; -webkit-user-drag: none;
+  margin: 0 auto;
+}
+
+.viewer-placeholder {
+  display: flex; align-items: center; justify-content: center;
+  flex: 1; color: var(--t4);
+  font-family: 'IBM Plex Mono', monospace; font-size: .8rem;
+  letter-spacing: .1em;
+}
+
+/* Loading state */
+.page-img[data-loading] { min-width: 200px; min-height: 300px; background: var(--bg3); }
+
+/* ── Xref panel ── */
+.xref-bar {
+  flex-shrink: 0; border-top: 1px solid var(--bdr); background: var(--bg2);
+  padding: .5rem 1rem; display: flex; gap: .5rem; flex-wrap: wrap; align-items: center;
+  min-height: 40px;
+}
+.xref-label {
+  font-family: 'IBM Plex Mono', monospace; font-size: .62rem;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--t4); flex-shrink: 0;
+}
+.xref-link {
+  font-family: 'IBM Plex Mono', monospace; font-size: .68rem;
+  color: var(--acc); background: var(--acc-dim); border: 1px solid var(--bdra);
+  padding: .15rem .5rem; cursor: pointer; text-decoration: none; transition: background .15s;
+  white-space: nowrap;
+}
+.xref-link:hover { background: rgba(212,149,42,.18); }
+
+/* ── Mobile sidebar toggle ── */
+.sidebar-toggle {
+  display: none; padding: .4rem .75rem; background: var(--bg3);
+  border: 1px solid var(--bdr); color: var(--t3); font-family: 'IBM Plex Mono', monospace;
+  font-size: .68rem; cursor: pointer; align-items: center; gap: .4rem;
+  flex-shrink: 0;
+}
+.sidebar-toggle:hover { border-color: var(--acc); color: var(--acc); }
+
+@media (max-width: 768px) {
+  :root { --sidebar-w: 100%; }
+  .main-layout { flex-direction: column; }
+  .ch-sidebar {
+    width: 100%; max-height: 0; overflow: hidden; transition: max-height .25s ease;
+    border-right: none; border-bottom: 1px solid var(--bdr);
+  }
+  .ch-sidebar.open { max-height: 240px; overflow-y: auto; }
+  .sidebar-toggle { display: flex; }
+  .viewer-bar { gap: .5rem; }
+}
+
+@media print {
+  .site-nav, .page-hd, .cat-bar, .ch-sidebar, .viewer-bar, .xref-bar { display: none !important; }
+  .main-layout { overflow: visible; }
+  .viewer-scroll { overflow: visible; padding: 0; }
+  .page-img { max-width: 100% !important; width: 100% !important; }
+}
 </style>
 </head>
 <body>
 
-<nav class="site-nav-bar">
+<!-- Site nav -->
+<nav class="site-nav">
   <div class="site-nav-inner">
-    <a href="/" class="site-nav-back">
-      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <a href="/" class="nav-back">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
         <path d="M9 2L4 7L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       <span>projekt36.com</span>
     </a>
-    <a href="/" class="site-nav-logo">
-      <img src="/images/projekt36-logo-horizontal.svg" alt="projekt36" width="120" height="30" />
+    <a href="/" class="nav-logo">
+      <img src="/images/projekt36-logo-horizontal.svg" alt="projekt36" width="120" height="28" />
     </a>
-    <div class="site-nav-links">
+    <div class="nav-links">
       <a href="/build">Build</a>
       <a href="/guides">Guides</a>
       <a href="/tools">Tools</a>
+      <a href="/schemas/e36-wiring.html" class="cur">Schemas</a>
       <a href="/shop">Shop</a>
-      <a href="/about">About</a>
-      <a href="/schemas/e36-wiring.html" class="current">Schemas</a>
     </div>
   </div>
 </nav>
 
-<div class="wrap">
-
-<header class="page-header">
-  <div class="mono" style="margin-bottom:.5rem">projekt36.com · Technical Library</div>
-  <h1>BMW E36 Wiring Schemas</h1>
-  <p>Official BMW E36 electrical schematics. Clean English SVG diagrams based on original BMW E36 service manual. Toggle to view the original Russian scan for reference.</p>
+<!-- Page header -->
+<header class="page-hd">
+  <div class="page-hd-text">
+    <div class="page-hd-tag">BMW E36 · Technical Reference</div>
+    <h1>Electrical Troubleshooting Manual</h1>
+    <p class="page-hd-sub">Series 3 — E36 · Sedan · Coupé · Touring · Convertible · Model Year 1998</p>
+  </div>
+  <div class="page-hd-meta">
+    BMW AG · VS-2<br>
+    577 pages · ECE 05/99
+  </div>
 </header>
 
-<!-- Wire color legend - shared -->
-<div class="legend-bar" id="legend">
-  <span style="font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--t4);letter-spacing:.08em">WIRE COLORS:</span>
-  <div class="legend-item"><div class="legend-swatch" style="background:#4488cc"></div>Bl Blue</div>
-  <div class="legend-item"><div class="legend-swatch" style="background:#8B4513"></div>Br Brown</div>
-  <div class="legend-item"><div class="legend-swatch" style="background:#cccc33"></div>Ge Yellow</div>
-  <div class="legend-item"><div class="legend-swatch" style="background:#888"></div>Gr Grey</div>
-  <div class="legend-item"><div class="legend-swatch" style="background:#33aa33"></div>Gn Green</div>
-  <div class="legend-item"><div class="legend-swatch" style="background:#aa44aa"></div>Vi Violet</div>
-  <div class="legend-item"><div class="legend-swatch" style="background:#fff;border:1px solid #666"></div>Ws White</div>
-  <div class="legend-item"><div class="legend-swatch" style="background:#ee8833"></div>Or Orange</div>
-  <div class="legend-item"><div class="legend-swatch" style="background:#cc3333"></div>Rt Red</div>
-  <div class="legend-item"><div class="legend-swatch" style="background:#222;border:1px solid #666"></div>Sw Black</div>
-  <span style="font-size:.7rem;color:var(--t4)">Format: 0.5 Rt/Bl = 0.5mm² Red, Blue stripe</span>
+<!-- Category tabs -->
+<div class="cat-bar" id="catBar">
+  <button class="cat-btn active" data-cat="ref" onclick="selectCat('ref')">Reference</button>
+  <button class="cat-btn" data-cat="engine" onclick="selectCat('engine')">Engine</button>
+  <button class="cat-btn" data-cat="trans" onclick="selectCat('trans')">Transmission</button>
+  <button class="cat-btn" data-cat="safety" onclick="selectCat('safety')">Safety</button>
+  <button class="cat-btn" data-cat="body" onclick="selectCat('body')">Body Electronics</button>
+  <button class="cat-btn" data-cat="systems" onclick="selectCat('systems')">Body Systems</button>
+  <button class="cat-btn" data-cat="location" onclick="selectCat('location')">Location &amp; Connectors</button>
 </div>
 
-<!-- Schema navigation -->
-<nav class="schema-nav">
-  <button class="active" onclick="showSchema(2)">Starting &amp; Charging</button>
-  <button onclick="showSchema(4)">Exterior Lighting</button>
-  <button onclick="showSchema(6)">Interior Lighting</button>
-  <button onclick="showSchema(8)">Wipers &amp; Horn</button>
-  <button onclick="showSchema(10)">Windows &amp; Locks</button>
-  <button onclick="showSchema('ref')" style="margin-left:.5rem;border-left:1px solid var(--bdra)">Translation Ref</button>
-</nav>
+<!-- Main layout -->
+<div class="main-layout">
 
-<!-- ================================================================ -->
-<!-- SCHEMA 2 -->
-<!-- ================================================================ -->
-<section class="schema-section active" id="schema-2">
-  <div class="schema-head">
-    <div>
-      <h2>Starting &amp; Charging</h2>
-      <div class="schema-meta">Starting system · Alternator · Cooling fan · EWS immobilizer · 16-pin OBD2 · 20-pin ADS</div>
+  <!-- Sidebar -->
+  <aside class="ch-sidebar" id="sidebar">
+    <div class="ch-sidebar-hd" style="display:flex;align-items:center;justify-content:space-between">
+      <span id="sidebarCatLabel">Reference</span>
+      <button class="sidebar-toggle" id="sidebarToggle" onclick="toggleSidebar()" style="display:none">▲</button>
     </div>
-    <div class="toggle-wrap">
-      <button class="toggle-btn active" onclick="toggleView(2,'simple')"><div class="dot"></div>Overview</button>
-      <button class="toggle-btn" onclick="toggleView(2,'detail')"><div class="dot"></div>ETM ref (EN)</button>
+    <div class="ch-list" id="chList"></div>
+  </aside>
+
+  <!-- Viewer -->
+  <div class="viewer">
+    <div class="viewer-bar" id="viewerBar">
+      <button class="sidebar-toggle" onclick="toggleSidebar()">☰ Chapters</button>
+      <span class="viewer-title" id="viewerTitle">Select a chapter</span>
+      <div style="display:flex;gap:.4rem;align-items:center;margin-left:auto">
+        <button class="zoom-btn" onclick="zoomStep(-1)" title="Zoom out (-)">−</button>
+        <button class="zoom-btn" id="zoomLevel" onclick="zoomFit()" title="Fit to window" style="min-width:3rem;font-size:.65rem">Fit</button>
+        <button class="zoom-btn" onclick="zoomStep(1)" title="Zoom in (+)">+</button>
+        <button class="nav-btn" id="btnPrev" onclick="goPrev()" disabled>← Prev</button>
+        <span class="viewer-pages" id="viewerPages">—</span>
+        <button class="nav-btn" id="btnNext" onclick="goNext()" disabled>Next →</button>
+      </div>
     </div>
-  </div>
 
-  <!-- SIMPLIFIED VIEW -->
-  <div class="svg-frame" id="s2-simple">
-    <svg viewBox="0 0 1200 1430" xmlns="http://www.w3.org/2000/svg"
-     font-family="'IBM Plex Mono',monospace" style="background:#131720;display:block">
-
-<!-- PAGE BACKGROUND -->
-<rect width="1200" height="1430" fill="#131720"/>
-
-<!-- HEADER BAR -->
-<rect x="0" y="0" width="1200" height="30" fill="#191e2b"/>
-<rect x="0" y="29" width="1200" height="2" fill="#d4952a" opacity=".45"/>
-<text x="14" y="20" fill="#d4952a" font-size="11" font-weight="600" letter-spacing="2">STARTING &amp; CHARGING</text>
-<text x="236" y="20" fill="#84817a" font-size="10">· COOLING FAN · EWS IMMOBILIZER · DIAGNOSTIC CONNECTORS</text>
-<text x="1186" y="20" fill="#58564f" font-size="9" text-anchor="end">BMW E36 ETM · projekt36.com</text>
-
-<!-- ══════════════════════════════════════════════════════════════
-     SECTION 1 · STARTING SYSTEM
-     Components: BATTERY → F108 → STARTER MOTOR
-                 IGNITION SWITCH KL50 → STARTER pin50
-     ══════════════════════════════════════════════════════════════ -->
-<rect x="10" y="38" width="1180" height="226" fill="rgba(212,149,42,.03)"
-      stroke="rgba(212,149,42,.2)" stroke-width="1" stroke-dasharray="6 3"/>
-<rect x="10" y="38" width="1180" height="16" fill="rgba(212,149,42,.07)"/>
-<text x="22" y="51" fill="#d4952a" font-size="10" font-weight="600" letter-spacing="1.5">STARTING SYSTEM</text>
-
-<!-- BATTERY [1] — x=20,y=62,w=148,h=68 -->
-<rect x="20" y="62" width="148" height="68" fill="#1d2330" stroke="#6abf69" stroke-width="2"/>
-<text x="32" y="80"  fill="#84817a"  font-size="9">[1]</text>
-<text x="50" y="80"  fill="#6abf69"  font-size="11" font-weight="700">BATTERY</text>
-<text x="32" y="96"  fill="#ecebe6"  font-size="9">+12V · GND (trunk)</text>
-<text x="32" y="110" fill="#84817a"  font-size="9">Lead-acid 70 Ah typ.</text>
-<text x="32" y="122" fill="#58564f"  font-size="8">Location: boot</text>
-
-<!-- F108 200A fusible link — x=212,y=80,w=126,h=38  cy=99 -->
-<rect x="212" y="80" width="126" height="38" fill="#1d2330" stroke="#cc3333" stroke-width="2"/>
-<text x="224" y="97"  fill="#cc3333" font-size="10.5" font-weight="600">F108  200A</text>
-<text x="224" y="110" fill="#58564f" font-size="8">Fusible link · engine bay</text>
-
-<!-- STARTER MOTOR [3] — x=386,y=62,w=176,h=68  cy=96 -->
-<rect x="386" y="62" width="176" height="68" fill="#1d2330" stroke="#cc3333" stroke-width="2"/>
-<text x="398" y="80"  fill="#84817a"  font-size="9">[3]</text>
-<circle cx="544" cy="82" r="13" fill="#1a2030" stroke="#cc3333" stroke-width="1.5"/>
-<text x="544" y="87" fill="#cc3333" font-size="11" font-weight="700" text-anchor="middle">M</text>
-<text x="398" y="102" fill="#ecebe6" font-size="11" font-weight="600">STARTER MOTOR</text>
-<text x="398" y="116" fill="#84817a" font-size="9">pin 30 = B+  ·  pin 50 = KL50</text>
-<text x="398" y="126" fill="#58564f" font-size="8">Bosch 1.1 kW (6-cyl)</text>
-
-<!-- Wire: BAT right(168,96) → F108 left(212,96)  straight H at cy=96 -->
-<line x1="168" y1="96" x2="212" y2="96" stroke="#cc3333" stroke-width="2"/>
-<text x="180" y="92" fill="#cc3333" font-size="8">35.0 Rt</text>
-
-<!-- Wire: F108 right(338,96) → STARTER left(386,96)  straight H -->
-<line x1="338" y1="96" x2="386" y2="96" stroke="#cc3333" stroke-width="2.5"/>
-<text x="348" y="92" fill="#cc3333" font-size="8">35.0 Rt  (B+)</text>
-
-<!-- BAT negative ground symbol — centred x=94, from STARTER bottom y=130 -->
-<line x1="94" y1="130" x2="94" y2="143" stroke="#8a7050" stroke-width="1.5"/>
-<line x1="80" y1="143" x2="108" y2="143" stroke="#8a7050" stroke-width="2.5"/>
-<line x1="84" y1="148" x2="104" y2="148" stroke="#8a7050" stroke-width="2"/>
-<line x1="88" y1="153" x2="100" y2="153" stroke="#8a7050" stroke-width="1.5"/>
-<text x="94" y="164" fill="#8a7050" font-size="8" text-anchor="middle">GND</text>
-
-<!-- STARTER motor ground — x=474, from STARTER bottom y=130 -->
-<line x1="474" y1="130" x2="474" y2="143" stroke="#8a7050" stroke-width="1.5"/>
-<line x1="460" y1="143" x2="488" y2="143" stroke="#8a7050" stroke-width="2.5"/>
-<line x1="464" y1="148" x2="484" y2="148" stroke="#8a7050" stroke-width="2"/>
-<line x1="468" y1="153" x2="480" y2="153" stroke="#8a7050" stroke-width="1.5"/>
-<text x="474" y="164" fill="#8a7050" font-size="8" text-anchor="middle">X6001</text>
-
-<!-- IGNITION SWITCH [2] — x=212,y=172,w=156,h=74  right=368 cy=209 -->
-<rect x="212" y="172" width="156" height="74" fill="#1d2330" stroke="#ee8833" stroke-width="2"/>
-<text x="224" y="190" fill="#84817a"  font-size="9">[2]</text>
-<text x="244" y="190" fill="#ecebe6"  font-size="11" font-weight="600">IGN SWITCH</text>
-<text x="224" y="208" fill="#ee8833"  font-size="9">KL30=B+  KL15=+On</text>
-<text x="224" y="222" fill="#ee8833"  font-size="9">KL50=Start (pos. III)</text>
-<text x="224" y="236" fill="#58564f"  font-size="8">Connector X2 · 6-pin</text>
-
-<!-- Wire: BAT KL30 supply to IGN — exit BAT right(168,96), turn down to IGN left(212,209)
-     Path: H right to x=184, V down to y=209, H right to x=212
-     x=184 is clear: BAT right=168, F108 left=212, nothing between them -->
-<polyline points="168,96 184,96 184,209 212,209"
-          fill="none" stroke="#cc3333" stroke-width="1.5"/>
-
-<!-- Wire: IGN KL50 → STARTER pin50
-     Exit IGN right(368,209), go right to x=574 (outside STARTER right=562),
-     then V up to y=96, then H left to STARTER right edge at (562,96) -->
-<polyline points="368,209 574,209 574,96 562,96"
-          fill="none" stroke="#ee8833" stroke-width="1.5"/>
-<text x="410" y="204" fill="#ee8833" font-size="8">4.0 Rt/Ws  KL50</text>
-
-<!-- ══════════════════════════════════════════════════════════════
-     SECTION 2 · CHARGING SYSTEM
-     Components: ALTERNATOR → F34 → to battery bus
-                 ALT D+ → CLUSTER charge warning → DME K-bus
-     ══════════════════════════════════════════════════════════════ -->
-<rect x="10" y="274" width="1180" height="184" fill="rgba(84,136,204,.03)"
-      stroke="rgba(84,136,204,.2)" stroke-width="1" stroke-dasharray="6 3"/>
-<rect x="10" y="274" width="1180" height="16" fill="rgba(84,136,204,.07)"/>
-<text x="22" y="287" fill="#5488cc" font-size="10" font-weight="600" letter-spacing="1.5">CHARGING SYSTEM</text>
-
-<!-- ALTERNATOR [4] — x=20,y=298,w=164,h=76  cy=336 -->
-<rect x="20" y="298" width="164" height="76" fill="#1d2330" stroke="#5488cc" stroke-width="2"/>
-<text x="32" y="316"  fill="#84817a"  font-size="9">[4]</text>
-<circle cx="162" cy="316" r="13" fill="#1a2030" stroke="#5488cc" stroke-width="1.5"/>
-<text x="162" y="321" fill="#5488cc" font-size="11" font-weight="700" text-anchor="middle">G</text>
-<text x="32" y="336"  fill="#ecebe6" font-size="11" font-weight="600">ALTERNATOR</text>
-<text x="32" y="350"  fill="#84817a" font-size="9">B+ · D+ · DF  Bosch</text>
-<text x="32" y="362"  fill="#58564f" font-size="8">~80A · 14.4V regulated</text>
-
-<!-- F34 30A — x=234,y=317,w=108,h=36  cy=335 -->
-<rect x="234" y="317" width="108" height="36" fill="#1d2330" stroke="#cc3333" stroke-width="1.5"/>
-<text x="246" y="333" fill="#cc3333" font-size="10.5" font-weight="600">F34  30A</text>
-<text x="246" y="345" fill="#58564f" font-size="8">Alt excitation / B+</text>
-
-<!-- Wire: ALT B+ right(184,326) → F34 left(234,326) -->
-<line x1="184" y1="326" x2="234" y2="326" stroke="#cc3333" stroke-width="2"/>
-<text x="198" y="321" fill="#cc3333" font-size="8">6.0 Rt  B+</text>
-
-<!-- Wire: F34 right(342,326) → label "→ BATTERY BUS" -->
-<line x1="342" y1="326" x2="390" y2="326" stroke="#cc3333" stroke-width="1.5"/>
-<text x="350" y="321" fill="#cc3333" font-size="8">→ BAT BUS</text>
-
-<!-- CLUSTER / IKE [6] — x=406,y=298,w=186,h=76  cy=336 -->
-<rect x="406" y="298" width="186" height="76" fill="#1d2330" stroke="#6abf69" stroke-width="1.8"/>
-<text x="418" y="316" fill="#84817a"  font-size="9">[6]</text>
-<text x="438" y="316" fill="#6abf69"  font-size="11" font-weight="600">CLUSTER / IKE</text>
-<text x="418" y="332" fill="#ecebe6"  font-size="9">Charge warning lamp (D+)</text>
-<text x="418" y="346" fill="#ecebe6"  font-size="9">Rev counter · K-bus</text>
-<text x="418" y="358" fill="#58564f"  font-size="8">K-bus: 0.5 Br/Sw</text>
-
-<!-- Wire: ALT D+ → CLUSTER
-     ALT D+ exits at right edge y=350 (lower than B+ at y=326).
-     Route: H right to x=220, V down to y=372, H right to CLUSTER left(406,372).
-     Then V up from (406,372) to CLUSTER bottom at (406,374).
-     Wait — CLUSTER bottom is y=374. So entry is at y=374 bottom edge.
-     Check clear path: x=220,y=350→372 is between ALT(right=184) and F34(left=234) → x=220 is INSIDE F34 range!
-     F34 is x=234-342. x=220 < 234. So x=220 is LEFT of F34. ✓ Clear.
-     Then y=372 path: F34 bottom=353. So y=372 is below F34. ✓
-     Then (220,372)→(406,372): at y=372. Nothing between x=220 and x=406 at y=372 (F34 bottom=353, CLUSTER top=298). ✓ -->
-<polyline points="184,350 220,350 220,372 406,372"
-          fill="none" stroke="#6abf69" stroke-width="1.2"/>
-<text x="256" y="381" fill="#6abf69" font-size="8">0.35 Gn/Ws  D+</text>
-
-<!-- DME [5] — x=652,y=294,w=208,h=110  cy=349 -->
-<rect x="652" y="294" width="208" height="110" fill="#1d2330" stroke="#a878d0" stroke-width="2"/>
-<text x="664" y="312" fill="#84817a"  font-size="9">[5]</text>
-<text x="684" y="312" fill="#a878d0"  font-size="12" font-weight="700">DME / ECU</text>
-<text x="664" y="330" fill="#84817a"  font-size="9">Motronic M1.7 / 1.8 / 3.3.1</text>
-<text x="664" y="346" fill="#ecebe6"  font-size="9">Charge sense (D+) input</text>
-<text x="664" y="360" fill="#ecebe6"  font-size="9">+KL15 · +KL30 supply pins</text>
-<text x="664" y="374" fill="#ecebe6"  font-size="9">K-line output → OBD-II pin 7</text>
-<text x="664" y="388" fill="#58564f"  font-size="8">Location: E-box right of firewall</text>
-
-<!-- Wire: CLUSTER → DME K-bus (right=592 → DME left=652) -->
-<line x1="592" y1="336" x2="652" y2="336" stroke="#84817a" stroke-width="1" stroke-dasharray="3 2"/>
-<text x="606" y="330" fill="#84817a" font-size="8">K-bus</text>
-
-<!-- ALT ground -->
-<line x1="102" y1="374" x2="102" y2="387" stroke="#8a7050" stroke-width="1.5"/>
-<line x1="88"  y1="387" x2="116" y2="387" stroke="#8a7050" stroke-width="2.5"/>
-<line x1="92"  y1="392" x2="112" y2="392" stroke="#8a7050" stroke-width="2"/>
-<line x1="96"  y1="397" x2="108" y2="397" stroke="#8a7050" stroke-width="1.5"/>
-<text x="102" y="408" fill="#8a7050" font-size="8" text-anchor="middle">X6001</text>
-
-<!-- ══════════════════════════════════════════════════════════════
-     SECTION 3 · COOLING FAN
-     Power: BAT → F101 → FAN RELAY pin87 → FAN MOTOR → GND
-     Control: +KL15 → relay coil · THERMO SW in coil ground path
-     ══════════════════════════════════════════════════════════════ -->
-<rect x="10" y="468" width="1180" height="206" fill="rgba(84,136,204,.03)"
-      stroke="rgba(84,136,204,.15)" stroke-width="1" stroke-dasharray="6 3"/>
-<rect x="10" y="468" width="1180" height="16" fill="rgba(84,136,204,.07)"/>
-<text x="22" y="481" fill="#5488cc" font-size="10" font-weight="600" letter-spacing="1.5">COOLING FAN</text>
-
-<!-- BATTERY [1] repeated — x=20,y=492,w=130,h=56  cy=520 -->
-<rect x="20" y="492" width="130" height="56" fill="#1d2330" stroke="#6abf69" stroke-width="1.5"/>
-<text x="32" y="508" fill="#84817a"  font-size="9">[1]</text>
-<text x="50" y="508" fill="#6abf69"  font-size="10" font-weight="600">BATTERY</text>
-<text x="32" y="522" fill="#84817a"  font-size="9">+12V</text>
-<text x="32" y="534" fill="#58564f"  font-size="8">via F101 / F37</text>
-
-<!-- F101 50A — x=200,y=502,w=110,h=36  cy=520 -->
-<rect x="200" y="502" width="110" height="36" fill="#1d2330" stroke="#cc3333" stroke-width="1.5"/>
-<text x="212" y="518" fill="#cc3333" font-size="10" font-weight="600">F101  50A</text>
-<text x="212" y="530" fill="#58564f" font-size="8">Fan / accessories</text>
-
-<!-- FAN RELAY K — x=362,y=492,w=154,h=66  cy=525 -->
-<rect x="362" y="492" width="154" height="66" fill="#1d2330" stroke="#ee8833" stroke-width="1.8"/>
-<text x="374" y="510" fill="#ee8833" font-size="11" font-weight="600">FAN RELAY  K</text>
-<text x="374" y="526" fill="#84817a" font-size="9">Coil: +KL15 trigger</text>
-<text x="374" y="540" fill="#84817a" font-size="9">30 → 87 = power path</text>
-<text x="374" y="552" fill="#58564f" font-size="8">Behind left headlight</text>
-
-<!-- THERMAL SWITCH [10] — x=574,y=492,w=162,h=66  cy=525 -->
-<rect x="574" y="492" width="162" height="66" fill="#1d2330" stroke="#ee8833" stroke-width="1.8"/>
-<text x="586" y="510" fill="#84817a"  font-size="9">[10]</text>
-<text x="610" y="510" fill="#ecebe6"  font-size="10" font-weight="600">THERMO SW</text>
-<text x="586" y="526" fill="#ecebe6"  font-size="9">ON  at 92 °C</text>
-<text x="586" y="540" fill="#ecebe6"  font-size="9">OFF at 87 °C</text>
-<text x="586" y="552" fill="#58564f"  font-size="8">Rear coolant pipe</text>
-
-<!-- AUX FAN MOTOR [9] — x=792,y=488,w=162,h=70  cy=523 -->
-<rect x="792" y="488" width="162" height="70" fill="#1d2330" stroke="#5488cc" stroke-width="2"/>
-<text x="804" y="506" fill="#84817a"  font-size="9">[9]</text>
-<circle cx="934" cy="506" r="13" fill="#1a2030" stroke="#5488cc" stroke-width="1.5"/>
-<text x="934" y="511" fill="#5488cc" font-size="11" font-weight="700" text-anchor="middle">M</text>
-<text x="804" y="526" fill="#ecebe6" font-size="11" font-weight="600">AUX FAN</text>
-<text x="804" y="540" fill="#84817a" font-size="9">Pusher · 400W</text>
-<text x="804" y="552" fill="#58564f" font-size="8">Radiator front</text>
-
-<!-- Wire: BAT right(150,520) → F101 left(200,520) -->
-<line x1="150" y1="520" x2="200" y2="520" stroke="#cc3333" stroke-width="1.8"/>
-<text x="162" y="515" fill="#cc3333" font-size="8">6.0 Rt/Bl</text>
-
-<!-- Wire: F101 right(310,520) → FAN RELAY left(362,520) -->
-<line x1="310" y1="520" x2="362" y2="520" stroke="#cc3333" stroke-width="1.8"/>
-<text x="322" y="515" fill="#cc3333" font-size="8">6.0 Rt/Bl</text>
-
-<!-- Wire: FAN RELAY right(516,520) → FAN MOTOR left(792,520)
-     Path goes over THERMO SW. THERMO SW is x=574-736, y=492-558.
-     The wire at y=520 passes THROUGH the thermo switch box! Need to route around it.
-     Route: H to x=556 (left of thermo sw), V down to y=578, H right to x=808, V up to y=558 (motor bottom).
-     Wait, fan motor: x=792-954, y=488-558. Entry from left at y=520 would enter fan motor.
-     Better: go BELOW both thermo sw and fan motor:
-     (516,520) → H to x=556 → V down to y=578 → H right to x=808 → V up to y=558 → H right to fan motor left(792).
-     But fan motor left IS at x=792. Let me just enter fan motor at bottom edge.
-     (516,520) → (556,520) → (556,578) → (873,578) → (873,558)
-     Fan motor bottom is at y=558. x=873 is within fan motor (x=792-954). This wire enters bottom of fan motor. ✓
-     Thermo SW bottom is at y=558. The segment (556,578)→(873,578) at y=578 is BELOW thermo sw. ✓
-     The vertical (556,520)→(556,578): x=556 is LEFT of thermo sw (left=574). ✓ -->
-<polyline points="516,520 556,520 556,578 873,578 873,558"
-          fill="none" stroke="#cc3333" stroke-width="1.8"/>
-<text x="660" y="574" fill="#cc3333" font-size="8">6.0 Rt/Bl  (power to motor)</text>
-
-<!-- Control wire: +KL15 enters relay coil from top
-     Small vertical tick on relay top edge at x=420 -->
-<line x1="420" y1="484" x2="420" y2="492" stroke="#ee8833" stroke-width="1.2"/>
-<text x="424" y="490" fill="#ee8833" font-size="8">+KL15</text>
-
-<!-- Control wire: relay coil(−) → THERMO SW → GND
-     Show as dashed line below, from relay bottom to thermo sw bottom -->
-<polyline points="430,558 430,602 655,602 655,558"
-          fill="none" stroke="#33aa33" stroke-width="1.2" stroke-dasharray="4 2"/>
-<text x="510" y="616" fill="#33aa33" font-size="8">0.35 Sw/Gr  coil ctl</text>
-
-<!-- FAN MOTOR ground — below motor bottom at y=558 -->
-<line x1="873" y1="558" x2="873" y2="626" stroke="#8a7050" stroke-width="1.5"/>
-<line x1="859" y1="626" x2="887" y2="626" stroke="#8a7050" stroke-width="2.5"/>
-<line x1="863" y1="631" x2="883" y2="631" stroke="#8a7050" stroke-width="2"/>
-<line x1="867" y1="636" x2="879" y2="636" stroke="#8a7050" stroke-width="1.5"/>
-<text x="873" y="648" fill="#8a7050" font-size="8" text-anchor="middle">X6001</text>
-
-<!-- SWAP NOTE box — x=966,y=492 -->
-<rect x="966" y="492" width="214" height="172" fill="#181d28" stroke="rgba(84,136,204,.25)"/>
-<text x="978" y="510" fill="#5488cc" font-size="10" font-weight="600">SWAP: M43 → M50</text>
-<text x="978" y="526" fill="#b8b5ae" font-size="9">M43 fan assembly is</text>
-<text x="978" y="540" fill="#b8b5ae" font-size="9">smaller. Must swap to</text>
-<text x="978" y="554" fill="#b8b5ae" font-size="9">6-cyl fan + shroud.</text>
-<text x="978" y="568" fill="#b8b5ae" font-size="9">Thermo switch stays.</text>
-<text x="978" y="586" fill="#cc3333" font-size="9">M50 runs HOT without</text>
-<text x="978" y="600" fill="#cc3333" font-size="9">correct fan. Check</text>
-<text x="978" y="614" fill="#cc3333" font-size="9">before first drive!</text>
-<text x="978" y="634" fill="#58564f" font-size="8">Relay: behind L headlight</text>
-<text x="978" y="648" fill="#58564f" font-size="8">Thermo: rear coolant pipe</text>
-
-<!-- ══════════════════════════════════════════════════════════════
-     SECTION 4 · EWS IMMOBILIZER
-     Components: BATTERY → F14 → EWS MODULE → DME (coded signal)
-                 KEY RING ANTENNA → EWS
-     ══════════════════════════════════════════════════════════════ -->
-<rect x="10" y="662" width="1180" height="220" fill="rgba(168,120,208,.03)"
-      stroke="rgba(168,120,208,.2)" stroke-width="1" stroke-dasharray="6 3"/>
-<rect x="10" y="662" width="1180" height="16" fill="rgba(168,120,208,.07)"/>
-<text x="22" y="675" fill="#a878d0" font-size="10" font-weight="600" letter-spacing="1.5">EWS IMMOBILIZER</text>
-
-<!-- BATTERY [1] repeated — x=20,y=688,w=130,h=56  cy=716 -->
-<rect x="20" y="688" width="130" height="56" fill="#1d2330" stroke="#6abf69" stroke-width="1.5"/>
-<text x="32" y="704" fill="#84817a"  font-size="9">[1]</text>
-<text x="50" y="704" fill="#6abf69"  font-size="10" font-weight="600">BATTERY</text>
-<text x="32" y="718" fill="#84817a"  font-size="9">+12V permanent</text>
-<text x="32" y="730" fill="#58564f"  font-size="8">via F14 5A</text>
-
-<!-- F14 5A — x=200,y=698,w=108,h=36  cy=716 -->
-<rect x="200" y="698" width="108" height="36" fill="#1d2330" stroke="#ee8833" stroke-width="1.5"/>
-<text x="212" y="714" fill="#ee8833" font-size="10" font-weight="600">F14  5A</text>
-<text x="212" y="726" fill="#58564f" font-size="8">EWS module supply</text>
-
-<!-- EWS MODULE [11] — x=364,y=676,w=210,h=98  right=574 cy=725 -->
-<rect x="364" y="676" width="210" height="98" fill="#1d2330" stroke="#a878d0" stroke-width="2.5"/>
-<text x="376" y="694" fill="#84817a"  font-size="9">[11]</text>
-<text x="402" y="694" fill="#a878d0"  font-size="12" font-weight="700">EWS MODULE</text>
-<text x="376" y="712" fill="#84817a"  font-size="9">Versions: I · II · III</text>
-<text x="376" y="726" fill="#ecebe6"  font-size="9">Behind glove box · X11 12-pin</text>
-<text x="376" y="740" fill="#ecebe6"  font-size="9">Ring antenna → key transponder</text>
-<text x="376" y="754" fill="#58564f"  font-size="8">Coded start required each cycle</text>
-<text x="376" y="765" fill="#58564f"  font-size="8">No code = no spark / no crank</text>
-
-<!-- DME [5] repeated — x=638,y=676,w=210,h=98  cy=725 -->
-<rect x="638" y="676" width="210" height="98" fill="#1d2330" stroke="#a878d0" stroke-width="2"/>
-<text x="650" y="694" fill="#84817a"  font-size="9">[5]</text>
-<text x="670" y="694" fill="#a878d0"  font-size="11" font-weight="600">DME / ECU</text>
-<text x="650" y="712" fill="#ecebe6"  font-size="9">Receives coded start signal</text>
-<text x="650" y="726" fill="#ecebe6"  font-size="9">from EWS on each key cycle.</text>
-<text x="650" y="740" fill="#ecebe6"  font-size="9">Pin 7 = EWS serial wire</text>
-<text x="650" y="754" fill="#58564f"  font-size="8">No valid code → no fuel/spark</text>
-<text x="650" y="765" fill="#58564f"  font-size="8">Engine cranks but won't fire</text>
-
-<!-- Wire: BAT right(150,716) → F14 left(200,716) -->
-<line x1="150" y1="716" x2="200" y2="716" stroke="#ee8833" stroke-width="1.5"/>
-<text x="162" y="711" fill="#ee8833" font-size="8">1.0 Rt/Gn</text>
-
-<!-- Wire: F14 right(308,716) → EWS left(364,716) -->
-<line x1="308" y1="716" x2="364" y2="716" stroke="#ee8833" stroke-width="1.5"/>
-<text x="320" y="711" fill="#ee8833" font-size="8">1.0 Rt/Gn</text>
-
-<!-- Wire: EWS right(574,716) → DME left(638,716) -->
-<line x1="574" y1="716" x2="638" y2="716" stroke="#a878d0" stroke-width="1.5"/>
-<text x="586" y="711" fill="#a878d0" font-size="8">coded signal</text>
-
-<!-- Wire: EWS → DME starter lockout (second signal, below) -->
-<line x1="574" y1="748" x2="638" y2="748" stroke="#cc3333" stroke-width="1.2" stroke-dasharray="3 2"/>
-<text x="586" y="743" fill="#cc3333" font-size="8">starter inhibit</text>
-
-<!-- EWS BYPASS WARNING BOX — x=870,y=676 -->
-<rect x="870" y="676" width="310" height="200" fill="rgba(204,51,51,.06)" stroke="#cc3333" stroke-width="1.5"/>
-<text x="882" y="694" fill="#cc3333" font-size="11" font-weight="700">⚠  SWAP: EWS BYPASS</text>
-<text x="882" y="712" fill="#b8b5ae" font-size="9">Must bypass BOTH functions:</text>
-<line x1="882" y1="718" x2="1170" y2="718" stroke="rgba(204,51,51,.2)" stroke-width="1"/>
-<text x="882" y="732" fill="#cc3333" font-size="9" font-weight="600">① DME coded signal</text>
-<text x="882" y="746" fill="#b8b5ae" font-size="9">EWS serial → DME pin 7</text>
-<text x="882" y="758" fill="#58564f" font-size="8">Missing: cranks, no fire</text>
-<line x1="882" y1="766" x2="1170" y2="766" stroke="rgba(204,51,51,.2)" stroke-width="1"/>
-<text x="882" y="780" fill="#cc3333" font-size="9" font-weight="600">② Starter lockout relay</text>
-<text x="882" y="794" fill="#b8b5ae" font-size="9">Thick wires in starter circuit</text>
-<text x="882" y="806" fill="#58564f" font-size="8">Missing: won't crank at all</text>
-<line x1="882" y1="814" x2="1170" y2="814" stroke="rgba(84,136,204,.3)" stroke-width="1"/>
-<text x="882" y="828" fill="#5488cc" font-size="9" font-weight="600">Best: OBD1 M50TU 413 red ECU</text>
-<text x="882" y="842" fill="#5488cc" font-size="9">= no EWS, plug-and-play</text>
-<text x="882" y="856" fill="#58564f" font-size="8">M52: delete chip ~€60</text>
-<text x="882" y="868" fill="#58564f" font-size="8">EWS-III: most difficult</text>
-
-<!-- ══════════════════════════════════════════════════════════════
-     SECTION 5 · DIAGNOSTIC CONNECTORS
-     ══════════════════════════════════════════════════════════════ -->
-<rect x="10" y="906" width="1180" height="258" fill="rgba(100,191,105,.03)"
-      stroke="rgba(100,191,105,.15)" stroke-width="1" stroke-dasharray="6 3"/>
-<rect x="10" y="906" width="1180" height="16" fill="rgba(100,191,105,.07)"/>
-<text x="22" y="919" fill="#6abf69" font-size="10" font-weight="600" letter-spacing="1.5">DIAGNOSTIC CONNECTORS</text>
-
-<!-- OBD-II 16-pin [7] — left half -->
-<rect x="20" y="928" width="570" height="226" fill="none"
-      stroke="rgba(100,191,105,.25)" stroke-dasharray="4 2"/>
-<text x="34"  y="946" fill="#6abf69" font-size="10" font-weight="600">16-PIN OBD-II  [7]</text>
-<text x="34"  y="960" fill="#58564f" font-size="8">Passenger footwell · left of centre console</text>
-<!-- OBD connector shape -->
-<rect x="34" y="966" width="162" height="58" fill="#1d2330" stroke="#6abf69" stroke-width="2" rx="4"/>
-<text x="115" y="992" fill="#6abf69" font-size="13" font-weight="700" text-anchor="middle">OBD-II</text>
-<text x="115" y="1008" fill="#84817a" font-size="9" text-anchor="middle">16-pin D-sub</text>
-<!-- Pin assignments -->
-<g font-size="9" fill="#b8b5ae">
-  <text x="210" y="980">Pin  4  — Chassis GND          2.5 Br</text>
-  <text x="210" y="994">Pin  5  — Signal GND           0.75 Gn/Br</text>
-  <text x="210" y="1008">Pin  7  — K-line to DME         0.35 Ws/Vi</text>
-  <text x="210" y="1022">Pin  8  — K-line 2 / ADS bridge</text>
-  <text x="210" y="1036">Pin 14  — CAN Low               0.5 Rt/Ge/Ws</text>
-  <text x="210" y="1050">Pin 16  — +12V permanent        F30 7.5A</text>
-</g>
-<text x="34" y="1072" fill="#d4952a" font-size="9" font-weight="600">Connected modules:</text>
-<text x="34" y="1088" fill="#a878d0" font-size="8">→ DME (K-line)  · ABS/ASC  · Cluster  · EWS  · Airbag SRS</text>
-<text x="34" y="1104" fill="#58564f" font-size="8">Use K+DCAN USB with INPA / NCS Expert (post Jan 1996)</text>
-<text x="34" y="1118" fill="#58564f" font-size="8">Pin 8 bridges to ADS pin 7 for OBD1 compatibility</text>
-<text x="34" y="1132" fill="#58564f" font-size="8">F30 7.5A · F1 7.5A supply permanent +12V to port</text>
-
-<!-- ADS 20-pin [8] — right half -->
-<rect x="610" y="928" width="570" height="226" fill="none"
-      stroke="rgba(238,136,51,.2)" stroke-dasharray="4 2"/>
-<text x="624" y="946" fill="#ee8833" font-size="10" font-weight="600">20-PIN ADS CONNECTOR  [8]</text>
-<text x="624" y="960" fill="#58564f" font-size="8">Under bonnet · left near firewall · round connector</text>
-<!-- ADS connector shape (round) -->
-<ellipse cx="730" cy="998" rx="54" ry="40" fill="#1d2330" stroke="#ee8833" stroke-width="2"/>
-<text x="730" y="996" fill="#ee8833" font-size="13" font-weight="700" text-anchor="middle">ADS</text>
-<text x="730" y="1012" fill="#84817a" font-size="8" text-anchor="middle">Round · 20 pins</text>
-<!-- Pin assignments -->
-<g font-size="9" fill="#b8b5ae">
-  <text x="800" y="976">Pin  1  — TXD serial transmit   0.35 Ws/Gn</text>
-  <text x="800" y="990">Pin  7  — K-line (OBD1 only)</text>
-  <text x="800" y="1004">Pin 14  — Chassis ground         2.5 Br</text>
-  <text x="800" y="1018">Pin 17  — TXD data               0.35 Ws/Gn</text>
-  <text x="800" y="1032">Pin 19  — +12V battery supply</text>
-  <text x="800" y="1046">Pin 20  — +12V ignition supply   +KL15</text>
-</g>
-<!-- OBD1 vs OBD2 note -->
-<rect x="624" y="1068" width="542" height="76" fill="rgba(84,136,204,.06)"
-      stroke="rgba(84,136,204,.25)"/>
-<text x="638" y="1086" fill="#5488cc" font-size="10" font-weight="600">OBD1 vs OBD2</text>
-<text x="638" y="1102" fill="#b8b5ae" font-size="9">Pre  Jan 1996: ADS connector · use ADS cable, NOT K+DCAN</text>
-<text x="638" y="1116" fill="#b8b5ae" font-size="9">Post Jan 1996: OBD-II 16-pin · use K+DCAN USB with INPA</text>
-<text x="638" y="1130" fill="#58564f" font-size="8">Pin 8 OBD-II ↔ ADS pin 7 — required for INPA on OBD1</text>
-
-<!-- ══════════════════════════════════════════════════════════════
-     WIRE COLOUR REFERENCE  (left)  +  COMPONENT INDEX  (right)
-     ══════════════════════════════════════════════════════════════ -->
-<rect x="10" y="1176" width="580" height="244" fill="#181d28"
-      stroke="rgba(212,149,42,.2)" stroke-width="1"/>
-<text x="22" y="1194" fill="#d4952a" font-size="10" font-weight="600" letter-spacing="1.5">WIRE COLOUR REFERENCE</text>
-<g font-size="9" fill="#b8b5ae">
-  <text x="22" y="1212">35.0 Rt           — Battery positive main (fusible link)</text>
-  <text x="22" y="1228">25.0 Sw           — Starter B+ direct  (thick black)</text>
-  <text x="22" y="1244">6.0 Rt             — Alternator B+ output / fan power</text>
-  <text x="22" y="1260">4.0 Rt/Gn       — Ignition switch to battery (KL30)</text>
-  <text x="22" y="1276">4.0 Rt/Ws       — KL50 start signal to starter pin50</text>
-  <text x="22" y="1292">1.0 Rt/Gn       — EWS module permanent supply</text>
-  <text x="22" y="1308">0.35 Gn/Ws    — Alternator D+ charge signal</text>
-  <text x="22" y="1324">0.5 Br/Sw        — K-bus serial communication</text>
-  <text x="22" y="1340">0.35 Ws/Vi      — K-line to OBD-II pin 7</text>
-  <text x="22" y="1356">Br  (brown)       — All chassis / body grounds</text>
-  <text x="22" y="1378" fill="#84817a" font-size="8">X6001 = engine bay ground  ·  X6002 = body / firewall</text>
-  <text x="22" y="1392" fill="#84817a" font-size="8">F30 7.5A = OBD +12V  ·  F1 7.5A = EWS + ign relay</text>
-</g>
-
-<rect x="610" y="1176" width="580" height="244" fill="#181d28"
-      stroke="rgba(212,149,42,.2)" stroke-width="1"/>
-<text x="622" y="1194" fill="#d4952a" font-size="10" font-weight="600" letter-spacing="1.5">COMPONENT INDEX</text>
-<g font-size="9" fill="#b8b5ae">
-  <text x="622" y="1212">[1]   Battery — trunk-mounted · lead-acid 70 Ah</text>
-  <text x="622" y="1228">[2]   Ignition switch — X2 6-pin · steering column</text>
-  <text x="622" y="1244">[3]   Starter motor — Bosch 1.1 kW (6-cylinder)</text>
-  <text x="622" y="1260">[4]   Alternator — Bosch ~80 A · 14.4 V regulated</text>
-  <text x="622" y="1276">[5]   DME / ECU — Motronic M1.7 / 1.8 / 3.3.1</text>
-  <text x="622" y="1292">[6]   Instrument cluster (IKE)</text>
-  <text x="622" y="1308">[7]   OBD-II 16-pin diagnostic port</text>
-  <text x="622" y="1324">[8]   20-pin ADS connector (OBD1 only)</text>
-  <text x="622" y="1340">[9]   Auxiliary cooling fan motor · 400 W</text>
-  <text x="622" y="1356">[10]  Thermal switch — ON 92 °C / OFF 87 °C</text>
-  <text x="622" y="1372">[11]  EWS immobilizer module</text>
-  <text x="622" y="1392" fill="#84817a" font-size="8">Wire spec: gauge (mm²) + BMW colour codes (e.g. 4.0 Rt/Gn)</text>
-  <text x="622" y="1406" fill="#84817a" font-size="8">Verify against your variant (M43/M50/M50TU/M52) and date</text>
-</g>
-
-</svg>
-  </div>
-
-  <!-- DETAILED VIEW -->
-  <div class="svg-frame" id="s2-detail" style="display:none"><!-- Scan loaded via JS --></div>
-
-  <!-- Component index -->
-  <div class="comp-index">
-    <div class="comp-item"><span class="comp-num">[1]</span><span class="comp-name">Battery (trunk-mounted)</span></div>
-    <div class="comp-item"><span class="comp-num">[2]</span><span class="comp-name">Ignition switch</span></div>
-    <div class="comp-item"><span class="comp-num">[3]</span><span class="comp-name">Starter motor</span></div>
-    <div class="comp-item"><span class="comp-num">[4]</span><span class="comp-name">Alternator</span></div>
-    <div class="comp-item"><span class="comp-num">[5]</span><span class="comp-name">DME / Engine control unit</span></div>
-    <div class="comp-item"><span class="comp-num">[6]</span><span class="comp-name">Instrument cluster</span></div>
-    <div class="comp-item"><span class="comp-num">[7]</span><span class="comp-name">16-pin OBD-II diagnostic port</span></div>
-    <div class="comp-item"><span class="comp-num">[8]</span><span class="comp-name">20-pin ADS data connector</span></div>
-    <div class="comp-item"><span class="comp-num">[9]</span><span class="comp-name">Cooling system fan (dual speed)</span></div>
-    <div class="comp-item"><span class="comp-num">[10]</span><span class="comp-name">Fan thermal switch</span></div>
-    <div class="comp-item"><span class="comp-num">[11]</span><span class="comp-name">EWS starter immobilizer</span></div>
-  </div>
-</section>
-
-<!-- Schema 4, 6, 8, 10 use the same structure -->
-<!-- For brevity, showing the toggle framework — detailed SVGs follow same pattern -->
-
-<section class="schema-section" id="schema-4">
-  <div class="schema-head">
-    <div>
-      <h2>Exterior Lighting</h2>
-      <div class="schema-meta">Light control module · Headlights · Turn signals · Brake lights · Tail lights · License plate</div>
+    <div class="viewer-scroll" id="viewerScroll">
+      <div class="viewer-placeholder" id="viewerPlaceholder">Select a chapter from the sidebar</div>
+      <img class="page-img" id="pageImg" src="" alt="Schematic page" style="display:none" />
     </div>
-    <div class="toggle-wrap">
-      <button class="toggle-btn active" onclick="toggleView(4,'simple')"><div class="dot"></div>Overview</button>
-      <button class="toggle-btn" onclick="toggleView(4,'detail')"><div class="dot"></div>ETM ref (RU)</button>
-    </div>
-  </div>
-  <div class="svg-frame" id="s4-simple">
-    <svg viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg" font-family="'IBM Plex Mono',monospace" font-size="9">
-<defs>
-  <pattern id="grid4" width="40" height="40" patternUnits="userSpaceOnUse">
-    <path d="M40,0 L0,0 0,40" fill="none" stroke="rgba(255,255,255,.025)" stroke-width=".5"/>
-  </pattern>
-  <symbol id="gnd4" viewBox="0 0 14 12">
-    <line x1="7" y1="0" x2="7" y2="4" stroke="#6b5a3a" stroke-width="1.5"/>
-    <line x1="0" y1="4" x2="14" y2="4" stroke="#6b5a3a" stroke-width="2"/>
-    <line x1="2" y1="7" x2="12" y2="7" stroke="#6b5a3a" stroke-width="1.5"/>
-    <line x1="4" y1="10" x2="10" y2="10" stroke="#6b5a3a" stroke-width="1"/>
-  </symbol>
-  <symbol id="jct4"><circle r="3" fill="#d4952a"/></symbol>
-  <symbol id="bulb" viewBox="0 0 16 16">
-    <circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="1.2"/>
-    <line x1="5" y1="5" x2="11" y2="11" stroke="currentColor" stroke-width="1"/>
-    <line x1="11" y1="5" x2="5" y2="11" stroke="currentColor" stroke-width="1"/>
-  </symbol>
-</defs>
-<!-- Background -->
-<rect width="1200" height="700" fill="#131720"/>
-<!-- HEADER -->
-<rect x="0" y="0" width="1200" height="26" fill="#1a1f2b"/>
-<rect x="0" y="25" width="1200" height="1" fill="#d4952a" opacity=".4"/>
-<text x="12" y="17" fill="#d4952a" font-size="9" font-weight="600" letter-spacing="2">EXTERIOR LIGHTING</text>
-<text x="84" y="17" fill="#84817a" font-size="9">EXTERIOR LIGHTING · LCM · HEADLIGHTS · TURN SIGNALS · BRAKE &amp; TAIL</text>
-<text x="1188" y="17" fill="#58564f" font-size="8" text-anchor="end">BMW E36 ETM · projekt36.com</text>
 
-<!-- ═══════════════════════════════════════════════
-     POWER &amp; LCM SECTION
-═══════════════════════════════════════════════ -->
-<rect x="8" y="34" width="290" height="290" fill="none" stroke="rgba(212,149,42,.12)" stroke-dasharray="5 3"/>
-<rect x="8" y="34" width="130" height="13" fill="rgba(212,149,42,.07)"/>
-<text x="14" y="44" fill="#d4952a" font-size="8" font-weight="600" letter-spacing="1">POWER &amp; LCM</text>
-
-<!-- Battery -->
-<rect x="22" y="58" width="62" height="28" fill="#1d2330" stroke="#6abf69" stroke-width="1.5"/>
-<text x="28" y="72" fill="#6abf69" font-size="8" font-weight="600">[1] BAT</text>
-<text x="28" y="82" fill="#58564f" font-size="6">12 V lead-acid</text>
-
-<!-- Main fusible link F108 -->
-<rect x="22" y="100" width="80" height="18" fill="#1d2330" stroke="#cc3333" stroke-width="1.5"/>
-<text x="27" y="113" fill="#cc3333" font-size="7.5">F108  200A</text>
-
-<!-- wire bat → F108 -->
-<line x1="53" y1="86" x2="53" y2="100" stroke="#cc3333" stroke-width="1.2"/>
-<text x="56" y="95" fill="#84817a" font-size="6">6.0 Rt</text>
-
-<!-- Vertical main power rail -->
-<line x1="62" y1="118" x2="62" y2="150" stroke="#cc3333" stroke-width="1.5"/>
-
-<!-- F106 50A  F107 50A -->
-<rect x="22" y="150" width="55" height="18" fill="#1d2330" stroke="#cc3333"/>
-<text x="26" y="162" fill="#cc3333" font-size="7">F106  50A</text>
-<rect x="85" y="150" width="55" height="18" fill="#1d2330" stroke="#cc3333"/>
-<text x="89" y="162" fill="#cc3333" font-size="7">F107  50A</text>
-<use href="#jct4" x="62" y="150"/>
-<line x1="62" y1="150" x2="50" y2="150" stroke="#cc3333" stroke-width="1"/>
-<line x1="62" y1="150" x2="113" y2="150" stroke="#cc3333" stroke-width="1"/>
-
-<!-- F32 5A  F9 5A (ignition fuses) -->
-<rect x="22" y="186" width="50" height="16" fill="#1d2330" stroke="#ee8833"/>
-<text x="26" y="197" fill="#ee8833" font-size="7">F32  5A</text>
-<rect x="80" y="186" width="50" height="16" fill="#1d2330" stroke="#ee8833"/>
-<text x="84" y="197" fill="#ee8833" font-size="7">F9  5A</text>
-<text x="22" y="214" fill="#58564f" font-size="6">Ign. supply via F32/F9</text>
-
-<!-- LCM [37] -->
-<rect x="130" y="58" width="155" height="55" fill="#1d2330" stroke="#5488cc" stroke-width="1.5"/>
-<text x="148" y="76" fill="#5488cc" font-size="10" font-weight="700">[37] LCM</text>
-<text x="148" y="89" fill="#84817a" font-size="7">Light Control Module</text>
-<text x="148" y="100" fill="#58564f" font-size="6">Connector X37 · 36-pin</text>
-
-<!-- wire F106 → LCM power -->
-<line x1="50" y1="168" x2="50" y2="185" stroke="#cc3333" stroke-width="1"/>
-<line x1="50" y1="175" x2="130" y2="80" stroke="#cc3333" stroke-width="1" stroke-dasharray="3 2"/>
-<text x="60" y="172" fill="#cc3333" font-size="5.5">4.0 Rt/Ws</text>
-
-<!-- Stalk switch [43] -->
-<rect x="130" y="130" width="155" height="28" fill="#1d2330" stroke="#ee8833"/>
-<text x="145" y="148" fill="#ecebe6" font-size="7.5">[43] Stalk switch</text>
-<text x="145" y="158" fill="#58564f" font-size="6">Low beam · Turn signal</text>
-<line x1="207" y1="113" x2="207" y2="130" stroke="#ee8833" stroke-width="1"/>
-
-<!-- Hazard / CL switch [41] -->
-<rect x="130" y="170" width="155" height="28" fill="#1d2330" stroke="#ee8833"/>
-<text x="145" y="188" fill="#ecebe6" font-size="7.5">[41] Hazard / CL switch</text>
-<text x="145" y="198" fill="#58564f" font-size="6">Hazard flash · Interior light</text>
-
-<!-- K-bus note -->
-<rect x="22" y="235" width="263" height="30" fill="rgba(212,149,42,.04)" stroke="rgba(212,149,42,.2)"/>
-<text x="30" y="249" fill="#84817a" font-size="7">K-bus serial line:  0.5 Br/Sw</text>
-<text x="30" y="260" fill="#58564f" font-size="6">LCM ↔ Cluster ↔ ZKE IV ↔ Radio</text>
-
-<!-- Ground cluster at bottom of LCM section -->
-<text x="22" y="285" fill="#58564f" font-size="6">Grounds: X6001 engine bay  ·  X6002 body</text>
-<use href="#gnd4" x="150" y="285" width="14" height="12" color="#6b5a3a"/>
-<use href="#gnd4" x="220" y="285" width="14" height="12" color="#6b5a3a"/>
-
-<!-- ═══════════════════════════════════════════════
-     FRONT LIGHTS
-═══════════════════════════════════════════════ -->
-<rect x="308" y="34" width="360" height="290" fill="none" stroke="rgba(212,149,42,.12)" stroke-dasharray="5 3"/>
-<rect x="308" y="34" width="100" height="13" fill="rgba(212,149,42,.07)"/>
-<text x="314" y="44" fill="#d4952a" font-size="8" font-weight="600" letter-spacing="1">FRONT LIGHTS</text>
-
-<!-- Left column labels -->
-<text x="314" y="62" fill="#84817a" font-size="7" font-weight="600">LEFT</text>
-<text x="474" y="62" fill="#84817a" font-size="7" font-weight="600">RIGHT</text>
-
-<!-- Parking [44] [45] -->
-<rect x="314" y="68" width="140" height="22" fill="#1d2330" stroke="#cccc33"/>
-<use href="#bulb" x="318" y="72" width="16" height="16" color="#cccc33"/>
-<text x="340" y="83" fill="#ecebe6" font-size="7.5">[44] Parking light</text>
-<rect x="474" y="68" width="140" height="22" fill="#1d2330" stroke="#cccc33"/>
-<use href="#bulb" x="478" y="72" width="16" height="16" color="#cccc33"/>
-<text x="500" y="83" fill="#ecebe6" font-size="7.5">[45] Parking light</text>
-<text x="314" y="59" fill="#58564f" font-size="5.5">0.5 Ge/Sw</text>
-<text x="474" y="59" fill="#58564f" font-size="5.5">0.5 Ge/Sw</text>
-
-<!-- Low beam [46] [47] -->
-<rect x="314" y="100" width="140" height="22" fill="#1d2330" stroke="#5488cc"/>
-<use href="#bulb" x="318" y="104" width="16" height="16" color="#5488cc"/>
-<text x="340" y="115" fill="#ecebe6" font-size="7.5">[46] Low beam  H7</text>
-<rect x="474" y="100" width="140" height="22" fill="#1d2330" stroke="#5488cc"/>
-<use href="#bulb" x="478" y="104" width="16" height="16" color="#5488cc"/>
-<text x="500" y="115" fill="#ecebe6" font-size="7.5">[47] Low beam  H7</text>
-<text x="314" y="96" fill="#58564f" font-size="5.5">1.5 Ge/Gn</text>
-<text x="474" y="96" fill="#58564f" font-size="5.5">1.5 Ge/Gn</text>
-
-<!-- High beam [48] [49] -->
-<rect x="314" y="132" width="140" height="22" fill="#1d2330" stroke="#aa44aa"/>
-<use href="#bulb" x="318" y="136" width="16" height="16" color="#aa44aa"/>
-<text x="340" y="147" fill="#ecebe6" font-size="7.5">[48] High beam  H1</text>
-<rect x="474" y="132" width="140" height="22" fill="#1d2330" stroke="#aa44aa"/>
-<use href="#bulb" x="478" y="136" width="16" height="16" color="#aa44aa"/>
-<text x="500" y="147" fill="#ecebe6" font-size="7.5">[49] High beam  H1</text>
-<text x="314" y="128" fill="#58564f" font-size="5.5">1.5 Ge/Vi</text>
-<text x="474" y="128" fill="#58564f" font-size="5.5">1.5 Ge/Vi</text>
-
-<!-- Front turn [50] [52] -->
-<rect x="314" y="164" width="140" height="22" fill="#1d2330" stroke="#33aa33"/>
-<use href="#bulb" x="318" y="168" width="16" height="16" color="#33aa33"/>
-<text x="340" y="179" fill="#ecebe6" font-size="7.5">[50] Front turn</text>
-<rect x="474" y="164" width="140" height="22" fill="#1d2330" stroke="#33aa33"/>
-<use href="#bulb" x="478" y="168" width="16" height="16" color="#33aa33"/>
-<text x="500" y="179" fill="#ecebe6" font-size="7.5">[52] Front turn</text>
-<text x="314" y="160" fill="#58564f" font-size="5.5">1.0 Gn/Sw  1.0 Gn/Ge</text>
-
-<!-- Side repeaters [51] [53] -->
-<rect x="314" y="196" width="140" height="20" fill="#1d2330" stroke="#33aa33" stroke-dasharray="3 2"/>
-<text x="322" y="210" fill="#ecebe6" font-size="7">[51] Side repeater</text>
-<rect x="474" y="196" width="140" height="20" fill="#1d2330" stroke="#33aa33" stroke-dasharray="3 2"/>
-<text x="482" y="210" fill="#ecebe6" font-size="7">[53] Side repeater</text>
-
-<!-- License plate [42] -->
-<rect x="314" y="228" width="300" height="22" fill="#1d2330" stroke="#cccc33"/>
-<use href="#bulb" x="318" y="232" width="16" height="16" color="#cccc33"/>
-<text x="340" y="243" fill="#ecebe6" font-size="7.5">[42] License plate lights (×2)  ·  trunk lid switch</text>
-<text x="314" y="224" fill="#58564f" font-size="5.5">0.5 Ge/Sw  · from LCM pin 12</text>
-
-<!-- Leveling [38] [39] [40] -->
-<rect x="314" y="264" width="350" height="52" fill="none" stroke="rgba(212,149,42,.12)" stroke-dasharray="4 2"/>
-<rect x="314" y="264" width="120" height="12" fill="rgba(212,149,42,.05)"/>
-<text x="320" y="273" fill="#d4952a" font-size="7.5" font-weight="600">HEADLIGHT LEVELING</text>
-<rect x="322" y="278" width="110" height="20" fill="#1d2330" stroke="#84817a"/>
-<text x="330" y="292" fill="#ecebe6" font-size="7">[38] Axle load sensor</text>
-<rect x="450" y="278" width="60" height="20" fill="#1d2330" stroke="#5488cc"/>
-<circle cx="465" cy="288" r="7" fill="none" stroke="#5488cc" stroke-width="1.2"/>
-<text x="461" y="291" fill="#5488cc" font-size="7">M</text>
-<text x="448" y="275" fill="#58564f" font-size="5.5">[39] L motor</text>
-<rect x="528" y="278" width="60" height="20" fill="#1d2330" stroke="#5488cc"/>
-<circle cx="543" cy="288" r="7" fill="none" stroke="#5488cc" stroke-width="1.2"/>
-<text x="539" y="291" fill="#5488cc" font-size="7">M</text>
-<text x="526" y="275" fill="#58564f" font-size="5.5">[40] R motor</text>
-<line x1="432" y1="288" x2="450" y2="288" stroke="#5488cc" stroke-width="1"/>
-<line x1="510" y1="288" x2="528" y2="288" stroke="#5488cc" stroke-width="1"/>
-
-<!-- Wire from LCM to front lights area (horizontal bus) -->
-<line x1="298" y1="80" x2="314" y2="80" stroke="#d4952a" stroke-width="1" stroke-dasharray="4 2"/>
-<text x="300" y="77" fill="#d4952a" font-size="5.5">→ LCM</text>
-
-<!-- ═══════════════════════════════════════════════
-     REAR LIGHTS
-═══════════════════════════════════════════════ -->
-<rect x="680" y="34" width="360" height="290" fill="none" stroke="rgba(212,149,42,.12)" stroke-dasharray="5 3"/>
-<rect x="680" y="34" width="95" height="13" fill="rgba(212,149,42,.07)"/>
-<text x="686" y="44" fill="#d4952a" font-size="8" font-weight="600" letter-spacing="1">REAR LIGHTS</text>
-
-<text x="686" y="62" fill="#84817a" font-size="7" font-weight="600">LEFT</text>
-<text x="846" y="62" fill="#84817a" font-size="7" font-weight="600">RIGHT</text>
-
-<!-- Rear turn [54] / Rear fog [55] -->
-<rect x="686" y="68" width="140" height="22" fill="#1d2330" stroke="#33aa33"/>
-<use href="#bulb" x="690" y="72" width="16" height="16" color="#33aa33"/>
-<text x="712" y="83" fill="#ecebe6" font-size="7.5">[54] Rear turn</text>
-<rect x="846" y="68" width="140" height="22" fill="#1d2330" stroke="#ee5555"/>
-<use href="#bulb" x="850" y="72" width="16" height="16" color="#ee5555"/>
-<text x="872" y="83" fill="#ecebe6" font-size="7.5">[55] Rear fog</text>
-<text x="686" y="59" fill="#58564f" font-size="5.5">1.0 Gn/Sw</text>
-<text x="846" y="59" fill="#58564f" font-size="5.5">1.0 Br/Ge  (from F20)</text>
-
-<!-- Brake [56] [57] -->
-<rect x="686" y="100" width="140" height="22" fill="#1d2330" stroke="#cc3333"/>
-<use href="#bulb" x="690" y="104" width="16" height="16" color="#cc3333"/>
-<text x="712" y="115" fill="#ecebe6" font-size="7.5">[57] Brake light</text>
-<rect x="846" y="100" width="140" height="22" fill="#1d2330" stroke="#cc3333"/>
-<use href="#bulb" x="850" y="104" width="16" height="16" color="#cc3333"/>
-<text x="872" y="115" fill="#ecebe6" font-size="7.5">[56] Brake light</text>
-<text x="686" y="96" fill="#58564f" font-size="5.5">1.5 Rt/Ge  via brake SW [34]</text>
-
-<!-- 3rd brake light -->
-<rect x="686" y="132" width="300" height="18" fill="#1d2330" stroke="#cc3333" stroke-dasharray="3 2"/>
-<use href="#bulb" x="690" y="136" width="16" height="14" color="#cc3333"/>
-<text x="712" y="145" fill="#ecebe6" font-size="7">[61] 3rd brake light  ·  centre high-mount</text>
-
-<!-- Tail [58] [59] -->
-<rect x="686" y="160" width="140" height="22" fill="#1d2330" stroke="#84817a"/>
-<use href="#bulb" x="690" y="164" width="16" height="16" color="#84817a"/>
-<text x="712" y="175" fill="#ecebe6" font-size="7.5">[59] Tail light</text>
-<rect x="846" y="160" width="140" height="22" fill="#1d2330" stroke="#84817a"/>
-<use href="#bulb" x="850" y="164" width="16" height="16" color="#84817a"/>
-<text x="872" y="175" fill="#ecebe6" font-size="7.5">[58] Tail light</text>
-<text x="686" y="156" fill="#58564f" font-size="5.5">1.0 Ge/Sw  from LCM pin 7</text>
-
-<!-- Rear marker [59][60] -->
-<rect x="686" y="192" width="140" height="18" fill="#1d2330" stroke="#84817a" stroke-dasharray="3 2"/>
-<text x="694" y="205" fill="#ecebe6" font-size="7">[59] Marker</text>
-<rect x="846" y="192" width="140" height="18" fill="#1d2330" stroke="#84817a" stroke-dasharray="3 2"/>
-<text x="854" y="205" fill="#ecebe6" font-size="7">[60] Marker</text>
-
-<!-- Variant note -->
-<rect x="686" y="220" width="300" height="26" fill="rgba(84,136,204,.07)" stroke="rgba(84,136,204,.25)"/>
-<text x="694" y="232" fill="#5488cc" font-size="7">Sedan / Coupe / Touring rear loom differs</text>
-<text x="694" y="242" fill="#58564f" font-size="6">Touring: additional rear wiper harness</text>
-
-<!-- Brake switch [34] -->
-<rect x="686" y="258" width="145" height="28" fill="#1d2330" stroke="#ee8833"/>
-<text x="694" y="270" fill="#ecebe6" font-size="7.5">[34] Brake light switch</text>
-<text x="694" y="281" fill="#58564f" font-size="6">NC type · adjust gap: 1–1.5 mm</text>
-<line x1="686" y1="111" x2="686" y2="258" stroke="#cc3333" stroke-width=".8" stroke-dasharray="3 3"/>
-
-<!-- ═══════════════════════════════════════════════
-     BOTTOM: WIRE COLOURS &amp; COMPONENT INDEX
-═══════════════════════════════════════════════ -->
-<rect x="8" y="336" width="1184" height="118" fill="#181d28" stroke="rgba(212,149,42,.15)"/>
-<text x="20" y="354" fill="#d4952a" font-size="8" font-weight="600" letter-spacing="1.5">COMPONENT INDEX</text>
-
-<g font-size="7">
-  <text x="20" y="370" fill="#b8b5ae">[1]  Battery</text>
-  <text x="20" y="382" fill="#b8b5ae">[34] Brake light switch</text>
-  <text x="20" y="394" fill="#b8b5ae">[37] Light Control Module (LCM)</text>
-  <text x="20" y="406" fill="#b8b5ae">[38] Axle load sensor (leveling)</text>
-  <text x="20" y="418" fill="#b8b5ae">[39] L headlight leveling motor</text>
-  <text x="20" y="430" fill="#b8b5ae">[40] R headlight leveling motor</text>
-
-  <text x="220" y="370" fill="#b8b5ae">[41] Hazard / central lock switch</text>
-  <text x="220" y="382" fill="#b8b5ae">[42] License plate lights</text>
-  <text x="220" y="394" fill="#b8b5ae">[43] Column stalk switch</text>
-  <text x="220" y="406" fill="#b8b5ae">[44] L parking light</text>
-  <text x="220" y="418" fill="#b8b5ae">[45] R parking light</text>
-  <text x="220" y="430" fill="#b8b5ae">[46] L low beam (H7)</text>
-
-  <text x="420" y="370" fill="#b8b5ae">[47] R low beam (H7)</text>
-  <text x="420" y="382" fill="#b8b5ae">[48] L high beam (H1)</text>
-  <text x="420" y="394" fill="#b8b5ae">[49] R high beam (H1)</text>
-  <text x="420" y="406" fill="#b8b5ae">[50] L front turn signal</text>
-  <text x="420" y="418" fill="#b8b5ae">[51] L side repeater</text>
-  <text x="420" y="430" fill="#b8b5ae">[52] R front turn signal</text>
-
-  <text x="620" y="370" fill="#b8b5ae">[53] R side repeater</text>
-  <text x="620" y="382" fill="#b8b5ae">[54] L rear turn signal</text>
-  <text x="620" y="394" fill="#b8b5ae">[55] Rear fog light (R)</text>
-  <text x="620" y="406" fill="#b8b5ae">[56] R brake light</text>
-  <text x="620" y="418" fill="#b8b5ae">[57] L brake light</text>
-  <text x="620" y="430" fill="#b8b5ae">[58] R tail light</text>
-
-  <text x="820" y="370" fill="#b8b5ae">[59] L tail / marker</text>
-  <text x="820" y="382" fill="#b8b5ae">[60] R marker</text>
-  <text x="820" y="394" fill="#b8b5ae">[61] 3rd brake light (high-mount)</text>
-  <text x="820" y="406" fill="#58564f">F106/F107 50A — LCM main power</text>
-  <text x="820" y="418" fill="#58564f">F32/F9 5A — ignition supply</text>
-  <text x="820" y="430" fill="#58564f">Grounds: X6001 / X6002  (brown Br)</text>
-</g>
-</svg>
-  </div>
-  <div class="svg-frame" id="s4-detail" style="display:none"><!-- Scan loaded via JS --></div>
-  <div class="comp-index">
-    <div class="comp-item"><span class="comp-num">[37]</span><span class="comp-name">Light control module (LCM)</span></div>
-    <div class="comp-item"><span class="comp-num">[38]</span><span class="comp-name">Axle load sensor (leveling)</span></div>
-    <div class="comp-item"><span class="comp-num">[39]</span><span class="comp-name">Left headlight leveling motor</span></div>
-    <div class="comp-item"><span class="comp-num">[40]</span><span class="comp-name">Right headlight leveling motor</span></div>
-    <div class="comp-item"><span class="comp-num">[41]</span><span class="comp-name">Hazard / central locking switch</span></div>
-    <div class="comp-item"><span class="comp-num">[42]</span><span class="comp-name">License plate lamps / trunk switch</span></div>
-    <div class="comp-item"><span class="comp-num">[43]</span><span class="comp-name">Turn signal / low beam stalk</span></div>
-    <div class="comp-item"><span class="comp-num">[44-45]</span><span class="comp-name">Front parking lights L/R</span></div>
-    <div class="comp-item"><span class="comp-num">[46-49]</span><span class="comp-name">Headlights low/high L/R</span></div>
-    <div class="comp-item"><span class="comp-num">[50-53]</span><span class="comp-name">Turn signals front/side L/R</span></div>
-    <div class="comp-item"><span class="comp-num">[54-60]</span><span class="comp-name">Rear turn/brake/tail/marker</span></div>
-  </div>
-</section>
-
-<!-- Schemas 6, 8, 10 follow identical toggle pattern -->
-<!-- For production: each would have full simplified + detailed SVGs -->
-
-<section class="schema-section" id="schema-6">
-  <div class="schema-head">
-    <div><h2>Interior Lighting</h2><div class="schema-meta">ZKE IV module · Dome/map lights · Footwell · Trunk · Vanity mirrors · Lighter</div></div>
-    <div class="toggle-wrap"><button class="toggle-btn active" onclick="toggleView(6,'simple')"><div class="dot"></div>Simplified</button><button class="toggle-btn" onclick="toggleView(6,'detail')"><div class="dot"></div>ETM ref (RU)</button></div>
-  </div>
-  <div class="svg-frame" id="s6-simple">
-    <svg viewBox="0 0 1200 650" xmlns="http://www.w3.org/2000/svg" font-family="'IBM Plex Mono',monospace" font-size="9">
-<defs>
-  <pattern id="grid6" width="40" height="40" patternUnits="userSpaceOnUse">
-    <path d="M40,0 L0,0 0,40" fill="none" stroke="rgba(255,255,255,.025)" stroke-width=".5"/>
-  </pattern>
-  <symbol id="gnd6" viewBox="0 0 14 12">
-    <line x1="7" y1="0" x2="7" y2="4" stroke="#6b5a3a" stroke-width="1.5"/>
-    <line x1="0" y1="4" x2="14" y2="4" stroke="#6b5a3a" stroke-width="2"/>
-    <line x1="2" y1="7" x2="12" y2="7" stroke="#6b5a3a" stroke-width="1.5"/>
-    <line x1="4" y1="10" x2="10" y2="10" stroke="#6b5a3a" stroke-width="1"/>
-  </symbol>
-  <symbol id="bulb6" viewBox="0 0 14 14">
-    <circle cx="7" cy="7" r="5.5" fill="none" stroke="currentColor" stroke-width="1.2"/>
-    <line x1="4.5" y1="4.5" x2="9.5" y2="9.5" stroke="currentColor" stroke-width="1"/>
-    <line x1="9.5" y1="4.5" x2="4.5" y2="9.5" stroke="currentColor" stroke-width="1"/>
-  </symbol>
-</defs>
-<rect width="1200" height="650" fill="#131720"/>
-<!-- HEADER -->
-<rect x="0" y="0" width="1200" height="26" fill="#1a1f2b"/>
-<rect x="0" y="25" width="1200" height="1" fill="#d4952a" opacity=".4"/>
-<text x="12" y="17" fill="#d4952a" font-size="9" font-weight="600" letter-spacing="2">INTERIOR LIGHTING</text>
-<text x="84" y="17" fill="#84817a" font-size="9">INTERIOR LIGHTING · ZKE IV · DOME · FOOTWELL · VANITY MIRRORS · LIGHTER</text>
-<text x="1188" y="17" fill="#58564f" font-size="8" text-anchor="end">BMW E36 ETM · projekt36.com</text>
-
-<!-- ═══ POWER SUPPLY &amp; ZKE IV ═══ -->
-<rect x="8" y="34" width="350" height="220" fill="none" stroke="rgba(212,149,42,.12)" stroke-dasharray="5 3"/>
-<rect x="8" y="34" width="160" height="13" fill="rgba(212,149,42,.07)"/>
-<text x="14" y="44" fill="#d4952a" font-size="8" font-weight="600" letter-spacing="1">POWER SUPPLY</text>
-
-<!-- Fuse box -->
-<rect x="22" y="56" width="65" height="18" fill="#1d2330" stroke="#cc3333" stroke-width="1.5"/>
-<text x="26" y="68" fill="#cc3333" font-size="7.5">F52  30A</text>
-<rect x="22" y="80" width="65" height="18" fill="#1d2330" stroke="#cc3333"/>
-<text x="26" y="92" fill="#cc3333" font-size="7">F108  200A</text>
-<text x="22" y="111" fill="#58564f" font-size="6">Permanent  + KL30</text>
-
-<!-- F6 5A ignition -->
-<rect x="22" y="118" width="65" height="18" fill="#1d2330" stroke="#ee8833"/>
-<text x="26" y="130" fill="#ee8833" font-size="7.5">F6  5A</text>
-<text x="22" y="150" fill="#58564f" font-size="6">Ign. +KL15  (vanity mirrors)</text>
-
-<!-- ZKE IV / General Module [77] -->
-<rect x="120" y="56" width="220" height="55" fill="#1d2330" stroke="#5488cc" stroke-width="2"/>
-<text x="145" y="76" fill="#5488cc" font-size="11" font-weight="700">[77] ZKE IV</text>
-<text x="145" y="90" fill="#84817a" font-size="7">General Module (GM4)</text>
-<text x="145" y="101" fill="#58564f" font-size="6">Controls interior lamps, power windows, CL</text>
-
-<!-- wire F52 → ZKE -->
-<line x1="87" y1="65" x2="120" y2="75" stroke="#cc3333" stroke-width="1.2"/>
-<text x="88" y="68" fill="#84817a" font-size="6">2.5 Rt/Sw</text>
-
-<!-- Door switch inputs to ZKE -->
-<rect x="22" y="165" width="130" height="22" fill="#1d2330" stroke="#84817a"/>
-<text x="30" y="180" fill="#ecebe6" font-size="7">[75][76] Door switches</text>
-<rect x="22" y="195" width="130" height="22" fill="#1d2330" stroke="#84817a"/>
-<text x="30" y="210" fill="#ecebe6" font-size="7">[96] Trunk lid switch</text>
-<line x1="87" y1="176" x2="120" y2="110" stroke="#84817a" stroke-width=".8" stroke-dasharray="3 2"/>
-<line x1="87" y1="206" x2="120" y2="110" stroke="#84817a" stroke-width=".8" stroke-dasharray="3 2"/>
-<text x="22" y="234" fill="#58564f" font-size="6">Door open signal → ZKE activates interior lamps</text>
-
-<!-- ═══ INTERIOR LIGHTS DISTRIBUTION ═══ -->
-<rect x="370" y="34" width="810" height="165" fill="none" stroke="rgba(212,149,42,.12)" stroke-dasharray="5 3"/>
-<rect x="370" y="34" width="185" height="13" fill="rgba(212,149,42,.07)"/>
-<text x="376" y="44" fill="#d4952a" font-size="8" font-weight="600" letter-spacing="1">INTERIOR LIGHTS — ZKE OUTPUT</text>
-
-<!-- Horizontal distribution bus from ZKE -->
-<line x1="340" y1="84" x2="1174" y2="84" stroke="#cccc33" stroke-width="1.2" stroke-dasharray="5 3"/>
-<text x="356" y="81" fill="#cccc33" font-size="6">0.5 Ge/Sw  interior lamp bus</text>
-
-<!-- Dome / Map light [78] -->
-<rect x="376" y="92" width="110" height="35" fill="#1d2330" stroke="#cccc33" stroke-width="1.5"/>
-<use href="#bulb6" x="380" y="96" width="14" height="14" color="#cccc33"/>
-<text x="398" y="108" fill="#ecebe6" font-size="8" font-weight="600">[78] Dome</text>
-<text x="398" y="120" fill="#84817a" font-size="6">Map light incl.</text>
-<line x1="431" y1="84" x2="431" y2="92" stroke="#cccc33" stroke-width="1"/>
-
-<!-- Trunk lights [82] [83] -->
-<rect x="500" y="92" width="120" height="35" fill="#1d2330" stroke="#cccc33"/>
-<use href="#bulb6" x="504" y="96" width="14" height="14" color="#cccc33"/>
-<text x="522" y="108" fill="#ecebe6" font-size="7.5">[82][83] Trunk</text>
-<text x="522" y="120" fill="#84817a" font-size="6">2× bulb · lid switch</text>
-<line x1="560" y1="84" x2="560" y2="92" stroke="#cccc33" stroke-width="1"/>
-
-<!-- Glove box [84] -->
-<rect x="634" y="92" width="100" height="35" fill="#1d2330" stroke="#cccc33"/>
-<use href="#bulb6" x="638" y="96" width="14" height="14" color="#cccc33"/>
-<text x="656" y="108" fill="#ecebe6" font-size="7.5">[84] Glove box</text>
-<text x="656" y="120" fill="#84817a" font-size="6">Lid switch</text>
-<line x1="684" y1="84" x2="684" y2="92" stroke="#cccc33" stroke-width="1"/>
-
-<!-- Rear interior lights [80] [81] -->
-<rect x="748" y="92" width="120" height="35" fill="#1d2330" stroke="#cccc33"/>
-<use href="#bulb6" x="752" y="96" width="14" height="14" color="#cccc33"/>
-<text x="770" y="108" fill="#ecebe6" font-size="7.5">[80][81] Rear</text>
-<text x="770" y="120" fill="#84817a" font-size="6">L + R rear ceiling</text>
-<line x1="808" y1="84" x2="808" y2="92" stroke="#cccc33" stroke-width="1"/>
-
-<!-- Footwell lights [85] [86] -->
-<rect x="882" y="92" width="125" height="35" fill="#1d2330" stroke="#cccc33"/>
-<use href="#bulb6" x="886" y="96" width="14" height="14" color="#cccc33"/>
-<text x="904" y="108" fill="#ecebe6" font-size="7.5">[85][86] Footwell</text>
-<text x="904" y="120" fill="#84817a" font-size="6">Driver + Pass.</text>
-<line x1="944" y1="84" x2="944" y2="92" stroke="#cccc33" stroke-width="1"/>
-
-<!-- Lighter illumination [87] [88] -->
-<rect x="1020" y="92" width="145" height="35" fill="#1d2330" stroke="#cccc33" stroke-dasharray="3 2"/>
-<use href="#bulb6" x="1024" y="96" width="14" height="14" color="#cccc33"/>
-<text x="1042" y="108" fill="#ecebe6" font-size="7.5">[87][88] Lighter illum.</text>
-<text x="1042" y="120" fill="#84817a" font-size="6">Panel illumination</text>
-<line x1="1092" y1="84" x2="1092" y2="92" stroke="#cccc33" stroke-width="1"/>
-
-<!-- Grounds below lamps -->
-<use href="#gnd6" x="431" y="127" width="14" height="12"/>
-<use href="#gnd6" x="560" y="127" width="14" height="12"/>
-<use href="#gnd6" x="684" y="127" width="14" height="12"/>
-<use href="#gnd6" x="808" y="127" width="14" height="12"/>
-<use href="#gnd6" x="944" y="127" width="14" height="12"/>
-<use href="#gnd6" x="1092" y="127" width="14" height="12"/>
-<text x="376" y="155" fill="#58564f" font-size="6">Grounds: X6002 (body · brown Br)  ·  All interior lights: 0.35 – 0.5 mm² Ge wire</text>
-
-<!-- ═══ VANITY MIRRORS ═══ -->
-<rect x="8" y="270" width="370" height="200" fill="none" stroke="rgba(212,149,42,.12)" stroke-dasharray="5 3"/>
-<rect x="8" y="270" width="130" height="13" fill="rgba(212,149,42,.07)"/>
-<text x="14" y="280" fill="#d4952a" font-size="8" font-weight="600" letter-spacing="1">VANITY MIRRORS</text>
-
-<!-- F6 5A supply (already shown, reference) -->
-<text x="22" y="296" fill="#58564f" font-size="6">+KL15 via F6 5A</text>
-
-<!-- Driver vanity [91] + switch [92] -->
-<rect x="22" y="302" width="90" height="22" fill="#1d2330" stroke="#ee8833"/>
-<text x="30" y="317" fill="#ecebe6" font-size="7">[92] Driver switch</text>
-<rect x="22" y="334" width="90" height="22" fill="#1d2330" stroke="#cccc33"/>
-<use href="#bulb6" x="26" y="338" width="14" height="14" color="#cccc33"/>
-<text x="44" y="349" fill="#ecebe6" font-size="7">[91] Driver mirror</text>
-<line x1="67" y1="324" x2="67" y2="334" stroke="#ee8833" stroke-width="1"/>
-
-<!-- Passenger vanity [93] + switch [94] -->
-<rect x="140" y="302" width="90" height="22" fill="#1d2330" stroke="#ee8833"/>
-<text x="148" y="317" fill="#ecebe6" font-size="7">[94] Pass. switch</text>
-<rect x="140" y="334" width="90" height="22" fill="#1d2330" stroke="#cccc33"/>
-<use href="#bulb6" x="144" y="338" width="14" height="14" color="#cccc33"/>
-<text x="162" y="349" fill="#ecebe6" font-size="7">[93] Pass. mirror</text>
-<line x1="185" y1="324" x2="185" y2="334" stroke="#ee8833" stroke-width="1"/>
-
-<!-- Trunk vanity [89] [90] -->
-<rect x="22" y="374" width="130" height="22" fill="#1d2330" stroke="#cccc33"/>
-<use href="#bulb6" x="26" y="378" width="14" height="14" color="#cccc33"/>
-<text x="44" y="390" fill="#ecebe6" font-size="7">[89][90] Trunk vanity</text>
-
-<text x="22" y="420" fill="#58564f" font-size="6">All vanity: 0.35 Ge/Ws  ·  Mirror covers also act as switches</text>
-<text x="22" y="432" fill="#58564f" font-size="6">+KL15 supply: lights on only with ignition ON</text>
-
-<!-- ═══ LIGHTER / SOCKET ═══ -->
-<rect x="390" y="270" width="350" height="200" fill="none" stroke="rgba(212,149,42,.12)" stroke-dasharray="5 3"/>
-<rect x="390" y="270" width="175" height="13" fill="rgba(212,149,42,.07)"/>
-<text x="396" y="280" fill="#d4952a" font-size="8" font-weight="600" letter-spacing="1">LIGHTER &amp; POWER SOCKET</text>
-
-<!-- F47 20A -->
-<rect x="406" y="294" width="60" height="18" fill="#1d2330" stroke="#cc3333" stroke-width="1.5"/>
-<text x="410" y="306" fill="#cc3333" font-size="7.5">F47  20A</text>
-
-<!-- Cigarette lighter [95] -->
-<rect x="406" y="326" width="100" height="30" fill="#1d2330" stroke="#ee8833" stroke-width="1.5"/>
-<text x="415" y="340" fill="#ecebe6" font-size="8" font-weight="600">[95] LIGHTER</text>
-<text x="415" y="350" fill="#84817a" font-size="6">12 V · heating element</text>
-<line x1="436" y1="312" x2="436" y2="326" stroke="#cc3333" stroke-width="1.2"/>
-<text x="440" y="323" fill="#cc3333" font-size="5.5">2.5 Rt/Sw</text>
-
-<!-- Power socket [96] -->
-<rect x="520" y="326" width="120" height="30" fill="#1d2330" stroke="#ee8833"/>
-<text x="528" y="340" fill="#ecebe6" font-size="8" font-weight="600">[96] PWR SOCKET</text>
-<text x="528" y="350" fill="#84817a" font-size="6">Accessory · 120W max</text>
-<line x1="436" y1="312" x2="580" y2="312" stroke="#cc3333" stroke-width="1"/>
-<line x1="580" y1="312" x2="580" y2="326" stroke="#cc3333" stroke-width="1"/>
-
-<use href="#gnd6" x="436" y="358" width="14" height="12"/>
-<use href="#gnd6" x="580" y="358" width="14" height="12"/>
-
-<text x="406" y="396" fill="#58564f" font-size="6">Both on +KL30 permanent  ·  active even ignition OFF</text>
-<text x="406" y="407" fill="#58564f" font-size="6">F47 20A from main fuse box · 2.5 Rt/Sw wire</text>
-<text x="406" y="432" fill="#84817a" font-size="7">Lighter pull: ~100 W  →  8 A steady state</text>
-
-<!-- ═══ COMPONENT INDEX ═══ -->
-<rect x="8" y="482" width="1184" height="148" fill="#181d28" stroke="rgba(212,149,42,.15)"/>
-<text x="20" y="500" fill="#d4952a" font-size="8" font-weight="600" letter-spacing="1.5">COMPONENT INDEX</text>
-<g font-size="7">
-  <text x="20" y="516" fill="#b8b5ae">[75] Driver door switch</text>
-  <text x="20" y="528" fill="#b8b5ae">[76] Passenger door switch</text>
-  <text x="20" y="540" fill="#b8b5ae">[77] ZKE IV General Module</text>
-  <text x="20" y="552" fill="#b8b5ae">[78] Dome / map light</text>
-  <text x="20" y="564" fill="#b8b5ae">[80] L rear interior light</text>
-  <text x="20" y="576" fill="#b8b5ae">[81] R rear interior light</text>
-  <text x="20" y="588" fill="#b8b5ae">[82] Trunk light (L)</text>
-  <text x="20" y="600" fill="#b8b5ae">[83] Trunk light (R)</text>
-  <text x="20" y="612" fill="#b8b5ae">[84] Glove box light</text>
-
-  <text x="220" y="516" fill="#b8b5ae">[85] L footwell light</text>
-  <text x="220" y="528" fill="#b8b5ae">[86] R footwell light</text>
-  <text x="220" y="540" fill="#b8b5ae">[87] L lighter illumination</text>
-  <text x="220" y="552" fill="#b8b5ae">[88] R lighter illumination</text>
-  <text x="220" y="564" fill="#b8b5ae">[89] Trunk vanity (L)</text>
-  <text x="220" y="576" fill="#b8b5ae">[90] Trunk vanity (R)</text>
-  <text x="220" y="588" fill="#b8b5ae">[91] Driver visor mirror</text>
-  <text x="220" y="600" fill="#b8b5ae">[92] Driver mirror switch</text>
-  <text x="220" y="612" fill="#b8b5ae">[93] Passenger visor mirror</text>
-
-  <text x="420" y="516" fill="#b8b5ae">[94] Passenger mirror switch</text>
-  <text x="420" y="528" fill="#b8b5ae">[95] Cigarette lighter</text>
-  <text x="420" y="540" fill="#b8b5ae">[96] Power socket (trunk)</text>
-  <text x="420" y="552" fill="#58564f">F6 5A — vanity mirrors (+KL15)</text>
-  <text x="420" y="564" fill="#58564f">F47 20A — lighter / socket (+KL30)</text>
-  <text x="420" y="576" fill="#58564f">F52 30A — ZKE IV supply (+KL30)</text>
-  <text x="420" y="588" fill="#58564f">Interior lamp bus: 0.5 Ge/Sw</text>
-  <text x="420" y="600" fill="#58564f">All grounds: brown Br → X6002</text>
-
-  <text x="680" y="516" fill="#5488cc" font-weight="600">ZKE IV controls:</text>
-  <text x="680" y="528" fill="#84817a">· Interior lights (door / trunk trigger)</text>
-  <text x="680" y="540" fill="#84817a">· Illuminated entry delay (~30 s)</text>
-  <text x="680" y="552" fill="#84817a">· Power windows (Sch.10)</text>
-  <text x="680" y="564" fill="#84817a">· Central locking (Sch.10)</text>
-  <text x="680" y="576" fill="#84817a">· K-bus: 0.5 Br/Sw  IKE · LCM · Radio</text>
-  <text x="680" y="588" fill="#58564f">Module location: right side of footwell</text>
-  <text x="680" y="600" fill="#58564f">behind glove box on early cars,</text>
-  <text x="680" y="612" fill="#58564f">passenger kick panel on late E36</text>
-</g>
-</svg>
-  </div>
-  <div class="svg-frame" id="s6-detail" style="display:none"><!-- Scan loaded via JS --></div>
-  <div class="comp-index">
-    <div class="comp-item"><span class="comp-num">[77]</span><span class="comp-name">ZKE IV General Module</span></div>
-    <div class="comp-item"><span class="comp-num">[78]</span><span class="comp-name">Dome / map reading light</span></div>
-    <div class="comp-item"><span class="comp-num">[79]</span><span class="comp-name">Central locking switch</span></div>
-    <div class="comp-item"><span class="comp-num">[80-81]</span><span class="comp-name">Rear dome lights L/R</span></div>
-    <div class="comp-item"><span class="comp-num">[82-83]</span><span class="comp-name">Trunk lights L/R</span></div>
-    <div class="comp-item"><span class="comp-num">[84]</span><span class="comp-name">Glove box light</span></div>
-    <div class="comp-item"><span class="comp-num">[85-86]</span><span class="comp-name">Footwell lights pass/driver</span></div>
-    <div class="comp-item"><span class="comp-num">[87-88]</span><span class="comp-name">Lighter illumination F/R</span></div>
-    <div class="comp-item"><span class="comp-num">[89-90]</span><span class="comp-name">Additional trunk lights</span></div>
-    <div class="comp-item"><span class="comp-num">[91-94]</span><span class="comp-name">Vanity mirror lights + switches</span></div>
-    <div class="comp-item"><span class="comp-num">[95]</span><span class="comp-name">Cigarette lighter</span></div>
-    <div class="comp-item"><span class="comp-num">[96]</span><span class="comp-name">Power socket / charging</span></div>
-  </div>
-</section>
-
-<section class="schema-section" id="schema-8">
-  <div class="schema-head">
-    <div><h2>Wipers, Horn &amp; HVAC</h2><div class="schema-meta">Horn circuit · Washer jet heaters · Headlight washers · Blower fan · Windshield wipers · Rear wiper</div></div>
-    <div class="toggle-wrap"><button class="toggle-btn active" onclick="toggleView(8,'simple')"><div class="dot"></div>Simplified</button><button class="toggle-btn" onclick="toggleView(8,'detail')"><div class="dot"></div>ETM ref (RU)</button></div>
-  </div>
-  <div class="svg-frame" id="s8-simple">
-    <svg viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg" font-family="'IBM Plex Mono',monospace" font-size="9">
-<defs>
-  <pattern id="grid8" width="40" height="40" patternUnits="userSpaceOnUse">
-    <path d="M40,0 L0,0 0,40" fill="none" stroke="rgba(255,255,255,.025)" stroke-width=".5"/>
-  </pattern>
-  <symbol id="gnd8" viewBox="0 0 14 12">
-    <line x1="7" y1="0" x2="7" y2="4" stroke="#6b5a3a" stroke-width="1.5"/>
-    <line x1="0" y1="4" x2="14" y2="4" stroke="#6b5a3a" stroke-width="2"/>
-    <line x1="2" y1="7" x2="12" y2="7" stroke="#6b5a3a" stroke-width="1.5"/>
-    <line x1="4" y1="10" x2="10" y2="10" stroke="#6b5a3a" stroke-width="1"/>
-  </symbol>
-  <symbol id="motor8" viewBox="0 0 20 20">
-    <circle cx="10" cy="10" r="8" fill="#1d2330" stroke="currentColor" stroke-width="1.5"/>
-    <text x="10" y="14" fill="currentColor" font-size="9" font-weight="700" text-anchor="middle">M</text>
-  </symbol>
-  <symbol id="relay8" viewBox="0 0 30 22">
-    <rect x="0" y="0" width="30" height="22" fill="#1d2330" stroke="currentColor" stroke-width="1" rx="1" stroke-dasharray="3 1"/>
-    <line x1="5" y1="8" x2="10" y2="8" stroke="currentColor" stroke-width="1"/>
-    <ellipse cx="13" cy="8" rx="3" ry="3" fill="none" stroke="currentColor" stroke-width="1"/>
-    <line x1="20" y1="8" x2="25" y2="8" stroke="currentColor" stroke-width="1"/>
-    <line x1="5" y1="14" x2="25" y2="14" stroke="currentColor" stroke-width=".8"/>
-  </symbol>
-</defs>
-<rect width="1200" height="700" fill="#131720"/>
-<!-- HEADER -->
-<rect x="0" y="0" width="1200" height="26" fill="#1a1f2b"/>
-<rect x="0" y="25" width="1200" height="1" fill="#d4952a" opacity=".4"/>
-<text x="12" y="17" fill="#d4952a" font-size="9" font-weight="600" letter-spacing="2">WIPERS, HORN &amp; HVAC</text>
-<text x="84" y="17" fill="#84817a" font-size="9">HORN · WASHER JET HEATERS · HEADLIGHT WASHERS · BLOWER · WIPERS · REAR WIPER</text>
-<text x="1188" y="17" fill="#58564f" font-size="8" text-anchor="end">BMW E36 ETM · projekt36.com</text>
-
-<!-- ═══ HORN CIRCUIT ═══ -->
-<rect x="8" y="34" width="240" height="240" fill="none" stroke="rgba(212,149,42,.12)" stroke-dasharray="5 3"/>
-<rect x="8" y="34" width="80" height="13" fill="rgba(212,149,42,.07)"/>
-<text x="14" y="44" fill="#d4952a" font-size="8" font-weight="600" letter-spacing="1">HORN</text>
-
-<!-- F55 15A  F5 5A -->
-<rect x="22" y="56" width="65" height="18" fill="#1d2330" stroke="#cc3333" stroke-width="1.5"/>
-<text x="26" y="68" fill="#cc3333" font-size="7.5">F55  15A</text>
-<rect x="22" y="80" width="65" height="18" fill="#1d2330" stroke="#ee8833"/>
-<text x="26" y="92" fill="#ee8833" font-size="7.5">F5  5A</text>
-<text x="22" y="112" fill="#58564f" font-size="6">F55 = horn power (+KL30)</text>
-<text x="22" y="122" fill="#58564f" font-size="6">F5 = ZKE / button signal</text>
-
-<!-- ZKE IV horn control [118] -->
-<rect x="22" y="133" width="120" height="26" fill="#1d2330" stroke="#5488cc"/>
-<text x="30" y="148" fill="#5488cc" font-size="7.5">[118] ZKE IV  horn</text>
-<text x="30" y="158" fill="#58564f" font-size="6">Relay K14 inside ZKE</text>
-
-<!-- Clock spring [120] -->
-<rect x="22" y="170" width="100" height="24" fill="#1d2330" stroke="#ee8833"/>
-<text x="30" y="182" fill="#ecebe6" font-size="7.5">[120] Clock spring</text>
-<text x="30" y="191" fill="#58564f" font-size="6">Steering wheel slip ring</text>
-
-<!-- Horn button [121] -->
-<rect x="22" y="204" width="100" height="22" fill="#1d2330" stroke="#ee8833"/>
-<text x="30" y="219" fill="#ecebe6" font-size="7.5">[121] Horn button</text>
-<line x1="72" y1="204" x2="72" y2="194" stroke="#ee8833" stroke-width="1"/>
-
-<!-- Horn [119] -->
-<rect x="145" y="170" width="90" height="40" fill="#1d2330" stroke="#cccc33" stroke-width="1.5"/>
-<text x="155" y="189" fill="#cccc33" font-size="9" font-weight="700">[119]</text>
-<text x="155" y="203" fill="#cccc33" font-size="8" font-weight="700">HORN</text>
-<line x1="122" y1="182" x2="145" y2="182" stroke="#cc3333" stroke-width="1.2"/>
-<text x="124" y="179" fill="#cc3333" font-size="5.5">1.5 Rt</text>
-<line x1="87" y1="194" x2="87" y2="182" stroke="#ee8833" stroke-width="1"/>
-<line x1="87" y1="182" x2="145" y2="182" stroke="#ee8833" stroke-width=".8" stroke-dasharray="3 2"/>
-<use href="#gnd8" x="175" y="212" width="14" height="12"/>
-
-<!-- ═══ WASHER JET HEATERS ═══ -->
-<rect x="260" y="34" width="230" height="160" fill="none" stroke="rgba(212,149,42,.12)" stroke-dasharray="5 3"/>
-<rect x="260" y="34" width="170" height="13" fill="rgba(212,149,42,.07)"/>
-<text x="266" y="44" fill="#d4952a" font-size="8" font-weight="600" letter-spacing="1">WASHER JET HEATERS</text>
-
-<!-- F25 5A  F106 50A -->
-<rect x="276" y="56" width="60" height="18" fill="#1d2330" stroke="#cc3333"/>
-<text x="280" y="68" fill="#cc3333" font-size="7">F25  5A</text>
-<rect x="276" y="80" width="70" height="18" fill="#1d2330" stroke="#cc3333" stroke-width="1.5"/>
-<text x="280" y="92" fill="#cc3333" font-size="7">F106  50A</text>
-
-<!-- Jet heater element [122] -->
-<rect x="276" y="112" width="100" height="28" fill="#1d2330" stroke="#ee8833" stroke-width="1.5"/>
-<text x="284" y="124" fill="#ecebe6" font-size="7.5">[122] Jet heaters</text>
-<text x="284" y="135" fill="#84817a" font-size="6">Washer nozzle elements</text>
-
-<!-- Thermal cut-out [123] -->
-<rect x="390" y="112" width="90" height="28" fill="#1d2330" stroke="#84817a"/>
-<text x="398" y="124" fill="#ecebe6" font-size="7.5">[123] Thermo</text>
-<text x="398" y="135" fill="#84817a" font-size="6">cut-out safety</text>
-<line x1="376" y1="126" x2="390" y2="126" stroke="#ee8833" stroke-width="1"/>
-
-<text x="276" y="158" fill="#58564f" font-size="6">Auto-heats washer nozzles in sub-zero temps</text>
-<text x="276" y="169" fill="#58564f" font-size="6">Thermostat opens circuit at +3 °C</text>
-<use href="#gnd8" x="310" y="143" width="14" height="12"/>
-
-<!-- ═══ HEADLIGHT WASHERS ═══ -->
-<rect x="500" y="34" width="230" height="160" fill="none" stroke="rgba(212,149,42,.12)" stroke-dasharray="5 3"/>
-<rect x="500" y="34" width="170" height="13" fill="rgba(212,149,42,.07)"/>
-<text x="506" y="44" fill="#d4952a" font-size="8" font-weight="600" letter-spacing="1">HEADLIGHT WASHERS</text>
-
-<!-- F51 30A -->
-<rect x="516" y="56" width="65" height="18" fill="#1d2330" stroke="#cc3333" stroke-width="1.5"/>
-<text x="520" y="68" fill="#cc3333" font-size="7.5">F51  30A</text>
-
-<!-- Relay [124] -->
-<use href="#relay8" x="516" y="90" width="30" height="22" color="#a878d0"/>
-<rect x="516" y="88" width="80" height="24" fill="#1d2330" stroke="#a878d0"/>
-<text x="524" y="100" fill="#a878d0" font-size="7.5">[124] Relay</text>
-<text x="524" y="110" fill="#58564f" font-size="6">Washer relay K25</text>
-<line x1="549" y1="74" x2="549" y2="88" stroke="#cc3333" stroke-width="1.2"/>
-
-<!-- Pump motor [125] -->
-<rect x="620" y="88" width="90" height="40" fill="#1d2330" stroke="#5488cc" stroke-width="1.5"/>
-<circle cx="650" cy="108" r="10" fill="none" stroke="#5488cc" stroke-width="1.5"/>
-<text x="646" y="112" fill="#5488cc" font-size="8" font-weight="700">M</text>
-<text x="668" y="104" fill="#84817a" font-size="6">[125]</text>
-<text x="668" y="114" fill="#58564f" font-size="6">Pump motor</text>
-<line x1="596" y1="100" x2="620" y2="100" stroke="#5488cc" stroke-width="1.2"/>
-<text x="598" y="97" fill="#84817a" font-size="6">1.5 Sw/Bl</text>
-<use href="#gnd8" x="650" y="130" width="14" height="12"/>
-
-<text x="516" y="160" fill="#58564f" font-size="6">Headlight washer: present on M-Tech / Sport variants</text>
-<text x="516" y="171" fill="#58564f" font-size="6">Check bumper for nozzle holes  ·  F51 30A from KL30</text>
-
-<!-- ═══ HEATER BLOWER ═══ -->
-<rect x="8" y="290" width="350" height="230" fill="none" stroke="rgba(212,149,42,.12)" stroke-dasharray="5 3"/>
-<rect x="8" y="290" width="120" height="13" fill="rgba(212,149,42,.07)"/>
-<text x="14" y="300" fill="#d4952a" font-size="8" font-weight="600" letter-spacing="1">HEATER BLOWER</text>
-
-<!-- F50 40A -->
-<rect x="22" y="314" width="65" height="18" fill="#1d2330" stroke="#cc3333" stroke-width="1.5"/>
-<text x="26" y="326" fill="#cc3333" font-size="7.5">F50  40A</text>
-
-<!-- HVAC / heater control unit [129] -->
-<rect x="22" y="346" width="130" height="30" fill="#1d2330" stroke="#a878d0" stroke-width="1.5"/>
-<text x="30" y="361" fill="#a878d0" font-size="8" font-weight="600">[129] HVAC ctrl</text>
-<text x="30" y="373" fill="#58564f" font-size="6">Heater head unit</text>
-
-<!-- Blower resistor / final stage [126] -->
-<rect x="22" y="392" width="130" height="35" fill="#1d2330" stroke="#ee8833"/>
-<text x="30" y="406" fill="#ecebe6" font-size="7.5">[126] Blower resistor</text>
-<text x="30" y="418" fill="#84817a" font-size="6">Wire wound  (heating only)</text>
-<text x="30" y="427" fill="#58564f" font-size="6">IHKA: PWM final stage unit</text>
-<line x1="87" y1="376" x2="87" y2="392" stroke="#ee8833" stroke-width="1"/>
-
-<!-- Blower motor [127] -->
-<rect x="200" y="378" width="90" height="40" fill="#1d2330" stroke="#5488cc" stroke-width="1.5"/>
-<circle cx="230" cy="398" r="12" fill="none" stroke="#5488cc" stroke-width="2"/>
-<text x="225" y="403" fill="#5488cc" font-size="9" font-weight="700">M</text>
-<text x="250" y="395" fill="#84817a" font-size="6">[127]</text>
-<text x="250" y="405" fill="#58564f" font-size="6">Blower</text>
-<line x1="152" y1="404" x2="200" y2="398" stroke="#5488cc" stroke-width="1.2"/>
-<text x="155" y="401" fill="#84817a" font-size="6">1.5 Sw/Ge</text>
-<use href="#gnd8" x="230" y="420" width="14" height="12"/>
-
-<!-- IHKA vs heater-only warning -->
-<rect x="22" y="448" width="328" height="60" fill="rgba(204,51,51,.06)" stroke="rgba(204,51,51,.4)"/>
-<text x="32" y="464" fill="#cc3333" font-size="8" font-weight="700">IHKA vs HEATING-ONLY DIFFERENCE</text>
-<text x="32" y="478" fill="#b8b5ae" font-size="7">Heating-only: wire-wound resistor [126] in blower duct</text>
-<text x="32" y="490" fill="#b8b5ae" font-size="7">IHKA (A/C): electronic PWM final stage unit — NOT interchangeable!</text>
-<text x="32" y="502" fill="#58564f" font-size="6">Identify: check if 7-pin or 10-pin connector on heater head</text>
-
-<!-- ═══ WINDSHIELD WIPER / WASHER ═══ -->
-<rect x="370" y="200" width="380" height="240" fill="none" stroke="rgba(212,149,42,.12)" stroke-dasharray="5 3"/>
-<rect x="370" y="200" width="210" height="13" fill="rgba(212,149,42,.07)"/>
-<text x="376" y="210" fill="#d4952a" font-size="8" font-weight="600" letter-spacing="1">WINDSHIELD WIPER / WASHER</text>
-
-<!-- ZKE IV wiper control [77] -->
-<rect x="386" y="224" width="130" height="30" fill="#1d2330" stroke="#5488cc" stroke-width="1.5"/>
-<text x="395" y="239" fill="#5488cc" font-size="8" font-weight="600">[77] ZKE IV</text>
-<text x="395" y="250" fill="#58564f" font-size="6">Wiper relay R12/R13</text>
-
-<!-- Wiper stalk [128] -->
-<rect x="386" y="266" width="130" height="28" fill="#1d2330" stroke="#ee8833"/>
-<text x="394" y="280" fill="#ecebe6" font-size="7.5">[128] Wiper stalk</text>
-<text x="394" y="290" fill="#58564f" font-size="6">Speed: off / int / slow / fast</text>
-<line x1="451" y1="254" x2="451" y2="266" stroke="#ee8833" stroke-width="1"/>
-
-<!-- Wiper motor [130] -->
-<rect x="570" y="224" width="90" height="42" fill="#1d2330" stroke="#5488cc" stroke-width="1.5"/>
-<circle cx="600" cy="245" r="12" fill="none" stroke="#5488cc" stroke-width="2"/>
-<text x="595" y="250" fill="#5488cc" font-size="9" font-weight="700">M</text>
-<text x="622" y="241" fill="#84817a" font-size="6">[130]</text>
-<text x="622" y="251" fill="#58564f" font-size="6">Wiper</text>
-<line x1="516" y1="239" x2="570" y2="239" stroke="#5488cc" stroke-width="1.2"/>
-<text x="520" y="236" fill="#84817a" font-size="6">1.5 Gn/Ge</text>
-<use href="#gnd8" x="600" y="268" width="14" height="12"/>
-
-<!-- Washer pump [131] -->
-<rect x="570" y="284" width="90" height="40" fill="#1d2330" stroke="#33aa33" stroke-width="1.5"/>
-<circle cx="600" cy="304" r="10" fill="none" stroke="#33aa33" stroke-width="1.5"/>
-<text x="595" y="308" fill="#33aa33" font-size="8" font-weight="700">M</text>
-<text x="622" y="300" fill="#84817a" font-size="6">[131]</text>
-<text x="622" y="310" fill="#58564f" font-size="6">Washer</text>
-<text x="386" y="315" fill="#58564f" font-size="6">Washer→wiper interlock via ZKE</text>
-<text x="386" y="326" fill="#58564f" font-size="6">Wiper runs 3× after washer pulse</text>
-<use href="#gnd8" x="600" y="326" width="14" height="12"/>
-
-<!-- Interval relay / timer -->
-<rect x="386" y="344" width="250" height="22" fill="#181d28" stroke="rgba(84,136,204,.2)"/>
-<text x="394" y="358" fill="#5488cc" font-size="7">Interval: ZKE R12 · delay: 2–30 s · LIN input [128]</text>
-<text x="386" y="404" fill="#58564f" font-size="6">Park position: motor internal limit switch</text>
-<text x="386" y="415" fill="#58564f" font-size="6">Always parks at bottom before next cycle</text>
-
-<!-- ═══ REAR WIPER / WASHER ═══ -->
-<rect x="760" y="200" width="420" height="200" fill="none" stroke="rgba(212,149,42,.12)" stroke-dasharray="5 3"/>
-<rect x="760" y="200" width="180" height="13" fill="rgba(212,149,42,.07)"/>
-<text x="766" y="210" fill="#d4952a" font-size="8" font-weight="600" letter-spacing="1">REAR WIPER / WASHER</text>
-<text x="920" y="210" fill="#58564f" font-size="7">Touring / Compact only</text>
-
-<!-- Rear wiper control [132] -->
-<rect x="776" y="224" width="130" height="28" fill="#1d2330" stroke="#a878d0"/>
-<text x="784" y="238" fill="#a878d0" font-size="7.5">[132] Rear ctrl</text>
-<text x="784" y="249" fill="#58564f" font-size="6">Relay module (boot)</text>
-
-<!-- Trunk lid switch [133] -->
-<rect x="776" y="264" width="130" height="26" fill="#1d2330" stroke="#84817a"/>
-<text x="784" y="276" fill="#ecebe6" font-size="7.5">[133] Trunk SW</text>
-<text x="784" y="287" fill="#58564f" font-size="6">Disables wiper when open</text>
-<line x1="841" y1="252" x2="841" y2="264" stroke="#84817a" stroke-width="1"/>
-
-<!-- Rear wiper motor [134] -->
-<rect x="970" y="224" width="90" height="40" fill="#1d2330" stroke="#33aa33" stroke-width="1.5"/>
-<circle cx="1000" cy="244" r="12" fill="none" stroke="#33aa33" stroke-width="2"/>
-<text x="995" y="249" fill="#33aa33" font-size="9" font-weight="700">M</text>
-<text x="1022" y="240" fill="#84817a" font-size="6">[134]</text>
-<text x="1022" y="250" fill="#58564f" font-size="6">Rear</text>
-<text x="1022" y="260" fill="#58564f" font-size="6">wiper</text>
-<line x1="906" y1="238" x2="970" y2="238" stroke="#33aa33" stroke-width="1.2"/>
-<text x="910" y="235" fill="#84817a" font-size="6">1.0 Gn/Sw</text>
-<use href="#gnd8" x="1000" y="267" width="14" height="12"/>
-
-<!-- Rear washer pump [135] -->
-<rect x="970" y="284" width="90" height="35" fill="#1d2330" stroke="#33aa33"/>
-<circle cx="1000" cy="301" r="9" fill="none" stroke="#33aa33" stroke-width="1.5"/>
-<text x="996" y="305" fill="#33aa33" font-size="8" font-weight="700">M</text>
-<text x="1022" y="297" fill="#84817a" font-size="6">[135]</text>
-<text x="1022" y="307" fill="#58564f" font-size="6">Washer</text>
-<use href="#gnd8" x="1000" y="322" width="14" height="12"/>
-
-<text x="776" y="322" fill="#58564f" font-size="6">Sedan = no rear wiper  ·  Coupe = rear wiper standard</text>
-<text x="776" y="333" fill="#58564f" font-size="6">Touring: heated rear washer nozzle optional</text>
-
-<!-- ═══ COMPONENT INDEX ═══ -->
-<rect x="8" y="534" width="1184" height="148" fill="#181d28" stroke="rgba(212,149,42,.15)"/>
-<text x="20" y="552" fill="#d4952a" font-size="8" font-weight="600" letter-spacing="1.5">COMPONENT INDEX</text>
-<g font-size="7">
-  <text x="20" y="568" fill="#b8b5ae">[118] ZKE IV horn relay</text>
-  <text x="20" y="580" fill="#b8b5ae">[119] Horn (single/dual)</text>
-  <text x="20" y="592" fill="#b8b5ae">[120] Clock spring (slip ring)</text>
-  <text x="20" y="604" fill="#b8b5ae">[121] Horn button (wheel)</text>
-  <text x="20" y="616" fill="#b8b5ae">[122] Washer jet heaters</text>
-  <text x="20" y="628" fill="#b8b5ae">[123] Thermal cut-out</text>
-  <text x="20" y="640" fill="#b8b5ae">[124] Headlight washer relay</text>
-  <text x="20" y="652" fill="#b8b5ae">[125] Headlight washer pump</text>
-
-  <text x="220" y="568" fill="#b8b5ae">[126] Blower resistor/final stage</text>
-  <text x="220" y="580" fill="#b8b5ae">[127] Blower motor</text>
-  <text x="220" y="592" fill="#b8b5ae">[128] Wiper stalk switch</text>
-  <text x="220" y="604" fill="#b8b5ae">[129] HVAC control unit</text>
-  <text x="220" y="616" fill="#b8b5ae">[130] Windshield wiper motor</text>
-  <text x="220" y="628" fill="#b8b5ae">[131] Windshield washer pump</text>
-  <text x="220" y="640" fill="#b8b5ae">[132] Rear wiper relay</text>
-  <text x="220" y="652" fill="#b8b5ae">[133] Trunk lid switch</text>
-
-  <text x="440" y="568" fill="#b8b5ae">[134] Rear wiper motor</text>
-  <text x="440" y="580" fill="#b8b5ae">[135] Rear washer pump</text>
-  <text x="440" y="592" fill="#58564f">F5 5A — horn signal/ZKE</text>
-  <text x="440" y="604" fill="#58564f">F25 5A — jet heater supply</text>
-  <text x="440" y="616" fill="#58564f">F50 40A — blower motor</text>
-  <text x="440" y="628" fill="#58564f">F51 30A — headlight washers</text>
-  <text x="440" y="640" fill="#58564f">F55 15A — horn power</text>
-  <text x="440" y="652" fill="#58564f">F106 50A — jet heater main</text>
-
-  <text x="680" y="568" fill="#84817a">Wire sizes (typical):</text>
-  <text x="680" y="580" fill="#84817a">Horn: 1.5 Rt  ·  signal: 0.5 Ws/Sw</text>
-  <text x="680" y="592" fill="#84817a">Blower: 1.5 – 2.5 Sw/Ge / Sw/Bl</text>
-  <text x="680" y="604" fill="#84817a">Wiper: 1.5 Gn/Ge  ·  washer: 1.0 Sw</text>
-  <text x="680" y="616" fill="#84817a">Rear wiper: 1.0 Gn/Sw</text>
-  <text x="680" y="628" fill="#58564f">Grounds: brown Br → X6001/X6002</text>
-  <text x="680" y="640" fill="#58564f">Wiper park: internal motor limit switch</text>
-</g>
-</svg>
-  </div>
-  <div class="svg-frame" id="s8-detail" style="display:none"><!-- Scan loaded via JS --></div>
-</section>
-
-<section class="schema-section" id="schema-10">
-  <div class="schema-head">
-    <div><h2>Windows, Locks &amp; Mirrors</h2><div class="schema-meta">Power windows · Electric mirrors · Central locking · Heated seats · ZKE IV integration</div></div>
-    <div class="toggle-wrap"><button class="toggle-btn active" onclick="toggleView(10,'simple')"><div class="dot"></div>Simplified</button><button class="toggle-btn" onclick="toggleView(10,'detail')"><div class="dot"></div>ETM ref (RU)</button></div>
-  </div>
-  <div class="svg-frame" id="s10-simple">
-    <svg viewBox="0 0 1200 730" xmlns="http://www.w3.org/2000/svg" font-family="'IBM Plex Mono',monospace" font-size="9">
-<defs>
-  <pattern id="grid10" width="40" height="40" patternUnits="userSpaceOnUse">
-    <path d="M40,0 L0,0 0,40" fill="none" stroke="rgba(255,255,255,.025)" stroke-width=".5"/>
-  </pattern>
-  <symbol id="gnd10" viewBox="0 0 14 12">
-    <line x1="7" y1="0" x2="7" y2="4" stroke="#6b5a3a" stroke-width="1.5"/>
-    <line x1="0" y1="4" x2="14" y2="4" stroke="#6b5a3a" stroke-width="2"/>
-    <line x1="2" y1="7" x2="12" y2="7" stroke="#6b5a3a" stroke-width="1.5"/>
-    <line x1="4" y1="10" x2="10" y2="10" stroke="#6b5a3a" stroke-width="1"/>
-  </symbol>
-  <symbol id="motor10" viewBox="0 0 20 20">
-    <circle cx="10" cy="10" r="8" fill="#1d2330" stroke="currentColor" stroke-width="1.5"/>
-    <text x="10" y="14" fill="currentColor" font-size="9" font-weight="700" text-anchor="middle">M</text>
-  </symbol>
-</defs>
-<rect width="1200" height="730" fill="#131720"/>
-<!-- HEADER -->
-<rect x="0" y="0" width="1200" height="26" fill="#1a1f2b"/>
-<rect x="0" y="25" width="1200" height="1" fill="#d4952a" opacity=".4"/>
-<text x="12" y="17" fill="#d4952a" font-size="9" font-weight="600" letter-spacing="2">WINDOWS, LOCKS &amp; MIRRORS</text>
-<text x="96" y="17" fill="#84817a" font-size="9">POWER WINDOWS · ELECTRIC MIRRORS · CENTRAL LOCKING · HEATED SEATS</text>
-<text x="1188" y="17" fill="#58564f" font-size="8" text-anchor="end">BMW E36 ETM · projekt36.com</text>
-
-<!-- ═══ ZKE IV CENTRAL HUB ═══ -->
-<rect x="390" y="34" width="420" height="55" fill="#1d2330" stroke="#5488cc" stroke-width="2"/>
-<text x="460" y="57" fill="#5488cc" font-size="14" font-weight="700">[77] ZKE IV  —  GENERAL MODULE</text>
-<text x="460" y="73" fill="#84817a" font-size="7.5">Controls: power windows · central locking · interior lights (Sch.6) · K-bus interface</text>
-
-<!-- K-bus line from ZKE -->
-<line x1="600" y1="89" x2="600" y2="105" stroke="#5488cc" stroke-width="1" stroke-dasharray="4 2"/>
-<text x="604" y="98" fill="#58564f" font-size="6">K-bus  0.5 Br/Sw</text>
-
-<!-- ═══ POWER WINDOWS ═══ -->
-<rect x="8" y="120" width="1184" height="175" fill="none" stroke="rgba(212,149,42,.12)" stroke-dasharray="5 3"/>
-<rect x="8" y="120" width="130" height="13" fill="rgba(212,149,42,.07)"/>
-<text x="14" y="130" fill="#d4952a" font-size="8" font-weight="600" letter-spacing="1">POWER WINDOWS</text>
-
-<!-- F60 25A -->
-<rect x="22" y="144" width="70" height="18" fill="#1d2330" stroke="#cc3333" stroke-width="1.5"/>
-<text x="26" y="156" fill="#cc3333" font-size="7.5">F60  25A</text>
-<text x="100" y="156" fill="#58564f" font-size="6">+KL30 permanent</text>
-
-<!-- Horizontal power bus for windows -->
-<line x1="57" y1="162" x2="57" y2="175" stroke="#cc3333" stroke-width="1.5"/>
-<line x1="57" y1="175" x2="1175" y2="175" stroke="#cc3333" stroke-width="1.2"/>
-<text x="22" y="186" fill="#58564f" font-size="6">2.5 Rt/Sw  →  all door modules via ZKE</text>
-
-<!-- Driver door [151] - two motors -->
-<rect x="140" y="195" width="220" height="60" fill="#1d2330" stroke="#ee8833" stroke-width="1.5"/>
-<text x="152" y="212" fill="#ecebe6" font-size="7.5" font-weight="600">[151] Driver door</text>
-<!-- window motor -->
-<circle cx="175" cy="235" r="11" fill="none" stroke="#ee8833" stroke-width="1.5"/>
-<text x="170" y="239" fill="#ee8833" font-size="8" font-weight="700">M</text>
-<text x="188" y="232" fill="#84817a" font-size="6">Window</text>
-<text x="188" y="241" fill="#58564f" font-size="6">regulator</text>
-<!-- lock motor -->
-<circle cx="275" cy="235" r="11" fill="none" stroke="#ee8833" stroke-width="1.5"/>
-<text x="270" y="239" fill="#ee8833" font-size="8" font-weight="700">M</text>
-<text x="288" y="232" fill="#84817a" font-size="6">Lock</text>
-<text x="288" y="241" fill="#58564f" font-size="6">actuator</text>
-<use href="#gnd10" x="225" y="248" width="14" height="12"/>
-<text x="152" y="258" fill="#58564f" font-size="6">1.5 Gn/Ge · Gn/Rt per direction</text>
-<line x1="225" y1="175" x2="225" y2="195" stroke="#cc3333" stroke-width="1"/>
-
-<!-- Passenger door [152] -->
-<rect x="380" y="195" width="220" height="60" fill="#1d2330" stroke="#33aa33" stroke-width="1.5"/>
-<text x="392" y="212" fill="#ecebe6" font-size="7.5" font-weight="600">[152] Passenger door</text>
-<circle cx="415" cy="235" r="11" fill="none" stroke="#33aa33" stroke-width="1.5"/>
-<text x="410" y="239" fill="#33aa33" font-size="8" font-weight="700">M</text>
-<text x="428" y="232" fill="#84817a" font-size="6">Window</text>
-<circle cx="515" cy="235" r="11" fill="none" stroke="#33aa33" stroke-width="1.5"/>
-<text x="510" y="239" fill="#33aa33" font-size="8" font-weight="700">M</text>
-<text x="528" y="232" fill="#84817a" font-size="6">Lock</text>
-<use href="#gnd10" x="465" y="248" width="14" height="12"/>
-<text x="392" y="258" fill="#58564f" font-size="6">1.5 Gn/Sw · Gn/Vi per direction</text>
-<line x1="465" y1="175" x2="465" y2="195" stroke="#cc3333" stroke-width="1"/>
-
-<!-- Rear L [153] -->
-<rect x="620" y="195" width="220" height="60" fill="#1d2330" stroke="#5488cc" stroke-width="1.5"/>
-<text x="632" y="212" fill="#ecebe6" font-size="7.5" font-weight="600">[153] Rear L door</text>
-<circle cx="655" cy="235" r="11" fill="none" stroke="#5488cc" stroke-width="1.5"/>
-<text x="650" y="239" fill="#5488cc" font-size="8" font-weight="700">M</text>
-<text x="668" y="232" fill="#84817a" font-size="6">Window</text>
-<circle cx="755" cy="235" r="11" fill="none" stroke="#5488cc" stroke-width="1.5"/>
-<text x="750" y="239" fill="#5488cc" font-size="8" font-weight="700">M</text>
-<text x="768" y="232" fill="#84817a" font-size="6">Lock</text>
-<use href="#gnd10" x="705" y="248" width="14" height="12"/>
-<text x="632" y="258" fill="#58564f" font-size="6">Coupe rear = no window motor</text>
-<line x1="705" y1="175" x2="705" y2="195" stroke="#cc3333" stroke-width="1"/>
-
-<!-- Rear R [154] -->
-<rect x="860" y="195" width="220" height="60" fill="#1d2330" stroke="#5488cc" stroke-width="1.5"/>
-<text x="872" y="212" fill="#ecebe6" font-size="7.5" font-weight="600">[154] Rear R door</text>
-<circle cx="895" cy="235" r="11" fill="none" stroke="#5488cc" stroke-width="1.5"/>
-<text x="890" y="239" fill="#5488cc" font-size="8" font-weight="700">M</text>
-<text x="908" y="232" fill="#84817a" font-size="6">Window</text>
-<circle cx="995" cy="235" r="11" fill="none" stroke="#5488cc" stroke-width="1.5"/>
-<text x="990" y="239" fill="#5488cc" font-size="8" font-weight="700">M</text>
-<text x="1008" y="232" fill="#84817a" font-size="6">Lock</text>
-<use href="#gnd10" x="945" y="248" width="14" height="12"/>
-<text x="872" y="258" fill="#58564f" font-size="6">Sedan/Touring only</text>
-<line x1="945" y1="175" x2="945" y2="195" stroke="#cc3333" stroke-width="1"/>
-
-<!-- One-touch / anti-pinch note -->
-<rect x="1100" y="195" width="82" height="60" fill="rgba(84,136,204,.06)" stroke="rgba(84,136,204,.3)"/>
-<text x="1108" y="212" fill="#5488cc" font-size="7">One-touch:</text>
-<text x="1108" y="224" fill="#84817a" font-size="6">ZKE IV only</text>
-<text x="1108" y="236" fill="#84817a" font-size="6">316i base =</text>
-<text x="1108" y="248" fill="#84817a" font-size="6">no ZKE →</text>
-<text x="1108" y="260" fill="#84817a" font-size="6">relay retrofit</text>
-
-<!-- ═══ ELECTRIC MIRRORS ═══ -->
-<rect x="8" y="310" width="430" height="190" fill="none" stroke="rgba(212,149,42,.12)" stroke-dasharray="5 3"/>
-<rect x="8" y="310" width="130" height="13" fill="rgba(212,149,42,.07)"/>
-<text x="14" y="320" fill="#d4952a" font-size="8" font-weight="600" letter-spacing="1">ELECTRIC MIRRORS</text>
-
-<!-- F31 5A  F25 5A -->
-<rect x="22" y="334" width="60" height="18" fill="#1d2330" stroke="#cc3333"/>
-<text x="26" y="346" fill="#cc3333" font-size="7">F31  5A</text>
-<rect x="88" y="334" width="60" height="18" fill="#1d2330" stroke="#cc3333"/>
-<text x="92" y="346" fill="#cc3333" font-size="7">F25  5A</text>
-<text x="155" y="346" fill="#58564f" font-size="6">+KL15</text>
-
-<!-- Mirror selector / switch [155] -->
-<rect x="22" y="366" width="130" height="30" fill="#1d2330" stroke="#33aa33" stroke-width="1.5"/>
-<text x="30" y="380" fill="#ecebe6" font-size="7.5">[155] Mirror switch</text>
-<text x="30" y="391" fill="#58564f" font-size="6">L / R select + direction</text>
-<line x1="52" y1="352" x2="52" y2="366" stroke="#cc3333" stroke-width="1"/>
-
-<!-- Driver mirror [156] - 2 motors -->
-<rect x="22" y="408" width="160" height="45" fill="#1d2330" stroke="#33aa33" stroke-width="1.5"/>
-<text x="32" y="422" fill="#ecebe6" font-size="7.5">[156] Driver mirror</text>
-<circle cx="55" cy="440" r="9" fill="none" stroke="#33aa33" stroke-width="1.5"/>
-<text x="51" y="444" fill="#33aa33" font-size="8">M</text>
-<text x="66" y="437" fill="#84817a" font-size="6">H/V</text>
-<text x="66" y="446" fill="#58564f" font-size="5.5">adjust</text>
-<!-- heated element -->
-<rect x="115" y="430" width="55" height="20" fill="#1d2330" stroke="#cc3333" stroke-dasharray="2 1"/>
-<text x="120" y="443" fill="#cc3333" font-size="6.5">Heated</text>
-<use href="#gnd10" x="75" y="450" width="14" height="12"/>
-<line x1="87" y1="396" x2="87" y2="408" stroke="#33aa33" stroke-width="1"/>
-
-<!-- Passenger mirror [157] - 3 motors (H, V, fold) -->
-<rect x="200" y="408" width="220" height="45" fill="#1d2330" stroke="#33aa33" stroke-width="1.5"/>
-<text x="210" y="422" fill="#ecebe6" font-size="7.5">[157] Passenger mirror</text>
-<circle cx="230" cy="440" r="9" fill="none" stroke="#33aa33" stroke-width="1.5"/>
-<text x="226" y="444" fill="#33aa33" font-size="8">M</text>
-<text x="241" y="437" fill="#84817a" font-size="6">H/V</text>
-<circle cx="300" cy="440" r="9" fill="none" stroke="#33aa33" stroke-width="1.5"/>
-<text x="296" y="444" fill="#33aa33" font-size="8">M</text>
-<text x="311" y="437" fill="#84817a" font-size="6">Fold</text>
-<rect x="360" y="430" width="50" height="20" fill="#1d2330" stroke="#cc3333" stroke-dasharray="2 1"/>
-<text x="365" y="443" fill="#cc3333" font-size="6.5">Heated</text>
-<use href="#gnd10" x="265" y="450" width="14" height="12"/>
-<text x="210" y="491" fill="#58564f" font-size="6">Pass. mirror: 3rd motor for folding (M-Sport / optional)</text>
-<line x1="87" y1="396" x2="265" y2="408" stroke="#33aa33" stroke-width=".8" stroke-dasharray="3 2"/>
-
-<!-- Heated mirror supply -->
-<text x="22" y="490" fill="#58564f" font-size="6">Mirror heat: +KL58 (ignition) ·  1.0 Rt/Bl  · both mirrors in parallel</text>
-
-<!-- ═══ CENTRAL LOCKING ═══ -->
-<rect x="450" y="310" width="380" height="190" fill="none" stroke="rgba(212,149,42,.12)" stroke-dasharray="5 3"/>
-<rect x="450" y="310" width="145" height="13" fill="rgba(212,149,42,.07)"/>
-<text x="456" y="320" fill="#d4952a" font-size="8" font-weight="600" letter-spacing="1">CENTRAL LOCKING</text>
-
-<!-- F42 30A -->
-<rect x="466" y="334" width="70" height="18" fill="#1d2330" stroke="#cc3333" stroke-width="1.5"/>
-<text x="470" y="346" fill="#cc3333" font-size="7.5">F42  30A</text>
-
-<!-- CL relay module [158] -->
-<rect x="466" y="366" width="145" height="35" fill="#1d2330" stroke="#a878d0" stroke-width="1.5"/>
-<text x="476" y="381" fill="#a878d0" font-size="8" font-weight="600">[158] CL Module</text>
-<text x="476" y="393" fill="#58564f" font-size="6">Relay board in fusebox area</text>
-<line x1="501" y1="352" x2="501" y2="366" stroke="#cc3333" stroke-width="1.2"/>
-
-<!-- Door lock actuators connected to CL module -->
-<text x="466" y="418" fill="#84817a" font-size="7">Output: lock actuators in all 4 doors</text>
-<text x="466" y="430" fill="#58564f" font-size="6">2.5 Gn/Vi = lock  ·  2.5 Gn/Gn = unlock</text>
-<text x="466" y="442" fill="#58564f" font-size="6">ZKE IV K-bus triggers CL relay</text>
-<text x="466" y="454" fill="#58564f" font-size="6">Key cylinder: driver door direct input</text>
-<text x="466" y="466" fill="#58564f" font-size="6">Remote: 315/433 MHz via radio module</text>
-
-<!-- K-bus interface note -->
-<rect x="630" y="366" width="185" height="60" fill="rgba(84,136,204,.06)" stroke="rgba(84,136,204,.3)"/>
-<text x="640" y="382" fill="#5488cc" font-size="7">K-bus  0.35 Ws/Rt/Ge</text>
-<text x="640" y="394" fill="#84817a" font-size="6">ZKE ↔ CL ↔ alarm · RF</text>
-<text x="640" y="406" fill="#84817a" font-size="6">Speed-dependent auto-lock</text>
-<text x="640" y="417" fill="#58564f" font-size="6">via INPA: close-not-locked fault</text>
-
-<!-- ═══ HEATED SEATS ═══ -->
-<rect x="843" y="310" width="349" height="190" fill="none" stroke="rgba(212,149,42,.12)" stroke-dasharray="5 3"/>
-<rect x="843" y="310" width="115" height="13" fill="rgba(212,149,42,.07)"/>
-<text x="849" y="320" fill="#d4952a" font-size="8" font-weight="600" letter-spacing="1">HEATED SEATS</text>
-
-<!-- F12 7.5A -->
-<rect x="859" y="334" width="70" height="18" fill="#1d2330" stroke="#cc3333"/>
-<text x="863" y="346" fill="#cc3333" font-size="7.5">F12  7.5A</text>
-<text x="937" y="346" fill="#58564f" font-size="6">+KL15</text>
-
-<!-- Seat heat switch [158] -->
-<rect x="859" y="366" width="120" height="26" fill="#1d2330" stroke="#ee8833"/>
-<text x="867" y="378" fill="#ecebe6" font-size="7.5">[158] Seat switch</text>
-<text x="867" y="388" fill="#58564f" font-size="6">2-stage: low / high</text>
-<line x1="894" y1="352" x2="894" y2="366" stroke="#cc3333" stroke-width="1"/>
-
-<!-- Driver cushion [159] + backrest [160] -->
-<rect x="859" y="404" width="145" height="42" fill="#1d2330" stroke="#cc3333" stroke-width="1.5"/>
-<text x="867" y="418" fill="#ecebe6" font-size="7.5">[159] Driver cushion</text>
-<text x="867" y="430" fill="#84817a" font-size="6">Heating element ~ 35 W</text>
-<rect x="867" y="435" width="115" height="8" fill="#1d2330" stroke="#cc3333" stroke-dasharray="2 1"/>
-<text x="877" y="442" fill="#84817a" font-size="6">[160] backrest element</text>
-<use href="#gnd10" x="900" y="447" width="14" height="12"/>
-<line x1="919" y1="392" x2="919" y2="404" stroke="#cc3333" stroke-width="1"/>
-
-<!-- Pass. cushion [162] + backrest [161] -->
-<rect x="1020" y="404" width="155" height="42" fill="#1d2330" stroke="#cc3333" stroke-width="1.5"/>
-<text x="1028" y="418" fill="#ecebe6" font-size="7.5">[162] Pass. cushion</text>
-<text x="1028" y="430" fill="#84817a" font-size="6">Heating element ~ 35 W</text>
-<rect x="1028" y="435" width="115" height="8" fill="#1d2330" stroke="#cc3333" stroke-dasharray="2 1"/>
-<text x="1038" y="442" fill="#84817a" font-size="6">[161] backrest element</text>
-<use href="#gnd10" x="1060" y="447" width="14" height="12"/>
-
-<text x="859" y="468" fill="#58564f" font-size="6">1.5 Gn/Vi feed  ·  1.5 Br / 2.5 Br ground</text>
-<text x="859" y="478" fill="#58564f" font-size="6">Bi-metal thermo-sensor in cushion: ~50 °C cut-off</text>
-
-<!-- ═══ RETROFIT NOTE ═══ -->
-<rect x="8" y="514" width="1184" height="70" fill="rgba(212,149,42,.04)" stroke="rgba(212,149,42,.2)"/>
-<text x="20" y="532" fill="#d4952a" font-size="8" font-weight="700">POWER WINDOW RETROFIT (base 316i with manual cranks)</text>
-<g font-size="7">
-  <text x="20" y="548" fill="#b8b5ae">Parts needed: electric regulators × 4 · motors × 4 · door harnesses × 4 · switch panels × 4 · ZKE IV module · wiring plugs</text>
-  <text x="20" y="560" fill="#b8b5ae">Without ZKE IV: wire via relays only (basic up/down, NO one-touch, NO speed-lock)</text>
-  <text x="20" y="572" fill="#cc3333">Initialization after install: fully open → fully close → hold UP switch 5 s → system learns end-stops</text>
-</g>
-
-<!-- ═══ COMPONENT INDEX ═══ -->
-<rect x="8" y="596" width="1184" height="120" fill="#181d28" stroke="rgba(212,149,42,.15)"/>
-<text x="20" y="614" fill="#d4952a" font-size="8" font-weight="600" letter-spacing="1.5">COMPONENT INDEX</text>
-<g font-size="7">
-  <text x="20" y="630" fill="#b8b5ae">[77] ZKE IV General Module</text>
-  <text x="20" y="642" fill="#b8b5ae">[151] Driver door (window + lock)</text>
-  <text x="20" y="654" fill="#b8b5ae">[152] Passenger door (window + lock)</text>
-  <text x="20" y="666" fill="#b8b5ae">[153] Rear L door (window + lock)</text>
-  <text x="20" y="678" fill="#b8b5ae">[154] Rear R door (window + lock)</text>
-  <text x="20" y="690" fill="#b8b5ae">[155] Mirror select switch</text>
-  <text x="20" y="702" fill="#b8b5ae">[156] Driver mirror (2 motors)</text>
-
-  <text x="250" y="630" fill="#b8b5ae">[157] Passenger mirror (2–3 motors)</text>
-  <text x="250" y="642" fill="#b8b5ae">[158] CL relay module / seat switch</text>
-  <text x="250" y="654" fill="#b8b5ae">[159] Driver seat cushion heater</text>
-  <text x="250" y="666" fill="#b8b5ae">[160] Driver seat backrest heater</text>
-  <text x="250" y="678" fill="#b8b5ae">[161] Pass. seat backrest heater</text>
-  <text x="250" y="690" fill="#b8b5ae">[162] Pass. seat cushion heater</text>
-  <text x="250" y="702" fill="#58564f">F12 7.5A · F25/F31 5A · F42 30A · F60 25A</text>
-
-  <text x="560" y="630" fill="#84817a">Window wire: 1.5 Gn/Ge · Gn/Rt · Gn/Sw</text>
-  <text x="560" y="642" fill="#84817a">Lock wire: 2.5 Gn/Vi (lock) · Gn/Gn (unlock)</text>
-  <text x="560" y="654" fill="#84817a">Mirror: 0.35 Ws/Rt × 4 per mirror</text>
-  <text x="560" y="666" fill="#84817a">Mirror heat: 1.0 Rt/Bl both mirrors</text>
-  <text x="560" y="678" fill="#84817a">Seat heat: 1.5 Gn/Vi supply · 1.5 Br GND</text>
-  <text x="560" y="690" fill="#58564f">All grounds: brown Br → X6002 body</text>
-  <text x="560" y="702" fill="#58564f">K-bus: 0.5 Br/Sw (ZKE ↔ CL ↔ dash)</text>
-</g>
-</svg>
-  </div>
-  <div class="svg-frame" id="s10-detail" style="display:none"><!-- Scan loaded via JS --></div>
-  <div class="comp-index">
-    <div class="comp-item"><span class="comp-num">[44]</span><span class="comp-name">Hazard / CL switch</span></div>
-    <div class="comp-item"><span class="comp-num">[77]</span><span class="comp-name">ZKE IV General Module</span></div>
-    <div class="comp-item"><span class="comp-num">[151]</span><span class="comp-name">Driver door lock assembly</span></div>
-    <div class="comp-item"><span class="comp-num">[152]</span><span class="comp-name">Passenger door lock assembly</span></div>
-    <div class="comp-item"><span class="comp-num">[153-154]</span><span class="comp-name">Rear door locks L/R</span></div>
-    <div class="comp-item"><span class="comp-num">[155]</span><span class="comp-name">Mirror control switch</span></div>
-    <div class="comp-item"><span class="comp-num">[156-157]</span><span class="comp-name">Mirror assemblies driver/pass</span></div>
-    <div class="comp-item"><span class="comp-num">[158]</span><span class="comp-name">Central switch control module</span></div>
-    <div class="comp-item"><span class="comp-num">[159-160]</span><span class="comp-name">Driver seat heaters (cushion/back)</span></div>
-    <div class="comp-item"><span class="comp-num">[161-162]</span><span class="comp-name">Passenger seat heaters</span></div>
-  </div>
-</section>
-
-<!-- ================================================================ -->
-<!-- TRANSLATION REFERENCE -->
-<!-- ================================================================ -->
-<section class="schema-section" id="schema-ref">
-  <div class="schema-head">
-    <div>
-      <h2>Translation Reference</h2>
-      <div class="schema-meta">Russian → English component labels · All 5 schemas · Fuse index · M43→M50 swap notes</div>
+    <!-- Cross-references -->
+    <div class="xref-bar" id="xrefBar">
+      <span class="xref-label">Related:</span>
+      <span id="xrefLinks"></span>
     </div>
   </div>
 
-  <!-- SWAP NOTES -->
-  <div class="ref-note" style="margin-bottom:1.5rem">
-    <strong>M43 → M50/M52 Swap — Wiring Differences</strong><br><br>
-    <div class="swap-note-item warn">• EWS: M43 (Bosch M1.7.3) uses OBD1 — NO EWS on pre-1/96 cars</div>
-    <div class="swap-note-item warn">• EWS: M50TU (Bosch M3.3.1 "413") — check for red label = no EWS variant</div>
-    <div class="swap-note-item warn">• EWS: M52 (Siemens MS41) — always has EWS, requires delete or alignment with car's EWS module</div>
-    <div class="swap-note-item ok">• Cooling fan: 4-cyl uses smaller fan assembly — swap to 6-cyl fan + shroud</div>
-    <div class="swap-note-item ok">• Fan relay wiring: same fuse positions (F37/F101), different thermal switch calibration</div>
-    <div class="swap-note-item info">• 16-pin OBD2 port: works with K+DCAN USB cable on 1/96+ cars (post-EWS)</div>
-    <div class="swap-note-item info">• 20-pin ADS port: required for pre-1/96 OBD1 diagnostics (round connector, under hood left)</div>
-    <div class="swap-note-item info">• Pre-1/96: use ADS serial interface with INPA, NOT K+DCAN USB adapter</div>
-  </div>
-
-  <!-- SCHEMA 2 TRANSLATION -->
-  <div class="ref-section">
-    <h2>Schema 2 — Starting, Charging, Diagnostics</h2>
-    <p>Page 12•26 · Drawing H32734 · Система пуска и зарядки / Диагностика</p>
-    <table class="ref-table">
-      <tr><th>#</th><th>Russian (original)</th><th>English</th><th>Notes</th></tr>
-      <tr><td>1</td><td>Аккумулятор</td><td>Battery</td><td>Trunk-mounted · 35.0mm² ground cable</td></tr>
-      <tr><td>2</td><td>Выключатель зажигания</td><td>Ignition switch</td><td>Positions: 0 · I · II · III (start)</td></tr>
-      <tr><td>3</td><td>Стартер</td><td>Starter motor</td><td>25.0mm² B+ feed from battery</td></tr>
-      <tr><td>4</td><td>Генератор</td><td>Alternator</td><td>Charge wire + excitation (DF terminal)</td></tr>
-      <tr><td>5</td><td>Блок управления двигателем</td><td>Engine control unit (DME)</td><td>M1.7.3 (M43) / M3.3.1 (M50TU) / MS41 (M52)</td></tr>
-      <tr><td>6</td><td>Блок управления приборной доски</td><td>Instrument cluster</td><td>Receives speed, RPM, coolant temp</td></tr>
-      <tr><td>7</td><td>Диагностический разъем 16-штыревой</td><td>16-pin diagnostic connector (OBD2)</td><td>Under dashboard, driver side</td></tr>
-      <tr><td>8</td><td>Разъем передачи данных 20-штыревой</td><td>20-pin data connector (ADS/OBD1)</td><td>Under hood, left side, round connector</td></tr>
-      <tr><td>9</td><td>Вентилятор системы охлаждения</td><td>Cooling system fan</td><td>2-speed: F37 50A (low) + F101 50A (high)</td></tr>
-      <tr><td>10</td><td>Термодатчик вентилятора</td><td>Fan thermal switch</td><td>Triggers low / high speed relay</td></tr>
-      <tr><td>11</td><td>Выключатель иммобилайзера стартера</td><td>Starter immobilizer switch (EWS)</td><td>Blocks starter — OBD2/post-1996 cars only</td></tr>
-    </table>
-  </div>
-
-  <div class="ref-divider"></div>
-
-  <!-- SCHEMA 4 TRANSLATION -->
-  <div class="ref-section">
-    <h2>Schema 4 — Exterior Lighting</h2>
-    <p>Page 12•28 · Drawing H32736 · Наружное освещение</p>
-    <table class="ref-table">
-      <tr><th>#</th><th>Russian</th><th>English</th></tr>
-      <tr><td>37</td><td>Блок управления освещением</td><td>Light control module (LCM)</td></tr>
-      <tr><td>38</td><td>Датчик нагрузки на ось</td><td>Axle load sensor (headlight leveling)</td></tr>
-      <tr><td>39</td><td>Электродвигатель регулировки света левой фары</td><td>Left headlight leveling motor</td></tr>
-      <tr><td>40</td><td>Электродвигатель регулировки света правой фары</td><td>Right headlight leveling motor</td></tr>
-      <tr><td>41</td><td>Выключатель аварийной сигнализации / ЦЗ</td><td>Hazard / central locking switch</td></tr>
-      <tr><td>42</td><td>Лампы освещения номерного знака / выключатель крышки багажника</td><td>License plate lamps / trunk open switch</td></tr>
-      <tr><td>43</td><td>Выключатель указателей поворота / ближнего света</td><td>Turn signal / low beam stalk switch</td></tr>
-      <tr><td>44</td><td>Передний левый парковочный огонь</td><td>Front left parking light</td></tr>
-      <tr><td>45</td><td>Передний правый парковочный огонь</td><td>Front right parking light</td></tr>
-      <tr><td>46</td><td>Левая фара (ближний свет)</td><td>Left headlight (low beam)</td></tr>
-      <tr><td>47</td><td>Правая фара (ближний свет)</td><td>Right headlight (low beam)</td></tr>
-      <tr><td>48</td><td>Левая фара (дальний свет)</td><td>Left headlight (high beam)</td></tr>
-      <tr><td>49</td><td>Правая фара (дальний свет)</td><td>Right headlight (high beam)</td></tr>
-      <tr><td>50</td><td>Передний левый указатель поворота</td><td>Front left turn signal</td></tr>
-      <tr><td>51</td><td>Левый боковой указатель поворота</td><td>Left fender turn signal repeater</td></tr>
-      <tr><td>52</td><td>Передний правый указатель поворота</td><td>Front right turn signal</td></tr>
-      <tr><td>53</td><td>Правый боковой указатель поворота</td><td>Right fender turn signal repeater</td></tr>
-      <tr><td>54</td><td>Левый задний указатель поворота</td><td>Left rear turn signal</td></tr>
-      <tr><td>55</td><td>Правый задний противотуманный фонарь</td><td>Right rear fog light</td></tr>
-      <tr><td>56</td><td>Правый стоп-сигнал</td><td>Right brake light</td></tr>
-      <tr><td>57</td><td>Левый стоп-сигнал</td><td>Left brake light</td></tr>
-      <tr><td>58</td><td>Правый задний габаритный огонь</td><td>Right rear tail light</td></tr>
-      <tr><td>59</td><td>Левый задний габаритный огонь</td><td>Left rear tail light</td></tr>
-      <tr><td>60</td><td>Правый задний габаритный огонь (доп.)</td><td>Right rear marker — Sedan / Touring variant</td></tr>
-    </table>
-  </div>
-
-  <div class="ref-divider"></div>
-
-  <!-- SCHEMA 6 TRANSLATION -->
-  <div class="ref-section">
-    <h2>Schema 6 — Interior Lighting</h2>
-    <p>Page 12•30 · Drawing H32738 · Внутреннее освещение · Прикуриватель</p>
-    <table class="ref-table">
-      <tr><th>#</th><th>Russian</th><th>English</th></tr>
-      <tr><td>78</td><td>Лампа освещения салона / лампа для чтения карт</td><td>Interior light / map reading lamp</td></tr>
-      <tr><td>79</td><td>Выключатель системы центральной блокировки</td><td>Central locking switch</td></tr>
-      <tr><td>80</td><td>Левая задняя лампа освещения салона</td><td>Left rear interior light</td></tr>
-      <tr><td>81</td><td>Правая задняя лампа освещения салона</td><td>Right rear interior light</td></tr>
-      <tr><td>82</td><td>Левая лампа освещения багажного отделения</td><td>Left trunk light</td></tr>
-      <tr><td>83</td><td>Правая лампа освещения багажного отделения</td><td>Right trunk light</td></tr>
-      <tr><td>84</td><td>Выключатель лампы освещения ящика для перчаток</td><td>Glove box light switch</td></tr>
-      <tr><td>85</td><td>Нижняя подсветка салона пассажира</td><td>Passenger footwell light</td></tr>
-      <tr><td>86</td><td>Нижняя подсветка салона водителя</td><td>Driver footwell light</td></tr>
-      <tr><td>87</td><td>Подсветка переднего прикуривателя</td><td>Front cigarette lighter illumination</td></tr>
-      <tr><td>88</td><td>Подсветка заднего прикуривателя</td><td>Rear cigarette lighter illumination</td></tr>
-      <tr><td>89–90</td><td>Дополнительная лампа освещения багажника</td><td>Additional trunk lights (left/right)</td></tr>
-      <tr><td>91</td><td>Подсветка зеркала водителя</td><td>Driver vanity mirror light</td></tr>
-      <tr><td>92</td><td>Выключатель подсветки зеркала водителя</td><td>Driver vanity mirror switch</td></tr>
-      <tr><td>93</td><td>Подсветка зеркала пассажира</td><td>Passenger vanity mirror light</td></tr>
-      <tr><td>94</td><td>Выключатель подсветки зеркала пассажира</td><td>Passenger vanity mirror switch</td></tr>
-      <tr><td>95</td><td>Прикуриватель</td><td>Cigarette lighter (power)</td></tr>
-      <tr><td>96</td><td>Разъем для зарядки</td><td>Accessory / charging socket</td></tr>
-    </table>
-  </div>
-
-  <div class="ref-divider"></div>
-
-  <!-- SCHEMA 8 TRANSLATION -->
-  <div class="ref-section">
-    <h2>Schema 8 — Horn, Wipers, Washers, Heater Fan</h2>
-    <p>Page 12•32 · Drawing H32740 · Звуковой сигнал · Стеклоочистители · Вентилятор отопителя</p>
-    <table class="ref-table">
-      <tr><th>#</th><th>Russian</th><th>English</th></tr>
-      <tr><td>118</td><td>Основной блок управления</td><td>General control module (ZKE IV)</td></tr>
-      <tr><td>119</td><td>Звуковой сигнал</td><td>Horn</td></tr>
-      <tr><td>120</td><td>Спиральная пружина рулевого колеса</td><td>Steering wheel clock spring</td></tr>
-      <tr><td>121</td><td>Выключатель звукового сигнала</td><td>Horn button / switch</td></tr>
-      <tr><td>122</td><td>Обогреватель форсунки омывателя</td><td>Washer jet heater</td></tr>
-      <tr><td>123</td><td>Термовыключатель</td><td>Thermal cut-off switch</td></tr>
-      <tr><td>124</td><td>Реле омывателей фар</td><td>Headlight washer relay</td></tr>
-      <tr><td>125</td><td>Насос омывателей фар</td><td>Headlight washer pump</td></tr>
-      <tr><td>126</td><td>Блок управления вентилятором отопителя</td><td>Heater fan control module (blower resistor)</td></tr>
-      <tr><td>127</td><td>Электродвигатель вентилятора отопителя</td><td>Heater blower fan motor</td></tr>
-      <tr><td>128</td><td>Выключатель омывателя / стеклоочистителей</td><td>Washer / wiper stalk switch</td></tr>
-      <tr><td>129</td><td>Блок управления отопителем и кондиционером</td><td>HVAC control unit (IHKA / standard heater)</td></tr>
-      <tr><td>130</td><td>Электродвигатель стеклоочистителя</td><td>Windshield wiper motor</td></tr>
-      <tr><td>131</td><td>Насос омывателя ветрового стекла</td><td>Windshield washer pump</td></tr>
-      <tr><td>132</td><td>Блок управления стеклоочистителя заднего стекла</td><td>Rear wiper / washer control module</td></tr>
-      <tr><td>133</td><td>Выключатель двери багажного отделения</td><td>Trunk door switch (triggers rear wiper)</td></tr>
-      <tr><td>134</td><td>Насос омывателя заднего стекла</td><td>Rear window washer pump</td></tr>
-    </table>
-  </div>
-
-  <div class="ref-divider"></div>
-
-  <!-- SCHEMA 10 TRANSLATION -->
-  <div class="ref-section">
-    <h2>Schema 10 — Windows, Mirrors, Central Locking, Heated Seats</h2>
-    <p>Page 12•34 · Drawing H32742 · Стеклоподъемники · Зеркала · ЦЗ · Обогрев сидений</p>
-    <table class="ref-table">
-      <tr><th>#</th><th>Russian</th><th>English</th></tr>
-      <tr><td>44</td><td>Выключатель аварийной сигнализации / ЦЗ</td><td>Hazard switch / central locking button</td></tr>
-      <tr><td>77</td><td>Основной блок управления</td><td>General module (ZKE IV / GM4)</td></tr>
-      <tr><td>151</td><td>Узел замка двери водителя</td><td>Driver door lock assembly</td></tr>
-      <tr><td>152</td><td>Узел замка двери пассажира</td><td>Passenger door lock assembly</td></tr>
-      <tr><td>153</td><td>Замок левой задней двери</td><td>Left rear door lock</td></tr>
-      <tr><td>154</td><td>Замок правой задней двери</td><td>Right rear door lock</td></tr>
-      <tr><td>155</td><td>Выключатель управления зеркалами</td><td>Mirror control switch</td></tr>
-      <tr><td>156</td><td>Узел зеркала на двери водителя</td><td>Driver side mirror assembly (motor + heater)</td></tr>
-      <tr><td>157</td><td>Узел зеркала на двери пассажира</td><td>Passenger side mirror assembly</td></tr>
-      <tr><td>158</td><td>Блок управления центральными выключателями</td><td>Central switch control module</td></tr>
-      <tr><td>159</td><td>Обогреватель подушки сиденья водителя</td><td>Driver seat heater (cushion element)</td></tr>
-      <tr><td>160</td><td>Обогреватель спинки сиденья водителя</td><td>Driver seat heater (backrest element)</td></tr>
-      <tr><td>161</td><td>Обогреватель подушки сиденья пассажира</td><td>Passenger seat heater (cushion element)</td></tr>
-      <tr><td>162</td><td>Обогреватель спинки сиденья пассажира</td><td>Passenger seat heater (backrest element)</td></tr>
-    </table>
-    <div class="ref-note">
-      <strong>ZKE connector note:</strong> The ZKE IV module (item 77) appears across Schemas 6, 8, and 10 — it controls interior lighting, central locking, power windows, and mirror heating.
-      Connector pin assignments shown across all three schemas must be cross-referenced for complete ZKE wiring.
-      Fuse F60 (25A) feeds power window motors. Fuse F42 (30A) feeds central locking actuators.
-      Heated seats use fuse F12 (7.5A) and communicate on the K-bus for temperature feedback to IHKA.
-    </div>
-  </div>
-
-  <div class="ref-divider"></div>
-
-  <!-- FUSE REFERENCE -->
-  <div class="ref-section">
-    <h2>Common Fuse Reference</h2>
-    <p>Fuses from all 5 schemas — engine bay fuse box + passenger compartment fuse box</p>
-    <table class="ref-table">
-      <tr><th>Fuse</th><th>Rating</th><th>Circuit</th></tr>
-      <tr><td>F5</td><td>5A</td><td>Horn relay coil</td></tr>
-      <tr><td>F6</td><td>5A</td><td>Interior lighting (via ZKE)</td></tr>
-      <tr><td>F9</td><td>5A</td><td>Rear wiper / washer</td></tr>
-      <tr><td>F12</td><td>7.5A</td><td>Heated seats</td></tr>
-      <tr><td>F14</td><td>5A</td><td>EWS immobilizer module</td></tr>
-      <tr><td>F15</td><td>5A</td><td>Rear wiper motor</td></tr>
-      <tr><td>F25</td><td>5A</td><td>Mirror adjustment</td></tr>
-      <tr><td>F30</td><td>7.5A</td><td>OBD diagnostic port +12V (pin 16)</td></tr>
-      <tr><td>F31</td><td>5A</td><td>Mirror heating elements</td></tr>
-      <tr><td>F37</td><td>50A</td><td>Cooling fan — low speed</td></tr>
-      <tr><td>F42</td><td>30A</td><td>Central locking actuators</td></tr>
-      <tr><td>F43</td><td>5A</td><td>DME power supply</td></tr>
-      <tr><td>F47</td><td>20A</td><td>Cigarette lighter / power socket</td></tr>
-      <tr><td>F50</td><td>40A</td><td>Heater blower motor</td></tr>
-      <tr><td>F52</td><td>30A</td><td>Interior lighting master feed</td></tr>
-      <tr><td>F55</td><td>15A</td><td>Horn</td></tr>
-      <tr><td>F60</td><td>25A</td><td>Power windows</td></tr>
-      <tr><td>F101</td><td>50A</td><td>Cooling fan — high speed</td></tr>
-      <tr><td>F105</td><td>50A</td><td>Starter relay / EWS</td></tr>
-      <tr><td>F106</td><td>50A</td><td>Main engine fuse</td></tr>
-      <tr><td>F107</td><td>50A</td><td>Lighting master feed</td></tr>
-      <tr><td>F108</td><td>200A</td><td>Fusible link — battery to fuse box</td></tr>
-    </table>
-  </div>
-
-</section>
-
-<div class="schema-footer">
-  <strong>About these diagrams:</strong> Translated and vectorized from Russian BMW E36 repair manual electrical schematics (Электрические схемы). 
-  Original drawings H32734–H32742. Wire colors, gauges, and pin assignments faithfully reproduced from source material.
-  Combined with the official BMW E36 ETM (577-page Electrical Troubleshooting Manual) for cross-verification.
-  <br><br>
-  <strong>projekt36.com</strong> · BMW E36 316i → M50B25 Build Documentation
 </div>
-
-</div><!-- /wrap -->
 
 <script>
-const SCAN_IMAGES = { 2:'002-en.webp', 4:'004.webp', 6:'006.webp', 8:'008.webp', 10:'010.webp' };
-const SCAN_TITLES = {
-  2:'Starting & Charging — Starter, Alternator, Cooling Fan, EWS, Diagnostics',
-  4:'Exterior Lighting — LCM, Headlights, Turn Signals, Brake & Tail',
-  6:'Interior Lighting — ZKE IV, Dome, Footwell, Vanity Mirrors, Lighter',
-  8:'Wipers, Horn & HVAC — Washer Heaters, Headlight Washers, Blower, Wipers',
-  10:'Windows, Locks & Mirrors — Power Windows, Central Locking, Heated Seats'
-};
-const scaleState = {};
+// ── Chapter data ──────────────────────────────────────────────────────────────
+// p: [firstPdfPage, lastPdfPage]  (1-indexed, inclusive)
+const CHAPTERS = [
+  // Reference
+  { cat:'ref',      code:'0100.0',   title:'Component Index (A–Z)',              p:[3,10]   },
+  { cat:'ref',      code:'0110.0',   title:'Introduction & General Conventions', p:[11,12]  },
+  { cat:'ref',      code:'0140.0',   title:'Symbols & Wire Colours',             p:[13,17]  },
+  { cat:'ref',      code:'0670.0',   title:'Power Distribution Chart',           p:[18,22]  },
+  { cat:'ref',      code:'0670.1',   title:'Fuse Chart',                         p:[23,31]  },
+  { cat:'ref',      code:'0670.2',   title:'Power Distribution',                 p:[32,41]  },
+  { cat:'ref',      code:'0670.3',   title:'Fuse Details',                       p:[42,62]  },
+  { cat:'ref',      code:'0670.4',   title:'Ground Distribution',                p:[63,93]  },
+  { cat:'ref',      code:'0670.5',   title:'Diagnostic Link',                    p:[94,107] },
 
-function showSchema(num) {
-  document.querySelectorAll('.schema-section').forEach(s => s.classList.remove('active'));
-  document.querySelectorAll('.schema-nav button').forEach(b => b.classList.remove('active'));
-  const section = document.getElementById('schema-' + num);
-  if (section) section.classList.add('active');
-  event.target.classList.add('active');
+  // Engine
+  { cat:'engine',   code:'1210.17',  title:'MS41.0 — 6-cyl M52',                p:[108,121]},
+  { cat:'engine',   code:'1210.19',  title:'DME M1.7.3 — 4-cyl M43',            p:[122,131]},
+  { cat:'engine',   code:'1210.20',  title:'DME M5.2 — 4-cyl M44',              p:[132,141]},
+  { cat:'engine',   code:'1210.21',  title:'DME MSS50 — 6-cyl S50 B32',         p:[142,157]},
+  { cat:'engine',   code:'1220.0',   title:'Preheating System',                  p:[158,163]},
+  { cat:'engine',   code:'1230.0',   title:'Alternator',                         p:[164,167]},
+  { cat:'engine',   code:'1240.0',   title:'Starter',                            p:[168,171]},
+  { cat:'engine',   code:'1360.2',   title:'DDE 2.1 — 6-cyl M51',               p:[172,188]},
+  { cat:'engine',   code:'1360.3',   title:'DDE 2.1 — 4-cyl M41',               p:[189,200]},
+
+  // Transmission
+  { cat:'trans',    code:'2460.2',   title:'EGS A4S 310R',                       p:[201,208]},
+  { cat:'trans',    code:'2460.3',   title:'EGS A4S 270R Diesel',                p:[209,212]},
+  { cat:'trans',    code:'2460.4',   title:'EGS A5S 310Z',                       p:[213,218]},
+  { cat:'trans',    code:'2460.5',   title:'EGS A5S 310Z Diesel',                p:[219,222]},
+  { cat:'trans',    code:'2460.11',  title:'EGS A5S 300J — M52',                 p:[223,234]},
+  { cat:'trans',    code:'2460.12',  title:'Sequential M-Transmission (SMG)',    p:[235,246]},
+
+  // Safety
+  { cat:'safety',   code:'3234.0',   title:'Airbag (AB)',                         p:[247,263]},
+  { cat:'safety',   code:'3450.0',   title:'Antilock Brake System (ABS)',         p:[264,276]},
+  { cat:'safety',   code:'3450.1',   title:'Automatic Stability Control (ASC)',   p:[277,288]},
+
+  // Body Electronics
+  { cat:'body',     code:'5116.0',   title:'Power Mirrors',                      p:[289,292]},
+  { cat:'body',     code:'5120.0',   title:'Door Lock Heating — ZKE/TSH',        p:[293,293]},
+  { cat:'body',     code:'5120.1',   title:'Door Lock Heating — ZVM/TSH',        p:[294,294]},
+  { cat:'body',     code:'5126.0',   title:'Central Locking — ZKE/ZV',           p:[295,301]},
+  { cat:'body',     code:'5126.2',   title:'Central Locking Module II (ZVM II)', p:[302,306]},
+  { cat:'body',     code:'5133.0',   title:'Power Windows — ZKE/FH',             p:[307,313]},
+  { cat:'body',     code:'5200.2',   title:'Seat Adjustment & Lumbar Support',   p:[314,316]},
+  { cat:'body',     code:'5203.0',   title:'Heated Seats',                       p:[317,317]},
+  { cat:'body',     code:'5410.1',   title:'Tilt/Slide Sunroof (SHD)',           p:[318,318]},
+  { cat:'body',     code:'5430.1',   title:'Electrical Convertible Soft Top',    p:[319,327]},
+
+  // Body Systems
+  { cat:'systems',  code:'6100.0',   title:'Central Body Electronics (ZKE IV)', p:[328,342]},
+  { cat:'systems',  code:'6133.0',   title:'Horn',                              p:[343,343]},
+  { cat:'systems',  code:'6135.0',   title:'Electronic Immobiliser (EWS II)',   p:[344,345]},
+  { cat:'systems',  code:'6160.1',   title:'Wipe/Wash Module (WWM)',            p:[346,351]},
+  { cat:'systems',  code:'6167.1',   title:'Headlight Washer System (SRA)',     p:[352,352]},
+  { cat:'systems',  code:'6169.0',   title:'Windscreen Washer Jet Heaters',     p:[353,353]},
+  { cat:'systems',  code:'6211.0',   title:'Instrument Cluster',                p:[354,368]},
+  { cat:'systems',  code:'6213.1',   title:'Analogue Clock',                    p:[369,369]},
+  { cat:'systems',  code:'6213.2',   title:'Multi-Function Clock',              p:[370,371]},
+  { cat:'systems',  code:'6214.0',   title:'On-Board Display',                  p:[372,372]},
+  { cat:'systems',  code:'6300.0',   title:'Light Switch',                      p:[373,376]},
+  { cat:'systems',  code:'6312.0',   title:'Headlight / Fog Light',             p:[377,381]},
+  { cat:'systems',  code:'6313.0',   title:'Turn Signal / Hazard Warning',      p:[382,385]},
+  { cat:'systems',  code:'6314.0',   title:'Park / Tail / Underhood Lights',    p:[386,390]},
+  { cat:'systems',  code:'6320.0',   title:'Licence Plate & Luggage Lights',    p:[391,393]},
+  { cat:'systems',  code:'6322.0',   title:'Reversing Lights',                  p:[394,394]},
+  { cat:'systems',  code:'6325.0',   title:'Brake Lights',                      p:[395,397]},
+  { cat:'systems',  code:'6328.1',   title:'Trailer Coupling',                  p:[398,399]},
+  { cat:'systems',  code:'6330.3',   title:'Interior Lights',                   p:[400,409]},
+  { cat:'systems',  code:'6332.0',   title:'Interior',                          p:[410,411]},
+  { cat:'systems',  code:'6350.0',   title:'Crash & Alarm Sensor',              p:[412,414]},
+  { cat:'systems',  code:'6410.5',   title:'Automatic Heating Control (HR)',    p:[415,416]},
+  { cat:'systems',  code:'6412.10',  title:'Independent Ventilation with HR',   p:[417,418]},
+  { cat:'systems',  code:'6412.20',  title:'Independent Ventilation IHKA E36',  p:[419,419]},
+  { cat:'systems',  code:'6424.0',   title:'Rear Window Defogger / Antenna',    p:[420,423]},
+  { cat:'systems',  code:'6450.7',   title:'Auto Climate Control (IHKA E36)',   p:[424,435]},
+  { cat:'systems',  code:'6510.0',   title:'Radio / Stereo',                    p:[436,436]},
+  { cat:'systems',  code:'6510.1',   title:'Radio / HiFi / Top HiFi',           p:[437,443]},
+  { cat:'systems',  code:'6561.0',   title:'Cellular Telephone',                p:[444,444]},
+  { cat:'systems',  code:'6571.0',   title:'Cruise Control',                    p:[445,449]},
+  { cat:'systems',  code:'6581.2',   title:'On-Board Computer (BC V)',           p:[450,454]},
+  { cat:'systems',  code:'6610.2',   title:'Remote Control ZV/DWA',             p:[455,456]},
+  { cat:'systems',  code:'6621.0',   title:'Park Distance Control (PDC)',        p:[457,459]},
+
+  // Location & Connectors
+  { cat:'location', code:'7000.0',   title:'Component Location Chart',           p:[460,509]},
+  { cat:'location', code:'7100.0',   title:'Component Location Views',           p:[510,552]},
+  { cat:'location', code:'8000.0',   title:'Connector Location Views',           p:[553,564]},
+  { cat:'location', code:'8500.0',   title:'Connector Views',                    p:[565,577]},
+];
+
+// ── Cross-references (chapter code → related chapter codes) ──────────────────
+const XREFS = {
+  '0670.1':  ['0670.0','0670.2','0670.3'],
+  '0670.2':  ['0670.1','0670.3','0670.4'],
+  '0670.3':  ['0670.1','0670.2'],
+  '0670.4':  ['0670.3','0670.5'],
+  '0670.5':  ['0670.4'],
+  '1210.17': ['1230.0','1240.0','2460.11','0670.1','0670.4'],
+  '1210.19': ['1230.0','1240.0','0670.1','0670.4'],
+  '1210.20': ['1230.0','1240.0','0670.1','0670.4'],
+  '1210.21': ['1230.0','1240.0','2460.12','0670.1','0670.4'],
+  '1220.0':  ['1360.2','1360.3'],
+  '1230.0':  ['1210.17','1210.19','1210.20','1210.21','1240.0'],
+  '1240.0':  ['1230.0','0670.2'],
+  '1360.2':  ['1220.0','2460.2','0670.1','0670.4'],
+  '1360.3':  ['1220.0','0670.1','0670.4'],
+  '2460.2':  ['1210.17','1360.2'],
+  '2460.11': ['1210.17'],
+  '2460.12': ['1210.21'],
+  '3234.0':  ['6350.0'],
+  '3450.0':  ['3450.1','0670.1'],
+  '3450.1':  ['3450.0','0670.1'],
+  '5116.0':  ['5126.0','6100.0'],
+  '5120.0':  ['5126.0','6100.0'],
+  '5120.1':  ['5126.2','6100.0'],
+  '5126.0':  ['5120.0','5133.0','6100.0'],
+  '5126.2':  ['5120.1','5133.0'],
+  '5133.0':  ['5126.0','6100.0'],
+  '5200.2':  ['5203.0'],
+  '5203.0':  ['5200.2'],
+  '5410.1':  ['6100.0'],
+  '5430.1':  ['6100.0'],
+  '6100.0':  ['5126.0','5133.0','5116.0','5410.1','5430.1'],
+  '6135.0':  ['1210.17','1210.19','1210.20','1210.21'],
+  '6160.1':  ['6100.0','6167.1','6169.0'],
+  '6167.1':  ['6160.1'],
+  '6169.0':  ['6160.1'],
+  '6211.0':  ['6213.1','6213.2','6214.0'],
+  '6213.1':  ['6211.0'],
+  '6213.2':  ['6211.0','6581.2'],
+  '6214.0':  ['6211.0','6581.2'],
+  '6300.0':  ['6312.0','6313.0','6314.0'],
+  '6312.0':  ['6300.0','6313.0','6167.1'],
+  '6313.0':  ['6300.0','6312.0','6325.0'],
+  '6325.0':  ['6313.0','6322.0'],
+  '6322.0':  ['6325.0'],
+  '6330.3':  ['6332.0','6314.0'],
+  '6332.0':  ['6330.3'],
+  '6350.0':  ['3234.0','6100.0'],
+  '6410.5':  ['6412.10','6412.20','6450.7'],
+  '6412.10': ['6410.5'],
+  '6412.20': ['6450.7'],
+  '6450.7':  ['6412.20','6410.5'],
+  '6424.0':  ['6510.0','6510.1'],
+  '6510.0':  ['6510.1','6424.0'],
+  '6510.1':  ['6510.0','6424.0'],
+  '6571.0':  ['6581.2'],
+  '6581.2':  ['6213.2','6571.0'],
+  '6610.2':  ['5126.0'],
+  '7000.0':  ['7100.0','8000.0','8500.0'],
+  '7100.0':  ['7000.0','8000.0'],
+  '8000.0':  ['7000.0','8500.0'],
+  '8500.0':  ['8000.0'],
+};
+
+// ── State ─────────────────────────────────────────────────────────────────────
+let currentCat = 'ref';
+let currentChIdx = 0;  // index into filtered chapter list
+let currentPage = 0;   // page offset within chapter (0-based)
+let catChapters = [];  // chapters in current category
+
+// ── Chapter lookup ────────────────────────────────────────────────────────────
+const chByCode = {};
+CHAPTERS.forEach(ch => { chByCode[ch.code] = ch; });
+
+// ── Category selection ────────────────────────────────────────────────────────
+const CAT_LABELS = {
+  ref: 'Reference', engine: 'Engine Management',
+  trans: 'Transmission', safety: 'Safety',
+  body: 'Body Electronics', systems: 'Body Systems',
+  location: 'Location & Connectors',
+};
+
+function selectCat(cat) {
+  currentCat = cat;
+  document.querySelectorAll('.cat-btn').forEach(b => b.classList.toggle('active', b.dataset.cat === cat));
+  document.getElementById('sidebarCatLabel').textContent = CAT_LABELS[cat];
+  catChapters = CHAPTERS.filter(c => c.cat === cat);
+  renderChList();
+  // auto-select first
+  if (catChapters.length) openChapter(0);
 }
 
-function toggleView(schema, view) {
-  const section = document.getElementById('schema-' + schema);
-  const simpleFrame = document.getElementById('s' + schema + '-simple');
-  const detailFrame = document.getElementById('s' + schema + '-detail');
-  const buttons = section.querySelectorAll('.toggle-btn');
-  buttons.forEach(b => b.classList.remove('active'));
-  event.target.closest('.toggle-btn').classList.add('active');
+function renderChList() {
+  const list = document.getElementById('chList');
+  list.innerHTML = catChapters.map((ch, i) => `
+    <div class="ch-item${i === currentChIdx ? ' active' : ''}" onclick="openChapter(${i})">
+      <span class="ch-code">${ch.code}</span>
+      <span class="ch-name">${ch.title}</span>
+    </div>
+  `).join('');
+}
 
-  if (view === 'simple') {
-    simpleFrame.style.display = 'block';
-    if (detailFrame) detailFrame.style.display = 'none';
-  } else {
-    simpleFrame.style.display = 'none';
-    if (detailFrame) {
-      // Lazy-inject original scan on first open
-      if (!detailFrame.dataset.loaded) {
-        const title = SCAN_TITLES[schema] || ('Schema ' + schema);
-        const file  = SCAN_IMAGES[schema];
-        detailFrame.className = 'scan-viewer';
-        detailFrame.innerHTML =
-          '<div class="scan-controls">' +
-            '<button class="scan-zoom-btn" onclick="zoomScan(' + schema + ',0.3)">＋ Zoom in</button>' +
-            '<button class="scan-zoom-btn" onclick="zoomScan(' + schema + ',-0.3)">－ Zoom out</button>' +
-            '<button class="scan-zoom-btn" onclick="resetScan(' + schema + ')">Reset</button>' +
-            '<span class="scan-info">' + title + ' · Original BMW service manual</span>' +
-          '</div>' +
-          '<div class="scan-pan-wrap" id="scanwrap-' + schema + '">' +
-            '<img src="./' + file + '" alt="' + title + '" draggable="false" id="scanimg-' + schema + '" />' +
-          '</div>';
-        detailFrame.dataset.loaded = '1';
-        scaleState[schema] = 1;
-        // Drag-to-pan
-        const wrap = document.getElementById('scanwrap-' + schema);
-        let drag = false, ox = 0, oy = 0;
-        wrap.addEventListener('mousedown', e => { drag = true; ox = e.clientX + wrap.scrollLeft; oy = e.clientY + wrap.scrollTop; e.preventDefault(); });
-        wrap.addEventListener('mousemove', e => { if (drag) { wrap.scrollLeft = ox - e.clientX; wrap.scrollTop = oy - e.clientY; }});
-        wrap.addEventListener('mouseup',   () => { drag = false; });
-        wrap.addEventListener('mouseleave',() => { drag = false; });
-        // Touch pan
-        let tx = 0, ty = 0;
-        wrap.addEventListener('touchstart', e => { tx = e.touches[0].clientX + wrap.scrollLeft; ty = e.touches[0].clientY + wrap.scrollTop; }, {passive:true});
-        wrap.addEventListener('touchmove',  e => { wrap.scrollLeft = tx - e.touches[0].clientX; wrap.scrollTop = ty - e.touches[0].clientY; }, {passive:true});
-        // Wheel-to-zoom
-        wrap.addEventListener('wheel', e => { e.preventDefault(); zoomScan(schema, e.deltaY < 0 ? 0.15 : -0.15); }, {passive:false});
-      }
-      detailFrame.style.display = 'block';
-    }
+// ── Chapter/page navigation ───────────────────────────────────────────────────
+function openChapter(idx) {
+  currentChIdx = idx;
+  currentPage = 0;
+  zoomFit();
+  renderChList();
+  renderPage();
+  // Close mobile sidebar after selection
+  if (window.innerWidth <= 768) {
+    document.getElementById('sidebar').classList.remove('open');
   }
 }
 
-function zoomScan(schema, delta) {
-  scaleState[schema] = Math.max(0.5, Math.min(5, (scaleState[schema] || 1) + delta));
-  const img  = document.getElementById('scanimg-' + schema);
-  const wrap = document.getElementById('scanwrap-' + schema);
-  if (!img) return;
-  const s = scaleState[schema];
-  img.style.transform = 'scale(' + s + ')';
-  img.style.transformOrigin = 'top left';
-  // Expand wrap scroll area so you can pan into zoomed areas
-  img.style.marginBottom = ((s - 1) * img.naturalHeight * (wrap.offsetWidth / img.naturalWidth)) + 'px';
+function openChapterByCode(code) {
+  const ch = chByCode[code];
+  if (!ch) return;
+  selectCat(ch.cat);
+  const idx = catChapters.findIndex(c => c.code === code);
+  if (idx >= 0) openChapter(idx);
 }
 
-function resetScan(schema) {
-  scaleState[schema] = 1;
-  const img  = document.getElementById('scanimg-' + schema);
-  const wrap = document.getElementById('scanwrap-' + schema);
-  if (img)  { img.style.transform = 'scale(1)'; img.style.marginBottom = '0'; }
-  if (wrap) { wrap.scrollLeft = 0; wrap.scrollTop = 0; }
+function goPrev() {
+  if (currentPage > 0) { currentPage--; renderPage(); }
+  else if (currentChIdx > 0) { openChapter(currentChIdx - 1); currentPage = catChapters[currentChIdx].p[1] - catChapters[currentChIdx].p[0]; renderPage(); }
 }
+
+function goNext() {
+  const ch = catChapters[currentChIdx];
+  const maxPage = ch.p[1] - ch.p[0];
+  if (currentPage < maxPage) { currentPage++; renderPage(); }
+  else if (currentChIdx < catChapters.length - 1) { openChapter(currentChIdx + 1); }
+}
+
+function renderPage() {
+  const ch = catChapters[currentChIdx];
+  if (!ch) return;
+  const pdfPage = ch.p[0] + currentPage;
+  const totalPages = ch.p[1] - ch.p[0] + 1;
+  const padded = String(pdfPage).padStart(3, '0');
+
+  // Title bar
+  const titleEl = document.getElementById('viewerTitle');
+  titleEl.innerHTML = `<span>${ch.code}</span> — ${ch.title}`;
+
+  // Page counter
+  document.getElementById('viewerPages').textContent =
+    `Page ${currentPage + 1} / ${totalPages}  ·  PDF §${pdfPage}`;
+
+  // Prev/next buttons
+  const isFirstPage = currentPage === 0 && currentChIdx === 0;
+  const isLastPage = currentPage === totalPages - 1 && currentChIdx === catChapters.length - 1;
+  document.getElementById('btnPrev').disabled = isFirstPage;
+  document.getElementById('btnNext').disabled = isLastPage;
+
+  // Image
+  const img = document.getElementById('pageImg');
+  const placeholder = document.getElementById('viewerPlaceholder');
+  const src = `pages/${padded}.webp`;
+
+  placeholder.style.display = 'none';
+  img.style.display = 'block';
+  img.alt = `${ch.code} — ${ch.title} — page ${currentPage + 1}`;
+
+  if (img.src !== location.origin + '/schemas/' + src && img.src !== src) {
+    img.dataset.loading = '1';
+    img.src = src;
+    img.onload = () => { delete img.dataset.loading; };
+    img.onerror = () => {
+      delete img.dataset.loading;
+      placeholder.textContent = `Page image not yet available (PDF page ${pdfPage})`;
+      placeholder.style.display = 'flex';
+      img.style.display = 'none';
+    };
+  }
+
+  // Pre-load next page
+  const nextPdf = pdfPage + 1;
+  if (nextPdf <= 577) {
+    const pre = new Image();
+    pre.src = `pages/${String(nextPdf).padStart(3,'0')}.webp`;
+  }
+
+  // Cross-references
+  renderXrefs(ch.code);
+
+  // Scroll viewer to top
+  document.getElementById('viewerScroll').scrollTop = 0;
+}
+
+function renderXrefs(code) {
+  const refs = XREFS[code] || [];
+  const container = document.getElementById('xrefLinks');
+  if (!refs.length) {
+    container.innerHTML = '<span style="font-family:\'IBM Plex Mono\',monospace;font-size:.65rem;color:var(--t4)">—</span>';
+    return;
+  }
+  container.innerHTML = refs.map(r => {
+    const ch = chByCode[r];
+    if (!ch) return '';
+    return `<a class="xref-link" onclick="openChapterByCode('${r}')">${r} ${ch.title}</a>`;
+  }).join('');
+}
+
+// ── Zoom & Pan ────────────────────────────────────────────────────────────────
+let zoomScale = 1.0;
+const ZOOM_STEPS = [0.5, 0.67, 0.75, 1.0, 1.25, 1.5, 2.0, 2.5, 3.0, 4.0];
+
+function applyZoom() {
+  const img = document.getElementById('pageImg');
+  const scroll = document.getElementById('viewerScroll');
+  if (zoomScale <= 1.0) {
+    img.style.width = '';
+    img.style.maxWidth = '100%';
+    scroll.classList.remove('pannable');
+  } else {
+    const fitW = scroll.clientWidth - 32;
+    img.style.maxWidth = 'none';
+    img.style.width = Math.round(fitW * zoomScale) + 'px';
+    scroll.classList.add('pannable');
+  }
+  document.getElementById('zoomLevel').textContent = zoomScale <= 1.0 ? 'Fit' : Math.round(zoomScale * 100) + '%';
+}
+
+function zoomFit() { zoomScale = 1.0; applyZoom(); }
+
+function zoomStep(dir) {
+  if (dir > 0) {
+    const next = ZOOM_STEPS.find(s => s > zoomScale + 0.01);
+    if (next) zoomScale = next;
+  } else {
+    const prev = [...ZOOM_STEPS].reverse().find(s => s < zoomScale - 0.01);
+    zoomScale = prev || 1.0;
+  }
+  applyZoom();
+}
+
+// Zoom via Ctrl+scroll or touchpad pinch (browsers report pinch as ctrlKey+wheel)
+// Plain scroll (two-finger swipe) is left to native overflow:auto scrolling
+document.getElementById('viewerScroll').addEventListener('wheel', e => {
+  if (!e.ctrlKey) return; // let browser handle regular scroll/swipe natively
+  if (document.getElementById('pageImg').style.display === 'none') return;
+  e.preventDefault();
+  const scroll = document.getElementById('viewerScroll');
+  const rect = scroll.getBoundingClientRect();
+  const cx = e.clientX - rect.left + scroll.scrollLeft;
+  const cy = e.clientY - rect.top  + scroll.scrollTop;
+  const pw = scroll.scrollWidth, ph = scroll.scrollHeight;
+  zoomScale = Math.max(0.5, Math.min(4.0, zoomScale + (e.deltaY < 0 ? 0.12 : -0.12)));
+  applyZoom();
+  const nw = scroll.scrollWidth, nh = scroll.scrollHeight;
+  if (pw > 0) scroll.scrollLeft = cx * nw / pw - (e.clientX - rect.left);
+  if (ph > 0) scroll.scrollTop  = cy * nh / ph - (e.clientY - rect.top);
+}, { passive: false });
+
+// Drag to pan
+(function() {
+  const scroll = document.getElementById('viewerScroll');
+  let pan = false, px = 0, py = 0, sl = 0, st = 0;
+  scroll.addEventListener('mousedown', e => {
+    if (zoomScale <= 1.0) return;
+    pan = true; px = e.clientX; py = e.clientY;
+    sl = scroll.scrollLeft; st = scroll.scrollTop;
+    scroll.classList.add('panning'); e.preventDefault();
+  });
+  document.addEventListener('mousemove', e => {
+    if (!pan) return;
+    scroll.scrollLeft = sl - (e.clientX - px);
+    scroll.scrollTop  = st - (e.clientY - py);
+  });
+  document.addEventListener('mouseup', () => {
+    if (pan) { pan = false; scroll.classList.remove('panning'); }
+  });
+})();
+
+// ── Mobile sidebar ────────────────────────────────────────────────────────────
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('open');
+}
+
+// ── Keyboard navigation ───────────────────────────────────────────────────────
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'INPUT') return;
+  if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); goNext(); }
+  if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')   { e.preventDefault(); goPrev(); }
+  if (e.key === '+' || e.key === '=') zoomStep(1);
+  if (e.key === '-' || e.key === '_') zoomStep(-1);
+  if (e.key === '0') zoomFit();
+});
+
+// ── URL hash navigation ───────────────────────────────────────────────────────
+function handleHash() {
+  const hash = location.hash.slice(1); // e.g. "1210.17"
+  if (hash && chByCode[hash]) {
+    openChapterByCode(hash);
+  }
+}
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+selectCat('ref');
+handleHash();
+window.addEventListener('hashchange', handleHash);
 </script>
 </body>
 </html>

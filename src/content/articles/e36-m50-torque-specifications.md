@@ -216,4 +216,4 @@ These bolts are designed to deform slightly during torquing to achieve a precise
 
 *This reference is part of the Projekt 36 Parts Bible. Values are for the BMW E36 with M50B25 / M50B25TU engine. Some values may differ for M52 — verify against your specific workshop manual.*
 
-*→ Related: [M50 Rebuild & Reseal Guide](#) | [Cooling System Overhaul](#) | [Suspension Guide](#)*
+*→ Related: [Cooling System Overhaul](/guides/e36-cooling-system-overhaul) | [Suspension Refresh](/guides/e36-suspension-refresh)*

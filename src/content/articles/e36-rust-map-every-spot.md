@@ -216,5 +216,3 @@ A rough guide to repair costs in Central Europe (2026 prices, workshop labor):
 ---
 
 *This guide is part of the Projekt 36 Body & Paint series. Our E36 sedan is a 1994 316i with typical Slovak rust — sills, arches, and battery tray all need attention.*
-
-*→ Related: [Sill Replacement Guide](#) | [Subframe Reinforcement Guide](#) | [Welding Setup for Thin Sheet Metal](#)*

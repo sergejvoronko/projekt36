@@ -182,6 +182,11 @@ const appLd = {
 
       <div class="tool-footer">PROJEKT 36 · E36 WHEEL CALCULATOR · 5×120 · 72.6mm HUB</div>
 
+      <div class="print-bar">
+        <button class="btn-print" onclick="window.print()">Print / Save PDF</button>
+        <span class="print-hint">Opens print dialog — choose "Save as PDF" in your browser</span>
+      </div>
+
     </div>
   </div>
 </div>
@@ -273,8 +278,8 @@ const appLd = {
     transition: all 0.2s;
   }
   .mode-btn.active {
-    background: rgba(212,149,42,0.1);
-    border-color: rgba(212,149,42,0.4);
+    background: rgb(var(--accent-rgb) / 0.1);
+    border-color: rgb(var(--accent-rgb) / 0.4);
     color: var(--accent);
   }
   .mode-btn:hover:not(.active) { border-color: var(--border-mid); color: var(--text-mid); }
@@ -304,7 +309,7 @@ const appLd = {
     background: var(--accent);
     cursor: pointer;
     border: 2px solid var(--bg2);
-    box-shadow: 0 0 8px rgba(212,149,42,0.3);
+    box-shadow: 0 0 8px rgb(var(--accent-rgb) / 0.3);
   }
   .slider::-moz-range-thumb {
     width: 16px; height: 16px;
@@ -361,7 +366,7 @@ const appLd = {
     cursor: pointer;
     transition: border-color 0.15s;
   }
-  .field-select:focus { border-color: rgba(212,149,42,0.4); }
+  .field-select:focus { border-color: rgb(var(--accent-rgb) / 0.4); }
 
   /* Verdict */
   .verdict-card { margin-bottom: 1rem; }
@@ -442,14 +447,14 @@ const appLd = {
 
   /* Note block */
   .note-block {
-    border-left: 2px solid rgba(212,149,42,0.3);
-    background: rgba(212,149,42,0.03);
+    border: 1px solid rgb(var(--accent-rgb) / 0.3);
+    background: rgb(var(--accent-rgb) / 0.03);
     padding: 1rem 1.25rem;
     margin-bottom: 1rem;
   }
   .note-tag {
     font-family: var(--font-mono);
-    font-size: 0.62rem;
+    font-size: 0.7rem;
     color: var(--accent);
     letter-spacing: 0.12em;
     margin-bottom: 0.4rem;
@@ -459,11 +464,27 @@ const appLd = {
   /* Footer */
   .tool-footer {
     font-family: var(--font-mono);
-    font-size: 0.62rem;
+    font-size: 0.7rem;
     color: var(--text-dim);
     letter-spacing: 0.1em;
     text-align: center;
     padding: 0.5rem 0;
+  }
+
+  .print-bar { display: flex; align-items: center; gap: 0.75rem; margin-top: 1rem; }
+  .btn-print { background: transparent; border: 1px solid var(--border-mid); color: var(--text-dim); font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; padding: 0.45rem 1rem; cursor: pointer; transition: border-color 0.15s, color 0.15s; }
+  .btn-print:hover { border-color: var(--accent); color: var(--accent); }
+  .print-hint { font-family: var(--font-mono); font-size: 0.65rem; color: var(--text-dim); }
+
+  @media print {
+    :global(.site-header), :global(.site-footer), :global(nav) { display: none !important; }
+    .breadcrumb, .controls-col, .print-bar, .note-block, .tool-footer { display: none !important; }
+    .calc-wrap { display: block !important; }
+    .tool-page { padding: 0 !important; max-width: 100% !important; }
+    .tool-header { margin-bottom: 1rem; }
+    .card { background: #fff !important; border-color: #ccc !important; color: #111 !important; }
+    :global(.m-label), :global(.sc-stock), :global(.sc-yours) { color: #333 !important; }
+    :global(.m-val) { color: #111 !important; }
   }
 </style>
 

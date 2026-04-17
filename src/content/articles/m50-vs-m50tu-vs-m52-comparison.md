@@ -188,4 +188,4 @@ The simplest wiring (no VANOS solenoid to integrate), the most robust internals,
 
 *This guide is part of the Projekt 36 M50 Engine series. Our build uses the M50B25 Non-VANOS in an E36 316i sedan swap — the simplest, strongest option for a forced-induction-ready platform.*
 
-*→ Related: [M43 to M50 Complete Swap Guide](#) | [M50 Torque Specifications](#) | [Cooling System Overhaul](#)*
+*→ Related: [M43 to M50 Complete Swap Guide](/guides/m43-to-m50-complete-parts-list) | [M50 Torque Specifications](/guides/e36-m50-torque-specifications) | [Cooling System Overhaul](/guides/e36-cooling-system-overhaul)*

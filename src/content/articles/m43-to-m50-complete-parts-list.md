@@ -255,4 +255,4 @@ In Slovakia (and much of the EU), an engine swap must be registered with the veh
 
 *This guide is the cornerstone of the Projekt 36 swap series. We're installing an M50B25 NV into a 1994 E36 316i sedan in Košice, Slovakia. Every step will be documented with photos and real costs as we go.*
 
-*→ Related: [M50 vs M50TU vs M52 Comparison](#) | [M50 Rebuild & Reseal Guide](#) | [Cooling System Overhaul](#) | [Swap Wiring Diagram](#)*
+*→ Related: [M50 vs M50TU vs M52 Comparison](/guides/m50-vs-m50tu-vs-m52-comparison) | [Cooling System Overhaul](/guides/e36-cooling-system-overhaul) | [Swap Wiring Differences](/guides/m43-to-m50-wiring-differences)*

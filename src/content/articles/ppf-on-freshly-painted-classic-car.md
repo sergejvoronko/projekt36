@@ -174,5 +174,3 @@ For the headlights and door edges, we'll attempt a DIY install as a documented l
 ---
 
 *This guide is part of the Projekt 36 Body & Paint series. Our E36 sedan is getting a full dark blue respray followed by PPF on high-impact areas.*
-
-*→ Related: [Paint Preparation Guide](#) | [Ceramic Coating Options](#) | [The Real Cost of Restoring an E36](#)*

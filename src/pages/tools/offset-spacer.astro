@@ -63,6 +63,10 @@ const appLd = {
       <div class="result-box" id="offset-result">
         <p class="result-placeholder">Enter your wheel setup and press Calculate.</p>
       </div>
+      <div class="print-bar" id="print-bar" style="display:none">
+        <button class="btn-print" onclick="window.print()">Print / Save PDF</button>
+        <span class="print-hint">Opens print dialog — choose "Save as PDF" in your browser</span>
+      </div>
     </div>
 
     <aside class="tool-sidebar">
@@ -146,6 +150,8 @@ const appLd = {
     `;
 
     localStorage.setItem('p36-offset-spacer', JSON.stringify({ w, et, sp }));
+
+    document.getElementById('print-bar').style.display = 'flex';
   }
 
   $('calc-btn').addEventListener('click', calc);
@@ -195,7 +201,7 @@ const appLd = {
     display: inline-block;
     margin-bottom: 0.75rem;
   }
-  .badge-calc { color: var(--accent); border-color: rgba(212,149,42,0.35); background: var(--accent-dim); }
+  .badge-calc { color: var(--accent); border-color: rgb(var(--accent-rgb) / 0.35); background: var(--accent-dim); }
   h1 {
     font-family: var(--font-display);
     font-size: clamp(1.6rem, 4vw, 2.2rem);
@@ -275,7 +281,7 @@ const appLd = {
   .result-box {
     background: var(--bg2);
     border: 1px solid var(--border);
-    border-left: 3px solid var(--accent);
+    border-top: 2px solid var(--accent);
     padding: 1.5rem;
     min-height: 120px;
   }
@@ -342,4 +348,21 @@ const appLd = {
   }
   .tool-explainer p { font-size: 0.88rem; color: var(--text-mid); line-height: 1.75; }
   .tool-explainer strong { color: var(--text); font-weight: 600; }
+
+  .print-bar { display: flex; align-items: center; gap: 0.75rem; margin-top: 0.75rem; }
+  .btn-print { background: transparent; border: 1px solid var(--border-mid); color: var(--text-dim); font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; padding: 0.45rem 1rem; cursor: pointer; transition: border-color 0.15s, color 0.15s; }
+  .btn-print:hover { border-color: var(--accent); color: var(--accent); }
+  .print-hint { font-family: var(--font-mono); font-size: 0.65rem; color: var(--text-dim); }
+
+  @media print {
+    :global(.site-header), :global(.site-footer), :global(nav) { display: none !important; }
+    .breadcrumb, .tool-sidebar, .tool-form, .btn-calc, .print-bar, .tool-explainer { display: none !important; }
+    .tool-layout { display: block !important; }
+    .tool-page { padding: 0 !important; max-width: 100% !important; }
+    .tool-header { margin-bottom: 1rem; }
+    .result-box { border-left: 3px solid #d4952a !important; background: #fff !important; color: #111 !important; }
+    :global(.result-label) { color: #333 !important; }
+    :global(.result-value) { color: #111 !important; }
+    :global(.result-note) { color: #555 !important; }
+  }
 </style>

@@ -227,4 +227,4 @@ If contaminated, the MAF can sometimes be cleaned with dedicated MAF sensor clea
 
 *This guide is part of the Projekt 36 M50 Engine series. Our M50B25 NV is getting a complete reseal and preventive replacement of all wear items before installation.*
 
-*→ Related: [M50 vs M50TU vs M52 Comparison](#) | [Cooling System Overhaul](#) | [M50 Torque Specifications](#)*
+*→ Related: [M50 vs M50TU vs M52 Comparison](/guides/m50-vs-m50tu-vs-m52-comparison) | [Cooling System Overhaul](/guides/e36-cooling-system-overhaul) | [M50 Torque Specifications](/guides/e36-m50-torque-specifications)*

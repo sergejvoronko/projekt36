@@ -153,4 +153,4 @@ Once overhauled, maintain the system on this schedule:
 
 *This guide is part of the Projekt 36 M50 Engine series. We're replacing every cooling component on our M50B25 NV while it's on the engine stand before installation into our 316i sedan.*
 
-*→ Related: [M50 Rebuild & Reseal Guide](#) | [M43 to M50 Swap Parts List](#) | [M50 Common Failure Points](#)*
+*→ Related: [M43 to M50 Swap Parts List](/guides/m43-to-m50-complete-parts-list) | [M50 Common Failure Points](/guides/m50-common-failure-points)*

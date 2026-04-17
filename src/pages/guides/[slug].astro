@@ -213,7 +213,6 @@ const jsonLd = {
     grid-template-columns: minmax(0, 1fr) 220px;
     gap: 3.5rem;
     align-items: start;
-    overflow-x: hidden;
   }
 
   /* grid child must have min-width:0 to respect minmax(0,1fr) */
@@ -265,7 +264,7 @@ const jsonLd = {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     background: var(--accent-dim);
-    border: 1px solid rgba(212,149,42,0.2);
+    border: 1px solid rgb(var(--accent-rgb) / 0.2);
     padding: 0.15em 0.5em;
   }
 
@@ -339,8 +338,8 @@ const jsonLd = {
   }
   .article-body :global(.tldr-body) {
     background: var(--accent-dim);
-    border: 1px solid rgba(212,149,42,0.25);
-    border-left: 3px solid var(--accent);
+    border: 1px solid rgb(var(--accent-rgb) / 0.25);
+    border-top: 2px solid var(--accent);
     padding: 1rem 1.35rem;
     margin-bottom: 2.25rem;
     border-radius: 0 2px 2px 0;
@@ -427,7 +426,9 @@ const jsonLd = {
   .article-body :global(tr:nth-child(even) td) { background: var(--bg2); }
 
   .article-body :global(blockquote) {
-    border-left: 3px solid var(--accent);
+    border-top: 2px solid var(--accent);
+    border: 1px solid rgb(var(--accent-rgb) / 0.2);
+    border-top: 2px solid var(--accent);
     background: var(--accent-dim);
     padding: 0.85rem 1.4rem;
     margin: 1.75rem 0;
@@ -476,7 +477,7 @@ const jsonLd = {
 
   .toc-label {
     font-family: var(--font-mono);
-    font-size: 0.62rem;
+    font-size: 0.7rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--text-dim);

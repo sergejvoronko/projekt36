@@ -186,5 +186,3 @@ The decision will come down to total landed cost in Slovakia, ride quality for d
 ---
 
 *This guide is part of the Projekt 36 Suspension series. We're installing air suspension on a 1994 E36 316i sedan as part of a full transformation build.*
-
-*→ Related: [Air Suspension Install Guide](#) | [Trunk Setup Guide](#) | [Coilovers vs Air Ride vs OEM](#)*

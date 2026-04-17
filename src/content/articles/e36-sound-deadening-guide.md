@@ -321,5 +321,3 @@ The typical result from full sound deadening on an E36: 3–8 dB reduction at hi
 ---
 
 *This guide is part of the Projekt 36 Interior series. We're applying full sound deadening to our 1994 316i sedan shell after rust repair and before the M50 engine swap — the perfect time to do it.*
-
-*→ Related: [E36 Climate Control Retrofit](#) | [Leather Seat Recolor to Black](#) | [Interior Color Codes Reference](#)*
