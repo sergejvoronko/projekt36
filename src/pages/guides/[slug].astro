@@ -92,6 +92,11 @@ const jsonLd = {
     <AuthorBox />
     <SubscribeBox />
 
+    <div class="article-safety-note" role="note">
+      <span class="safety-icon">⚠</span>
+      <span>DIY automotive work carries real risks. Always disconnect the battery before electrical work, use rated jack stands when working under the car, and wear appropriate PPE when welding or working with fluids. See the full <a href="/legal#safety">workshop safety disclaimer</a>.</span>
+    </div>
+
     <div class="article-footer">
       <a href="/guides" class="btn-outline">← Back to guides</a>
     </div>
@@ -450,9 +455,26 @@ const jsonLd = {
     margin: 2.25rem 0;
   }
 
+  /* ── Safety note ────────────────────────────────────────── */
+  .article-safety-note {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    margin-top: 3rem;
+    padding: 0.9rem 1.2rem;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    font-size: 0.82rem;
+    color: var(--text-dim);
+    line-height: 1.7;
+  }
+  .safety-icon { flex-shrink: 0; font-size: 0.85rem; margin-top: 0.1rem; }
+  .article-safety-note a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+
   /* ── Footer ─────────────────────────────────────────────── */
   .article-footer {
-    margin-top: 3.5rem;
+    margin-top: 1.5rem;
     padding-top: 2rem;
     border-top: 1px solid var(--border);
   }

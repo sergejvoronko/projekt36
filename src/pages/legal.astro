@@ -158,6 +158,83 @@ const updated = '2025-01-01';
     </p>
   </section>
 
+  <!-- ═══ WORKSHOP SAFETY ═══ -->
+  <section class="legal-section legal-section-alt" id="safety">
+    <div class="legal-section-tag">Workshop &amp; DIY Safety Disclaimer</div>
+    <h2 class="legal-h2">General notice</h2>
+    <p>
+      All guides, articles, build logs, and technical content published on projekt36.com
+      describe work performed on a specific vehicle by an experienced builder. This content
+      is shared for informational and reference purposes only. Automotive repair and
+      modification involves serious risk of injury, death, fire, and property damage.
+      <strong>Proceed only if you have the appropriate skills, tools, and understanding of
+      the risks involved.</strong> When in doubt, consult a qualified mechanic.
+    </p>
+    <p>
+      projekt36.com accepts no liability for injuries, damage to property, or any other
+      harm arising from the use of, or reliance upon, any information published on this site.
+    </p>
+
+    <h2 class="legal-h2" style="margin-top:2rem">Electrical systems</h2>
+    <p>
+      <strong>Always disconnect the negative battery terminal before working on any
+      electrical component.</strong> Failure to do so risks short circuits, arc burns,
+      fire, and damage to the vehicle's ECU and other electronics. Allow capacitors in
+      audio and airbag systems to discharge fully before working in those areas. Never
+      work on airbag systems without specialist training — accidental deployment can be fatal.
+    </p>
+
+    <h2 class="legal-h2" style="margin-top:2rem">Welding &amp; cutting</h2>
+    <p>
+      Welding produces UV radiation, intense heat, fumes, and spatter capable of causing
+      fires. Before welding:
+    </p>
+    <ul class="safety-list">
+      <li>Wear a properly rated auto-darkening helmet, welding gloves, and flame-resistant clothing.</li>
+      <li>Remove or shield all fuel lines, brake lines, and rubber components within the heat zone.</li>
+      <li>Disconnect the battery and any electronic control units near the work area.</li>
+      <li>Ensure adequate ventilation — welding fumes are toxic.</li>
+      <li>Keep a fire extinguisher within reach and check the work area for smouldering material after finishing.</li>
+      <li>Never weld near fuel tanks, fuel lines, or flammable fluids.</li>
+    </ul>
+
+    <h2 class="legal-h2" style="margin-top:2rem">Lifting &amp; working under a vehicle</h2>
+    <p>
+      <strong>Never work under a vehicle supported only by a hydraulic floor jack.</strong>
+      Jacks can fail without warning. Always use rated axle stands placed on solid jacking
+      points. Chock the wheels that remain on the ground. On soft surfaces, use spreader
+      boards under jack stands to prevent sinking. Verify the vehicle is stable before
+      placing any part of your body beneath it.
+    </p>
+
+    <h2 class="legal-h2" style="margin-top:2rem">Brakes, suspension &amp; steering</h2>
+    <p>
+      These are safety-critical systems. Incorrect assembly, under-torqued fasteners, or
+      air in the brake system can cause loss of vehicle control and fatal accidents.
+      Torque all suspension and brake fasteners to specification with a calibrated torque
+      wrench. After any brake work, pump the brake pedal to a firm feel before moving the
+      vehicle, and perform a low-speed test before road use. If you are not confident in
+      the result, have the work inspected by a qualified mechanic before driving.
+    </p>
+
+    <h2 class="legal-h2" style="margin-top:2rem">Hazardous fluids</h2>
+    <ul class="safety-list">
+      <li><strong>Coolant:</strong> engine coolant is toxic to animals and children. Never open the coolant system when the engine is hot — pressurised scalding liquid will escape.</li>
+      <li><strong>Brake fluid:</strong> highly corrosive to painted surfaces. It is also hygroscopic — absorbs moisture — and must be replaced at intervals. Dispose of properly.</li>
+      <li><strong>Fuel:</strong> work in a well-ventilated area away from ignition sources. Have a fire extinguisher to hand. Do not run the engine when fuel lines are open.</li>
+      <li><strong>Engine oil &amp; transmission fluid:</strong> used oil is a carcinogen. Wear nitrile gloves and dispose of in accordance with local regulations.</li>
+    </ul>
+
+    <h2 class="legal-h2" style="margin-top:2rem">Engine running &amp; road testing</h2>
+    <p>
+      Never run an engine in an enclosed space without forced extraction — carbon monoxide
+      is odourless and lethal. After modification, road-test responsibly in a safe
+      environment and at low speeds before returning to normal use. Ensure the vehicle
+      meets all roadworthiness and legal requirements in your jurisdiction before using it
+      on public roads.
+    </p>
+  </section>
+
   <!-- ═══ CONTACT ═══ -->
   <section class="legal-section">
     <div class="legal-section-tag">Contact</div>
@@ -323,6 +400,14 @@ const updated = '2025-01-01';
     text-decoration: none;
   }
   .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+  .safety-list {
+    margin: 0.75rem 0 1rem 1.25rem;
+    color: var(--text-mid);
+    font-size: 0.9rem;
+    line-height: 1.85;
+  }
+  .safety-list li { margin-bottom: 0.55rem; max-width: 64ch; }
 
   @media (max-width: 560px) {
     .legal-section-alt { margin: 0 -1.5rem; padding: 2.5rem 1.5rem; }
