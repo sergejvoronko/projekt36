@@ -6,6 +6,9 @@ import cloudflare from '@astrojs/cloudflare';
 export default defineConfig({
   site: 'https://projekt36.com',
   output: 'static',
+  build: {
+    inlineStylesheets: 'always',
+  },
   adapter: cloudflare(),
   integrations: [
     mdx(),
