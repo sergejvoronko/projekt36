@@ -5,8 +5,352 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   title="BMW E36 Build Journal — projekt36"
   description="Full documentation of a BMW E36 316i Sedan transformation — M50 engine swap, wiring, suspension, paint, and interior. Eleven chapters from first fault code to final drive."
 >
-  <div style="max-width:var(--wide-w);margin:0 auto;padding:6rem 1.5rem;">
-    <h1 style="font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;margin-bottom:1rem;">Build Journal</h1>
-    <p style="font-family:var(--font-mono);font-size:0.82rem;color:var(--text-dim);margin-bottom:3rem;">// documentation in progress</p>
+
+<div class="build-page">
+
+  <!-- ═══ MEET THE BIMMER ═══ -->
+  <a href="/about/" class="bimmer-banner" aria-label="Meet the car — read the full story">
+    <div class="bimmer-banner-inner">
+      <div class="bimmer-left">
+        <div class="bimmer-tag">// THE CAR</div>
+        <div class="bimmer-headline">Meet the Bimmer</div>
+        <p class="bimmer-desc">
+          1994 BMW E36 316i Sedan. Alpine White. 230,000+ km at acquisition.
+          The bones are right — everything else is the project.
+        </p>
+        <span class="bimmer-link">Full story &amp; specs →</span>
+      </div>
+      <div class="bimmer-specs" aria-hidden="true">
+        <div class="bspec"><span class="bspec-k">Chassis</span><span class="bspec-v">E36 Sedan</span></div>
+        <div class="bspec"><span class="bspec-k">Engine</span><span class="bspec-v">M43B16 · 102 hp</span></div>
+        <div class="bspec"><span class="bspec-k">Swap target</span><span class="bspec-v">M50B25 NV · 189 hp</span></div>
+        <div class="bspec"><span class="bspec-k">Gearbox</span><span class="bspec-v">Getrag 5-speed</span></div>
+        <div class="bspec"><span class="bspec-k">Colour</span><span class="bspec-v">Alpine White (300)</span></div>
+        <div class="bspec"><span class="bspec-k">Status</span><span class="bspec-v bspec-live"><span class="bspec-dot"></span>Build in progress</span></div>
+      </div>
+    </div>
+  </a>
+
+  <!-- ═══ BUILD JOURNAL HEADER ═══ -->
+  <div class="build-header">
+    <div class="build-header-label">// BUILD JOURNAL</div>
+    <h1 class="build-title">Eleven Chapters.<br><em>One Transformation.</em></h1>
+    <p class="build-lead">
+      Every system on this car addressed and documented — from the first fault code
+      pulled in the driveway to the final geometry setup on a four-post lift.
+      Chapters publish as work completes.
+    </p>
   </div>
+
+  <!-- ═══ CHAPTERS LIST ═══ -->
+  <div class="chapters">
+
+    <!-- CH.01 — TEARDOWN & DIAGNOSIS -->
+    <div class="chapter chapter-active">
+      <div class="chapter-meta">
+        <span class="chapter-num">01</span>
+        <span class="chapter-status status-wip">In progress</span>
+      </div>
+      <div class="chapter-body">
+        <h2 class="chapter-title">Teardown &amp; Diagnosis</h2>
+        <p class="chapter-desc">
+          Before anything can be fixed, everything needs to be understood.
+          Full teardown of the engine bay, suspension, interior, and electrics.
+          Fault codes pulled, rust assessed, hidden damage catalogued.
+          This chapter establishes the baseline — what's actually wrong versus
+          what was assumed wrong, and what that means for the build order.
+        </p>
+        <div class="chapter-topics">
+          <span class="topic-pill">Fault code scan</span>
+          <span class="topic-pill">Cooling system condition</span>
+          <span class="topic-pill">Rust assessment</span>
+          <span class="topic-pill">Electrical faults</span>
+          <span class="topic-pill">Suspension teardown</span>
+          <span class="topic-pill">Engine compression test</span>
+        </div>
+        <div class="chapter-footer-note">
+          <span class="mono-note">// documentation in progress — publishing as sections complete</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CH.02–11 — UPCOMING -->
+    {[
+      { num: '02', title: 'Rust Repair & Shell Prep' },
+      { num: '03', title: 'M50 Engine Swap' },
+      { num: '04', title: 'Wiring & Loom' },
+      { num: '05', title: 'Suspension & Geometry' },
+      { num: '06', title: 'Brakes & Cooling' },
+      { num: '07', title: 'Interior Strip & Sound Deadening' },
+      { num: '08', title: 'Interior Build' },
+      { num: '09', title: 'Paint & PPF' },
+      { num: '10', title: 'Wheels & Fitment' },
+      { num: '11', title: 'Final Setup & First Drive' },
+    ].map(ch => (
+      <div class="chapter chapter-upcoming">
+        <div class="chapter-meta">
+          <span class="chapter-num chapter-num-dim">{ch.num}</span>
+          <span class="chapter-status status-upcoming">Upcoming</span>
+        </div>
+        <div class="chapter-body">
+          <h2 class="chapter-title chapter-title-dim">{ch.title}</h2>
+        </div>
+      </div>
+    ))}
+
+  </div>
+
+</div>
+
 </BaseLayout>
+
+<style>
+  .build-page {
+    max-width: var(--content-w);
+    margin: 0 auto;
+    padding: 4rem 1.5rem 6rem;
+  }
+
+  /* ── BIMMER BANNER ── */
+  .bimmer-banner {
+    display: block;
+    background: var(--bg2);
+    border: 1px solid var(--border-mid);
+    border-left: 3px solid var(--accent);
+    padding: 2rem;
+    margin-bottom: 3.5rem;
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .bimmer-banner:hover {
+    background: var(--bg3);
+    border-left-color: var(--amber);
+  }
+  .bimmer-banner-inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: start;
+  }
+  .bimmer-tag {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    color: var(--accent);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  .bimmer-headline {
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+  }
+  .bimmer-desc {
+    font-size: 0.9rem;
+    color: var(--text-mid);
+    line-height: 1.7;
+    max-width: 46ch;
+    margin-bottom: 1rem;
+  }
+  .bimmer-link {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--accent);
+    letter-spacing: 0.04em;
+  }
+  .bimmer-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid var(--border);
+    min-width: 220px;
+  }
+  .bspec {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.75rem;
+  }
+  .bspec:last-child { border-bottom: none; }
+  .bspec-k {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-dim);
+    padding: 0.5rem 0.75rem;
+    background: var(--bg);
+    border-right: 1px solid var(--border);
+  }
+  .bspec-v {
+    font-family: var(--font-mono);
+    color: var(--text-mid);
+    padding: 0.5rem 0.75rem;
+  }
+  .bspec-live {
+    color: var(--green);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .bspec-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--green);
+    animation: pulse 2s infinite;
+    flex-shrink: 0;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  @media (max-width: 640px) {
+    .bimmer-banner-inner { grid-template-columns: 1fr; }
+    .bimmer-specs { min-width: 0; }
+  }
+
+  /* ── BUILD HEADER ── */
+  .build-header {
+    margin-bottom: 3rem;
+  }
+  .build-header-label {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    color: var(--accent);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+  .build-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    color: var(--text);
+  }
+  .build-title em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+  .build-lead {
+    font-size: 0.95rem;
+    color: var(--text-mid);
+    line-height: 1.8;
+    max-width: 58ch;
+  }
+
+  /* ── CHAPTERS ── */
+  .chapters {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .chapter {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 1.5rem;
+    padding: 1.75rem 0;
+    border-bottom: 1px solid var(--border);
+    align-items: start;
+  }
+
+  .chapter-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 2px;
+  }
+  .chapter-num {
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .chapter-num-dim { color: var(--text-dim); }
+
+  .chapter-status {
+    font-family: var(--font-mono);
+    font-size: 0.52rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 2px 6px;
+    border-radius: 2px;
+    white-space: nowrap;
+  }
+  .status-wip {
+    background: rgba(212, 149, 42, 0.12);
+    color: var(--accent);
+    border: 1px solid rgba(212, 149, 42, 0.3);
+  }
+  .status-upcoming {
+    background: transparent;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+  }
+
+  .chapter-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.1rem, 2.5vw, 1.45rem);
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+  }
+  .chapter-title-dim {
+    color: var(--text-dim);
+    margin-bottom: 0;
+  }
+  .chapter-upcoming .chapter-body {
+    padding: 0.25rem 0;
+  }
+
+  .chapter-desc {
+    font-size: 0.9rem;
+    color: var(--text-mid);
+    line-height: 1.8;
+    max-width: 58ch;
+    margin-bottom: 1.25rem;
+  }
+
+  .chapter-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 1.25rem;
+  }
+  .topic-pill {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    color: var(--text-mid);
+    border: 1px solid var(--border-mid);
+    padding: 3px 10px;
+    border-radius: 100px;
+    letter-spacing: 0.02em;
+  }
+
+  .chapter-footer-note {
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+  }
+  .mono-note {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    color: var(--text-dim);
+  }
+
+  @media (max-width: 480px) {
+    .chapter { grid-template-columns: 44px 1fr; gap: 1rem; }
+    .chapter-num { font-size: 1rem; }
+  }
+</style>
