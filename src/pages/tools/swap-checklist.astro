@@ -96,6 +96,7 @@ const appLd = {
     <span class="tool-badge badge-swap">Swap</span>
     <h1>M43 → M50 Swap Checklist</h1>
     <p class="tool-desc">Track every stage of the engine swap — from sourcing the donor M50/M52 to first startup. Progress saves automatically.</p>
+    <button onclick="window.print()" class="tool-print-btn">Print</button>
   </div>
 
   <div class="progress-wrap">
@@ -227,6 +228,8 @@ const appLd = {
   .badge-swap { color: #e8a83e; border-color: rgba(232,168,62,0.35); background: rgba(232,168,62,0.06); }
   h1 { font-family: var(--font-display); font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 700; margin-bottom: 0.5rem; }
   .tool-desc { color: var(--text-mid); font-size: 0.95rem; line-height: 1.65; max-width: 56ch; }
+  .tool-print-btn { font-family: var(--font-mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); border: 1px solid var(--border); background: transparent; padding: 0.35em 0.9em; cursor: pointer; margin-top: 1rem; display: inline-block; transition: color 0.15s, border-color 0.15s; }
+  .tool-print-btn:hover { color: var(--accent); border-color: var(--accent); }
 
   .progress-wrap { background: var(--bg2); border: 1px solid var(--border); padding: 1.25rem 1.5rem; margin-bottom: 2rem; }
   .progress-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
@@ -296,4 +299,9 @@ const appLd = {
   }
   .tool-explainer p { font-size: 0.88rem; color: var(--text-mid); line-height: 1.75; }
   .tool-explainer strong { color: var(--text); font-weight: 600; }
+
+  @media print {
+    :global(.site-header), :global(.site-footer), :global(nav) { display: none !important; }
+    .breadcrumb, .tool-print-btn { display: none !important; }
+  }
 </style>

@@ -1,22 +1,28 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-const tools = [
-  { title: 'Wheel Fitment Calculator', badge: 'Calculator', desc: 'Compare wheel width, ET, tire size, and spacers.', href: '/tools/wheel-fitment', ready: true },
-  { title: 'Tire Size Compare',        badge: 'Calculator', desc: 'Compare two tire sizes — diameter, sidewall, speedo diff.', href: '/tools/tire-compare', ready: true },
-  { title: 'Offset & Spacer Tool',     badge: 'Calculator', desc: 'See how spacers and offset changes affect stance.', href: '/tools/offset-spacer', ready: true },
-  { title: 'M43 → M50 Swap Checklist',badge: 'Swap',       desc: 'Parts, wiring, cooling, exhaust, first startup.', href: '/tools/swap-checklist', ready: true },
-  { title: 'Build Budget Planner',     badge: 'Planning',   desc: 'Estimate costs across all build modules.', href: '/tools/build-budget', ready: true },
-  { title: 'Build Progress Tracker',   badge: 'Planning',   desc: 'Break your build into modules, track status.', href: '/tools/progress-tracker', ready: false },
-  { title: 'Electric Windows Retrofit',badge: 'Retrofit',   desc: 'Switches, regulators, wiring, install progress.', href: '/tools/electric-windows-retrofit', ready: false },
-  { title: 'Climate Control Retrofit', badge: 'Retrofit',   desc: 'Stages and parts for climate control conversion.', href: '/tools/climate-control-retrofit', ready: false },
-  { title: 'Sound Deadening Planner',  badge: 'Retrofit',   desc: 'Floor, trunk, doors, firewall, rear sections.', href: '/tools/sound-deadening', ready: false },
-  { title: 'Air Suspension Checklist', badge: 'Suspension', desc: 'Management, bags, compressor, tank, lines, wiring.', href: '/tools/air-suspension', ready: true },
-  { title: 'INPA Check Log',           badge: 'Diagnostics',desc: 'Store notes from scans, active and resolved faults.', href: '/tools/inpa-log', ready: false },
-  { title: 'Restoration Checklist',    badge: 'Planning',   desc: 'Rust, trim, paint, interior, electrical, engine.', href: '/tools/restoration-checklist', ready: false },
+
+const availableTools = [
+  { title: 'Wheel Fitment Calculator', badge: 'Calc',       desc: 'Compare wheel width, ET, tire size, and spacers.',          href: '/tools/wheel-fitment' },
+  { title: 'Tire Size Compare',        badge: 'Calc',       desc: 'Compare two tire sizes — diameter, sidewall, speedo diff.', href: '/tools/tire-compare' },
+  { title: 'Offset & Spacer Tool',     badge: 'Calc',       desc: 'See how spacers and offset changes affect stance.',         href: '/tools/offset-spacer' },
+  { title: 'M43 → M50 Swap Checklist',badge: 'Swap',       desc: 'Parts, wiring, cooling, exhaust, first startup.',           href: '/tools/swap-checklist' },
+  { title: 'Build Budget Planner',     badge: 'Planning',   desc: 'Estimate costs across all build modules.',                  href: '/tools/build-budget' },
+  { title: 'Air Suspension Checklist', badge: 'Suspension', desc: 'Management, bags, compressor, tank, lines, wiring.',       href: '/tools/air-suspension' },
+];
+
+const pendingTools = [
+  { title: 'Build Progress Tracker',   badge: 'Planning',   desc: 'Break your build into modules, track status.' },
+  { title: 'Electric Windows Retrofit',badge: 'Retrofit',   desc: 'Switches, regulators, wiring, install progress.' },
+  { title: 'Climate Control Retrofit', badge: 'Retrofit',   desc: 'Stages and parts for climate control conversion.' },
+  { title: 'Sound Deadening Planner',  badge: 'Retrofit',   desc: 'Floor, trunk, doors, firewall, rear sections.' },
+  { title: 'INPA Check Log',           badge: 'Diagnostics',desc: 'Store notes from scans, active and resolved faults.' },
+  { title: 'Restoration Checklist',    badge: 'Planning',   desc: 'Rust, trim, paint, interior, electrical, engine.' },
 ];
 ---
 
-<BaseLayout title="BMW E36 Tools &amp; Calculators — projekt36" description="Practical calculators, checklists, and planners for BMW E36 owners.">
+<BaseLayout title="BMW E36 Tools &amp; Calculators — projekt36" description="Practical calculators, checklists, and planners for BMW E36 owners — plus OpenBMWDiag, an open-source BMW diagnostics platform.">
+
+  <!-- ═══ HERO ═══ -->
   <section class="tools-hero">
     <div class="tools-hero-img" aria-hidden="true">
       <img src="/images/blueprint-m52-anatomy.webp" alt="" width="1200" height="600" loading="eager" decoding="async" />
@@ -29,138 +35,254 @@ const tools = [
     </div>
   </section>
 
-  <section class="tools-section">
-    <div class="inner">
-      <div class="tools-grid">
-        {tools.filter(t => t.ready).map(t => (
-          <a href={t.href} class="tool-card">
-            <div class="tool-badge">{t.badge}</div>
-            <h3 class="tool-title">{t.title}</h3>
-            <p class="tool-desc">{t.desc}</p>
-            <span class="tool-cta">Open →</span>
-          </a>
-        ))}
-      </div>
+  <div class="inner tools-body">
 
-      {tools.some(t => !t.ready) && (
-        <div class="coming-soon-section">
-          <div class="coming-soon-header">
-            <span class="coming-soon-label">In development</span>
-          </div>
-          <div class="tools-grid soon-grid">
-            {tools.filter(t => !t.ready).map(t => (
-              <div class="tool-card soon">
-                <div class="tool-badge">{t.badge}</div>
-                <h3 class="tool-title">{t.title}</h3>
-                <p class="tool-desc">{t.desc}</p>
-                <span class="tool-soon">Coming soon</span>
-              </div>
-            ))}
-          </div>
+    <!-- ═══ OPENBMWDIAG BANNER ═══ -->
+    <div class="obd-banner">
+      <div class="obd-banner-left">
+        <div class="obd-tag">// FEATURED PROJECT</div>
+        <div class="obd-status-row">
+          <h2 class="obd-title">OpenBMWDiag</h2>
+          <span class="obd-status-badge">
+            <span class="obd-status-dot"></span>
+            In progress
+          </span>
         </div>
-      )}
+        <p class="obd-desc">
+          Open-source BMW diagnostics platform for classic OBD1 cars — built for Linux, served in a browser.
+          Plug the cable, open the page, read the car. No Windows, no COM ports, no legacy software.
+        </p>
+        <div class="obd-targets">
+          <span class="obd-target">🐧 Linux</span>
+          <span class="obd-target">🐋 Docker</span>
+          <span class="obd-target">🍓 Raspberry Pi</span>
+          <span class="obd-target">📱 Mobile (planned)</span>
+        </div>
+        <a href="https://github.com/projekt36/openbmwdiag" class="obd-link" target="_blank" rel="noopener">
+          View project on GitHub →
+        </a>
+      </div>
+      <div class="obd-banner-right">
+        <img
+          src="/images/openbmwdiag-screenshot.webp"
+          alt="OpenBMWDiag dashboard — live gauges and fault codes"
+          class="obd-screenshot"
+          loading="eager"
+          width="800"
+          height="450"
+        />
+      </div>
     </div>
-  </section>
+
+    <!-- ═══ SUBSCRIBE STRIP ═══ -->
+    <div class="sub-strip">
+      <div class="sub-strip-text">
+        <span class="sub-strip-label">Don't miss the OpenBMWDiag launch</span>
+        <span class="sub-strip-sub">New tools, guides, and project updates when they publish — no schedule, no spam.</span>
+      </div>
+      <form class="sub-strip-form" id="subForm">
+        <input type="email" class="sub-strip-input" placeholder="your@email.com" required autocomplete="email" />
+        <button type="submit" class="sub-strip-btn">Subscribe</button>
+      </form>
+    </div>
+
+    <!-- ═══ AVAILABLE TOOLS ═══ -->
+    <div class="tools-section-header">
+      <span class="tools-section-label">Available now</span>
+    </div>
+    <div class="tools-grid">
+      {availableTools.map(t => (
+        <a href={t.href} class="tool-card">
+          <div class="tool-badge">{t.badge}</div>
+          <h3 class="tool-title">{t.title}</h3>
+          <p class="tool-desc">{t.desc}</p>
+          <span class="tool-cta">Open →</span>
+        </a>
+      ))}
+    </div>
+
+    <!-- ═══ PENDING TOOLS ═══ -->
+    <div class="tools-section-header tools-section-header--pending">
+      <span class="tools-section-label">In development</span>
+    </div>
+    <div class="tools-grid tools-grid--pending">
+      {pendingTools.map(t => (
+        <div class="tool-card tool-card--pending">
+          <div class="tool-badge">{t.badge}</div>
+          <h3 class="tool-title">{t.title}</h3>
+          <p class="tool-desc">{t.desc}</p>
+          <span class="tool-soon">Coming soon</span>
+        </div>
+      ))}
+    </div>
+
+  </div>
+
 </BaseLayout>
 
 <style>
-  .tools-hero {
-    position: relative;
-    overflow: hidden;
-    border-bottom: 1px solid var(--border);
-    min-height: 320px;
-    display: flex;
-    align-items: flex-end;
-  }
-  .tools-hero-img {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-  }
-  .tools-hero-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    filter: brightness(0.35) saturate(0.6);
-  }
-  .tools-hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(19,23,32,1) 0%, rgba(19,23,32,0.55) 60%, rgba(19,23,32,0.3) 100%);
-  }
   .inner { max-width: var(--wide-w); margin: 0 auto; }
-  .tools-hero-inner {
-    position: relative;
-    z-index: 1;
-    padding: 5rem 1.5rem 3rem;
-    width: 100%;
+  .tools-body { padding: 3rem 1.5rem 6rem; }
+
+  /* ── hero ── */
+  .tools-hero {
+    position: relative; overflow: hidden;
+    border-bottom: 1px solid var(--border);
+    min-height: 320px; display: flex; align-items: flex-end;
   }
+  .tools-hero-img { position: absolute; inset: 0; z-index: 0; }
+  .tools-hero-img img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.35) saturate(0.6); }
+  .tools-hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, var(--bg) 0%, rgba(19,23,32,0.55) 60%, rgba(19,23,32,0.3) 100%);
+  }
+  .tools-hero-inner { position: relative; z-index: 1; padding: 5rem 1.5rem 3rem; width: 100%; }
   .page-tag {
-    font-family: var(--font-mono);
-    font-size: 0.65rem;
-    color: var(--accent);
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    margin-bottom: 0.75rem;
+    font-family: var(--font-mono); font-size: 0.65rem; color: var(--accent);
+    letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 0.75rem;
   }
   .hero-title {
-    font-family: var(--font-display);
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 700;
-    margin-bottom: 0.75rem;
-    line-height: 1.05;
+    font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700; margin-bottom: 0.75rem; line-height: 1.05;
   }
   .hero-title em { font-style: italic; font-weight: 400; color: var(--accent); }
   .hero-sub { font-size: 0.95rem; color: var(--text-mid); max-width: 56ch; line-height: 1.75; }
 
-  .tools-section { padding: 3rem 1.5rem 5rem; }
-  .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+  /* ── openbmwdiag banner ── */
+  .obd-banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+    background: var(--bg2);
+    border: 1px solid var(--border-mid);
+    border-left: 3px solid var(--accent);
+    padding: 2rem 2rem 2rem 2.5rem;
+    margin-bottom: 2rem;
+  }
+  .obd-tag {
+    font-family: var(--font-mono); font-size: 0.6rem; color: var(--accent);
+    letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 0.6rem;
+  }
+  .obd-status-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem; flex-wrap: wrap; }
+  .obd-title {
+    font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700; color: var(--text); line-height: 1;
+  }
+  .obd-status-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 0.6rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--accent); background: rgba(212,149,42,0.1);
+    border: 1px solid rgba(212,149,42,0.3);
+    padding: 3px 10px;
+  }
+  .obd-status-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--accent); animation: pulse 2s infinite; flex-shrink: 0;
+  }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+  .obd-desc {
+    font-size: 0.88rem; color: var(--text-mid); line-height: 1.75;
+    margin-bottom: 1rem; max-width: 52ch;
+  }
+  .obd-targets { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.25rem; }
+  .obd-target {
+    font-family: var(--font-mono); font-size: 0.68rem; color: var(--text-mid);
+    border: 1px solid var(--border); padding: 3px 10px; background: var(--bg);
+  }
+  .obd-link {
+    font-family: var(--font-mono); font-size: 0.72rem;
+    color: var(--accent); text-decoration: none;
+  }
+  .obd-link:hover { text-decoration: underline; }
+  .obd-screenshot { width: 100%; display: block; border: 1px solid var(--border); }
 
+  /* ── subscribe strip ── */
+  .sub-strip {
+    display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;
+    border: 1px solid var(--border);
+    border-top: 2px solid var(--accent);
+    background: var(--bg2);
+    padding: 1.25rem 1.75rem;
+    margin-bottom: 3rem;
+  }
+  .sub-strip-text { flex: 1; min-width: 200px; }
+  .sub-strip-label { display: block; font-size: 0.88rem; font-weight: 600; color: var(--text); margin-bottom: 0.2rem; }
+  .sub-strip-sub { font-size: 0.78rem; color: var(--text-dim); }
+  .sub-strip-form { display: flex; gap: 0.5rem; flex-shrink: 0; }
+  .sub-strip-input {
+    font-family: var(--font-mono); font-size: 0.78rem;
+    background: var(--bg); border: 1px solid var(--border-mid);
+    color: var(--text); padding: 0.5rem 0.875rem; width: 200px; outline: none;
+  }
+  .sub-strip-input:focus { border-color: var(--accent); }
+  .sub-strip-btn {
+    font-family: var(--font-mono); font-size: 0.72rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    background: var(--accent); color: var(--bg);
+    border: none; padding: 0.5rem 1.25rem; cursor: pointer; transition: opacity 0.15s;
+  }
+  .sub-strip-btn:hover { opacity: 0.85; }
+
+  /* ── section headers ── */
+  .tools-section-header {
+    display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem;
+  }
+  .tools-section-header::before,
+  .tools-section-header::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+  .tools-section-label {
+    font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-dim);
+    text-transform: uppercase; letter-spacing: 0.15em; white-space: nowrap;
+  }
+  .tools-section-header--pending { margin-top: 3rem; }
+
+  /* ── grids ── */
+  .tools-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+
+  /* ── cards ── */
   .tool-card {
-    display: block; padding: 1.5rem;
+    display: flex; flex-direction: column; padding: 1.5rem;
     background: var(--bg2); border: 1px solid var(--border);
-    border-left: 3px solid transparent;
-    text-decoration: none;
+    border-left: 3px solid transparent; text-decoration: none;
     transition: border-color 0.15s, border-left-color 0.15s;
   }
-  .tool-card:not(.soon):hover { border-left-color: var(--accent); border-color: var(--border-mid); }
-  .tool-card.soon { opacity: 0.45; cursor: default; }
-
-  .coming-soon-section { margin-top: 3rem; }
-  .coming-soon-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.25rem;
-  }
-  .coming-soon-header::before,
-  .coming-soon-header::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: var(--border);
-  }
-  .coming-soon-label {
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    color: var(--text-dim);
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    white-space: nowrap;
-  }
-
+  .tool-card:not(.tool-card--pending):hover { border-left-color: var(--accent); border-color: var(--border-mid); }
+  .tool-card--pending { opacity: 0.45; cursor: default; }
   .tool-badge {
     display: inline-block; font-family: var(--font-mono); font-size: 0.7rem;
     font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
     color: var(--accent); background: var(--accent-dim);
-    border: 1px solid rgb(var(--accent-rgb) / 0.25); padding: 0.18em 0.55em;
-    margin-bottom: 0.8rem;
+    border: 1px solid rgb(var(--accent-rgb) / 0.25);
+    padding: 0.18em 0.55em; margin-bottom: 0.8rem; align-self: flex-start;
   }
   .tool-title { font-size: 0.95rem; font-weight: 600; color: var(--text); margin-bottom: 0.45rem; }
-  .tool-card:not(.soon):hover .tool-title { color: var(--accent); }
-  .tool-desc { font-size: 0.82rem; color: var(--text-mid); line-height: 1.55; margin-bottom: 0.75rem; }
+  .tool-card:not(.tool-card--pending):hover .tool-title { color: var(--accent); }
+  .tool-desc { font-size: 0.82rem; color: var(--text-mid); line-height: 1.55; margin-bottom: 0.75rem; flex: 1; }
   .tool-cta { font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent); opacity: 0; transition: opacity 0.15s; }
   .tool-card:hover .tool-cta { opacity: 1; }
   .tool-soon { font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-dim); }
+
+  /* ── responsive ── */
+  @media (max-width: 900px) {
+    .obd-banner { grid-template-columns: 1fr; }
+    .obd-banner-right { order: -1; }
+    .tools-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 560px) {
+    .tools-grid { grid-template-columns: 1fr; }
+    .sub-strip { flex-direction: column; align-items: stretch; }
+    .sub-strip-form { flex-direction: column; }
+    .sub-strip-input { width: 100%; }
+  }
 </style>
+
+<script>
+  const form = document.getElementById('subForm') as HTMLFormElement | null;
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button') as HTMLButtonElement;
+    btn.textContent = '✓ Subscribed';
+    btn.disabled = true;
+  });
+</script>

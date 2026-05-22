@@ -66,6 +66,8 @@ body { background: var(--bg); color: var(--t1); font-family: 'IBM Plex Sans', sa
 }
 .page-hd h1 { font-size: 1.25rem; font-weight: 700; line-height: 1.2; }
 .page-hd-sub { font-size: .82rem; color: var(--t3); margin-top: .2rem; }
+.page-hd-print { font-family: 'IBM Plex Mono', monospace; font-size: .65rem; text-transform: uppercase; letter-spacing: .1em; color: var(--t4); border: 1px solid var(--bdr); background: transparent; padding: .3em .8em; cursor: pointer; margin-top: .75rem; display: inline-block; transition: color .15s, border-color .15s; }
+.page-hd-print:hover { color: var(--acc); border-color: var(--acc); }
 .page-hd-meta { font-family: 'IBM Plex Mono', monospace; font-size: .65rem; color: var(--t4); text-align: right; flex-shrink: 0; }
 
 /* ── Category tabs ── */
@@ -255,6 +257,7 @@ body { background: var(--bg); color: var(--t1); font-family: 'IBM Plex Sans', sa
     <div class="page-hd-tag">BMW E36 · Technical Reference</div>
     <h1>Electrical Troubleshooting Manual</h1>
     <p class="page-hd-sub">Series 3 — E36 · Sedan · Coupé · Touring · Convertible · Model Year 1998</p>
+    <button onclick="window.print()" class="page-hd-print">Print</button>
   </div>
   <div class="page-hd-meta">
     BMW AG · VS-2<br>

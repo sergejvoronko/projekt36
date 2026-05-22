@@ -37,6 +37,7 @@ const appLd = {
     <span class="tool-badge badge-plan">Planning</span>
     <h1>Build Budget Planner</h1>
     <p class="tool-desc">Estimate your total build cost by category. Values are saved automatically.</p>
+    <button onclick="window.print()" class="tool-print-btn">Print</button>
   </div>
 
   <div class="tool-layout">
@@ -198,6 +199,8 @@ const appLd = {
   .badge-plan { color: #5cb85c; border-color: rgba(92,184,92,0.35); background: rgba(92,184,92,0.06); }
   h1 { font-family: var(--font-display); font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 700; margin-bottom: 0.5rem; }
   .tool-desc { color: var(--text-mid); font-size: 0.95rem; line-height: 1.65; max-width: 56ch; }
+  .tool-print-btn { font-family: var(--font-mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); border: 1px solid var(--border); background: transparent; padding: 0.35em 0.9em; cursor: pointer; margin-top: 1rem; display: inline-block; transition: color 0.15s, border-color 0.15s; }
+  .tool-print-btn:hover { color: var(--accent); border-color: var(--accent); }
 
   .tool-layout { display: grid; grid-template-columns: 1fr 280px; gap: 2.5rem; align-items: start; }
   @media (max-width: 768px) { .tool-layout { grid-template-columns: 1fr; } }
@@ -268,7 +271,7 @@ const appLd = {
 
   @media print {
     :global(.site-header), :global(.site-footer), :global(nav) { display: none !important; }
-    .breadcrumb, .tool-sidebar, .tool-form, .btn-calc, .print-bar, .tool-explainer { display: none !important; }
+    .breadcrumb, .tool-sidebar, .tool-form, .btn-calc, .print-bar, .tool-explainer, .tool-print-btn { display: none !important; }
     .tool-layout { display: block !important; }
     .tool-page { padding: 0 !important; max-width: 100% !important; }
     .tool-header { margin-bottom: 1rem; }

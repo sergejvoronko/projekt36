@@ -37,6 +37,7 @@ const appLd = {
     <span class="tool-badge badge-calc">Calculator</span>
     <h1>Offset & Spacer Tool</h1>
     <p class="tool-desc">See how a spacer changes your effective ET and where the wheel sits relative to the hub.</p>
+    <button onclick="window.print()" class="tool-print-btn">Print</button>
   </div>
 
   <div class="tool-layout">
@@ -209,6 +210,8 @@ const appLd = {
     margin-bottom: 0.5rem;
   }
   .tool-desc { color: var(--text-mid); font-size: 0.95rem; line-height: 1.65; max-width: 56ch; }
+  .tool-print-btn { font-family: var(--font-mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); border: 1px solid var(--border); background: transparent; padding: 0.35em 0.9em; cursor: pointer; margin-top: 1rem; display: inline-block; transition: color 0.15s, border-color 0.15s; }
+  .tool-print-btn:hover { color: var(--accent); border-color: var(--accent); }
 
   .tool-layout {
     display: grid;
@@ -356,7 +359,7 @@ const appLd = {
 
   @media print {
     :global(.site-header), :global(.site-footer), :global(nav) { display: none !important; }
-    .breadcrumb, .tool-sidebar, .tool-form, .btn-calc, .print-bar, .tool-explainer { display: none !important; }
+    .breadcrumb, .tool-sidebar, .tool-form, .btn-calc, .print-bar, .tool-explainer, .tool-print-btn { display: none !important; }
     .tool-layout { display: block !important; }
     .tool-page { padding: 0 !important; max-width: 100% !important; }
     .tool-header { margin-bottom: 1rem; }

@@ -38,6 +38,7 @@ const appLd = {
     <div class="tool-tag">PROJEKT36 · TOOL</div>
     <h1 class="tool-title">E36 Wheel & Tire <em>Calculator</em></h1>
     <p class="tool-lead">Check if your wheel and tire setup fits the BMW E36. Bolt pattern: 5×120 · Hub bore: 72.6mm</p>
+    <button onclick="window.print()" class="tool-print-btn">Print</button>
   </div>
 
   <div class="calc-wrap">
@@ -232,6 +233,8 @@ const appLd = {
   }
   .tool-title em { font-style: italic; font-weight: 400; color: var(--accent); }
   .tool-lead { font-size: 0.9rem; color: var(--text-mid); max-width: 54ch; line-height: 1.7; }
+  .tool-print-btn { font-family: var(--font-mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); border: 1px solid var(--border); background: transparent; padding: 0.35em 0.9em; cursor: pointer; margin-top: 1rem; display: inline-block; transition: color 0.15s, border-color 0.15s; }
+  .tool-print-btn:hover { color: var(--accent); border-color: var(--accent); }
 
   /* Layout */
   .calc-wrap {
@@ -478,7 +481,7 @@ const appLd = {
 
   @media print {
     :global(.site-header), :global(.site-footer), :global(nav) { display: none !important; }
-    .breadcrumb, .controls-col, .print-bar, .note-block, .tool-footer { display: none !important; }
+    .breadcrumb, .controls-col, .print-bar, .note-block, .tool-footer, .tool-print-btn { display: none !important; }
     .calc-wrap { display: block !important; }
     .tool-page { padding: 0 !important; max-width: 100% !important; }
     .tool-header { margin-bottom: 1rem; }
