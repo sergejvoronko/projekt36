@@ -23,6 +23,9 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
+# reference images for n8n hero generation (large, local-only)
+reference_img/
+
 # wrangler files
 .wrangler
 .dev.vars*
