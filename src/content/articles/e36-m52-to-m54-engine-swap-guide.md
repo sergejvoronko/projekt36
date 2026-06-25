@@ -7,7 +7,7 @@ date: "2026-05-25"
 hero: "e36-m52-to-m54-engine-swap-guide.webp"
 ---
 
-The M52 is a fantastic iron-block engine that defined the late-model E36. But time marches on, and its successor, the M54, offers a lighter aluminum block, more advanced engine management, and, in the case of the M54B30, a significant jump in power and torque. Swapping an M54 into an E36 is the ultimate OEM+ upgrade, blending classic chassis dynamics with a more modern, efficient, and powerful heart.
+The M52 is a solid iron-block engine, but the M54 offers a lighter aluminium block, more modern engine management, and a real power bump — especially with the M54B30. The swap is well-trodden and mostly bolt-in, with the main work in wiring and fuel system adaptation.
 
 This guide is not for the faint of heart. It assumes you are comfortable with engine removal, fabrication, and wiring diagrams. We'll skip the basics of unbolting an engine and focus on the critical details that make this specific swap successful.
 
@@ -121,6 +121,4 @@ This setup costs less than €100 and is far more reliable than trying to modify
 
 ## What's next?
 
-With the M54 running, the transformation is immediate. The engine is smoother, more responsive, and the sound is phenomenal. The 231 hp and 300 Nm of torque from an M54B30 completely wake up the E36 chassis, offering performance that rivals a Euro S50B30 M3 for a fraction of the cost.
-
-The first step after the swap is a proper, custom dyno tune. While the EWS-delete flash provides a good base, a custom tune can optimize fueling and timing for your specific intake and exhaust setup, safely unlocking another 10-15 hp. After that, consider upgrading your brakes and suspension to handle the newfound power. The M54 is an OEM+ masterpiece that proves the E36 chassis is timeless.
+First thing after the swap is a proper dyno tune. The EWS-delete flash gives you a base map, but a custom tune for your specific intake and exhaust is worth another 10–15 hp. After that, brakes and suspension — the stock 328i setup isn't built for 231 hp and 300 Nm.

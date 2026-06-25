@@ -7,9 +7,7 @@ date: "2026-06-25"
 hero: "bmw-e36-m52-single-vanos-guide.webp"
 ---
 
-The single VANOS unit on the M52 engine is one of the most significant — and most misunderstood — components responsible for the engine's character. When working correctly, it provides a broad, usable torque curve. When it fails, it turns your 328i into a sluggish, noisy machine. The original seals were made from Buna-N rubber, which was never designed to withstand engine oil and heat cycles for over two decades. The result is inevitable failure.
-
-Fortunately, rebuilding the unit is a straightforward job with the right parts and tools. This guide will walk you through diagnosing the failure, sourcing the correct parts, rebuilding the VANOS unit on the bench, and — most critically — setting the timing correctly for a full restoration of performance.
+The M52's single VANOS controls intake cam timing — when it works, the engine pulls cleanly from 2,000 RPM. When the original Buna-N seals harden after 20+ years, oil pressure in the unit drops, cam timing drifts, and you get the classic flat-below-3000-RPM torque deficit and cold-start rattle. Rebuilding the unit with upgraded Viton seals is a 3–5 hour job and one of the most cost-effective engine repairs on the M52.
 
 ## TL;DR
 
@@ -118,6 +116,4 @@ This is where attention to detail separates a successful job from a disaster. Do
 
 ## What's next?
 
-After starting the engine, it may run slightly rough for the first 20-30 seconds as the VANOS unit self-bleeds and fills with oil. Take the car for a drive. The difference should be immediate and dramatic: a smoother idle, a strong and linear pull from 1,500 RPM, and blissful silence from the front of your engine.
-
-With your VANOS unit now operating better than it did from the factory, you've addressed one of the M52's most significant weak points. While the valve cover was off, it was the perfect time to inspect your spark plugs and ignition coils. Now might be an excellent opportunity to address other common M52 oil leaks, like the oil filter housing gasket, to ensure your engine bay stays clean and your engine runs strong for years to come.
+After starting the engine, it may run rough for the first 20–30 seconds as the VANOS unit self-bleeds and fills with oil. Take the car for a drive — the low-end torque and idle stability should be noticeably improved. With the valve cover off, this is also the right time to check spark plugs and address the oil filter housing gasket if it's leaking.

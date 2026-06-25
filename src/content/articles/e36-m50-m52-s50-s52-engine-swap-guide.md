@@ -7,7 +7,7 @@ date: "2026-06-12"
 hero: "e36-m50-m52-s50-s52-engine-swap-guide.webp"
 ---
 
-The US-spec E36 M3 engine is, at its core, a factory-stroked and refined version of the M50/M52 engine found in the 325i and 328i. This shared architecture makes swapping an S50 or S52 into a non-M E36 one of the most popular, cost-effective, and reliable OEM+ power upgrades available. This guide cuts through the forum noise to give you the definitive, no-nonsense process for a successful swap.
+The US-spec E36 M3 engine is, at its core, a factory-stroked and refined version of the M50/M52 engine found in the 325i and 328i. This shared architecture makes swapping an S50 or S52 into a non-M E36 one of the most popular, cost-effective, and reliable OEM+ power upgrades available. This guide covers the process for a successful swap.
 
 ## TL;DR
 
@@ -115,4 +115,4 @@ You must use M3 exhaust manifolds, as the standard M50/M52 manifolds are highly 
 
 ## What's next?
 
-With your S50 or S52 swap complete, you've essentially built the car BMW should have offered in greater numbers. The chassis is now ready for the next logical steps. The stock 325i/328i brakes are marginal for the new power, so an upgrade to M3 or aftermarket brakes should be your first priority. After that, focus on suspension. A quality coilover setup and reinforced subframe mounts will transform the car, allowing you to fully exploit the newfound power and create a truly balanced and formidable E36.
+The stock 325i/328i brakes are marginal for this kind of power — E36 M3 brakes are the immediate next step. After that, look at suspension: coilovers and reinforced subframe mounts let you actually use what the engine is producing.
