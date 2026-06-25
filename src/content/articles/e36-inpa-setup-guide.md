@@ -13,7 +13,7 @@ INPA is BMW's factory diagnostic software from the 1990s–2000s. On the E36 it 
 
 ---
 
-## What INPA Does That Generic Scanners Don't
+## What INPA does that generic scanners don't
 
 A standard OBD2 Bluetooth dongle reads emission-related fault codes from the DME. That's it. INPA gives you:
 
@@ -28,9 +28,9 @@ This is the difference between knowing a fault code exists and understanding why
 
 ---
 
-## What You Need
+## What you need
 
-### 1. The cable
+### 1. the cable
 
 You need a **K-DCAN USB cable** (also called a PA Soft cable or just INPA cable). This interfaces between your laptop's USB port and the car's OBD2 port.
 
@@ -40,7 +40,7 @@ You need a **K-DCAN USB cable** (also called a PA Soft cable or just INPA cable)
 
 The E36's OBD port (under the bonnet, near the battery on earlier models, or in the footwell on later models) is a round BMW-specific connector — not the standard OBD2 trapezoid. Later E36s (1996+) have both. The K-DCAN cable for E36 comes with a round BMW adapter, or you can get an adapter separately.
 
-### 2. The laptop
+### 2. the laptop
 
 Windows only. The software was written for Windows 98/XP but runs fine on Windows 10/11 in compatibility mode. Requirements:
 - **USB port** (for the cable)
@@ -50,7 +50,7 @@ Windows only. The software was written for Windows 98/XP but runs fine on Window
 
 A cheap €50 ThinkPad from eBay is ideal — dedicate it to car diagnostics, keep it offline, and it'll outlast the car.
 
-### 3. The software package
+### 3. the software package
 
 The typical INPA package contains:
 - **INPA** — the main diagnostic interface
@@ -65,7 +65,7 @@ These tools are widely available in the BMW enthusiast community. A Google searc
 
 ## Installation
 
-### Step 1: Install EDIABAS first
+### Step 1: install ediabas first
 
 EDIABAS is the communication layer everything else depends on. Run the EDIABAS installer, accept defaults. After install, edit `C:\EDIABAS\BIN\EDIABAS.INI`:
 
@@ -77,23 +77,23 @@ Baud=9600
 
 Check the actual COM port number in Windows Device Manager after plugging in the cable.
 
-### Step 2: Install INPA
+### Step 2: install INPA
 
 Run the INPA installer. It installs to `C:\EDIABAS\ECU\` by default. The installer asks for paths — accept defaults.
 
 After installing, navigate to `C:\EDIABAS\INPA\` and check that `.IPO` files exist for your car's modules. The E36-specific files include `DME.IPO`, `EWS.IPO`, `ABS.IPO`, etc.
 
-### Step 3: Configure the COM port
+### Step 3: configure the com port
 
 Open **INPA** → **Settings** → **COM Port** — set to match your cable's COM port. Test with the cable plugged in and ignition on: click **Connect** — you should see the E36 model selection.
 
-### Step 4: Install FTDI drivers
+### Step 4: install ftdi drivers
 
 If Windows didn't auto-install them, download FTDI drivers from the FTDI website and install. The cable must appear as a COM port in Device Manager under **Ports (COM & LPT)**. If it appears as an unknown device, the driver isn't installed.
 
 ---
 
-## Connecting to the Car
+## Connecting to the car
 
 1. Plug cable into laptop USB
 2. Plug cable into car OBD port (ignition off is fine for connecting)
@@ -106,9 +106,9 @@ The module list shows everything: DME, EWS, ABS, instrument cluster (KOMBI), ZKE
 
 ---
 
-## Module-by-Module: What to Check
+## Module-by-Module: what to check
 
-### DME (Engine ECU)
+### DME (engine ECU)
 
 Navigate to DME. This is where you spend the most time.
 
@@ -125,7 +125,7 @@ Navigate to DME. This is where you spend the most time.
 
 **Adaptation reset:** After cleaning the throttle body or idle control valve, reset adaptations here so the DME relearns from a clean baseline.
 
-### EWS (Immobilizer)
+### EWS (immobilizer)
 
 **Fault codes:** "Key not authorized," "communication fault," etc.  
 **Key status:** See which key slots are programmed  
@@ -138,25 +138,25 @@ Navigate to DME. This is where you spend the most time.
 **Live data:** Wheel speeds (all four, individually) — critical for diagnosing intermittent ABS warning lights. Drive slowly and watch for a wheel speed reading of 0 while the others register correctly. That wheel's sensor or ring is faulty.  
 **Actuator test:** Cycle the ABS pump — you'll hear it run briefly
 
-### Instrument Cluster (KOMBI)
+### Instrument cluster (kombi)
 
 **Live data:** Odometer, service interval counter, coolant temp (as received by cluster — useful to compare against DME's reading to find cluster vs sensor issues)  
 **Fault codes:** Illumination faults, CAN faults on later models
 
-### ZKE (Central Body Module)
+### ZKE (central body module)
 
 Controls central locking, windows, interior lights, deadlocking, soft-close. Fault codes here cover window regulator faults, lock faults, and switch faults. On a car with window or locking issues, check ZKE before touching any motors.
 
-### LCM (Light Control Module)
+### LCM (light control module)
 
 **Fault codes:** Bulb failure codes (LCM monitors current draw for each bulb — if current is wrong, it stores a fault even if the bulb appears to work). Useful for tracing which bulb is intermittent.  
 **Actuator test:** Turn on individual lights from software — useful when physically checking continuity without a helper.
 
 ---
 
-## Practical Examples
+## Practical examples
 
-### Example 1: Rough idle, no OBD2 code
+### Example 1: rough idle, no OBD2 code
 
 OBD2 scanner shows nothing. Open INPA → DME → live data. Watch:
 - Long-term fuel trim: if it's at +20%, the engine is running lean permanently. Cause: air leak (intake boot crack, loose hose) or weak fuel pump.
@@ -167,17 +167,17 @@ OBD2 scanner shows nothing. Open INPA → DME → live data. Watch:
 
 Generic scanner says "wheel speed sensor fault — front left." But which side? INPA live data while driving at 15 km/h shows three wheels at normal speed; one reads 0. That's the failed sensor or corroded tone ring. Saves pulling all four wheels to check.
 
-### Example 3: Post-swap, won't start
+### Example 3: post-swap, won't start
 
 After an M50 swap, car cranks but doesn't fire. INPA → EWS shows "key not authorized" fault. The EWS from the donor car isn't matched to the ignition key you're using. Either use the donor key set, or recode EWS to the new key. See the EWS guide.
 
-### Example 4: Charging fault light, alternator tests fine
+### Example 4: charging fault light, alternator tests fine
 
 INPA → DME live data → battery voltage while revving: should climb to 14.2–14.4 V. If it stays at 12.1 V with the engine running, the alternator isn't charging. If it reads 13.8 V at idle but INPA shows a charging fault code, check the voltage regulator separately from the alternator.
 
 ---
 
-## NCS Expert — Coding Modules
+## NCS expert — coding modules
 
 NCS Expert is a step above INPA — it reads and writes module coding data. On the E36 this is less critical than on later BMWs, but useful for:
 
@@ -189,7 +189,7 @@ NCS Expert is not beginner-friendly. Before changing any coding, **read and save
 
 ---
 
-## Keeping INPA Reliable
+## Keeping INPA reliable
 
 - Use the cable only for diagnostics — don't leave it plugged in with ignition off for extended periods (parasitic drain)
 - Keep the laptop dedicated and offline — Windows Update breaking COM port drivers on a car-specific laptop is a real problem

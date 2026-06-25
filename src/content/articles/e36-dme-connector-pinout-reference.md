@@ -17,7 +17,7 @@ hero: "e36-dme-connector-pinout-reference.webp"
 
 ---
 
-## Background: Which DME Are We Talking About?
+## Background: which DME are we talking about?
 
 The E36 ran two generations of Bosch Motronic on the six-cylinder cars before the swap to OBD2:
 
@@ -33,11 +33,11 @@ The harness plug itself is BMW part **61 12 1 393 443** (female housing, 88-pin,
 
 ---
 
-## The 88-Pin DME Connector: Full Pinout
+## The 88-pin DME connector: full pinout
 
 The connector is keyed and reads left-to-right, top row first, when viewed from the wire side (ECU unplugged, looking into the harness plug). Rows are 32 / 32 / 24 pins.
 
-### Power and Ground (Rows A & B, selected pins)
+### Power and ground (rows a & b, selected pins)
 
 | Pin | Signal | Wire Colour (factory) | Notes |
 |---|---|---|---|
@@ -52,7 +52,7 @@ The connector is keyed and reads left-to-right, top row first, when viewed from 
 
 **On a 25-year-old E36:** Pins 3 and 4 are the single most common source of intermittent misfires and false fault codes. Both grounds run through the same loom section that passes over the back of the cylinder head — heat cycling cracks the insulation. Measure resistance to chassis with the connector unplugged and probing the pin directly; anything above 0.2Ω warrants a replacement ground wire.
 
-### Sensor Inputs
+### Sensor inputs
 
 | Pin | Signal | Expected Value (key on, engine cold) | Notes |
 |---|---|---|---|
@@ -76,7 +76,7 @@ The connector is keyed and reads left-to-right, top row first, when viewed from 
 
 **Tip for swap builds:** In our M50B25TU swap into a Z3 shell, the CMP sensor wiring had been extended by a previous owner using unshielded speaker wire. The result was intermittent cam signal dropout above 5,000 RPM. Always use twisted shielded pair (Belden 8761 equivalent, ~€1.20/m) for the CMP and CKP extensions.
 
-### Injector and Actuator Outputs
+### Injector and actuator outputs
 
 | Pin | Signal | Notes |
 |---|---|---|
@@ -91,7 +91,7 @@ The connector is keyed and reads left-to-right, top row first, when viewed from 
 | 47 | VANOS solenoid | M3.3 only; B+ switched, ECU grounds to activate |
 | 55 | Purge valve (EVAP) | PWM; ECU low-side |
 
-### Ignition Outputs
+### Ignition outputs
 
 | Pin | Signal | Notes |
 |---|---|---|
@@ -103,7 +103,7 @@ The coil trigger wires go to the **external power stage (ZAE)** module — BMW p
 
 ---
 
-## The OBD1 Diagnostic Port (Round 20-Pin)
+## The OBD1 diagnostic port (round 20-pin)
 
 The E36 OBD1 diagnostic port is a round 20-pin circular connector located in the engine bay near the fusebox. It is **not** OBD2-compatible. Communication is via BMW's proprietary DS2 protocol at 9,600 baud on a single K-line wire.
 
@@ -121,7 +121,7 @@ To communicate with the DME using a modern interface, you need a **K+DCAN USB ca
 
 ---
 
-## Common Wiring Faults and How to Trace Them
+## Common wiring faults and how to trace them
 
 These are the failure modes we see repeatedly on E36 harnesses that are 25–30 years old:
 
@@ -139,7 +139,7 @@ On 1995+ cars with EWS2, the EWS module communicates with the DME over a separat
 
 ---
 
-## Using This Reference for Standalone ECU Work
+## Using this reference for standalone ECU work
 
 If you're deleting the factory harness in favour of a standalone ECU (Speeduino, MegaSquirt MS3, or Haltech Nexus R5), this pinout gives you the signal source locations. Key points:
 
@@ -152,6 +152,6 @@ Bosch connector tool set for 88-pin DME service (extraction and insertion): look
 
 ---
 
-## What's Next
+## What's next
 
 If you're here because you're chasing a specific fault code, cross-reference the pin assignments above with the BMW ISTA fault code definitions — codes 0x012A (coolant sensor) and 0x0158 (CKP signal) account for a large proportion of E36 no-start calls. For harness repair beyond terminal-level work, see our E36 engine harness refresh guide, which covers full loom re-pinning with OEM-spec GXL wire and correct gauge selection by circuit type.

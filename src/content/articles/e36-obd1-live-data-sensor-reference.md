@@ -17,7 +17,7 @@ hero: "e36-obd1-live-data-sensor-reference.webp"
 
 ---
 
-## The OBD1 Landscape on the E36
+## The OBD1 landscape on the E36
 
 Before diving into values, it helps to know what you're actually connected to. E36 models from 1992–1995 (and some early 1996 markets) run Bosch DME M3.1 or M3.3 on the M50/M50TU engines, and Bosch M5.2 on the M52. These are pre-OBD2 systems — they communicate over a proprietary K-line protocol accessed via the 20-pin diagnostic connector in the engine bay, not the later 16-pin OBD2 port under the dash.
 
@@ -30,7 +30,7 @@ The 20-pin port is located on the driver's side of the engine bay on most E36s. 
 
 ---
 
-## Coolant Temperature Sensor (ECT) — NTC Sensor on Thermostat Housing
+## Coolant temperature sensor (ECT) — NTC sensor on thermostat housing
 
 **Part number:** BMW 13-62-1-433-077 (M50TU/M52), NTC-type  
 **Replacement cost:** €8–15 OEM, €4–8 aftermarket (Wahler, Hella)
@@ -49,7 +49,7 @@ The ECT is a two-wire NTC thermistor. INPA displays it in °C as **"Coolant Temp
 
 ---
 
-## Intake Air Temperature (IAT) — MAF-Integrated or Standalone
+## Intake air temperature (IAT) — MAF-integrated or standalone
 
 **Part number (standalone):** BMW 13-62-1-730-004  
 **MAF unit with integrated IAT (M50TU):** Bosch 0-280-218-004, remanufactured ~€80–140
@@ -67,7 +67,7 @@ An IAT reading significantly higher than ambient at a cold start points to a sen
 
 ---
 
-## Mass Airflow (MAF) — Hot-Film Sensor
+## Mass airflow (MAF) — hot-film sensor
 
 **Part number:** Bosch 0-280-218-004 (M50TU 2.5), 0-280-218-063 (M52 2.8)  
 **Cost:** €80–160 remanufactured, €200–280 new OEM
@@ -86,7 +86,7 @@ A MAF reading that's too low at idle (under 8 kg/h) with otherwise normal sensor
 
 ---
 
-## Lambda / O2 Sensor and Fuel Trim Channels
+## Lambda / O2 sensor and fuel trim channels
 
 **Front O2 sensor (pre-cat):** Bosch 0-258-003-477 or NTK OZA527-E6  
 **Cost:** €25–45 OEM-equivalent
@@ -112,21 +112,21 @@ A multiplicative correction sitting at 1.12+ means the DME is permanently adding
 
 ---
 
-## Throttle Position, Idle Control, and RPM Channels
+## Throttle position, idle control, and RPM channels
 
-### Throttle Position Sensor (TPS)
+### Throttle position sensor (TPS)
 **Part number:** Bosch 0-280-120-431 (M50TU)  
 **Cost:** €30–60 replacement
 
 INPA shows TPS as a percentage or in degrees. At closed throttle (idle), expect **0–2%**. At wide-open throttle, **95–100%**. A TPS that reads 15% at idle will confuse the idle control system entirely — the DME won't activate the idle speed controller properly.
 
-### Idle Air Control Valve (IACV / Leerlaufregler)
+### Idle air control valve (iacv / leerlaufregler)
 **Part number:** Bosch 0-280-140-516  
 **Cost:** €45–80 new, €15–25 remanufactured
 
 INPA shows IACV opening as a duty cycle (%). Normal warm idle duty cycle on a healthy M50TU: **20–35%**. If you're seeing 50–60% duty cycle just to hold 750 RPM, the engine has a vacuum leak or the valve itself is carboned up. Soak it in carb cleaner and actuate it manually — a sticky IACV on a 25-year-old E36 is responsible for more "ghost" idle problems than any other single component.
 
-### RPM and Ignition Timing
+### RPM and ignition timing
 | Channel | Warm Idle | 3000 RPM Cruise |
 |---|---|---|
 | Engine speed | 700–780 RPM | — |
@@ -136,7 +136,7 @@ Timing retard under load (especially with correct MAF/ECT readings) points direc
 
 ---
 
-## Battery Voltage and Injector Data
+## Battery voltage and injector data
 
 These channels are often ignored but give early warning of charging system problems and injector wear.
 
@@ -150,7 +150,7 @@ On the M50TU with the original Bosch EV1 injectors (0-280-150-714, set of 6 ~€
 
 ---
 
-## What's Next
+## What's next
 
 With these baseline values in hand, you can build a proper before-and-after dataset for any repair or modification. Log a 10-minute drive cycle covering idle, part-throttle cruise, and a couple of hard pulls — save the INPA log file and compare it against these numbers. Deviations tell you exactly which subsystem to investigate before you start throwing parts at the car.
 

@@ -13,9 +13,9 @@ A 25–30-year-old E36's suspension is worn. Every rubber bush has hardened or c
 
 ---
 
-## Overview of E36 Suspension Geometry
+## Overview of E36 suspension geometry
 
-### Front: MacPherson strut
+### Front: macpherson strut
 
 The E36 front suspension uses a conventional MacPherson strut arrangement:
 
@@ -26,7 +26,7 @@ The E36 front suspension uses a conventional MacPherson strut arrangement:
 
 Key wear points: strut top mount bearing, lower ball joint, control arm bushes (especially the larger rear bush), tension rod bushes.
 
-### Rear: Multi-link
+### Rear: multi-link
 
 The E36 rear suspension is a semi-trailing arm / multi-link design (referred to as the Z-axle):
 
@@ -39,7 +39,7 @@ Key wear points: trailing arm bushes, lateral arm inner and outer bushes, subfra
 
 ---
 
-## What Wears First
+## What wears first
 
 In order of typical failure on a high-mileage E36:
 
@@ -54,7 +54,7 @@ In order of typical failure on a high-mileage E36:
 
 ---
 
-## Front Suspension
+## Front suspension
 
 ### Struts
 
@@ -86,7 +86,7 @@ Anti-roll bar drop links: the connecting links between the anti-roll bar and the
 
 ---
 
-## Rear Suspension
+## Rear suspension
 
 ### Shock absorbers
 
@@ -125,7 +125,7 @@ The E36 uses a **sealed, non-adjustable rear wheel bearing** pressed into the hu
 
 ---
 
-## Coilovers vs OEM Refresh
+## Coilovers vs OEM refresh
 
 For a road car, a quality OEM-equivalent refresh (Bilstein B4 + new rubber + new bearings) is often the correct choice:
 
@@ -144,7 +144,7 @@ If your budget is limited, an OEM-equivalent refresh is always better than budge
 
 ---
 
-## Alignment Specifications
+## Alignment specifications
 
 After any suspension work, **four-wheel alignment is mandatory.** Even replacing bushes that looked identical changes the geometry because the new rubber sits at a different height until it settles.
 
@@ -183,7 +183,7 @@ Any alignment shop with four-wheel laser or camera alignment capability can alig
 
 ---
 
-## Recommended Parts (Road Car Refresh)
+## Recommended parts (road car refresh)
 
 | Component | Recommended brand |
 |-----------|------------------|

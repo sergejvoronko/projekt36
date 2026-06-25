@@ -21,7 +21,7 @@ This guide is not for the faint of heart. It assumes you are comfortable with en
 | **Time**     | 40-60 hours for a skilled DIY mechanic.                                  |
 | **Difficulty** | ★★★★☆ (4/5) - Mechanical work is a 2/5, but the electronics are a solid 4/5. |
 
-## Sourcing Your M54 and Key Components
+## Sourcing your M54 and key components
 
 The first step is acquiring a healthy donor engine. The M54 was available in several displacements, but the M54B30 from an E46 330i/Ci, E39 530i, or Z4 3.0i is the prize.
 
@@ -47,11 +47,11 @@ Beyond the engine itself, you'll need several E36-specific parts to physically m
 | E36 M52 Power Steering Pump            | 32411093577           | The easiest way to adapt E36 PS lines.         | Use Original       |
 | Corvette C5 Fuel Filter/Regulator      | Wix 33737 / GF822     | Converts M54 returnless fuel rail to E36 return system. | €75                |
 
-## Mechanical Installation: The Bolt-In Bits
+## Mechanical installation: the bolt-in bits
 
 The good news is that the M54 block shares its basic architecture with the M50/M52. It physically bolts directly to the E36 engine mounts and transmission. The devil is in the details of the accessories and oil system.
 
-### Oil System Conversion
+### Oil system conversion
 
 This is non-negotiable. The E46 and E39 use a rear-sump oil pan, while the E36 requires a front-sump design to clear the subframe.
 
@@ -59,23 +59,23 @@ This is non-negotiable. The E46 and E39 use a rear-sump oil pan, while the E36 r
 2.  **Swap the Oil Pump Sprocket:** The M54 oil pump is driven by a sprocket with a different tooth count than the M50/M52 pump. You must retain the M54's oil pump but swap its drive sprocket for one from an M50/M52 pump to ensure it meshes correctly with the E36-style oil pump chain. Alternatively, some builders machine the M54 pump to accept the E36 pickup tube directly.
 3.  **Install E36 Components:** Bolt on the E36 M50/M52 oil pan, new gasket (11131740346), pickup tube, and dipstick tube. Torque the oil pan bolts to 10 Nm in a criss-cross pattern. On a 25-year-old E36, expect the subframe to have some grime; clean all mating surfaces thoroughly before installation.
 
-### Exhaust Manifolds
+### Exhaust manifolds
 
 Do not waste time trying to make the M54 manifolds fit. They won't. The most common and effective solution is to use the tubular-style exhaust manifolds from an M52B28 (found in the 328i) or the US-spec S52 (from the E36 M3). These offer excellent flow and bolt directly to the M54 head and the E36 exhaust system. The M54 uses different exhaust studs, so be sure to get the correct nuts and gaskets for a leak-free seal.
 
-### Cooling and Accessories
+### Cooling and accessories
 
 *   **Cooling:** The E36 radiator, expansion tank, and most hoses can be retained. You may need to slightly trim the upper radiator hose to fit perfectly. Using a new E36 328i radiator (e.g., NRF 58243, ~€100) is a wise investment.
 *   **Power Steering:** Mount your original E36 M52 power steering pump and reservoir to the M54 block. You may need to use a slightly different length serpentine belt. A common choice is a 6PK1538.
 *   **Air Conditioning:** The E36 A/C compressor can be mounted to the M54 block, but it requires a custom bracket or an adapter kit (like the one from Kassel Performance). This is often the most tedious part of the accessory drive.
 
-## Wiring and DME: The Brain Transplant
+## Wiring and DME: the brain transplant
 
 This is where most people get stuck. You are mating a modern CAN bus-based engine management system (MS43) to an older, simpler chassis. The goal is to integrate the M54 engine harness with the E36's main body connector, the X20.
 
-**The Strategy:** Use the complete M54 engine harness. Do not attempt to run the M54 on the old M52 MS41 DME—you will lose double VANOS control, electronic throttle, and create a tuning nightmare.
+**The Strategy:** Use the complete M54 engine harness. Do not attempt to run the M54 on the old M52 MS41 DME — you will lose double VANOS control, electronic throttle, and create a tuning nightmare.
 
-### Modifying the Harness
+### Modifying the harness
 
 You'll be working at the E36's X20 connector (the large round plug on the firewall) and the E46's harness connector. You will need to de-pin and splice several wires. A quality wiring diagram for both cars is essential.
 
@@ -93,7 +93,7 @@ Here is a simplified cheat sheet for the most critical connections from the M54 
 
 This table is a starting point. You will need to source complete pinouts for your specific model years to handle alternator wiring, reverse lights, and other functions.
 
-### DME Adaptation: EWS Delete and Tuning
+### DME adaptation: EWS delete and tuning
 
 The M54's MS43 DME is coded to its original car's security system (EWS - *Elektronische Wegfahrsperre*). It will not start the engine in your E36 without being modified.
 
@@ -101,11 +101,11 @@ You have two options:
 1.  **Swap all EWS components:** Transfer the DME, EWS module, and ignition key chip from the donor car. This is complex and rarely practical.
 2.  **Flash the DME:** The best method. Send your MS43 DME to a specialist who can flash it to remove the EWS check. This makes the DME "plug and play" from a security standpoint. They can also apply a base tune, adjust for the exhaust setup, and raise the rev limiter. Expect to pay **€250 - €400** for this service from companies in the EU.
 
-### Electronic Accelerator Pedal
+### Electronic accelerator pedal
 
 The M54 uses a drive-by-wire throttle. You must mount the E46 electronic accelerator pedal assembly (65718380066, ~€60 used) in your E36. This typically requires fabricating a small adapter bracket to mount it securely to the firewall. The pedal's 6-pin connector wires directly into the M54 engine harness.
 
-## Fuel System: Return vs. Returnless
+## Fuel system: return vs. returnless
 
 The final puzzle is the fuel system. The E36 uses a return-style fuel system with the regulator on the fuel rail, maintaining ~3.5 bar. The M54 uses a returnless system with the regulator in the tank, running at a constant ~3.5 bar.
 
@@ -119,7 +119,7 @@ The cleanest solution is to use an external fuel pressure regulator that mimics 
 
 This setup costs less than €100 and is far more reliable than trying to modify the M54 fuel rail for a return line.
 
-## What's Next?
+## What's next?
 
 With the M54 running, the transformation is immediate. The engine is smoother, more responsive, and the sound is phenomenal. The 231 hp and 300 Nm of torque from an M54B30 completely wake up the E36 chassis, offering performance that rivals a Euro S50B30 M3 for a fraction of the cost.
 

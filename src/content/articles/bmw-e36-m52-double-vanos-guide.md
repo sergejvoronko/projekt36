@@ -9,7 +9,7 @@ hero: "bmw-e36-m52-double-vanos-guide.webp"
 
 The M52TU engine is a popular and potent swap for the E36 chassis, offering a fantastic blend of modern refinement and classic inline-six character. But with age, its Achilles' heel becomes apparent: the double VANOS unit. The original Buna-N rubber seals degrade in the engine's harsh environment, leading to a cascade of performance issues and the infamous "marbles in a can" rattle.
 
-This guide is your definitive resource for diagnosing, completely overhauling, and even upgrading the M52TU's double VANOS system. We'll skip the basics and get straight to the part numbers, procedures, and real-world advice you need to restore—and exceed—factory performance.
+This guide covers diagnosing, overhauling, and upgrading the M52TU's double VANOS system. Part numbers, procedures, and practical advice to restore and exceed factory performance.
 
 ## TL;DR
 
@@ -23,18 +23,15 @@ This guide is your definitive resource for diagnosing, completely overhauling, a
 
 ---
 
-## Why Is This in My E36? The M52TU Quick Primer
+## Why is this in my E36? the M52TU quick primer
 
 If you're reading this, you likely know your E36 didn't come with a double VANOS M52 from the factory. The stock E36 M52B28 is a single VANOS engine. The M52TU (Technical Update) arrived with the E46 3-series and late E39 5-series, bringing with it continuously variable timing on both the intake and exhaust camshafts.
 
-**Key M52TU features relevant to this guide:**
-*   **Dual VANOS:** Actively adjusts timing on both cams for a broader torque curve and improved emissions.
-*   **MS42/MS43 DME:** More advanced engine management than the E36's MS41.
-*   **Drive-by-Wire:** Electronic throttle body (most variants).
+The key differences from a standard E36 M52: dual VANOS actively adjusts timing on both cams, the MS42/MS43 DME is more advanced than the E36's MS41, and most variants use a drive-by-wire throttle body.
 
 Swapping this engine into an E36 is a well-trodden path for good reason. However, it also means you've inherited the M52TU's primary wear item. A tired VANOS unit can make your potent engine swap feel sluggish and sound broken. Let's fix that.
 
-## Diagnosis: Is Your VANOS Failing?
+## Diagnosis: is your VANOS failing?
 
 The degradation of VANOS seals is a gradual process. You might not even notice the slow creep of performance loss until it becomes severe. Here are the definitive symptoms of a failing M52TU VANOS unit.
 
@@ -50,13 +47,13 @@ A failing VANOS will often throw specific codes. Using a BMW-capable scanner, lo
 *   `P1523` (A camshaft position actuator, intake)
 *   `P1397` (Camshaft position sensor B circuit)
 
-If you're experiencing a combination of these symptoms, a VANOS rebuild is not just recommended—it's necessary.
+If you're seeing a combination of these symptoms, a VANOS rebuild is necessary.
 
-## The Fix: Complete Parts & Tool List
+## The fix: complete parts and tool list
 
 This is not a job where you want to cut corners. Do it once, do it right. The community standard for VANOS repair parts comes from Beisan Systems, whose upgraded Viton O-rings and Teflon seals are designed to far outlast the OEM components.
 
-We highly recommend performing both the seal replacement and the anti-rattle repair at the same time. You're already in there; the extra 30 minutes is well worth it.
+Do both the seal replacement and the anti-rattle repair at the same time. You're already in there, and the extra 30 minutes is worth it.
 
 | Part Description | Manufacturer | Part Number | Approx. EU Price | Notes |
 |---|---|---|---|---|
@@ -69,7 +66,7 @@ We highly recommend performing both the seal replacement and the anti-rattle rep
 
 **Total Parts Cost:** ~€185
 
-### Specialty Tools
+### Specialty tools
 
 You cannot complete this job correctly without the right tools. Don't even try. You can buy a kit, rent one, or borrow from a friend, but you will need them.
 
@@ -81,7 +78,7 @@ You cannot complete this job correctly without the right tools. Don't even try. 
 | **Left-Hand Thread T30 Socket** | €10 | For removing the two small VANOS piston bolts. CRITICAL. |
 | **Torque Wrench (low range)** | - | For VANOS bolts (10 Nm) and valve cover nuts. |
 
-## Step-by-Step Repair Overview
+## Step-by-step repair overview
 
 We're providing a high-level overview. For a detailed, step-by-step pictorial, the Beisan Systems procedure guide is the definitive source and should be followed meticulously.
 
@@ -114,15 +111,13 @@ This is where the magic happens. Take the VANOS unit to a clean workbench.
 3.  **Tension and Torque:** Re-apply tension with the secondary chain tensioner. Now, torque the sprocket bolts to spec (typically 10 Nm, but verify for your model).
 4.  **Final Assembly:** Remove the cam locks and TDC pin. Rotate the engine by hand two full revolutions to ensure there is no valve-to-piston contact. If it spins freely, you can reinstall the valve cover (with a new gasket!), fan, and all other components.
 
-## Beyond the Repair: Performance Tuning
+## Beyond the repair: performance tuning
 
-With a fully functional VANOS, your M52TU is now operating as it should—and is ready for tuning. The increased control over cam timing provides significant headroom for a skilled tuner to optimize the powerband.
+With a fully functional VANOS, your M52TU is now operating as it should — and is ready for tuning. The increased control over cam timing provides significant headroom for a skilled tuner to optimize the powerband.
 
 *   **ECU Remap:** A custom tune for the MS42/MS43 DME can adjust VANOS maps, fuel, and ignition timing to take full advantage of the restored system. This can smooth out the power curve, improve throttle response, and add a noticeable 10-15 horsepower, especially when combined with other modifications like a cold air intake or M54B30 intake manifold.
 *   **M54B30 Camshafts:** For those seeking more power, installing camshafts from the more powerful M54B30 is a popular upgrade. A healthy double VANOS is absolutely essential to get the most out of these more aggressive cams, as it allows the DME to maintain good low-end drivability while providing significant gains in the mid-range and top end.
 
-## What's Next?
+## What's next?
 
-Congratulations. You've just performed one of the most transformative maintenance jobs on the M52TU engine. The restored low-end torque will make the car feel brand new, and the silence from the engine bay will be golden.
-
-With your VANOS rebuilt, now is the perfect time for a fresh oil change with a quality European-spec 5W-40 oil to ensure the new seals bed in properly and the unit has a clean supply of hydraulic pressure. Now, go enjoy the smooth, responsive powerband you've rightfully restored to your E36 swap.
+Before you drive it, do an oil change. The new seals need clean oil to bed in, and the VANOS unit depends entirely on hydraulic pressure — dirty oil is not what you want in there now. Use a quality European-spec 5W-40. After that, you'll notice the difference the moment you pull out of the driveway.

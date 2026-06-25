@@ -13,7 +13,7 @@ The E36 fuel system is straightforward: a submerged in-tank pump, a spin-on filt
 
 ---
 
-## System Overview
+## System overview
 
 ### Major components
 
@@ -38,7 +38,7 @@ The regulator is vacuum-referenced: manifold vacuum at idle pulls the regulator 
 
 ---
 
-## Fuel Pump
+## Fuel pump
 
 ### Location
 
@@ -91,7 +91,7 @@ The pump unit is a combined assembly — pump module, float sender (fuel gauge),
 
 ---
 
-## Fuel Filter
+## Fuel filter
 
 ### Location
 
@@ -121,7 +121,7 @@ The filter costs €8–20 and is a 15-minute job. There is no reason not to rep
 
 ---
 
-## Fuel Pressure Regulator
+## Fuel pressure regulator
 
 The fuel pressure regulator is mounted at the end of the fuel rail (opposite the feed end). It has three connections:
 - Fuel rail (inlet)
@@ -198,7 +198,7 @@ Apply a small amount of clean engine oil to the O-ring tops before reinstalling 
 
 ---
 
-## Complete Fuel System Symptom Chart
+## Complete fuel system symptom chart
 
 | Symptom | Most likely cause | Test |
 |---------|------------------|------|

@@ -13,7 +13,7 @@ The BMW ETM (Electrical Troubleshooting Manual) is the complete wiring reference
 
 ---
 
-## What the ETM Contains
+## What the ETM contains
 
 The E36 ETM is organized into numbered schemas (circuit diagrams). Each schema covers a functional system:
 
@@ -35,11 +35,11 @@ The numbering varies slightly between model years (318i vs 325i, pre- vs post-fa
 
 ---
 
-## The Header Box — Read This First
+## The header box — read this first
 
 Every schema page starts with a header box in the top left. This is the key to the whole page:
 
-### Wire Colours
+### Wire colours
 
 The colour legend lists the abbreviation codes used on every wire in that schema. BMW uses German-origin abbreviations:
 
@@ -64,13 +64,13 @@ Wire codes on the diagram use these abbreviations combined with a gauge number a
 
 The number before the colour is the cross-sectional area in mm². Larger = more current capacity. Ground wires are almost always Brown (Br). Battery positive mains are almost always Red (Rt).
 
-### Diagram Symbols
+### Diagram symbols
 
 The symbols list identifies the numbered components shown in the schema. Each component has a number (e.g., "7 — ABS / traction control module") that appears in a dashed rectangle on the diagram. When you see a dashed box with a number, look it up in the header symbols list to know what it represents.
 
 ---
 
-## Anatomy of a Circuit
+## Anatomy of a circuit
 
 Every circuit in the ETM runs from **battery positive** at the top of the page, through protection (fuse), through load (component), to **chassis ground** at the bottom. Understanding this top-to-bottom flow is the single most important thing to grasp.
 
@@ -98,7 +98,7 @@ The connector identifier lets you find the physical connector in the car using t
 
 ---
 
-## Following a Circuit — Step by Step
+## Following a circuit — step by step
 
 Let's trace the brake light circuit as an example.
 
@@ -120,7 +120,7 @@ Let's trace the brake light circuit as an example.
 
 ---
 
-## Cross-Schema References
+## Cross-Schema references
 
 Components often appear on multiple schemas. When you see:
 
@@ -132,7 +132,7 @@ This matters when you're chasing an intermittent fault that involves multiple sy
 
 ---
 
-## Reading Wire Gauge Sizes
+## Reading wire gauge sizes
 
 Wire gauge affects diagnostic decisions:
 
@@ -150,7 +150,7 @@ When you find a burnt wire, the gauge tells you if the original fuse rating was 
 
 ---
 
-## Common Abbreviations in the ETM
+## Common abbreviations in the ETM
 
 | Abbreviation | Meaning |
 |---|---|
@@ -169,7 +169,7 @@ When you find a burnt wire, the gauge tells you if the original fuse rating was 
 
 ---
 
-## Practical Tips
+## Practical tips
 
 **Print the schema you're working with.** The ETM as a PDF is designed for paper. On screen it's tiny; printed A3 (or A4 with magnification) you can trace circuits with a pencil.
 

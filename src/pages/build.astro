@@ -6,6 +6,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   description="Full documentation of a BMW E36 316i Sedan transformation — M50 engine swap, wiring, suspension, paint, and interior. Eleven chapters from first fault code to final drive."
 >
 
+  <!-- ═══ BUILD JOURNAL HEADER ═══ -->
+  <section class="build-hero">
+    <div class="build-hero-img" aria-hidden="true">
+      <img src="/images/blueprint-engine.webp" alt="" width="1200" height="500" loading="eager" decoding="async" />
+      <div class="build-hero-overlay"></div>
+    </div>
+    <div class="build-header">
+      <div class="build-header-label">// BUILD JOURNAL</div>
+      <h1 class="build-title">Eleven Chapters.<br><em>One Transformation.</em></h1>
+      <p class="build-lead">
+        Every system on this car addressed and documented — from the first fault code
+        pulled in the driveway to the final geometry setup on a four-post lift.
+        Chapters publish as work completes.
+      </p>
+    </div>
+  </section>
+
 <div class="build-page">
 
   <!-- ═══ MEET THE BIMMER ═══ -->
@@ -30,17 +47,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
     </div>
   </a>
-
-  <!-- ═══ BUILD JOURNAL HEADER ═══ -->
-  <div class="build-header">
-    <div class="build-header-label">// BUILD JOURNAL</div>
-    <h1 class="build-title">Eleven Chapters.<br><em>One Transformation.</em></h1>
-    <p class="build-lead">
-      Every system on this car addressed and documented — from the first fault code
-      pulled in the driveway to the final geometry setup on a four-post lift.
-      Chapters publish as work completes.
-    </p>
-  </div>
 
   <!-- ═══ CHAPTERS LIST ═══ -->
   <div class="chapters">
@@ -215,8 +221,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   /* ── BUILD HEADER ── */
+  .build-hero {
+    position: relative; overflow: hidden;
+    border-bottom: 1px solid var(--border);
+    min-height: 300px; display: flex; align-items: flex-end;
+  }
+  .build-hero-img { position: absolute; inset: 0; z-index: 0; }
+  .build-hero-img img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.3) saturate(0.6); }
+  .build-hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, var(--bg) 0%, rgba(19,23,32,0.5) 60%, rgba(19,23,32,0.25) 100%);
+  }
   .build-header {
-    margin-bottom: 3rem;
+    position: relative; z-index: 1;
+    padding: 5rem 1.5rem 3rem; width: 100%;
+    max-width: var(--wide-w); margin: 0 auto;
   }
   .build-header-label {
     font-family: var(--font-mono);

@@ -13,7 +13,7 @@ Every E36 with a sunroof has four drain channels — two at the front, two at th
 
 ---
 
-## The Sunroof Tray System
+## The sunroof tray system
 
 The E36 sunroof doesn't seal perfectly — it's not designed to. Water that gets past the glass seal lands in a shallow drain tray around the sunroof aperture. From the tray, four drain hoses carry water away:
 
@@ -24,7 +24,7 @@ As long as all four drains are clear, a working sunroof never lets water into th
 
 ---
 
-## Why They Block
+## Why they block
 
 The drain hoses are small-diameter rubber tubes (approximately 8–10 mm inside diameter). Over time:
 
@@ -37,7 +37,7 @@ The front drains are the most commonly blocked because the front tray collects m
 
 ---
 
-## Where the Drains Exit
+## Where the drains exit
 
 **Front drains:** Follow the A-pillar down. The hose runs behind the A-pillar trim and exits underneath the car, typically via a small rubber grommet or open nipple just behind the front wheel arch. Lift the front carpet edge or look underneath near the front jacking points.
 
@@ -47,9 +47,9 @@ The front drains are the most commonly blocked because the front tray collects m
 
 ---
 
-## Symptoms of Blocked Drains
+## Symptoms of blocked drains
 
-### Wet A-pillar / wet front footwell
+### Wet a-pillar / wet front footwell
 
 The most common presentation. The sunroof tray fills up, overflows down the A-pillar behind the trim, and soaks into:
 - The A-pillar trim (visible staining, delamination of the foam backing)
@@ -81,7 +81,7 @@ This is where blocked sunroof drains become expensive:
 
 ---
 
-## How to Check the Drains
+## How to check the drains
 
 ### Visual check at the tray
 
@@ -99,7 +99,7 @@ A flexible drain clearing wire (as used for washing machine drain hoses) or a pi
 
 ---
 
-## Clearing Blocked Drains
+## Clearing blocked drains
 
 ### Front drains
 
@@ -124,7 +124,7 @@ Replacement drain hose is standard 8 mm ID rubber hose (or slightly larger depen
 
 ---
 
-## After Clearing: Drying Out the Interior
+## After clearing: drying out the interior
 
 If the drains were blocked long enough to let water in:
 
@@ -142,7 +142,7 @@ Do not reassemble until the floor structure (metal sill) is visually dry. Trappe
 
 ---
 
-## Preventive Maintenance
+## Preventive maintenance
 
 - **Annual tray clean:** Every autumn, before the wet season, clear debris from the sunroof tray and verify all four drains flow freely
 - **Flow test after leaf season:** A quick water test in each corner takes 2 minutes and confirms all four drains are clear
@@ -152,7 +152,7 @@ A sunroof tray clean is one of the cheapest, highest-value maintenance tasks on 
 
 ---
 
-## Sunroof Drain vs Other Leak Sources
+## Sunroof drain vs other leak sources
 
 Not all E36 water ingress comes from the sunroof drains:
 

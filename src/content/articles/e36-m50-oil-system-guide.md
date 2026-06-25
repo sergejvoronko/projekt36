@@ -17,7 +17,7 @@ hero: "e36-m50-oil-system-guide.webp"
 
 ---
 
-## How the M50 Oil System Works
+## How the M50 oil system works
 
 The M50 (and its VANOS-equipped sibling, the M50B25TU/M50B20TU) uses a conventional gear-type oil pump driven off the front of the crankshaft. Oil is drawn from the sump through a pickup tube with a mesh strainer, pushed through the pump, past the oil pressure relief valve, through the filter, and then distributed to the main and rod bearings, camshaft journals, and — on TU variants — the VANOS solenoid system.
 
@@ -30,7 +30,7 @@ The system is deceptively simple, but a few weak points make it worth understand
 
 ---
 
-## Oil Pressure Specs and What "Low" Actually Means
+## Oil pressure specs and what "low" actually means
 
 Before condemning a pump, verify actual pressure with a mechanical gauge. The M50's idiot light triggers at around **0.3 bar**, which is dangerously low. The sensor threads into the block at the front-left (M10×1.0), and a mechanical gauge adapter fits the same port.
 
@@ -51,7 +51,7 @@ On a 25-year-old E36 that's been running 15W-40 since the factory fill, seeing 1
 
 ---
 
-## Oil Pump: Part Numbers, Brands, and What to Buy
+## Oil pump: part numbers, brands, and what to buy
 
 The M50B20 and M50B25 share the same oil pump housing, driven via the crankshaft nose — no separate drive shaft. The pump is accessible after removing the front timing cover.
 
@@ -74,7 +74,7 @@ For a street M50 with 200,000 km, Febi or Glyco is a reasonable choice. For an M
 
 ---
 
-## Pickup Tube and O-Ring: The Most Overlooked Failure Point
+## Pickup tube and o-ring: the most overlooked failure point
 
 The pickup tube on the M50 runs from the oil pump body down into the sump and terminates in a mesh strainer. It seals to the pump body via a rubber O-ring — **BMW part 11 41 1 716 344**, roughly **€4–€8**.
 
@@ -89,7 +89,7 @@ The pickup tube itself (BMW 11 41 1 716 343, ~€25–€35 OEM) rarely needs re
 
 ---
 
-## Sump Options: OEM, Baffled, and Dry Sump Considerations
+## Sump options: OEM, baffled, and dry sump considerations
 
 The stock M50 sump holds approximately **5.5 litres** with filter. It is an unmodified stamped-steel pan with no windage tray and minimal baffling. For most street applications this is fine. For track use or a dedicated M50 swap into a lightweight chassis, oil starvation during sustained cornering or hard braking is a real risk.
 
@@ -111,7 +111,7 @@ In our M50 swap build running a B25TU in an E30 shell, we fitted the Mosselman b
 
 ---
 
-## Oil Pressure Relief Valve and Filter Housing Checks
+## Oil pressure relief valve and filter housing checks
 
 The pressure relief valve is integral to the oil pump body on most M50 units — it is not a separately serviceable item. If you're fitting a new pump, this is handled automatically. However, on the M50TU (VANOS variants), there is an additional **VANOS oil pressure control valve** integrated into the front of the cylinder head that can stick or fail, causing erratic VANOS behaviour and apparent oil pressure faults.
 
@@ -122,7 +122,7 @@ Also check the oil pressure sender (BMW 12 61 1 730 081, ~€15–€25 Hella or
 
 ---
 
-## What's Next
+## What's next
 
 If your M50 is showing low pressure at hot idle and you've confirmed it with a mechanical gauge, start with the pickup tube O-ring and sump inspection — it's a two-hour job and costs under €15. If that checks out, fit a new pump (budget for OEM if the engine is going to be worked hard) and replace the front main seal and timing cover O-rings while you're in there. For any car that will see track days or spirited mountain driving, a baffled sump is a worthwhile investment that eliminates one more variable.
 

@@ -17,7 +17,7 @@ hero: "cooling.webp"
 
 ---
 
-## Why the Entire System, Not Just the Failed Part
+## Why the entire system, not just the failed part
 
 Every E36 forum thread about overheating ends the same way: someone replaces the water pump, drives for three months, then the expansion tank cracks and dumps all the coolant. Or the thermostat sticks closed. Or a hose blows.
 
@@ -29,9 +29,9 @@ The cost of replacing everything at once is €180–320. The cost of an overhea
 
 ---
 
-## Complete Parts List with Part Numbers
+## Complete parts list with part numbers
 
-### The Non-Negotiable Parts (Replace These No Matter What)
+### The non-negotiable parts (replace these no matter what)
 
 | Part | OEM Part Number | Recommended Brand | Est. Price (EU) | Notes |
 |---|---|---|---|---|
@@ -52,7 +52,7 @@ The cost of replacing everything at once is €180–320. The cost of an overhea
 
 **Subtotal (essentials):** €130–210
 
-### Strongly Recommended (Replace If Budget Allows)
+### Strongly recommended (replace if budget allows)
 
 | Part | OEM Part Number | Recommended Brand | Est. Price (EU) | Notes |
 |---|---|---|---|---|
@@ -65,45 +65,45 @@ The cost of replacing everything at once is €180–320. The cost of an overhea
 
 **Subtotal (recommended):** €130–220
 
-### Total Cost: €180–320 (DIY, all new quality parts)
+### Total cost: €180–320 (DIY, all new quality parts)
 
 At a workshop, labor adds €200–400 depending on location. The job takes 4–6 hours with the engine in the car.
 
 ---
 
-## The Correct Replacement Order
+## The correct replacement order
 
 If working with the engine in the car, this order minimizes coolant spillage and rework:
 
-### Step 1: Drain the system
+### Step 1: drain the system
 Open the bleed screw on top of the radiator first (releases vacuum). Place a drain pan under the radiator drain plug (lower driver's side of the radiator). Open the drain plug and let the system drain completely. Also open the engine block drain plug if doing a complete flush (located on the side of the block).
 
 **Expected volume:** 6–7 liters from a complete drain.
 
-### Step 2: Remove the fan and shroud
+### Step 2: remove the fan and shroud
 The fan nut is LEFT-HAND THREAD (reverse thread). It unscrews clockwise when viewed from the front of the engine. Use a 32mm thin wrench or the BMW fan clutch tool. Remove the fan + clutch as one assembly, then remove the fan shroud (two clips at the top, lifts up and out).
 
-### Step 3: Remove the expansion tank
+### Step 3: remove the expansion tank
 Disconnect the hoses (overflow and bleed). Unclip the tank from the fan shroud bracket. Discard — it's plastic and 25+ years old.
 
-### Step 4: Replace the thermostat
+### Step 4: replace the thermostat
 The thermostat housing is at the front of the engine, where the lower radiator hose connects. Remove the two bolts, pull the housing, remove the old thermostat. Clean the mating surface on the engine block. Install new thermostat (the jiggle pin/bleed hole faces up) with a new gasket. Torque the housing bolts to 10 Nm.
 
-### Step 5: Replace the water pump
+### Step 5: replace the water pump
 The water pump is driven by the accessory belt and is located at the front of the engine behind the fan. Remove the belt (release tensioner), remove the four water pump bolts, pull the pump. Clean the mounting surface on the engine thoroughly — any old gasket residue will cause a leak. Install the new pump with a new gasket. Torque to 10 Nm.
 
 **Critical:** Verify the new pump has a METAL impeller before installation. Hold it up and look inside — metal impellers are solid steel/cast iron, plastic impellers are lighter and have visible plastic molding marks.
 
-### Step 6: Replace all hoses
+### Step 6: replace all hoses
 Replace upper hose, lower hose, heater hoses, and overflow hose. Use new spring clamps on every connection.
 
-### Step 7: Replace the radiator (if needed)
+### Step 7: replace the radiator (if needed)
 If replacing the radiator, now is the time. The old radiator lifts out once all hoses are disconnected and the fan shroud is removed. Install new radiator, reconnect hoses.
 
-### Step 8: Install new expansion tank and cap
+### Step 8: install new expansion tank and cap
 Mount the new tank, connect overflow and bleed hoses.
 
-### Step 9: Fill and bleed
+### Step 9: fill and bleed
 This is where most people make mistakes.
 
 **The E36 cooling system bleeds through the small screw on top of the radiator (nearest to the expansion tank).**
@@ -123,7 +123,7 @@ This is where most people make mistakes.
 
 ---
 
-## Common Mistakes
+## Common mistakes
 
 **Using a plastic impeller water pump.** Some cheap aftermarket pumps still use plastic impellers. The impeller cracks, the blades shear off, coolant stops flowing, and the engine overheats in minutes. Always verify metal impeller.
 
@@ -137,7 +137,7 @@ This is where most people make mistakes.
 
 ---
 
-## Cooling System Maintenance Schedule
+## Cooling system maintenance schedule
 
 Once overhauled, maintain the system on this schedule:
 

@@ -21,7 +21,7 @@ The M52 is a workhorse, but after 25+ years and hundreds of thousands of kilomet
 
 ---
 
-## Planning and Teardown: The Diagnostic Phase
+## Planning and teardown: the diagnostic phase
 
 Before you pull the engine, know what you're up against. A compression and leak-down test is non-negotiable. This pre-teardown data tells you if you're chasing worn piston rings (low compression across the board, air escaping into the crankcase) or a bad head gasket/valve sealing issue (low compression on adjacent cylinders, air escaping into coolant or adjacent cylinders).
 
@@ -36,7 +36,7 @@ As you disassemble, inspect these M52-specific weak points:
 
 Organization is key. Bag and label every bolt. Use a separate container for VANOS hardware, timing components, and intake/exhaust hardware. This isn't a weekend job, and you'll thank yourself weeks later.
 
-## The Bottom End: Block, Crank, and Pistons
+## The bottom end: block, crank, and pistons
 
 The foundation of your rebuild. Once the block is stripped bare, it's time for a trip to a reputable machine shop. At a minimum, you need:
 
@@ -57,9 +57,9 @@ Here is your essential bottom-end parts list. Prices are approximate and based o
 | Front Main Seal | Elring 505.584 | €10 | |
 | Oil Pan Gasket | Victor Reinz 71-31995-00 | €25 | The one-piece gasket is a huge improvement over the M50. |
 
-**Assembly and Torque Specs:**
+**Assembly and torque specs:**
 
-This is where precision matters. Use quality assembly lube on all bearings and piston skirts. Piston rings have a specific orientation and clocking—follow the manufacturer's instructions to the letter.
+This is where precision matters. Use quality assembly lube on all bearings and piston skirts. Piston rings have a specific orientation and clocking — follow the manufacturer's instructions to the letter.
 
 | Component | Torque Spec | Notes |
 | :--- | :--- | :--- |
@@ -68,11 +68,11 @@ This is where precision matters. Use quality assembly lube on all bearings and p
 | Oil Pump to Block | M8: 22 Nm | Use Loctite 243 (blue). |
 | Oil Pan to Block | M6: 10 Nm | Follow a spiral tightening pattern from the center out. |
 
-## The Cylinder Head and VANOS
+## The cylinder head and VANOS
 
-The M52 head is robust, but it's not immune to age. After disassembly, use a precision straight edge to check the deck for warpage. Anything over 0.05mm is cause for concern and needs to be milled flat by the machine shop. A full valve job—including cleaning, grinding valves and seats, and installing new valve stem seals—is highly recommended and will cost around €400 - €600.
+The M52 head is robust, but it's not immune to age. After disassembly, use a precision straight edge to check the deck for warpage. Anything over 0.05mm is cause for concern and needs to be milled flat by the machine shop. A full valve job — including cleaning, grinding valves and seats, and installing new valve stem seals — is highly recommended and will cost around €400 - €600.
 
-**Head Reassembly Parts List:**
+**Head reassembly parts list:**
 
 | Part | Part Number (Example) | Avg. Cost (EUR) | Notes |
 | :--- | :--- | :--- | :--- |
@@ -82,11 +82,11 @@ The M52 head is robust, but it's not immune to age. After disassembly, use a pre
 | VANOS Seal Kit | Beisan Systems BS001 | €60 | Essential. Fixes seals and includes anti-rattle components. |
 | Spark Plugs (6) | NGK BKR6EQUP | €50 | |
 
-**VANOS Rebuild:**
+### VANOS rebuild
 
 Don't just reinstall your old VANOS unit. The original Buna-N seals are brittle and ineffective, leading to a loss of low-end torque. The Beisan Systems kit replaces them with superior Viton seals and includes components to eliminate the bearing rattle. Their online instructions are a fantastic resource and should be followed precisely.
 
-**Head Installation and Torque:**
+### Head installation and torque
 
 This is the most critical torque sequence in the entire build. Ensure the block deck and head surface are surgically clean. Do not use any sealant on the head gasket.
 
@@ -100,7 +100,7 @@ This is the most critical torque sequence in the entire build. Ensure the block 
 
 Use a quality angle gauge for the degree-based stages. There is no room for error here.
 
-## Timing, Chains, and Sealing Up
+## Timing, chains, and sealing up
 
 With the head torqued down, you can install the camshafts and time the engine. You *will* need the M52-specific timing tools: a flywheel locking pin (BMW 112300) and camshaft alignment blocks (BMW 113240).
 
@@ -111,7 +111,7 @@ With the head torqued down, you can install the camshafts and time the engine. Y
 5.  Install the VANOS unit, ensuring the helical gears are properly engaged.
 6.  Torque the cam sprockets. **Remember the exhaust sprocket has a left-hand thread.**
 
-**The "Seal Everything" Phase:**
+### The "seal everything" phase
 
 Now is the time to replace every single gasket you can access. Don't be tempted to reuse a 25-year-old piece of rubber.
 
@@ -124,17 +124,17 @@ Now is the time to replace every single gasket you can access. Don't be tempted 
 | Exhaust Manifold Gaskets | Included in head set | - | |
 | Thermostat Housing Gasket | Elring 137.360 | €2 | Upgrade to an aluminum housing while you're here. |
 
-## Final Assembly and First Start
+## Final assembly and first start
 
 The hard part is over. Now it's a matter of re-installing all the accessories, manifolds, and cooling system components.
 
-**Pre-Start Checklist:**
+### Pre-start checklist
 
 1.  **Fill with Fluids:** Use a basic 10W-40 conventional oil for break-in. Fill the cooling system with a 50/50 mix of BMW-approved coolant and distilled water.
 2.  **Prime the Oil System:** Before installing the spark plugs, disconnect the fuel pump relay. Crank the engine in 10-15 second intervals until the oil pressure light goes out. This ensures your new bearings are lubricated before they take a load.
 3.  **Install Plugs, Connect Fuel:** Re-install the spark plugs and fuel pump relay.
 4.  **First Start:** The engine should fire up within a few seconds. It will likely be noisy for the first 30-60 seconds as the lifters and VANOS fill with oil.
 5.  **Check for Leaks:** Immediately check for any fuel, oil, or coolant leaks.
-6.  **Break-In:** Let the engine idle up to operating temperature, keeping an eye on all gauges. Bleed the cooling system thoroughly. Follow a proper engine break-in procedure—typically varying the RPMs under light load and avoiding constant highway speeds for the first 1,000 km. Change the break-in oil and filter after this period.
+6.  **Break-In:** Let the engine idle up to operating temperature, keeping an eye on all gauges. Bleed the cooling system thoroughly. Follow a proper engine break-in procedure — typically varying the RPMs under light load and avoiding constant highway speeds for the first 1,000 km. Change the break-in oil and filter after this period.
 
-A freshly rebuilt M52 is a joy. The restored torque, smooth idle, and peace of mind are well worth the effort. You've not only replaced worn parts but have reset the clock on one of BMW's most reliable engines, preparing your E36 for many more years of driving pleasure.
+A freshly rebuilt M52 is quiet, pulls cleanly, and doesn't drip anything. Change the break-in oil at 1,000 km, then drive it.

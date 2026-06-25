@@ -40,19 +40,25 @@ const sbId = 'sb-guides';
   title="BMW E36 Technical Guides — projekt36"
   description="Technical guides for BMW E36 owners. Engine swaps, rust repair, cooling, suspension, sound deadening, and more."
 >
+<section class="page-hero-section">
+  <div class="page-hero-img" aria-hidden="true">
+    <img src="/images/blueprint-vanos.webp" alt="" width="1200" height="500" loading="eager" decoding="async" />
+    <div class="page-hero-overlay"></div>
+  </div>
+  <div class="page-hero">
+    <div class="page-tag">PROJEKT36 · TECHNICAL LIBRARY</div>
+    <h1 class="page-title">E36 <em>Guides</em></h1>
+    <p class="page-lead">
+      {articles.length} technical guides covering the full E36 build — from engine swaps and rust to
+      sound deadening and parts sourcing. Written from real build experience, not forum hearsay.
+    </p>
+  </div>
+</section>
+
 <div class="guides-wrap">
 
   <!-- ═══ MAIN ═══ -->
   <main class="guides-main">
-
-    <div class="page-hero">
-      <div class="page-tag">PROJEKT36 · TECHNICAL LIBRARY</div>
-      <h1 class="page-title">E36 <em>Guides</em></h1>
-      <p class="page-lead">
-        {articles.length} technical guides covering the full E36 build — from engine swaps and rust to
-        sound deadening and parts sourcing. Written from real build experience, not forum hearsay.
-      </p>
-    </div>
 
     <!-- Schemas banner -->
     <a href="/schemas/e36-wiring.html" target="_blank" class="schemas-banner">
@@ -330,7 +336,22 @@ const sbId = 'sb-guides';
   }
 
   /* ── MAIN CONTENT ── */
-  .page-hero { margin-bottom: 2.5rem; }
+  .page-hero-section {
+    position: relative; overflow: hidden;
+    border-bottom: 1px solid var(--border);
+    min-height: 280px; display: flex; align-items: flex-end;
+    margin-bottom: 2.5rem;
+  }
+  .page-hero-img { position: absolute; inset: 0; z-index: 0; }
+  .page-hero-img img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.3) saturate(0.6); }
+  .page-hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, var(--bg) 0%, rgba(19,23,32,0.5) 60%, rgba(19,23,32,0.25) 100%);
+  }
+  .page-hero {
+    position: relative; z-index: 1;
+    padding: 5rem 1.5rem 2.5rem; width: 100%;
+  }
   .page-tag {
     font-family: var(--font-mono);
     font-size: 0.65rem;

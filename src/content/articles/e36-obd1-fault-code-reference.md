@@ -17,7 +17,7 @@ hero: "e36-obd1-fault-code-reference.webp"
 
 ---
 
-## How E36 OBD1 Diagnostics Actually Work
+## How E36 OBD1 diagnostics actually work
 
 Every E36 built before late 1995 (and many up to 1996, depending on market and engine code) runs BMW's proprietary OBD1 protocol over a 20-pin diagnostic connector located in the engine bay, usually on the driver's side strut tower or firewall. This is **not** compatible with standard OBD2 scanners. Your ELM327 dongle will do nothing here.
 
@@ -36,7 +36,7 @@ For live data, INPA running on a laptop with a genuine or quality clone K+DCAN c
 
 ---
 
-## Complete E36 OBD1 Fault Code Table
+## Complete E36 OBD1 fault code table
 
 The following codes apply to the Siemens MS41 / MS42, Bosch Motronic M3.1, M3.3, and M5.2 DMEs fitted across E36 variants. Not all codes are active on all DMEs — engine-specific notes are included where relevant.
 
@@ -76,7 +76,7 @@ The following codes apply to the Siemens MS41 / MS42, Bosch Motronic M3.1, M3.3,
 
 ---
 
-## M50 vs M52 vs S50 — Code Differences That Catch People Out
+## M50 vs M52 vs S50 — code differences that catch people out
 
 The M50B25 (non-TU) runs Bosch M3.1 and **does not have VANOS** — ignore any VANOS-related codes if you're on a pre-TU engine. The M50TU and all M52 engines run MS41/MS41.1 with single VANOS. The S50B32 (Euro) runs MS41 with double VANOS and has a different knock sensor layout.
 
@@ -92,7 +92,7 @@ On our M50B25TU swap build, we chased a persistent 1090 (AFM implausible) for we
 
 ---
 
-## Clearing Codes and When Not To
+## Clearing codes and when not to
 
 You can clear OBD1 fault codes by disconnecting the DME relay (under the glovebox on the passenger side, relay number 9 in the carrier) for 30 seconds, or through a scan tool. **Do not clear codes before photographing or recording them.** The DME stores adaptive values alongside fault codes — clearing them resets fuel trims, idle adaptations, and VANOS timing corrections. On a high-mileage M52 with worn injectors, this can make the car run noticeably rougher until the DME relearns.
 
@@ -100,7 +100,7 @@ Also: a code that returns within one drive cycle after clearing is an active, pr
 
 ---
 
-## Tools and Adapters Worth Having
+## Tools and adapters worth having
 
 | Tool | Use | Price (EU) |
 |------|-----|------------|
@@ -115,7 +115,7 @@ If you're deep into an E36 build or running a fleet of them, a second-hand genui
 
 ---
 
-## What's Next
+## What's next
 
 With codes read and documented, the next step depends on what you found. VANOS-related codes (1150/1160) lead directly to our VANOS rebuild guide. Fueling codes in the 1080–1090 range almost always warrant a full fuel system pressure test before throwing parts. Persistent oxygen sensor faults on a car with fresh sensors point upstream — exhaust leaks, misfires, or coolant intrusion.
 

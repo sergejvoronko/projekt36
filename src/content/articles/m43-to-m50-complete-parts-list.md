@@ -25,9 +25,9 @@ This guide covers the OBD1 European E36 316i (M43B16) to M50B25 non-VANOS swap. 
 
 ---
 
-## Before You Start: Key Decisions
+## Before you start: key decisions
 
-### Why M50 Non-VANOS?
+### Why M50 non-VANOS?
 
 We chose the M50B25 NV specifically for this swap because:
 
@@ -36,15 +36,15 @@ We chose the M50B25 NV specifically for this swap because:
 3. **OBD1 to OBD1.** Our 1994 316i is OBD1. Using an OBD1 M50 NV (from a 1990–1992 325i or 525i donor) means the simplest possible ECU integration.
 4. **Cheapest to source.** The non-VANOS M50 is less desirable to collectors than the TU or M52, so donor engines are still affordable in European junkyards.
 
-### The Golden Rule of Engine Swaps
+### The golden rule of engine swaps
 
 **Buy the most complete donor possible.** An M50 with its own intake manifold, exhaust manifolds, alternator, power steering pump, engine harness, and DME saves you dozens of hours of research, part-hunting, and compatibility headaches. The price difference between a bare long block and a complete engine is typically €100–200 — that's the best money you'll spend on the entire project.
 
 ---
 
-## Complete Parts List
+## Complete parts list
 
-### Category 1: Engine Assembly
+### Category 1: engine assembly
 
 These parts should ideally come WITH your donor engine.
 
@@ -64,7 +64,7 @@ These parts should ideally come WITH your donor engine.
 
 ---
 
-### Category 2: Engine Management (ECU + Wiring)
+### Category 2: engine management (ECU + wiring)
 
 This is the most critical part of the swap. Getting this wrong means the car won't start.
 
@@ -91,7 +91,7 @@ The M50 engine harness connects to the car's main body harness through a set of 
 
 ---
 
-### Category 3: Cooling System
+### Category 3: cooling system
 
 **Replace everything.** You have the engine out — there is no excuse to reuse 30-year-old cooling components on the engine that's famous for dying from cooling system failures.
 
@@ -117,7 +117,7 @@ This is the single most important investment in the entire swap. A €35 water p
 
 ---
 
-### Category 4: Engine Mounts
+### Category 4: engine mounts
 
 The M43 (4-cylinder) and M50 (6-cylinder) use completely different engine mount arms. This is non-negotiable — you cannot use M43 mount arms with an M50 engine.
 
@@ -132,7 +132,7 @@ The M43 (4-cylinder) and M50 (6-cylinder) use completely different engine mount 
 
 ---
 
-### Category 5: Exhaust
+### Category 5: exhaust
 
 The M50 exhaust manifolds bolt directly to the M50 head, but the downpipe connection differs from the M43 system.
 
@@ -145,7 +145,7 @@ The M50 exhaust manifolds bolt directly to the M50 head, but the downpipe connec
 
 ---
 
-### Category 6: Driveshaft
+### Category 6: driveshaft
 
 This is often overlooked and can cause vibration issues if wrong.
 
@@ -160,7 +160,7 @@ This is often overlooked and can cause vibration issues if wrong.
 
 ---
 
-### Category 7: Fuel System
+### Category 7: fuel system
 
 | Part | Notes | Est. cost |
 |---|---|---|
@@ -174,7 +174,7 @@ This is often overlooked and can cause vibration issues if wrong.
 
 ---
 
-### Category 8: Intake & Airbox
+### Category 8: intake & airbox
 
 | Part | Notes | Est. cost |
 |---|---|---|
@@ -186,7 +186,7 @@ This is often overlooked and can cause vibration issues if wrong.
 
 ---
 
-### Category 9: Miscellaneous & Hardware
+### Category 9: miscellaneous & hardware
 
 | Part | Notes | Est. cost |
 |---|---|---|
@@ -200,29 +200,29 @@ This is often overlooked and can cause vibration issues if wrong.
 
 ---
 
-## Swap-Specific Gotchas
+## Swap-Specific gotchas
 
-### 1. Gearbox Compatibility
+### 1. gearbox compatibility
 The Getrag 250G 5-speed from the 316i bolts to the M50 block. The bolt pattern is the same. However, the 250G is rated for the M43's 102 hp — with the M50's 189 hp and 245 Nm, it will work but is operating closer to its limits. For a daily driver, it's fine. For track or hard launches, consider upgrading to the Getrag 260G (from a 325i) in the future.
 
-### 2. Radiator Width
+### 2. radiator width
 The 6-cylinder radiator is wider than the 4-cylinder radiator. The lower mounting bracket on the driver's side needs to be swapped to the 6-cylinder bracket, which has a wider spacing. This is a small bracket — easy to overlook and cheap to source.
 
-### 3. Speedometer Calibration
+### 3. speedometer calibration
 If you change the driveshaft and/or differential ratio, the speedometer may read incorrectly. The E36 takes the speed signal from the transmission output — if you keep the same gearbox, the speedo should remain accurate unless you also change the diff ratio.
 
-### 4. Weight Distribution
+### 4. weight distribution
 The M50 inline-6 is heavier than the M43 4-cylinder. This shifts the weight balance slightly forward. For a street car, this is negligible. For a track car, you may want to adjust spring rates accordingly.
 
-### 5. Hood Clearance
+### 5. hood clearance
 The M50 is taller than the M43 due to the intake manifold. On the E36 sedan, this is not an issue — there is sufficient hood clearance for the M50. Do verify clearance before slamming the hood for the first time.
 
-### 6. Registration / Legal
+### 6. registration / legal
 In Slovakia (and much of the EU), an engine swap must be registered with the vehicle inspection authority (STK in SK). The M50B25 is from the same E36 model family, which simplifies the process, but you'll need documentation showing the engine's origin and may need an engineering assessment. Research your local requirements before starting.
 
 ---
 
-## Recommended Swap Order
+## Recommended swap order
 
 1. **Source the donor engine** — complete with all ancillaries, harness, DME
 2. **Document the donor** — photograph every connector, bracket, and hose before removal
@@ -240,7 +240,7 @@ In Slovakia (and much of the EU), an engine swap must be registered with the veh
 
 ---
 
-## EU Parts Suppliers for This Swap
+## EU parts suppliers for this swap
 
 | Supplier | Strengths | Website |
 |---|---|---|

@@ -15,7 +15,7 @@ This is a reference page. Bookmark it. Every torque value for the BMW E36 with M
 
 ---
 
-## Engine — Cylinder Head
+## Engine — cylinder head
 
 | Fastener | Torque | Notes |
 |---|---|---|
@@ -29,7 +29,7 @@ This is a reference page. Bookmark it. Every torque value for the BMW E36 with M
 
 ---
 
-## Engine — Block & Internals
+## Engine — block & internals
 
 | Fastener | Torque | Notes |
 |---|---|---|
@@ -48,7 +48,7 @@ This is a reference page. Bookmark it. Every torque value for the BMW E36 with M
 
 ---
 
-## Engine — Intake & Exhaust
+## Engine — intake & exhaust
 
 | Fastener | Torque | Notes |
 |---|---|---|
@@ -61,7 +61,7 @@ This is a reference page. Bookmark it. Every torque value for the BMW E36 with M
 
 ---
 
-## Engine — Cooling System
+## Engine — cooling system
 
 | Fastener | Torque | Notes |
 |---|---|---|
@@ -73,7 +73,7 @@ This is a reference page. Bookmark it. Every torque value for the BMW E36 with M
 
 ---
 
-## Engine — Ancillaries
+## Engine — ancillaries
 
 | Fastener | Torque | Notes |
 |---|---|---|
@@ -88,7 +88,7 @@ This is a reference page. Bookmark it. Every torque value for the BMW E36 with M
 
 ---
 
-## Transmission & Drivetrain
+## Transmission & drivetrain
 
 | Fastener | Torque | Notes |
 |---|---|---|
@@ -108,7 +108,7 @@ This is a reference page. Bookmark it. Every torque value for the BMW E36 with M
 
 ---
 
-## Suspension — Front
+## Suspension — front
 
 | Fastener | Torque | Notes |
 |---|---|---|
@@ -125,7 +125,7 @@ This is a reference page. Bookmark it. Every torque value for the BMW E36 with M
 
 ---
 
-## Suspension — Rear
+## Suspension — rear
 
 | Fastener | Torque | Notes |
 |---|---|---|
@@ -156,7 +156,7 @@ This is a reference page. Bookmark it. Every torque value for the BMW E36 with M
 
 ---
 
-## Wheels & Steering
+## Wheels & steering
 
 | Fastener | Torque | Notes |
 |---|---|---|
@@ -169,7 +169,7 @@ This is a reference page. Bookmark it. Every torque value for the BMW E36 with M
 
 ---
 
-## Body & Interior
+## Body & interior
 
 | Fastener | Torque | Notes |
 |---|---|---|
@@ -183,7 +183,7 @@ This is a reference page. Bookmark it. Every torque value for the BMW E36 with M
 
 ---
 
-## General Fastener Torque Reference
+## General fastener torque reference
 
 For unlisted bolts, use these general guidelines based on bolt size:
 
@@ -199,7 +199,7 @@ For unlisted bolts, use these general guidelines based on bolt size:
 
 ---
 
-## Stretch Bolts (Torque-to-Yield) — Never Reuse
+## Stretch bolts (torque-to-yield) — never reuse
 
 These bolts are designed to deform slightly during torquing to achieve a precise clamping force. Reusing them risks under-clamping or bolt failure:
 

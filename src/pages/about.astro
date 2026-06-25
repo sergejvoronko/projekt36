@@ -7,18 +7,24 @@ import SubscribeBox from '../components/SubscribeBox.astro';
   description="The story of a 1994 BMW E36 316i Sedan — where it came from, what it is, and what it's becoming. A complete transformation documented from first fault code to final drive."
 >
 
-<div class="about-page">
-
   <!-- ═══ HERO ═══ -->
-  <div class="about-hero">
-    <div class="about-hero-tag">PROJEKT36 · THE CAR</div>
-    <h1 class="about-title">One E36.<br><em>One transformation.</em></h1>
-    <p class="about-lead">
-      A 1994 BMW E36 316i Sedan — bought tired, with 230,000 kilometres on the clock
-      and a list of faults longer than the service history. Not a pristine shell. Not a
-      competition car. A real car, with real problems, being fixed the right way.
-    </p>
-  </div>
+  <section class="about-hero-section">
+    <div class="about-hero-img" aria-hidden="true">
+      <img src="/images/blueprint-macpherson.webp" alt="" width="1200" height="500" loading="eager" decoding="async" />
+      <div class="about-hero-overlay"></div>
+    </div>
+    <div class="about-hero">
+      <div class="about-hero-tag">PROJEKT36 · THE CAR</div>
+      <h1 class="about-title">One E36.<br><em>One transformation.</em></h1>
+      <p class="about-lead">
+        A 1994 BMW E36 316i Sedan — bought tired, with 230,000 kilometres on the clock
+        and a list of faults longer than the service history. Not a pristine shell. Not a
+        competition car. A real car, with real problems, being fixed the right way.
+      </p>
+    </div>
+  </section>
+
+<div class="about-page">
 
   <!-- ═══ IMAGE SLOT 1 — full-width car photo ═══ -->
   <!-- SUGGESTED IMAGE: wide exterior shot of the car as-found / arrival condition -->
@@ -208,8 +214,21 @@ import SubscribeBox from '../components/SubscribeBox.astro';
   }
 
   /* Hero */
-  .about-hero {
+  .about-hero-section {
+    position: relative; overflow: hidden;
+    border-bottom: 1px solid var(--border);
+    min-height: 300px; display: flex; align-items: flex-end;
     margin-bottom: 3rem;
+  }
+  .about-hero-img { position: absolute; inset: 0; z-index: 0; }
+  .about-hero-img img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.3) saturate(0.6); }
+  .about-hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, var(--bg) 0%, rgba(19,23,32,0.5) 60%, rgba(19,23,32,0.25) 100%);
+  }
+  .about-hero {
+    position: relative; z-index: 1;
+    padding: 5rem 1.5rem 3rem; width: 100%;
   }
   .about-hero-tag {
     font-family: var(--font-mono);

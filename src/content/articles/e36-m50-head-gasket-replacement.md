@@ -17,7 +17,7 @@ hero: "e36-m50-head-gasket-replacement.webp"
 
 ---
 
-## Why M50 Head Gaskets Fail and How to Diagnose Before You Commit
+## Why M50 head gaskets fail and how to diagnose before you commit
 
 The M50 is not a notoriously gasket-prone engine the way the M54 with its Nikasil bore issues or the N52 with its valley pan problems are — but at 25-plus years old, every single one of these engines is living on borrowed time with the original gasket. Heat cycles, cooling system neglect, and age-hardened hoses that cause localised overheat events are the primary killers.
 
@@ -34,7 +34,7 @@ A compression test is mandatory before you do anything else. If cylinder-to-cyli
 
 ---
 
-## Parts, Gaskets, and What to Order Before Teardown
+## Parts, gaskets, and what to order before teardown
 
 Don't start this job without having every consumable on the bench. Waiting three days for a head bolt set mid-job is a waste of your time and your engine's life (partial reassembly with the head exposed is bad practice).
 
@@ -57,7 +57,7 @@ On our M50B25 swap build the full consumable spend landed at €210 including a 
 
 ---
 
-## Teardown Sequence
+## Teardown sequence
 
 Work methodically. The M50 DOHC head is not complex, but it has a lot of ancillaries and it's easy to lose track of vacuum routing.
 
@@ -75,7 +75,7 @@ Work methodically. The M50 DOHC head is not complex, but it has a lot of ancilla
 
 ---
 
-## Head Inspection and Resurfacing
+## Head inspection and resurfacing
 
 Once the head is on the bench, this is the most critical decision point of the whole job.
 
@@ -92,7 +92,7 @@ Clean the block deck surface with a razor blade and scotch-brite — do not use 
 
 ---
 
-## Head Bolt Torque Sequence and Final Assembly
+## Head bolt torque sequence and final assembly
 
 This is where precision matters. The M50 uses a three-stage torque-plus-angle procedure. Get a proper beam or click torque wrench for Stage 1, and a quality angle gauge for Stages 2 and 3.
 
@@ -119,7 +119,7 @@ Retorque cam caps in sequence and re-check timing alignment before fitting the t
 
 ---
 
-## Cooling System Refresh and First Start
+## Cooling system refresh and first start
 
 With the head back on, this is not the time to reuse 3-year-old coolant and a cracked expansion tank cap.
 
@@ -130,6 +130,6 @@ With the head back on, this is not the time to reuse 3-year-old coolant and a cr
 
 ---
 
-## What's Next
+## What's next
 
 A head gasket job on the M50 opens up access to several things you'd otherwise need to remove the intake manifold for anyway — injector service, throttle body cleaning, and VANOS unit inspection (on the M50B25 with VANOS) are all logical next steps while everything is apart. If your M50 still has the original VANOS solenoid and hasn't been serviced since the 1990s, budget another afternoon and check our VANOS rebuild guide. The engine will reward a thorough approach — these inline-sixes have another 150,000 km in them if the cooling system is respected.

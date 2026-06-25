@@ -19,7 +19,7 @@ hero: "sound-deadening.webp"
 
 ---
 
-## Why the E36 Needs Sound Deadening (Especially a 316i)
+## Why the E36 needs sound deadening (especially a 316i)
 
 BMW built the E36 across a wide spec range. An M3 or 328i came with reasonable factory sound deadening — thicker carpet, more bitumen pads on the floor, better door seals. A base 316i came with almost nothing. The cost savings had to come from somewhere, and acoustic comfort was one of the first things BMW trimmed on the economy models.
 
@@ -31,11 +31,11 @@ Since we're building from a stripped shell after rust repair, every surface is e
 
 ---
 
-## Understanding the Three Layers
+## Understanding the three layers
 
 Effective automotive sound deadening uses three different materials, each addressing a different type of noise. Using only one type gives incomplete results. The magic is in the combination.
 
-### Layer 1: Vibration Damping (Constrained Layer Damper — CLD)
+### Layer 1: vibration damping (constrained layer damper — CLD)
 
 **What it is:** A sheet of butyl rubber bonded to an aluminium or foil backing. You stick it directly to the metal panel. When the panel wants to vibrate (from road input, engine vibration, or sound waves), the butyl layer converts that vibration energy into tiny amounts of heat, stopping the panel from resonating.
 
@@ -60,7 +60,7 @@ Effective automotive sound deadening uses three different materials, each addres
 
 ---
 
-### Layer 2: Sound Barrier / Mass Loaded Vinyl (MLV)
+### Layer 2: sound barrier / mass loaded vinyl (mlv)
 
 **What it is:** A dense, heavy vinyl sheet that blocks sound transmission through panels. While CLD stops a panel from vibrating, MLV adds mass to physically block sound waves from passing through. Think of it as a heavy curtain versus a thin bedsheet — the heavier material blocks more sound.
 
@@ -80,7 +80,7 @@ Effective automotive sound deadening uses three different materials, each addres
 
 ---
 
-### Layer 3: Sound Absorption (Closed-Cell Foam / Decoupler)
+### Layer 3: sound absorption (closed-cell foam / decoupler)
 
 **What it is:** A layer of closed-cell foam (usually 6–10 mm thick) that absorbs sound energy within the cabin and decouples the interior trim from the metal panels. Where CLD stops panel vibration and MLV blocks sound transmission, foam absorbs the remaining sound energy bouncing around inside the cabin — reducing echo and giving the interior a "padded" quality.
 
@@ -101,9 +101,9 @@ Effective automotive sound deadening uses three different materials, each addres
 
 ---
 
-## E36 Sedan Application Map — Where to Put What
+## E36 sedan application map — where to put what
 
-### Priority 1: Floor Pan + Transmission Tunnel (Biggest Impact)
+### Priority 1: floor pan + transmission tunnel (biggest impact)
 
 The floor is where 60% of road noise enters the cabin. The transmission tunnel is a direct conductor of heat and noise from the drivetrain.
 
@@ -119,7 +119,7 @@ The floor is where 60% of road noise enters the cabin. The transmission tunnel i
 - MLV: ~5–6 m² (full coverage)
 - Foam: ~5–6 m² (full coverage)
 
-### Priority 2: Doors (Second Biggest Impact)
+### Priority 2: doors (second biggest impact)
 
 The E36 doors are large, thin metal panels that act as resonating drums. Sound deadening the doors dramatically reduces road noise from the sides and eliminates the hollow "tin can" sound when closing.
 
@@ -134,7 +134,7 @@ The E36 doors are large, thin metal panels that act as resonating drums. Sound d
 - CLD: ~2 m² total (0.5 m² per door outer skin)
 - Foam: ~1.5 m² total (for door cards)
 
-### Priority 3: Trunk (Exhaust Noise + Resonance)
+### Priority 3: trunk (exhaust noise + resonance)
 
 The trunk acts as a resonance chamber that amplifies exhaust noise and road noise from the rear. With our M50 swap, the exhaust note will be more present — deadening the trunk controls this.
 
@@ -151,7 +151,7 @@ The trunk acts as a resonance chamber that amplifies exhaust noise and road nois
 - MLV: ~1.5 m² (trunk floor)
 - Foam: ~1 m² (sides)
 
-### Priority 4: Firewall (Engine Noise)
+### Priority 4: firewall (engine noise)
 
 The firewall separates the engine bay from the cabin. The factory firewall pad on the 316i is thin and often deteriorated after 30 years. With the M50 being louder than the M43, upgrading the firewall insulation is worthwhile.
 
@@ -166,7 +166,7 @@ The firewall separates the engine bay from the cabin. The factory firewall pad o
 - CLD: ~0.5 m²
 - MLV: ~1 m²
 
-### Priority 5: Roof (Optional but Nice)
+### Priority 5: roof (optional but nice)
 
 The roof is a large flat panel that resonates in rain and at highway speeds. Deadening it improves the overall "sealed" feeling of the cabin and reduces rain noise dramatically.
 
@@ -178,7 +178,7 @@ The roof is a large flat panel that resonates in rain and at highway speeds. Dea
 - CLD: ~0.5 m²
 - Foam: ~2 m²
 
-### Priority 6: Rear Quarter Panels + Rear Shelf
+### Priority 6: rear quarter panels + rear shelf
 
 The quarter panels behind the rear seats transmit tyre noise from the rear wheels. The rear parcel shelf vibrates with bass frequencies.
 
@@ -193,7 +193,7 @@ The quarter panels behind the rear seats transmit tyre noise from the rear wheel
 
 ---
 
-## Complete Shopping List for E36 Sedan (Full Coverage)
+## Complete shopping list for E36 sedan (full coverage)
 
 | Material | Total needed | Recommended product | Est. cost |
 |---|---|---|---|
@@ -207,7 +207,7 @@ The quarter panels behind the rear seats transmit tyre noise from the rear wheel
 
 **Total estimated cost: €200–360**
 
-### Budget version (Priority 1 + 2 only — floor + doors):
+### Budget version (priority 1 + 2 only — floor + doors):
 
 | Material | Total needed | Product | Est. cost |
 |---|---|---|---|
@@ -219,7 +219,7 @@ The quarter panels behind the rear seats transmit tyre noise from the rear wheel
 
 ---
 
-## Application Tips
+## Application tips
 
 ### Surface preparation is everything
 
@@ -247,7 +247,7 @@ Take photos before each layer goes on. When you need to access something behind 
 
 ---
 
-## Weight vs Comfort Trade-Off
+## Weight vs comfort trade-off
 
 Full sound deadening on an E36 sedan adds approximately 20–30 kg depending on coverage and materials. For context:
 
@@ -261,7 +261,7 @@ If you're building a track car, skip the MLV layer (the heaviest component) and 
 
 ---
 
-## When to Apply in the Build Timeline
+## When to apply in the build timeline
 
 For our Projekt 36 build, sound deadening happens in this sequence:
 
@@ -277,7 +277,7 @@ This position in the timeline is critical. The shell is stripped, every panel is
 
 ---
 
-## Before & After: What to Expect
+## Before & after: what to expect
 
 We'll document this with a dB meter reading (smartphone app — not lab-grade but consistent for comparison) at several points:
 
@@ -290,7 +290,7 @@ The typical result from full sound deadening on an E36: 3–8 dB reduction at hi
 
 ---
 
-## Common Mistakes
+## Common mistakes
 
 **Using only CLD and no MLV.** CLD stops panels from vibrating, but thin metal still transmits sound through it. Without MLV adding mass, you've solved the rattle but not the road noise.
 
@@ -306,7 +306,7 @@ The typical result from full sound deadening on an E36: 3–8 dB reduction at hi
 
 ---
 
-## EU Sourcing for Sound Deadening Materials
+## EU sourcing for sound deadening materials
 
 | Supplier | Ships to | Strengths | Website |
 |---|---|---|---|

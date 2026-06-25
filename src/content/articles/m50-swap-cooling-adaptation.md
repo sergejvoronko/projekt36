@@ -17,7 +17,7 @@ hero: "m50-swap-cooling-adaptation.webp"
 
 ---
 
-## Why the M43 Cooling Setup Doesn't Just Bolt Over
+## Why the M43 cooling setup doesn't just bolt over
 
 The M43 is a compact four-cylinder with modest cooling demands. BMW specced the E36 318i/316i cooling system accordingly — smaller radiator cross-section, a single-row plastic-tank aluminium core on most 1993–1998 examples, and an expansion tank mounted high on the passenger-side strut tower with a relatively simple overflow circuit.
 
@@ -27,7 +27,7 @@ The three problem areas are: radiator capacity and fitment, thermostat housing o
 
 ---
 
-## Radiator: What Fits, What Works, What to Buy
+## Radiator: what fits, what works, what to buy
 
 The E36 325i/328i radiator is the direct bolt-in solution. It uses the same mounting points as the 318i unit, fits within the same core support dimensions, but has a larger core — typically 53 mm depth versus 32 mm on the M43 application — and higher flow capacity appropriate for the M50.
 
@@ -47,7 +47,7 @@ In our M50 swap build, we used a Nissens 60673A sourced from Autodoc for €98. 
 
 ---
 
-## Thermostat Housing: The Geometry Problem
+## Thermostat housing: the geometry problem
 
 This is where most first-time M50 swappers get caught out. The M43 thermostat housing is a simple casting on the front of the head, outlet pointing roughly upward toward the top radiator hose. The M50 thermostat housing (BMW part **11531740478** for the B25 non-VANOS, **11531743229** for the M50TU/VANOS) is a more involved piece — larger, with the main outlet rotated toward the driver's side of the engine bay, and with a dedicated bleed nipple on the upper face.
 
@@ -59,7 +59,7 @@ Thermostat spec: BMW specifies a **88°C opening thermostat** for the M50 in sta
 
 ---
 
-## Expansion Tank: Location, Routing, and the Bleed Line
+## Expansion tank: location, routing, and the bleed line
 
 This is the detail that gets skipped and causes the most post-swap headaches. The M43 expansion tank is mounted on the passenger-side strut tower brace area, slightly aft. The M50 system requires the expansion tank to be mounted **higher** — specifically, it must be the highest point in the cooling circuit to allow passive air purging. In an E36 M50 shell, BMW positioned it at the correct height; in an M43 shell, the stock tank mounting point is marginally lower than ideal.
 
@@ -79,7 +79,7 @@ Hose sets from ECS Tuning or Turner Motorsport come pre-cut for E36 M50 fitment 
 
 ---
 
-## Heater Circuit and Rear Head Bleed
+## Heater circuit and rear head bleed
 
 One more detail worth covering: the M50 has a heater return port at the rear of the cylinder head, and a second small bleed nipple near the intake manifold area depending on variant. Neither of these exists on the M43, so if you're building the cooling circuit from scratch, don't overlook them.
 
@@ -89,7 +89,7 @@ On a 25-year-old E36, if the heater valve is original, replace it during the swa
 
 ---
 
-## Bleeding the System After Fill
+## Bleeding the system after fill
 
 Once everything is plumbed, filling and bleeding the M50 system correctly takes about 45 minutes. Use BMW coolant (blue, **82141467704**) at 50/50 concentration with distilled water — do not use universal green antifreeze, it's incompatible with the aluminium castings and VANOS seals.
 
@@ -106,7 +106,7 @@ If the car runs hot or the gauge spikes before the thermostat opens, there's an 
 
 ---
 
-## What's Next
+## What's next
 
 With cooling sorted, the next system to address in a thorough M50 E36 swap is the intake and throttle body adaptation — particularly if you're running an M43 airbox location or if the E34-sourced engine has a different MAF diameter. We'll cover that in the next swap guide, including the AFM to MAF conversion for Motronic 3.3 versus 3.1 variants.
 

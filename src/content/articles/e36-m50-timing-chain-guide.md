@@ -17,7 +17,7 @@ hero: "e36-m50-timing-chain-guide.webp"
 
 ---
 
-## How the M50 Timing Chain System Works
+## How the M50 timing chain system works
 
 The M50 — whether you're running the non-VANOS M50B20/B25 or the VANOS-equipped M50B20TU/B25TU — uses a single-row roller chain to drive both camshafts off the crankshaft. The chain runs up the front of the block and passes through a tensioner rail on the slack side, a fixed guide rail on the drive side, and an upper guide bridge that spans both cams at the top of the chain run.
 
@@ -27,7 +27,7 @@ On the VANOS variants (TU engines), there's an additional complication: the VANO
 
 ---
 
-## Known Failure Modes and Symptoms
+## Known failure modes and symptoms
 
 This is the most important section. The M50 doesn't usually give you a lot of warning before timing chain problems become catastrophic.
 
@@ -50,7 +50,7 @@ If you're buying an M50-powered E36 with unknown history and more than 180,000 k
 
 ---
 
-## Parts: OEM, OEM-Supplier, and What to Avoid
+## Parts: OEM, OEM-supplier, and what to avoid
 
 For a complete M50 timing chain refresh, you need to address every wear item in the system. Replacing only the tensioner and leaving 200,000 km rails in place is a waste of time.
 
@@ -77,7 +77,7 @@ For a complete M50 timing chain refresh, you need to address every wear item in 
 
 ---
 
-## The Job: Key Steps and Where People Go Wrong
+## The job: key steps and where people go wrong
 
 This isn't a step-by-step torque wrench guide — you have the Bentley or a TIS printout for that. What follows are the decisions and details that trip people up.
 
@@ -93,7 +93,7 @@ This isn't a step-by-step torque wrench guide — you have the Bentley or a TIS 
 
 ---
 
-## Torque Specs and Critical Fasteners
+## Torque specs and critical fasteners
 
 | Fastener | Torque |
 |---|---|
@@ -108,7 +108,7 @@ The crank bolt is always the discussion point. BMW spec is 410 Nm — this is no
 
 ---
 
-## What's Next
+## What's next
 
 A timing chain job on the M50 is the natural companion to front cover work and VANOS service. If the engine is out of the car for a swap — as it often is in an M50-into-E30 or E36 project — this is also the moment to address the oil pump (**11 41 1 705 198**, ~€55 for OEM-quality Hella unit), the water pump, and the thermostat housing if any of those are original.
 

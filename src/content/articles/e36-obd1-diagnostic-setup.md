@@ -7,7 +7,7 @@ date: "2026-03-16"
 hero: "obd1-diag-v2.webp"
 ---
 
-## Why This Guide Exists
+## Why this guide exists
 
 If you've ever searched for "E36 diagnostic software" and come away more confused than when you started, you're not alone. The E36 sits in an awkward transition period between BMW's fully proprietary OBD1 system and the standardised OBD2 that came later. Forum threads on this topic are a graveyard of dead eBay links, conflicting advice, and frustrated owners who spent €100+ on the wrong cable.
 
@@ -15,11 +15,11 @@ This guide cuts through all of it. By the end, you'll know exactly what hardware
 
 ---
 
-## First: Understand What Your E36 Actually Speaks
+## First: understand what your E36 actually speaks
 
 Before buying anything, you need to understand the communication protocol your car uses. This is where 90% of the confusion originates.
 
-### The DS2 Protocol
+### The DS2 protocol
 
 Every E36 — regardless of market, year, or model — communicates internally using BMW's proprietary **DS2 protocol** (also called D2). This is NOT the same as OBD2. The names sound similar, which causes endless confusion, but they are completely different systems.
 
@@ -37,7 +37,7 @@ Every E36 — regardless of market, year, or model — communicates internally u
 
 The difference in diagnostic depth is enormous. A generic OBD2 scanner will give you a fault code and a one-line description. BMW's DS2 system tells you exactly what went wrong, when, how many times, and under what conditions.
 
-### The 20-Pin Round Connector
+### The 20-pin round connector
 
 Your E36 has a round 20-pin diagnostic connector located **under the hood**, typically on the left (driver's) side of the engine bay near the strut tower. This is the OBD1 connector, and it's where all the magic happens.
 
@@ -54,7 +54,7 @@ Your E36 has a round 20-pin diagnostic connector located **under the hood**, typ
 
 **Why this matters for buying an interface:** If your car has Pin 15 populated in the diagnostic connector, you have a car that requires a true ADS interface for full module access. Most pre-facelift E36s (1992–1996 EU models) fall into this category.
 
-### Pre-Facelift vs. Facelift: What Changed
+### Pre-Facelift vs. facelift: what changed
 
 | | Pre-Facelift (1992–1996 EU) | Facelift (1996–1999 EU) |
 |---|---|---|
@@ -69,9 +69,9 @@ Your E36 has a round 20-pin diagnostic connector located **under the hood**, typ
 
 ---
 
-## The Software: INPA / EDIABAS
+## The software: INPA / ediabas
 
-### What Is It?
+### What is it?
 
 **INPA** (Interpreter for BMW Group Test Equipment) is BMW's internal diagnostic software. It was used in BMW dealerships and is the most comprehensive tool available for the E36.
 
@@ -79,7 +79,7 @@ Your E36 has a round 20-pin diagnostic connector located **under the hood**, typ
 
 They always work together. You install both.
 
-### What Can INPA Do on Your E36?
+### What Can INPA do on your E36?
 
 **Engine (DME):**
 - Read and clear fault codes with full descriptions
@@ -122,7 +122,7 @@ They always work together. You install both.
 - Blower motor control
 - Flap position monitoring
 
-### Other Software Options
+### Other software options
 
 | Software | Type | Pros | Cons | Best For |
 |----------|------|------|------|----------|
@@ -137,11 +137,11 @@ They always work together. You install both.
 
 ---
 
-## The Hardware: Choosing the Right Interface
+## The hardware: choosing the right interface
 
 This is where most people waste money. Read carefully.
 
-### Option A: Dedicated ADS Interface (Recommended)
+### Option a: dedicated ads interface (recommended)
 
 **What it is:** A purpose-built cable that connects the 20-pin round diagnostic plug directly to an RS232 serial port on your laptop. It contains proper K-line transceivers and supports the ADS protocol natively.
 
@@ -159,7 +159,7 @@ This is where most people waste money. Read carefully.
 
 **Critical warning about USB:** ADS mode does NOT work reliably through USB-to-serial converters. The timing requirements of the ADS protocol are too strict for virtual COM ports. If your laptop only has USB, do not buy an ADS serial interface — it will not work. Get a laptop with a real serial port instead (see laptop section below).
 
-### Option B: K+DCAN USB Cable with 20-Pin Adapter
+### Option b: k+dcan USB cable with 20-pin adapter
 
 **What it is:** A standard BMW diagnostic USB cable (the type commonly sold for E46/E90 diagnostics) paired with a 16-pin-to-20-pin adapter that plugs into the round connector under the hood.
 
@@ -175,7 +175,7 @@ This is where most people waste money. Read carefully.
 
 **When this is NOT acceptable:** If you need to clear an airbag light for inspection (STK/MOT), diagnose ABS faults, or access the full instrument cluster on a pre-facelift car.
 
-### Option C: Peake Research Tool
+### Option c: peake research tool
 
 **What it is:** A standalone, handheld code reader that plugs directly into the 20-pin connector. No laptop required.
 
@@ -185,7 +185,7 @@ This is where most people waste money. Read carefully.
 
 **Best for:** Keeping in the glovebox as a quick-check tool. Not a replacement for INPA, but useful for roadside diagnosis and service resets.
 
-### Option D: Stomp Test (Free, No Hardware)
+### Option d: stomp test (free, no hardware)
 
 **What it is:** A procedure that makes the DME output stored fault codes by blinking the check engine light.
 
@@ -233,9 +233,9 @@ This is where most people waste money. Read carefully.
 
 ---
 
-## The Laptop: What to Get
+## The laptop: what to get
 
-### For ADS Interface (Option A)
+### For ads interface (option a)
 
 You need a laptop with a **native RS232 serial port** (DB9 connector). Modern laptops don't have these, so you're looking at older business-class machines. This is actually a feature, not a bug — these old ThinkPads are dirt cheap, bulletproof, and perfect for garage use.
 
@@ -259,20 +259,20 @@ You need a laptop with a **native RS232 serial port** (DB9 connector). Modern la
 
 **Tip:** Dedicate this laptop to BMW diagnostics only. Install XP, install INPA/EDIABAS, and leave it in the garage permanently. Don't try to make it a daily driver machine.
 
-### For K+DCAN USB Cable (Option B)
+### For k+dcan USB cable (option b)
 
 Any laptop with a USB port and Windows 7+ will work. The K+DCAN cable installs as a virtual COM port. Just make sure to install the FTDI drivers (most cables use the FT232RL chip) before connecting to the car.
 
 ---
 
-## Step-by-Step: Installing INPA/EDIABAS
+## Step-by-Step: installing inpa/ediabas
 
 ### Prerequisites
 - Laptop with appropriate OS (XP recommended for ADS, Win7+ acceptable for K+DCAN)
 - Your interface cable (NOT yet connected to the car)
 - INPA/EDIABAS installation package (version 5.0.2 / 6.4.7 is the most commonly used)
 
-### Step 1: Install EDIABAS
+### Step 1: install ediabas
 
 1. Run the EDIABAS installer
 2. Select installation directory: `C:\EDIABAS`
@@ -281,7 +281,7 @@ Any laptop with a USB port and Windows 7+ will work. The K+DCAN cable installs a
    - For K+DCAN USB: select **STD:OBD** and set COM port to match the virtual COM port assigned to your cable (check Device Manager)
 4. Complete installation
 
-### Step 2: Install INPA
+### Step 2: install INPA
 
 1. Run the INPA installer
 2. Select installation directory: `C:\INPA`
@@ -289,7 +289,7 @@ Any laptop with a USB port and Windows 7+ will work. The K+DCAN cable installs a
 4. When prompted for vehicle models, ensure **E36** is selected (may appear under "Old Models" or "Alte Modelle")
 5. Complete installation
 
-### Step 3: Configure EDIABAS.ini
+### Step 3: configure ediabas.ini
 
 Navigate to `C:\EDIABAS\BIN\EDIABAS.INI` and verify:
 
@@ -321,7 +321,7 @@ Port=COM3
 ```
 (Change COM3 to whatever port Windows assigned to your cable — check Device Manager → Ports)
 
-### Step 4: First Connection
+### Step 4: first connection
 
 1. Connect your interface cable to the 20-pin diagnostic connector under the hood
 2. Turn ignition to position 2 (ON, engine off)
@@ -330,7 +330,7 @@ Port=COM3
 5. Select the module you want to access (start with DME/Motor)
 6. If INPA connects successfully, you'll see live data immediately — battery voltage, coolant temp, etc.
 
-### Troubleshooting First Connection
+### Troubleshooting first connection
 
 | Symptom | Likely Cause | Fix |
 |---------|-------------|-----|
@@ -343,11 +343,11 @@ Port=COM3
 
 ---
 
-## Real-World Use: What to Check After an Engine Swap
+## Real-World use: what to check after an engine swap
 
 If you've just dropped an M50 into your E36 (or any engine swap), here's a diagnostic checklist to run through with INPA before your first real drive:
 
-### DME Checks
+### DME checks
 
 **1. Fault code scan (obvious first step)**
 - Read all stored codes
@@ -371,7 +371,7 @@ If you've just dropped an M50 into your E36 (or any engine swap), here's a diagn
 - Ignition timing advance should be 10–15° at idle, advancing smoothly with RPM
 - Knock sensor should show no retard events at idle — if it does, check for knock sensor wiring issues or wrong fuel
 
-### Other Module Checks
+### Other module checks
 
 **5. ABS/ASC (if accessible)**
 - All four wheel speed sensors should read 0 at standstill
@@ -387,7 +387,7 @@ If you've just dropped an M50 into your E36 (or any engine swap), here's a diagn
 
 ---
 
-## The Stomp Test: Quick Reference Card
+## The stomp test: quick reference card
 
 For when you're on the side of the road and don't have your laptop:
 
@@ -417,9 +417,9 @@ Print this, laminate it, keep it in the glovebox.
 
 ---
 
-## Shopping List: Complete Diagnostic Kit
+## Shopping list: complete diagnostic kit
 
-### Budget Setup (~€40–60)
+### Budget setup (~€40–60)
 
 | Item | Source | Est. Price |
 |------|--------|-----------|
@@ -428,7 +428,7 @@ Print this, laminate it, keep it in the glovebox.
 | INPA/EDIABAS software | BMW community resources | Free |
 | **Total** | | **€35–60** |
 
-### Recommended Setup (~€80–120)
+### Recommended setup (~€80–120)
 
 | Item | Source | Est. Price |
 |------|--------|-----------|
@@ -438,7 +438,7 @@ Print this, laminate it, keep it in the glovebox.
 | Peake Research tool (glovebox backup) | Pelican Parts | €40–60 |
 | **Total** | | **€115–175** |
 
-### Keep-It-Simple Setup (~€20–35)
+### Keep-It-Simple setup (~€20–35)
 
 | Item | Source | Est. Price |
 |------|--------|-----------|
@@ -451,7 +451,7 @@ Print this, laminate it, keep it in the glovebox.
 
 ---
 
-## Summary: What to Buy Based on Your Car
+## Summary: what to buy based on your car
 
 | Your E36 | Year | DME | Interface You Need |
 |----------|------|-----|-------------------|
@@ -466,7 +466,7 @@ Print this, laminate it, keep it in the glovebox.
 
 ---
 
-## Further Reading
+## Further reading
 
 - **BimmerForums.co.uk** — Thread: "BMW INPA E36 OBD OBD2 and ADS interfaces explained" by Joylove. The single best technical resource on E36 interface compatibility. Read the whole thread.
 - **one-stop-electronics.com** — FAQ section explains ADS vs OBD in detail with pinout diagrams.

@@ -13,7 +13,7 @@ VANOS (Variable Nockenwellensteuerung — Variable Camshaft Timing) on the M50TU
 
 ---
 
-## Which Engines Have VANOS
+## Which engines have VANOS
 
 | Engine | VANOS |
 |---|---|
@@ -28,7 +28,7 @@ If you're swapping an M50, check whether it's TU or non-TU. Both are excellent e
 
 ---
 
-## How VANOS Works
+## How VANOS works
 
 The VANOS unit sits at the front of the engine, between the timing chain cover and the intake camshaft sprocket. Inside:
 
@@ -45,9 +45,9 @@ The VANOS unit sits at the front of the engine, between the timing chain cover a
 
 ---
 
-## Failure Modes
+## Failure modes
 
-### 1. Seal kit degradation (most common)
+### 1. seal kit degradation (most common)
 
 The VANOS piston is sealed by two rubber O-rings and a Teflon piston ring. After 15–20 years, the rubber O-rings harden and crack. When they fail:
 
@@ -63,7 +63,7 @@ The VANOS piston is sealed by two rubber O-rings and a Teflon piston ring. After
 - INPA shows VANOS fault code
 - Oil leak from VANOS unit seal area (external)
 
-### 2. Solenoid valve failure
+### 2. solenoid valve failure
 
 The solenoid directs oil to the VANOS piston on command from the DME. If it sticks, seizes, or its winding fails:
 
@@ -74,19 +74,19 @@ The solenoid directs oil to the VANOS piston on command from the DME. If it stic
 
 The solenoid is a separate replaceable part (€40–80 new, €15–30 used). Do not replace the whole VANOS unit if only the solenoid has failed.
 
-### 3. Cam position sensor failure
+### 3. cam position sensor failure
 
 A failed cam sensor means the DME can't verify VANOS position and disables VANOS operation as a safety measure. The engine runs but without any VANOS advance — torque is reduced.
 
 **Symptoms:** Same as seal failure (flat mid-range), but INPA specifically shows a cam sensor fault rather than a VANOS regulation fault. The sensor is simple to test with a multimeter (Hall effect sensor — check supply voltage, ground, and signal output while cranking).
 
-### 4. Timing chain stretch (advanced cars)
+### 4. timing chain stretch (advanced cars)
 
 A stretched timing chain shifts the base cam timing before VANOS even acts. VANOS then starts from the wrong baseline position and its effective range shifts. Symptoms overlap with VANOS seal failure. If you're seeing VANOS faults and the seals are new, check timing chain condition.
 
 ---
 
-## The Seal Kit Repair
+## The seal kit repair
 
 This is the standard M50TU maintenance item. Costs €20–30 in parts, takes 3 hours the first time.
 
@@ -127,7 +127,7 @@ Test with INPA: at idle, VANOS should show retarded position. Rev to 2500 RPM an
 
 ---
 
-## VANOS Torque Specifications
+## VANOS torque specifications
 
 | Fastener | Torque |
 |---|---|
@@ -139,7 +139,7 @@ The central bolt is a torque-to-yield (TTY) bolt — replace every time. Reusing
 
 ---
 
-## Rebuilt vs New VANOS
+## Rebuilt vs new VANOS
 
 The M50TU VANOS unit is no longer available new from BMW. Options:
 
@@ -154,7 +154,7 @@ For most cars the seal kit is sufficient. If the piston or helical gear is score
 
 ---
 
-## Non-TU vs TU — Is VANOS Worth the Complexity?
+## Non-TU vs tu — is VANOS worth the complexity?
 
 If you're choosing a donor for an M50 swap:
 

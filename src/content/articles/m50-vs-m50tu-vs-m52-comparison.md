@@ -28,7 +28,7 @@ hero: "engine-compare-v2.webp"
 
 ---
 
-## The M50 Family Explained
+## The M50 family explained
 
 The M50 family is one of BMW's most celebrated engine platforms. Found primarily in the E34 5 Series and E36 3 Series, these inline-six engines earned a reputation for smooth power delivery, bulletproof reliability, and enormous tuning potential — especially under forced induction.
 
@@ -36,7 +36,7 @@ Understanding the differences between the three main variants is critical if you
 
 ---
 
-## M50B25 (Non-VANOS) — The Original
+## M50B25 (non-VANOS) — the original
 
 **Found in:** E34 525i (1990–1992), E36 325i (1990–1992)
 
@@ -64,7 +64,7 @@ You can visually identify a non-VANOS M50 by the absence of the VANOS actuator h
 
 ---
 
-## M50B25TU (Single VANOS) — The Technical Update
+## M50B25TU (single VANOS) — the technical update
 
 **Found in:** E34 525i (1992–1995), E36 325i (1992–1995)
 
@@ -76,7 +76,7 @@ VANOS is crucial for daily driveability. By advancing the intake cam timing at l
 
 For street-driven cars that won't see a turbo, the M50TU is arguably the better engine. The VANOS system gives you the best of both worlds — decent low-end pull for daily driving and the same top-end power as the NV variant.
 
-### Hardware differences from M50 NV
+### Hardware differences from M50 nv
 
 Several internal components changed with the TU update:
 
@@ -96,13 +96,13 @@ The VANOS housing is the giveaway — a distinctive bulge on the intake side of 
 
 ---
 
-## M52B25 / M52B28 — The Aluminium Generation
+## M52B25 / m52b28 — the aluminium generation
 
 **Found in:** E36 323i / 328i (1995–1999), E39 523i / 528i, E38 728i
 
 The M52 represents a significant departure from the M50 platform despite sharing the same basic architecture. The most important change is the switch to an aluminium block in European markets, which saved approximately 15 kg but introduced new challenges.
 
-### The Nikasil problem
+### The nikasil problem
 
 Early European M52 engines used a Nikasil (nickel-silicon carbide) cylinder bore coating directly applied to the aluminium block walls, eliminating the need for iron cylinder liners. This technology works well with high-quality fuel, but reacts badly with high-sulphur fuel. The Nikasil coating degrades, leading to compression loss and eventual engine failure.
 
@@ -126,27 +126,27 @@ The M52TU (found in very late E36 production and the E46) adds double-VANOS (var
 
 ---
 
-## Head-to-Head: Which Engine for Which Build?
+## Head-to-Head: which engine for which build?
 
-### For a turbo build: M50B25 Non-VANOS
+### For a turbo build: m50b25 non-VANOS
 
 The cast iron block, forged rods, double valve springs, and simplest engine management make this the clear winner. The lack of VANOS means one less system to worry about under boost, and the stronger valvetrain handles aggressive cams without modification. The EPROM-based DME is also the easiest to tune on a standalone setup.
 
-### For a daily driver with occasional spirited driving: M50B25TU
+### For a daily driver with occasional spirited driving: m50b25tu
 
 The VANOS system gives you significantly better low-end response for normal driving, while the top-end performance matches the NV variant. The single VANOS system is reliable and cheap to rebuild if it does fail. If you're not planning forced induction, the TU is the more complete engine.
 
-### For maximum naturally-aspirated torque: M52B28
+### For maximum naturally-aspirated torque: m52b28
 
 The 2.8-liter displacement advantage is hard to argue with for a street car. The extra 35 Nm of torque over the 2.5-liter variants makes a real difference in daily driving. Just ensure you're getting a steel-lined block if buying in Europe.
 
-### For a budget swap into a 316i/318i: M50B25 Non-VANOS
+### For a budget swap into a 316i/318i: m50b25 non-VANOS
 
 The simplest wiring (no VANOS solenoid to integrate), the most robust internals, and typically the cheapest to source in European junkyards. For an OBD1 E36 (pre-1996), the swap wiring is as clean as it gets — especially if you source the complete engine harness and DME from the same donor car. This is our choice for the Projekt 36 build.
 
 ---
 
-## Parts Cross-Reference: What's Interchangeable?
+## Parts cross-reference: what's interchangeable?
 
 | Component | M50 NV | M50TU | M52 | Notes |
 |---|---|---|---|---|
@@ -164,7 +164,7 @@ The simplest wiring (no VANOS solenoid to integrate), the most robust internals,
 
 ---
 
-## Quick Visual Identification Guide
+## Quick visual identification guide
 
 **Step 1: Look at the front of the cylinder head.**
 - No bulge on the intake side → **M50 Non-VANOS**

@@ -13,7 +13,7 @@ The ZKE (Zentrale Karosserie-Elektronik — Central Body Electronics) module, al
 
 ---
 
-## What the ZKE Controls
+## What the ZKE controls
 
 The ZKE handles all body convenience functions:
 
@@ -29,7 +29,7 @@ The ZKE does NOT control the exterior lights (that's the LCM) or the engine mana
 
 ---
 
-## Module Location
+## Module location
 
 **Pre-facelift E36 (to ~1995):** The ZKE module is typically located in the boot (trunk), on the right side behind the panel lining, near the battery. Access by removing the boot carpet/panel on the right side.
 
@@ -41,7 +41,7 @@ Check the ETM (Body Electrical → ZKE) for the exact location for your build da
 
 ---
 
-## How Central Locking Works
+## How central locking works
 
 The ZKE receives inputs from:
 
@@ -61,7 +61,7 @@ If your car unlocks only the driver door but should unlock all doors (or vice ve
 
 ---
 
-## Remote Key (FZV) — How It Works
+## Remote key (fzv) — how it works
 
 The E36 uses a rolling-code infrared or RF remote depending on year and market:
 
@@ -77,7 +77,7 @@ With the car locked, stand within range and press the lock button 3–5 times ra
 
 ---
 
-## Comfort Window Function
+## Comfort window function
 
 On E36s with comfort windows (typically post-1995), the ZKE can command the power windows to open or close fully with a single long press on the remote or interior button:
 
@@ -89,9 +89,9 @@ If the one-touch function stops working but manual window control is fine, the Z
 
 ---
 
-## Failure Modes
+## Failure modes
 
-### 1. Central locking doesn't work at all
+### 1. central locking doesn't work at all
 
 **Check first:** Fuse F9 (central locking/ZKE supply). A blown F9 kills all ZKE functions.
 
@@ -99,7 +99,7 @@ If fuse is intact: measure voltage at the ZKE supply pin with ignition on. The Z
 
 **INPA test:** Navigate to ZKE/GM → Actuator tests. You can command each door lock actuator individually from INPA. If the actuators respond to INPA commands but not to the key or remote, the problem is in the input signal chain (switch, remote receiver, wiring to ZKE). If actuators don't respond to INPA either, the ZKE itself or its output circuit is faulty.
 
-### 2. Remote stops working
+### 2. remote stops working
 
 The most common cause is a flat remote battery (CR2032 or similar). Replace first.
 
@@ -107,19 +107,19 @@ If battery is fresh: perform the re-synchronisation procedure above. If the remo
 
 **Remote receiver test:** The IR or RF receiver is a small module, often near the mirror base or B-pillar. Measure its supply voltage and ground. Some receivers have a signal test via INPA.
 
-### 3. One door doesn't lock/unlock
+### 3. one door doesn't lock/unlock
 
 Usually the door lock actuator motor itself. Test by commanding that specific door from INPA. If INPA commands work: ZKE is fine, wiring and actuator are OK. If the actuator doesn't respond to INPA: check wiring from ZKE to that door actuator, then the actuator itself.
 
 A seized actuator draws high current and can blow the ZKE's internal output transistor for that circuit.
 
-### 4. Central locking activates randomly
+### 4. central locking activates randomly
 
 A common cause on high-mileage E36s: the door barrel key switch (the microswitch that detects key rotation) is worn and giving false signals. The ZKE sees a "key turn" trigger even with no key in the lock. Replace the door barrel or isolate the switch signal wire to confirm.
 
 Another cause: water ingress into the door lock actuator causing a short that pulses the lock signal.
 
-### 5. Interior light doesn't fade — stays on or won't illuminate
+### 5. interior light doesn't fade — stays on or won't illuminate
 
 The ZKE controls the lighting delay. A stuck door switch (door pin switch stuck in "open" position) keeps the ZKE in illuminated state. Check all four door switches — a jammed switch is a common E36 issue and is also a parasitic drain source.
 
@@ -168,7 +168,7 @@ Clear faults after repair and recheck after 24 hours of normal use.
 
 ---
 
-## Quick Troubleshooting
+## Quick troubleshooting
 
 | Symptom | First check |
 |---------|-------------|

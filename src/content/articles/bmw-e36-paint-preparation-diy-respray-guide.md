@@ -9,7 +9,7 @@ hero: "bmw-e36-paint-preparation-diy-respray-guide.webp"
 
 A quality paint job is 90% preparation. Anyone can lay down a few coats of colour, but the deep, ripple-free shine that separates a professional finish from an amateur one is earned long before the spray gun comes out. For an aging platform like the E36, this prep work is even more critical, involving not just sanding but meticulous rust repair and surface perfection.
 
-This isn't a guide for a quick driveway touch-up. This is the definitive process for taking a 25-year-old E36 with tired paint, stone chips, and the inevitable rust bubbles, and turning it into a perfectly straight, sealed, and primed canvas ready for a show-quality respray. We'll cover everything from disassembly to the final wipe-down before it rolls into the booth.
+This isn't a guide for a quick driveway touch-up. This is about taking a 25-year-old E36 with tired paint, stone chips, and rust bubbles, and turning it into a straight, sealed, primed shell ready for respray. Everything from disassembly to the final wipe-down before it rolls into the booth.
 
 ## TL;DR
 
@@ -21,17 +21,17 @@ This isn't a guide for a quick driveway touch-up. This is the definitive process
 | **Time:** | 40 - 100 hours (highly dependent on the extent of rust repair). |
 | **Difficulty:**| 4/5 - Requires patience, attention to detail, and welding skills for rust repair. |
 
-## Stage 1: Disassembly and Assessment
+## Stage 1: disassembly and assessment
 
 Before you touch a single piece of sandpaper, you need to strip the car and see what you're really dealing with. Paint can hide a multitude of sins, especially on the E36's known weak spots.
 
-**What to Remove:**
-*   **Bumpers:** Front and rear.
-*   **Lights:** Headlights, indicators, side markers, and tail lights.
-*   **Trim:** Side mouldings, window trim, kidney grilles, and badges.
-*   **Seals:** Door seals, window seals, and boot seal.
-*   **Door Handles & Mirrors:** These are essential for a clean finish in the door jambs.
-*   **Glass (Recommended):** For a truly professional job, removing the front windscreen and rear glass is the only way to properly address any rust forming in the window channels. This is a big step, so decide if it's right for your project.
+**What to remove:**
+*   Bumpers (front and rear)
+*   Lights (headlights, indicators, side markers, tail lights)
+*   Trim (side mouldings, window trim, kidney grilles, badges)
+*   Seals (door, window, boot)
+*   Door handles and mirrors — essential for clean door jambs
+*   Glass (recommended) — removing the windscreen and rear glass is the only way to properly address rust in the window channels. Big step; decide if it's right for your project.
 
 Expect to break clips. The plastic on a 25-year-old car is brittle. Stock up on common clips beforehand. The side moulding clips are notoriously fragile.
 
@@ -51,7 +51,7 @@ With the car stripped, conduct a thorough inspection. Use a pick or screwdriver 
 
 Document every dent, scratch, and rust spot with photos. This will be your roadmap for the bodywork to come.
 
-## Stage 2: Stripping Down to a Clean Canvas
+## Stage 2: stripping to bare metal
 
 Your goal is to remove the old, failing layers of paint and expose the metal and factory e-coat underneath. There are several ways to do this, but for a DIY setting, a Dual Action (DA) sander is your best friend.
 
@@ -63,11 +63,11 @@ Once a panel is stripped, the next step is crucial: **degreasing**. Paint produc
 
 Use a quality panel wipe/silicone remover (e.g., Mipa Silikonentferner, ~€20 for 5L). Use the two-towel method: apply the degreaser with one clean microfibre towel and immediately wipe it off with a second, dry, clean microfibre towel. Do not let it evaporate on the surface, as this just re-deposits the contaminants. Degrease every panel before you start any bodywork, and again before priming.
 
-## Stage 3: Cutting Out the Cancer - E36 Rust Repair
+## Stage 3: cutting out the rust
 
 This is where E36 restorations are made or broken. **Do not simply grind the rust and fill it with body filler.** This is a temporary fix that guarantees the rust will return within a year. The only correct way to repair rust is to cut it out completely.
 
-1.  **Cut Back to Clean Metal:** Use a cutting disc on an angle grinder to cut out the affected area. Be aggressive—rust spreads further than you can see. Cut until you are at least an inch into clean, shiny, unpitted metal on all sides.
+1.  **Cut Back to Clean Metal:** Use a cutting disc on an angle grinder to cut out the affected area. Be aggressive — rust spreads further than you can see. Cut until you are at least an inch into clean, shiny, unpitted metal on all sides.
 2.  **Fabricate or Replace:** You have two options:
     *   **Fabricate a Patch:** If you're skilled with metal shaping, you can form a new patch panel from fresh sheet steel (typically 1.0mm / 19-gauge).
     *   **Use a Repair Panel:** For common areas like the rear arches, aftermarket repair panels are a lifesaver. They provide the correct curvature and save hours of fabrication.
@@ -80,7 +80,7 @@ This is where E36 restorations are made or broken. **Do not simply grind the rus
 3.  **Weld in the New Panel:** Use a MIG welder to tack the new panel in place, ensuring good fitment and minimal gaps. Then, stitch weld the panel in, alternating sides to avoid warping the metal from excessive heat.
 4.  **Grind and Seal:** Grind the welds flush. Now, treat the bare metal and the backside of the repair with a high-quality **2K Epoxy Primer**. This is non-negotiable. Epoxy primer is a non-porous, direct-to-metal primer that creates a waterproof barrier, providing the best possible corrosion resistance. A product like Mipa EP 100-20 (~€60 for a 1.5L kit) is an excellent choice. Apply two medium coats to all bare metal areas.
 
-## Stage 4: Body Filler and Block Sanding
+## Stage 4: body filler and block sanding
 
 With all metalwork complete and sealed in epoxy, it's time to perfect the surface. Body filler (polyester filler) is used to smooth out the weld seams and fix any dents or imperfections. Used correctly, it's a stable and permanent part of the repair.
 
@@ -89,7 +89,7 @@ With all metalwork complete and sealed in epoxy, it's time to perfect the surfac
 *   **Block Sanding:** This is the most critical skill in bodywork. **Always use a sanding block.** Never sand filler with just your hand; you'll follow the imperfections instead of levelling them. Start with P80 grit on a hard block to level the filler. Once it's level with the surrounding metal, switch to P120, and then P180, feathering the edges into the existing panel.
 *   **Finishing Putty:** For tiny pinholes or minor scratches, use a fine finishing or glazing putty (e.g., U-Pol Dolphin Glaze). This is much finer than standard filler and is used for the final skim.
 
-## Stage 5: Primer, Guide Coat, and the Pursuit of Flatness
+## Stage 5: primer, guide coat, and the pursuit of flatness
 
 Once all filler work is done and sanded to P180, the entire car needs to be primed. We'll use a **2K High-Build Primer** (also called filler primer). Its job is to fill minor imperfections like sanding scratches and create a uniform, easily sandable surface for the topcoat. Mipa 2K-HS-Füller F54 (~€50 for a 1L kit) is a great option.
 
@@ -103,7 +103,7 @@ Using a long sanding block (or a selection of blocks for different contours), be
 
 If you see any remaining black specks or lines of guide coat, it means that area is low and needs more attention. You may need to apply more high-build primer to the low spots and repeat the process. This step is tedious but absolutely essential. It's the only way to guarantee your panels are laser-straight before paint.
 
-## Stage 6: Final Sanding and Pre-Paint Cleaning
+## Stage 6: final sanding and pre-paint cleaning
 
 With the body perfectly flat and all guide coat removed, it's time for the final sanding. The goal is to create a fine, uniform scratch pattern for the basecoat to adhere to. The final grit depends on your paint system, but a common progression is:
 
@@ -116,6 +116,6 @@ The car is now technically ready, but the final clean is paramount.
 3.  Mask the car completely, covering anything you don't want painted.
 4.  Just before rolling into the paint booth, use a tack rag to lightly wipe down every surface to pick up any final dust particles.
 
-## What's Next?
+## What's next?
 
-Your E36 is now a blank canvas. Every hour of tedious sanding, every welded panel, and every layer of primer has built the foundation for a stunning finish. The shell is rust-free, straight as an arrow, and perfectly sealed. It is now ready to be handed over to a professional painter or, if you have the equipment and skill, to be painted in your own booth. The hard part is over; the rewarding part is about to begin.
+The shell is rust-free, straight, and sealed. Hand it to a painter or roll it into your own booth. The prep work is what lasts — everything from here is just colour on top of your foundation.

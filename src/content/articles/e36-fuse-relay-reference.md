@@ -13,7 +13,7 @@ The E36 fuse box is on the left side of the engine bay, under a cover. There's a
 
 ---
 
-## Fuse Box Location
+## Fuse box location
 
 **Main fuse box:** Engine bay, driver's side (left), against the firewall. Lift the plastic cover. The box contains a mix of blade fuses (ATO/ATC type) and relays.
 
@@ -23,13 +23,13 @@ The E36 fuse box is on the left side of the engine bay, under a cover. There's a
 
 ---
 
-## Fuse Layout Reference
+## Fuse layout reference
 
 Fuse positions vary slightly between production years (pre-facelift 1993–1995 vs post-facelift 1996–1999) and market specifications. The table below covers the most common 1993–1999 E36 layout. Always cross-reference with the ETM Schema 1 for your specific build date.
 
 <img src="/images/e36-fuse-box-diagram.svg" alt="BMW E36 fuse box diagram with color-coded fuse positions" style="width:100%;max-width:760px;display:block;margin:1.5rem 0" />
 
-### Blade Fuses — Main Box
+### Blade fuses — main box
 
 | Position | Rating | Circuit |
 |----------|--------|---------|
@@ -68,7 +68,7 @@ Fuse positions vary slightly between production years (pre-facelift 1993–1995 
 
 ---
 
-## Relay Reference
+## Relay reference
 
 Relays are the larger square or rectangular components in the fuse box. They switch high-current circuits using a low-current control signal. On the E36:
 
@@ -85,7 +85,7 @@ Relays are the larger square or rectangular components in the fuse box. They swi
 | R9  | Wiper park relay | Ensures wipers park correctly after switch-off |
 | R10 | Flasher relay | Controls turn signal timing (click-click speed) |
 
-### The DME Main Relay — Most Commonly Replaced
+### The DME main relay — most commonly replaced
 
 The DME main relay (R1) is the single most replaced relay on the E36. When it fails, the engine either won't start (relay fails open — DME doesn't power up) or cuts out while driving (relay fails intermittently — DME drops power under vibration or heat).
 
@@ -93,7 +93,7 @@ The DME main relay (R1) is the single most replaced relay on the E36. When it fa
 
 **Fix:** Replace with a genuine Bosch relay or equivalent quality. The relay is a standard automotive 4-pin type (87a contact, 30 amp rated). Cost: €5–15. Worth replacing preventively on any high-mileage E36.
 
-### The Fuel Pump Relay
+### The fuel pump relay
 
 Controls the fuel pump. The DME activates it at startup and keeps it active while the engine runs. The relay also has a safety cut: if the DME stops receiving RPM signal (engine stalled), it de-energizes the relay within ~1 second, cutting fuel.
 
@@ -103,27 +103,27 @@ Controls the fuel pump. The DME activates it at startup and keeps it active whil
 
 ---
 
-## How to Find a Blown Fuse Fast
+## How to find a blown fuse fast
 
 The fuse box lid diagram fades over decades, and swapped-in fuses of the wrong rating are common on older cars. Systematic approach:
 
-### 1. Identify what stopped working
+### 1. identify what stopped working
 
 Make a list. Multiple unrelated items failing simultaneously points to a shared fuse (or a ground fault — check grounds first). A single item failing usually means its dedicated fuse.
 
-### 2. Use the ETM cross-reference
+### 2. use the ETM cross-reference
 
 Schema 1 of the ETM shows every fuse, its rating, and every circuit it feeds. Look up the failed circuit in the relevant schema, trace the wire back to the fuse, and note the fuse number.
 
-### 3. Visual check under load
+### 3. visual check under load
 
 A blown fuse is obvious when held up to light — the element is visibly broken. However, some fuses blow with the element still partially intact but with a hairline crack that's invisible in poor lighting. Use a fuse tester (€2 tool) or multimeter in continuity mode across the fuse.
 
-### 4. Check fuse current flow, not just continuity
+### 4. check fuse current flow, not just continuity
 
 A fuse can be intact but the circuit still doesn't work because power isn't reaching the fuse at all. Test both sides: voltage on the input side + voltage on the output side with the load connected = circuit is OK. Voltage on input but none on output = blown fuse or broken fuse holder clip.
 
-### 5. Never replace without finding the cause
+### 5. never replace without finding the cause
 
 A blown fuse tells you there was an overcurrent event. Replace the fuse with the **correct amperage**, watch if it blows immediately (hard short) or eventually (intermittent short). A fuse that blows immediately means there's a bare wire grounding somewhere. A fuse that blows after days means an intermittent short — harder to find, usually in a connector that flexes.
 
@@ -131,7 +131,7 @@ A blown fuse tells you there was an overcurrent event. Replace the fuse with the
 
 ---
 
-## Fuse Amperage — What the Colors Mean
+## Fuse amperage — what the colors mean
 
 Standard ATO/ATC blade fuses use universal colors. If the label is unreadable, the color identifies the rating:
 
@@ -153,7 +153,7 @@ Standard ATO/ATC blade fuses use universal colors. If the label is unreadable, t
 
 ---
 
-## High-Current Fuses Near the Battery
+## High-Current fuses near the battery
 
 The main feed from the battery to the fuse box is protected by a high-current fuse or fusible link mounted near the battery:
 
@@ -165,7 +165,7 @@ Replacements are readily available; ensure the replacement rating matches the or
 
 ---
 
-## Post-Swap Fuse Considerations (M43 → M50)
+## Post-Swap fuse considerations (M43 → M50)
 
 When swapping from M43 to M50:
 

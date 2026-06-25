@@ -13,7 +13,7 @@ The M50 is one of BMW's most reliable engines, but "reliable" doesn't mean "main
 
 ---
 
-## The M50's Reputation — Deserved, With Caveats
+## The M50's reputation — deserved, with caveats
 
 The M50 family has earned its reputation for durability. The cast iron block is virtually indestructible under normal use, the bottom end (crankshaft, bearings, connecting rods) rarely fails before 300,000+ km, and the cylinder head is robust. Some M50s have been documented running past 500,000 km on original internals.
 
@@ -21,7 +21,7 @@ However, the M50's reliability has created a dangerous complacency. Owners assum
 
 ---
 
-## Failure Point #1: Cooling System — Likelihood: 95%
+## Failure point #1: cooling system — likelihood: 95%
 
 **This is not a failure point — it's a certainty.** Every M50 over 15 years old will experience cooling system failures if the components haven't been replaced. The cooling system is covered in exhaustive detail in our dedicated guide, but here's the summary:
 
@@ -49,7 +49,7 @@ Replace everything. Water pump (metal impeller only), thermostat, expansion tank
 
 ---
 
-## Failure Point #2: Oil Leaks — Likelihood: 90%
+## Failure point #2: oil leaks — likelihood: 90%
 
 ### What fails and why
 
@@ -85,7 +85,7 @@ During any engine-out situation (like our swap), replace every gasket and seal. 
 
 ---
 
-## Failure Point #3: Timing Chain System — Likelihood: 60%
+## Failure point #3: timing chain system — likelihood: 60%
 
 ### What fails and why
 
@@ -112,7 +112,7 @@ Inspect the timing chain, guides, and tensioner at 200,000 km or during any engi
 
 ---
 
-## Failure Point #4: VANOS Seals — Likelihood: 70% (M50TU Only)
+## Failure point #4: VANOS seals — likelihood: 70% (M50TU only)
 
 **Note:** This does not apply to the M50 Non-VANOS, which is what we're using in our swap. It's included here for completeness since many E36 325i owners have the M50TU.
 
@@ -133,7 +133,7 @@ Replace the VANOS seals as a maintenance item every 100,000–150,000 km or when
 
 ---
 
-## Failure Point #5: Head Gasket — Likelihood: 15% (Low, But Catastrophic)
+## Failure point #5: head gasket — likelihood: 15% (low, but catastrophic)
 
 ### What fails and why
 
@@ -155,7 +155,7 @@ If your M50 has a known history of overheating events, check for head gasket com
 
 ---
 
-## Failure Point #6: Idle Control Valve — Likelihood: 50%
+## Failure point #6: idle control valve — likelihood: 50%
 
 ### What fails and why
 
@@ -176,7 +176,7 @@ If cleaning doesn't resolve the issue, replace the valve. OEM: €40–70. After
 
 ---
 
-## Failure Point #7: Mass Air Flow Sensor — Likelihood: 40%
+## Failure point #7: mass air flow sensor — likelihood: 40%
 
 ### What fails and why
 
@@ -198,7 +198,7 @@ If contaminated, the MAF can sometimes be cleaned with dedicated MAF sensor clea
 
 ---
 
-## Preventive Maintenance Summary
+## Preventive maintenance summary
 
 ### Replace during any engine-out situation (like a swap)
 

@@ -13,7 +13,7 @@ The most expensive E36 charging diagnosis mistake is replacing the alternator wh
 
 ---
 
-## How the E36 Charging System Works
+## How the E36 charging system works
 
 The alternator is belt-driven from the crankshaft. Inside the alternator:
 
@@ -32,9 +32,9 @@ This means: **charging warning light on = alternator output is below ignition su
 
 ---
 
-## Diagnostic Order (Cheap to Expensive)
+## Diagnostic order (cheap to expensive)
 
-### Step 1: Check the drive belt
+### Step 1: check the drive belt
 
 Belt slipping or broken = alternator not spinning = no charge. Obvious but skipped often.
 
@@ -44,7 +44,7 @@ Belt slipping or broken = alternator not spinning = no charge. Obvious but skipp
 
 A slipping belt charges intermittently — battery warning light flickers at idle, goes out above 2000 RPM when belt bite improves. The smell of burning rubber under the bonnet confirms it.
 
-### Step 2: Visual inspection and connections
+### Step 2: visual inspection and connections
 
 - Battery terminals: corrosion, loose clamps
 - Main cable from alternator B+ terminal to battery: check both ends for corrosion
@@ -52,7 +52,7 @@ A slipping belt charges intermittently — battery warning light flickers at idl
 - Engine-to-chassis ground strap: present and tight?
 - Alternator mounting bolts: loose alternator vibrates, wears brushes prematurely
 
-### Step 3: Battery voltage test
+### Step 3: battery voltage test
 
 Test with a multimeter, engine off:
 - **12.6–12.8 V** = fully charged
@@ -61,7 +61,7 @@ Test with a multimeter, engine off:
 
 A battery under 12.0 V may not be able to power the exciter circuit adequately — the alternator won't charge from a deeply discharged battery until the battery is partially recovered (jump start and run for 10 minutes first).
 
-### Step 4: Charging voltage test
+### Step 4: charging voltage test
 
 Engine running, multimeter at battery terminals:
 - **13.8–14.4 V** = normal charging
@@ -71,13 +71,13 @@ Engine running, multimeter at battery terminals:
 
 Test at idle and at 2000 RPM. A good alternator shows 13.8–14.2 V by 1200 RPM and maintains it through the rev range.
 
-### Step 5: Load test the charging system
+### Step 5: load test the charging system
 
 Turn on: headlights, rear demister, blower on max, A/C if equipped. This represents near-maximum electrical load.
 
 Voltage at battery should stay above 13.5 V. If it drops to 12.8 V or below under load, the alternator is undersized for load, failing, or the regulator is limiting output.
 
-### Step 6: Test the voltage regulator
+### Step 6: test the voltage regulator
 
 Remove the regulator from the back of the alternator (3–4 screws, easy access with the alternator in-car). Visually inspect:
 - Brush length: brushes should extend at least 5 mm from the regulator body. Worn brushes = intermittent or no charging
@@ -85,9 +85,9 @@ Remove the regulator from the back of the alternator (3–4 screws, easy access 
 
 A worn regulator produces the classic E36 symptom: charges fine when cold, warning light comes on after 20–30 minutes as the regulator heats up and internal resistance changes.
 
-**Replacement:** Bosch F00M145200 or equivalent (check your alternator part number for the correct regulator). The regulator is a 10-minute swap and typically cures 60–70% of E36 charging complaints.
+Replacement part: Bosch F00M145200 or equivalent (verify against your alternator number). The regulator is a 10-minute swap and typically cures 60–70% of E36 charging complaints.
 
-### Step 7: Test the alternator independently
+### Step 7: test the alternator independently
 
 If the regulator is new and correct voltage still isn't achieved, the alternator itself may be failing. Tests:
 
@@ -99,7 +99,7 @@ If the regulator is new and correct voltage still isn't achieved, the alternator
 
 ---
 
-## Alternator Specifications
+## Alternator specifications
 
 | Engine | Stock alternator | Output |
 |---|---|---|
@@ -112,7 +112,7 @@ The stock alternator is adequate for standard electrical loads. If you've added:
 
 ---
 
-## Regulator and Alternator Part Numbers
+## Regulator and alternator part numbers
 
 | Alternator | Regulator | Output |
 |---|---|---|
@@ -124,7 +124,7 @@ Always verify against your alternator's stamped number. Aftermarket alternatives
 
 ---
 
-## Common Misdiagnosis Situations
+## Common misdiagnosis situations
 
 ### "New alternator, still not charging"
 
@@ -141,7 +141,7 @@ This is parasitic drain, not a charging fault. A healthy charging system fills t
 
 Common E36 parasitic drain sources: aftermarket radio (check it has a proper ignition feed), ZKE module with a stuck relay, boot light switch jammed on, phone charger left plugged in.
 
-### "Charging warning light on but voltage reads 14.2 V"
+### "Charging warning light on but voltage reads 14.2 v"
 
 The warning light circuit itself has a fault — not the charging system. The light illuminates when D+ terminal voltage is below ignition supply. This can happen if:
 - The D+ wire has extra resistance (but alternator is charging fine)
@@ -152,7 +152,7 @@ Use INPA → DME → live data → battery voltage: if it reads 14.2 V, the alte
 
 ---
 
-## After a Swap (M43 → M50)
+## After a swap (M43 → M50)
 
 The M50's alternator is physically different from the M43 unit and mounts in a different position. When swapping:
 

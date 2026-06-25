@@ -18,11 +18,11 @@ hero: "parts-sourcing.webp"
 
 ---
 
-## Part Number Research (Always Start Here)
+## Part number research (always start here)
 
 Before ordering anything, find the correct OEM part number. This prevents ordering wrong parts and lets you cross-reference between suppliers for the best price.
 
-### RealOEM.com (Free)
+### RealOEM.com (free)
 
 The gold standard for BMW part number lookup. Enter your chassis number (VIN) and it returns every part for your exact build specification. Exploded diagrams show how parts fit together. No account needed.
 
@@ -34,21 +34,21 @@ The gold standard for BMW part number lookup. Enter your chassis number (VIN) an
 
 **Tip for swap projects:** Look up parts under BOTH your car (316i) and the donor model (325i). This tells you exactly which parts differ between the two.
 
-### bmwfans.info (Free)
+### bmwfans.info (free)
 
 Similar to RealOEM but with a different interface that some users prefer. Also includes additional model data, production date ranges, and cross-references. The E36 sedan catalog is at: bmwfans.info/parts-catalog/E36-Sedan/
 
 **Advantage over RealOEM:** bmwfans.info shows which parts were superseded by newer part numbers — useful when the original part number is discontinued and a replacement exists under a new number.
 
-### ETK / BMW TIS (Advanced)
+### ETK / BMW tis (advanced)
 
 BMW's own Electronic Parts Catalog and Technical Information System. Available as software packages on various BMW forums. More comprehensive than RealOEM but requires installation and more technical knowledge to navigate.
 
 ---
 
-## Online Parts Suppliers — Ranked for EU Buyers
+## Online parts suppliers — ranked for EU buyers
 
-### Tier 1: General Parts (Best Prices)
+### Tier 1: general parts (best prices)
 
 #### Autodoc (.sk / .de / .pl / .fr)
 **What:** The Amazon of European car parts. Massive catalog, aggressive pricing, fast delivery within EU.
@@ -91,9 +91,9 @@ BMW's own Electronic Parts Catalog and Technical Information System. Available a
 
 ---
 
-### Tier 2: Quality Specialists (Best Parts)
+### Tier 2: quality specialists (best parts)
 
-#### FCP Euro (fcpeuro.com)
+#### FCP euro (fcpeuro.com)
 **What:** US-based BMW parts specialist with a unique selling point — lifetime replacement warranty on every part, including wear items.
 
 **Why it matters for EU buyers:** Yes, it ships from the US. Yes, you'll pay shipping (~€20–50 depending on order size) and potentially customs duties. But the lifetime warranty means that when your brake pads wear out, you send them back and get new ones for free. Over the life of a project car, this adds up to significant savings.
@@ -145,7 +145,7 @@ BMW's own Electronic Parts Catalog and Technical Information System. Available a
 
 ---
 
-### Tier 3: Performance & Swap Specialists
+### Tier 3: performance & swap specialists
 
 #### KFRacing.de
 **What:** German BMW performance parts specialist. Focus on E30, E36, E46 platforms.
@@ -168,7 +168,7 @@ BMW's own Electronic Parts Catalog and Technical Information System. Available a
 
 **Best for:** Suspension components, brake upgrades, roll cages, harnesses.
 
-#### 5150 Autosport (US)
+#### 5150 autosport (us)
 **What:** M50/M52 engine specialist.
 
 **Strengths:**
@@ -183,44 +183,44 @@ BMW's own Electronic Parts Catalog and Technical Information System. Available a
 
 ---
 
-### Tier 4: Used Parts & Junkyards
+### Tier 4: used parts & junkyards
 
-#### eBay Kleinanzeigen / eBay.de
+#### eBay kleinanzeigen / ebay.de
 The largest used BMW parts market in Europe. German sellers dominate and shipping within EU is straightforward. Search by BMW part number for best results.
 
-#### Bazos.sk / Bazos.cz
+#### Bazos.sk / bazos.cz
 The equivalent of Craigslist for Slovakia and Czech Republic. Surprisingly good for E36 parts — these cars were common in both countries. Search "BMW E36" or specific part descriptions in Slovak/Czech.
 
-#### Facebook Groups
+#### Facebook groups
 - "BMW E36 Parts for Sale Europe"
 - "BMW E36 Teile / Parts" (German-focused)
 - Local country groups (SK, CZ, PL, HU all have active E36 communities)
 
 **Tip:** When buying used engine or drivetrain parts, always ask for the part number stamped on the component and verify it against RealOEM before buying. This prevents receiving parts from the wrong model year or variant.
 
-#### Local Junkyards (Autovrakovisko)
+#### Local junkyards (autovrakovisko)
 In Slovakia and neighboring countries, E36s are still arriving at junkyards. Call ahead and ask if they have E36 models — especially 325i or 525i for M50 swap parts. Bring tools and be prepared to pull parts yourself. Prices are negotiable and typically 50–80% below used market prices online.
 
 ---
 
-## Buying Strategy: How to Save the Most
+## Buying strategy: how to save the most
 
-### 1. Build a master parts list first
+### 1. build a master parts list first
 Using RealOEM and bmwfans.info, create a spreadsheet of every part number you need. Include the OEM number, description, and quantity.
 
-### 2. Price-compare across 3–4 suppliers
+### 2. price-compare across 3–4 suppliers
 The same part can vary 30–50% between suppliers. A quick check across Autodoc, FCP Euro, and Schmiedmann often reveals significant savings.
 
-### 3. Batch orders to hit free shipping thresholds
+### 3. batch orders to hit free shipping thresholds
 Autodoc's free shipping kicks in around €120. Plan your orders to combine parts from the same system (e.g., order all cooling system parts at once).
 
-### 4. Buy wear items from FCP Euro
+### 4. buy wear items from fcp euro
 The lifetime warranty makes FCP Euro the cheapest long-term option for parts you'll replace more than once (brakes, filters, belts).
 
-### 5. Source swap parts used when possible
+### 5. source swap parts used when possible
 Engine mount arms, airboxes, intake manifolds, and driveshafts don't wear out in the traditional sense. Used parts from a junkyard 325i are perfectly fine for these items.
 
-### 6. Never cheap out on cooling, gaskets, or bearings
+### 6. never cheap out on cooling, gaskets, or bearings
 These are the parts that kill engines when they fail. Buy quality brands (Graf water pumps, Wahler thermostats, Victor Reinz gaskets, FAG/SKF bearings). The price difference between budget and quality is usually €5–15 per part — meaningless compared to the cost of a failure.
 
 ---

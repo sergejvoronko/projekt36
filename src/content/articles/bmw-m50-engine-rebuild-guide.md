@@ -23,11 +23,11 @@ This guide skips the basics of engine removal and teardown. We're starting with 
 
 ---
 
-## The Foundation: Block Preparation and Machining
+## The foundation: block preparation and machining
 
 Your engine is only as good as its foundation. A clean, straight, and properly toleranced block is non-negotiable. Don't cut corners here; any issues with the block will manifest as problems later.
 
-First, the block must be stripped of everything—freeze plugs, oil galley plugs, dowels. Take it to a reputable machine shop for a hot tank bath. This chemical cleaning process is far superior to any manual scrubbing and will leave your iron block looking factory-fresh, revealing any potential cracks in the process.
+First, the block must be stripped of everything — freeze plugs, oil galley plugs, dowels. Take it to a reputable machine shop for a hot tank bath. This chemical cleaning process is far superior to any manual scrubbing and will leave your iron block looking factory-fresh, revealing any potential cracks in the process.
 
 With the block clean, inspection and machining can begin.
 
@@ -48,11 +48,11 @@ Before leaving the shop, have them install new freeze plugs and oil galley plugs
 
 *   **Freeze Plugs (30mm):** BMW **11111734346** (x7)
 
-## The Rotating Assembly: Crank, Rods, and Pistons
+## The rotating assembly: crank, rods, and pistons
 
 With a perfect block, it's time to prepare the components that will live inside it. Precision and cleanliness are paramount.
 
-### Crankshaft and Bearings
+### Crankshaft and bearings
 
 The M50's forged crankshaft is incredibly strong. Unless the engine suffered a catastrophic oil failure, it likely only needs a polish. Have your machine shop polish the main and rod journals and verify they are within spec.
 
@@ -65,7 +65,7 @@ Next comes the most critical measurement of the entire build: bearing clearance.
 
 Lay the upper bearing shells into the block and rods, place the crank, and then lay the Plastigauge across the journals. Install the caps and torque them to spec (see table in next section). Remove the caps and measure the crushed Plastiggauge. If your clearances are too tight or too loose, you'll need oversized or undersized bearings. Do not proceed until these clearances are perfect.
 
-### Pistons and Rods
+### Pistons and rods
 
 Thoroughly clean the stock pistons, paying special attention to the ring grooves. An old, broken piston ring makes an excellent tool for scraping out carbon. Stock rods and pistons are fine for naturally aspirated builds.
 
@@ -77,7 +77,7 @@ The OEM rod bolts are torque-to-yield (TTY) and *must* be replaced. While you're
 
 *   **Rod Bolt Upgrade:** ARP **201-6302** (~€180)
 
-## Bottom End Assembly: Torque and Sealing
+## Bottom end assembly: torque and sealing
 
 With all parts cleaned, measured, and laid out on a clean surface, the fun begins. Use a high-quality assembly lube (like Liqui Moly **3050**) on all bearing surfaces and cylinder walls.
 
@@ -93,7 +93,7 @@ With all parts cleaned, measured, and laid out on a clean surface, the fun begin
 
 After torquing, rotate the assembly by hand. It should feel smooth with moderate resistance. Check connecting rod side clearance with a feeler gauge (spec: 0.10 - 0.25 mm).
 
-## The Cylinder Head: Breathing Life Back In
+## The cylinder head
 
 The cylinder head is arguably more complex than the block. Like the block, it needs to be professionally cleaned and inspected.
 
@@ -103,16 +103,16 @@ The cylinder head is arguably more complex than the block. Like the block, it ne
     *   **Valve Stem Seals:** Elring **127.680**
     *   **Full Head Gasket Set:** Victor Reinz **02-29230-01** (~€150). This kit includes the head gasket, valve stem seals, and all other necessary gaskets for the head.
 
-### The VANOS Question
+### The VANOS question
 
 If you have an M50B25TU, you have a single VANOS unit. The original Buna-N seals inside the VANOS piston are almost certainly degraded to hard plastic, causing the infamous "diesel rattle" and poor low-end performance. Rebuilding it is not optional. The kit from Beisan Systems is the industry standard and includes superior Viton seals.
 
-*   **VANOS Seal Kit:** Beisan Systems **BS021** (~€30 + shipping)
-*   **VANOS Rattle Repair Kit:** Beisan Systems **BS022** (~€30 + shipping)
+*   VANOS Seal Kit: Beisan Systems BS021 (~€30 + shipping)
+*   VANOS Rattle Repair Kit: Beisan Systems BS022 (~€30 + shipping)
 
 Do this while the head is on the bench. It's infinitely easier than doing it in the car.
 
-## Final Assembly: Timing and Torque
+## Final assembly: timing and torque
 
 This is the final, critical stage. Mating the block and head requires a new head gasket and new head bolts. The OEM head gasket is a high-quality multi-layer steel (MLS) unit. There is no reason to use anything else for most builds. Head bolts are TTY and cannot be reused.
 
@@ -121,7 +121,7 @@ This is the final, critical stage. Mating the block and head requires a new head
 | **Head Gasket** | Included in Victor Reinz kit | - |
 | **Head Bolts** | Elring **113.060** or Febi **01608** | €40 |
 
-1.  **Head Gasket:** Ensure both the block deck and head surface are immaculately clean. Use brake cleaner on a lint-free rag for a final wipe. Place the head gasket on the block—it only fits one way.
+1.  **Head Gasket:** Ensure both the block deck and head surface are immaculately clean. Use brake cleaner on a lint-free rag for a final wipe. Place the head gasket on the block. It only fits one way.
 2.  **Install Head:** Carefully lower the cylinder head onto the block. Do not slide it.
 3.  **Head Bolt Torque:** Lube the threads and washers of the new head bolts. Torque them in the specified spiral sequence, starting from the middle and working out.
 

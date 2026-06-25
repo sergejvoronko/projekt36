@@ -13,7 +13,7 @@ The M43-to-M50 wiring swap is manageable but requires planning. The short versio
 
 ---
 
-## What Actually Differs
+## What actually differs
 
 The E36 body wiring harness (cabin, lights, instruments, ABS) is largely the same regardless of which engine was originally fitted. The differences are in the **engine bay wiring** and **engine management** systems.
 
@@ -34,7 +34,7 @@ The key takeaway: the engine management systems are **not interchangeable** — 
 
 ---
 
-## Strategy: Use the M50 Engine Loom
+## Strategy: use the M50 engine loom
 
 The cleanest swap approach — and the one that gives the fewest problems — is to use the **complete M50 engine loom** that came with the donor engine. This harness was designed for the M50 DME and has the correct connector types, pinouts, and wire gauges for all M50 sensors.
 
@@ -49,7 +49,7 @@ Your job is to make the M50 loom connect correctly at each of these junction poi
 
 ---
 
-## Firewall Connector Differences
+## Firewall connector differences
 
 The main challenge is that the M43 and M50 E36 use **different firewall connector configurations**. The M43 body has connectors sized and pinned for the M43 engine loom. The M50 engine loom has connectors sized for M50 specification.
 
@@ -70,7 +70,7 @@ With the ETM for both M43 and M50 variants, trace each circuit and re-pin the co
 
 ---
 
-## Sensor-by-Sensor Compatibility
+## Sensor-by-Sensor compatibility
 
 ### Coolant temperature sensor
 
@@ -104,7 +104,7 @@ The M50 uses a **hot-film MAF sensor** (Siemens/Continental type). This is a cri
 
 ---
 
-## EWS — Plan This Before You Start
+## EWS — plan this before you start
 
 EWS causes more post-swap no-starts than any other single issue. Read the dedicated EWS guide for full detail; here's the swap-specific summary:
 
@@ -112,21 +112,21 @@ EWS causes more post-swap no-starts than any other single issue. Read the dedica
 
 Your M43 E36 has an EWS module matched to its original DME and keys. The M50 donor car has an EWS matched to the M50 DME and donor keys. These are not interchangeable without recoding.
 
-### Option A: Use M50 donor EWS + DME + keys as a set
+### Option a: use M50 donor EWS + DME + keys as a set
 
 Take the EWS module, M50 DME, and all ignition keys from the donor car. They are already matched. In your E36, connect the M50 DME and donor EWS module in place of the M43 equivalents. Use the donor keys.
 
 **Pros:** No coding required, works immediately  
 **Cons:** The EWS is matched to the donor VIN's security information. Adding a key later requires donor car data.
 
-### Option B: Recode EWS to new DME
+### Option b: recode EWS to new DME
 
 Keep your original E36 EWS and your existing keys. Have a specialist with INPA/WinKFP sync the EWS to the M50 DME's ISN (Individual Serial Number). The M50 DME's ISN is read-only from the DME itself — you don't need any information from the donor car.
 
 **Pros:** Your existing keys continue to work, your VIN is retained in the EWS  
 **Cons:** Requires professional recoding (€50–150 at a competent BMW specialist)
 
-### Option C: EWS delete
+### Option c: EWS delete
 
 Flash the M50 DME with EWS-deleted software. The immobilizer check is removed entirely.
 
@@ -141,7 +141,7 @@ The M50 will crank perfectly. All sensors will show correct values in INPA. The 
 
 ---
 
-## Cooling Fan Circuit
+## Cooling fan circuit
 
 The M50 runs hotter under load than the M43 (more displacement, more heat). The cooling fan relay circuit must be correctly wired:
 
@@ -151,7 +151,7 @@ The M50 runs hotter under load than the M43 (more displacement, more heat). The 
 
 ---
 
-## What to Check Before First Start
+## What to check before first start
 
 After completing the electrical connections:
 

@@ -21,7 +21,7 @@ hero: "air-suspension.webp"
 
 ---
 
-## How Air Suspension Works on an E36
+## How air suspension works on an E36
 
 The BMW E36 did not come with air suspension from the factory. Every air ride setup is aftermarket, replacing the factory struts/shocks and springs with air struts (shock absorbers with air bags instead of coil springs).
 
@@ -37,9 +37,9 @@ A complete air ride system has four main components:
 
 ---
 
-## Kit Breakdown
+## Kit breakdown
 
-### Air Lift Performance (3P and 3H)
+### Air lift performance (3P and 3H)
 
 Air Lift is the market leader for performance air suspension. Their E36 kit uses threaded-body, monotube struts that provide the best ride quality and handling of any bolt-on air kit.
 
@@ -65,7 +65,7 @@ Both systems include a digital controller with up to 5 presets (e.g., "drive," "
 
 ---
 
-### Bag Riders (Manual and PRO)
+### Bag riders (manual and pro)
 
 Bag Riders is a US-based company that builds custom air ride kits. Their E36 kit uses their own strut assemblies paired with different management systems.
 
@@ -86,7 +86,7 @@ Bag Riders is a US-based company that builds custom air ride kits. Their E36 kit
 
 ---
 
-### D2 Racing Air Struts
+### D2 racing air struts
 
 D2 Racing offers air struts as standalone components — you buy the struts and pair them with your own management system. This is a good option if you want to build a custom setup or if you already have a management system.
 
@@ -104,7 +104,7 @@ D2 Racing offers air struts as standalone components — you buy the struts and 
 
 ---
 
-### CEIKA Air Ride Coilovers
+### CEIKA air ride coilovers
 
 CEIKA takes a different approach: they start with a full adjustable coilover and replace the spring with an air bag. This gives you the best of both worlds — the handling precision of a threaded coilover body with the height adjustability of air.
 
@@ -122,7 +122,7 @@ CEIKA takes a different approach: they start with a full adjustable coilover and
 
 ---
 
-### DOLUD (Budget Option)
+### DOLUD (budget option)
 
 DOLUD is a Polish company that produces budget-friendly E36 air ride struts. For EU buyers, they're the most accessible option with no customs issues (EU-based) and fast shipping.
 
@@ -140,7 +140,7 @@ DOLUD is a Polish company that produces budget-friendly E36 air ride struts. For
 
 ---
 
-## What You Need Beyond Struts
+## What you need beyond struts
 
 If you buy struts-only (D2, DOLUD, or CEIKA bare kit), you'll need to source these separately:
 
@@ -159,7 +159,7 @@ If you buy struts-only (D2, DOLUD, or CEIKA bare kit), you'll need to source the
 
 ---
 
-## Trunk Setup Considerations for E36 Sedan
+## Trunk setup considerations for E36 sedan
 
 The trunk of the E36 sedan is your installation space for the compressor, tank, and management. Planning this layout before buying components saves headaches.
 
@@ -173,7 +173,7 @@ The trunk of the E36 sedan is your installation space for the compressor, tank, 
 
 ---
 
-## Our Choice for Projekt 36
+## Our choice for projekt 36
 
 We haven't made a final decision yet — this will be documented in the build chapters when we get to Chapter 06 (Air Ride). The current shortlist:
 

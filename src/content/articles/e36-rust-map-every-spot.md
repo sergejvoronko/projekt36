@@ -13,7 +13,7 @@ The BMW E36 has 14 primary rust hotspots. Three are structural and safety-critic
 
 ---
 
-## Why E36s Rust Where They Do
+## Why E36s rust where they do
 
 The E36 was built between 1990 and 1999. Even the youngest examples are now over 26 years old. BMW's rust protection in this era was decent by 1990s standards — factory undercoating, galvanized panels in some areas, cavity wax in some sections. But "decent by 1990s standards" means it's failing by 2026.
 
@@ -23,11 +23,11 @@ Central and Eastern European cars (like ours in Slovakia) have a mixed reputatio
 
 ---
 
-## Critical / Structural Rust (Check First)
+## Critical / structural rust (check first)
 
 These areas affect the structural integrity of the car. If rust is severe here, the car may not be safe to drive and repair costs escalate dramatically.
 
-### 1. Rear Subframe Mounting Points — Severity: 10/10
+### 1. rear subframe mounting points — severity: 10/10
 
 **Where:** Underneath the car, where the rear subframe bolts to the unibody. Four mounting points, two per side.
 
@@ -43,7 +43,7 @@ These areas affect the structural integrity of the car. If rust is severe here, 
 
 ---
 
-### 2. Sills / Rocker Panels — Severity: 9/10
+### 2. sills / rocker panels — severity: 9/10
 
 **Where:** The structural sill runs along the bottom of each side of the car, between the front and rear wheel arches. It's a box-section that forms part of the car's structural floor.
 
@@ -57,7 +57,7 @@ These areas affect the structural integrity of the car. If rust is severe here, 
 
 ---
 
-### 3. Jack Points — Severity: 8/10
+### 3. jack points — severity: 8/10
 
 **Where:** Four jack points, one at each corner of the sills, marked by a small notch in the sill flange.
 
@@ -69,11 +69,11 @@ These areas affect the structural integrity of the car. If rust is severe here, 
 
 ---
 
-## Common Rust Areas (Expect to Find These)
+## Common rust areas (expect to find these)
 
 These are found on the majority of E36s over 20 years old. They're repairable and generally not safety-critical, but ignoring them leads to expensive bodywork later.
 
-### 4. Rear Wheel Arches — Severity: 7/10
+### 4. rear wheel arches — severity: 7/10
 
 **Where:** The inner lip and lower edge of the rear wheel arch openings, both inside the trunk/wheel well and on the outer quarter panel.
 
@@ -85,7 +85,7 @@ These are found on the majority of E36s over 20 years old. They're repairable an
 
 ---
 
-### 5. Front Wheel Arches — Severity: 6/10
+### 5. front wheel arches — severity: 6/10
 
 **Where:** The inner fender liner area and the lower front fender edges. Also the area where the fender meets the A-pillar.
 
@@ -97,7 +97,7 @@ These are found on the majority of E36s over 20 years old. They're repairable an
 
 ---
 
-### 6. Battery Tray — Severity: 7/10
+### 6. battery tray — severity: 7/10
 
 **Where:** Right side of the engine bay (E36 sedan/coupe) or in the trunk (some models). The battery sits in a metal tray that is part of the inner fender structure.
 
@@ -109,7 +109,7 @@ These are found on the majority of E36s over 20 years old. They're repairable an
 
 ---
 
-### 7. Trunk Floor — Severity: 6/10
+### 7. trunk floor — severity: 6/10
 
 **Where:** The floor of the trunk, particularly around the spare wheel well, the rear panel below the tail lights, and the seams where the floor meets the wheel arches.
 
@@ -121,7 +121,7 @@ These are found on the majority of E36s over 20 years old. They're repairable an
 
 ---
 
-### 8. Spare Wheel Well — Severity: 5/10
+### 8. spare wheel well — severity: 5/10
 
 **Where:** The recessed well in the trunk floor where the spare tire sits.
 
@@ -133,7 +133,7 @@ These are found on the majority of E36s over 20 years old. They're repairable an
 
 ---
 
-### 9. Door Bottoms — Severity: 5/10
+### 9. door bottoms — severity: 5/10
 
 **Where:** The bottom edge of all four doors, particularly where the outer skin wraps around the bottom of the door frame.
 
@@ -145,35 +145,35 @@ These are found on the majority of E36s over 20 years old. They're repairable an
 
 ---
 
-## Less Common but Worth Checking
+## Less common but worth checking
 
-### 10. Windshield Frame
+### 10. windshield frame
 
 The area under the windshield rubber seal, especially the lower corners. Water wicks under the seal as the adhesive and rubber age. You won't see this without removing the windshield, but if you're doing a full restoration with a glass-out respray, inspect it carefully.
 
-### 11. Sunroof Drain Channels (If Equipped)
+### 11. sunroof drain channels (if equipped)
 
 Cars with sunroofs have four drain tubes that route water from the sunroof channel down through the A-pillars and C-pillars. These tubes crack, disconnect, or clog over time, dumping water inside the pillars and into the floor/trunk. This causes rust in areas that are extremely difficult to access. **Our build:** No sunroof. One less thing to worry about.
 
-### 12. Fuel Filler Pocket
+### 12. fuel filler pocket
 
 The recessed area around the fuel filler cap on the right rear quarter panel. Water collects in this pocket and attacks the seam where the filler neck housing meets the quarter panel. Look for bubbling around the edges of the filler door opening.
 
-### 13. Rear Shock Tower Tops
+### 13. rear shock tower tops
 
 Inside the trunk, the rear shock tower tops can develop rust where moisture collects around the mounting nuts. Pull back the trunk trim and inspect the shock tower plates and surrounding metal.
 
-### 14. Front Strut Tower Tops
+### 14. front strut tower tops
 
 Similar to the rear, the front strut towers can develop corrosion around the mounting plate area, especially where water runs down from the cowl area. This is more common on neglected cars. The strut tower metal is structural — corrosion here affects suspension geometry and safety.
 
-### 15. Firewall Seams
+### 15. firewall seams
 
 The seams where the firewall meets the floor pan and inner fender panels. Seam sealer deterioration allows water to wick into these joints. Often only visible from underneath. Check during any underside inspection.
 
 ---
 
-## E36 Rust Inspection Checklist (Summary)
+## E36 rust inspection checklist (summary)
 
 Use this as a quick reference when inspecting a car. Items marked with ⚠️ are structural/safety-critical.
 
@@ -197,7 +197,7 @@ Use this as a quick reference when inspecting a car. Items marked with ⚠️ ar
 
 ---
 
-## What Rust Means for Your Budget
+## What rust means for your budget
 
 A rough guide to repair costs in Central Europe (2026 prices, workshop labor):
 

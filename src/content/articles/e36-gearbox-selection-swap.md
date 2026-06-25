@@ -13,7 +13,7 @@ The E36 was fitted with three main manual gearbox families: the Getrag 220/240 (
 
 ---
 
-## E36 Manual Gearbox Overview
+## E36 manual gearbox overview
 
 | Gearbox | Designation | Fitted to | Ratios feel | Suitable for M50 swap |
 |---------|-------------|-----------|-------------|----------------------|
@@ -25,7 +25,7 @@ The E36 was fitted with three main manual gearbox families: the Getrag 220/240 (
 
 ---
 
-## The Getrag 220 / 240 — 4-Cylinder Boxes
+## The getrag 220 / 240 — 4-cylinder boxes
 
 These units were fitted behind the M40 and M43 four-cylinder engines. They use a **different bellhousing bolt pattern** to the six-cylinder engines and **are not compatible** with M50/M52 engine swaps without a special adapter.
 
@@ -33,7 +33,7 @@ Unless you have a very specific reason to use them, ignore these for any M50 pro
 
 ---
 
-## ZF 310 (S5D-310Z) — The Standard M50 Box
+## ZF 310 (S5D-310Z) — the standard M50 box
 
 The ZF 310 is the gearbox you'll find behind most stock M50B20 and M50B25 engines in the E36. It's a well-designed, robust unit that handles the M50's power without issue.
 
@@ -69,7 +69,7 @@ The ZF 310's 5th gear is 1:1 — essentially a direct drive for cruising. On a s
 
 ---
 
-## Getrag 420G (S6S-420G) — The Six-Speed Upgrade
+## Getrag 420g (s6s-420g) — the six-speed upgrade
 
 The Getrag 420G (sometimes referred to as the GS6-37BZ in later applications) is a six-speed unit fitted to the E36 from the M52 era onwards, and to later M50TU-engined cars in some markets. It's a significant step up in driving feel from the ZF 310.
 
@@ -109,7 +109,7 @@ The Getrag 420G was standard behind the M52B25 and M52B28 in later E36s. These a
 
 ---
 
-## Getrag S5D-320Z — The M3 Box
+## Getrag S5D-320z — the m3 box
 
 The S5D-320Z is the five-speed unit from the E36 M3 (S50B30/S52B32 engines). It has closer ratios than the ZF 310 and is built to a higher specification.
 
@@ -134,7 +134,7 @@ This is the box to choose for a highly modified M50 build (forged engine, signif
 
 ---
 
-## Prop Shaft Compatibility
+## Prop shaft compatibility
 
 The E36 prop shaft (driveshaft) is specific to the gearbox rear flange. The ZF 310, Getrag 420G, and S5D-320Z all use the **same rear output flange specification** when fitted to E36 cars, so the prop shaft from the original car should be compatible if swapping from another E36 gearbox variant.
 
@@ -145,7 +145,7 @@ The E36 prop shaft (driveshaft) is specific to the gearbox rear flange. The ZF 3
 
 ---
 
-## Gearbox Mounts
+## Gearbox mounts
 
 The gearbox mount (crossmember rubber mount) is specific to the gearbox and chassis combination. When swapping a different gearbox into an M43-spec E36:
 
@@ -155,7 +155,7 @@ The gearbox mount (crossmember rubber mount) is specific to the gearbox and chas
 
 ---
 
-## Clutch and Flywheel
+## Clutch and flywheel
 
 The M50 single-mass flywheel and clutch is a clean, simple assembly. When installing a used gearbox:
 
@@ -171,7 +171,7 @@ The M50 single-mass flywheel and clutch is a clean, simple assembly. When instal
 
 ---
 
-## Summary: Which Gearbox to Choose
+## Summary: which gearbox to choose
 
 | Scenario | Recommendation |
 |----------|----------------|

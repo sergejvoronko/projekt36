@@ -13,7 +13,7 @@ Bad grounds are behind the majority of E36 electrical faults — flickering ligh
 
 ---
 
-## Why Grounds Fail on the E36
+## Why grounds fail on the E36
 
 The E36 uses a **negative-ground** system where the battery negative terminal connects to the engine block, transmission, and the chassis at specific points. Electrical components return their current through these ground paths back to the battery.
 
@@ -43,7 +43,7 @@ The diagnostic clue is **multiple unrelated symptoms appearing together** on a c
 
 ---
 
-## Measuring Ground Quality
+## Measuring ground quality
 
 A ground point should read **less than 0.1 Ω** from the component chassis connection to the battery negative terminal. Anything above 0.2 Ω is marginal; above 0.5 Ω is failing.
 
@@ -62,9 +62,9 @@ A 0.5 V drop in a ground path means the component is running 0.5 V low on its re
 
 ---
 
-## Ground Point Reference
+## Ground point reference
 
-### G100 — Engine Block (Main)
+### G100 — engine block (main)
 
 **Location:** Left front of engine block, accessible from above  
 **Feeds:** Engine block, cylinder head earth via block  
@@ -77,7 +77,7 @@ This is the primary engine ground. The large Brown cable from the battery negati
 
 ---
 
-### G101 — Chassis to Engine (Braided Strap)
+### G101 — chassis to engine (braided strap)
 
 **Location:** Between firewall (left side) and engine block or transmission  
 **Purpose:** Carries return current for the engine when chassis ground (G200) is the reference. Also equalizes potential between engine and body.  
@@ -89,7 +89,7 @@ This strap is critical and frequently overlooked. It connects the engine block g
 
 ---
 
-### G200 — Body Main Ground (Left Footwell)
+### G200 — body main ground (left footwell)
 
 **Location:** Left footwell, under the carpet, bolt into the floor pan sill area  
 **Feeds:** Most body electronics — ZKE, instrument cluster, lighting modules, interior lighting  
@@ -103,7 +103,7 @@ The most commonly failed ground on the E36. The left footwell collects water whe
 
 ---
 
-### G201 — Body Main Ground (Right Footwell)
+### G201 — body main ground (right footwell)
 
 **Location:** Right footwell, mirror image of G200  
 **Feeds:** Right-side body electronics, HVAC, some lighting circuits  
@@ -113,7 +113,7 @@ Same failure mode as G200. Check when diagnosing right-side electrical faults.
 
 ---
 
-### G300 — Instrument Cluster / Dashboard Ground
+### G300 — instrument cluster / dashboard ground
 
 **Location:** Behind the instrument cluster, or on the A-pillar lower area  
 **Feeds:** Instrument cluster, radio, ignition switch circuit  
@@ -123,7 +123,7 @@ Failure here causes the entire instrument cluster to behave erratically. All gau
 
 ---
 
-### G400 — Rear Lighting Ground
+### G400 — rear lighting ground
 
 **Location:** In the boot/trunk, near the tail light clusters — sometimes on the C-pillar inner  
 **Feeds:** Tail lights, brake lights, reverse lights, number plate lights  
@@ -133,7 +133,7 @@ Individual rear bulbs have their own local ground (the bulb socket presses again
 
 ---
 
-### G500 — Fuel Pump Ground
+### G500 — fuel pump ground
 
 **Location:** Under the rear seat, near the fuel pump module  
 **Feeds:** Fuel pump, fuel level sender  
@@ -143,7 +143,7 @@ Failure here is subtle: the fuel pump runs but at reduced efficiency (lower volt
 
 ---
 
-### G600 — ABS Module Ground
+### G600 — ABS module ground
 
 **Location:** ABS control module, usually in the engine bay near the ABS hydraulic unit  
 **Feeds:** ABS control unit  
@@ -152,7 +152,7 @@ ABS warning lights with no detected wheel sensor faults often trace here. The AB
 
 ---
 
-## The Ground Restoration Procedure
+## The ground restoration procedure
 
 Do all ground points in a session. Doing them one by one wastes time; doing all of them takes 2–3 hours and eliminates the entire category of fault.
 
@@ -179,7 +179,7 @@ Do all ground points in a session. Doing them one by one wastes time; doing all 
 
 ---
 
-## Ground Points on Swapped Cars (M43 → M50)
+## Ground points on swapped cars (M43 → M50)
 
 The M50 engine is physically larger and positioned slightly differently in the bay. Verify:
 
@@ -192,7 +192,7 @@ A freshly swapped engine that cranks but doesn't start, or starts and runs rough
 
 ---
 
-## Quick Fault-Tracing Cheat Sheet
+## Quick fault-tracing cheat sheet
 
 | Symptom | First ground to check |
 |---|---|

@@ -17,7 +17,7 @@ hero: "ppf.webp"
 
 ---
 
-## Why PPF Matters More on a Restored Car
+## Why PPF matters more on a restored car
 
 A new car from the dealer has factory paint with modern clear coat technology — it's tough, well-bonded, and relatively easy to repair. A restored classic car has custom bodywork, fresh primer, base coat, and clear coat that represents dozens or hundreds of hours of labor and significant cost.
 
@@ -27,7 +27,7 @@ The other factor specific to project cars: you're going to drive it. This isn't 
 
 ---
 
-## What PPF Actually Is
+## What PPF actually is
 
 Paint Protection Film is a transparent thermoplastic urethane (TPU) film applied to the painted surface of a vehicle. Modern PPF is typically 6–8 mils (0.15–0.20 mm) thick, optically clear, and nearly invisible when professionally installed.
 
@@ -43,7 +43,7 @@ Key properties of modern PPF relevant to restorations:
 
 ---
 
-## The Critical Timing Question: When to Apply After Fresh Paint
+## The critical timing question: when to apply after fresh paint
 
 This is where many restoration builds get it wrong. Apply PPF too early and the film traps solvents in the paint, causing discoloration, bubbling, or adhesion failure. Wait too long and you risk stone chips before the film goes on.
 
@@ -79,7 +79,7 @@ The adhesive in the PPF traps outgassing solvents against the paint surface. Thi
 
 ---
 
-## Coverage Options and Cost
+## Coverage options and cost
 
 You don't have to PPF the entire car. Strategic partial coverage protects the highest-risk areas at a fraction of full-body cost.
 
@@ -117,7 +117,7 @@ Maximum protection but maximum cost. Justifiable for investment-grade classics o
 
 ---
 
-## DIY vs Professional Installation
+## DIY vs professional installation
 
 ### DIY is realistic for:
 - Headlights (flat surface, small area — good practice piece)
@@ -141,7 +141,7 @@ Start with the headlights. They're small, flat, and if you mess up, the worst ca
 
 ---
 
-## PPF Maintenance After Application
+## PPF maintenance after application
 
 Once applied, PPF requires minimal maintenance:
 
@@ -157,7 +157,7 @@ Quality PPF lasts 5–10 years on a daily-driven car. On a project car that sees
 
 ---
 
-## Our Plan for Projekt 36
+## Our plan for projekt 36
 
 After the dark blue respray, we'll wait 60 days for full cure, then apply Track B coverage:
 - Full front bumper

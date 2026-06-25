@@ -13,7 +13,7 @@ The LCM (Lichtsteuermodul — Light Control Module) is the brain behind every ex
 
 ---
 
-## Which E36s Have the LCM
+## Which E36s have the LCM
 
 Not all E36s have an LCM. Earlier cars used conventional relay-based lighting:
 
@@ -29,7 +29,7 @@ Schema 4 of the ETM (Exterior Lighting) shows whether your car routes lighting t
 
 ---
 
-## What the LCM Controls
+## What the LCM controls
 
 The LCM handles every exterior light output:
 
@@ -53,7 +53,7 @@ This is why INPA can tell you "left front turn signal open circuit" even before 
 
 ---
 
-## LCM Variants and Option Coding
+## LCM variants and option coding
 
 The LCM isn't a single part number — different specifications exist for different option combinations:
 
@@ -73,7 +73,7 @@ A replacement LCM must either:
 
 ---
 
-## How the LCM Monitors Bulbs
+## How the LCM monitors bulbs
 
 Each output circuit has a measured **expected current range**. For a standard halogen H7 headlight (55W at 12V = ~4.6A), the LCM expects roughly 4–5A. If it measures less than ~2A, it flags an open circuit (blown bulb). If it measures more than 7–8A, it flags a short.
 
@@ -85,9 +85,9 @@ Each output circuit has a measured **expected current range**. For a standard ha
 
 ---
 
-## Common LCM Failures
+## Common LCM failures
 
-### 1. Internal transistor failure (most common)
+### 1. internal transistor failure (most common)
 
 The LCM switches each output using high-current transistors (or MOSFETs). These fail with age and thermal stress. When one fails:
 - That output circuit stops working entirely
@@ -98,13 +98,13 @@ A failed transistor for the left headlight means only the left headlight is dead
 
 **Fix:** Replace the LCM. In rare cases, electronics specialists can reflash or replace the transistor on the PCB, but LCM units are inexpensive enough (€30–80 used) that replacement is usually more sensible.
 
-### 2. Corrosion of the connector
+### 2. corrosion of the connector
 
 The LCM sits in the engine bay and is exposed to moisture. The main connector corrodes — especially the ground pins and output pins. This causes intermittent lighting faults that come and go with temperature.
 
 **Fix:** Remove the connector, clean all pins with electrical contact cleaner, apply dielectric grease, reseat.
 
-### 3. Coding mismatch after replacement
+### 3. coding mismatch after replacement
 
 A replacement LCM from a different-spec car (different market, different options) will have different coding. The old coding doesn't transfer automatically. You must use NCS Expert to write the correct coding for your car.
 
@@ -126,7 +126,7 @@ A replacement LCM from a different-spec car (different market, different options
 6. Connect battery
 7. **Code the replacement** before testing
 
-### Coding with NCS Expert
+### Coding with ncs expert
 
 1. Connect K-DCAN cable, open NCS Expert
 2. Select vehicle: E36, select LCM from module list
@@ -142,7 +142,7 @@ A replacement LCM from a different-spec car (different market, different options
 
 ---
 
-## LCM and Aftermarket Lights
+## LCM and aftermarket lights
 
 If you're retrofitting non-standard lights (aftermarket projectors, Angel Eyes, LED upgrades), the LCM interaction changes:
 
@@ -157,7 +157,7 @@ If you're retrofitting non-standard lights (aftermarket projectors, Angel Eyes, 
 
 ---
 
-## Reading LCM Fault Codes
+## Reading LCM fault codes
 
 With INPA → LCM:
 
@@ -173,7 +173,7 @@ With INPA → LCM:
 
 ---
 
-## Quick Troubleshooting Table
+## Quick troubleshooting table
 
 | Symptom | Likely cause |
 |---|---|
