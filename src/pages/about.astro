@@ -26,13 +26,8 @@ import SubscribeBox from '../components/SubscribeBox.astro';
 
 <div class="about-page">
 
-  <!-- ═══ IMAGE SLOT 1 — full-width car photo ═══ -->
-  <!-- SUGGESTED IMAGE: wide exterior shot of the car as-found / arrival condition -->
-  <!-- dimensions: 1200×600px or wider, showing the car from the front-three-quarter -->
   <div class="about-img-slot about-img-wide">
-    <div class="img-placeholder">
-      <span class="img-placeholder-label">[ Photo — Car as found, exterior, front ¾ ]</span>
-    </div>
+    <img src="/images/about-exterior-front.webp" alt="1994 BMW E36 316i Sedan — as acquired" width="1200" height="675" loading="eager" decoding="async" />
   </div>
 
   <!-- ═══ THE CAR ═══ -->
@@ -51,12 +46,8 @@ import SubscribeBox from '../components/SubscribeBox.astro';
       body shell. The M43 is a placeholder. Everything else is the foundation.
     </p>
 
-    <!-- SUGGESTED IMAGE: engine bay photo showing the M43 in situ, before any work -->
-    <!-- dimensions: 900×600px, well-lit engine bay shot -->
     <div class="about-img-slot">
-      <div class="img-placeholder">
-        <span class="img-placeholder-label">[ Photo — Original M43 engine bay ]</span>
-      </div>
+      <img src="/images/about-exterior-face.webp" alt="BMW E36 front — angel-eye projectors and M bumper lip" width="900" height="675" loading="lazy" decoding="async" />
     </div>
 
     <div class="about-spec-table">
@@ -85,15 +76,8 @@ import SubscribeBox from '../components/SubscribeBox.astro';
       inner sills were clean. A car worth saving — but only if done properly.
     </p>
 
-    <!-- SUGGESTED IMAGE: pair of photos — rust detail on sill / rear arch close-up -->
-    <!-- dimensions: two images side by side, each ~600×400px -->
-    <div class="about-img-slot about-img-pair">
-      <div class="img-placeholder">
-        <span class="img-placeholder-label">[ Photo — Sill rust detail ]</span>
-      </div>
-      <div class="img-placeholder">
-        <span class="img-placeholder-label">[ Photo — Rear arch bubbling ]</span>
-      </div>
+    <div class="about-img-slot">
+      <img src="/images/about-exterior-sill.webp" alt="BMW E36 — sill and rear quarter as found" width="900" height="675" loading="lazy" decoding="async" />
     </div>
   </div>
 
@@ -132,13 +116,7 @@ import SubscribeBox from '../components/SubscribeBox.astro';
       </div>
     </div>
 
-    <!-- SUGGESTED IMAGE: mood/inspiration photo — a clean E36 Sedan showing the target aesthetic -->
-    <!-- dimensions: 900×500px, ideally a side-on or rear ¾ shot of a similar-spec finished car -->
-    <div class="about-img-slot">
-      <div class="img-placeholder">
-        <span class="img-placeholder-label">[ Photo — Target aesthetic reference or inspiration ]</span>
-      </div>
-    </div>
+    <!-- Target aesthetic photo pending -->
   </div>
 
   <!-- ═══ WHY DOCUMENTED ═══ -->
@@ -292,9 +270,14 @@ import SubscribeBox from '../components/SubscribeBox.astro';
     max-width: 64ch;
   }
 
-  /* Image placeholders */
+  /* Image slots */
   .about-img-slot {
     margin: 2rem 0;
+  }
+  .about-img-slot img {
+    width: 100%; height: auto;
+    display: block;
+    border: 1px solid var(--border);
   }
   .about-img-wide {
     margin: 0 0 3rem;
