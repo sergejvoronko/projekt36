@@ -6,6 +6,8 @@ import cloudflare from '@astrojs/cloudflare';
 export default defineConfig({
   site: 'https://projekt36.com',
   output: 'static',
+  trailingSlash: 'always',
+  prefetch: true,
   build: {
     inlineStylesheets: 'always',
   },

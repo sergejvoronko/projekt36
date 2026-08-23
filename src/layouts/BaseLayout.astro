@@ -14,6 +14,8 @@ const {
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
+const defaultOg = new URL('/images/projekt36-og-default.webp', Astro.site).toString();
+const ogImage   = heroImage ?? defaultOg;
 ---
 
 <!DOCTYPE html>
@@ -25,12 +27,15 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
   <meta name="description" content={description} />
   <meta name="robots" content="noindex, nofollow" />
   <link rel="canonical" href={canonical} />
-  {heroImage && <meta property="og:image" content={heroImage} />}
-  <meta property="og:title"       content={title} />
-  <meta property="og:description" content={description} />
-  <meta property="og:type"        content="website" />
-  <meta property="og:url"         content={canonical} />
-  <meta name="twitter:card"       content="summary_large_image" />
+  <meta property="og:image"        content={ogImage} />
+  <meta property="og:title"        content={title} />
+  <meta property="og:description"  content={description} />
+  <meta property="og:type"         content="website" />
+  <meta property="og:url"          content={canonical} />
+  <meta property="og:site_name"    content="projekt36" />
+  <meta property="og:locale"       content="en_GB" />
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:image"       content={ogImage} />
   <style>
     @font-face { font-family: 'Barlow'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/barlow-400.woff2') format('woff2'); }
     @font-face { font-family: 'Barlow'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/barlow-500.woff2') format('woff2'); }
@@ -85,6 +90,14 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
         <img src="/images/projekt36-logo-horizontal.svg" alt="projekt36" class="footer-logo" width="120" height="30" />
         <p class="footer-sub">BMW E36 build journal · retrofit guides · practical tools</p>
       </div>
+      <nav class="footer-guides">
+        <span class="footer-guides-label">Popular guides</span>
+        <a href="/guides/e36-m50-m52-s50-s52-engine-swap-guide/">M50/M52/S50/S52 Engine Swap</a>
+        <a href="/guides/bmw-e36-m52-double-vanos-guide/">Double VANOS Rebuild</a>
+        <a href="/guides/bmw-e36-m50-cooling-system-guide/">Cooling System Overhaul</a>
+        <a href="/guides/bmw-m50-engine-rebuild-guide/">M50 Engine Rebuild</a>
+        <a href="/guides/bmw-e36-suspension-geometry-setup-guide/">Suspension Geometry Setup</a>
+      </nav>
       <nav class="footer-nav">
         <a href="/build">Build</a>
         <a href="/guides">Guides</a>
@@ -103,6 +116,9 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
   </footer>
 
   <CookieConsent />
+  <!-- Cloudflare Web Analytics — cookieless, no consent required -->
+  <!-- Replace YOUR_TOKEN with the token from dash.cloudflare.com → Web Analytics → your site -->
+  <!-- <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "YOUR_TOKEN"}'></script> -->
 </body>
 </html>
 
@@ -232,6 +248,29 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     margin-top: 0.4rem;
     font-weight: 400;
   }
+  .footer-guides {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .footer-guides-label {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    color: var(--accent);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+  }
+  .footer-guides a {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: color 0.15s;
+    white-space: nowrap;
+  }
+  .footer-guides a:hover { color: var(--accent); }
+
   .footer-nav {
     display: flex;
     gap: 1.5rem;

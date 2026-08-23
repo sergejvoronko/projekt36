@@ -10,12 +10,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   "@type": "WebSite",
   "name": "projekt36",
   "url": "https://projekt36.com",
-  "description": "BMW E36 build journal, retrofit guides, and practical tools for E36 owners.",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://projekt36.com/guides?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
+  "description": "BMW E36 build journal, retrofit guides, and practical tools for E36 owners."
 })} slot="head" />
 
   <!-- ═══ HERO ═══ -->
@@ -28,7 +23,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="hero-overlay"></div>
     </div>
     <div class="hero-car" aria-hidden="true">
-      <img src="/images/IMG_0511 (1).webp" alt="" width="900" height="400" />
+      <img src="/images/IMG_0511 (1).webp" alt="" width="900" height="400" loading="lazy" />
     </div>
     <!-- HUD telemetry chips — upper-left area -->
     <div class="hero-hud" aria-hidden="true">
@@ -138,7 +133,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="grill-logo-bridge">
         <div class="grill-logo-line"></div>
         <div class="grill-logo-badge">
-          <img src="/images/projekt36-mark.svg" alt="projekt36" width="48" height="48" />
+          <img src="/images/projekt36-mark.svg" alt="projekt36" width="48" height="48" loading="lazy" />
         </div>
         <div class="grill-logo-line"></div>
       </div>
@@ -374,10 +369,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <a href="/shop" class="btn-primary">Visit shop →</a>
         </div>
         <div class="merch-image">
-          <img src="/images/merch-mockup.webp" alt="STATUS: PROJECT. t-shirt and mug" width="600" height="600" />
+          <img src="/images/merch-mockup.webp" alt="STATUS: PROJECT. t-shirt and mug" width="600" height="600" loading="lazy" />
           <div class="merch-products">
-            <img src="/images/merch-10mm.webp" alt="The 10mm" width="200" height="200" />
-            <img src="/images/merch-coolant.webp" alt="The Coolant System" width="200" height="200" />
+            <img src="/images/merch-10mm.webp" alt="The 10mm" width="200" height="200" loading="lazy" />
+            <img src="/images/merch-coolant.webp" alt="The Coolant System" width="200" height="200" loading="lazy" />
           </div>
         </div>
       </div>
