@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
-const articles = await getCollection('articles');
+const articles = await getCollection('articles', ({ data }) => !data.draft);
 
 const pillars = [
   { key: 'engine',    label: 'Engine',       desc: 'M50 rebuild, failure points, comparisons' },
