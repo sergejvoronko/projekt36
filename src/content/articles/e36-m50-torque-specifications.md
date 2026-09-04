@@ -11,49 +11,49 @@ hero: "torque-specs.webp"
 
 This is a reference page. Bookmark it. Every torque value for the BMW E36 with M50/M50TU engine, organized by system. All values in Nm (Newton-meters) unless noted. Where BMW specifies torque + angle, both are listed.
 
-**Important:** Always use a calibrated torque wrench. "Hand tight" is not a torque specification. Replace stretch bolts (torque-to-yield) with new bolts every time — they are designed for single use.
+**Important:** Always use a calibrated torque wrench. "Hand tight" is not a torque specification. Replace stretch bolts (torque-to-yield) with new bolts every time. They are designed for single use.
 
 ---
 
-## Engine — cylinder head
+## Engine, cylinder head
 
 | Fastener | Torque | Notes |
 |---|---|---|
-| Cylinder head bolts (M50/M50TU) | 30 Nm + 90° + 90° | **Stretch bolts — always replace.** Torque in sequence: center outward. Must be done on a COLD engine. |
+| Cylinder head bolts (M50/M50TU) | 30 Nm + 90° + 90° | **Stretch bolts, always replace.** Torque in sequence: center outward. Must be done on a COLD engine. |
 | Cylinder head bolts (alternative spec) | Step 1: 30 Nm → Step 2: +90° → Step 3: +90° | Three-step process. Do not exceed. Use BMW head bolt sequence diagram. |
 | Camshaft bearing cap bolts | 15 Nm | Tighten evenly in sequence from center outward |
-| Camshaft sprocket bolt | 10 Nm | Do not overtighten — the sprocket is aluminium |
+| Camshaft sprocket bolt | 10 Nm | Do not overtighten, the sprocket is aluminium |
 | Valve cover bolts | 10 Nm | Over-torquing cracks the valve cover or strips the threads |
 | Spark plugs | 20–30 Nm | BMW specifies 25 Nm. Use anti-seize on threads. |
 | Rocker arm shaft bolts | 20 Nm | If applicable to your head configuration |
 
 ---
 
-## Engine — block & internals
+## Engine, block & internals
 
 | Fastener | Torque | Notes |
 |---|---|---|
-| Main bearing cap bolts | 60 Nm + 60° | **Stretch bolts — always replace.** |
-| Connecting rod bolts | 38 Nm + 45° | **Stretch bolts — always replace.** Critical torque — double-check each one. |
+| Main bearing cap bolts | 60 Nm + 60° | **Stretch bolts, always replace.** |
+| Connecting rod bolts | 38 Nm + 45° | **Stretch bolts, always replace.** Critical torque, double-check each one. |
 | Crankshaft pulley bolt (harmonic balancer) | 300 Nm | Large bolt at front of crank. Requires a holding tool. |
-| Flywheel bolts | 105 Nm | **Stretch bolts — always replace.** Apply thread locker. |
-| Oil pump bolts | 10 Nm | Small bolts — easy to strip |
+| Flywheel bolts | 105 Nm | **Stretch bolts, always replace.** Apply thread locker. |
+| Oil pump bolts | 10 Nm | Small bolts, easy to strip |
 | Oil pump pickup tube bolts | 10 Nm | Verify the gasket/o-ring is seated before torquing |
-| Oil pan bolts | 10 Nm | Do not overtighten — the pan flange is thin aluminium |
+| Oil pan bolts | 10 Nm | Do not overtighten, the pan flange is thin aluminium |
 | Oil drain plug | 25 Nm | Use a new copper crush washer every time |
 | Timing chain tensioner | 50 Nm | Verify chain tension after installation |
-| Timing chain guide bolts | 10 Nm | Fragile — the guides are plastic |
-| Front timing cover bolts | 10 Nm | Multiple small bolts — use a pattern |
+| Timing chain guide bolts | 10 Nm | Fragile, the guides are plastic |
+| Front timing cover bolts | 10 Nm | Multiple small bolts, use a pattern |
 | Rear main seal housing bolts | 10 Nm | Ensure seal is properly seated before torquing |
 
 ---
 
-## Engine — intake & exhaust
+## Engine, intake & exhaust
 
 | Fastener | Torque | Notes |
 |---|---|---|
 | Intake manifold bolts | 10 Nm | Tighten in sequence from center outward |
-| Throttle body bolts | 10 Nm | Small bolts into aluminium — careful |
+| Throttle body bolts | 10 Nm | Small bolts into aluminium, careful |
 | Exhaust manifold nuts | 10–12 Nm | Use copper paste on studs. The shorter manifold goes to the rear. |
 | Exhaust manifold studs (into head) | 20 Nm | If replacing studs |
 | Downpipe to manifold nuts | 25 Nm | New copper gasket required |
@@ -61,19 +61,19 @@ This is a reference page. Bookmark it. Every torque value for the BMW E36 with M
 
 ---
 
-## Engine — cooling system
+## Engine, cooling system
 
 | Fastener | Torque | Notes |
 |---|---|---|
-| Water pump bolts | 10 Nm | Four bolts into the block — aluminium threads |
+| Water pump bolts | 10 Nm | Four bolts into the block, aluminium threads |
 | Thermostat housing bolts | 10 Nm | Two bolts, use new gasket |
-| Fan clutch nut | 40 Nm | **LEFT-HAND THREAD** — tightens counter-clockwise, loosens clockwise |
-| Radiator drain plug | Hand tight | Plastic — do not use a wrench |
-| Expansion tank bleed screw | Hand tight + 1/4 turn | Plastic — overtightening cracks it |
+| Fan clutch nut | 40 Nm | **LEFT-HAND THREAD**, tightens counter-clockwise, loosens clockwise |
+| Radiator drain plug | Hand tight | Plastic, do not use a wrench |
+| Expansion tank bleed screw | Hand tight + 1/4 turn | Plastic, overtightening cracks it |
 
 ---
 
-## Engine — ancillaries
+## Engine, ancillaries
 
 | Fastener | Torque | Notes |
 |---|---|---|
@@ -92,13 +92,13 @@ This is a reference page. Bookmark it. Every torque value for the BMW E36 with M
 
 | Fastener | Torque | Notes |
 |---|---|---|
-| Engine to transmission bolts | 60 Nm | M10 bolts — verify all are present before starting engine |
+| Engine to transmission bolts | 60 Nm | M10 bolts, verify all are present before starting engine |
 | Transmission mount to body | 25 Nm | |
 | Transmission mount to crossmember | 25 Nm | |
 | Clutch pressure plate bolts | 25 Nm | Tighten in a star pattern, evenly |
 | Driveshaft to transmission flange | 60 Nm | New bolts recommended |
 | Driveshaft center support bearing | 25 Nm | Two bolts to body |
-| Guibo (flex disc) bolts | 60 Nm | **Always use new bolts** — stretch bolts |
+| Guibo (flex disc) bolts | 60 Nm | **Always use new bolts**, stretch bolts |
 | Driveshaft to differential flange | 60 Nm | New bolts recommended |
 | Differential fill plug | 50 Nm | |
 | Differential drain plug | 30 Nm | |
@@ -108,24 +108,24 @@ This is a reference page. Bookmark it. Every torque value for the BMW E36 with M
 
 ---
 
-## Suspension — front
+## Suspension, front
 
 | Fastener | Torque | Notes |
 |---|---|---|
-| Strut top mount nut (center) | 25 Nm | Do not compress spring when loosening — use spring compressor |
+| Strut top mount nut (center) | 25 Nm | Do not compress spring when loosening, use spring compressor |
 | Strut top mount to body nuts | 25 Nm | Three nuts in the engine bay |
-| Strut to steering knuckle bolts | 80 Nm + 90° | **Stretch bolts — always replace** |
+| Strut to steering knuckle bolts | 80 Nm + 90° | **Stretch bolts, always replace** |
 | Control arm to subframe bolt (front) | 60 Nm | |
 | Control arm to subframe bolt (rear/tension) | 85 Nm | |
 | Control arm ball joint nut | 55 Nm | New cotter pin required |
 | Tie rod end nut | 40 Nm | New cotter pin required |
 | Sway bar end link nuts | 20 Nm | |
 | Sway bar bracket bolts | 25 Nm | |
-| Front subframe bolts | 100 Nm | Critical — verify torque periodically |
+| Front subframe bolts | 100 Nm | Critical, verify torque periodically |
 
 ---
 
-## Suspension — rear
+## Suspension, rear
 
 | Fastener | Torque | Notes |
 |---|---|---|
@@ -144,12 +144,12 @@ This is a reference page. Bookmark it. Every torque value for the BMW E36 with M
 | Fastener | Torque | Notes |
 |---|---|---|
 | Front caliper bracket bolts | 80 Nm | The bracket that bolts to the knuckle |
-| Front caliper guide pin bolts | 30 Nm | The sliding pins — grease with caliper pin grease |
+| Front caliper guide pin bolts | 30 Nm | The sliding pins, grease with caliper pin grease |
 | Rear caliper bracket bolts | 50 Nm | |
 | Rear caliper guide pin bolts | 25 Nm | |
-| Brake disc retaining screw | 5 Nm | Just a locating screw — doesn't need to be tight |
+| Brake disc retaining screw | 5 Nm | Just a locating screw, doesn't need to be tight |
 | Brake line banjo bolt | 15 Nm | New copper crush washers required |
-| Brake line flare fittings | 12 Nm | Do not overtighten — these strip easily |
+| Brake line flare fittings | 12 Nm | Do not overtighten, these strip easily |
 | Bleed nipple | 8–10 Nm | |
 | Brake master cylinder nuts | 25 Nm | |
 | Brake booster nuts | 20 Nm | |
@@ -173,7 +173,7 @@ This is a reference page. Bookmark it. Every torque value for the BMW E36 with M
 
 | Fastener | Torque | Notes |
 |---|---|---|
-| Seat mounting bolts | 45 Nm | Safety-critical — verify all four bolts per seat |
+| Seat mounting bolts | 45 Nm | Safety-critical, verify all four bolts per seat |
 | Seat belt anchor bolt | 45 Nm | Safety-critical |
 | Door hinge bolts | 25 Nm | |
 | Bumper mounting bolts | 20 Nm | |
@@ -199,7 +199,7 @@ For unlisted bolts, use these general guidelines based on bolt size:
 
 ---
 
-## Stretch bolts (torque-to-yield) — never reuse
+## Stretch bolts (torque-to-yield), never reuse
 
 These bolts are designed to deform slightly during torquing to achieve a precise clamping force. Reusing them risks under-clamping or bolt failure:
 
@@ -214,6 +214,6 @@ These bolts are designed to deform slightly during torquing to achieve a precise
 
 ---
 
-*This reference is part of the Projekt 36 Parts Bible. Values are for the BMW E36 with M50B25 / M50B25TU engine. Some values may differ for M52 — verify against your specific workshop manual.*
+*This reference is part of the Projekt 36 Parts Bible. Values are for the BMW E36 with M50B25 / M50B25TU engine. Some values may differ for M52, verify against your specific workshop manual.*
 
 *→ Related: [Cooling System Overhaul](/guides/e36-cooling-system-overhaul) | [Suspension Refresh](/guides/e36-suspension-refresh)*

@@ -1,5 +1,5 @@
 ---
-title: "BMW E36 ZKE — Central Body Electronics Explained"
+title: "BMW E36 ZKE, Central Body Electronics Explained"
 description: "What the ZKE/GM module does, how to diagnose central locking and window faults, what coding does, and what happens when the module fails."
 pillar: reference
 keywords: "bmw e36 zke, e36 gm module, e36 central locking fault, e36 comfort module, bmw zke coding"
@@ -9,7 +9,7 @@ hero: "zke.webp"
 
 ## TL;DR
 
-The ZKE (Zentrale Karosserie-Elektronik — Central Body Electronics) module, also called the GM (Grundmodul — Basic Module), manages central locking, windows, and interior lighting convenience functions on the E36. When the central locking misbehaves, the windows don't respond to the remote, or the interior lights do unexpected things — the ZKE is usually involved. Diagnosis starts with INPA, not guesswork.
+The ZKE (Zentrale Karosserie-Elektronik, Central Body Electronics) module, also called the GM (Grundmodul, Basic Module), manages central locking, windows, and interior lighting convenience functions on the E36. When the central locking misbehaves, the windows don't respond to the remote, or the interior lights do unexpected things, the ZKE is usually involved. Diagnosis starts with INPA, not guesswork.
 
 ---
 
@@ -17,13 +17,13 @@ The ZKE (Zentrale Karosserie-Elektronik — Central Body Electronics) module, al
 
 The ZKE handles all body convenience functions:
 
-- **Central locking** — door lock/unlock from key, interior button, and remote
-- **Electric windows** — one-touch open/close (comfort function)
-- **Interior lighting** — door-triggered illumination and fade-out delay
-- **Boot/bonnet** — lock actuation signal routing
-- **Remote control (FZV)** — radio key fob signal reception and decoding
-- **Global close** — hold-lock on remote to close all windows simultaneously (where fitted)
-- **Anti-theft signalling** — activation and deactivation of the alarm system (where fitted)
+- **Central locking**: door lock/unlock from key, interior button, and remote
+- **Electric windows**: one-touch open/close (comfort function)
+- **Interior lighting**: door-triggered illumination and fade-out delay
+- **Boot/bonnet**: lock actuation signal routing
+- **Remote control (FZV)**: radio key fob signal reception and decoding
+- **Global close**: hold-lock on remote to close all windows simultaneously (where fitted)
+- **Anti-theft signalling**: activation and deactivation of the alarm system (where fitted)
 
 The ZKE does NOT control the exterior lights (that's the LCM) or the engine management (that's the DME + EWS). It is a comfort/body module only.
 
@@ -45,9 +45,9 @@ Check the ETM (Body Electrical → ZKE) for the exact location for your build da
 
 The ZKE receives inputs from:
 
-1. **Remote key fob (FZV)** — radio signal via a dedicated receiver aerial
-2. **Key switch in door lock** — a switch in the door barrel detects lock/unlock rotation
-3. **Interior lock button** — pushbutton in the door card
+1. **Remote key fob (FZV)**: radio signal via a dedicated receiver aerial
+2. **Key switch in door lock**: a switch in the door barrel detects lock/unlock rotation
+3. **Interior lock button**: pushbutton in the door card
 
 On receiving a valid unlock signal, the ZKE activates the door lock actuators (motors or solenoids in each door). On the E36, most actuators are cable-driven from a small reversible motor in each door.
 
@@ -61,7 +61,7 @@ If your car unlocks only the driver door but should unlock all doors (or vice ve
 
 ---
 
-## Remote key (fzv) — how it works
+## Remote key (fzv), how it works
 
 The E36 uses a rolling-code infrared or RF remote depending on year and market:
 
@@ -73,7 +73,7 @@ The E36 uses a rolling-code infrared or RF remote depending on year and market:
 The remote and ZKE share a synchronized rolling code counter. Each button press advances the counter. If the remote is pressed many times out of range (e.g., battery in pocket), the counter can fall out of sync with the ZKE.
 
 **Re-synchronisation:**
-With the car locked, stand within range and press the lock button 3–5 times rapidly. The ZKE accepts a window of future counter values and will re-sync if the remote is within that window. If that doesn't work, a full re-learn procedure is needed (requires INPA or the physical coding procedure — ignition cycling sequence described in the ETM).
+With the car locked, stand within range and press the lock button 3–5 times rapidly. The ZKE accepts a window of future counter values and will re-sync if the remote is within that window. If that doesn't work, a full re-learn procedure is needed (requires INPA or the physical coding procedure, ignition cycling sequence described in the ETM).
 
 ---
 
@@ -103,7 +103,7 @@ If fuse is intact: measure voltage at the ZKE supply pin with ignition on. The Z
 
 The most common cause is a flat remote battery (CR2032 or similar). Replace first.
 
-If battery is fresh: perform the re-synchronisation procedure above. If the remote still doesn't work, test whether the ZKE responds to the physical door key switch — if it does, the ZKE is fine and the problem is in the remote receiver or the remote itself.
+If battery is fresh: perform the re-synchronisation procedure above. If the remote still doesn't work, test whether the ZKE responds to the physical door key switch, if it does, the ZKE is fine and the problem is in the remote receiver or the remote itself.
 
 **Remote receiver test:** The IR or RF receiver is a small module, often near the mirror base or B-pillar. Measure its supply voltage and ground. Some receivers have a signal test via INPA.
 
@@ -119,16 +119,16 @@ A common cause on high-mileage E36s: the door barrel key switch (the microswitch
 
 Another cause: water ingress into the door lock actuator causing a short that pulses the lock signal.
 
-### 5. interior light doesn't fade — stays on or won't illuminate
+### 5. interior light doesn't fade, stays on or won't illuminate
 
-The ZKE controls the lighting delay. A stuck door switch (door pin switch stuck in "open" position) keeps the ZKE in illuminated state. Check all four door switches — a jammed switch is a common E36 issue and is also a parasitic drain source.
+The ZKE controls the lighting delay. A stuck door switch (door pin switch stuck in "open" position) keeps the ZKE in illuminated state. Check all four door switches, a jammed switch is a common E36 issue and is also a parasitic drain source.
 
 ---
 
 ## Coding the ZKE
 
 The ZKE stores coding data that determines its behaviour. Default coding differs by:
-- Market (US/Europe — selective unlock vs all-unlock)
+- Market (US/Europe, selective unlock vs all-unlock)
 - Body style (coupe, saloon, touring, convertible)
 - Option fitment (alarm, sunroof, heated seats signal routing)
 
@@ -155,7 +155,7 @@ After replacing a ZKE, the new unit must be coded to match your car's options. U
 
 INPA → Body → ZKE (or GM):
 
-**Status screen:** Shows real-time input states — which door switches are active, which lock outputs are on, remote receiver state. Useful for finding stuck switches without dismantling doors.
+**Status screen:** Shows real-time input states, which door switches are active, which lock outputs are on, remote receiver state. Useful for finding stuck switches without dismantling doors.
 
 **Fault codes:** The ZKE stores faults for:
 - Individual actuator open circuits or shorts

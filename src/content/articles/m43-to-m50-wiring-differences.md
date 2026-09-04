@@ -1,5 +1,5 @@
 ---
-title: "M43 to M50 Swap — Wiring Differences and What to Reuse"
+title: "M43 to M50 Swap, Wiring Differences and What to Reuse"
 description: "Electrical differences between the M43 and M50 for an E36 swap: loom strategy, EWS options, and sensor compatibility."
 pillar: swap
 keywords: "m43 m50 swap wiring, e36 engine swap electrics, m50 wiring harness, m43 m50 ecu wiring"
@@ -30,13 +30,13 @@ The E36 body wiring harness (cabin, lights, instruments, ABS) is largely the sam
 | Engine speed sensor | 60-2 reluctor, same DME logic | 60-2 reluctor, same DME logic |
 | Knock sensors | 1 | 2 (M50) or 2 (M50TU) |
 
-The key takeaway: the engine management systems are **not interchangeable** — you cannot run M50 sensors with M43 DME or vice versa. The M50's Motronic has different sensor inputs, different calibration, and different EWS communication requirements.
+The key takeaway: the engine management systems are **not interchangeable**, you cannot run M50 sensors with M43 DME or vice versa. The M50's Motronic has different sensor inputs, different calibration, and different EWS communication requirements.
 
 ---
 
 ## Strategy: use the M50 engine loom
 
-The cleanest swap approach — and the one that gives the fewest problems — is to use the **complete M50 engine loom** that came with the donor engine. This harness was designed for the M50 DME and has the correct connector types, pinouts, and wire gauges for all M50 sensors.
+The cleanest swap approach, and the one that gives the fewest problems, is to use the **complete M50 engine loom** that came with the donor engine. This harness was designed for the M50 DME and has the correct connector types, pinouts, and wire gauges for all M50 sensors.
 
 The M50 engine loom connects to the car's body wiring at a defined set of junction points, primarily:
 
@@ -80,15 +80,15 @@ Both M43 and M50 use a 2-pin NTC (negative temperature coefficient) coolant sens
 
 ### Intake air temperature
 
-The M43 has its intake air temperature sensor built into the airflow meter. The M50 has a **separate intake air temperature sensor** on the intake manifold. The M50 loom will have a connector for this sensor — it must be present and connected.
+The M43 has its intake air temperature sensor built into the airflow meter. The M50 has a **separate intake air temperature sensor** on the intake manifold. The M50 loom will have a connector for this sensor. It must be present and connected.
 
 ### Knock sensors
 
-The M43 has one knock sensor; the M50 has two. These thread into the block. Both connectors must be used — the M50 DME monitors knock individually per bank. Running with one knock sensor disconnected causes the DME to pull ignition timing aggressively on the assumption knock is occurring.
+The M43 has one knock sensor; the M50 has two. These thread into the block. Both connectors must be used, the M50 DME monitors knock individually per bank. Running with one knock sensor disconnected causes the DME to pull ignition timing aggressively on the assumption knock is occurring.
 
 ### Throttle position sensor
 
-Both use a rotary potentiometer. The M50 TPS is on the throttle body and the M50 loom has the correct connector. **Do not swap TPS from M43 body wiring** — the M50 DME has specific calibration for the M50 TPS voltage range.
+Both use a rotary potentiometer. The M50 TPS is on the throttle body and the M50 loom has the correct connector. **Do not swap TPS from M43 body wiring**, the M50 DME has specific calibration for the M50 TPS voltage range.
 
 ### Oxygen sensor
 
@@ -96,15 +96,15 @@ Both use a rotary potentiometer. The M50 TPS is on the throttle body and the M50
 **M50TU:** Same, or a second post-cat sensor if emissions-equipped  
 **M43:** 3-wire heated oxygen sensor
 
-The connector pinout is the same (Bosch standard). If using an M50 into an M43-spec E36 without a catalyst, cap the post-cat sensor port (if present) or connect a sensor — the DME uses its signal to monitor converter efficiency.
+The connector pinout is the same (Bosch standard). If using an M50 into an M43-spec E36 without a catalyst, cap the post-cat sensor port (if present) or connect a sensor, the DME uses its signal to monitor converter efficiency.
 
 ### Airflow meter / MAF
 
-The M50 uses a **hot-film MAF sensor** (Siemens/Continental type). This is a critical component — incorrect airflow reading causes major fuelling problems. Always use the airflow meter that came with the M50 loom, and ensure the MAF's connector is from the M50 loom (correct pinout). Generic replacement MAFs must be specification-correct.
+The M50 uses a **hot-film MAF sensor** (Siemens/Continental type). This is a critical component, incorrect airflow reading causes major fuelling problems. Always use the airflow meter that came with the M50 loom, and ensure the MAF's connector is from the M50 loom (correct pinout). Generic replacement MAFs must be specification-correct.
 
 ---
 
-## EWS — plan this before you start
+## EWS, plan this before you start
 
 EWS causes more post-swap no-starts than any other single issue. Read the dedicated EWS guide for full detail; here's the swap-specific summary:
 
@@ -121,7 +121,7 @@ Take the EWS module, M50 DME, and all ignition keys from the donor car. They are
 
 ### Option b: recode EWS to new DME
 
-Keep your original E36 EWS and your existing keys. Have a specialist with INPA/WinKFP sync the EWS to the M50 DME's ISN (Individual Serial Number). The M50 DME's ISN is read-only from the DME itself — you don't need any information from the donor car.
+Keep your original E36 EWS and your existing keys. Have a specialist with INPA/WinKFP sync the EWS to the M50 DME's ISN (Individual Serial Number). The M50 DME's ISN is read-only from the DME itself, you don't need any information from the donor car.
 
 **Pros:** Your existing keys continue to work, your VIN is retained in the EWS  
 **Cons:** Requires professional recoding (€50–150 at a competent BMW specialist)
@@ -135,9 +135,9 @@ Flash the M50 DME with EWS-deleted software. The immobilizer check is removed en
 
 ### What happens if you ignore EWS
 
-The M50 will crank perfectly. All sensors will show correct values in INPA. The DME receives power, the ignition fires the injectors, everything appears ready — but the fuel injectors receive no pulse. The DME is locked by EWS and won't inject fuel. This is the classic completed-swap symptom: cranks well, smells of fuel briefly, never fires.
+The M50 will crank perfectly. All sensors will show correct values in INPA. The DME receives power, the ignition fires the injectors, everything appears ready, but the fuel injectors receive no pulse. The DME is locked by EWS and won't inject fuel. This is the classic completed-swap symptom: cranks well, smells of fuel briefly, never fires.
 
-**Do not spend time chasing this with sensor testing or compression tests.** If the swap is electrically complete and the engine cranks but won't fire, EWS is the first thing to verify — takes 5 minutes with INPA.
+**Do not spend time chasing this with sensor testing or compression tests.** If the swap is electrically complete and the engine cranks but won't fire, EWS is the first thing to verify, takes 5 minutes with INPA.
 
 ---
 
@@ -147,7 +147,7 @@ The M50 runs hotter under load than the M43 (more displacement, more heat). The 
 
 - The M50 DME activates the cooling fan via the same relay circuit as the M43, but the fan switching thresholds differ
 - If using the M50 DME and M50 loom, the fan activation logic is already calibrated correctly
-- Verify that the high-speed fan relay (full-speed for coolant temp above ~105°C) is functional — the M50 needs it
+- Verify that the high-speed fan relay (full-speed for coolant temp above ~105°C) is functional, the M50 needs it
 
 ---
 
@@ -155,7 +155,7 @@ The M50 runs hotter under load than the M43 (more displacement, more heat). The 
 
 After completing the electrical connections:
 
-- [ ] EWS synchronized to DME (or deleted) — confirmed with INPA
+- [ ] EWS synchronized to DME (or deleted): confirmed with INPA
 - [ ] Both knock sensors connected
 - [ ] MAF sensor connected and from M50 loom
 - [ ] All injector connectors seated (6 injectors, all 6 connected)

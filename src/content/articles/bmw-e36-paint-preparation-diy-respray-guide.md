@@ -30,8 +30,8 @@ Before you touch a single piece of sandpaper, you need to strip the car and see 
 *   Lights (headlights, indicators, side markers, tail lights)
 *   Trim (side mouldings, window trim, kidney grilles, badges)
 *   Seals (door, window, boot)
-*   Door handles and mirrors — essential for clean door jambs
-*   Glass (recommended) — removing the windscreen and rear glass is the only way to properly address rust in the window channels. Big step; decide if it's right for your project.
+*   Door handles and mirrors, essential for clean door jambs
+*   Glass (recommended): removing the windscreen and rear glass is the only way to properly address rust in the window channels. Big step; decide if it's right for your project.
 
 Expect to break clips. The plastic on a 25-year-old car is brittle. Stock up on common clips beforehand. The side moulding clips are notoriously fragile.
 
@@ -67,7 +67,7 @@ Use a quality panel wipe/silicone remover (e.g., Mipa Silikonentferner, ~€20 f
 
 This is where E36 restorations are made or broken. **Do not simply grind the rust and fill it with body filler.** This is a temporary fix that guarantees the rust will return within a year. The only correct way to repair rust is to cut it out completely.
 
-1.  **Cut Back to Clean Metal:** Use a cutting disc on an angle grinder to cut out the affected area. Be aggressive — rust spreads further than you can see. Cut until you are at least an inch into clean, shiny, unpitted metal on all sides.
+1.  **Cut Back to Clean Metal:** Use a cutting disc on an angle grinder to cut out the affected area. Be aggressive, rust spreads further than you can see. Cut until you are at least an inch into clean, shiny, unpitted metal on all sides.
 2.  **Fabricate or Replace:** You have two options:
     *   **Fabricate a Patch:** If you're skilled with metal shaping, you can form a new patch panel from fresh sheet steel (typically 1.0mm / 19-gauge).
     *   **Use a Repair Panel:** For common areas like the rear arches, aftermarket repair panels are a lifesaver. They provide the correct curvature and save hours of fabrication.
@@ -118,4 +118,4 @@ The car is now technically ready, but the final clean is paramount.
 
 ## What's next?
 
-The shell is rust-free, straight, and sealed. Hand it to a painter or roll it into your own booth. The prep work is what lasts — everything from here is just colour on top of your foundation.
+The shell is rust-free, straight, and sealed. Hand it to a painter or roll it into your own booth. The prep work is what lasts, everything from here is just colour on top of your foundation.

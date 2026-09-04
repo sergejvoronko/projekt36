@@ -9,7 +9,7 @@ hero: "etm.webp"
 
 ## TL;DR
 
-The BMW ETM (Electrical Troubleshooting Manual) is the complete wiring reference for the E36. Most people open it, see a tangle of lines and abbreviations, and close it immediately. This guide teaches you to navigate it systematically — find any component, trace any circuit, understand what every abbreviation means, and diagnose a fault from the manual alone.
+The BMW ETM (Electrical Troubleshooting Manual) is the complete wiring reference for the E36. Most people open it, see a tangle of lines and abbreviations, and close it immediately. This guide teaches you to navigate it systematically, find any component, trace any circuit, understand what every abbreviation means, and diagnose a fault from the manual alone.
 
 ---
 
@@ -35,7 +35,7 @@ The numbering varies slightly between model years (318i vs 325i, pre- vs post-fa
 
 ---
 
-## The header box — read this first
+## The header box, read this first
 
 Every schema page starts with a header box in the top left. This is the key to the whole page:
 
@@ -58,15 +58,15 @@ The colour legend lists the abbreviation codes used on every wire in that schema
 
 Wire codes on the diagram use these abbreviations combined with a gauge number and sometimes a tracer colour. For example:
 
-- **0.35 Bl/Rt** — 0.35 mm² wire, Blue with Red tracer
-- **1.5 Br** — 1.5 mm² wire, solid Brown
-- **6.0 Rt/Ws** — 6.0 mm² wire, Red with White tracer
+- **0.35 Bl/Rt**: 0.35 mm² wire, Blue with Red tracer
+- **1.5 Br**: 1.5 mm² wire, solid Brown
+- **6.0 Rt/Ws**: 6.0 mm² wire, Red with White tracer
 
 The number before the colour is the cross-sectional area in mm². Larger = more current capacity. Ground wires are almost always Brown (Br). Battery positive mains are almost always Red (Rt).
 
 ### Diagram symbols
 
-The symbols list identifies the numbered components shown in the schema. Each component has a number (e.g., "7 — ABS / traction control module") that appears in a dashed rectangle on the diagram. When you see a dashed box with a number, look it up in the header symbols list to know what it represents.
+The symbols list identifies the numbered components shown in the schema. Each component has a number (e.g., "7, ABS / traction control module") that appears in a dashed rectangle on the diagram. When you see a dashed box with a number, look it up in the header symbols list to know what it represents.
 
 ---
 
@@ -77,16 +77,16 @@ Every circuit in the ETM runs from **battery positive** at the top of the page, 
 ### Power distribution
 
 Power enters the diagram at the top. You'll see:
-- **Thick red lines** — battery positive, unfused (before fuse box)
-- **Kl. 30** — permanent battery positive (terminal 30, always live)
-- **Kl. 15** — ignition-switched positive (only live with ignition on)
-- **Kl. 58** — parking/tail light feed
+- **Thick red lines**: battery positive, unfused (before fuse box)
+- **Kl. 30**: permanent battery positive (terminal 30, always live)
+- **Kl. 15**: ignition-switched positive (only live with ignition on)
+- **Kl. 58**: parking/tail light feed
 
 These terminal designations (Kl. = Klemme = terminal) are DIN standards used across all European vehicles of this era.
 
 ### Ground paths
 
-Grounds (Br wire, usually terminating at a chassis ground point) run along the bottom of the diagram. E36 has multiple ground points — G100, G101, G201, etc. — documented in the ground distribution section. A bad ground is one of the most common causes of electrical faults. More on this in the dedicated ground distribution guide.
+Grounds (Br wire, usually terminating at a chassis ground point) run along the bottom of the diagram. E36 has multiple ground points, G100, G101, G201, etc., documented in the ground distribution section. A bad ground is one of the most common causes of electrical faults. More on this in the dedicated ground distribution guide.
 
 ### Connectors and pin numbers
 
@@ -98,25 +98,25 @@ The connector identifier lets you find the physical connector in the car using t
 
 ---
 
-## Following a circuit — step by step
+## Following a circuit, step by step
 
 Let's trace the brake light circuit as an example.
 
 **Goal:** Understand why the left rear brake light doesn't work but the right does.
 
-1. **Find the relevant schema** — brake lights are in Schema 4 (Exterior Lighting).
+1. **Find the relevant schema**: brake lights are in Schema 4 (Exterior Lighting).
 
-2. **Locate the component** — look in the Diagram Symbols list for "brake light" or "tail light." Find its component number. Locate the dashed box with that number on the diagram.
+2. **Locate the component**: look in the Diagram Symbols list for "brake light" or "tail light." Find its component number. Locate the dashed box with that number on the diagram.
 
-3. **Trace back to fuse** — follow the wire from the brake light bulb upward through the circuit. You'll pass through connectors and eventually reach a fuse. Note the fuse number.
+3. **Trace back to fuse**: follow the wire from the brake light bulb upward through the circuit. You'll pass through connectors and eventually reach a fuse. Note the fuse number.
 
-4. **Check fuse assignment** — Schema 1 (Power Distribution) shows what each fuse protects. Confirm the fuse number matches the brake circuit.
+4. **Check fuse assignment**: Schema 1 (Power Distribution) shows what each fuse protects. Confirm the fuse number matches the brake circuit.
 
-5. **Find the branch point** — the left and right brake lights are wired in parallel. Find where the circuit splits. Everything before the split is common to both lights; everything after is individual.
+5. **Find the branch point**: the left and right brake lights are wired in parallel. Find where the circuit splits. Everything before the split is common to both lights; everything after is individual.
 
-6. **Check the connectors between split and fault** — the fault is isolated to the left side, so check every connector between the branch point and the left bulb. Each connector symbol in the diagram is a potential fault point.
+6. **Check the connectors between split and fault**: the fault is isolated to the left side, so check every connector between the branch point and the left bulb. Each connector symbol in the diagram is a potential fault point.
 
-7. **Verify the ground** — trace the ground wire from the left bulb downward to the ground point. A corroded ground causes exactly this symptom (one side works, other doesn't) when they share a circuit but have individual ground paths.
+7. **Verify the ground**: trace the ground wire from the left bulb downward to the ground point. A corroded ground causes exactly this symptom (one side works, other doesn't) when they share a circuit but have individual ground paths.
 
 ---
 
@@ -128,7 +128,7 @@ Components often appear on multiple schemas. When you see:
 
 …it means that component's full circuit detail is shown on another schema. This is a cross-reference. The current schema only shows the wires relevant to its own system; the full pinout of the component is on the referenced schema.
 
-This matters when you're chasing an intermittent fault that involves multiple systems — for example, a speed sensor that feeds both ABS (Schema 7) and the instrument cluster (Schema 5).
+This matters when you're chasing an intermittent fault that involves multiple systems, for example, a speed sensor that feeds both ABS (Schema 7) and the instrument cluster (Schema 5).
 
 ---
 
@@ -177,6 +177,6 @@ When you find a burnt wire, the gauge tells you if the original fuse rating was 
 
 **The connector is usually the fault.** In a 30-year-old car, corroded or backed-out connector pins cause 80% of electrical faults. Once you trace a circuit, physically clean and reseat every connector in that path before replacing components.
 
-**Ground points are suspects.** Brown wires going to chassis ground points (G100, G101, etc.) corrode. A bad ground causes bizarre symptoms — a light on one circuit affecting another, sensors reading wrong, modules behaving erratically. The ground distribution guide lists every E36 ground point with its chassis location.
+**Ground points are suspects.** Brown wires going to chassis ground points (G100, G101, etc.) corrode. A bad ground causes bizarre symptoms, a light on one circuit affecting another, sensors reading wrong, modules behaving erratically. The ground distribution guide lists every E36 ground point with its chassis location.
 
 **Use the ETM alongside live diagnostics.** INPA fault codes tell you *what* failed; the ETM tells you *where* and *why*. Use both together.

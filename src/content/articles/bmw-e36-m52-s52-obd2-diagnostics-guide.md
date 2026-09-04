@@ -113,4 +113,4 @@ Let's apply this knowledge to common, frustrating E36 issues.
 
 ## What's Next
 
-Effective diagnostics are about using the right tools to gather data and knowing how to interpret it. Moving beyond a generic code reader to a setup like INPA is the single most valuable upgrade for any serious E36 DIYer. It transforms troubleshooting from an expensive guessing game into a logical process. Once you're comfortable reading codes and live data, the next step is exploring adaptations—resetting fuel trims after a repair, clearing EWS alignment, and even basic coding—unlocking the full potential of your car's electronic systems.
+Effective diagnostics are about using the right tools to gather data and knowing how to interpret it. Moving beyond a generic code reader to a setup like INPA is the single most valuable upgrade for any serious E36 DIYer. It transforms troubleshooting from an expensive guessing game into a logical process. Once you're comfortable reading codes and live data, the next step is exploring adaptations, resetting fuel trims after a repair, clearing EWS alignment, and even basic coding, unlocking the full potential of your car's electronic systems.

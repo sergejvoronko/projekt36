@@ -72,7 +72,7 @@ The OEM hinge bracket is made of thin, stamped metal that fatigues and cracks ov
 
 1.  **Identify the Failure:** Inspect the inner and outer hinge mechanisms where the backrest mounts to the base. Look for cracked metal brackets or gears with missing teeth. The failure is almost always on the inboard hinge.
 2.  **Drill Out Rivets:** The original gear and bracket assembly is often riveted to the frame. You will need to drill out these rivets. Start with a small pilot bit and step up until the rivet head is gone. Use a punch to knock out the remainder.
-3.  **Bolt on the New Mechanism:** The aftermarket kits are designed as direct bolt-on replacements. They use high-strength bolts and nuts in place of the weak factory rivets. The new bracket is typically CNC-machined from billet aluminum or thick-gauge steel—a massive upgrade in strength.
+3.  **Bolt on the New Mechanism:** The aftermarket kits are designed as direct bolt-on replacements. They use high-strength bolts and nuts in place of the weak factory rivets. The new bracket is typically CNC-machined from billet aluminum or thick-gauge steel, a massive upgrade in strength.
 4.  **Test and Lubricate:** Assemble the new mechanism, ensuring the gears mesh correctly. Apply a small amount of white lithium grease to the gear teeth for smooth, long-term operation before reinstalling the backrest.
 
 While the frame is bare, check for any cracked welds or severe rust. Wire brush any surface rust and apply a coat of rust-inhibiting paint like POR-15 or similar chassis paint.

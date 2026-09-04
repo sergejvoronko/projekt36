@@ -113,11 +113,11 @@ This is where the magic happens. Take the VANOS unit to a clean workbench.
 
 ## Beyond the repair: performance tuning
 
-With a fully functional VANOS, your M52TU is now operating as it should — and is ready for tuning. The increased control over cam timing provides significant headroom for a skilled tuner to optimize the powerband.
+With a fully functional VANOS, your M52TU is now operating as it should, and is ready for tuning. The increased control over cam timing provides significant headroom for a skilled tuner to optimize the powerband.
 
 *   **ECU Remap:** A custom tune for the MS42/MS43 DME can adjust VANOS maps, fuel, and ignition timing to take full advantage of the restored system. This can smooth out the power curve, improve throttle response, and add a noticeable 10-15 horsepower, especially when combined with other modifications like a cold air intake or M54B30 intake manifold.
 *   **M54B30 Camshafts:** For those seeking more power, installing camshafts from the more powerful M54B30 is a popular upgrade. A healthy double VANOS is absolutely essential to get the most out of these more aggressive cams, as it allows the DME to maintain good low-end drivability while providing significant gains in the mid-range and top end.
 
 ## What's next?
 
-Before you drive it, do an oil change. The new seals need clean oil to bed in, and the VANOS unit depends entirely on hydraulic pressure — dirty oil is not what you want in there now. Use a quality European-spec 5W-40. After that, you'll notice the difference the moment you pull out of the driveway.
+Before you drive it, do an oil change. The new seals need clean oil to bed in, and the VANOS unit depends entirely on hydraulic pressure, dirty oil is not what you want in there now. Use a quality European-spec 5W-40. After that, you'll notice the difference the moment you pull out of the driveway.

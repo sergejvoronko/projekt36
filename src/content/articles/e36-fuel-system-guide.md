@@ -1,5 +1,5 @@
 ---
-title: "BMW E36 Fuel System — Pump, Filter, Pressure Testing, and Injectors"
+title: "BMW E36 Fuel System, Pump, Filter, Pressure Testing, and Injectors"
 description: "BMW E36 fuel system: testing the pump, replacing the filter, pressure testing, and diagnosing injector faults."
 pillar: reference
 keywords: "bmw e36 fuel pump, e36 fuel pressure, e36 fuel filter, e36 injectors, e36 fuel system diagnosis"
@@ -9,7 +9,7 @@ hero: "fuel-system.webp"
 
 ## TL;DR
 
-The E36 fuel system is straightforward: a submerged in-tank pump, a spin-on filter, a fuel pressure regulator on the rail, and six (or four) injectors. Common failures are the pump failing with age/low fuel habits, the filter blocking, or injectors becoming dirty and affecting idle. Diagnosis starts with a fuel pressure test — a €15 adapter and a gauge tell you most of what you need to know in 10 minutes.
+The E36 fuel system is straightforward: a submerged in-tank pump, a spin-on filter, a fuel pressure regulator on the rail, and six (or four) injectors. Common failures are the pump failing with age/low fuel habits, the filter blocking, or injectors becoming dirty and affecting idle. Diagnosis starts with a fuel pressure test, a €15 adapter and a gauge tell you most of what you need to know in 10 minutes.
 
 ---
 
@@ -17,12 +17,12 @@ The E36 fuel system is straightforward: a submerged in-tank pump, a spin-on filt
 
 ### Major components
 
-1. **In-tank fuel pump** — submerged pump in the fuel tank, driven by the DME via the fuel pump relay (R2). Produces pressure continuously while running.
-2. **Fuel filter** — spin-on filter in the engine bay, high-pressure side, between tank and fuel rail
-3. **Fuel rail** — distributes fuel at constant pressure to all injectors
-4. **Fuel pressure regulator** — maintains a fixed differential pressure across the injectors regardless of manifold vacuum; returns excess fuel to the tank
-5. **Injectors** — solenoid-actuated nozzles that spray a metered pulse of fuel into the intake port on command from the DME
-6. **Return line** — carries excess fuel from the regulator back to the tank
+1. **In-tank fuel pump**: submerged pump in the fuel tank, driven by the DME via the fuel pump relay (R2). Produces pressure continuously while running.
+2. **Fuel filter**: spin-on filter in the engine bay, high-pressure side, between tank and fuel rail
+3. **Fuel rail**: distributes fuel at constant pressure to all injectors
+4. **Fuel pressure regulator**: maintains a fixed differential pressure across the injectors regardless of manifold vacuum; returns excess fuel to the tank
+5. **Injectors**: solenoid-actuated nozzles that spray a metered pulse of fuel into the intake port on command from the DME
+6. **Return line**: carries excess fuel from the regulator back to the tank
 
 ### Fuel pressure (M50TU)
 
@@ -34,7 +34,7 @@ The E36 fuel system is straightforward: a submerged in-tank pump, a spin-on filt
 
 The regulator is vacuum-referenced: manifold vacuum at idle pulls the regulator diaphragm open slightly, reducing rail pressure to ~2.5 bar. At full throttle (low vacuum), pressure rises to ~3.0 bar.
 
-**Note:** M43 and M52 engines use similar but not identical pressures — always verify against the specific engine's service data.
+**Note:** M43 and M52 engines use similar but not identical pressures, always verify against the specific engine's service data.
 
 ---
 
@@ -51,7 +51,7 @@ Remove the cover plate screws and lift the cover to reveal the pump/sender assem
 ### Testing the pump
 
 **Step 1: Confirm pump priming**
-Turn ignition on without starting. Listen for a 2-second hum from the rear of the car — this is the pump priming the fuel rail. If no priming hum:
+Turn ignition on without starting. Listen for a 2-second hum from the rear of the car. This is the pump priming the fuel rail. If no priming hum:
 - Check fuse F27 (fuel pump)
 - Check the fuel pump relay R2 (activates pump for initial prime)
 - Measure voltage at the pump connector under the boot access cover with ignition on
@@ -78,16 +78,16 @@ Low volume with adequate voltage at the pump = worn pump.
 
 ### Replacement
 
-The pump unit is a combined assembly — pump module, float sender (fuel gauge), and filter basket. The whole assembly pulls out as a unit.
+The pump unit is a combined assembly, pump module, float sender (fuel gauge), and filter basket. The whole assembly pulls out as a unit.
 
 **Critical notes:**
-- Clean the area around the flange before removing — any grit that falls into the tank causes issues
-- The float arm position may need to match the tank geometry — compare old and new assembly
+- Clean the area around the flange before removing, any grit that falls into the tank causes issues
+- The float arm position may need to match the tank geometry, compare old and new assembly
 - Moisten the new O-ring before fitting to prevent tearing
 - Turn the assembly to the correct orientation before tightening the locking ring
 - After installation, turn ignition on/off several times to prime the system, then start
 
-**Recommended brands:** Bosch (OEM supplier), VDO/Siemens, Pierburg. Avoid low-cost unknown-brand pumps on a 30-year-old car — the pump access job takes 30 minutes, so fit quality parts.
+**Recommended brands:** Bosch (OEM supplier), VDO/Siemens, Pierburg. Avoid low-cost unknown-brand pumps on a 30-year-old car, the pump access job takes 30 minutes, so fit quality parts.
 
 ---
 
@@ -103,15 +103,15 @@ BMW's official interval for the E36 fuel filter is every **2 years or 30,000 km*
 
 - If it's never been replaced, replace it now regardless of mileage
 - If history is unknown, replace it
-- On a car with a failing pump, replace the filter simultaneously — a partially blocked filter starves the pump and accelerates pump wear
+- On a car with a failing pump, replace the filter simultaneously, a partially blocked filter starves the pump and accelerates pump wear
 
 The filter costs €8–20 and is a 15-minute job. There is no reason not to replace it preventively.
 
 ### Replacement procedure
 
 1. Depressurise the fuel system: pull fuse F27 (fuel pump fuse), crank the engine until it stalls, then crank for 2 more seconds
-2. Have a rag ready — residual pressure will release a small amount of fuel
-3. Note the flow direction arrow on the filter body — the new filter must be installed in the same orientation
+2. Have a rag ready, residual pressure will release a small amount of fuel
+3. Note the flow direction arrow on the filter body, the new filter must be installed in the same orientation
 4. Release the fuel line clips or union fittings at each end
 5. Remove the filter from its bracket
 6. Install new filter in the same orientation
@@ -134,14 +134,14 @@ The fuel pressure regulator is mounted at the end of the fuel rail (opposite the
 Remove the vacuum line from the regulator with engine running. Pressure should rise by ~0.3–0.5 bar when vacuum is removed. If pressure doesn't change, the regulator diaphragm or vacuum port is blocked.
 
 **Check 2: Return line**
-Briefly pinch the return line (rubber section only, not metal) with the engine running. Rail pressure should rise — if it doesn't, the pump may be too weak to reach full pressure with the return open. If pressure is already correct without pinching, the regulator is holding correctly.
+Briefly pinch the return line (rubber section only, not metal) with the engine running. Rail pressure should rise, if it doesn't, the pump may be too weak to reach full pressure with the return open. If pressure is already correct without pinching, the regulator is holding correctly.
 
 **Check 3: Leak-down**
 After switching off the engine, rail pressure should hold above 2.0 bar for at least 20 minutes. Rapid pressure drop (under 5 minutes) points to either the regulator not sealing or an injector passing fuel.
 
 **To isolate injector leak vs regulator leak:** After pressure drops, pinch the return line shut. If pressure holds now, the regulator is leaking (allowing fuel to return). If pressure still drops, an injector is leaking.
 
-**Replacement:** The regulator is a sealed unit. A faulty regulator (diaphragm failure, sticking valve) can't be repaired and must be replaced. Use a Bosch or equivalent-quality replacement — pattern parts often don't hold correct pressure.
+**Replacement:** The regulator is a sealed unit. A faulty regulator (diaphragm failure, sticking valve) can't be repaired and must be replaced. Use a Bosch or equivalent-quality replacement, pattern parts often don't hold correct pressure.
 
 ---
 
@@ -149,7 +149,7 @@ After switching off the engine, rail pressure should hold above 2.0 bar for at l
 
 ### How E36 injectors work
 
-The M50TU uses six Bosch EV1 or EV6 type injectors (depending on variant and market). Each injector is a solenoid valve — the DME opens each injector for a calculated pulse width (measured in milliseconds) synchronized to each cylinder's intake stroke.
+The M50TU uses six Bosch EV1 or EV6 type injectors (depending on variant and market). Each injector is a solenoid valve, the DME opens each injector for a calculated pulse width (measured in milliseconds) synchronized to each cylinder's intake stroke.
 
 **Injector pulse width at idle:** approximately 2–3 ms  
 **Injector pulse width at full load:** 8–12 ms
@@ -165,7 +165,7 @@ The M50TU uses six Bosch EV1 or EV6 type injectors (depending on variant and mar
 **Leaking injectors (passing fuel when off):**
 - Hydrolock risk (raw fuel accumulating in a cylinder)
 - Strong fuel smell in the inlet when cold
-- Difficult hot start — too much fuel in the cylinder makes it hard to fire
+- Difficult hot start, too much fuel in the cylinder makes it hard to fire
 - Rapid fuel pressure drop after engine off
 
 **Failed injector (no pulse):**
@@ -188,11 +188,11 @@ INPA → DME → Cylinder Cutout Test. INPA can disable individual cylinders and
 
 Injectors that are dirty but not mechanically failed respond well to ultrasonic cleaning. Remove the injectors (fuel rail removal required), send to an injector cleaning service, or clean with an injector cleaning kit that flows cleaning fluid through them on the car (less effective but avoids removal).
 
-After cleaning, test flow balance with a flow bench if possible — all six injectors should flow within 2–3% of each other.
+After cleaning, test flow balance with a flow bench if possible, all six injectors should flow within 2–3% of each other.
 
 ### Replacement
 
-Used injectors from a known good low-mileage engine are a reasonable option. New genuine Bosch injectors are available and are the preferred choice. When replacing, always replace all six as a set — mixing old and new injectors creates fuelling imbalance.
+Used injectors from a known good low-mileage engine are a reasonable option. New genuine Bosch injectors are available and are the preferred choice. When replacing, always replace all six as a set, mixing old and new injectors creates fuelling imbalance.
 
 Apply a small amount of clean engine oil to the O-ring tops before reinstalling to prevent tearing on installation.
 

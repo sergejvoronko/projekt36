@@ -9,8 +9,8 @@ hero: "cooling.webp"
 
 ## TL;DR
 
-- **What:** Replace every cooling system component at once — water pump, thermostat, expansion tank, all hoses, radiator if needed
-- **Why:** The E36 cooling system is the #1 engine killer. Components fail in cascade — one failure overheats the engine before you can react
+- **What:** Replace every cooling system component at once, water pump, thermostat, expansion tank, all hoses, radiator if needed
+- **Why:** The E36 cooling system is the #1 engine killer. Components fail in cascade, one failure overheats the engine before you can react
 - **Cost:** €180–320 for all new quality parts (DIY)
 - **Time:** 4–6 hours for a complete overhaul with engine in car, significantly less with engine out (as in our swap)
 - **Difficulty:** 3/5 for most components, 2/5 with engine on a stand
@@ -21,7 +21,7 @@ hero: "cooling.webp"
 
 Every E36 forum thread about overheating ends the same way: someone replaces the water pump, drives for three months, then the expansion tank cracks and dumps all the coolant. Or the thermostat sticks closed. Or a hose blows.
 
-The reason is simple. Every cooling system component on a 25+ year old E36 is operating on borrowed time. BMW used plastic where metal would have been more durable — the expansion tank is plastic, the water pump impeller was originally plastic, the thermostat housing is plastic. These components don't fail independently. When one component is original, they're ALL original, and they're ALL ready to fail.
+The reason is simple. Every cooling system component on a 25+ year old E36 is operating on borrowed time. BMW used plastic where metal would have been more durable, the expansion tank is plastic, the water pump impeller was originally plastic, the thermostat housing is plastic. These components don't fail independently. When one component is original, they're ALL original, and they're ALL ready to fail.
 
 The cost of replacing everything at once is €180–320. The cost of an overheated M50 engine with a cracked head or warped block is €1,000+ for a used replacement, or the entire project.
 
@@ -36,18 +36,18 @@ The cost of replacing everything at once is €180–320. The cost of an overhea
 | Part | OEM Part Number | Recommended Brand | Est. Price (EU) | Notes |
 |---|---|---|---|---|
 | Water pump | 11 51 7 527 799 | Graf PA432 | €30–45 | **Metal impeller only.** Never reuse a plastic impeller pump. |
-| Water pump gasket | 11 51 7 509 619 | Included with Graf | — | Some pumps include gasket, verify |
-| Thermostat | 11 53 1 712 043 | Wahler 4131.80D | €8–15 | 80°C opening temperature — do not use a "cold" thermostat |
-| Thermostat housing gasket | 11 53 1 265 084 | Elring / Victor Reinz | €3–5 | Paper gasket — replace every time |
+| Water pump gasket | 11 51 7 509 619 | Included with Graf |, | Some pumps include gasket, verify |
+| Thermostat | 11 53 1 712 043 | Wahler 4131.80D | €8–15 | 80°C opening temperature, do not use a "cold" thermostat |
+| Thermostat housing gasket | 11 53 1 265 084 | Elring / Victor Reinz | €3–5 | Paper gasket, replace every time |
 | Expansion tank | 17 11 1 723 520 | Mahle/Behr | €15–28 | The tank cracks at the seam. Always new. |
-| Expansion tank cap | 17 11 1 742 231 | OEM / Mahle | €5–10 | The cap is a pressure valve — old caps lose pressure rating |
-| Upper radiator hose | 11 53 1 740 478 | Continental / Rein | €10–18 | M50/M52 specific — verify for your engine |
+| Expansion tank cap | 17 11 1 742 231 | OEM / Mahle | €5–10 | The cap is a pressure valve, old caps lose pressure rating |
+| Upper radiator hose | 11 53 1 740 478 | Continental / Rein | €10–18 | M50/M52 specific, verify for your engine |
 | Lower radiator hose | 11 53 1 740 480 | Continental / Rein | €10–18 | M50/M52 specific |
 | Heater core inlet hose | 64 21 1 394 291 | Continental | €8–12 | The hose from the engine to the heater core |
 | Heater core outlet hose | 64 21 1 394 292 | Continental | €8–12 | Return from heater core to engine |
 | Bleed screw | 17 11 1 712 788 | OEM | €3–5 | The small plastic bleed screw on top of the radiator. They crack and strip. |
 | Overflow hose (tank to radiator) | 17 11 1 723 521 | OEM | €4–8 | Small hose, often forgotten |
-| All hose clamps | — | OEM spring-style | €10–15 set | Replace every single clamp. Use spring clamps, not worm-drive. |
+| All hose clamps |, | OEM spring-style | €10–15 set | Replace every single clamp. Use spring clamps, not worm-drive. |
 | Coolant | G48 specification | Zerex G-48 or Pentosin NF | €12–18 (5L) | Mix 50/50 with distilled water. ~7L total system capacity. |
 
 **Subtotal (essentials):** €130–210
@@ -56,7 +56,7 @@ The cost of replacing everything at once is €180–320. The cost of an overhea
 
 | Part | OEM Part Number | Recommended Brand | Est. Price (EU) | Notes |
 |---|---|---|---|---|
-| Radiator | — | Nissens 60623 / Mahle CR361 | €60–95 | Replace if over 15 years old, if any plastic tanks show yellowing, or if you see weeping at the tank-to-core seam. For our M50 swap, we need the 6-cylinder radiator regardless. |
+| Radiator |, | Nissens 60623 / Mahle CR361 | €60–95 | Replace if over 15 years old, if any plastic tanks show yellowing, or if you see weeping at the tank-to-core seam. For our M50 swap, we need the 6-cylinder radiator regardless. |
 | Fan clutch | 11 52 1 740 963 | Sachs / Behr | €25–45 | Test: with cold engine off, spin the fan by hand. More than 2 full rotations = worn clutch. |
 | Fan blade | 11 52 1 712 058 | OEM | €15–25 | Inspect for cracks, especially at the root of each blade. A cracked blade at 6,000 rpm goes through the radiator. |
 | Fan shroud | 17 11 1 723 031 | OEM | €15–25 | Often cracked or brittle. Holds the expansion tank mount. |
@@ -84,15 +84,15 @@ Open the bleed screw on top of the radiator first (releases vacuum). Place a dra
 The fan nut is LEFT-HAND THREAD (reverse thread). It unscrews clockwise when viewed from the front of the engine. Use a 32mm thin wrench or the BMW fan clutch tool. Remove the fan + clutch as one assembly, then remove the fan shroud (two clips at the top, lifts up and out).
 
 ### Step 3: remove the expansion tank
-Disconnect the hoses (overflow and bleed). Unclip the tank from the fan shroud bracket. Discard — it's plastic and 25+ years old.
+Disconnect the hoses (overflow and bleed). Unclip the tank from the fan shroud bracket. Discard. It's plastic and 25+ years old.
 
 ### Step 4: replace the thermostat
 The thermostat housing is at the front of the engine, where the lower radiator hose connects. Remove the two bolts, pull the housing, remove the old thermostat. Clean the mating surface on the engine block. Install new thermostat (the jiggle pin/bleed hole faces up) with a new gasket. Torque the housing bolts to 10 Nm.
 
 ### Step 5: replace the water pump
-The water pump is driven by the accessory belt and is located at the front of the engine behind the fan. Remove the belt (release tensioner), remove the four water pump bolts, pull the pump. Clean the mounting surface on the engine thoroughly — any old gasket residue will cause a leak. Install the new pump with a new gasket. Torque to 10 Nm.
+The water pump is driven by the accessory belt and is located at the front of the engine behind the fan. Remove the belt (release tensioner), remove the four water pump bolts, pull the pump. Clean the mounting surface on the engine thoroughly, any old gasket residue will cause a leak. Install the new pump with a new gasket. Torque to 10 Nm.
 
-**Critical:** Verify the new pump has a METAL impeller before installation. Hold it up and look inside — metal impellers are solid steel/cast iron, plastic impellers are lighter and have visible plastic molding marks.
+**Critical:** Verify the new pump has a METAL impeller before installation. Hold it up and look inside, metal impellers are solid steel/cast iron, plastic impellers are lighter and have visible plastic molding marks.
 
 ### Step 6: replace all hoses
 Replace upper hose, lower hose, heater hoses, and overflow hose. Use new spring clamps on every connection.
@@ -114,12 +114,12 @@ This is where most people make mistakes.
 4. Fill the expansion tank to the MAX line
 5. Start the engine with the expansion tank cap OFF
 6. Run the engine until the thermostat opens (you'll feel the upper hose go from cold to hot suddenly)
-7. With the engine running and thermostat open, observe the expansion tank — air bubbles may still surface
+7. With the engine running and thermostat open, observe the expansion tank, air bubbles may still surface
 8. Top up as needed. Replace the cap.
 9. Let the engine reach full operating temperature, then let it cool completely
-10. Check the level when cold — top up to the midpoint between MIN and MAX
+10. Check the level when cold, top up to the midpoint between MIN and MAX
 
-**Trapped air is the enemy.** Air pockets in the system cause localized hot spots and the temperature gauge to read erratically. If the gauge spikes after the overhaul, you have trapped air — re-bleed.
+**Trapped air is the enemy.** Air pockets in the system cause localized hot spots and the temperature gauge to read erratically. If the gauge spikes after the overhaul, you have trapped air, re-bleed.
 
 ---
 

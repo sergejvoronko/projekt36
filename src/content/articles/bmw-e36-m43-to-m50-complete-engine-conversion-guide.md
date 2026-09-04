@@ -7,7 +7,7 @@ date: "2026-08-17"
 hero: "bmw-e36-m43-to-m50-complete-engine-conversion-guide.webp"
 ---
 
-The four-cylinder E36 models—the 316i and 318i—are lightweight, balanced, and plentiful. Their biggest drawback? The M43 engine. While reliable, its ~115 hp leaves much to be desired. The solution is one of the most classic and rewarding swaps in the E36 world: replacing the M43 with the iconic M50 inline-six.
+The four-cylinder E36 models, the 316i and 318i, are lightweight, balanced, and plentiful. Their biggest drawback? The M43 engine. While reliable, its ~115 hp leaves much to be desired. The solution is one of the most classic and rewarding swaps in the E36 world: replacing the M43 with the iconic M50 inline-six.
 
 This guide provides a comprehensive, no-nonsense walkthrough of the entire M43 to M50 conversion process. We'll cover sourcing the right donor package, mechanical installation, wiring, and the essential supporting upgrades you can't afford to skip.
 
@@ -64,7 +64,7 @@ While you're there, install new engine mounts. Aged rubber mounts will compromis
 
 ### Transmission, Driveshaft, and Differential
 
-The M50 bolts up to a 5-speed manual gearbox—typically the Getrag 250G found in the 320i and 325i. This is a direct fit. You will also need the corresponding 6-cylinder transmission cross-member (`22311141132`) and new gearbox mounts (`22316799331`).
+The M50 bolts up to a 5-speed manual gearbox, typically the Getrag 250G found in the 320i and 325i. This is a direct fit. You will also need the corresponding 6-cylinder transmission cross-member (`22311141132`) and new gearbox mounts (`22316799331`).
 
 Your 4-cylinder driveshaft is the wrong length. You must use a driveshaft from a manual 320i, 323i, 325i, or 328i. Ensure its center support bearing (`26121226723`) and flex disc (guibo, `26117511454`) are in good condition or replace them.
 

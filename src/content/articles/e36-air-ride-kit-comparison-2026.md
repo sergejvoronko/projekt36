@@ -27,13 +27,13 @@ The BMW E36 did not come with air suspension from the factory. Every air ride se
 
 A complete air ride system has four main components:
 
-**Air struts** — one per corner. These are the actual suspension components that replace your factory setup. The air bag inflates to raise the car and deflates to lower it, while the integrated shock absorber provides damping.
+**Air struts**, one per corner. These are the actual suspension components that replace your factory setup. The air bag inflates to raise the car and deflates to lower it, while the integrated shock absorber provides damping.
 
-**Compressor** — an electric air compressor that fills a tank with compressed air. Mounted in the trunk.
+**Compressor**, an electric air compressor that fills a tank with compressed air. Mounted in the trunk.
 
-**Air tank** — stores compressed air so you don't have to wait for the compressor every time you adjust height. Mounted in the trunk.
+**Air tank**, stores compressed air so you don't have to wait for the compressor every time you adjust height. Mounted in the trunk.
 
-**Management system** — the controller that routes air to each strut. This is where kits differ most dramatically — from basic manual valves to fully digital, app-controlled, height-sensing systems.
+**Management system**, the controller that routes air to each strut. This is where kits differ most dramatically, from basic manual valves to fully digital, app-controlled, height-sensing systems.
 
 ---
 
@@ -80,15 +80,15 @@ Bag Riders is a US-based company that builds custom air ride kits. Their E36 kit
 - Lower price point than Air Lift for comparable features
 
 **Cons:**
-- Ships from the US — expect 2–3 weeks shipping + customs
-- Manual kit has no presets — every adjustment is by feel
+- Ships from the US, expect 2–3 weeks shipping + customs
+- Manual kit has no presets, every adjustment is by feel
 - Less EU support infrastructure than Air Lift
 
 ---
 
 ### D2 racing air struts
 
-D2 Racing offers air struts as standalone components — you buy the struts and pair them with your own management system. This is a good option if you want to build a custom setup or if you already have a management system.
+D2 Racing offers air struts as standalone components, you buy the struts and pair them with your own management system. This is a good option if you want to build a custom setup or if you already have a management system.
 
 **Pros:**
 - 36-way damping adjustment (excellent tuneability)
@@ -98,27 +98,27 @@ D2 Racing offers air struts as standalone components — you buy the struts and 
 - Lower cost when buying struts only
 
 **Cons:**
-- No complete kit — you need to source management, tank, compressor, lines, and fittings separately
+- No complete kit. You need to source management, tank, compressor, lines, and fittings separately
 - Building your own system requires more knowledge and planning
-- Quality control reports are mixed — some users report inconsistent damping valve feel
+- Quality control reports are mixed, some users report inconsistent damping valve feel
 
 ---
 
 ### CEIKA air ride coilovers
 
-CEIKA takes a different approach: they start with a full adjustable coilover and replace the spring with an air bag. This gives you the best of both worlds — the handling precision of a threaded coilover body with the height adjustability of air.
+CEIKA takes a different approach: they start with a full adjustable coilover and replace the spring with an air bag. This gives you the best of both worlds, the handling precision of a threaded coilover body with the height adjustability of air.
 
 **Pros:**
 - 36-click damping adjustment on every corner
 - Full threaded body for mechanical height range
-- Ride quality is very close to a good coilover — firmer than pure air struts but more controlled
+- Ride quality is very close to a good coilover, firmer than pure air struts but more controlled
 - Available in multiple management configurations (manual, 2-way, 4-way)
 
 **Cons:**
-- Ships from Asia — lead time is 2–4 weeks
+- Ships from Asia, lead time is 2–4 weeks
 - Higher price for the premium management options
 - Less brand recognition in the EU air ride community
-- Bags sit on the coilover body — different aesthetic when components are visible
+- Bags sit on the coilover body, different aesthetic when components are visible
 
 ---
 
@@ -128,13 +128,13 @@ DOLUD is a Polish company that produces budget-friendly E36 air ride struts. For
 
 **Pros:**
 - Cheapest struts available (~€800–1,200)
-- Based in Poland — ships within EU, no customs
+- Based in Poland, ships within EU, no customs
 - Bolt-on fitment
 - Aluminium construction, rebuildable
 
 **Cons:**
-- Struts only — no management system included
-- Ride quality is basic — limited damping adjustment
+- Struts only, no management system included
+- Ride quality is basic, limited damping adjustment
 - Less documentation and community support
 - Best suited for show builds that don't see daily driving
 
@@ -165,7 +165,7 @@ The trunk of the E36 sedan is your installation space for the compressor, tank, 
 
 **Tank placement:** Most builds mount the tank centered in the trunk, either flat on the floor or vertically against the rear seat wall. A 2.5-gallon tank fits without sacrificing too much trunk space. A 5-gallon tank takes significantly more room.
 
-**Compressor placement:** Mount on a solid surface — the compressor vibrates. Use rubber isolating mounts. Keep it away from the exhaust heat path. Most builders mount it next to or on top of the tank.
+**Compressor placement:** Mount on a solid surface, the compressor vibrates. Use rubber isolating mounts. Keep it away from the exhaust heat path. Most builders mount it next to or on top of the tank.
 
 **Line routing:** Air lines run from the management manifold (usually near the tank) forward through the car to each corner. The lines can be routed through the factory brake line channels under the car, through the interior along the sills, or through the trunk and under the rear seat. Through the interior is cleaner but more labor-intensive.
 
@@ -175,11 +175,11 @@ The trunk of the E36 sedan is your installation space for the compressor, tank, 
 
 ## Our choice for projekt 36
 
-We haven't made a final decision yet — this will be documented in the build chapters when we get to Chapter 06 (Air Ride). The current shortlist:
+We haven't made a final decision yet. This will be documented in the build chapters when we get to Chapter 06 (Air Ride). The current shortlist:
 
-1. **Air Lift 3P** — best all-rounder, but the most expensive option after EU shipping and customs
-2. **D2 Racing struts + AccuAir e-Level** — modular approach, potentially better value for EU buyers
-3. **CEIKA Pro 4-way** — interesting handling-focused option with full damping control
+1. **Air Lift 3P**: best all-rounder, but the most expensive option after EU shipping and customs
+2. **D2 Racing struts + AccuAir e-Level**: modular approach, potentially better value for EU buyers
+3. **CEIKA Pro 4-way**: interesting handling-focused option with full damping control
 
 The decision will come down to total landed cost in Slovakia, ride quality for daily driving on Slovak roads (which are... not smooth), and how much trunk space we're willing to sacrifice.
 

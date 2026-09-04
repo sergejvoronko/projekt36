@@ -38,7 +38,7 @@ The gold standard for BMW part number lookup. Enter your chassis number (VIN) an
 
 Similar to RealOEM but with a different interface that some users prefer. Also includes additional model data, production date ranges, and cross-references. The E36 sedan catalog is at: bmwfans.info/parts-catalog/E36-Sedan/
 
-**Advantage over RealOEM:** bmwfans.info shows which parts were superseded by newer part numbers — useful when the original part number is discontinued and a replacement exists under a new number.
+**Advantage over RealOEM:** bmwfans.info shows which parts were superseded by newer part numbers, useful when the original part number is discontinued and a replacement exists under a new number.
 
 ### ETK / BMW tis (advanced)
 
@@ -46,7 +46,7 @@ BMW's own Electronic Parts Catalog and Technical Information System. Available a
 
 ---
 
-## Online parts suppliers — ranked for EU buyers
+## Online parts suppliers, ranked for EU buyers
 
 ### Tier 1: general parts (best prices)
 
@@ -55,14 +55,14 @@ BMW's own Electronic Parts Catalog and Technical Information System. Available a
 
 **Strengths:**
 - Usually the cheapest for common maintenance parts (filters, gaskets, brake components, suspension bushings)
-- Multiple brand options per part number — from budget to OEM
+- Multiple brand options per part number, from budget to OEM
 - Localized sites for most EU countries (Autodoc.sk for Slovakia)
 - Free delivery thresholds vary by country (~€120 for SK)
 - 5-star return policy for wrong parts
 
 **Weaknesses:**
-- Quality varies hugely between brands — you need to know which brand to choose
-- Search by car model, not part number — sometimes returns wrong parts for swap-specific items
+- Quality varies hugely between brands. You need to know which brand to choose
+- Search by car model, not part number, sometimes returns wrong parts for swap-specific items
 - Customer service is functional but not enthusiast-grade
 
 **Brand guide for Autodoc:**
@@ -73,9 +73,9 @@ BMW's own Electronic Parts Catalog and Technical Information System. Available a
 | Brake discs | Brembo (basic line) | ATE, Zimmermann | Zimmermann Sport |
 | Suspension | Lemförder, Meyle | Meyle HD, Febi Bilstein | Lemförder (OEM supplier) |
 | Gaskets | Elring | Victor Reinz | Victor Reinz, Ajusa |
-| Water pump | — | Graf | Graf, Hepu (metal impeller) |
-| Thermostat | — | Wahler | Wahler, Behr/Mahle |
-| Cooling hoses | — | Continental, Rein | Continental (OEM supplier) |
+| Water pump |, | Graf | Graf, Hepu (metal impeller) |
+| Thermostat |, | Wahler | Wahler, Behr/Mahle |
+| Cooling hoses |, | Continental, Rein | Continental (OEM supplier) |
 
 #### Oscaro (.fr / .es / .pt / .it / .be)
 **What:** French-based parts retailer, strong in Western Europe. Similar model to Autodoc.
@@ -94,18 +94,18 @@ BMW's own Electronic Parts Catalog and Technical Information System. Available a
 ### Tier 2: quality specialists (best parts)
 
 #### FCP euro (fcpeuro.com)
-**What:** US-based BMW parts specialist with a unique selling point — lifetime replacement warranty on every part, including wear items.
+**What:** US-based BMW parts specialist with a unique selling point, lifetime replacement warranty on every part, including wear items.
 
 **Why it matters for EU buyers:** Yes, it ships from the US. Yes, you'll pay shipping (~€20–50 depending on order size) and potentially customs duties. But the lifetime warranty means that when your brake pads wear out, you send them back and get new ones for free. Over the life of a project car, this adds up to significant savings.
 
 **Strengths:**
-- Lifetime replacement warranty on everything (brake pads, filters, gaskets — everything)
-- Curates only quality brands — you won't accidentally buy junk
+- Lifetime replacement warranty on everything (brake pads, filters, gaskets, everything)
+- Curates only quality brands, you won't accidentally buy junk
 - Excellent BMW-specific knowledge in customer support
 - DIY guides and videos for many E36 procedures
 
 **Weaknesses:**
-- Ships from US — 7–14 day delivery to EU
+- Ships from US, 7–14 day delivery to EU
 - Customs duties apply (typically 4.5% duty + local VAT)
 - Higher base prices than Autodoc (offset by warranty value)
 - Not practical for urgent/time-sensitive orders
@@ -118,7 +118,7 @@ BMW's own Electronic Parts Catalog and Technical Information System. Available a
 **Strengths:**
 - Enormous BMW-specific inventory including rare and discontinued parts
 - Used OEM parts at fraction of new price
-- Ships within EU — no customs hassle
+- Ships within EU, no customs hassle
 - Knowledgeable staff who understand BMW model specifics
 
 **Weaknesses:**
@@ -135,10 +135,10 @@ BMW's own Electronic Parts Catalog and Technical Information System. Available a
 - Genuine BMW parts with full manufacturer warranty
 - Competitive pricing for OEM (often 15–30% below dealer counter)
 - Ships EU-wide
-- Correct parts guaranteed — they use BMW's own catalog
+- Correct parts guaranteed. They use BMW's own catalog
 
 **Weaknesses:**
-- Only genuine BMW brand — no aftermarket alternatives
+- Only genuine BMW brand, no aftermarket alternatives
 - Higher prices than equivalent-quality aftermarket (e.g., Lemförder is OEM supplier for BMW suspension but costs less than BMW-branded box)
 
 **Best for:** Parts where you specifically want the BMW box (interior trim, electrical components, body parts with exact color match).
@@ -177,7 +177,7 @@ BMW's own Electronic Parts Catalog and Technical Information System. Available a
 - Detailed tech articles and build support
 
 **Weaknesses:**
-- Ships from US — customs and shipping apply
+- Ships from US, customs and shipping apply
 
 **Best for:** Turbo builds, standalone ECU integration, performance engine internals.
 
@@ -189,7 +189,7 @@ BMW's own Electronic Parts Catalog and Technical Information System. Available a
 The largest used BMW parts market in Europe. German sellers dominate and shipping within EU is straightforward. Search by BMW part number for best results.
 
 #### Bazos.sk / bazos.cz
-The equivalent of Craigslist for Slovakia and Czech Republic. Surprisingly good for E36 parts — these cars were common in both countries. Search "BMW E36" or specific part descriptions in Slovak/Czech.
+The equivalent of Craigslist for Slovakia and Czech Republic. Surprisingly good for E36 parts, these cars were common in both countries. Search "BMW E36" or specific part descriptions in Slovak/Czech.
 
 #### Facebook groups
 - "BMW E36 Parts for Sale Europe"
@@ -199,7 +199,7 @@ The equivalent of Craigslist for Slovakia and Czech Republic. Surprisingly good 
 **Tip:** When buying used engine or drivetrain parts, always ask for the part number stamped on the component and verify it against RealOEM before buying. This prevents receiving parts from the wrong model year or variant.
 
 #### Local junkyards (autovrakovisko)
-In Slovakia and neighboring countries, E36s are still arriving at junkyards. Call ahead and ask if they have E36 models — especially 325i or 525i for M50 swap parts. Bring tools and be prepared to pull parts yourself. Prices are negotiable and typically 50–80% below used market prices online.
+In Slovakia and neighboring countries, E36s are still arriving at junkyards. Call ahead and ask if they have E36 models, especially 325i or 525i for M50 swap parts. Bring tools and be prepared to pull parts yourself. Prices are negotiable and typically 50–80% below used market prices online.
 
 ---
 
@@ -221,7 +221,7 @@ The lifetime warranty makes FCP Euro the cheapest long-term option for parts you
 Engine mount arms, airboxes, intake manifolds, and driveshafts don't wear out in the traditional sense. Used parts from a junkyard 325i are perfectly fine for these items.
 
 ### 6. never cheap out on cooling, gaskets, or bearings
-These are the parts that kill engines when they fail. Buy quality brands (Graf water pumps, Wahler thermostats, Victor Reinz gaskets, FAG/SKF bearings). The price difference between budget and quality is usually €5–15 per part — meaningless compared to the cost of a failure.
+These are the parts that kill engines when they fail. Buy quality brands (Graf water pumps, Wahler thermostats, Victor Reinz gaskets, FAG/SKF bearings). The price difference between budget and quality is usually €5–15 per part, meaningless compared to the cost of a failure.
 
 ---
 

@@ -59,7 +59,7 @@ Here is your essential bottom-end parts list. Prices are approximate and based o
 
 **Assembly and torque specs:**
 
-This is where precision matters. Use quality assembly lube on all bearings and piston skirts. Piston rings have a specific orientation and clocking — follow the manufacturer's instructions to the letter.
+This is where precision matters. Use quality assembly lube on all bearings and piston skirts. Piston rings have a specific orientation and clocking, follow the manufacturer's instructions to the letter.
 
 | Component | Torque Spec | Notes |
 | :--- | :--- | :--- |
@@ -70,7 +70,7 @@ This is where precision matters. Use quality assembly lube on all bearings and p
 
 ## The cylinder head and VANOS
 
-The M52 head is robust, but it's not immune to age. After disassembly, use a precision straight edge to check the deck for warpage. Anything over 0.05mm is cause for concern and needs to be milled flat by the machine shop. A full valve job — including cleaning, grinding valves and seats, and installing new valve stem seals — is highly recommended and will cost around €400 - €600.
+The M52 head is robust, but it's not immune to age. After disassembly, use a precision straight edge to check the deck for warpage. Anything over 0.05mm is cause for concern and needs to be milled flat by the machine shop. A full valve job, including cleaning, grinding valves and seats, and installing new valve stem seals, is highly recommended and will cost around €400 - €600.
 
 **Head reassembly parts list:**
 
@@ -135,6 +135,6 @@ The hard part is over. Now it's a matter of re-installing all the accessories, m
 3.  **Install Plugs, Connect Fuel:** Re-install the spark plugs and fuel pump relay.
 4.  **First Start:** The engine should fire up within a few seconds. It will likely be noisy for the first 30-60 seconds as the lifters and VANOS fill with oil.
 5.  **Check for Leaks:** Immediately check for any fuel, oil, or coolant leaks.
-6.  **Break-In:** Let the engine idle up to operating temperature, keeping an eye on all gauges. Bleed the cooling system thoroughly. Follow a proper engine break-in procedure — typically varying the RPMs under light load and avoiding constant highway speeds for the first 1,000 km. Change the break-in oil and filter after this period.
+6.  **Break-In:** Let the engine idle up to operating temperature, keeping an eye on all gauges. Bleed the cooling system thoroughly. Follow a proper engine break-in procedure, typically varying the RPMs under light load and avoiding constant highway speeds for the first 1,000 km. Change the break-in oil and filter after this period.
 
 A freshly rebuilt M52 is quiet, pulls cleanly, and doesn't drip anything. Change the break-in oil at 1,000 km, then drive it.

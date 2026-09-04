@@ -30,13 +30,13 @@ hero: "engine-compare-v2.webp"
 
 ## The M50 family explained
 
-The M50 family is one of BMW's most celebrated engine platforms. Found primarily in the E34 5 Series and E36 3 Series, these inline-six engines earned a reputation for smooth power delivery, bulletproof reliability, and enormous tuning potential — especially under forced induction.
+The M50 family is one of BMW's most celebrated engine platforms. Found primarily in the E34 5 Series and E36 3 Series, these inline-six engines earned a reputation for smooth power delivery, bulletproof reliability, and enormous tuning potential, especially under forced induction.
 
 Understanding the differences between the three main variants is critical if you're building an E36 project, planning an engine swap, or simply trying to buy the right car. The differences are more significant than BMW's naming suggests.
 
 ---
 
-## M50B25 (non-VANOS) — the original
+## M50B25 (non-VANOS), the original
 
 **Found in:** E34 525i (1990–1992), E36 325i (1990–1992)
 
@@ -60,11 +60,11 @@ Without VANOS, the M50 NV has noticeably less low-end torque compared to the M50
 
 ### Identification
 
-You can visually identify a non-VANOS M50 by the absence of the VANOS actuator housing on the front of the cylinder head. The front of the head is flat where the TU variant has a distinctive bulge. The valve cover also differs slightly — the M50 NV cover has a different shape around the oil cap area.
+You can visually identify a non-VANOS M50 by the absence of the VANOS actuator housing on the front of the cylinder head. The front of the head is flat where the TU variant has a distinctive bulge. The valve cover also differs slightly, the M50 NV cover has a different shape around the oil cap area.
 
 ---
 
-## M50B25TU (single VANOS) — the technical update
+## M50B25TU (single VANOS), the technical update
 
 **Found in:** E34 525i (1992–1995), E36 325i (1992–1995)
 
@@ -74,7 +74,7 @@ The "TU" stands for *Technische Überarbeitung* (Technical Update). BMW added th
 
 VANOS is crucial for daily driveability. By advancing the intake cam timing at lower RPMs, the M50TU produces significantly more low-end torque. The peak torque figure is the same (245 Nm) but it arrives 500 rpm earlier, at 4,200 rpm. More importantly, the torque curve is fuller below 4,000 rpm, making the car feel more responsive in normal driving.
 
-For street-driven cars that won't see a turbo, the M50TU is arguably the better engine. The VANOS system gives you the best of both worlds — decent low-end pull for daily driving and the same top-end power as the NV variant.
+For street-driven cars that won't see a turbo, the M50TU is arguably the better engine. The VANOS system gives you the best of both worlds, decent low-end pull for daily driving and the same top-end power as the NV variant.
 
 ### Hardware differences from M50 nv
 
@@ -82,7 +82,7 @@ Several internal components changed with the TU update:
 
 **Single valve springs** replaced the doubles. This reduces complexity and weight in the valvetrain but lowers the RPM ceiling for aggressive cam swaps.
 
-**6 mm valve stems** replaced the 7 mm stems. This is a significant difference if you're cross-shopping parts between variants — head work, guides, and seals are NOT interchangeable between M50 NV and M50TU.
+**6 mm valve stems** replaced the 7 mm stems. This is a significant difference if you're cross-shopping parts between variants, head work, guides, and seals are NOT interchangeable between M50 NV and M50TU.
 
 **140 mm connecting rods** replaced the 135 mm units. The longer rods change the rod-to-stroke ratio and slightly alter the engine's power characteristics.
 
@@ -92,11 +92,11 @@ The single VANOS system on the M50TU is relatively simple and reliable, but the 
 
 ### Identification
 
-The VANOS housing is the giveaway — a distinctive bulge on the intake side of the cylinder head, at the front of the engine. The M50TU also has a different intake manifold compared to the NV (though they're interchangeable, and swapping the M50TU manifold onto an NV engine is a common modification).
+The VANOS housing is the giveaway, a distinctive bulge on the intake side of the cylinder head, at the front of the engine. The M50TU also has a different intake manifold compared to the NV (though they're interchangeable, and swapping the M50TU manifold onto an NV engine is a common modification).
 
 ---
 
-## M52B25 / m52b28 — the aluminium generation
+## M52B25 / m52b28, the aluminium generation
 
 **Found in:** E36 323i / 328i (1995–1999), E39 523i / 528i, E38 728i
 
@@ -120,7 +120,7 @@ The M52 uses a different engine management system (Siemens MS41) which is tuned 
 
 The M52 does offer the 2.8-liter variant (M52B28), which produces 193 hp and 280 Nm of torque. This additional displacement makes the 328i the best naturally-aspirated daily driver in the E36 lineup, and the extra low-end torque is noticeable.
 
-### M52TU — a different engine entirely
+### M52TU, a different engine entirely
 
 The M52TU (found in very late E36 production and the E46) adds double-VANOS (variable timing on both intake and exhaust cams), a different intake manifold, and other revisions. It is effectively a different engine from the M52 and is not covered in this comparison. It is not a simple swap into early E36 models due to ECU and wiring differences.
 
@@ -142,7 +142,7 @@ The 2.8-liter displacement advantage is hard to argue with for a street car. The
 
 ### For a budget swap into a 316i/318i: m50b25 non-VANOS
 
-The simplest wiring (no VANOS solenoid to integrate), the most robust internals, and typically the cheapest to source in European junkyards. For an OBD1 E36 (pre-1996), the swap wiring is as clean as it gets — especially if you source the complete engine harness and DME from the same donor car. This is our choice for the Projekt 36 build.
+The simplest wiring (no VANOS solenoid to integrate), the most robust internals, and typically the cheapest to source in European junkyards. For an OBD1 E36 (pre-1996), the swap wiring is as clean as it gets, especially if you source the complete engine harness and DME from the same donor car. This is our choice for the Projekt 36 build.
 
 ---
 
@@ -152,10 +152,10 @@ The simplest wiring (no VANOS solenoid to integrate), the most robust internals,
 |---|---|---|---|---|
 | Oil filter | Same | Same | Same | All use Mann HU925/4x or equivalent |
 | Spark plugs | Same (6-cyl) | Same | Same | Bosch FR7LDC+ or NGK BKR6EQUP |
-| Valve cover gasket | Specific | Specific | Specific | Different between all three — check part number |
-| Water pump | Same | Same | Same | Graf PA432 fits all — always replace with metal impeller |
+| Valve cover gasket | Specific | Specific | Specific | Different between all three, check part number |
+| Water pump | Same | Same | Same | Graf PA432 fits all, always replace with metal impeller |
 | Thermostat | Same | Same | Same | 80°C rating, Wahler 4131.80D |
-| Expansion tank | Same | Same | Same | Part 17 11 1 723 520 — replace preventively |
+| Expansion tank | Same | Same | Same | Part 17 11 1 723 520, replace preventively |
 | Intake manifold | Interchangeable | Interchangeable | Different | M50 NV manifold on M50TU is a common upgrade |
 | Exhaust manifold | Same | Same | Different | M50 manifolds fit both NV and TU |
 | Camshafts | NOT interchangeable | NOT interchangeable | NOT interchangeable | Different profiles, valve stem sizes, lifter sizes |
@@ -172,7 +172,7 @@ The simplest wiring (no VANOS solenoid to integrate), the most robust internals,
 
 **Step 2: Check the block material.**
 - Tap the block with a wrench. Iron sounds dull, aluminium rings.
-- Alternatively, check a magnet — it sticks strongly to iron, weakly or not at all to aluminium.
+- Alternatively, check a magnet, it sticks strongly to iron, weakly or not at all to aluminium.
 - Cast iron block → **M50TU** (or US-spec M52)
 - Aluminium block → **M52** (European)
 
@@ -186,6 +186,6 @@ The simplest wiring (no VANOS solenoid to integrate), the most robust internals,
 
 ---
 
-*This guide is part of the Projekt 36 M50 Engine series. Our build uses the M50B25 Non-VANOS in an E36 316i sedan swap — the simplest, strongest option for a forced-induction-ready platform.*
+*This guide is part of the Projekt 36 M50 Engine series. Our build uses the M50B25 Non-VANOS in an E36 316i sedan swap, the simplest, strongest option for a forced-induction-ready platform.*
 
 *→ Related: [M43 to M50 Complete Swap Guide](/guides/m43-to-m50-complete-parts-list) | [M50 Torque Specifications](/guides/e36-m50-torque-specifications) | [Cooling System Overhaul](/guides/e36-cooling-system-overhaul)*

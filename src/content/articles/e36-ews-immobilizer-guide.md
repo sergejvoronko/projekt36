@@ -1,5 +1,5 @@
 ---
-title: "BMW E36 EWS Immobilizer — Complete Guide"
+title: "BMW E36 EWS Immobilizer, Complete Guide"
 description: "How the E36 EWS system works, why it kills the engine, how to diagnose faults, what happens during an engine swap, and when bypassing is the right call."
 pillar: reference
 keywords: "bmw e36 ews, e36 immobilizer, ews2 ews3, ews bypass, e36 no start, bmw ews fault"
@@ -9,7 +9,7 @@ hero: "ews.webp"
 
 ## TL;DR
 
-EWS (Elektronische Wegfahrsperre — Electronic Drive Away Protection) is BMW's engine immobilizer. If the key's transponder doesn't match the EWS module, the ECU is locked out and the car cranks but won't fire. Most "won't start, cranks fine" faults on a well-maintained E36 trace back to EWS. This guide covers how it works, what fails, and how to deal with it during a swap.
+EWS (Elektronische Wegfahrsperre, Electronic Drive Away Protection) is BMW's engine immobilizer. If the key's transponder doesn't match the EWS module, the ECU is locked out and the car cranks but won't fire. Most "won't start, cranks fine" faults on a well-maintained E36 trace back to EWS. This guide covers how it works, what fails, and how to deal with it during a swap.
 
 ---
 
@@ -26,10 +26,10 @@ The E36 used two EWS generations depending on production year:
 
 Every time you turn the ignition on, this happens in under a second:
 
-1. **Key transponder** — the ignition key contains a passive RFID chip. When inserted and turned, the antenna ring around the ignition barrel energizes the chip.
-2. **EWS module reads the transponder** — the module checks the key's rolling code against its stored list.
-3. **EWS communicates with the ECU** — via the K-Bus (diagnostic bus), the EWS sends an authorization code to the DME (ECU). The code changes with every start cycle (rolling code).
-4. **DME releases fuel injection and ignition** — if the code matches, the engine can start. If not, the DME remains locked: it will crank, but no injectors fire, no ignition spark.
+1. **Key transponder**: the ignition key contains a passive RFID chip. When inserted and turned, the antenna ring around the ignition barrel energizes the chip.
+2. **EWS module reads the transponder**: the module checks the key's rolling code against its stored list.
+3. **EWS communicates with the ECU**: via the K-Bus (diagnostic bus), the EWS sends an authorization code to the DME (ECU). The code changes with every start cycle (rolling code).
+4. **DME releases fuel injection and ignition**: if the code matches, the engine can start. If not, the DME remains locked: it will crank, but no injectors fire, no ignition spark.
 
 The car will crank indefinitely with a locked-out DME. The starter motor works fine. This is the single most reliable diagnostic indicator: **cranks but absolutely no attempt to fire = EWS fault until proven otherwise**.
 
@@ -39,7 +39,7 @@ The car will crank indefinitely with a locked-out DME. The starter motor works f
 
 ### 1. dead transponder chip (most common)
 
-The RFID chip in the key head is passive — it gets its energy from the antenna ring. After 25+ years, some chips simply die or weaken. Symptoms:
+The RFID chip in the key head is passive. It gets its energy from the antenna ring. After 25+ years, some chips simply die or weaken. Symptoms:
 
 - Works intermittently (especially in cold weather when plastic contracts and antenna alignment shifts)
 - Never works on one specific copy of the key
@@ -50,27 +50,27 @@ The RFID chip in the key head is passive — it gets its energy from the antenna
 ### 2. failed EWS module
 
 Less common than key failure, but more expensive. The module itself can fail due to:
-- Moisture ingress (cabin leaks — classic E36 problem with sunroof drains)
+- Moisture ingress (cabin leaks, classic E36 problem with sunroof drains)
 - PCB corrosion
 - Voltage spikes
 
 **Symptoms:** No start on any key, even known-good spares. INPA will show EWS fault codes.
 
-**Fix:** Replace module + recode. The module must be matched to both the ECU and the ignition keys — you can't just swap in a unit from a parts car without recoding.
+**Fix:** Replace module + recode. The module must be matched to both the ECU and the ignition keys. You can't just swap in a unit from a parts car without recoding.
 
 ### 3. antenna ring failure
 
 The antenna ring around the ignition barrel is a fragile coil. It breaks from:
 - Rough key insertion/removal
-- Age — the insulation on the wire cracks
+- Age, the insulation on the wire cracks
 
-**Symptoms:** Same as dead transponder — intermittent or permanent no-start. You can test the ring with a multimeter: resistance should be 2–4 Ω. Open circuit = broken ring.
+**Symptoms:** Same as dead transponder, intermittent or permanent no-start. You can test the ring with a multimeter: resistance should be 2–4 Ω. Open circuit = broken ring.
 
 **Fix:** Replacement ring is €15–25. 20-minute job.
 
 ### 4. k-bus communication fault
 
-EWS communicates with the DME over the K-Bus (pin 15 of the OBD port). If the K-Bus has issues — broken wire, corroded connector, faulty module tying up the bus — the EWS/DME handshake fails.
+EWS communicates with the DME over the K-Bus (pin 15 of the OBD port). If the K-Bus has issues, broken wire, corroded connector, faulty module tying up the bus, the EWS/DME handshake fails.
 
 **Fix:** Trace the K-Bus wiring with a multimeter. The diagnostic wiring section of the ETM (Schema 2 in the service manual) shows the K-Bus routing.
 
@@ -98,7 +98,7 @@ INPA also lets you view the rolling code sync status between EWS and DME.
 
 ### The "EWS delete" test
 
-If you want to confirm the EWS is the fault before spending money on parts, a temporary EWS bypass tells you definitively. This is diagnostic only — do it on your driveway, not the road.
+If you want to confirm the EWS is the fault before spending money on parts, a temporary EWS bypass tells you definitively. This is diagnostic only, do it on your driveway, not the road.
 
 ---
 
@@ -110,7 +110,7 @@ The EWS system is the most common source of post-swap headaches. When you swap a
 
 The cleanest approach. Take the EWS module, DME, and all coded keys from the donor car. They are already matched to each other. Plug in the donor EWS module and DME, use the donor keys.
 
-**Catch:** The donor EWS is coded to the donor VIN. The car still drives fine — EWS doesn't care about VIN — but if you ever need to add a key or replace the DME, you'll need the donor car's security information, which you probably won't have.
+**Catch:** The donor EWS is coded to the donor VIN. The car still drives fine, EWS doesn't care about VIN, but if you ever need to add a key or replace the DME, you'll need the donor car's security information, which you probably won't have.
 
 ### Option 2: recode existing EWS to new DME
 
@@ -125,9 +125,9 @@ A BMW specialist with the right equipment can do this in 30 minutes.
 
 The DME can be flashed with EWS-deleted software. The EWS check is removed from the startup sequence entirely. Common choices:
 
-- **Motronic Solution** — widely used in the tuning community
-- **Ostrich/TunerPro flashing** — for those building a fully custom tune
-- **Chip tune with EWS delete** — available from several E36 suppliers
+- **Motronic Solution**: widely used in the tuning community
+- **Ostrich/TunerPro flashing**: for those building a fully custom tune
+- **Chip tune with EWS delete**: available from several E36 suppliers
 
 **When is bypass the right call?**
 - You bought a car with a known EWS fault and no working key
@@ -148,7 +148,7 @@ You need: INPA or compatible software, a USB-to-OBD K-DCAN cable, and a new tran
 1. Connect INPA, navigate to EWS module
 2. Select **Key Teaching / Schlüssel anlernen**
 3. Insert the new (unchipped) key into the ignition, turn to position 1
-4. Follow prompts — INPA will write the new key into an empty slot
+4. Follow prompts, INPA will write the new key into an empty slot
 5. Up to 10 keys can be stored in the EWS module
 
 Alternatively, WinKFP can do this through the diagnostics protocol. Cost of the cable: €15–25 from the usual sources.
@@ -163,7 +163,7 @@ Alternatively, WinKFP can do this through the diagnostics protocol. Cost of the 
 | Antenna ring | 61 35 8 360 569 | 61 35 8 360 569 |
 | Transponder key | 66 12 1 351 499 | 66 12 1 351 499 |
 
-Used EWS modules are €20–60. New antenna rings are €15–25. The module alone is useless without coding — always buy as a matched set or budget for professional coding.
+Used EWS modules are €20–60. New antenna rings are €15–25. The module alone is useless without coding, always buy as a matched set or budget for professional coding.
 
 ---
 

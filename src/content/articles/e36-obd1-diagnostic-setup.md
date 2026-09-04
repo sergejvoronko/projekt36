@@ -21,7 +21,7 @@ Before buying anything, you need to understand the communication protocol your c
 
 ### The DS2 protocol
 
-Every E36 — regardless of market, year, or model — communicates internally using BMW's proprietary **DS2 protocol** (also called D2). This is NOT the same as OBD2. The names sound similar, which causes endless confusion, but they are completely different systems.
+Every E36, regardless of market, year, or model, communicates internally using BMW's proprietary **DS2 protocol** (also called D2). This is NOT the same as OBD2. The names sound similar, which causes endless confusion, but they are completely different systems.
 
 **DS2 (BMW proprietary):**
 - Developed by BMW for their own vehicles
@@ -33,7 +33,7 @@ Every E36 — regardless of market, year, or model — communicates internally u
 - Government-mandated emissions diagnostic standard
 - Communicates at 10,400 baud (ISO 9141)
 - Provides generic, standardised fault codes
-- Example output: "P0500 — Vehicle Speed Sensor Malfunction"
+- Example output: "P0500, Vehicle Speed Sensor Malfunction"
 
 The difference in diagnostic depth is enormous. A generic OBD2 scanner will give you a fault code and a one-line description. BMW's DS2 system tells you exactly what went wrong, when, how many times, and under what conditions.
 
@@ -45,7 +45,7 @@ Your E36 has a round 20-pin diagnostic connector located **under the hood**, typ
 
 | Pin | Function | Notes |
 |-----|----------|-------|
-| 1 | Chassis ground | — |
+| 1 | Chassis ground |, |
 | 14 | Battery positive (via fuse) | Powers the interface |
 | 15 | ADS data line (RxD/TxD) | Pre-facelift cars: main data pin |
 | 17 | OBD2 K-line (post-96 cars) | Facelift addition |
@@ -88,7 +88,7 @@ They always work together. You install both.
 - Check sensor plausibility (does the DME think the sensor readings make sense?)
 - Read DME hardware and software version numbers
 
-**Transmission (EGS) — automatic cars only:**
+**Transmission (EGS), automatic cars only:**
 - Read and clear fault codes
 - Monitor shift solenoid status
 - View ATF temperature
@@ -145,7 +145,7 @@ This is where most people waste money. Read carefully.
 
 **What it is:** A purpose-built cable that connects the 20-pin round diagnostic plug directly to an RS232 serial port on your laptop. It contains proper K-line transceivers and supports the ADS protocol natively.
 
-**What you get:** Full access to every single module on the car. DME, ABS, airbag, cluster, ZKE, HVAC — everything.
+**What you get:** Full access to every single module on the car. DME, ABS, airbag, cluster, ZKE, HVAC, everything.
 
 **What you need:**
 - ADS interface cable (round 20-pin to DB9 serial)
@@ -153,11 +153,11 @@ This is where most people waste money. Read carefully.
 - INPA/EDIABAS software installed
 
 **Where to buy:**
-- **one-stop-electronics.com** — High-quality dual-mode ADS/OBD interface, ~€50–70. Comes with 20-pin connector cable. This is the premium option.
-- **allegro.pl** — Polish marketplace, search for "BMW ADS interface" or "BMW INPA kabel ADS." Budget options from €20–30 including the round connector. Quality varies but many work perfectly.
-- **eBay** — Search for "BMW ADS interface RS232" or "Tiny ADS Interface BMW INPA." Avoid anything that only says "OBD2" without mentioning ADS.
+- **one-stop-electronics.com**: High-quality dual-mode ADS/OBD interface, ~€50–70. Comes with 20-pin connector cable. This is the premium option.
+- **allegro.pl**: Polish marketplace, search for "BMW ADS interface" or "BMW INPA kabel ADS." Budget options from €20–30 including the round connector. Quality varies but many work perfectly.
+- **eBay**: Search for "BMW ADS interface RS232" or "Tiny ADS Interface BMW INPA." Avoid anything that only says "OBD2" without mentioning ADS.
 
-**Critical warning about USB:** ADS mode does NOT work reliably through USB-to-serial converters. The timing requirements of the ADS protocol are too strict for virtual COM ports. If your laptop only has USB, do not buy an ADS serial interface — it will not work. Get a laptop with a real serial port instead (see laptop section below).
+**Critical warning about USB:** ADS mode does NOT work reliably through USB-to-serial converters. The timing requirements of the ADS protocol are too strict for virtual COM ports. If your laptop only has USB, do not buy an ADS serial interface. It will not work. Get a laptop with a real serial port instead (see laptop section below).
 
 ### Option b: k+dcan USB cable with 20-pin adapter
 
@@ -171,7 +171,7 @@ This is where most people waste money. Read carefully.
 - Any laptop with USB port
 - INPA/EDIABAS software with EDIABAS.ini set to `Interface = STD:OBD`
 
-**When this is acceptable:** If you're doing an engine swap and your primary concern is verifying the DME is happy — reading engine fault codes, monitoring sensor data, checking fuel trims — this setup covers that. You can always upgrade to a full ADS interface later.
+**When this is acceptable:** If you're doing an engine swap and your primary concern is verifying the DME is happy, reading engine fault codes, monitoring sensor data, checking fuel trims, this setup covers that. You can always upgrade to a full ADS interface later.
 
 **When this is NOT acceptable:** If you need to clear an airbag light for inspection (STK/MOT), diagnose ABS faults, or access the full instrument cluster on a pre-facelift car.
 
@@ -198,7 +198,7 @@ This is where most people waste money. Read carefully.
 
 **The catch for European E36s:** Most EU-spec cars did not have a check engine light wired from factory. The DME still outputs the signal, but it goes nowhere. To use the stomp test, you'd need to wire an LED or lamp to the diagnostic connector. Pin 2 on the 20-pin connector carries the CEL signal. Connect an LED (with appropriate resistor) between Pin 2 and ground (Pin 1), and you can read the blink codes.
 
-**Blink code format:** The CEL blinks in groups. For example, a code of 1222 would blink: 1 flash — pause — 2 flashes — pause — 2 flashes — pause — 2 flashes — long pause — then repeats. A code of 1000 means no faults stored.
+**Blink code format:** The CEL blinks in groups. For example, a code of 1222 would blink: 1 flash, pause, 2 flashes, pause, 2 flashes, pause, 2 flashes, long pause, then repeats. A code of 1000 means no faults stored.
 
 **Common E36 DME fault codes (stomp test):**
 
@@ -237,7 +237,7 @@ This is where most people waste money. Read carefully.
 
 ### For ads interface (option a)
 
-You need a laptop with a **native RS232 serial port** (DB9 connector). Modern laptops don't have these, so you're looking at older business-class machines. This is actually a feature, not a bug — these old ThinkPads are dirt cheap, bulletproof, and perfect for garage use.
+You need a laptop with a **native RS232 serial port** (DB9 connector). Modern laptops don't have these, so you're looking at older business-class machines. This is actually a feature, not a bug, these old ThinkPads are dirt cheap, bulletproof, and perfect for garage use.
 
 **Recommended models:**
 
@@ -247,15 +247,15 @@ You need a laptop with a **native RS232 serial port** (DB9 connector). Modern la
 | Lenovo ThinkPad T61 | Via UltraBase dock | Windows XP/7 | €25–45 | Slightly faster, dock adds serial |
 | IBM ThinkPad X60/X61 | Via UltraBase dock | Windows XP/7 | €20–35 | Compact, great for tight garages |
 | Dell Latitude D630 | Native DB9 | Windows XP/7 | €15–30 | Also commonly used |
-| Panasonic Toughbook CF-30 | Native DB9 | Windows XP/7 | €50–80 | Water/dust resistant — ideal for garage |
+| Panasonic Toughbook CF-30 | Native DB9 | Windows XP/7 | €50–80 | Water/dust resistant, ideal for garage |
 
 **Where to find them:**
-- bazos.sk / bazos.cz — Search for "ThinkPad T60" or "Dell Latitude D630"
-- allegro.pl — Often cheaper than Western European sources
-- eBay.de — Good selection of German business laptops being retired
+- bazos.sk / bazos.cz, Search for "ThinkPad T60" or "Dell Latitude D630"
+- allegro.pl, Often cheaper than Western European sources
+- eBay.de, Good selection of German business laptops being retired
 - Local electronic recycling centres sometimes sell them for next to nothing
 
-**Operating system:** Windows XP is the easiest to set up with INPA — no driver headaches, no compatibility issues. Windows 7 (32-bit) also works well. Avoid Windows 10/11 — INPA can be made to work but it's significantly more painful to configure.
+**Operating system:** Windows XP is the easiest to set up with INPA, no driver headaches, no compatibility issues. Windows 7 (32-bit) also works well. Avoid Windows 10/11, INPA can be made to work but it's significantly more painful to configure.
 
 **Tip:** Dedicate this laptop to BMW diagnostics only. Install XP, install INPA/EDIABAS, and leave it in the garage permanently. Don't try to make it a daily driver machine.
 
@@ -285,7 +285,7 @@ Any laptop with a USB port and Windows 7+ will work. The K+DCAN cable installs a
 
 1. Run the INPA installer
 2. Select installation directory: `C:\INPA`
-3. Select language (English or German — English is easier but German has more complete module definitions for some E36 variants)
+3. Select language (English or German, English is easier but German has more complete module definitions for some E36 variants)
 4. When prompted for vehicle models, ensure **E36** is selected (may appear under "Old Models" or "Alte Modelle")
 5. Complete installation
 
@@ -319,16 +319,16 @@ And in `C:\EDIABAS\BIN\OBD.INI`:
 Hardware=USB
 Port=COM3
 ```
-(Change COM3 to whatever port Windows assigned to your cable — check Device Manager → Ports)
+(Change COM3 to whatever port Windows assigned to your cable, check Device Manager → Ports)
 
 ### Step 4: first connection
 
 1. Connect your interface cable to the 20-pin diagnostic connector under the hood
 2. Turn ignition to position 2 (ON, engine off)
 3. Launch INPA from `C:\INPA\BIN\INPA.exe` (or the desktop shortcut)
-4. You should see the main menu — select your model group (E36 / Old Models / Alte Modelle)
+4. You should see the main menu, select your model group (E36 / Old Models / Alte Modelle)
 5. Select the module you want to access (start with DME/Motor)
-6. If INPA connects successfully, you'll see live data immediately — battery voltage, coolant temp, etc.
+6. If INPA connects successfully, you'll see live data immediately, battery voltage, coolant temp, etc.
 
 ### Troubleshooting first connection
 
@@ -337,7 +337,7 @@ Port=COM3
 | "Interface not found" | Wrong COM port in OBD.INI | Check Device Manager, update port number |
 | "No response from control unit" | Wrong interface type in EDIABAS.INI | ADS car set to STD:OBD, or vice versa |
 | Battery/ignition indicators blank | Interface not getting power from car | Check 20-pin connector for corrosion, verify ignition is ON |
-| Connects to DME but nothing else | Using K+DCAN adapter on ADS car | Expected behaviour — need true ADS interface for other modules |
+| Connects to DME but nothing else | Using K+DCAN adapter on ADS car | Expected behaviour, need true ADS interface for other modules |
 | "IFH-0009: Timeout" | USB-to-serial adapter failing in ADS mode | Get a laptop with native serial port |
 | INPA opens but no E36 option | Incomplete installation | Reinstall with E36 model files selected |
 
@@ -353,7 +353,7 @@ If you've just dropped an M50 into your E36 (or any engine swap), here's a diagn
 - Read all stored codes
 - Clear them
 - Run the engine for 5 minutes
-- Read again — any codes that return immediately indicate a current fault, not a historical one
+- Read again, any codes that return immediately indicate a current fault, not a historical one
 
 **2. Sensor plausibility**
 - Coolant temp sensor: should read ambient temperature on cold start, rising steadily to ~85–95°C at operating temperature
@@ -364,12 +364,12 @@ If you've just dropped an M50 into your E36 (or any engine swap), here's a diagn
 
 **3. Idle quality**
 - Idle speed should stabilise at ~750–800 RPM (M50)
-- Idle control valve duty cycle should be 30–50% (if maxed at 100% or at 0%, something is wrong — vacuum leak or faulty ICV)
-- Long-term fuel trim (adaptation values) should be within ±10% — if heavily positive, you have a lean condition (vacuum leak, weak fuel pump); if heavily negative, running rich (injector leak, faulty sensor)
+- Idle control valve duty cycle should be 30–50% (if maxed at 100% or at 0%, something is wrong, vacuum leak or faulty ICV)
+- Long-term fuel trim (adaptation values) should be within ±10%, if heavily positive, you have a lean condition (vacuum leak, weak fuel pump); if heavily negative, running rich (injector leak, faulty sensor)
 
 **4. Timing**
 - Ignition timing advance should be 10–15° at idle, advancing smoothly with RPM
-- Knock sensor should show no retard events at idle — if it does, check for knock sensor wiring issues or wrong fuel
+- Knock sensor should show no retard events at idle, if it does, check for knock sensor wiring issues or wrong fuel
 
 ### Other module checks
 
@@ -468,9 +468,9 @@ Print this, laminate it, keep it in the glovebox.
 
 ## Further reading
 
-- **BimmerForums.co.uk** — Thread: "BMW INPA E36 OBD OBD2 and ADS interfaces explained" by Joylove. The single best technical resource on E36 interface compatibility. Read the whole thread.
-- **one-stop-electronics.com** — FAQ section explains ADS vs OBD in detail with pinout diagrams.
-- **RealOEM.com** — Look up your car's exact specification to confirm which DME you have.
+- **BimmerForums.co.uk**: Thread: "BMW INPA E36 OBD OBD2 and ADS interfaces explained" by Joylove. The single best technical resource on E36 interface compatibility. Read the whole thread.
+- **one-stop-electronics.com**: FAQ section explains ADS vs OBD in detail with pinout diagrams.
+- **RealOEM.com**: Look up your car's exact specification to confirm which DME you have.
 
 ---
 

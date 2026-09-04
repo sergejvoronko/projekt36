@@ -111,8 +111,8 @@ You must use M3 exhaust manifolds, as the standard M50/M52 manifolds are highly 
 
 #### Intake & cooling
 *   **M50 Manifold Swap:** If you have an S52, the single most effective power upgrade is swapping its restrictive intake manifold for one from an M50 or S50. This is worth 15-20 hp at the top end. Kits are available from vendors like M50manifold.com to adapt the fuel rail and vacuum lines. Part number for the M50 manifold is **11611735728**.
-*   **Cooling System:** The stock 325i/328i radiator is adequate for street use. However, for track days or spirited driving in hot climates, an E36 M3 radiator (**17112227281**) or a quality aluminum upgrade (e.g., Mishimoto) is highly recommended. Ensure you bleed the cooling system properly using the bleed screw on the thermostat housing — air pockets are the enemy of these engines.
+*   **Cooling System:** The stock 325i/328i radiator is adequate for street use. However, for track days or spirited driving in hot climates, an E36 M3 radiator (**17112227281**) or a quality aluminum upgrade (e.g., Mishimoto) is highly recommended. Ensure you bleed the cooling system properly using the bleed screw on the thermostat housing, air pockets are the enemy of these engines.
 
 ## What's next?
 
-The stock 325i/328i brakes are marginal for this kind of power — E36 M3 brakes are the immediate next step. After that, look at suspension: coilovers and reinforced subframe mounts let you actually use what the engine is producing.
+The stock 325i/328i brakes are marginal for this kind of power, E36 M3 brakes are the immediate next step. After that, look at suspension: coilovers and reinforced subframe mounts let you actually use what the engine is producing.

@@ -95,7 +95,7 @@ With your adjustable parts installed, it's time to visit the alignment rack. The
 For those building a dedicated track or race car, two more concepts are worth considering.
 
 *   **Bump Steer Correction:** When you lower an E36 aggressively, the angle of the steering tie rod no longer matches the angle of the lower control arm. This causes the wheel to steer itself as the suspension moves up and down. To fix this, you can install **adjustable outer tie rod ends** that allow you to change the mounting point height, correcting the geometry. Kits from SLR Speed or Race-Skids are popular options, typically costing €300+.
-*   **Roll Center Correction:** Lowering a car also lowers its roll center—the geometric point around which the car's body rolls. A roll center that is too low can lead to excessive body roll. **Roll center correction kits**, which usually consist of extended ball joints and new outer tie rod ends, raise the roll center back to a more favorable position, improving chassis response.
+*   **Roll Center Correction:** Lowering a car also lowers its roll center, the geometric point around which the car's body rolls. A roll center that is too low can lead to excessive body roll. **Roll center correction kits**, which usually consist of extended ball joints and new outer tie rod ends, raise the roll center back to a more favorable position, improving chassis response.
 
 These are advanced modifications and are generally not necessary for a street or light track-day car. However, for a sub-100mm ride height, they become critical for predictable handling.
 

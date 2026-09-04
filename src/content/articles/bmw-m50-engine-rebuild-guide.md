@@ -27,7 +27,7 @@ This guide skips the basics of engine removal and teardown. We're starting with 
 
 Your engine is only as good as its foundation. A clean, straight, and properly toleranced block is non-negotiable. Don't cut corners here; any issues with the block will manifest as problems later.
 
-First, the block must be stripped of everything — freeze plugs, oil galley plugs, dowels. Take it to a reputable machine shop for a hot tank bath. This chemical cleaning process is far superior to any manual scrubbing and will leave your iron block looking factory-fresh, revealing any potential cracks in the process.
+First, the block must be stripped of everything, freeze plugs, oil galley plugs, dowels. Take it to a reputable machine shop for a hot tank bath. This chemical cleaning process is far superior to any manual scrubbing and will leave your iron block looking factory-fresh, revealing any potential cracks in the process.
 
 With the block clean, inspection and machining can begin.
 

@@ -7,7 +7,7 @@ date: "2026-05-25"
 hero: "e36-m52-to-m54-engine-swap-guide.webp"
 ---
 
-The M52 is a solid iron-block engine, but the M54 offers a lighter aluminium block, more modern engine management, and a real power bump — especially with the M54B30. The swap is well-trodden and mostly bolt-in, with the main work in wiring and fuel system adaptation.
+The M52 is a solid iron-block engine, but the M54 offers a lighter aluminium block, more modern engine management, and a real power bump, especially with the M54B30. The swap is well-trodden and mostly bolt-in, with the main work in wiring and fuel system adaptation.
 
 This guide is not for the faint of heart. It assumes you are comfortable with engine removal, fabrication, and wiring diagrams. We'll skip the basics of unbolting an engine and focus on the critical details that make this specific swap successful.
 
@@ -73,7 +73,7 @@ Do not waste time trying to make the M54 manifolds fit. They won't. The most com
 
 This is where most people get stuck. You are mating a modern CAN bus-based engine management system (MS43) to an older, simpler chassis. The goal is to integrate the M54 engine harness with the E36's main body connector, the X20.
 
-**The Strategy:** Use the complete M54 engine harness. Do not attempt to run the M54 on the old M52 MS41 DME — you will lose double VANOS control, electronic throttle, and create a tuning nightmare.
+**The Strategy:** Use the complete M54 engine harness. Do not attempt to run the M54 on the old M52 MS41 DME. You will lose double VANOS control, electronic throttle, and create a tuning nightmare.
 
 ### Modifying the harness
 
@@ -121,4 +121,4 @@ This setup costs less than €100 and is far more reliable than trying to modify
 
 ## What's next?
 
-First thing after the swap is a proper dyno tune. The EWS-delete flash gives you a base map, but a custom tune for your specific intake and exhaust is worth another 10–15 hp. After that, brakes and suspension — the stock 328i setup isn't built for 231 hp and 300 Nm.
+First thing after the swap is a proper dyno tune. The EWS-delete flash gives you a base map, but a custom tune for your specific intake and exhaust is worth another 10–15 hp. After that, brakes and suspension, the stock 328i setup isn't built for 231 hp and 300 Nm.

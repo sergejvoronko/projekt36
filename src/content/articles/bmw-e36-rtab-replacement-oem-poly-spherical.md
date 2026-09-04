@@ -76,7 +76,7 @@ Leading brands like Powerflex and Strongflex offer excellent, well-engineered ki
 
 For our Project 328i track car, we installed 95A Powerflex Black Series RTABs. The change was transformative. The rear of the car is now completely stable under threshold braking, and the "squirm" on corner exit is gone. The trade-off is a palpable increase in road and differential noise inside the car, and sharp bumps are felt more acutely.
 
-**Crucial Installation Note:** Polyurethane bushings MUST be installed with the supplied grease (typically a copper or silicone-based lubricant). Apply it liberally to all contact surfaces—the inner sleeve, the outer surface of the bushing, and the trailing arm bore. Failure to do so will result in suspension binding and persistent, maddening squeaking.
+**Crucial Installation Note:** Polyurethane bushings MUST be installed with the supplied grease (typically a copper or silicone-based lubricant). Apply it liberally to all contact surfaces, the inner sleeve, the outer surface of the bushing, and the trailing arm bore. Failure to do so will result in suspension binding and persistent, maddening squeaking.
 
 **Verdict:**
 *   **Best for:** Most enthusiasts. Dual-purpose street/track cars.

@@ -7,7 +7,7 @@ date: "2026-06-25"
 hero: "bmw-e36-m52-single-vanos-guide.webp"
 ---
 
-The M52's single VANOS controls intake cam timing — when it works, the engine pulls cleanly from 2,000 RPM. When the original Buna-N seals harden after 20+ years, oil pressure in the unit drops, cam timing drifts, and you get the classic flat-below-3000-RPM torque deficit and cold-start rattle. Rebuilding the unit with upgraded Viton seals is a 3–5 hour job and one of the most cost-effective engine repairs on the M52.
+The M52's single VANOS controls intake cam timing, when it works, the engine pulls cleanly from 2,000 RPM. When the original Buna-N seals harden after 20+ years, oil pressure in the unit drops, cam timing drifts, and you get the classic flat-below-3000-RPM torque deficit and cold-start rattle. Rebuilding the unit with upgraded Viton seals is a 3–5 hour job and one of the most cost-effective engine repairs on the M52.
 
 ## TL;DR
 
@@ -116,4 +116,4 @@ This is where attention to detail separates a successful job from a disaster. Do
 
 ## What's next?
 
-After starting the engine, it may run rough for the first 20–30 seconds as the VANOS unit self-bleeds and fills with oil. Take the car for a drive — the low-end torque and idle stability should be noticeably improved. With the valve cover off, this is also the right time to check spark plugs and address the oil filter housing gasket if it's leaking.
+After starting the engine, it may run rough for the first 20–30 seconds as the VANOS unit self-bleeds and fills with oil. Take the car for a drive, the low-end torque and idle stability should be noticeably improved. With the valve cover off, this is also the right time to check spark plugs and address the oil filter housing gasket if it's leaking.
