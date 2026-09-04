@@ -1,6 +1,7 @@
 ---
 title: "BMW E36 OBD1 Wiring Pinout Reference: DME Connector, Sensor Wires, and Diagnostic Port Explained"
-description: "A complete pinout reference for the BMW E36 DME connector covering OBD1 M50/M52 sensor wiring, diagnostic port signals, and common fault traces. Written for mechanics and builders doing E36 engine swaps, harness repairs, or standalone ECU work."
+seoTitle: "BMW E36 OBD1 DME Pinout: Connector and Sensor Wires"
+description: "A complete pinout reference for the BMW E36 DME connector covering OBD1 M50/M52 sensor wiring, diagnostic port signals, and common fault traces."
 pillar: reference
 keywords: "BMW E36 DME pinout, M50 ECU connector wiring, E36 OBD1 sensor wiring reference"
 date: "2026-05-18"

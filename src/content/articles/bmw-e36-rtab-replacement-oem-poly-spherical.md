@@ -1,6 +1,7 @@
 ---
 title: "BMW E36 Rear Trailing Arm Bushing (RTAB) Replacement: OEM vs. Poly vs. Spherical"
-description: "We compare OEM rubber, polyurethane, and spherical bearings for the E36's critical rear trailing arm bushings. This guide helps E36 owners choose the right RTAB for their street, track, or race build."
+seoTitle: "E36 RTAB Replacement: OEM vs Poly vs Spherical"
+description: "We compare OEM rubber, polyurethane, and spherical bearings for the E36's critical rear trailing arm bushings."
 pillar: suspension
 keywords: "E36 RTAB, E36 rear trailing arm bushing, E36 suspension, E36 polyurethane bushings, E36 spherical bearings, E36 suspension upgrade"
 date: "2026-06-29"

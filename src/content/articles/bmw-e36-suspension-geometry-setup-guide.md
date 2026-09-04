@@ -1,6 +1,7 @@
 ---
 title: "BMW E36 Suspension Geometry Setup: Optimizing for Street, Track, and Drift"
-description: "A deep dive into E36 suspension geometry, covering camber, caster, and toe adjustments for street, track, and drift use. This guide is for E36 owners looking to dial in their car's handling with specific parts and alignment specs."
+seoTitle: "BMW E36 Suspension Geometry: Street, Track, Drift"
+description: "A deep dive into E36 suspension geometry, covering camber, caster, and toe adjustments for street, track, and drift use."
 pillar: suspension
 keywords: "E36 suspension geometry, E36 alignment, E36 camber, E36 caster, E36 toe, track setup, drift setup, adjustable control arms, camber plates"
 date: "2026-07-27"

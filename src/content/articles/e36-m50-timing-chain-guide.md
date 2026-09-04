@@ -1,6 +1,7 @@
 ---
 title: "BMW M50 Timing Chain Guide: Tensioner, Guides, and When to Replace Everything"
-description: "A complete technical breakdown of the M50 timing chain system, tensioner failure modes, guide wear patterns, OEM vs aftermarket parts, and a full replacement parts list. Written for E36 builders and M50 swap owners who want to do this job properly once."
+seoTitle: "BMW M50 Timing Chain: Tensioner, Guides, Replacement"
+description: "A complete technical breakdown of the M50 timing chain system, tensioner failure modes, guide wear patterns, OEM vs aftermarket parts."
 pillar: engine
 keywords: "BMW M50 timing chain replacement, M50 timing tensioner failure, E36 timing chain guide"
 date: "2026-05-07"

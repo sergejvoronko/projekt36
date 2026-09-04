@@ -1,6 +1,7 @@
 ---
 title: "BMW E36 OBD1 Live Data, What Every Sensor Reading Actually Means"
-description: "A complete reference for interpreting INPA and OBD1 live data on the BMW E36 M50/M52 engine. Written for DIY tuners and diagnosticians who want to know exactly what normal looks like."
+seoTitle: "BMW E36 OBD1 Live Data: What Each Reading Means"
+description: "A complete reference for interpreting INPA and OBD1 live data on the BMW E36 M50/M52 engine."
 pillar: reference
 keywords: "BMW E36 OBD1 live data, INPA sensor values E36, BMW M50 sensor readings explained"
 date: "2026-05-14"

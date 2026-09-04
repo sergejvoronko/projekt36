@@ -1,5 +1,6 @@
 ---
 title: "BMW E36 Suspension Refresh, What to Replace, When, and Alignment Targets"
+seoTitle: "BMW E36 Suspension Refresh: Parts and Alignment"
 description: "How to refresh BMW E36 suspension: what wears first, what to replace, OEM brands, and alignment targets for a road car."
 pillar: reference
 keywords: "bmw e36 suspension refresh, e36 coilovers, e36 wheel bearing, e36 control arm bushes, e36 alignment specs"

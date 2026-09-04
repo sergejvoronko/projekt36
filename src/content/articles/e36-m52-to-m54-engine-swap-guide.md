@@ -1,6 +1,6 @@
 ---
 title: "BMW E36 M52 to M54 Engine Swap: The Ultimate Guide"
-description: "A complete guide to swapping the modern, lightweight M54 engine into your BMW E36. This article covers the mechanical, electrical, and fueling requirements for a successful M52-to-M54 conversion."
+description: "A complete guide to swapping the modern, lightweight M54 engine into your BMW E36."
 pillar: swap
 keywords: "E36 M54 swap, M52 to M54 conversion, E36 engine swap wiring, M54 swap parts list, E36 M54 DME adaptation, BMW E36 performance upgrade"
 date: "2026-05-25"

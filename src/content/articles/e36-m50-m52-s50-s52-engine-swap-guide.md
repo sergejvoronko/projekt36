@@ -1,6 +1,6 @@
 ---
 title: "BMW E36 M50/M52 to S50/S52 Engine Swap: The Definitive Guide"
-description: "A complete technical guide for swapping a US-spec S50 or S52 M3 engine into a non-M BMW E36. This article covers part selection, wiring, mechanical installation, and common pitfalls for the experienced DIYer."
+description: "A complete technical guide for swapping a US-spec S50 or S52 M3 engine into a non-M BMW E36."
 pillar: swap
 keywords: "E36 S50 swap, E36 S52 swap, M50 to S50 conversion, M52 to S52 conversion, BMW E36 engine swap, S50/S52 wiring, E36 S50 parts list, E36 S52 cooling adaptation"
 date: "2026-06-12"

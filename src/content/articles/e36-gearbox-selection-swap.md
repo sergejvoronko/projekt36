@@ -1,5 +1,6 @@
 ---
 title: "BMW E36 Gearbox Selection, ZF, Getrag, and What to Use for an M50 Swap"
+seoTitle: "BMW E36 Gearbox Guide: ZF vs Getrag for an M50 Swap"
 description: "ZF 310 vs Getrag 420G vs S5D-320Z for the E36 M50 swap: ratios, compatibility, prop shaft, and which to choose."
 pillar: swap
 keywords: "bmw e36 gearbox, e36 manual gearbox, getrag 420g, zf 310, s5d-320z, e36 m50 gearbox, bmw e36 transmission"

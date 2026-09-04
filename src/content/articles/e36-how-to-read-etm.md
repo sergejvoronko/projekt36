@@ -1,5 +1,6 @@
 ---
 title: "How to Read the BMW E36 Electrical Troubleshooting Manual (ETM)"
+seoTitle: "How to Read the BMW E36 ETM Wiring Diagrams"
 description: "How to navigate the BMW E36 ETM: wire colour codes, component numbers, fuse assignments, and tracing any circuit."
 pillar: reference
 keywords: "bmw e36 etm, e36 wiring diagram, e36 electrical manual, bmw wire colour codes, e36 circuit tracing"

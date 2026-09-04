@@ -1,5 +1,6 @@
 export const prerender = false;
 
+import { env } from 'cloudflare:workers';
 import type { APIRoute } from 'astro';
 
 interface PrintifyProduct {
@@ -7,11 +8,10 @@ interface PrintifyProduct {
   external?: { id: string; handle: string };
 }
 
-export const GET: APIRoute = async ({ params, locals, redirect }) => {
+export const GET: APIRoute = async ({ params, redirect }) => {
   const { id } = params;
   if (!id) return redirect('/shop', 302);
 
-  const { env } = locals.runtime;
   const token    = env?.PRINTIFY_API_TOKEN;
   const shopId   = env?.PRINTIFY_SHOP_ID;
   const storeUrl = env?.PRINTIFY_STORE_URL ?? '';

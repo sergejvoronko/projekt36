@@ -1,6 +1,7 @@
 ---
 title: "BMW E36 Seat Restoration: Complete Guide to Foam, Upholstery, and Frame Repair"
-description: "A comprehensive guide to rebuilding tired E36 seats, from sagging foam and torn upholstery to common frame failures. This is for E36 owners looking to bring their interior back to life without replacing the entire seat."
+seoTitle: "BMW E36 Seat Restoration: Foam, Trim and Frames"
+description: "A comprehensive guide to rebuilding tired E36 seats, from sagging foam and torn upholstery to common frame failures."
 pillar: interior
 keywords: "E36 seat restoration, BMW E36 interior, E36 sport seat repair, E36 foam replacement, E36 upholstery"
 date: "2026-07-20"

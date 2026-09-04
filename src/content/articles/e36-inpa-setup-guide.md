@@ -1,5 +1,6 @@
 ---
 title: "INPA on BMW E36, Cable, Software, and What You Can Actually Do With It"
+seoTitle: "INPA on a BMW E36: Cable, Software and Setup"
 description: "INPA on the BMW E36: which cable to buy, how to install the software, what each module shows, and the tests that save time."
 pillar: reference
 keywords: "bmw e36 inpa, e36 diagnostics, k-dcan cable, inpa setup, bmw obd diagnostic, e36 fault codes"

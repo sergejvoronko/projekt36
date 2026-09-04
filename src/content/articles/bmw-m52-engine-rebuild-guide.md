@@ -1,6 +1,6 @@
 ---
 title: "BMW M52 Engine Rebuild: A Complete Guide from Block to Head"
-description: "An in-depth, step-by-step guide to rebuilding the BMW M52 engine for E36 owners. We cover every critical component, part number, torque spec, and real-world tip from teardown to first start."
+description: "An in-depth, step-by-step guide to rebuilding the BMW M52 engine for E36 owners."
 pillar: engine
 keywords: "BMW M52 rebuild, M52 engine guide, E36 M52 engine, M52 block rebuild, M52 head rebuild, M52 torque specs, E36 engine restoration"
 date: "2026-06-22"

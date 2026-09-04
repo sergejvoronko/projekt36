@@ -1,6 +1,7 @@
 ---
 title: "BMW E36 Paint Preparation: The Definitive Guide to DIY Respray Prep"
-description: "This guide provides a comprehensive, step-by-step process for preparing a BMW E36 for a full respray. It's written for the serious DIY enthusiast who understands that a flawless paint job starts with a perfect foundation."
+seoTitle: "BMW E36 Paint Prep: DIY Respray, Step by Step"
+description: "This guide provides a comprehensive, step-by-step process for preparing a BMW E36 for a full respray."
 pillar: body
 keywords: "E36 paint prep, BMW respray guide, E36 bodywork, car paint preparation, DIY car paint, rust treatment E36"
 date: "2026-05-31"

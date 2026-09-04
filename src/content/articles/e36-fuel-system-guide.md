@@ -1,5 +1,6 @@
 ---
 title: "BMW E36 Fuel System, Pump, Filter, Pressure Testing, and Injectors"
+seoTitle: "BMW E36 Fuel System: Pump, Filter and Injectors"
 description: "BMW E36 fuel system: testing the pump, replacing the filter, pressure testing, and diagnosing injector faults."
 pillar: reference
 keywords: "bmw e36 fuel pump, e36 fuel pressure, e36 fuel filter, e36 injectors, e36 fuel system diagnosis"

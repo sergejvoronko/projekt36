@@ -1,6 +1,7 @@
 ---
 title: "M50 Swap Cooling Adaptation: Radiator, Thermostat Housing, and Expansion Tank Explained"
-description: "A hands-on guide to adapting the cooling system when swapping an M50 into an E36 M43 chassis. Covers radiator fitment, thermostat housing differences, expansion tank routing, and the parts you'll actually need."
+seoTitle: "M50 Swap Cooling: Radiator, Thermostat, Expansion Tank"
+description: "A hands-on guide to adapting the cooling system when swapping an M50 into an E36 M43 chassis."
 pillar: swap
 keywords: "M50 swap cooling system, E36 M50 radiator fitment, M43 to M50 cooling adaptation"
 date: "2026-05-11"

@@ -1,6 +1,7 @@
 ---
 title: "BMW E36 M52 Single VANOS: Diagnosis, Rebuild, and Optimization Guide"
-description: "A comprehensive guide to diagnosing common M52 single VANOS issues, rebuilding the unit with upgraded seals, and correctly setting timing for restored performance. Essential reading for any E36 owner looking to tackle this common but critical maintenance task."
+seoTitle: "BMW E36 M52 Single VANOS: Diagnose and Rebuild"
+description: "A comprehensive guide to diagnosing common M52 single VANOS issues, rebuilding the unit with upgraded seals."
 pillar: engine
 keywords: "E36 M52 VANOS, single VANOS rebuild, M52 VANOS seals, VANOS timing, BMW VANOS failure, Beisan seals, E36 M52 engine"
 date: "2026-06-25"

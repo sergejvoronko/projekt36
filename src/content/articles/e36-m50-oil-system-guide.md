@@ -1,6 +1,7 @@
 ---
 title: "BMW M50 Oil System Guide: Pump, Sump, Pickup Tube, and Pressure Diagnosis"
-description: "A complete technical breakdown of the M50 oil system covering pump replacement, sump and pickup tube selection, and low oil pressure diagnosis. Written for E36 builders and M50 swap owners who need real specs, part numbers, and pricing."
+seoTitle: "BMW M50 Oil System: Pump, Sump and Pressure Faults"
+description: "A complete technical breakdown of the M50 oil system covering pump replacement, sump and pickup tube selection, and low oil pressure diagnosis."
 pillar: engine
 keywords: "BMW M50 oil pressure, M50 oil pump replacement, E36 low oil pressure diagnosis"
 date: "2026-05-04"

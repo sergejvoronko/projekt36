@@ -1,6 +1,7 @@
 ---
 title: "BMW E36 M52/S52 OBD2 Diagnostics: Comprehensive Guide to Codes, Live Data, and Common Issues"
-description: "A deep dive into diagnosing the late-model E36 M52 and S52 engines using OBD2 tools, from basic code readers to advanced software like INPA/ISTA. This guide is for E36 owners and DIY mechanics looking to accurately troubleshoot engine performance issues."
+seoTitle: "BMW E36 M52/S52 OBD2 Diagnostics: Codes & Live Data"
+description: "A deep dive into diagnosing the late-model E36 M52 and S52 engines using OBD2 tools, from basic code readers to advanced software like INPA/ISTA."
 pillar: reference
 keywords: "BMW E36, M52, S52, OBD2 diagnostics, fault codes, live data, INPA, ISTA, engine troubleshooting"
 date: "2026-07-18"

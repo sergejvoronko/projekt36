@@ -1,6 +1,7 @@
 ---
 title: "BMW M50 Head Gasket Replacement: Step-by-Step Guide with Torque Specs and What to Check While You're In There"
-description: "A complete, spec-accurate walkthrough of replacing the head gasket on an M50-engined E36, including torque sequences, what to inspect while the head is off, and parts worth sourcing before you start. Written for DIYers who already know their way around an engine bay."
+seoTitle: "BMW M50 Head Gasket Replacement and Torque Specs"
+description: "A complete, spec-accurate walkthrough of replacing the head gasket on an M50-engined E36, including torque sequences, what to inspect while the head is off."
 pillar: engine
 keywords: "M50 head gasket replacement, BMW E36 head gasket, M50 head bolt torque sequence"
 date: "2026-04-27"

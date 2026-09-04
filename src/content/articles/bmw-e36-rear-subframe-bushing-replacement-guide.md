@@ -1,6 +1,7 @@
 ---
 title: "BMW E36 Rear Subframe Bushing Replacement: A Definitive Guide"
-description: "A comprehensive guide to replacing the four critical rear subframe bushings on your BMW E36. This article covers why it's necessary, bushing material choices, the tools required, and the step-by-step process."
+seoTitle: "BMW E36 Rear Subframe Bushing Replacement Guide"
+description: "A comprehensive guide to replacing the four critical rear subframe bushings on your BMW E36."
 pillar: suspension
 keywords: "E36 subframe bushings, rear subframe replacement, E36 suspension refresh, Powerflex E36, subframe reinforcement"
 date: "2026-07-23"

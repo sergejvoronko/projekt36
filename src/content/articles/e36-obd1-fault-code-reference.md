@@ -1,6 +1,7 @@
 ---
 title: "BMW E36 OBD1 Fault Codes, Complete Reference: Every Code, What It Means, and What to Check First"
-description: "A complete, no-fluff reference for every BMW E36 OBD1 DME fault code, what each code means, which sensors and circuits to test first, and what they look like in real-world diagnostics. Written for E36 owners and builders who already know their way around a wrench."
+seoTitle: "BMW E36 OBD1 Fault Codes: Full Reference List"
+description: "A complete, no-fluff reference for every BMW E36 OBD1 DME fault code, what each code means, which sensors and circuits to test first."
 pillar: reference
 keywords: "BMW E36 OBD1 fault codes, E36 DME fault code list, BMW E36 diagnostic codes M50"
 date: "2026-04-30"

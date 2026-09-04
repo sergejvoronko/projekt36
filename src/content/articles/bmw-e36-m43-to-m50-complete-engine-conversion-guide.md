@@ -1,6 +1,7 @@
 ---
 title: "BMW E36 M43 to M50 Engine Conversion: The Complete Step-by-Step Guide"
-description: "A comprehensive guide to swapping the M43 four-cylinder engine for the legendary M50 six-cylinder in your BMW E36. This article covers parts, wiring, cooling, and common pitfalls for a successful conversion."
+seoTitle: "BMW E36 M43 to M50 Swap: Complete Conversion Guide"
+description: "A comprehensive guide to swapping the M43 four-cylinder engine for the legendary M50 six-cylinder in your BMW E36."
 pillar: swap
 keywords: "M43 to M50 swap, E36 engine conversion, M50 swap guide, engine swap wiring, E36 cooling upgrade"
 date: "2026-08-17"

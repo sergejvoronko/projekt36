@@ -1,6 +1,7 @@
 ---
 title: "BMW E36 M50/M52 Engine Sensor Diagnosis & Replacement: The Definitive Guide"
-description: "A comprehensive guide to diagnosing and replacing the critical engine sensors on the BMW E36 M50 and M52 engines. This article is for owners who need to solve running issues, from no-starts to poor fuel economy."
+seoTitle: "BMW E36 M50/M52 Sensor Diagnosis and Replacement"
+description: "A comprehensive guide to diagnosing and replacing the critical engine sensors on the BMW E36 M50 and M52 engines."
 pillar: engine
 keywords: "E36 engine sensors, M50 sensor diagnosis, M52 sensor replacement, crankshaft position sensor E36, camshaft position sensor E36, MAF sensor testing, O2 sensor E36, throttle position sensor E36, engine coolant temperature sensor E36"
 date: "2026-06-21"

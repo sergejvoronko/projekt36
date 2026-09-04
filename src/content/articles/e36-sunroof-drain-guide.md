@@ -1,5 +1,6 @@
 ---
 title: "BMW E36 Sunroof Drains, Where They Go and How to Unblock Them"
+seoTitle: "BMW E36 Sunroof Drains: Where They Go, How to Clear"
 description: "BMW E36 sunroof drain paths, why they block, how to clear them, and the electrical damage caused when neglected."
 pillar: reference
 keywords: "bmw e36 sunroof drain, e36 water leak, e36 sunroof blocked drain, e36 water damage electrical, bmw e36 wet carpet"

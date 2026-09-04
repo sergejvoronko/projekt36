@@ -5,6 +5,8 @@ const articles = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/articles' }),
   schema: z.object({
     title:       z.string(),
+    // shorter tag for the SERP; the H1 keeps the full descriptive title
+    seoTitle:    z.string().optional(),
     description: z.string(),
     pillar:      z.enum(['engine', 'swap', 'body', 'suspension', 'interior', 'reference']),
     keywords:    z.string().optional(),

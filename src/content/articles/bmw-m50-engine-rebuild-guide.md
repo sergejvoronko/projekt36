@@ -1,6 +1,7 @@
 ---
 title: "BMW M50 Engine Rebuild: Block to Head, Every Step and Part Explained"
-description: "A comprehensive guide to rebuilding the legendary BMW M50 inline-six, from block machining to final head torque. This article is for the serious E36 owner looking to restore or build their engine to factory-fresh spec."
+seoTitle: "BMW M50 Engine Rebuild: Every Step, Block to Head"
+description: "A comprehensive guide to rebuilding the legendary BMW M50 inline-six, from block machining to final head torque."
 pillar: engine
 keywords: "M50 engine rebuild, BMW E36 engine, M50 rebuild guide, engine assembly, cylinder head rebuild, engine block machining, M50 torque specs, engine bearing clearances, E36 M50 restoration"
 date: "2026-05-22"

@@ -1,6 +1,7 @@
 ---
 title: "M52TU Double VANOS in the E36: A Complete Guide to Diagnosis, Repair, and Upgrades"
-description: "A deep dive into the M52TU double VANOS system, specifically for E36 chassis swaps. Learn to diagnose common failures, perform a complete seal and rattle repair, and unlock hidden performance."
+seoTitle: "E36 M52TU Double VANOS: Diagnosis, Repair, Upgrades"
+description: "A deep dive into the M52TU double VANOS system, specifically for E36 chassis swaps."
 pillar: engine
 keywords: "M52 VANOS, double VANOS repair, E36 M52 rattle, VANOS seal replacement, Beisan Systems"
 date: "2026-05-28"

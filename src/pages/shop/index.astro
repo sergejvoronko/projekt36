@@ -1,6 +1,7 @@
 ---
 export const prerender = false;
 
+import { env } from 'cloudflare:workers';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 interface PrintifyImage {
@@ -23,7 +24,6 @@ interface PrintifyProduct {
   visible: boolean;
 }
 
-const { env } = Astro.locals.runtime;
 const token   = env?.PRINTIFY_API_TOKEN;
 const shopId  = env?.PRINTIFY_SHOP_ID;
 
