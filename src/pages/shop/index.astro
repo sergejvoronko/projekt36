@@ -9,7 +9,8 @@ import liveProducts from '../../data/merch.json';
 
 const byId = new Map(liveProducts.map((p: any) => [p.id, p]));
 const items = designs.map((d: any) => ({ ...d, live: byId.get(d.productId) }));
-const fmtPrice = (usd: number) => `$${usd.toFixed(2)}`;
+// Printify prices are in the Etsy shop currency, EUR.
+const fmtPrice = (eur: number) => `€${eur.toFixed(2)}`;
 ---
 
 <BaseLayout
