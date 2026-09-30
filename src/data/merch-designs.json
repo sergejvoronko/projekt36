@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "slug": "2-the-10mm",
+    "productId": "6abcca005ae8687d68094343",
+    "name": "The 10mm",
+    "blurb": "Every toolbox has a gap where the 10mm used to be. This one grew wings.",
+    "tag": "New",
+    "products": [
+      "Tee"
+    ],
+    "w": 844,
+    "h": 900
+  },
+  {
+    "slug": "1-status-project",
+    "productId": "6abcc0a15ae8687d68093e59",
+    "name": "Status: Project",
+    "blurb": "The car's on stands, one wheel is off, and the 10mm is somewhere under it. Status: project.",
+    "tag": "New",
+    "products": [
+      "Tee"
+    ],
+    "w": 752,
+    "h": 900
+  }
+]
