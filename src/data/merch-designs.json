@@ -1,5 +1,17 @@
 [
   {
+    "slug": "3-the-coolant-system",
+    "productId": "6abce3deb9571bfd39037aef",
+    "name": "The Coolant System",
+    "blurb": "For anyone who has topped up the coolant, checked the tank, and topped it up again. May it never crack.",
+    "tag": "New",
+    "products": [
+      "Tee"
+    ],
+    "w": 900,
+    "h": 785
+  },
+  {
     "slug": "2-the-10mm",
     "productId": "6abcca005ae8687d68094343",
     "name": "The 10mm",
