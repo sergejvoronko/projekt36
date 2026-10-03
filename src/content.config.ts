@@ -13,6 +13,12 @@ const articles = defineCollection({
     date:        z.string().optional(),
     hero:        z.string().optional(),
     draft:       z.boolean().optional().default(false),
+    // Set when an article has been fact-checked against the listed sources.
+    reviewed:    z.string().optional(),
+    sources:     z.array(z.object({
+      title: z.string(),
+      url:   z.string().url().optional(), // print-only sources (e.g. the Bentley manual) have none
+    })).optional(),
   }),
 });
 

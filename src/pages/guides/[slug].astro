@@ -42,7 +42,7 @@ const jsonLd = {
   headline: article.data.title,
   description: article.data.description,
   datePublished: article.data.date ?? '',
-  dateModified:  article.data.date ?? '',
+  dateModified:  article.data.reviewed ?? article.data.date ?? '',
   author: { '@type': 'Person', name: 'projekt36' },
   publisher: {
     '@type': 'Organization', name: 'projekt36', url: siteBase,
@@ -84,6 +84,11 @@ const jsonLd = {
       <p class="article-desc">{article.data.description}</p>
       <div class="article-meta">
         {article.data.date && <span class="meta-date">{article.data.date}</span>}
+        {article.data.reviewed && (
+          <a class="meta-checked" href="#sources" title="Every spec in this guide was checked against the sources listed at the end">
+            Fact-checked {new Date(`${article.data.reviewed}T00:00:00Z`).toLocaleDateString('en-GB', { month: 'long', year: 'numeric', timeZone: 'UTC' })}
+          </a>
+        )}
         <button class="btn-print" onclick="window.print()" title="Print / Save as PDF">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
           PDF
@@ -94,6 +99,18 @@ const jsonLd = {
     <div class="article-body" id="article-body">
       <Content />
     </div>
+
+    {article.data.sources && article.data.sources.length > 0 && (
+      <section class="article-sources" id="sources" aria-labelledby="sources-title">
+        <h2 id="sources-title">Sources</h2>
+        <p>Specs and procedures in this guide were checked against:</p>
+        <ul>
+          {article.data.sources.map((s) => (
+            <li>{s.url ? <a href={s.url} rel="noopener" target="_blank">{s.title}</a> : s.title}</li>
+          ))}
+        </ul>
+      </section>
+    )}
 
     <AuthorBox />
     <SubscribeBox />
@@ -308,6 +325,36 @@ const jsonLd = {
     font-size: 0.7rem;
     color: var(--text-dim);
   }
+  .meta-checked {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.04em;
+    color: var(--green);
+    border: 1px solid color-mix(in srgb, var(--green) 45%, transparent);
+    padding: 0.25em 0.65em;
+    text-decoration: none;
+  }
+  .meta-checked::before { content: '✓ '; }
+  .meta-checked:hover { border-color: var(--green); }
+  .article-sources {
+    margin: 2.5rem 0 1rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--text-mid);
+  }
+  .article-sources h2 {
+    font-size: 0.75rem;
+    font-family: var(--font-mono);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin: 0 0 0.5rem;
+  }
+  .article-sources p { margin: 0 0 0.5rem; }
+  .article-sources ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.3rem; }
+  .article-sources a { color: var(--text-mid); text-decoration: underline; text-underline-offset: 2px; }
+  .article-sources a:hover { color: var(--accent); }
   .btn-print {
     display: inline-flex;
     align-items: center;
