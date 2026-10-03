@@ -1,7 +1,7 @@
 ---
 title: "BMW E36 OBD1 Fault Codes, Complete Reference: Every Code, What It Means, and What to Check First"
 seoTitle: "BMW E36 OBD1 Fault Codes: Full Reference List"
-description: "Every BMW E36 OBD1 (1992-1995) DME blink code from the Bentley manual, what it means, what to check first, and how to read and erase codes with just the accelerator pedal."
+description: "Every BMW E36 OBD1 (1992-1995) DME fault code from the Bentley manual, what it means and what to check first, plus the accelerator-pedal blink method on US-spec cars."
 pillar: reference
 keywords: "BMW E36 OBD1 fault codes, E36 DME fault code list, BMW E36 diagnostic codes M50"
 date: "2026-04-30"
@@ -9,17 +9,21 @@ hero: "e36-obd1-fault-code-reference.webp"
 reviewed: "2026-10-03"
 sources:
   - title: "Bentley Publishers: BMW 3 Series (E36) Service Manual 1992–1998, 100 Engine–General, Table d: OBD I Fault (Blink) Codes"
+  - title: "Pelican Parts: BMW E30/E36 fuel injection fault code reading (US-spec blink codes)"
+    url: "https://www.pelicanparts.com/BMW/techarticles/Mult-Code_Reading/Mult-Code_Reading.htm"
 ---
 
 ## TL;DR
 
 - **What:** The complete list of OBD1 fault codes for the E36's Bosch DME, from the Bentley manual, with what to check first for each.
 - **Which cars:** **1992–1995** E36s use OBD1. From 1996 the cars use **OBD2**, which needs an OBD2 scan tool and uses completely different codes.
-- **No tools needed to read them:** with the ignition on, press the accelerator pedal fully **five times within five seconds**, and the Check Engine light blinks the codes out.
+- **Reading them:** on **US-spec** cars, pressing the accelerator pedal fully **five times within five seconds** (ignition on) makes the Check Engine light blink the codes out. This feature was a US emissions requirement: **many European-spec E36s have no Check Engine light**, so the blink method may show nothing. There, read the codes with a BMW-capable diagnostic tool on the 20-pin connector.
 
 ---
 
-## Reading the codes with the accelerator pedal
+## Reading the codes with the accelerator pedal (US-spec cars)
+
+This procedure is from the US-market Bentley manual. It needs a working **Check Engine light** in the instrument cluster, which many European-spec cars don't have. Without one, use a diagnostic tool instead (see the [OBD1 diagnostic setup guide](/guides/e36-obd1-diagnostic-setup)). The code meanings below apply either way.
 
 1. Turn the ignition **on** (engine off).
 2. Press the accelerator pedal **fully to the floor five times within five seconds**.
@@ -108,6 +112,6 @@ Idle speed, idle mixture and ignition timing **are not adjustable** on these eng
 
 ## Tools
 
-The pedal method shows the stored codes. For **live data** (sensor values while the engine runs), you need a BMW-capable diagnostic tool connected to the round 20-pin diagnostic connector under the bonnet. See the [OBD1 diagnostic setup guide](/guides/e36-obd1-diagnostic-setup).
+On US-spec cars the pedal method shows the stored codes. On cars without a Check Engine light, and for **live data** (sensor values while the engine runs), you need a BMW-capable diagnostic tool connected to the round 20-pin diagnostic connector under the bonnet. See the [OBD1 diagnostic setup guide](/guides/e36-obd1-diagnostic-setup).
 
 Standard OBD2 code readers don't work on OBD1 cars.

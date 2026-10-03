@@ -133,4 +133,4 @@ See the [fuel system guide](/guides/e36-fuel-system-guide) and the [charging sys
 
 Live data needs a BMW-capable diagnostic tool on the round **20-pin diagnostic connector** under the bonnet. See the [OBD1 diagnostic setup guide](/guides/e36-obd1-diagnostic-setup). Labels and units differ between tools, so the most reliable baseline is a **recording from your own car when it runs well**: log idle, part throttle and a few full-throttle runs, and compare later readings with that.
 
-For stored fault codes, no tool is needed at all: see the [OBD1 fault code reference](/guides/e36-obd1-fault-code-reference).
+For stored fault codes, US-spec cars with a Check Engine light can use the accelerator-pedal blink method; other cars need the diagnostic tool. See the [OBD1 fault code reference](/guides/e36-obd1-fault-code-reference).

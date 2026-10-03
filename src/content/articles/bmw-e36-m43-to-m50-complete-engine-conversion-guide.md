@@ -87,7 +87,7 @@ The M50 engine harness **plugs into the same chassis connector** the four-cylind
 1. Before starting, check all fluid levels and look for fuel leaks with the ignition on.
 2. On the first start, watch **oil pressure**, the **charging voltage** (13.5–14.5 V at the battery) and the **temperature**.
 3. Run the engine to operating temperature, let it cool, and recheck the coolant level.
-4. If it cranks but won't start, check the immobiliser and the DME's power and grounds first. Then read the fault codes with the accelerator pedal: see the [OBD1 fault code reference](/guides/e36-obd1-fault-code-reference).
+4. If it cranks but won't start, check the immobiliser and the DME's power and grounds first. Then read the fault codes (with a diagnostic tool; the accelerator-pedal blink method only works on cars with a Check Engine light): see the [OBD1 fault code reference](/guides/e36-obd1-fault-code-reference).
 
 ---
 

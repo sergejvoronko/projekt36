@@ -76,4 +76,4 @@ The DME doesn't switch these. Fit the six-cylinder auxiliary fan and make sure t
 2. **DME supplies:** battery voltage at all times (terminal 30), with the key on (terminal 15), and from the main relay. Check at the DME connector following Bentley's safe-testing rules.
 3. **Charging:** the alternator's **D+** wire connected; the charge warning light on with the ignition on; **13.5–14.5 V** at the battery with the engine running. See the [charging guide](/guides/e36-charging-system-diagnosis).
 4. **Fuel pump:** the DME switches the fuel pump relay only when it sees the crankshaft signal. No pump while cranking points at the crankshaft sensor or its wiring.
-5. **Fault codes:** read them with five accelerator presses (ignition on). See the [OBD1 fault code reference](/guides/e36-obd1-fault-code-reference).
+5. **Fault codes:** read them with a diagnostic tool on the 20-pin connector (the accelerator-pedal blink method only works on cars with a Check Engine light). See the [OBD1 fault code reference](/guides/e36-obd1-fault-code-reference).

@@ -20,7 +20,7 @@ For the test values (resistances, voltages), see the [M50 sensor values guide](/
 | | |
 | :--- | :--- |
 | **What:** | The M50/M52 engine sensors: what they do, how they fail, where they are and how to replace them. |
-| **First step:** | Read the fault codes. OBD1 cars (1992–1995): five accelerator presses. OBD2 cars (1996 on): an OBD2 scan tool. |
+| **First step:** | Read the fault codes. OBD1 cars (1992–1995): a BMW-capable tool, or five accelerator presses on US-spec cars with a Check Engine light. OBD2 cars (1996 on): an OBD2 scan tool. |
 | **Difficulty:** | 2/5 for most sensors; 4/5 for the knock sensors (intake manifold off). |
 
 ---

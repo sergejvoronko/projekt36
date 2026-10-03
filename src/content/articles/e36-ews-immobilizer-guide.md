@@ -61,7 +61,7 @@ According to Bentley:
 2. **Try every key.** If a spare key works and the main one doesn't, the main key is the suspect.
 3. **On a pre-1995 EWS car,** remember it's tied to the **central locking**: lock and unlock the car with the key and try again.
 4. **Check the connections** at the ring antenna, the transmitter/receiver module and the control module, especially if anything was disturbed in the dashboard or steering column area.
-5. **Rule out the rest:** EWS shouldn't be blamed by default. If the engine cranks, check for spark and injector pulses. Read the DME's fault codes with five accelerator presses on OBD1 cars (see the [fault code reference](/guides/e36-obd1-fault-code-reference)), and check fuel pressure.
+5. **Rule out the rest:** EWS shouldn't be blamed by default. If the engine cranks, check for spark and injector pulses. Read the DME's fault codes with a diagnostic tool, or on US-spec OBD1 cars with the accelerator-pedal method (see the [fault code reference](/guides/e36-obd1-fault-code-reference)), and check fuel pressure.
 
 Interrupting a starter, ignition and injection circuit is exactly what this system is designed to do. A diagnostic tool that talks to the immobiliser makes the diagnosis much quicker, if you have access to one.
 
