@@ -1,0 +1,117 @@
+# bmw-e36-m50-m52-engine-sensor-diagnosis-replacement.webp [engine] [NO_CAR]
+SCENE: close up on BMW M50 inline-6 engine hanging on the chain in the garage as a background, angled front-right view showing the intake manifold side with sharpnes on MAF sensor housing and wiring harness connectors along the top of the engine, fluorescent strip light overhead
+
+# bmw-e36-m52-double-vanos-guide.webp [engine] [NO_CAR]
+SCENE: BMW M52 inline-6 engine on red engine stand in the garage, front of engine facing camera showing the dual VANOS housing with its actuator body mounted at the front of the cylinder head, timing chain cover removed, fluorescent light overhead
+
+# bmw-m50-engine-rebuild-guide.webp [engine] [NO_CAR]
+SCENE: BMW M50 inline-6 engine block on red engine stand in the garage viewed from the exhaust side showing the full length of the long cast-iron block, cylinder head removed and resting on the workbench beside it, head gasket laid flat on the bench, workshop tools visible in background
+
+# bmw-m52-engine-rebuild-guide.webp [engine] [NO_CAR]
+SCENE: BMW M52 inline-6 engine block on red engine stand in the garage viewed from the side, aluminium block showing the full long engine profile, cylinder head separated and resting on the workbench to the right, natural light from back windows
+
+# cooling.webp [engine] [NO_CAR]
+SCENE: BMW M50 inline-6 engine on red engine stand in the garage, cooling components on the workbench to the left — plastic expansion tank, thermostat housing, and fresh coolant hose set on the bench surface, fluorescent strip light overhead
+
+# e36-m50-head-gasket-replacement.webp [engine] [NO_CAR]
+SCENE: BMW M50 inline-6 engine block on red engine stand in the garage with cylinder head removed and set beside the stand, bare block deck exposed showing the head stud pattern, multi-layer steel head gasket lying flat on the workbench beside the stand
+
+# e36-m50-oil-system-guide.webp [engine] [NO_CAR]
+SCENE: BMW M50 oil sump pan and oil pump assembly on a blue shop rag on the workbench in the garage, pickup tube attached to the pump, oil filter housing and new filter set beside them, natural daylight from the back windows
+
+# e36-m50-timing-chain-guide.webp [engine] [NO_CAR]
+SCENE: BMW M50 inline-6 engine on red engine stand in the garage with timing chain cover removed, front of engine showing the timing chain, sprocket and tensioner guide rail assembly exposed under the fluorescent workshop light
+
+# m50-failures.webp [engine] [NO_CAR]
+SCENE: BMW M50 inline-6 engine on red engine stand in the center of the garage viewed from the exhaust side, long engine profile showing oil seepage at the cam cover gasket edge and valve cover surface, workshop fluorescent strip light overhead
+
+# engine-compare-v2.webp [engine] [NO_CAR]
+SCENE: Two BMW inline-6 cylinder heads on the workbench in the garage side by side — one M50 non-TU head and one M52 aluminium head — natural daylight from the back windows illuminating the casting differences between the two
+
+# vanos.webp [engine] [NO_CAR]
+SCENE: BMW VANOS variable valve timing actuator unit disassembled on a blue shop rag on the workbench in the garage, helical gear internals and seal ring set visible, VANOS solenoid and adjustment collar beside it, natural daylight from the back windows
+
+# gearbox.webp [swap] [NO_CAR]
+SCENE: BMW ZF S5D gearbox lying on a padded mat on the garage floor, bellhousing end facing camera showing the input shaft and clutch fork pivot, workshop tools on the floor beside it, fluorescent overhead light
+
+# e36-m50-m52-s50-s52-engine-swap-guide.webp [swap] [NO_CAR]
+SCENE: BMW S50 inline-6 engine suspended on chain hoist chains in the center of the garage, long engine profile hanging level above the concrete floor, fluorescent strip light overhead, engine stand and swap tools visible below
+
+# e36-m52-to-m54-engine-swap-guide.webp [swap] [NO_CAR]
+SCENE: BMW M54 inline-6 engine hanging from chain hoist in the center of the garage, freshly prepared with new gaskets and hoses fitted, long valve cover profile visible, garage workbench and parts shelves in background
+
+# parts-list.webp [swap] [NO_CAR]
+SCENE: BMW M50 inline-6 engine on red engine stand beside the workbench in the garage, workbench surface covered with engine swap components — wiring harness coiled at the back, engine mounts and coolant hoses arranged in rows, fluorescent light overhead
+
+# wiring-swap.webp [swap] [NO_CAR]
+SCENE: Two BMW engine wiring harnesses laid flat on the workbench in the garage side by side — one shorter M43 harness and one longer M50 harness — connectors and plugs visible along both lengths, natural daylight from the back windows
+
+# m50-swap-cooling-adaptation.webp [swap] [NO_CAR]
+SCENE: BMW M50 cooling adaptation components on the workbench in the garage — radiator expansion tank, aluminium thermostat housing, and fresh silicone hose set coiled beside them, all laid out for a swap installation, fluorescent strip light overhead
+
+# bmw-e36-paint-preparation-diy-respray-guide.webp [body] [CAR_LOCK]
+SCENE: Dark navy blue BMW E36 sedan inside the garage, driver's front door and fender area masked with paper and tape, body panels showing sanded surface with guide coat applied, garage workbench visible to the left in the background
+
+# rust-map.webp [body] [CAR_LOCK]
+SCENE: Dark navy blue BMW E36 sedan inside the garage, rear wheel arch showing exposed bare metal with surface rust after panel trim removal, angle grinder and wire wheel brush on the garage floor beside the wheel arch
+
+# ppf.webp [body] [CAR_LOCK]
+SCENE: Dark navy blue BMW E36 sedan inside the garage viewed from the front three-quarter angle, clear paint protection film being applied to the hood and front bumper lip, squeegee tool resting on the bonnet surface
+
+# sound-deadening.webp [interior] [CAR_LOCK]
+SCENE: Interior of the dark navy blue BMW E36 inside the garage, driver door panel removed exposing bare metal sheet, roll of Dynamat sound deadening material on the floor beside the open door, roller tool resting inside the door cavity
+
+# air-suspension.webp [suspension] [CAR_LOCK]
+SCENE: Dark navy blue BMW E36 sedan inside the garage with front driver wheel removed, front MacPherson strut and spring seat area exposed, air compressor unit and stainless air fittings laid on the floor beside the wheel arch
+
+# charging.webp [reference] [CAR_LOCK]
+SCENE: Dark navy blue BMW E36 sedan with hood open inside the garage, digital multimeter with probes connected to the battery terminals, alternator and belt visible in engine bay, natural daylight from the back windows
+
+# e36-dme-connector-pinout-reference.webp [reference] [CAR_LOCK]
+SCENE: BMW E36 DME control unit (black ECU box) on the workbench in the garage with the large wiring harness connector unplugged and spread beside it, printed pinout wiring diagram flat on the bench under the connector
+
+# ews.webp [reference] [CAR_LOCK]
+SCENE: BMW EWS immobilizer control module (small grey rectangular unit) on the workbench in the garage beside the E36 ignition key with transponder ring, garage tools visible on the left wall
+
+# fuel-system.webp [reference] [CAR_LOCK]
+SCENE: Dark navy blue BMW E36 inside the garage with rear seat base lifted, fuel pump access cover open showing the in-tank pump assembly, fuel filter and pressure test gauge on the workbench nearby
+
+# fuse-relay.webp [reference] [CAR_LOCK]
+SCENE: BMW E36 main fuse and relay box with cover removed set on the workbench in the garage, relay and fuse layout exposed, test light probe and relay test socket lying beside the box, natural light from back windows
+
+# grounds.webp [reference] [CAR_LOCK]
+SCENE: Dark navy blue BMW E36 with hood open inside the garage, focus on the engine bay firewall showing chassis ground strap connection points and braided earth leads at their bolted anchor positions, natural daylight from the back windows
+
+# etm.webp [reference] [CAR_LOCK]
+SCENE: Dark navy blue BMW E36 with hood open in the garage, printed BMW E36 ETM electrical wiring diagram pages spread open on the workbench beside the car, highlighter and pencil resting on the open diagram page
+
+# inpa.webp [reference] [CAR_LOCK]
+SCENE: Laptop computer on the workbench in the garage displaying INPA BMW diagnostic software interface with live sensor data on screen, OBD1 round 20-pin diagnostic cable coiled beside it, dark navy blue BMW E36 partially visible in the background
+
+# lcm.webp [reference] [CAR_LOCK]
+SCENE: BMW E36 LCM light control module (small black rectangular unit) on the workbench in the garage with wiring connector unplugged beside it, turn-signal relay and bulb socket test adapter resting on the bench surface
+
+# torque-specs.webp [reference] [CAR_LOCK]
+SCENE: Dark navy blue BMW E36 with hood open in the garage, click torque wrench resting across the M50 engine valve cover, folded printed torque specification reference sheet on the engine beside it, natural window light
+
+# obd1-diag-v2.webp [reference] [CAR_LOCK]
+SCENE: Dark navy blue BMW E36 sedan inside the garage, center console area showing the round OBD1 20-pin diagnostic connector port under the dash, diagnostic cable plugged in, laptop computer open on the passenger seat, fluorescent light overhead
+
+# e36-obd1-fault-code-reference.webp [reference] [CAR_LOCK]
+SCENE: Dark navy blue BMW E36 with hood open inside the garage, OBD1 round connector cable plugged into the under-hood diagnostic port, fault code reader on the workbench showing a code display, fluorescent strip light overhead
+
+# e36-obd1-live-data-sensor-reference.webp [reference] [CAR_LOCK]
+SCENE: Dark navy blue BMW E36 with hood open inside the garage, laptop on the workbench showing live INPA sensor data readout, OBD1 diagnostic cable connected, natural light from the back windows
+
+# parts-sourcing.webp [reference] [CAR_LOCK]
+SCENE: Dark navy blue BMW E36 hood open in the garage, workbench beside the car with BMW OEM parts in plastic packaging — gasket set, filter kit, and seal rings — and a BMW parts catalog open flat on the bench surface
+
+# sunroof-drain.webp [reference] [CAR_LOCK]
+SCENE: Dark navy blue BMW E36 sedan in the garage with sunroof glass slid fully open, overhead view into the sunroof drain channel and gutter seal, thin wire drain cleaning tool coiled beside the open sunroof frame
+
+# suspension.webp [reference] [CAR_LOCK]
+SCENE: Dark navy blue BMW E36 in the garage with front driver wheel removed, MacPherson strut and hub assembly exposed, new suspension bushings and wishbone arm on the floor beside the wheel arch
+
+# zke.webp [reference] [CAR_LOCK]
+SCENE: BMW E36 ZKE central body electronics module (small rectangular control unit) on the workbench in the garage, wiring connector pulled apart beside it, door lock relay and window lift relay on a clean shop rag beside the module
+

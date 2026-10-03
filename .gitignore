@@ -31,3 +31,6 @@ reference_img/
 .dev.vars*
 !.dev.vars.example
 !.env.example
+
+# python
+__pycache__/
