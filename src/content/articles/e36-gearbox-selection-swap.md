@@ -1,184 +1,103 @@
 ---
 title: "BMW E36 Gearbox Selection, ZF, Getrag, and What to Use for an M50 Swap"
 seoTitle: "BMW E36 Gearbox Guide: ZF vs Getrag for an M50 Swap"
-description: "ZF 310 vs Getrag 420G vs S5D-320Z for the E36 M50 swap: ratios, compatibility, prop shaft, and which to choose."
+description: "Which manual gearbox the E36 M50 really used, the Getrag and ZF families with Bentley's ratios, what the bolt pattern means for a four-cylinder car, and how the driveshaft depends on the gearbox."
 pillar: swap
-keywords: "bmw e36 gearbox, e36 manual gearbox, getrag 420g, zf 310, s5d-320z, e36 m50 gearbox, bmw e36 transmission"
+keywords: "bmw e36 gearbox, e36 manual gearbox, getrag s5d 250g, zf s5d 320z, e36 m50 gearbox, bmw e36 transmission"
 date: "2026-04-13"
 hero: "gearbox.webp"
+reviewed: "2026-10-03"
+sources:
+  - title: "Bentley Publishers: BMW 3 Series (E36) Service Manual 1992–1998, 200 Transmission–General (Table a) and 230 Manual Transmission (Table a, fluid)"
+  - title: "E30 Zone Wiki: Engine swap M5x (common gearbox bolt pattern)"
+    url: "https://www.e30zone.net/e30wiki/index.php/Engine_Swap_-_M5x"
+  - title: "Bimmerfest: E36 318is budget build and basic guide to an M50 swap (owner's write-up: four-cylinder Getrag, shift linkage, driveshaft)"
+    url: "https://www.bimmerfest.com/threads/e36-318is-budget-build-and-basic-guide-to-an-m50-swap.811944/"
 ---
 
 ## TL;DR
 
-The E36 was fitted with three main manual gearbox families: the Getrag 220/240 (4-cylinder cars), the ZF 310 (6-cylinder), and the Getrag 420G (6-cylinder, later cars). For an M50 swap, the ZF 310 and Getrag 420G are both excellent choices, the ZF for affordability and simplicity, the Getrag 420G for closer ratios and feel. The S5D-320Z (fitted to M3 E36) is a premium option for more power. Bellhousing compatibility is the key constraint.
+- **The E36 325i's M50 used a Getrag S5D 250G** five-speed (Bentley). The same Getrag family was fitted behind four-cylinder engines, while the M52 328i and the M3 used ZF five-speeds.
+- **BMW's M20, M40, M42, M43, M50 and M52 share the gearbox bolt pattern**, so a four-cylinder car's gearbox physically bolts to the M50.
+- **The driveshaft's front section depends on the gearbox**: Getrag and ZF are not interchangeable at the flex disc.
+- **Identify a gearbox by its label,** not by casting numbers: Bentley warns that forged casting numbers are not reliable for identification.
 
 ---
 
-## E36 manual gearbox overview
+## Which E36 used which gearbox (Bentley)
 
-| Gearbox | Designation | Fitted to | Ratios feel | Suitable for M50 swap |
-|---------|-------------|-----------|-------------|----------------------|
-| Getrag 220 | S4S-220Z | M40B16, M43B16 | Short/tall | No (4-cyl bellhousing) |
-| Getrag 240 | S5D-180Z | M43B18 | Adequate | No (4-cyl bellhousing) |
-| ZF 310 | S5D-310Z | M50B20, M50B25 | Standard | Yes |
-| Getrag 420G | GS6-37BZ or S6S-420G | M52B20/25/28, later M50TU | Close-ratio | Yes |
-| Getrag S5D-320Z | S5D-320Z | M3 E36 (S50/S52) | Sports close-ratio | Yes (with M3 input) |
+| Model | Years | Engine | Manual gearbox |
+|---|---|---|---|
+| 318i / is / iC | 1992–1995 | M42 | Getrag S5D 200G or S5D 250G |
+| 318i / is / iC | 1996–1998 | M44 | Getrag S5D 250G |
+| 323is / iC | 1998 | M52 | Getrag S5D 250G |
+| **325i / is / iC** | **1992–1995** | **M50** | **Getrag S5D 250G** |
+| 328i / is / iC | 1996–1998 | M52 | ZF S5D 320Z |
+| M3 | 1995 | S50US | ZF S5D 310Z |
+| M3 | 1996–1998 | S52US | ZF S5D 320Z |
 
----
-
-## The getrag 220 / 240–4-cylinder boxes
-
-These units were fitted behind the M40 and M43 four-cylinder engines. They use a **different bellhousing bolt pattern** to the six-cylinder engines and **are not compatible** with M50/M52 engine swaps without a special adapter.
-
-Unless you have a very specific reason to use them, ignore these for any M50 project.
+This table covers US-market cars. Bentley notes that the Getrag S5D 200G was dropped from production in September 1992 and is interchangeable with the S5D 250G. European cars such as the 316i with the M43 aren't in the table: check the **label on your gearbox** to see what your car has.
 
 ---
 
-## ZF 310 (S5D-310Z), the standard M50 box
+## Gear ratios (Bentley)
 
-The ZF 310 is the gearbox you'll find behind most stock M50B20 and M50B25 engines in the E36. It's a well-designed, robust unit that handles the M50's power without issue.
+| Gear | Getrag S5D 200G / 250G | ZF S5D 310Z / 320Z |
+|---|---|---|
+| 1st | 4.23 | 4.20 |
+| 2nd | 2.52 | 2.49 |
+| 3rd | 1.66 | 1.66 |
+| 4th | 1.22 | 1.24 |
+| 5th | 1.00 | 1.00 |
+| Reverse | 4.04 | 3.89 |
 
-### Specifications
+The ratios are almost identical. The real differences are the make, which decides the driveshaft and the linkage, and the gearbox's condition.
 
-| Property | Value |
-|----------|-------|
-| Ratios | 1st: 4.23 · 2nd: 2.52 · 3rd: 1.67 · 4th: 1.22 · 5th: 1.00 |
-| Reverse | 3.27 |
-| Input shaft | M50-compatible spline |
-| Max torque (continuous) | ~350 Nm |
-| Weight | ~28 kg |
+| | Getrag | ZF |
+|---|---|---|
+| Oil capacity | 1.0 L | 1.2 L |
+| Drain and fill plugs | 50 Nm | 50 Nm |
 
-The ZF 310's 5th gear is 1:1, essentially a direct drive for cruising. On a stock or mildly tuned M50, it's pleasant on the motorway.
-
-### Strengths
-
-- Widely available, came in huge numbers of E36s
-- Cheap to source used (€100–250 for a clean unit)
-- Well-documented: common rebuild parts available
-- Smooth, precise shift action when in good condition
-- Mounts directly to M50 without adapter
-
-### Weaknesses
-
-- 5th gear synchro is a known wear point on high-mileage examples, listen for crunch when selecting 5th when slightly rushed
-- The ratio spread feels slightly wide compared to the Getrag 420G
-- No 6th gear, disadvantage on cars driven mainly at motorway speeds
-
-### Suitability for M50 swap
-
-**Excellent choice for a budget or first swap.** The ZF 310 costs little, is available everywhere, bolts straight to the M50, and handles the engine's standard output comfortably. If you have the donor M50 from an E36, the ZF 310 often comes with it.
+The correct oil type is printed on a label on the gearbox.
 
 ---
 
-## Getrag 420g (s6s-420g), the six-speed upgrade
+## Options for an M43 → M50 swap
 
-The Getrag 420G (sometimes referred to as the GS6-37BZ in later applications) is a six-speed unit fitted to the E36 from the M52 era onwards, and to later M50TU-engined cars in some markets. It's a significant step up in driving feel from the ZF 310.
+### Keep the car's own gearbox
 
-### Specifications
+Because the bolt pattern is shared, the four-cylinder car's gearbox bolts to the M50. An owner who put an M50 into an OBD1 318is reports the car's **Getrag gearbox works fine**, with the **six-cylinder shift linkage**. What to consider:
 
-| Property | Value |
-|----------|-------|
-| Ratios | 1st: 4.23 · 2nd: 2.53 · 3rd: 1.67 · 4th: 1.23 · 5th: 1.00 · 6th: 0.83 |
-| Reverse | 3.27 |
-| Input shaft | M50/M52-compatible spline |
-| Max torque (continuous) | ~380 Nm |
-| Weight | ~32 kg |
+- It's the **simplest and cheapest** route.
+- Its **condition** matters more than its type: a tired gearbox behind nearly double the torque won't improve.
+- If the clutch slips with the M50's torque, the fix is a **six-cylinder flywheel and clutch**, as owners recommend for the swap anyway.
 
-The key difference over the ZF 310 is the **overdrive 6th gear (0.83:1)**, which significantly reduces RPM at motorway speeds, improving both refinement and economy. The first five ratios are nearly identical to the ZF 310.
+### Use the donor's gearbox
 
-### Strengths
-
-- Six speeds, 6th gear is a genuine cruising gear
-- Better motorway refinement vs ZF 310
-- Handles more torque (useful for chipped/cammed M50s)
-- Direct bolt-on to M50 (same bellhousing pattern as ZF 310)
-- Satisfying short-throw shift action
-
-### Weaknesses
-
-- More expensive than ZF 310 (€200–450 used for a clean example)
-- 2nd gear synchro can be worn on high-mileage examples
-- Slightly heavier than ZF 310
-
-### Finding one
-
-The Getrag 420G was standard behind the M52B25 and M52B28 in later E36s. These are common enough to source from E36 318i/320i/325i/328i donors from 1996–1999. Match the part number from the gearbox tag if in doubt.
-
-### Suitability for M50 swap
-
-**Recommended if budget allows.** The direct bolt-on compatibility with the M50 and the addition of 6th gear make this a straight upgrade over the ZF 310 with no additional complexity. For a build that will be driven regularly on the road, the 6th gear overdrive makes a real difference on longer journeys.
+An M50 from a 325i normally comes with a **Getrag S5D 250G**: the box BMW paired with the engine. Swapping it in at the same time keeps the original six-cylinder combination of gearbox, clutch and linkage.
 
 ---
 
-## Getrag S5D-320z, the m3 box
+## Driveshaft
 
-The S5D-320Z is the five-speed unit from the E36 M3 (S50B30/S52B32 engines). It has closer ratios than the ZF 310 and is built to a higher specification.
+On a four-cylinder to M50 swap with a Getrag gearbox, owners report:
 
-### Specifications
+- the **rear section** of the four-cylinder driveshaft can stay;
+- the **front section is too long** and must be replaced with a front section for a **Getrag** gearbox;
+- a **ZF** front section **won't bolt to the Getrag flex disc**.
 
-| Property | Value |
-|----------|-------|
-| Ratios | 1st: 4.23 · 2nd: 2.53 · 3rd: 1.67 · 4th: 1.23 · 5th: 0.93 |
-| Reverse | 3.27 |
-| Max torque | ~420 Nm |
-| Weight | ~29 kg |
-
-The critical difference from the regular boxes: **5th gear is 0.93 (overdrive)**, rather than the 1:1 of the ZF 310. This means lower motorway RPM with a five-speed, combined with stronger internals.
-
-### Compatibility note
-
-The S5D-320Z **uses a different input shaft spline length** compared to the ZF 310 / Getrag 420G. It was designed for the M3's flywheel and clutch. Fitting it behind a standard M50 requires either:
-- Using the M3 flywheel and clutch assembly (different diameter, requires confirming crank dimensions)
-- Or confirming that the input shaft length is compatible before purchase
-
-This is the box to choose for a highly modified M50 build (forged engine, significant power increase), where the extra strength margin is valuable. For a standard or mildly tuned M50, the Getrag 420G is simpler and sufficient.
+So the front section always has to match the gearbox make. Fit a new flex disc and centre bearing while it's out. Flex disc bolts are tightened by size and grade: M10 8.8 at 48 Nm, M10 10.9 at 64 Nm, M12 8.8 at 81 Nm, M12 10.9 at 100 Nm (Bentley).
 
 ---
 
-## Prop shaft compatibility
+## Mounts and crossmember
 
-The E36 prop shaft (driveshaft) is specific to the gearbox rear flange. The ZF 310, Getrag 420G, and S5D-320Z all use the **same rear output flange specification** when fitted to E36 cars, so the prop shaft from the original car should be compatible if swapping from another E36 gearbox variant.
-
-**Verify:**
-- The prop shaft must match the differential input flange as well as the gearbox output
-- Four-cylinder E36 prop shafts are a different length to six-cylinder prop shafts, do not reuse the four-cylinder shaft with an M50 gearbox
-- If you're bringing an M50 and gearbox from a different E36 body style (e.g., donor is a saloon, project is a coupe), confirm prop shaft length, body styles have different wheelbase configurations
+- **Gearbox support crossmember to body (Bentley):** M8 22–24 Nm, M10 42 Nm.
+- On a four-cylinder to M50 swap, the four-cylinder crossmember is reported to fit, mounted to a **different set of holes** in the body.
+- Fit new gearbox mounts while it's out: old rubber transmits vibration and lets the gear lever move.
 
 ---
 
-## Gearbox mounts
+## Summary
 
-The gearbox mount (crossmember rubber mount) is specific to the gearbox and chassis combination. When swapping a different gearbox into an M43-spec E36:
-
-- The M50 gearbox mounts at the same point as the M43 unit on the E36 body
-- The crossmember is compatible between four- and six-cylinder E36s (same chassis mounting points)
-- The mount rubber bushing may differ slightly, use the mount from the donor gearbox, or verify part numbers
-
----
-
-## Clutch and flywheel
-
-The M50 single-mass flywheel and clutch is a clean, simple assembly. When installing a used gearbox:
-
-- Always replace the clutch at the same time, access requires gearbox removal
-- Fit a new input shaft oil seal in the gearbox (2-minute job with gearbox out, expensive if it leaks later)
-- Inspect the release bearing and fork while access is clear
-- Dual-mass flywheel conversions are not applicable to the M50TU (it uses a single-mass flywheel as standard)
-
-**Recommended clutch kits:**
-- LUK (OEM supplier): complete kit with flywheel-compatible dimensions
-- Sachs: equivalent quality, alternative supplier
-- Uprated paddle clutches are available for highly modified builds but sacrifice drivability
-
----
-
-## Summary: which gearbox to choose
-
-| Scenario | Recommendation |
-|----------|----------------|
-| Budget swap, standard power | ZF 310, cheap, available, works perfectly |
-| Standard swap, road car | Getrag 420G–6th gear is worthwhile |
-| Motorway use, long distances | Getrag 420G–6th gear makes a real difference |
-| Tuned M50, track/road | Getrag 420G, handles additional torque |
-| High-power build (250+ Nm) | S5D-320Z, stronger internals, confirm compatibility |
-| Pure track car | S5D-320Z or ZF 310 with fresh synchros |
+For our 316i swap, the plan is to **identify the car's gearbox from its label** first. If it is a Getrag in good condition, keep it with the six-cylinder linkage, a matching Getrag driveshaft front section and a six-cylinder clutch and flywheel. If it's tired or a different make, a donor **Getrag S5D 250G** from a 325i is the factory pairing for the M50.
