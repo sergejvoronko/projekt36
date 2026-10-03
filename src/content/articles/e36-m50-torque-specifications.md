@@ -28,7 +28,7 @@ A bookmark-able torque reference for the BMW E36 with the M50 or M52 six-cylinde
 | Timing chain sprocket to camshaft, M7 | 15 Nm (11) | |
 | Cylinder head cover (valve cover), M6 | 10 Nm (89 in-lb) | Over-tightening cracks the cover or strips threads. |
 | Upper timing chain cover to head, M6 / M7 | 10 Nm / 15 Nm | |
-| Primary timing chain tensioner plug to head | 40 Nm (30) | |
+| Primary timing chain tensioner | M50: 50 Nm (37) · M52: 40 Nm (30) | Use a new sealing washer. |
 | Spark plugs (M12) | 23–25 Nm (17–18) | Bentley lists 25 Nm in the maintenance chapter and 23 Nm in the cylinder head chapter. |
 | Crankshaft hub to crankshaft | 410 ± 20 Nm (300 ± 15) | **Stretch bolt, always replace.** Needs a holding tool. |
 | Vibration damper and pulley to hub (M8) | 22 Nm (17) | |
