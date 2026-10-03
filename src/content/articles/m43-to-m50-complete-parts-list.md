@@ -1,258 +1,136 @@
 ---
 title: "BMW E36 M43 to M50 Engine Swap: Complete Parts List & Guide"
-description: "Complete M43-to-M50B25 swap parts list for BMW E36: every bracket, sensor, and adapter with EU supplier prices."
+description: "The parts an E36 316i (M43) to M50B25 swap really needs, system by system: what has to come from a six-cylinder car, what can stay, the EWS question and the decisions to make first."
 pillar: swap
 keywords: "e36 m43 to m50 swap, e36 engine swap guide, m50 swap parts list, 316i to 325i swap"
 date: "2026-03-16"
 hero: "parts-list.webp"
+reviewed: "2026-10-03"
+sources:
+  - title: "Bimmerfest: E36 318is budget build and basic guide to an M50 swap (owner's write-up, OBD1 four-cylinder E36 to M50)"
+    url: "https://www.bimmerfest.com/threads/e36-318is-budget-build-and-basic-guide-to-an-m50-swap.811944/"
+  - title: "E30 Zone Wiki: Engine swap M5x (gearbox bolt pattern across BMW engines)"
+    url: "https://www.e30zone.net/e30wiki/index.php/Engine_Swap_-_M5x"
+  - title: "Bentley Publishers: BMW 3 Series (E36) Service Manual 1992–1998 (engine management by year, EWS, cooling system, ECM pins)"
 ---
 
 ## TL;DR
 
-| Category | Items needed | Estimated cost (EU) |
-|---|---|---|
-| Engine + ancillaries | M50B25 long block, intake, exhaust manifolds, alternator, PS pump | €400–800 (used complete) |
-| Engine management | DME, engine harness, O2 sensor | €100–200 |
-| Cooling system | Radiator, hoses, water pump, thermostat, expansion tank, fan | €150–250 (all new) |
-| Engine mounts | 6-cylinder mount arms + rubber mounts | €80–130 |
-| Exhaust | Downpipe, possibly full system | €80–200 |
-| Driveshaft | 6-cylinder driveshaft or modify existing | €50–150 |
-| Fuel system | Possibly larger fuel injectors (if M50 NV) | €0–80 |
-| Miscellaneous | Airbox, throttle cable, vacuum lines, small hardware | €30–80 |
-| **Total estimate** | | **€900–1,900** |
+This guide covers the swap we're doing: an **OBD1 European E36 316i (M43B16) to an M50B25 non-VANOS**. Our car is a January 1994 sedan.
 
-This guide covers the OBD1 European E36 316i (M43B16) to M50B25 non-VANOS swap. Our car is a January 1994 sedan.
+The short version, from owners who have done the four-cylinder-to-M50 swap: it's essentially an engine replacement with a few extra parts. **Collect every part before you start.** The M50 engine harness plugs into the same chassis connector as the four-cylinder harness. The extra work is in cooling, mounts, exhaust, driveshaft and, on cars that have it, the immobiliser.
+
+**Part numbers:** look them up by VIN on [RealOEM](https://www.realoem.com/) for the six-cylinder donor model. They vary with year and body style.
 
 ---
 
-## Before you start: key decisions
+## Decisions to make first
 
-### Why M50 non-VANOS?
+### Why the M50 non-VANOS?
 
-We chose the M50B25 NV specifically for this swap because:
+- **Simpler:** no VANOS unit to maintain or reseal.
+- **Matches the car:** our 1994 316i is OBD1, and so is the M50. Bentley lists the non-VANOS M50 with **Bosch DME M3.1** (1992 engines) and the VANOS M50 with **DME M3.3.1** (1993–95). Use the DME and harness that belong to the donor engine.
+- **The trade-off:** the non-VANOS engine was only built up to August 1992, so donors are older and rarer than the VANOS M50TU. See the [M50 vs M50TU vs M52 comparison](/guides/m50-vs-m50tu-vs-m52-comparison).
 
-1. **Simplest wiring.** No VANOS solenoid to integrate. The DME has fewer connections and the engine harness is more straightforward.
-2. **Strongest internals.** Double valve springs, forged rods, cast iron block. This engine can handle a turbo later without internal changes.
-3. **OBD1 to OBD1.** Our 1994 316i is OBD1. Using an OBD1 M50 NV (from a 1990–1992 325i or 525i donor) means the simplest possible ECU integration.
-4. **Cheapest to source.** The non-VANOS M50 is less desirable to collectors than the TU or M52, so donor engines are still affordable in European junkyards.
+### Does the car have EWS?
 
-### The golden rule of engine swaps
+Bentley: the first E36 immobiliser (**EWS**) was introduced in **January 1994**. It's a module under the left side of the dashboard that interrupts ignition, fuel injection and the starter, armed by the central locking. The coded-key **EWS II** followed in January 1995.
 
-**Buy the most complete donor possible.** An M50 with its own intake manifold, exhaust manifolds, alternator, power steering pump, engine harness, and DME saves you dozens of hours of research, part-hunting, and compatibility headaches. The price difference between a bare long block and a complete engine is typically €100–200. That's the best money you'll spend on the entire project.
+A January 1994 car sits right at the changeover, so **check whether yours has the module** before buying a DME. Owners who put an M50 into an EWS-equipped four-cylinder E36 report that it needs wiring work at the EWS module and a suitable DME. See the [EWS guide](/guides/e36-ews-immobilizer-guide).
 
----
+### Gearbox
 
-## Complete parts list
+The M20, M40, M42, M43, M50 and M52 share the **same gearbox bolt pattern**, so the four-cylinder car's gearbox physically bolts to the M50. Owners report the four-cylinder Getrag gearbox works behind an M50, but **its type decides the driveshaft** (see below). See the [gearbox selection guide](/guides/e36-gearbox-selection-swap) for whether it can take the extra torque.
 
-### Category 1: engine assembly
+### Buy the most complete donor you can
 
-These parts should ideally come WITH your donor engine.
-
-| Part | OEM Part Number | Notes | Source |
-|---|---|---|---|
-| M50B25 NV long block |, | Complete with head, oil pan, timing cover | Donor car / junkyard |
-| Intake manifold (M50) | 11 61 1 735 428 | The M50 NV manifold, keep it for now, upgrade later if desired | Donor |
-| Exhaust manifolds (pair) | 11 62 1 726 642 (front) / 11 62 1 726 643 (rear) | Shorter manifold goes to the rear | Donor |
-| Throttle body | 13 54 1 433 414 | M50-specific, different from M43 | Donor |
-| Alternator | 12 31 1 738 351 | 6-cylinder rated, higher output than M43 | Donor |
-| Power steering pump | 32 41 1 137 952 | 6-cylinder specific | Donor |
-| A/C compressor |, | If planning climate control retrofit, get this from donor too | Donor |
-| Oil filter housing | 11 42 1 740 001 | M50-specific | Donor |
-| Dipstick + tube | 11 43 1 740 045 | Different from M43 | Donor |
-
-**Critical:** Ensure the donor engine comes with the flywheel and clutch assembly, or source a 6-cylinder flywheel separately. The M43 flywheel will NOT fit the M50.
+An engine that comes with its harness, DME, alternator, A/C compressor, power steering pump, exhaust manifolds, intake boot and air flow sensor saves the most time and guesswork.
 
 ---
 
-### Category 2: engine management (ECU + wiring)
+## Parts list by system
 
-This is the most critical part of the swap. Getting this wrong means the car won't start.
+### Engine and ancillaries (ideally with the donor)
 
-| Part | Notes | Est. cost |
-|---|---|---|
-| Bosch DME M3.1 or M3.3 (complete unit) | Must match your M50 NV engine variant. The DME is coded to the engine, use the DME that came with your donor engine. | €50–100 |
-| Complete engine harness from donor | The entire wiring loom from the engine bay. Do NOT try to modify the M43 harness, use the M50 harness. | Included with donor or €50–80 |
-| O2 sensor | The M50 uses a different O2 sensor location/type than M43. Use the M50 sensor and wiring. | €25–40 |
-| Throttle position sensor | Should come with the throttle body. Verify it's present and the connector is intact. |, |
-| Coolant temperature sensor | M50-specific, different connector from M43. Should be on the donor engine. | €8–15 if missing |
-| Air mass meter (if applicable) | Some M50 NV use an air mass meter, some use a different intake design. Match to your specific DME. | Donor |
-| Idle control valve | On the intake manifold, should come with donor. Clean or replace. | €15–30 if replacing |
+- M50B25 long block with its intake and exhaust manifolds, throttle body and fuel rail
+- alternator, power steering pump, A/C compressor (if you want A/C)
+- **DME and the complete engine harness from the same donor:** don't modify the M43 harness
+- air flow sensor and intake boot
+- all engine sensors (crank, cam where fitted, coolant and air temperature, oxygen sensor)
 
-**Wiring Integration Notes:**
+### Cooling: from a six-cylinder E36
 
-The M50 engine harness connects to the car's main body harness through a set of connectors in the engine bay. On OBD1 E36 models, the critical connections are:
+- **six-cylinder radiator** with its hoses. Bentley shows the four-cylinder radiator with an **integral expansion tank**; the six-cylinder uses a **separate tank**.
+- **six-cylinder fan shroud and expansion tank** (the shroud carries the tank), plus the long hose from engine to tank and the short one from tank to radiator
+- **driver's-side lower radiator mount:** owners report the four-cylinder one is too wide for the six-cylinder radiator
+- six-cylinder **auxiliary fan** (it mounts on the bumper side)
+- new water pump, thermostat, cap and clamps: see the [cooling system overhaul](/guides/e36-cooling-system-overhaul)
 
-- **Main engine harness connector**: large multi-pin connector, usually near the firewall on the driver's side
-- **Fuel pump relay trigger**: the M50 DME controls the fuel pump differently than M43. Verify the relay pin assignment.
-- **Tachometer signal**: the M50 DME outputs a tach signal. Confirm it matches the cluster input on your 316i.
-- **Check engine light**: the M50 DME uses a diagnostic connector. On OBD1, this is a round 20-pin connector.
+### Mounts and chassis
 
-**The simplest approach:** Use the ENTIRE engine bay harness from a 325i donor car of the same era (1990–1995 OBD1). This includes the correct relays, fuse assignments, and connectors. Label everything before removing it from the donor.
+- **six-cylinder engine mount arms**
+- engine mounts: four-cylinder mounts are reported to sit a little taller but work if healthy; if buying new, buy six-cylinder ones
+- **six-cylinder front anti-roll bar:** the four-cylinder bar doesn't dip low enough to clear the M50's oil pan
+- the four-cylinder transmission crossmember is reported to fit, using a different set of holes in the body
 
----
+### Driveline
 
-### Category 3: cooling system
+- **driveshaft:** the four-cylinder rear section is reported to fit, but the front section is too long. You need a front section for a **Getrag** gearbox; a ZF front section won't bolt to the flex disc.
+- **six-cylinder shift linkage**
+- **clutch and flywheel:** the four-cylinder parts can survive, but a six-cylinder flywheel and clutch is the reliable choice. The six-cylinder clutch needs the six-cylinder flywheel.
+- new flex disc and centre bearing while the shaft is out
 
-**Replace everything.** You have the engine out. There is no excuse to reuse 30-year-old cooling components on the engine that's famous for dying from cooling system failures.
+### Exhaust
 
-| Part | OEM / Recommended Part Number | Description | Est. cost |
-|---|---|---|---|
-| Water pump | Graf PA432 or equivalent | MUST have metal impeller, plastic impellers fail | €30–45 |
-| Thermostat | Wahler 4131.80D (80°C) | OEM temp rating | €8–12 |
-| Expansion tank | 17 11 1 723 520 | The plastic tank cracks with age, always new | €15–25 |
-| Expansion tank cap | 17 11 1 742 231 | New cap ensures correct pressure | €5–8 |
-| Radiator | Nissens 60623 or equivalent | 6-cylinder radiator, wider than M43 radiator | €60–90 |
-| Upper radiator hose | 11 53 1 740 478 | M50-specific | €10–15 |
-| Lower radiator hose | 11 53 1 740 480 | M50-specific | €10–15 |
-| Heater hoses (set) | Various | Route from engine to heater core, check routing for sedan | €15–25 |
-| Overflow hose | 17 11 1 723 521 | Connects expansion tank to radiator | €5–8 |
-| Fan clutch + fan blade | 11 52 1 740 963 (clutch) | 6-cylinder fan, the M43 fan may not fit the M50 water pump | €30–50 |
-| Fan shroud | 17 11 1 723 031 | 6-cylinder specific, holds the overflow tank | €15–25 |
-| All hose clamps |, | Replace every single clamp with new OEM-style spring clamps | €10–15 |
-| Coolant | G48 spec (blue/green) | 50/50 mix, ~7 liters total system capacity | €15–20 |
+- **a complete six-cylinder exhaust:** none of the four-cylinder exhaust bolts to the M50 manifolds. Keep the small hangers on the bracket behind the driveshaft centre bearing.
 
-**Total cooling system:** ~€200–350 (all new quality parts)
+### Intake, fuel, controls
 
-This is the single most important investment in the entire swap. A €35 water pump protects a €600 engine.
+- six-cylinder airbox
+- throttle cable: the four-cylinder one is reported to work but is slightly too long
+- power steering lines from the M50 pump, ideally
+- vacuum lines: map the donor's vacuum routing before taking it apart
 
----
+### Gaskets and service items before installation
 
-### Category 4: engine mounts
+While the engine is on the stand: valve cover, oil pan and oil filter housing gaskets, plus every seal you can reach. Fit a new rear main seal while the gearbox is off.
 
-The M43 (4-cylinder) and M50 (6-cylinder) use completely different engine mount arms. This is non-negotiable, you cannot use M43 mount arms with an M50 engine.
+### Optional
 
-| Part | OEM Part Number | Description | Est. cost |
-|---|---|---|---|
-| Left engine mount arm | 22 11 1 094 813 | 6-cylinder specific | €25–40 |
-| Right engine mount arm | 22 11 1 094 814 | 6-cylinder specific | €25–40 |
-| Engine mount rubbers (pair) | 22 11 1 092 823 (x2) | Lemförder or Meyle HD recommended | €15–25 each |
-| Transmission mount | 22 31 1 094 916 | May be the same as M43, verify for your gearbox. If reusing the Getrag 250G from the 316i, this should be compatible. | €15–25 |
-
-**Important:** The M43 uses shorter mount arms because the 4-cylinder engine sits differently in the bay. The M50 mount arms position the inline-6 correctly relative to the subframe, transmission tunnel, and exhaust routing. Using wrong arms = misaligned driveline.
+- **Differential:** a shorter final drive (owners mention the 3.15 used with the six-cylinder) changes the character; a four-cylinder ratio works.
 
 ---
 
-### Category 5: exhaust
+## Registration in Slovakia
 
-The M50 exhaust manifolds bolt directly to the M50 head, but the downpipe connection differs from the M43 system.
-
-| Part | Notes | Est. cost |
-|---|---|---|
-| M50 downpipe | 6-cylinder downpipe from donor car or aftermarket. The M43 downpipe will not fit the M50 manifolds. | €40–80 (used) |
-| Exhaust gaskets | New gaskets for manifold-to-head and manifold-to-downpipe connections | €15–25 |
-| Mid-section + rear | The M43 and M50 E36 sedans share the same mid-section and rear exhaust from the downpipe flange back. Verify the flange diameter matches, if it does, your existing mid and rear sections can stay. | €0 (if compatible) or €80–150 (if replacing) |
-| Exhaust hangers | Replace any cracked or stretched rubber hangers | €10–15 |
+In Slovakia an engine change has to be approved and registered with the vehicle inspection authority. Check the current requirements and the documents they want for the donor engine **before** you start the swap.
 
 ---
 
-### Category 6: driveshaft
+## Recommended order
 
-This is often overlooked and can cause vibration issues if wrong.
-
-| Part | Notes | Est. cost |
-|---|---|---|
-| 6-cylinder driveshaft | The M43 316i and M50 325i use different length driveshafts due to the longer 6-cylinder engine. Source a driveshaft from a 325i of the same body style (sedan) and transmission type. | €50–100 (used) |
-| Center support bearing | 26 12 1 226 731 | Replace preventively, a worn center bearing causes vibration | €20–35 |
-| Guibo (flex disc) | 26 11 1 225 624 | Replace preventively, cracks are invisible until failure | €20–30 |
-| Driveshaft bolts |, | Always use new bolts for the guibo and flange connections | €8–12 |
-
-**Alternative:** Some builders successfully use the M43 driveshaft by modifying the transmission output flange or shimming the center bearing position. This works but is less reliable than using the correct 6-cylinder shaft. For the cost difference, we recommend the correct part.
+1. Check for EWS and decide on the DME and gearbox.
+2. Source the donor complete, and **photograph every connector, bracket and hose** before it comes apart.
+3. Remove the M43, labelling every connection on the car side.
+4. Reseal and service the M50 on the stand, including the full cooling system.
+5. Fit the six-cylinder mount arms, anti-roll bar and radiator mount.
+6. Install the engine and gearbox; fit the driveshaft with a new flex disc and centre bearing.
+7. Fit the exhaust, then the wiring, cooling, fuel and intake.
+8. Fill and bleed everything, check for leaks with the ignition on, then make the first start.
 
 ---
 
-### Category 7: fuel system
+## Where to look up and buy parts
 
-| Part | Notes | Est. cost |
-|---|---|---|
-| Fuel injectors | The M50 NV uses Bosch EV1 injectors. If your donor engine comes with injectors, use them. If not, a set of 6 matched injectors is needed. | €40–80 (used cleaned set) or included with donor |
-| Fuel rail | M50-specific, should come with intake manifold | Donor |
-| Fuel pressure regulator | On the fuel rail, should come with donor. Replace the diaphragm if in doubt. | €15–25 |
-| Fuel lines (engine bay) | The supply and return lines from the firewall to the fuel rail. M50 routing differs from M43. Use donor car lines or fabricate from fuel-rated hose. | €10–20 |
-| Fuel filter | 13 32 1 740 985 | Replace preventively during swap | €8–12 |
-
-**Note:** The fuel pump in the tank is the same between the 316i and 325i E36 sedan. It can supply enough fuel for the M50 naturally aspirated. If you plan a turbo later, upgrade to a higher-flow pump at that time.
+| Site | Use |
+|---|---|
+| [RealOEM](https://www.realoem.com/) | Part numbers and diagrams by VIN |
+| Autodoc | Common service parts, delivers to Slovakia |
+| Schmiedmann | BMW specialist, used and new |
+| FCP Euro, ECS Tuning | Wide BMW range, ship to the EU |
 
 ---
 
-### Category 8: intake & airbox
-
-| Part | Notes | Est. cost |
-|---|---|---|
-| 6-cylinder airbox | The M43 airbox is smaller. Use the M50/325i airbox for correct air flow. | €15–25 (junkyard) |
-| Air filter | Mann C25114 or equivalent | M50 airbox filter | €8–12 |
-| Intake boot (airbox to throttle) | M50-specific rubber boot | €10–20 |
-| Throttle cable | Verify length, the M43 and M50 throttle bodies are in different positions. You may need the 325i throttle cable. | €10–15 |
-| Vacuum lines | The M50 has more vacuum connections than the M43 (brake booster, fuel pressure regulator, idle control). Map the vacuum routing from the donor car before removal. | €5–10 (bulk silicone hose) |
-
----
-
-### Category 9: miscellaneous & hardware
-
-| Part | Notes | Est. cost |
-|---|---|---|
-| Engine oil + filter | 6 liters 5W-30 or 10W-40 + Mann HU925/4x filter | €30–40 |
-| Transmission fluid | If reusing the Getrag 250G, top up with correct MTF | €15–20 |
-| New engine-to-transmission bolts | Always use fresh hardware for this critical joint | €10–15 |
-| Bell housing adapter (if needed) | If your M43 gearbox is a Getrag 250G, it bolts directly to the M50, no adapter needed. Verify spline count on the clutch disc. | €0 (usually not needed) |
-| Clutch kit | If the clutch has unknown age/mileage, replace during the swap. LuK or Sachs OEM kit. | €80–120 |
-| Flywheel bolts | New stretch bolts for the flywheel | €12–18 |
-| All gaskets for fresh engine install | Valve cover gasket, oil pan gasket, intake manifold gaskets, exhaust manifold gaskets, various o-rings | €60–100 (full gasket set) |
-
----
-
-## Swap-Specific gotchas
-
-### 1. gearbox compatibility
-The Getrag 250G 5-speed from the 316i bolts to the M50 block. The bolt pattern is the same. However, the 250G is rated for the M43's 102 hp, with the M50's 189 hp and 245 Nm, it will work but is operating closer to its limits. For a daily driver, it's fine. For track or hard launches, consider upgrading to the Getrag 260G (from a 325i) in the future.
-
-### 2. radiator width
-The 6-cylinder radiator is wider than the 4-cylinder radiator. The lower mounting bracket on the driver's side needs to be swapped to the 6-cylinder bracket, which has a wider spacing. This is a small bracket, easy to overlook and cheap to source.
-
-### 3. speedometer calibration
-If you change the driveshaft and/or differential ratio, the speedometer may read incorrectly. The E36 takes the speed signal from the transmission output, if you keep the same gearbox, the speedo should remain accurate unless you also change the diff ratio.
-
-### 4. weight distribution
-The M50 inline-6 is heavier than the M43 4-cylinder. This shifts the weight balance slightly forward. For a street car, this is negligible. For a track car, you may want to adjust spring rates accordingly.
-
-### 5. hood clearance
-The M50 is taller than the M43 due to the intake manifold. On the E36 sedan, this is not an issue. There is sufficient hood clearance for the M50. Do verify clearance before slamming the hood for the first time.
-
-### 6. registration / legal
-In Slovakia (and much of the EU), an engine swap must be registered with the vehicle inspection authority (STK in SK). The M50B25 is from the same E36 model family, which simplifies the process, but you'll need documentation showing the engine's origin and may need an engineering assessment. Research your local requirements before starting.
-
----
-
-## Recommended swap order
-
-1. **Source the donor engine**: complete with all ancillaries, harness, DME
-2. **Document the donor**: photograph every connector, bracket, and hose before removal
-3. **Remove the M43**: label all connections on the car side
-4. **Rebuild/reseal the M50**: while it's on the stand, replace every gasket and seal
-5. **Install new cooling system**: water pump, thermostat, all hoses (on the engine before install)
-6. **Install 6-cylinder mount arms**: bolt to subframe
-7. **Install the M50**: lower in, connect mounts
-8. **Install driveshaft**: new guibo and center bearing
-9. **Connect exhaust**: downpipe first, then verify mid-section fit
-10. **Connect wiring**: engine harness to body harness, DME, sensors
-11. **Connect cooling**: radiator, hoses, fill and bleed
-12. **Connect fuel**: lines, injectors, check for leaks with key-on before starting
-13. **First start**: expect the first start to take extra cranking while oil pressure builds
-
----
-
-## EU parts suppliers for this swap
-
-| Supplier | Strengths | Website |
-|---|---|---|
-| Autodoc.sk | Cheapest for common parts, fast delivery to SK | autodoc.sk |
-| FCP Euro | Lifetime warranty on all parts, ships to EU | fcpeuro.com |
-| RealOEM | Part number lookup (free) | realoem.com |
-| bmwfans.info | Exploded diagrams by model and engine | bmwfans.info |
-| Schmiedmann | BMW specialist, good for harder-to-find parts | schmiedmann.com |
-| ECS Tuning | Wide selection, ships to EU | ecstuning.com |
-
----
-
-*This guide is the cornerstone of the Projekt 36 swap series. We're installing an M50B25 NV into a 1994 E36 316i sedan in Košice, Slovakia. Every step will be documented with photos and real costs as we go.*
+*This guide is the cornerstone of the Projekt 36 swap series. We're installing an M50B25 NV into a 1994 E36 316i sedan in Košice, Slovakia. Every step will be documented with photos as we go.*
 
 *→ Related: [M50 vs M50TU vs M52 Comparison](/guides/m50-vs-m50tu-vs-m52-comparison) | [Cooling System Overhaul](/guides/e36-cooling-system-overhaul) | [Swap Wiring Differences](/guides/m43-to-m50-wiring-differences)*
