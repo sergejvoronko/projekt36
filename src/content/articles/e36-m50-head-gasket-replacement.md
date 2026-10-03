@@ -1,136 +1,142 @@
 ---
 title: "BMW M50 Head Gasket Replacement: Step-by-Step Guide with Torque Specs and What to Check While You're In There"
 seoTitle: "BMW M50 Head Gasket Replacement and Torque Specs"
-description: "A complete, spec-accurate walkthrough of replacing the head gasket on an M50-engined E36, including torque sequences, what to inspect while the head is off."
+description: "Replacing the head gasket on an M50-engined E36: diagnosis, the BMW locking tools, head bolt torque and angle, what to inspect while the head is off, and the hydraulic-lifter waiting times."
 pillar: engine
 keywords: "M50 head gasket replacement, BMW E36 head gasket, M50 head bolt torque sequence"
 date: "2026-04-27"
 hero: "e36-m50-head-gasket-replacement.webp"
+reviewed: "2026-10-03"
+sources:
+  - title: "Bentley Publishers: BMW 3 Series (E36) Service Manual 1992–1998, 113 Cylinder Head Removal and Installation, 116 Cylinder Head and Valvetrain"
+  - title: "RealOEM BMW parts catalog (part number checks)"
+    url: "https://www.realoem.com/"
 ---
 
 ## TL;DR
 
-- **What:** Full head gasket replacement on the BMW M50B25/M50B20 inline-six
-- **Why:** Coolant loss, white smoke, oil emulsification, or overheating from a failed multi-layer steel gasket
-- **Cost:** €150–€350 in parts depending on kit depth; €800–€1,400 at a shop
-- **Time:** 8–14 hours for a methodical DIY including resurfacing turnaround
-- **Difficulty:** 4/5, straightforward if you're organised, unforgiving if you skip steps
+- **What:** Head gasket replacement on the M50B20/M50B25 inline-six in an E36.
+- **Why:** Coolant loss with no visible leak, white exhaust smoke that doesn't clear when warm, combustion gas in the coolant, or overheating.
+- **Time:** A long weekend for a careful DIY, plus machine-shop time if the head needs resurfacing.
+- **Difficulty:** 4/5. The camshafts and crankshaft must be locked with BMW special tools (or exact equivalents), and the head bolts need a long, thin Torx E12 socket.
 
 ---
 
-## Why M50 head gaskets fail and how to diagnose before you commit
+## Diagnose before you commit
 
-The M50 is not a notoriously gasket-prone engine the way the M54 with its Nikasil bore issues or the N52 with its valley pan problems are, but at 25-plus years old, every single one of these engines is living on borrowed time with the original gasket. Heat cycles, cooling system neglect, and age-hardened hoses that cause localised overheat events are the primary killers.
+On a 25-plus-year-old engine, overheating from cooling-system neglect is the usual way a head gasket fails. Typical signs:
 
-Classic symptoms before you pull the trigger:
+- **White steam from the exhaust** that doesn't clear after warm-up
+- **Coolant consumption with no visible leak**
+- **Milky residue under the oil filler cap**, meaning coolant in the oil (most likely after a serious overheat)
+- **Overheating**, or pressure building in the cooling system soon after a cold start
 
-- **White/grey steam from the exhaust** that doesn't clear after warmup, combustion gases in coolant
-- **Coolant consumption with no visible external leak**: it's going somewhere
-- **Mayonnaise under the oil cap**: coolant ingress into the crankcase (more common after a serious overheat)
-- **Cylinder 5 or 6 misfires**: the rear of the M50 head runs hottest and gasket failure starts there
+Confirm with a **combustion leak (block) tester**: if the test fluid changes colour when sampling air from the expansion tank, combustion gas is reaching the coolant.
 
-Confirm with a **combustion leak tester / block test kit** (combustion gas detector, ~€15 at most auto parts stores). A CO2 presence test in the coolant reservoir that turns the fluid yellow is conclusive. If you're also seeing low compression on adjacent cylinders, you've likely had the gasket breached for a while.
-
-A compression test is mandatory before you do anything else. If cylinder-to-cylinder variance is more than 10%, you need to know whether you're dealing with a gasket failure only or whether piston rings, valves, or bore wear are also in play. There's no point fitting a €90 gasket kit to an engine that needs a full rebuild.
+Do a **compression test** (and ideally a leak-down test) before ordering parts. If one cylinder is clearly lower than the rest, you need to know whether the cause is the gasket or rings and valves; a gasket won't fix worn rings.
 
 ---
 
-## Parts, gaskets, and what to order before teardown
+## Parts to have on the bench
 
-Don't start this job without having every consumable on the bench. Waiting three days for a head bolt set mid-job is a waste of your time and your engine's life (partial reassembly with the head exposed is bad practice).
+- cylinder head gasket for your engine: the standard one, or the **0.3 mm thicker** version if the head is machined
+- **new cylinder head bolts:** Torx stretch bolts that must always be replaced once loosened
+- new exhaust manifold-to-front-pipe gaskets and nuts (Bentley says to discard the old nuts)
+- cylinder head cover gasket set, intake manifold gaskets, upper timing cover gaskets
+- coolant: BMW antifreeze (part **82 14 1 467 704**) or an equivalent BMW-approved coolant, mixed 50/50 with distilled water
+- while you are in there: thermostat, coolant hoses and a water pump, if they are old
 
-**The gasket itself:** The OEM BMW head gasket (Elring manufacture) is part number **11 12 1 730 229** for the M50B25 (2.5L). For the M50B20, use **11 12 1 730 228**. Both are available from Elring directly or through BMW dealers.
-
-| Part | OEM Part No. | Elring Aftermarket | Approx. Price (EU) |
-|---|---|---|---|
-| Head gasket (M50B25) | 11 12 1 730 229 | 027.500 | €55–€75 |
-| Head gasket (M50B20) | 11 12 1 730 228 | 027.490 | €55–€70 |
-| Head bolt set (x14) | 11 12 1 739 495 |, | €40–€60 |
-| Valve cover gasket | 11 12 1 748 109 |, | €15–€25 |
-| Coolant hose set (upper/lower) | varies | Febi/Meyle | €25–€50 |
-| Thermostat + housing gasket | 11 53 1 712 878 |, | €18–€30 |
-| Intake/exhaust cam seals | 11 12 1 721 876 |, | €8 each |
-| Water pump (if 80k+ km) | 11 51 1 710 948 | Graf/Hepu | €45–€90 |
-
-**Head bolts are torque-to-yield (TTY). They must be replaced every time.** This is non-negotiable. The M50 uses M10 TTY bolts that permanently stretch under the torque-plus-angle procedure. Reusing them risks under-clamping and repeat failure within 20,000 km.
-
-On our M50B25 swap build the full consumable spend landed at €210 including a new thermostat, water pump, all hoses, and an OEM-spec Elring gasket. Skipping the water pump on a full stripdown is false economy.
+Look up exact gasket and bolt-kit numbers by VIN on [RealOEM](https://www.realoem.com/). They differ between M50B20 and M50B25 and over production years.
 
 ---
 
-## Teardown sequence
+## Removal: the steps that matter
 
-Work methodically. The M50 DOHC head is not complex, but it has a lot of ancillaries and it's easy to lose track of vacuum routing.
+Follow Bentley or BMW for the full procedure. The order and the critical points:
 
-1. **Drain coolant** at the block drain plug (17mm) and radiator petcock. Catch everything, old BMW coolant is toxic to animals.
-2. **Disconnect battery** and remove the airbox and intake tract to the throttle body.
-3. **Label and disconnect all vacuum lines** at the intake manifold before removal. A phone camera on the routing before you touch anything saves hours.
-4. **Remove the intake manifold** (10mm bolts, 8 of them on B25). Keep the injectors attached, no need to separate the rail unless you're inspecting injectors.
-5. **Remove the exhaust manifold** or downpipe flange at the head. If the M50 has the original cast manifold, the nuts will likely be seized. PB Blaster the day before; use a six-point socket, not a twelve-point.
-6. **Remove the valve cover** (10mm bolts). Inspect the gasket surface, cracks and oil weeping here are common and your new gasket set covers it.
-7. **Remove the timing cover** (front) to access the cam sprockets and timing chain tensioner. Mark chain-to-sprocket alignment with a paint pen before anything moves.
-8. **Remove the camshaft sprockets** and set the timing chain aside with a bungee cord, do not let it drop into the timing cover cavity.
-9. **Remove the cam caps** in sequence (they're numbered, do not mix them up). Lift both camshafts.
-10. **Loosen head bolts** in reverse torque sequence (outside-in, see diagram in the next section), 1/4 turn at a time, multiple passes. Remove all 14 bolts.
-11. **Lift the head.** On a 25-year-old engine it will likely be stuck. Use a rubber mallet on the front/rear casting bosses, never pry between the mating surfaces.
+1. **Let the engine cool.** Disconnect the battery (in the luggage compartment).
+2. **Drain the coolant,** including the block drain, which sits on the exhaust side near cylinder 5.
+3. **Remove the front exhaust pipes from the manifolds.** The exhaust manifolds come off with the head.
+4. **Remove the intake air ducting,** the radiator fan (32 mm nut, **left-hand thread**) and shroud, the heater hoses at the rear of the head and the alternator cooling duct.
+5. **Remove the cylinder head cover.** Note the order of the bolt insulators and gaskets so they go back the same way.
+6. **Remove the throttle housing complete** (four corner bolts), without disconnecting its cables and hoses, then the intake manifold: **seven nuts on top and two support-bracket bolts below.** Stuff clean rags into the open intake ports.
+7. **On VANOS engines, remove the VANOS unit** from the front of the head.
+8. **Lock the engine at TDC:**
+   - turn the engine until the cylinder 1 cam lobes face each other and the TDC notch on the lower timing cover lines up with the 0/T mark on the vibration damper;
+   - lock the crankshaft with tool **11 2 300** through the bellhousing into the flywheel;
+   - lock the camshafts with tool **11 3 240** on their square rear ends. The sprocket arrows are not accurate enough to set TDC.
+9. **Uncouple the timing chains:**
+   - lock the secondary tensioner down with tool 11 3 292 or stiff wire;
+   - remove the intake and exhaust sprockets with the secondary chain (wire-tie the sprockets to the chain);
+   - remove the secondary tensioner, then the **primary tensioner (it is under spring pressure: unscrew it slowly)** and the chain guide;
+   - lift the primary sprocket off the exhaust camshaft and hang the chain on wire.
+   - **From here on, the crankshaft must not turn:** pistons can hit valves.
+10. **Remove the two head-to-lower-timing-cover bolts** (Torx E8).
+11. **Loosen the head bolts in stages** in BMW's loosening sequence, using a thin-walled extended Torx E12 socket (BMW **11 2 250**); the bolts sit deep between the camshaft towers. Discard them.
 
----
-
-## Head inspection and resurfacing
-
-Once the head is on the bench, this is the most critical decision point of the whole job.
-
-**Measure flatness immediately.** Use a precision straight-edge (or a known-flat surface plate) and feeler gauges across all axes: longitudinally, transversely, and diagonally. BMW's service limit for M50 head warpage is **0.10 mm**. Anything over that requires machining. In practice, any engine that overheated enough to blow the gasket should go to the machine shop regardless of what your straight-edge says, micro-cracking in the fire ring area is common and invisible.
-
-Also check:
-- **Valve stem seals**: if you're paying for machine shop time anyway, replace them. A set of 24 seals (Elring) runs about €35. The alternative is doing this job again in 18 months for a different reason.
-- **Valve guide wear**: rock each valve stem laterally. Acceptable play is under 0.1mm. Anything you can feel by hand in an M50 this age warrants new guides.
-- **Crack testing**: a Magnaflux check costs €40–€60 at most machine shops and eliminates any doubt about hairline cracks between the rear cylinders.
-
-Machine shop resurfacing (surface grinding to a Ra 1.6 µm finish) typically costs **€60–€120** in Germany/Austria/Switzerland and 2–4 days turnaround. Factor this into your project timeline.
-
-Clean the block deck surface with a razor blade and scotch-brite, do not use abrasive discs on the aluminium block. All traces of old gasket material must be gone but the surface cannot be scratched.
+The camshafts stay in the head. If you do remove them on the bench, read the waiting-time note under Installation first.
 
 ---
 
-## Head bolt torque sequence and final assembly
+## Inspecting the head and block
 
-This is where precision matters. The M50 uses a three-stage torque-plus-angle procedure. Get a proper beam or click torque wrench for Stage 1, and a quality angle gauge for Stages 2 and 3.
+**Clean without scratching.** Never use a metal scraper or wire brush on the aluminium head or the pistons; use a hard plastic or wooden scraper, or an abrasive disc made for aluminium. Clean the bolt holes of oil and coolant, then run a thread chaser through them.
 
-**Torque sequence:** Work from the centre outward in a crossing pattern, bolts 7 and 8 first (centre pair), then spiral outward to bolts 1, 2, 13, 14 at the corners.
+**Check for warpage** on the head and block gasket faces with a high-quality straight edge, and inspect the head for cracks. If you suspect a crack you can't see, have it tested; a cracked head must be replaced.
 
-| Stage | Torque / Angle | Notes |
-|---|---|---|
-| Stage 1 | 30 Nm | All 14 bolts, centre-out sequence |
-| Stage 2 | +90° (1/4 turn) | All 14 bolts, same sequence |
-| Stage 3 | +90° (1/4 turn) | All 14 bolts, same sequence |
+**Machining limits (Bentley):**
 
-Final effective clamping is achieved through the two angle stages, not a final Nm figure. Do not improvise with Nm equivalents, the stretch is calculated for the angle method.
+| | Six-cylinder head |
+|---|---|
+| Maximum material removal | 0.3 mm |
+| Head height, new | 140.0 mm |
+| Head height, minimum | 139.7 mm |
 
-Apply a **thin smear of clean engine oil** to the bolt threads and under the bolt head contact face before installation. No sealant on the head gasket itself, MLS (multi-layer steel) gaskets go in dry.
+Measure the total height before sending the head out. If it has to be machined, fit the **0.3 mm thicker gasket**.
 
-Reassemble in reverse teardown order. Key torque values for ancillaries:
+Check the valve guides and seats before paying for resurfacing: if they are worn, the head needs more than a skim.
 
-- Cam cap bolts: **10 Nm** (these are small M6 bolts, easy to overtighten)
-- Cam sprocket bolts: **65 Nm** with thread-lock
-- Exhaust manifold nuts: **25 Nm**
-- Intake manifold bolts: **15 Nm**
-
-Retorque cam caps in sequence and re-check timing alignment before fitting the timing cover. One link off on an M50 is a valve-meets-piston event on startup.
+The M50 has **hydraulic valve lifters**, so there are no valve clearances to set during or after this job.
 
 ---
 
-## Cooling system refresh and first start
+## Installation
 
-With the head back on, this is not the time to reuse 3-year-old coolant and a cracked expansion tank cap.
+1. **Fit the new gasket on the block** with the word **"OBEN" facing up**, over the two locating dowels.
+2. **Turn the crankshaft back about 45°** (counter-clockwise viewed from the front) after removing the crankshaft locking tool. This keeps the pistons clear of the valves while the head goes on. Guide the chain so it doesn't jam.
+3. **Lower the head** with the camshafts still locked at TDC (tool 11 3 240), feeding the primary chain through the opening.
+4. **Lightly oil the new head bolts** and fit them with their washers, finger tight. Check that every washer is in place; some are staked to the head. Fit the head-to-lower-timing-cover bolts finger tight.
+5. **Tighten the head bolts in BMW's tightening sequence** (Bentley Fig. 41, M50):
 
-- **Flush and refill** with BMW Coolant (part no. 82 14 1 467 704) at 50/50 with distilled water. Avoid generic green antifreeze, the M50 aluminium castings are sensitive to silicate-heavy formulas.
-- **Bleed the system properly.** The M50 has a bleed screw on the thermostat housing and another at the highest coolant hose junction near the firewall. Open both, fill slowly, close when coolant runs out bubble-free.
-- **First start:** Let it idle to thermostat-open temperature. Watch for white smoke, watch coolant level, watch for any ticking from the head (indicating a torque issue on cam caps).
-- **After 500 km:** Some mechanics recommend a hot re-torque on TTY head bolt engines. BMW's official position is that retorque is not required with the M50, but checking valve clearances at this interval is worthwhile.
+| Stage | Torque / angle |
+|---|---|
+| 1 | 30 Nm |
+| 2 | +90° |
+| 3 | +90° |
+
+   Then tighten the head-to-lower-timing-cover bolts to **10 Nm**. The angle stages do the clamping: don't substitute a torque figure for them.
+6. **Return the crankshaft to TDC** in the normal direction of rotation and lock it again with 11 2 300, guiding the primary chain.
+7. **Re-time the chains** as described in Bentley's timing chain procedure (see our [M50 timing chain guide](/guides/e36-m50-timing-chain-guide) for the critical points and torque values).
+8. **Reassemble the rest** in reverse order: intake manifold nuts **15 Nm**, exhaust manifold nuts **20 Nm**, front pipes to manifolds **30 Nm** with new nuts.
+
+**If the camshafts were removed:** the hydraulic lifters expand while the cams are out. Bentley requires a waiting time after the cams are refitted, before the engine is turned, or open valves can hit pistons:
+
+| Temperature | Wait |
+|---|---|
+| 20 °C and above | 10 minutes |
+| 10–20 °C | 30 minutes |
+| 0–10 °C | 75 minutes |
+
+---
+
+## Refill, bleed and first start
+
+- **Refill** with BMW-approved coolant at 50/50 with distilled water.
+- **Bleed** at the bleed screw on the thermostat housing (8 Nm) until coolant comes out without bubbles, and follow the bleeding procedure for your car's heater and expansion tank.
+- **First start:** idle to operating temperature while watching the coolant level, the temperature gauge and the exhaust. Check again for leaks once it has cooled.
 
 ---
 
 ## What's next
 
-A head gasket job on the M50 opens up access to several things you'd otherwise need to remove the intake manifold for anyway, injector service, throttle body cleaning, and VANOS unit inspection (on the M50B25 with VANOS) are all logical next steps while everything is apart. If your M50 still has the original VANOS solenoid and hasn't been serviced since the 1990s, budget another afternoon and check our VANOS rebuild guide. The engine will reward a thorough approach, these inline-sixes have another 150,000 km in them if the cooling system is respected.
+With the head off, the cooling system is the obvious companion job. On VANOS engines, the VANOS unit is already off the engine, which makes it the right moment to reseal it. See the [cooling system overhaul](/guides/e36-cooling-system-overhaul) for the rest of the cooling refresh.
