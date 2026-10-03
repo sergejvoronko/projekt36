@@ -1,158 +1,184 @@
 ---
-title: "BMW E36 OBD1 Wiring Pinout Reference: DME Connector, Sensor Wires, and Diagnostic Port Explained"
-seoTitle: "BMW E36 OBD1 DME Pinout: Connector and Sensor Wires"
-description: "A complete pinout reference for the BMW E36 DME connector covering OBD1 M50/M52 sensor wiring, diagnostic port signals, and common fault traces."
+title: "BMW E36 M50 DME Pinout Reference: Bosch M3.1 and M3.3.1 ECM Connector"
+seoTitle: "BMW E36 M50 DME Pinout: Bosch M3.1 and M3.3.1"
+description: "Pin-by-pin ECM connector assignments for the E36 M50: Bosch DME M3.1 (1992) and M3.3.1 (VANOS, 1993-95), from the Bentley manual, with the safe way to test at the connector."
 pillar: reference
 keywords: "BMW E36 DME pinout, M50 ECU connector wiring, E36 OBD1 sensor wiring reference"
 date: "2026-05-18"
 hero: "e36-dme-connector-pinout-reference.webp"
+reviewed: "2026-10-03"
+sources:
+  - title: "Bentley Publishers: BMW 3 Series (E36) Service Manual 1992–1998, 130 Fuel Injection, Tables i and j (ECM pin assignments) and Table b (engine management systems)"
 ---
 
 ## TL;DR
 
-- **What:** Full pin-level wiring reference for the BMW E36 OBD1 DME (Motronic M3.1 / M3.3) 88-pin connector and the 20-pin OBD1 diagnostic port
-- **Why:** Factory ETK diagrams are scattered, out of print, or trapped behind paywalls, this consolidates what you actually need for diagnostics and harness work
-- **Cost:** N/A (reference article)
-- **Time:** N/A
-- **Difficulty:** 3/5, straightforward to read, but harness work on a 25-year-old E36 demands patience and a quality multimeter
+- **What:** The pin assignments of the 88-pin engine control module (ECM, "DME") connector on the E36 M50, for both versions: **Bosch DME M3.1** (non-VANOS, 1992) and **Bosch DME M3.3.1** (VANOS, 1993–1995).
+- **Why:** When a sensor or actuator misbehaves, checking the signal and the wiring at the ECM connector tells you whether the fault is the part, the wiring or the ECM.
+- **Important:** The two versions use **different pins** for many functions, injectors and ignition coils included. Use the table for your DME.
 
 ---
 
-## Background: which DME are we talking about?
+## Which DME do you have?
 
-The E36 ran two generations of Bosch Motronic on the six-cylinder cars before the swap to OBD2:
-
-| Engine | DME Version | ECU Part Number (example) | Production Years |
-|---|---|---|---|
-| M50B20 / M50B25 (non-VANOS) | Motronic M3.1 | 0 261 200 557 | 1990–1992 |
-| M50B20TU / M50B25TU (VANOS) | Motronic M3.3 | 0 261 203 220 | 1992–1995 |
-| M52B20 / M52B28 (early) | Motronic M5.2 | 0 261 204 402 | 1995–1998 |
-
-This article focuses on **M3.1 and M3.3**, the OBD1 units used in the 1990–1995 cars. The 88-pin Bosch connector is physically identical across both; pin assignments are essentially the same with M3.3 adding VANOS solenoid control on a previously unused pin. M5.2 moves to a different connector scheme and is covered separately.
-
-The harness plug itself is BMW part **61 12 1 393 443** (female housing, 88-pin, grey). Replacement terminals are sold individually as **61 13 0 005 198**, expect to pay €0.80–€1.50 per terminal from a BMW dealer or around €0.40 each via APA or Hella trade accounts.
-
----
-
-## The 88-pin DME connector: full pinout
-
-The connector is keyed and reads left-to-right, top row first, when viewed from the wire side (ECU unplugged, looking into the harness plug). Rows are 32 / 32 / 24 pins.
-
-### Power and ground (rows a & b, selected pins)
-
-| Pin | Signal | Wire Colour (factory) | Notes |
-|---|---|---|---|
-| 1 | Main relay switched B+ | Red/White | 12V after main relay closes |
-| 2 | Main relay switched B+ | Red/White | Redundant feed; both must be present |
-| 3 | Ground, ECU logic | Brown | Direct to body earth stud |
-| 4 | Ground, ECU logic | Brown | Redundant ground; both must measure <0.1Ω to chassis |
-| 5 | Ignition switch terminal 15 | Red/Yellow | ECU wake-up; 12V with key on |
-| 6 | Ground, power stage | Brown/Black | Injector return ground; keep separate from logic ground |
-| 19 | Fuel pump relay trigger | Brown/Green | ECU pulls low to energise relay |
-| 20 | Main relay trigger | Brown/Yellow | ECU pulls low; relay closes ~1s after key-on |
-
-**On a 25-year-old E36:** Pins 3 and 4 are the single most common source of intermittent misfires and false fault codes. Both grounds run through the same loom section that passes over the back of the cylinder head, heat cycling cracks the insulation. Measure resistance to chassis with the connector unplugged and probing the pin directly; anything above 0.2Ω warrants a replacement ground wire.
-
-### Sensor inputs
-
-| Pin | Signal | Expected Value (key on, engine cold) | Notes |
-|---|---|---|---|
-| 18 | Coolant temp sensor (NTC) | 2.2–2.8V at 20°C | Dual-pin sensor; return on Pin 17 |
-| 17 | Coolant temp sensor ground | 0V (signal ground) | Not chassis ground, isolated inside ECU |
-| 26 | Intake air temp sensor | 2.2–2.8V at 20°C | Same NTC curve as coolant sensor |
-| 25 | Air temp sensor ground | 0V (signal ground) | |
-| 27 | Throttle position sensor (TPS), wiper | 0.4–0.6V at idle | Linear pot; 4.5V at WOT |
-| 28 | TPS reference voltage | 5.0V | ECU-supplied; probe to verify 5V rail intact |
-| 29 | TPS ground | 0V (signal ground) | |
-| 7 | Mass air flow sensor, signal | 1.0–1.2V at idle | Bosch hot-film MAF; frequency output on M3.1, voltage on M3.3 |
-| 8 | MAF ground | 0V | |
-| 9 | MAF supply voltage | 12V | |
-| 10 | Crankshaft position sensor (CKP), signal + | AC waveform | 60-2 trigger wheel; ~0.5V AC at 200 RPM |
-| 11 | CKP signal − | AC waveform return | Differential pair, do not ground |
-| 16 | Camshaft position sensor (CMP) | 5V square wave | Hall effect on VANOS cars; single wire + ground |
-| 15 | CMP ground | 0V | |
-| 30 | Knock sensor 1 | AC signal ~0–5V | Piezo; wiring must be shielded, shield to Pin 31 |
-| 31 | Knock sensor 1 shield | 0V | |
-| 32 | Knock sensor 2 | AC signal ~0–5V | Rear bank |
-
-**Tip for swap builds:** If the camshaft sensor wiring has been extended, check how. Unshielded wire can pick up interference and cause intermittent cam signal dropout. Always use twisted shielded pair (Belden 8761 equivalent, ~€1.20/m) for the CMP and CKP extensions.
-
-### Injector and actuator outputs
-
-| Pin | Signal | Notes |
-|---|---|---|
-| 33 | Injector 1 | ECU low-side switch; B+ supplied by injector wiring at top |
-| 34 | Injector 2 | |
-| 35 | Injector 3 | |
-| 36 | Injector 4 | |
-| 37 | Injector 5 | |
-| 38 | Injector 6 | |
-| 45 | Idle control valve (ICV), coil A | PWM output; 100–200 Hz at idle |
-| 46 | ICV, coil B | |
-| 47 | VANOS solenoid | M3.3 only; B+ switched, ECU grounds to activate |
-| 55 | Purge valve (EVAP) | PWM; ECU low-side |
-
-### Ignition outputs
-
-| Pin | Signal | Notes |
-|---|---|---|
-| 48 | Ignition coil 1 (cyl 1 & 6) | ECU triggers power stage module |
-| 49 | Ignition coil 2 (cyl 2 & 5) | |
-| 50 | Ignition coil 3 (cyl 3 & 4) | |
-
-The coil trigger wires go to the **external power stage (ZAE)** module, BMW part **12 14 1 742 185** (Bosch 0 227 400 128), current replacement approximately €65–€90 from ECP or TRW. Do not probe these outputs with a standard test light; use a 10MΩ probe only or a dedicated ignition scope lead.
-
----
-
-## The OBD1 diagnostic port (round 20-pin)
-
-The E36 OBD1 diagnostic port is a round 20-pin circular connector located in the engine bay near the fusebox. It is **not** OBD2-compatible. Communication is via BMW's proprietary DS2 protocol at 9,600 baud on a single K-line wire.
-
-| Pin | Signal |
+| Engine | Engine management (Bentley) |
 |---|---|
-| 1 | Ground |
-| 2 | K-line (DME) |
-| 3 | K-line (ABS/ASC) |
-| 7 | Battery voltage (for tester power) |
-| 11 | K-line (EWS / immobiliser) |
+| M50, 1992 | Bosch DME M3.1 |
+| M50 with VANOS, 1993–1995 | Bosch DME M3.3.1 |
+| S50US (US M3), 1995 | Bosch DME M3.3.1 |
+| M52 and S52US, 1996–1998 | Siemens MS41.1 (OBD2): a different system and connector, not covered here |
 
-To communicate with the DME using a modern interface, you need a **K+DCAN USB cable** (commonly sold as INPA cable, ~€15–€25 on Amazon.de) plus **INPA/Ediabas** or **NCSExpert** on Windows. The BMW-specific cable uses the round-to-OBD2 adapter that ships with the cable, the adapter is not electrically OBD2, just physically convenient.
-
-**Fault code reading via LED blink (emergency method):** With no scan tool, bridge Pin 7 to Pin 20 and cycle ignition. The MIL will blink fault codes in a 3+1 digit pattern. This only works for DME codes, ABS and EWS have separate K-lines.
+Both M50 systems have **distributorless ignition**: one coil per cylinder, each driven by its own ECM output.
 
 ---
 
-## Common wiring faults and how to trace them
+## Before you probe the connector
 
-These are the failure modes we see repeatedly on E36 harnesses that are 25–30 years old:
+Bentley's rules, there to protect the ECM:
 
-**1. High resistance injector returns**
-Injectors share a common B+ rail through a single fusible link (10A, green, in the fusebox). If that link shows more than 0.3V drop under cranking, replace it. The link is available as **61 13 1 378 144** (~€3).
+- **Wait at least 40 seconds** after switching the ignition off before unplugging the ECM. Residual power in the system relay can damage the module if you unplug it sooner.
+- Connect and disconnect the ECM connector and your meter probes **with the ignition off**.
+- Use a **breakout box** where possible, so you can measure with the ECM connected and without spreading the small terminals. The alternative is to separate the connector housing and measure **from the back** of the connector.
+- Test with a **digital multimeter or an LED tester only**: an analog meter or a bulb test light can damage the ECM.
+- A replacement ECM must be **coded** for the car (engine, transmission and so on) before it is fitted.
 
-**2. MAF signal drift**
-The MAF connector (3-pin AMP Junior Power Timer) corrodes and introduces resistance on the signal wire. Clean with DeoxIT D5 or replace the connector. The female connector housing is **61 13 0 007 867**; terminals are **61 13 0 005 198** (same as DME terminals).
+**Where it is:** the ECM sits in a compartment at the **right rear of the engine compartment**, by the bulkhead. The cover is held by four captive screws; the connector releases with a fastener and pivots up off the module.
 
-**3. Coolant sensor ground contamination**
-Because the coolant sensor shares a signal ground plane with the TPS and IAT inside the ECU, a leaking sensor that introduces coolant into the connector contaminates all three sensor readings simultaneously. If you get simultaneous TPS, IAT, and CLT faults, inspect the coolant sensor plug first. Replacement sensor (Wahler or Febi): **13 62 1 433 077**, approximately €8–€12.
-
-**4. EWS / DME synchronisation loss**
-On 1995+ cars with EWS2, the EWS module communicates with the DME over a separate CAN-style wire (not the K-line). Fault code 82 (EWS tamper) after a battery replacement means the synchronisation has been interrupted. Re-sync using NCSExpert or a dealer scan tool, not fixable with a code reader alone.
+Bentley's advice on reading the results: no voltage or no continuity usually means a wiring or connector problem. A wrong value doesn't automatically mean the component is faulty, so check for loose, broken or corroded connections before replacing parts.
 
 ---
 
-## Using this reference for standalone ECU work
+## Bosch DME M3.1 (M50, 1992)
 
-If you're deleting the factory harness in favour of a standalone ECU (Speeduino, MegaSquirt MS3, or Haltech Nexus R5), this pinout gives you the signal source locations. Key points:
+Vacant pins are left out.
 
-- The **CKP sensor output is differential AC**: most standalone ECUs expect this on a dedicated differential input. Do not convert to single-ended without a proper differential buffer (e.g., LM1815 circuit).
-- The **MAF is unnecessary** on a MAP-based standalone tune. The MAF wiring can be repurposed for a wideband lambda signal if the routing is convenient.
-- The **VANOS solenoid (Pin 47)** is a simple on/off solenoid, not a PWM device on M3.3. It opens at a fixed RPM/load threshold. Any standalone ECU with a spare switched output can drive it via a flyback diode.
-- Factory **coil packs are wasted-spark**: pairs 1/6, 2/5, 3/4. Keep this pairing if reusing the factory coils with a standalone ignition driver.
-
-Bosch connector tool set for 88-pin DME service (extraction and insertion): look for the **Bosch 1 684 463 281** terminal removal tool, sold by specialist tool suppliers for approximately €18–€25.
+| Pin | Type | Function |
+|---|---|---|
+| 1 | Output | Fuel pump relay control (needs the crankshaft position signal to switch) |
+| 2 | Output | Idle speed control valve, close signal (pulsed ground) |
+| 3 | Output | Injector, cylinder 1 |
+| 4 | Output | Injector, cylinder 3 |
+| 5 | Output | Injector, cylinder 2 |
+| 6 | Ground | Ground for the injector output stages |
+| 8 | Output | Check Engine lamp |
+| 11 | Output | Throttle position (load) signal to the transmission control module |
+| 12 | Input | Throttle position sensor signal |
+| 13 | Output | Mass air flow sensor hot-wire burn-off (for 0.5 s after shutdown) |
+| 14 | Ground | Mass air flow sensor ground |
+| 16 | Input | Cylinder identification sensor (AC pulse between pins 16 and 44) |
+| 17 | Output | Fuel consumption signal to the instrument cluster |
+| 23 | Output | Ignition coil, cylinder 2 |
+| 24 | Output | Ignition coil, cylinder 3 |
+| 25 | Output | Ignition coil, cylinder 1 |
+| 26 | Input | Battery voltage at all times (terminal 30) |
+| 27 | Output | Main relay control (to relay terminal 85) |
+| 28 | Ground | Ground for the ECM and sensor shielding |
+| 29 | Output | Idle speed control valve, open signal (pulsed ground) |
+| 31 | Output | Injector, cylinder 5 |
+| 32 | Output | Injector, cylinder 6 |
+| 33 | Output | Injector, cylinder 4 |
+| 34 | Ground | Ground for the output stages |
+| 36 | Output | Evaporative purge valve |
+| 37 | Output | Oxygen sensor heater relay control |
+| 41 | Input | Mass air flow sensor signal |
+| 43 | Ground | Ground for the temperature sensors and throttle position sensor |
+| 44 | Input | Cylinder identification sensor (pair with pin 16) |
+| 48 | Output | A/C compressor control |
+| 50 | Output | Ignition coil, cylinder 4 |
+| 51 | Output | Ignition coil, cylinder 6 |
+| 52 | Output | Ignition coil, cylinder 5 |
+| 54 | Input | Battery voltage from the main relay (terminal 87) |
+| 55 | Ground | Ground for ignition control |
+| 56 | Input | Battery voltage with key on or engine running (terminal 15) |
+| 59 | Output | Throttle position sensor supply (5 V) |
+| 60 | Input | Programming voltage, from the data link connector |
+| 64 | Input | Ignition timing intervention from the A/T control module (during gearshifts) |
+| 65 | Input | A/T range switch: park/neutral signal |
+| 67 | Input | Crankshaft position / rpm sensor (AC voltage between pins 67 and 68) |
+| 68 | Input | Crankshaft position / rpm sensor (pair with pin 67) |
+| 70 | Input | Oxygen sensor signal (0–1 V, fluctuating when running) |
+| 71 | Ground | Oxygen sensor signal ground |
+| 73 | Input | Road speed signal from the instrument cluster |
+| 74 | Output | Engine speed (TD) signal to the instrument cluster |
+| 77 | Input | Intake air temperature sensor (0–5 V, varies with temperature) |
+| 78 | Input | Coolant temperature sensor (0–5 V, varies with temperature) |
+| 81 | Input | Drive-away protection enable, from the on-board computer |
+| 85 | Input | A/C pressure switch signal, from the climate control module |
+| 86 | Input | A/C compressor on request, from the climate control module |
+| 87 | Input | Diagnostic RxD, to pin 15 of the data link connector |
+| 88 | In/out | Diagnostic TxD, to pin 20 of the data link connector |
 
 ---
 
-## What's next
+## Bosch DME M3.3.1 (M50 VANOS, 1993–1995)
 
-If you're here because you're chasing a specific fault code, cross-reference the pin assignments above with the BMW ISTA fault code definitions, codes 0x012A (coolant sensor) and 0x0158 (CKP signal) account for a large proportion of E36 no-start calls. For harness repair beyond terminal-level work, see our E36 engine harness refresh guide, which covers full loom re-pinning with OEM-spec GXL wire and correct gauge selection by circuit type.
+Vacant pins are left out. Note how many functions moved compared with M3.1.
+
+| Pin | Type | Function |
+|---|---|---|
+| 1 | Output | Fuel pump relay control (needs the crankshaft position signal to switch) |
+| 2 | Output | Idle speed control valve, close signal (pulsed ground) |
+| 3 | Output | Injector, cylinder 5 |
+| 4 | Output | Injector, cylinder 6 |
+| 5 | Output | Injector, cylinder 4 |
+| 6 | Ground | Ground for the injector output stage |
+| 7 | Output | VANOS solenoid (camshaft actuator) |
+| 8 | Output | Check Engine lamp |
+| 11 | Output | Throttle angle signal to the A/T control module |
+| 13 | Input | Oxygen sensor signal (0–1 V, fluctuating when running) |
+| 14 | Input | Mass air flow sensor |
+| 15 | Ground | Ground |
+| 16 | Input | Crankshaft position / rpm sensor (AC voltage between pins 16 and 43) |
+| 17 | Input | Camshaft position sensor (Hall effect) |
+| 23 | Output | Ignition coil, cylinder 4 |
+| 24 | Output | Ignition coil, cylinder 6 |
+| 25 | Output | Ignition coil, cylinder 5 |
+| 26 | Input | Battery voltage at all times (terminal 30) |
+| 27 | — | Main relay activation (relay terminal 85) |
+| 28 | Ground | Ground for the ECM and sensor shielding |
+| 29 | Output | Idle speed control valve, open signal (pulsed ground) |
+| 31 | Output | Injector, cylinder 3 |
+| 32 | Output | Injector, cylinder 2 |
+| 33 | Output | Injector, cylinder 1 |
+| 34 | Ground | Ground for the remaining output stages |
+| 36 | Output | Evaporative purge valve |
+| 38 | Output | Oxygen sensor heater relay control |
+| 40 | Ground | Oxygen sensor signal ground |
+| 41 | Input | Mass air flow sensor voltage signal |
+| 42 | Input | Vehicle speed signal from the instrument cluster |
+| 43 | Input | Crankshaft position / rpm sensor (pair with pin 16) |
+| 44 | Ground | Ground for the intake air and coolant temperature sensors and the throttle position sensor |
+| 45 | Ground | Ignition circuit shield |
+| 46 | Output | Fuel consumption signal to the instrument cluster |
+| 47 | Output | Engine speed (TD) signal to the instrument cluster |
+| 48 | Output | A/C compressor relay control |
+| 50 | Output | Ignition coil, cylinder 1 |
+| 51 | Output | Ignition coil, cylinder 2 |
+| 52 | Output | Ignition coil, cylinder 3 |
+| 54 | Input | Battery voltage from the main relay |
+| 55 | Ground | Ground for ignition control |
+| 56 | Input | Battery voltage with key on or engine running (terminal 15) |
+| 57 | Input | Ignition timing intervention from the A/T control module |
+| 59 | Output | Throttle position sensor supply (5 V) |
+| 60 | Input | Programming voltage, from the data link connector |
+| 64 | Input | A/C on signal, from the climate control module |
+| 65 | Input | A/C pressure signal, from the climate control module via the pressure switch |
+| 66 | Input | Drive-away protection enable (starter immobilization relay) |
+| 69 | Input | Knock sensor 2 (cylinders 4, 5, 6) |
+| 70 | Input | Knock sensor 1 (cylinders 1, 2, 3) |
+| 71 | Ground | Ground for the knock sensors and shields |
+| 73 | Input | Throttle position sensor signal |
+| 77 | Input | Intake air temperature sensor (0–5 V) |
+| 78 | Input | Coolant temperature sensor (0–5 V) |
+| 81 | Input | A/T park/neutral position signal |
+| 87 | Input | Diagnostic RxD, to pin 15 of the data link connector |
+| 88 | In/out | Diagnostic TxD, to pin 20 of the data link connector |
+
+---
+
+## Using the tables
+
+- **Injector or coil complaints:** find the cylinder in the table for your DME, then test from that pin to the component. The pin for "cylinder 1" differs between M3.1 and M3.3.1.
+- **Sensor readings:** the temperature sensors give 0–5 V that changes with temperature. The oxygen sensor fluctuates between 0 and 1 V with the engine running. The crankshaft sensor produces an AC voltage across its two pins while cranking.
+- **Power and grounds first:** before condemning a sensor, check the ECM's supplies (terminal 30, terminal 15, main relay feed) and its ground pins with a voltage-drop test. See the [ground distribution guide](/guides/e36-ground-distribution-guide).
+- **Full circuits:** for wire colours and everything between the ECM and each component, use the electrical wiring diagrams. See [How to read the E36 ETM](/guides/e36-how-to-read-etm).
