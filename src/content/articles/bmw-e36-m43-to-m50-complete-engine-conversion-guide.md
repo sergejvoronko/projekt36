@@ -1,139 +1,103 @@
 ---
 title: "BMW E36 M43 to M50 Engine Conversion: The Complete Step-by-Step Guide"
 seoTitle: "BMW E36 M43 to M50 Swap: Complete Conversion Guide"
-description: "A comprehensive guide to swapping the M43 four-cylinder engine for the legendary M50 six-cylinder in your BMW E36."
+description: "How an E36 M43 to M50 conversion goes, step by step: choosing the donor and DME, the EWS question, mechanical installation, wiring, cooling and exhaust, and what to check on the first start."
 pillar: swap
 keywords: "M43 to M50 swap, E36 engine conversion, M50 swap guide, engine swap wiring, E36 cooling upgrade"
 date: "2026-08-17"
 hero: "bmw-e36-m43-to-m50-complete-engine-conversion-guide.webp"
+reviewed: "2026-10-03"
+sources:
+  - title: "Bimmerfest: E36 318is budget build and basic guide to an M50 swap (owner's write-up)"
+    url: "https://www.bimmerfest.com/threads/e36-318is-budget-build-and-basic-guide-to-an-m50-swap.811944/"
+  - title: "Wikipedia: BMW M50 (power, torque, production years)"
+    url: "https://en.wikipedia.org/wiki/BMW_M50"
+  - title: "Bentley Publishers: BMW 3 Series (E36) Service Manual 1992–1998 (engine management by year, EWS, charging, cooling, fuel)"
 ---
 
-The four-cylinder E36 models, the 316i and 318i, are lightweight, balanced, and plentiful. Their biggest drawback? The M43 engine. While reliable, its ~115 hp leaves much to be desired. The solution is one of the most classic and rewarding swaps in the E36 world: replacing the M43 with the iconic M50 inline-six.
-
-This guide provides a comprehensive, no-nonsense walkthrough of the entire M43 to M50 conversion process. We'll cover sourcing the right donor package, mechanical installation, wiring, and the essential supporting upgrades you can't afford to skip.
+The four-cylinder E36s, the 316i and 318i, are light and plentiful, and an M50 six-cylinder transforms them. Owners who have done it describe the swap as an engine replacement with a few extra steps, provided you **collect every part before you start**. This guide walks through the order of work. The [complete parts list](/guides/m43-to-m50-complete-parts-list) has every part by system.
 
 ## TL;DR
 
-| Aspect | Summary |
+| | |
 | :--- | :--- |
-| **What:** | Swapping the 1.6L/1.8L M43 4-cylinder for a 2.0L/2.5L M50 6-cylinder. |
-| **Why:** | A massive power increase (from ~115 hp to 150-192 hp) and the legendary E36 inline-six soundtrack. |
-| **Cost:** | €1,500 - €3,500, depending on donor engine condition and "while-you're-in-there" upgrades. |
-| **Time:** | 40-60 hours. A packed weekend for an experienced mechanic, a week for the meticulous DIYer. |
-| **Difficulty:** | 4/5. Requires solid mechanical skill, wiring competence, and patience for troubleshooting. |
+| **What:** | Replacing the M43 four-cylinder with an M50 six-cylinder. |
+| **Why:** | From roughly 100 hp to 150 PS (M50B20) or 192 PS (M50B25). |
+| **Time:** | An owner reports about 10 hours to a running engine with all parts at hand; plan more for a careful first swap. |
+| **Difficulty:** | 4/5 |
 
-## Sourcing Your Donor Package: The Heart of the Swap
+---
 
-The success of your swap hinges on sourcing a complete and healthy donor package. Your primary choice is between the M50B20 (from a 320i) and the M50B25 (from a 325i). While the swap process is nearly identical, the performance difference is significant.
+## 1. Choose the donor
 
-| Engine | Displacement | Power (hp) | Torque (Nm) | Typical Cost (Used) |
-| :--- | :--- | :--- | :--- | :--- |
-| **M50B20** | 1991 cc | 150 | 190 | €400 - €700 |
-| **M50B25** | 2494 cc | 192 | 245 | €700 - €1,200 |
+| Engine | Power | Torque | Built |
+|---|---|---|---|
+| M50B20 | 150 PS | 190 Nm | Non-VANOS 1990–92; VANOS (TU) 1992–96 |
+| M50B25 | 192 PS | 245 Nm (TU: 250 Nm) | Non-VANOS 1990–92; VANOS (TU) 1992–96 |
 
-For the effort involved, we strongly recommend holding out for an M50B25. The extra 42 hp and 55 Nm of torque completely transform the car.
+The B25 is the obvious choice for the effort involved. Then decide between **non-VANOS** (simpler, rarer, Bosch DME M3.1) and **VANOS** (better mid-range, common, Bosch DME M3.3.1). See the [M50 vs M50TU vs M52 comparison](/guides/m50-vs-m50tu-vs-m52-comparison).
 
-Regardless of your choice, you need a *complete* package. Scouring scrapyards for individual parts will quickly become a logistical and financial nightmare. Aim to get all of the following from a single donor car:
+**Buy it complete:** engine with manifolds, alternator, power steering pump, A/C compressor, air flow sensor and intake boot, and above all the **uncut engine harness and the DME from the same engine**.
 
-*   **Complete Engine:** With intake and exhaust manifolds, alternator, power steering pump, starter, and all sensors.
-*   **Engine Wiring Harness:** Uncut and in good condition.
-*   **DME (ECU):** The correct one for the engine (e.g., Bosch Motronic M3.1 for the M50B25). Crucially, know if it has EWS (immobiliser).
-*   **Transmission:** A Getrag 250G (common) or the stronger ZF 310G/320Z.
-*   **Driveshaft:** From the corresponding 6-cylinder model. Your 4-cylinder shaft will not fit.
-*   **Engine Mounting Arms:** Specific to the 6-cylinder E36 chassis.
-*   **Full Exhaust System:** From the manifolds back to the muffler.
-*   **Cooling System:** Radiator, expansion tank, fan shroud, and all hoses.
-*   **Instrument Cluster:** A 6-cylinder cluster is needed for an accurate tachometer.
+---
 
-## Mechanical Installation: The Heavy Lifting
+## 2. Solve the immobiliser question first
 
-With the M43 removed, it's time to prepare the engine bay for its new heart. The core of the mechanical swap involves fitting the engine, transmission, and driveshaft.
+Per Bentley, the first E36 immobiliser (EWS) arrived in **January 1994**: a module under the left side of the dashboard that interrupts ignition, fuel and starter. The coded-key **EWS II** followed in **January 1995**, and it disables both the DME and the starter if the key code doesn't match.
 
-### Engine Mounts and Arms
+- **No EWS module in your car:** the donor's DME and harness can be used as they are.
+- **EWS in your car:** an owner who put an M50TU into a 1995 (EWS II) 318is used a **"red label" DME with the number ending 413**, and still needed wiring changes at the EWS module. See the [EWS guide](/guides/e36-ews-immobilizer-guide) before buying a DME.
 
-The M50 engine will not bolt to the M43's mounting points. You must use the cast aluminum engine mounting arms from a 6-cylinder E36.
+Settle this before you buy the DME. It's the part of the swap that most often ends in "cranks but won't start".
 
-*   **Left Engine Arm:** BMW `11811141137`
-*   **Right Engine Arm:** BMW `11811141138`
+---
 
-While you're there, install new engine mounts. Aged rubber mounts will compromise the feel of your new engine.
+## 3. Mechanical installation
 
-| Mount Type | Part Number (Example) | Approx. Cost (Pair) | Notes |
-| :--- | :--- | :--- | :--- |
-| **OEM Rubber** | Lemförder `1052201` | €50 - €70 | Best for comfort and daily driving. |
-| **Polyurethane** | Powerflex PFF5-306 | €90 - €120 | Stiffer, more engine feedback. Ideal for track/fast road use. |
+1. **Remove the M43** and label every connection on the car side.
+2. **Prepare the bay:** fit the **six-cylinder engine mount arms**, the **six-cylinder front anti-roll bar** (the four-cylinder bar doesn't clear the M50's oil pan) and the six-cylinder **lower radiator mount**.
+3. **Prepare the engine on the stand:** reseal it (valve cover, oil pan, oil filter housing gaskets, rear main seal) and fit the new cooling parts.
+4. **Clutch and flywheel:** a six-cylinder flywheel with a six-cylinder clutch is the reliable choice.
+5. **Gearbox:** BMW's M20, M40, M42, M43, M50 and M52 share the gearbox bolt pattern, so the four-cylinder gearbox bolts on. Fit the **six-cylinder shift linkage**. The four-cylinder transmission crossmember is reported to fit, using a different set of holes in the body. See the [gearbox guide](/guides/e36-gearbox-selection-swap).
+6. **Driveshaft:** the four-cylinder front section is too long. Use a front section that matches your gearbox type: a Getrag front section for a Getrag box, because a ZF section won't bolt to the flex disc. Fit a new flex disc and centre bearing.
 
-### Transmission, Driveshaft, and Differential
+---
 
-The M50 bolts up to a 5-speed manual gearbox, typically the Getrag 250G found in the 320i and 325i. This is a direct fit. You will also need the corresponding 6-cylinder transmission cross-member (`22311141132`) and new gearbox mounts (`22316799331`).
+## 4. Wiring
 
-Your 4-cylinder driveshaft is the wrong length. You must use a driveshaft from a manual 320i, 323i, 325i, or 328i. Ensure its center support bearing (`26121226723`) and flex disc (guibo, `26117511454`) are in good condition or replace them.
+The M50 engine harness **plugs into the same chassis connector** the four-cylinder harness used. Beyond that, the wiring work is the immobiliser (step 2) and the checks below:
 
-The stock differential from your 316i/318i (likely a 3.38 or 3.45 ratio) will technically work, but the gearing will be extremely short. You'll be hitting the rev limiter constantly. A highly recommended upgrade is to swap in a medium case (188mm) differential from a 325i, which has a much more suitable **3.15** final drive ratio.
+- **DME power and grounds:** after the swap, check the DME supplies and the engine grounds. See the [ground distribution guide](/guides/e36-ground-distribution-guide).
+- **Charging:** the M50 alternator's **D+** wire must be connected, and the warning light must come on with the ignition on (it excites the alternator). See the [charging guide](/guides/e36-charging-system-diagnosis).
+- **Instruments:** check that the rev counter and other gauges read correctly on the first run.
 
-## Wiring: Demystifying the X20 Connector
+---
 
-This is the most intimidating part of the swap for many, but it's straightforward if you're systematic. On E36s from ~1993 onwards, the engine harness connects to the main chassis harness at a large, round plug on the firewall called the **X20 connector**. Your job is to ensure the pins from the M50 engine harness correctly line up with the functions on your M43 chassis-side connector.
+## 5. Cooling, fuel and exhaust
 
-Fortunately, BMW kept the pin functions largely consistent. For most post-1994 cars, it's nearly plug-and-play. Below are the most critical pins you need to verify.
+- **Cooling:** six-cylinder radiator, fan shroud with its **separate expansion tank** (the four-cylinder radiator has the tank built in) and an auxiliary fan; everything new. Fill and bleed as described in the [cooling system guide](/guides/e36-cooling-system-overhaul).
+- **Fuel:** connect the chassis feed and return lines to the M50 rail the right way round. Check the system pressure on the first start: **3.0 ± 0.2 bar** for the M50, 0.4–0.7 bar lower at idle. See the [fuel system guide](/guides/e36-fuel-system-guide).
+- **Exhaust:** a complete six-cylinder exhaust; none of the four-cylinder system bolts to the M50 manifolds.
+- **Intake:** six-cylinder airbox; the four-cylinder throttle cable is reported to work, though slightly long.
 
-| X20 Pin | M50 Function | M43 Chassis Wire Colour | Notes |
-| :--- | :--- | :--- | :--- |
-| 1 | Alternator Charge Indicator | Blue | Should match directly. |
-| 12 | Tachometer Signal | Black | Essential for a working rev counter. |
-| 13 | Fuel Consumption Signal | White/Violet | For the MPG gauge. |
-| 15 | Starter Signal | Black/Green | From ignition switch to starter solenoid. |
-| 18 | Ignition Power (Run/Start) | Black/Yellow | Powers the DME when key is on. |
-| 21 | DME Power (from Main Relay) | Green | Constant power supply for the DME. |
-| 23 | Oil Pressure Switch | Brown/Green | For the oil pressure warning light. |
-| 25 | Main Relay Power (Unswitched) | Red/White | Constant battery power. |
+---
 
-**The EWS Problem:** The biggest electrical hurdle is the factory immobiliser (EWS).
-*   **Your Car:** An M43-powered E36 from 1995 or later will have EWS-II.
-*   **Your Donor Engine:** An early M50 (pre-1995) may have no EWS or the simpler EWS-I.
+## 6. First start and checks
 
-You have three main solutions:
-1.  **The "Red Label 413" DME:** The easiest path. Source a Bosch DME with part number `0 261 200 413`. This DME is from early M50B25TU engines and has no EWS. It's plug-and-play. Expect to pay €150 - €250 for this coveted piece.
-2.  **Matched EWS Set:** Use the DME, EWS-II module, and the ignition key transponder chip from your donor car. This requires integrating the donor EWS module into your car's wiring. It's more complex but cheaper if the parts come with your engine.
-3.  **EWS Delete Service:** Send your M50's DME to a specialist who can digitally remove the EWS function from its software. This service typically costs €100 - €150 and is a clean, reliable solution.
+1. Before starting, check all fluid levels and look for fuel leaks with the ignition on.
+2. On the first start, watch **oil pressure**, the **charging voltage** (13.5–14.5 V at the battery) and the **temperature**.
+3. Run the engine to operating temperature, let it cool, and recheck the coolant level.
+4. If it cranks but won't start, check the immobiliser and the DME's power and grounds first. Then read the fault codes with the accelerator pedal: see the [OBD1 fault code reference](/guides/e36-obd1-fault-code-reference).
 
-## Fuel, Cooling, and Exhaust Systems
+---
 
-With the engine in and wired up, you need to handle the supporting systems.
+## Supporting changes
 
-### Fuel System
+With roughly double the power and a heavier engine over the front axle:
 
-The good news is that the stock M43 fuel pump provides sufficient flow and pressure for a standard M50. You don't need to upgrade it. You will, however, need to connect your chassis fuel lines (feed and return) to the M50 fuel rail. The connections are in a slightly different location. This can usually be accomplished by carefully bending the hard lines or using a short section of high-pressure, ethanol-safe fuel hose (8mm inner diameter) and proper fuel injection clamps.
+- **Brakes:** check what your four-cylinder car has; fitting the six-cylinder model's brakes is the sensible match for the extra power.
+- **Suspension:** springs and dampers suited to the heavier engine keep the front end from sitting low.
+- **Differential:** the four-cylinder ratio works but feels short. A longer six-cylinder ratio (3.15 is common) suits the M50.
+- **Registration:** in Slovakia, have the engine change approved at the inspection authority; brakes and documentation may be part of that.
 
-### Cooling System: A Non-Negotiable Upgrade
-
-The 4-cylinder radiator is completely inadequate for cooling a 6-cylinder engine. You *must* upgrade to the larger radiator from a 6-cylinder E36. Overheating is the fastest way to kill your new M50.
-
-| Component | Recommended Part (New) | BMW Part Number | Approx. Cost (New) |
-| :--- | :--- | :--- | :--- |
-| Radiator | Behr/Hella 8MK376712-281 | `17111728907` | €120 - €180 |
-| Expansion Tank | Meyle HD `3142230002` | `17111723520` | €40 - €70 |
-| Water Pump | Graf PA539 (Metal Impeller) | `11517527799` | €50 - €70 |
-| Thermostat | Wahler 4264.88D (88°C) | `11531740437` | €25 - €40 |
-| Fan Clutch | Sachs `2100010031` | `11527505302` | €70 - €90 |
-| Hose Kit | Full 6-cyl kit (e.g., Gates) | Varies (Kit) | €80 - €120 |
-
-A complete cooling system overhaul during the swap is cheap insurance. On a 25-year-old E36, the plastic components are brittle and guaranteed to fail at the worst possible moment. Replace everything.
-
-### Exhaust System
-
-You need the entire exhaust system from a 320i or 325i. The dual-pipe M50 exhaust manifolds will not connect to the single-pipe M43 system. The entire system is a direct bolt-on to the E36 chassis, using the existing hanger locations. Sourcing a good-condition used system is the most economical route (€200 - €400).
-
-## Final Steps: Brakes and Suspension
-
-You've nearly doubled your car's horsepower and added about 60 kg over the front axle. Your stock M43 brakes and suspension are no longer up to the task.
-
-**Brakes:** A 316i or 318i typically has small, solid front brake discs and often rear drum brakes. At a minimum, you must upgrade to the vented front discs and callipers from a 320i/325i. A full 325i brake conversion (front and rear) is highly recommended for safe, repeatable stopping power.
-
-**Suspension:** The front springs from your M43 car are rated for a much lighter engine. With the M50 installed, the front end will sag, ruining the car's handling balance and causing poor ride quality. You must install front springs and dampers designed for a 6-cylinder E36. This is the perfect excuse to upgrade to a matched set of performance springs and shocks or a complete coilover kit from brands like Bilstein, H&R, or KW.
-
-## What's Next?
-
-Completing an M43 to M50 swap is a rite of passage for any serious E36 enthusiast. You've taken a modest chassis and given it the engine it always deserved. The result is a car that is dramatically faster, sounds incredible, and provides immense satisfaction every time you turn the key.
-
-Take the time to shake down the car, fix any minor leaks or issues, and get a proper wheel alignment. Once settled, your new 325i-spec E36 is a fantastic platform for further modification, whether you're heading to the track or just enjoying a perfect back-road companion.
+After a shakedown and a wheel alignment, the car is ready to enjoy.
