@@ -1,112 +1,88 @@
 ---
 title: "M50 Swap Cooling Adaptation: Radiator, Thermostat Housing, and Expansion Tank Explained"
 seoTitle: "M50 Swap Cooling: Radiator, Thermostat, Expansion Tank"
-description: "A hands-on guide to adapting the cooling system when swapping an M50 into an E36 M43 chassis."
+description: "What changes in the cooling system when an M50 goes into a four-cylinder E36: radiator and tank layout, radiator mount, fans, heater circuit, capacity and the Bentley bleeding procedure."
 pillar: swap
 keywords: "M50 swap cooling system, E36 M50 radiator fitment, M43 to M50 cooling adaptation"
 date: "2026-05-11"
 hero: "m50-swap-cooling-adaptation.webp"
+reviewed: "2026-10-03"
+sources:
+  - title: "Bentley Publishers: BMW 3 Series (E36) Service Manual 1992–1998, 170 Radiator and Cooling System, 113 Cylinder Head"
+  - title: "Bimmerfest: E36 318is budget build and basic guide to an M50 swap (owner's write-up)"
+    url: "https://www.bimmerfest.com/threads/e36-318is-budget-build-and-basic-guide-to-an-m50-swap.811944/"
 ---
 
 ## TL;DR
 
-- **What:** Cooling system adaptation required when swapping an M50 into an E36 originally fitted with an M43
-- **Why:** The M50 runs higher coolant volume, different thermostat housing geometry, and incompatible expansion tank routing versus M43
-- **Cost:** €180–€420 depending on whether you reuse the original radiator
-- **Time:** 4–8 hours alongside the engine swap
-- **Difficulty:** 3/5
+- **What:** The cooling-system changes needed when an M50 goes into an E36 that came with a four-cylinder.
+- **The key difference:** the four-cylinder radiator has its **expansion tank built in**; the six-cylinder system uses a **separate expansion tank** mounted on the **six-cylinder fan shroud**. So the radiator, shroud, tank and their hoses all come from a six-cylinder E36.
+- **Also needed:** the six-cylinder lower radiator mount, the six-cylinder auxiliary fan, and new wear parts throughout.
 
 ---
 
-## Why the M43 cooling setup doesn't just bolt over
+## Radiator, shroud and expansion tank
 
-The M43 is a compact four-cylinder with modest cooling demands. BMW specced the E36 318i/316i cooling system accordingly, smaller radiator cross-section, a single-row plastic-tank aluminium core on most 1993–1998 examples, and an expansion tank mounted high on the passenger-side strut tower with a relatively simple overflow circuit.
-
-The M50 (and its VANOS-equipped sibling, the M50B25TU) is a 2.5-litre inline-six producing significantly more heat. It also runs a different thermostat housing, a larger, more complex casting that points the main coolant outlet toward the driver's side and incorporates a bleed port that the M43 system simply doesn't account for. If you bolt an M50 into an M43 E36 and connect whatever coolant hoses reach, you'll likely end up with chronic air pockets, thermostat confusion, and a car that runs hot within 20 minutes.
-
-The three problem areas are: radiator capacity and fitment, thermostat housing outlet geometry, and expansion tank location and bleed line routing. Each one is solvable, and none of them require fabrication if you source the right donor parts.
-
----
-
-## Radiator: what fits, what works, what to buy
-
-The E36 325i/328i radiator is the direct bolt-in solution. It uses the same mounting points as the 318i unit, fits within the same core support dimensions, but has a larger core, typically 53 mm depth versus 32 mm on the M43 application, and higher flow capacity appropriate for the M50.
-
-**BMW OEM part numbers (for reference):**
-
-| Application | OEM Part Number | Core Size | Notes |
-|---|---|---|---|
-| E36 318i (M43) | 17111723469 | 540×322×32 mm | Original fitment, undersized for M50 |
-| E36 325i/328i (M50/M52) | 17111723470 | 540×322×53 mm | Correct swap fitment |
-| E36 M3 (S50/S52) | 17111723833 | 540×322×60 mm | Overkill but fits cleanly |
-
-Aftermarket aluminium replacements from Nissens (ref. **60673A**, ~€95–€115 from Autodoc or GSF) or Mahle (ref. **CR 253 000P**, ~€105–€130) are reliable and often better long-term value than OEM on a 25-year-old car. Both are direct fitments for the 325i/328i and will accept the M50 top and bottom hoses without modification.
-
-**One watch-out:** Check the lower radiator hose outlet diameter. The M43 radiator uses a 38 mm outlet; the M50/M52 radiator uses a 40 mm outlet. The lower hose from the M50 engine (BMW 11531709851 or equivalent) is sized for the 40 mm outlet, so if you're mixing parts from different donors, verify this before you clamp anything.
-
----
-
-## Thermostat housing: the geometry problem
-
-This is where most first-time M50 swappers get caught out. The M43 thermostat housing is a simple casting on the front of the head, outlet pointing roughly upward toward the top radiator hose. The M50 thermostat housing (BMW part **11531740478** for the B25 non-VANOS, **11531743229** for the M50TU/VANOS) is a more involved piece, larger, with the main outlet rotated toward the driver's side of the engine bay, and with a dedicated bleed nipple on the upper face.
-
-If you're doing a clean swap and pulling the complete engine ancillaries from an E36 325i donor, you likely have all of this already. The problem arises when the engine comes from an E34 or E30 donor, or when someone has mixed housings trying to make things fit. E34 M50 thermostat housings are dimensionally similar but the hose connections route differently for the longer engine bay, and the bleed port location changes.
-
-**Always use the E36 M50 thermostat housing, not the E34 version.** They're not interchangeable without hose rerouting, and the E34 unit typically lacks the upper bleed nipple that the E36 system relies on to purge air from the heater circuit.
-
-Thermostat spec: BMW specifies a **88°C opening thermostat** for the M50 in standard road use. Part number **11531740478** includes the housing; the thermostat element alone is **11531721003** (Wahler or Mahle OE-equivalent ~€12–€18). Don't fit a 92°C thermostat. It's common advice on forums and it's wrong for street use. The M50's VANOS solenoid on the TU variant is coolant-temperature-dependent and needs the ECU to see a proper warm-up curve.
-
----
-
-## Expansion tank: location, routing, and the bleed line
-
-This is the detail that gets skipped and causes the most post-swap headaches. The M43 expansion tank is mounted on the passenger-side strut tower brace area, slightly aft. The M50 system requires the expansion tank to be mounted **higher**, specifically, it must be the highest point in the cooling circuit to allow passive air purging. In an E36 M50 shell, BMW positioned it at the correct height; in an M43 shell, the stock tank mounting point is marginally lower than ideal.
-
-The practical fix: use the E36 325i/328i expansion tank (BMW **17137787039**, ~€28–€45 OEM, or a Febi/Bilstein equivalent at ~€14–€22) and relocate it to use the upper mounting position on the strut tower. On most E36 M43 chassis, there are pre-drilled mounting points or sufficient flat surface to mount the tank 40–60 mm higher than the M43 original position. If the holes aren't there, two M6 bolts into the strut tower brace plate is a half-hour job with a drill.
-
-**The bleed line is non-negotiable.** The M50 thermostat housing has a 6 mm bleed nipple on its upper face. This connects via a small-bore hose directly to the expansion tank cap neck, not to the main coolant circuit, but to the overflow/bleed port on the tank cap. If this line is missing or blocked, you will trap air in the top of the engine and the car will overheat on the motorway regardless of how good your radiator is.
-
-| Connection Point | Hose ID | Route |
+| | Four-cylinder E36 | Six-cylinder E36 (M50) |
 |---|---|---|
-| Thermostat housing bleed nipple | 6 mm | Forward to expansion tank bleed port |
-| Top radiator hose | 40 mm | Thermostat housing main outlet → radiator top |
-| Bottom radiator hose | 40 mm | Radiator outlet → water pump inlet |
-| Heater return | 19 mm | Rear of head → heater valve → firewall |
-| Expansion tank main feed | 19 mm | Radiator header tank → expansion tank lower |
+| Expansion tank | Integral with the radiator (Bentley) | Separate tank on the fan shroud |
+| Main fan | Belt-driven with viscous clutch, or electric on some four-cylinder models | Belt-driven with viscous clutch |
+| Cooling system capacity (Bentley) | 6.5 L | 10 L (M50/M52) |
 
-Hose sets from ECS Tuning or Turner Motorsport come pre-cut for E36 M50 fitment and cost €45–€85 for a full set. Alternatively, Gates or Dayco bulk hose cut to length works fine, just confirm ID sizes before ordering.
+What to fit, per owners who have done the swap:
 
----
+- **Six-cylinder radiator and hoses.** A four-cylinder radiator can be modified to work in a pinch, but it isn't recommended.
+- **Six-cylinder fan shroud and expansion tank,** with the **long hose from the engine to the tank** and the **short hose from the tank to the radiator**.
+- **Driver's-side lower radiator mount:** the four-cylinder radiator is narrower, so its mount is larger and the six-cylinder radiator won't sit in it. Use the six-cylinder mount, or modify the old one. The other side is reported to be the same for both.
+- If your four-cylinder car had an **electric main fan** behind the radiator, it is replaced by the M50's belt-driven fan with its viscous clutch on the water pump.
 
-## Heater circuit and rear head bleed
-
-One more detail worth covering: the M50 has a heater return port at the rear of the cylinder head, and a second small bleed nipple near the intake manifold area depending on variant. Neither of these exists on the M43, so if you're building the cooling circuit from scratch, don't overlook them.
-
-The rear head port feeds coolant through the heater core and back to the water pump inlet via the heater control valve (BMW **64118375443** or equivalent, ~€25–€40). If this circuit isn't connected, you'll have a heater that blows cold in winter, obvious, but more importantly, you'll have a dead-end pocket at the rear of the head that won't purge and will give you false overheating symptoms.
-
-On a 25-year-old E36, if the heater valve is original, replace it during the swap. They're a £25 part and a €200 job if they fail with a freshly installed M50.
+Part numbers: look them up by VIN for a six-cylinder E36 of your body style on [RealOEM](https://www.realoem.com/).
 
 ---
 
-## Bleeding the system after fill
+## Auxiliary fan
 
-Once everything is plumbed, filling and bleeding the M50 system correctly takes about 45 minutes. Use BMW coolant (blue, **82141467704**) at 50/50 concentration with distilled water, do not use universal green antifreeze, it's incompatible with the aluminium castings and VANOS seals.
+Every E36 has a **two-speed electric auxiliary fan** in front of the radiator, behind the grille. Bentley: it serves mainly the A/C, but it also runs when the coolant gets hot, switched by a **dual temperature switch in the radiator**:
 
-Procedure:
-1. Fill from expansion tank slowly until coolant reaches the MIN mark
-2. Crack the bleed nipple on the thermostat housing, leave open until bubble-free coolant flows
-3. Close nipple, top up tank to MAX
-4. Start engine, run to operating temp with heater set to max heat
-5. Watch for bubbles returning to expansion tank, normal for 5–10 minutes
-6. Once thermostat opens (temp gauge settles), recheck level and bleed nipple
-7. Allow to cool fully, recheck cold level
+| Speed | Switches on at |
+|---|---|
+| Low | 91 °C |
+| High | 99 °C |
 
-If the car runs hot or the gauge spikes before the thermostat opens, there's an air lock, most likely the bleed nipple hose isn't connected or is kinked.
+Fit the **six-cylinder auxiliary fan** (it mounts on the bumper side) and connect the radiator's temperature switch. The DME doesn't control these fans.
 
 ---
 
-## What's next
+## Heater circuit
 
-With cooling sorted, the next system to address in a thorough M50 E36 swap is the intake and throttle body adaptation, particularly if you're running an M43 airbox location or if the E34-sourced engine has a different MAF diameter. We'll cover that in the next swap guide, including the AFM to MAF conversion for Motronic 3.3 versus 3.1 variants.
+The M50's **heater hoses connect at the rear of the cylinder head** and run to the heater valve and heater core. Connect both, check the heater valve while you can reach it, and set the heater to full warm when filling. That opens the heater circuit so it fills and bleeds too.
 
-If you're cross-referencing this with our E36 M50 swap master guide, cooling is Step 6, once this is signed off, you're clear to do a first-start coolant fill and begin the engine management commissioning phase.
+---
+
+## Wear parts: replace everything
+
+The cooling system on a donor engine is as old as the engine. While it's on the stand, fit a new water pump (with a metal impeller), thermostat and seal, hoses, clamps and expansion tank cap. See the [cooling system overhaul](/guides/e36-cooling-system-overhaul) for the details and torque values.
+
+---
+
+## Filling and bleeding (Bentley)
+
+Use **BMW-approved, phosphate- and nitrate-free antifreeze**, 50/50 with **distilled water**: about **10 litres** of mix for the M50.
+
+1. With the engine cold, set the heater to **full warm**.
+2. Fill slowly to the expansion tank's COLD (KALT) mark.
+3. **With a bleed screw:** loosen it, switch the ignition on without starting, and keep adding coolant until it flows from the bleed screw free of bubbles. Then tighten the screw (the one on the thermostat housing to 8 Nm).
+4. **With a separate tank and no bleed screw:** Bentley notes the system bleeds itself through the vent hose on the tank.
+5. Run the engine to operating temperature, let it cool, and top up to the mark.
+
+If the temperature gauge acts up after the swap, suspect trapped air or a missing tank hose, and bleed again.
+
+---
+
+## Checks after the first drives
+
+- Coolant level cold, against the tank mark, for the first few drives
+- Leaks at every new joint after a full heat cycle
+- The auxiliary fan comes on when the coolant is hot or the A/C is switched on
+
+Related: [M43 to M50 parts list](/guides/m43-to-m50-complete-parts-list) and [conversion guide](/guides/bmw-e36-m43-to-m50-complete-engine-conversion-guide).
