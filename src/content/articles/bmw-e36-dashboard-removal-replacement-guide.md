@@ -114,7 +114,7 @@ This is your chance to address 25 years of electrical entropy.
 Your old, cracked dash is out. Now what?
 
 *   **Good Used Dash (€150 - €300):** The most common route. Scour local breakers, eBay, and enthusiast forums. Inspect carefully for hairline cracks, especially around the passenger airbag cutout and defroster vents.
-*   **Flocking (€300 - €500):** An excellent option for track or performance-oriented builds. Flocking provides a durable, matte, glare-free surface. This is a professional service; find a local specialist. On our M50-swapped 325i track car, a flocked dash was one of the best interior mods we did for visibility on sunny track days.
+*   **Flocking (€300 - €500):** An excellent option for track or performance-oriented builds. Flocking provides a durable, matte, glare-free surface. This is a professional service; find a local specialist.
 *   **Re-trimming (€800+):** The premium choice for a full restoration. Having a professional trim shop cover the dash in leather, Alcantara, or vinyl can produce a stunning, better-than-factory result.
 
 **Before installation,** transfer any necessary components from your old dash to the new one: vents, wiring clips, and the passenger airbag module (if applicable). This is much easier to do on a workbench than in the car.

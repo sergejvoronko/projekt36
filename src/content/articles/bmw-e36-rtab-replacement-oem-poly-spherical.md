@@ -51,7 +51,7 @@ The standard E36 RTAB is soft and contains voids to improve compliance. A far be
 
 The E46 M3 RTAB is a direct fit and is made from a solid block of higher-durometer rubber. This simple change significantly reduces unwanted deflection without a meaningful penalty in NVH. It's the perfect solution for the enthusiast who wants to sharpen their car's reflexes while maintaining its civility for daily use.
 
-In our experience, the difference is immediately noticeable. The rear end feels more connected and predictable, especially when applying power out of a corner. For the cost, it's one of the best value-for-money upgrades you can perform on an E36's suspension.
+Owners typically report the difference straight away: the rear end feels more connected and predictable, especially when applying power out of a corner. For the cost, it's one of the best value-for-money upgrades you can perform on an E36's suspension.
 
 **Verdict:**
 *   **Best for:** Daily drivers, restorations, OEM+ builds.
@@ -75,7 +75,7 @@ Leading brands like Powerflex and Strongflex offer excellent, well-engineered ki
 | Strongflex (Yellow - Race) | `031215B` | €50 - €70 | 90ShA - Dedicated Track / Motorsport |
 | Powerflex (Black - Race) | `PFR5-303BLK` | €70 - €90 | 95A - Dedicated Track / Motorsport |
 
-For our Project 328i track car, we installed 95A Powerflex Black Series RTABs. The change was transformative. The rear of the car is now completely stable under threshold braking, and the "squirm" on corner exit is gone. The trade-off is a palpable increase in road and differential noise inside the car, and sharp bumps are felt more acutely.
+Firm 95A polyurethane RTABs such as the Powerflex Black Series remove most of the rear-end squirm under braking and on corner exit. The trade-off is a palpable increase in road and differential noise inside the car, and sharp bumps are felt more acutely.
 
 **Crucial Installation Note:** Polyurethane bushings MUST be installed with the supplied grease (typically a copper or silicone-based lubricant). Apply it liberally to all contact surfaces, the inner sleeve, the outer surface of the bushing, and the trailing arm bore. Failure to do so will result in suspension binding and persistent, maddening squeaking.
 

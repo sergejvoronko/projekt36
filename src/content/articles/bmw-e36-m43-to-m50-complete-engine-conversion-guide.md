@@ -118,7 +118,7 @@ The 4-cylinder radiator is completely inadequate for cooling a 6-cylinder engine
 | Fan Clutch | Sachs `2100010031` | `11527505302` | €70 - €90 |
 | Hose Kit | Full 6-cyl kit (e.g., Gates) | Varies (Kit) | €80 - €120 |
 
-In our M50 swap build, we found that a complete cooling system overhaul is cheap insurance. On a 25-year-old E36, the plastic components are brittle and guaranteed to fail at the worst possible moment. Replace everything.
+A complete cooling system overhaul during the swap is cheap insurance. On a 25-year-old E36, the plastic components are brittle and guaranteed to fail at the worst possible moment. Replace everything.
 
 ### Exhaust System
 

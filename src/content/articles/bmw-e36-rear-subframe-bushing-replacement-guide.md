@@ -45,7 +45,7 @@ Your choice of bushing material will fundamentally change the character of the c
 
 **Our Recommendation:** For the vast majority of enthusiasts, a quality set of 80-95A durometer polyurethane bushings (like Powerflex "Purple" Street Series or Strongflex "Red") is the ideal choice. They offer 90% of the performance benefit of solid mounts with a manageable increase in NVH. The two-piece design of most poly bushings also makes installation significantly easier than pressing in a one-piece OEM rubber bushing.
 
-On our M52B28 turbo project car, we opted for the Powerflex Black Series (95A) bushings. The increase in differential whine is noticeable but acceptable for a performance-focused build, and the rear end is now completely locked down and predictable under boost.
+Firmer polyurethane bushings such as the Powerflex Black Series (95A) lock the rear end down further, at the price of more differential whine and vibration reaching the cabin. Whether that trade is worth it depends on how the car is used.
 
 ## The Toolkit: Beyond the Basics
 

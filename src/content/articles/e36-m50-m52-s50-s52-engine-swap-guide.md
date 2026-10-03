@@ -56,7 +56,7 @@ An engine on a stand is the easiest engine to work on. Resist the urge to drop i
 | **Coolant Hoses** | Kit | Gates / Rein | €120 | Old rubber is a liability. Replace every single hose. |
 | **Oil Filter Housing Gasket** | 11421719855 | OEM or Elring | €10 | Common source of major oil leaks onto the belts. |
 
-In our S52 swap build, we also opted to replace the crank position sensor, cam position sensor, and both knock sensors while access was easy. It's cheap insurance against chasing frustrating sensor-related issues post-swap.
+While access is easy, it is worth replacing the crank position sensor, cam position sensor and knock sensors. It's cheap insurance against chasing frustrating sensor-related issues post-swap.
 
 ## Wiring & DME: the heart of the swap
 

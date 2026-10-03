@@ -19,7 +19,7 @@ hero: "bmw-e36-chassis-reinforcement-subframe-plates-guide.webp"
 
 If you are building an E36 for track duty, drifting, or daily driving a high-torque swap, chassis reinforcement isn't optional, it’s mandatory. The E36 was engineered in the late 1980s using relatively thin stamped sheet metal. Fast forward 25+ years, and cyclic fatigue has taken its toll. 
 
-When you replace compliant 25-year-old rubber subframe and suspension bushings with 90A polyurethane or solid aluminum, you eliminate the very dampening mechanism BMW relied on to protect the thin sheet metal. The result? The load is transferred directly into the chassis. In our recent M50 swap build, we stripped the undercoating on a seemingly pristine 328i chassis only to find hairline cracks already propagating from the driver's side front RACP mount.
+When you replace compliant 25-year-old rubber subframe and suspension bushings with 90A polyurethane or solid aluminum, you eliminate the very dampening mechanism BMW relied on to protect the thin sheet metal. The result? The load is transferred directly into the chassis. Stripping the undercoating around the rear subframe mounts on an apparently clean chassis is the only way to be sure no cracks have started there.
 
 The four primary structural failure points on the E36 are:
 1. **The Rear Subframe Mounts (RACP):** The captive nuts rip entirely out of the trunk floor.

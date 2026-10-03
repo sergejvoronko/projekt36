@@ -12,7 +12,7 @@ hero: "cooling.webp"
 - **What:** Replace every cooling system component at once, water pump, thermostat, expansion tank, all hoses, radiator if needed
 - **Why:** The E36 cooling system is the #1 engine killer. Components fail in cascade, one failure overheats the engine before you can react
 - **Cost:** €180–320 for all new quality parts (DIY)
-- **Time:** 4–6 hours for a complete overhaul with engine in car, significantly less with engine out (as in our swap)
+- **Time:** 4–6 hours for a complete overhaul with engine in car, significantly less with engine out (for example during an engine swap)
 - **Difficulty:** 3/5 for most components, 2/5 with engine on a stand
 
 ---
@@ -56,7 +56,7 @@ The cost of replacing everything at once is €180–320. The cost of an overhea
 
 | Part | OEM Part Number | Recommended Brand | Est. Price (EU) | Notes |
 |---|---|---|---|---|
-| Radiator |, | Nissens 60623 / Mahle CR361 | €60–95 | Replace if over 15 years old, if any plastic tanks show yellowing, or if you see weeping at the tank-to-core seam. For our M50 swap, we need the 6-cylinder radiator regardless. |
+| Radiator |, | Nissens 60623 / Mahle CR361 | €60–95 | Replace if over 15 years old, if any plastic tanks show yellowing, or if you see weeping at the tank-to-core seam. An M43 to M50 swap needs the 6-cylinder radiator regardless. |
 | Fan clutch | 11 52 1 740 963 | Sachs / Behr | €25–45 | Test: with cold engine off, spin the fan by hand. More than 2 full rotations = worn clutch. |
 | Fan blade | 11 52 1 712 058 | OEM | €15–25 | Inspect for cracks, especially at the root of each blade. A cracked blade at 6,000 rpm goes through the radiator. |
 | Fan shroud | 17 11 1 723 031 | OEM | €15–25 | Often cracked or brittle. Holds the expansion tank mount. |

@@ -42,8 +42,6 @@ The E36 325i/328i radiator is the direct bolt-in solution. It uses the same moun
 
 Aftermarket aluminium replacements from Nissens (ref. **60673A**, ~€95–€115 from Autodoc or GSF) or Mahle (ref. **CR 253 000P**, ~€105–€130) are reliable and often better long-term value than OEM on a 25-year-old car. Both are direct fitments for the 325i/328i and will accept the M50 top and bottom hoses without modification.
 
-In our M50 swap build, we used a Nissens 60673A sourced from Autodoc for €98. It arrived with both plastic tanks pre-fitted and needed only a transfer of the original drain plug from the M43 unit. Install time was under 30 minutes once the engine was in.
-
 **One watch-out:** Check the lower radiator hose outlet diameter. The M43 radiator uses a 38 mm outlet; the M50/M52 radiator uses a 40 mm outlet. The lower hose from the M50 engine (BMW 11531709851 or equivalent) is sized for the 40 mm outlet, so if you're mixing parts from different donors, verify this before you clamp anything.
 
 ---

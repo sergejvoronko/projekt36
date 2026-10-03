@@ -83,7 +83,7 @@ INPA typically shows MAF output in **kg/h** (kilograms per hour of air). This is
 | 3000 RPM moderate load | 50–80 kg/h |
 | WOT full acceleration | 150–220 kg/h |
 
-A MAF reading that's too low at idle (under 8 kg/h) with otherwise normal sensors usually means a dirty or failing hot-film element, clean it with dedicated MAF cleaner (CRC Mass Air Flow Sensor Cleaner, €8–12 at most motor factors) before condemning the unit. In our M50 swap build we've seen a contaminated MAF drop idle values to 6 kg/h and cause a persistent lean condition that no amount of lambda correction could fully compensate.
+A MAF reading that's too low at idle (under 8 kg/h) with otherwise normal sensors usually means a dirty or failing hot-film element, clean it with dedicated MAF cleaner (CRC Mass Air Flow Sensor Cleaner, €8–12 at most motor factors) before condemning the unit.
 
 ---
 

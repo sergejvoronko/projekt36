@@ -25,8 +25,6 @@ The M52 is a workhorse, but after 25+ years and hundreds of thousands of kilomet
 
 Before you pull the engine, know what you're up against. A compression and leak-down test is non-negotiable. This pre-teardown data tells you if you're chasing worn piston rings (low compression across the board, air escaping into the crankcase) or a bad head gasket/valve sealing issue (low compression on adjacent cylinders, air escaping into coolant or adjacent cylinders).
 
-On our 250,000 km M52B28 project engine, we saw 10-15% leak-down on all cylinders, pointing towards general ring wear rather than a catastrophic failure.
-
 As you disassemble, inspect these M52-specific weak points:
 
 *   **Cooling System:** Expect every plastic component to be brittle. The thermostat housing, radiator necks, and expansion tank are common failure points.

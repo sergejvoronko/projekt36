@@ -17,7 +17,7 @@ hero: "bmw-e36-door-panel-restoration-guide.webp"
 
 If you own a BMW E36, you already know the interior plastics and adhesives were arguably the weakest link in the entire chassis. Thanks to BMW’s mid-90s push for recyclable materials and eco-friendly glues, surviving door panels are nearly non-existent. Whether you have a 1992 fiberboard panel or a 1998 composite plastic panel, the foam backing degrades, the vinyl insert bubbles, the map pockets fall off, and the mounting rails snap. 
 
-In our shop, fixing a sagging E36 door card isn't about slapping on some spray glue and hoping for the best. It requires chemical removal of the old foam, structural adhesives for the plastic brackets, and high-temperature contact cement. Here is the definitive way to rebuild your E36 door panels so they outlast the car.
+Fixing a sagging E36 door card properly isn't about slapping on some spray glue and hoping for the best. It requires chemical removal of the old foam, structural adhesives for the plastic brackets, and high-temperature contact cement. Here is the definitive way to rebuild your E36 door panels so they outlast the car.
 
 ## The Root Causes of E36 Door Card Failure
 
@@ -78,7 +78,7 @@ E36 map pockets are notorious for peeling away at the corners, creating a rattle
 
 1. **Remove Old Glue:** Pull the map pocket completely off if it's already halfway there. Use a flathead screwdriver, chisel, or Dremel to chip away every remnant of the factory yellowish glue from both the door card and the pocket flange.
 2. **Scuff and Prep:** Lightly scuff the mating surfaces with 80-grit sandpaper to give the new adhesive a mechanical profile to bite into. Wipe with isopropyl alcohol.
-3. **Apply Structural Adhesive:** Apply a continuous, moderate bead of Sikaflex 221 or 252 along the flange of the map pocket. We prefer polyurethane adhesive over epoxy here because it retains slight flexibility, absorbing the shock of the door closing.
+3. **Apply Structural Adhesive:** Apply a continuous, moderate bead of Sikaflex 221 or 252 along the flange of the map pocket. Polyurethane adhesive is the better choice over epoxy here, because it retains slight flexibility, absorbing the shock of the door closing.
 4. **Clamp and Cure:** Press the pocket into position. Use a combination of heavy-duty spring clamps and masking tape to hold it tight against the door card. Clean up any squeeze-out immediately with a solvent-soaked rag. Let it cure for a full 24 hours.
 
 ## Reinforcing Top Rails and Clip Brackets

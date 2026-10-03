@@ -89,7 +89,7 @@ Key differences that affect code interpretation:
 - **S50B32 (Euro M3):** Double VANOS, both solenoids monitored. Fault codes 1150 and 1160 can refer to either intake or exhaust cam actuator depending on DME revision.
 - **M43/M44 (4-cyl):** Single knock sensor only, no code 1120. ICV is a rotary type, different resistance spec (~22 Ω).
 
-On our M50B25TU swap build, we chased a persistent 1090 (AFM implausible) for weeks before finding a hairline crack in the intake boot between AFM and throttle body, classic unmetered air. Smoke test found it in under two minutes.
+A classic cause of air-flow-meter plausibility faults is a hairline crack in the intake boot between the air flow meter and the throttle body: unmetered air. A smoke test finds it quickly.
 
 ---
 

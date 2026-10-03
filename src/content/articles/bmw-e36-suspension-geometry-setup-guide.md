@@ -47,7 +47,7 @@ The front end dictates turn-in, steering feel, and mid-corner grip. Your two pri
 | **Offset FCABs** | Powerflex (PFF5-303), E36 M3 3.2L OEM (31129069035) | €90 - €120 | Adds positive caster for improved straight-line stability and steering self-centering. M3 bushings are a subtle OEM+ upgrade; polyurethane is stiffer. |
 | **Adjustable LCAs** | Wisefab, IRP (Individual Racing Parts), SLR Speed | €800 - €1,600+ | Drift/track-specific. Allows for massive camber, caster, and track width adjustments. Overkill for a street car. |
 
-On our 328i track project, we started with a set of Silver Project camber plates. The installation is straightforward while the coilovers are out. We were able to easily achieve -3.5° of camber, which is impossible with the stock top mounts. For caster, we pressed in E36 M3 3.2L offset Front Control Arm Bushings (FCABs). This combination provides a huge range of adjustment for track use while being completely reversible.
+Adjustable camber plates are easiest to fit while the coilovers are out, and they allow far more negative camber than the stock top mounts can. For caster, we pressed in E36 M3 3.2L offset Front Control Arm Bushings (FCABs). This combination provides a huge range of adjustment for track use while being completely reversible.
 
 **Caster is crucial.** Stock non-M E36s have around 3-4° of positive caster. Pushing this to 6-8° (achievable with offset bushings and adjustable plates) dramatically improves high-speed stability and gives the steering a much more positive, self-centering feel, especially exiting a corner.
 
@@ -67,7 +67,7 @@ The factory eccentric bolts run out of adjustment range very quickly. On a car l
 | **Adjustable Rear Toe Arms** | Hardrace, Driftworks | Hardrace #6579 | €180 - €280 | Recommended for fine-tuning, especially on track/drift cars running aggressive camber. |
 | **Reinforcement Plates** | BMW OEM / Turner Motorsport | 33326760363 (Subframe) | €20 - €50 | Cheap insurance. Weld-in plates to prevent control arm mounting points from tearing out of the chassis under hard use. |
 
-When installing adjustable arms, focus on quality. Cheaper arms often use low-quality heim joints that wear out quickly, leading to clunking and unpredictable handling. We opted for Hardrace arms on our build, which use hardened rubber or spherical pillowball bushings for a good balance of performance and durability.
+When installing adjustable arms, focus on quality. Cheaper arms often use low-quality heim joints that wear out quickly, leading to clunking and unpredictable handling.
 
 The installation process involves dropping the rear shocks to access the inner bolts and using the factory eccentric bolt for coarse adjustment and the new arm for fine-tuning. Always get a professional alignment immediately after installation.
 

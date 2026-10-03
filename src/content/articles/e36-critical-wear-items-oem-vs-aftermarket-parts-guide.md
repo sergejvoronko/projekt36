@@ -45,7 +45,7 @@ Your choice here is between a stock refresh using high-quality OE parts or a ful
 
 **Analysis & Recommendation:**
 
-For a street-driven car, a full OE-spec refresh is more than adequate. The key is to **avoid no-name, cheap plastic components**. Using a Behr radiator, a Saleri water pump with a metal impeller (the original plastic ones are notorious for failing), and quality hoses will give you another 150,000 km of peace of mind. On our M52-swapped 318is, we went this route and have had zero issues, even during spirited driving on hot summer days.
+For a street-driven car, a full OE-spec refresh is more than adequate. The key is to **avoid no-name, cheap plastic components**. Using a Behr radiator, a Saleri water pump with a metal impeller (the original plastic ones are notorious for failing), and quality hoses will give you another 150,000 km of peace of mind.
 
 The all-aluminum radiators from Mishimoto or CSF are fantastic for track cars or forced-induction builds where heat management is critical. They eliminate the plastic end-tank failure point entirely. However, for a stock E36, they can be overkill and some require minor modification to fit perfectly.
 

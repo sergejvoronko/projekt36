@@ -52,7 +52,7 @@ Start by stripping the side skirts, interior carpet edges, and lower trim. The h
 3. **Drill the Spot Welds:** Drill out the factory spot welds along the bottom pinch weld (where the outer sill meets the inner sill and floor pan).
 4. **Excavate the Inner Structure:** Once the outer skin is off, you will see the remains of the jack tube. Cut away the rotted inner reinforcement plate. Be extremely careful not to cut into the primary inner sill structure unless it is also compromised. 
 
-On our recent M50-swapped track build, a simple bubbling rocker revealed that the front 30cm of the floor pan and the base of the A-pillar were entirely missing. Be prepared for scope creep.
+A small bubble on the rocker can hide far larger rot behind it, in the front of the floor pan and the base of the A-pillar. Be prepared for scope creep.
 
 ## Rebuilding the Inner Structural Node
 

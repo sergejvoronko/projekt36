@@ -75,7 +75,7 @@ The connector is keyed and reads left-to-right, top row first, when viewed from 
 | 31 | Knock sensor 1 shield | 0V | |
 | 32 | Knock sensor 2 | AC signal ~0–5V | Rear bank |
 
-**Tip for swap builds:** In our M50B25TU swap into a Z3 shell, the CMP sensor wiring had been extended by a previous owner using unshielded speaker wire. The result was intermittent cam signal dropout above 5,000 RPM. Always use twisted shielded pair (Belden 8761 equivalent, ~€1.20/m) for the CMP and CKP extensions.
+**Tip for swap builds:** If the camshaft sensor wiring has been extended, check how. Unshielded wire can pick up interference and cause intermittent cam signal dropout. Always use twisted shielded pair (Belden 8761 equivalent, ~€1.20/m) for the CMP and CKP extensions.
 
 ### Injector and actuator outputs
 

@@ -21,7 +21,7 @@ On a 25-year-old E36, the factory steering is often the most glaring dynamic wea
 
 The standard E36 rack (and most non-M versions) features a **progressive** gear ratio. This means the steering is intentionally slow and vague dead-center to make highway driving relaxed, but it speeds up as you approach full lock. Furthermore, standard E36 racks require an agonizing 3.4 turns lock-to-lock. While the E36 M3 3.0L and 3.2L got slightly improved ratios, they still fall short of modern sports car standards and are increasingly expensive to source.
 
-When we began our track-focused 328i build, addressing the steering was priority number one. The solution is retrofitting a modern, linear steering rack. A linear rack moves the tie rods the exact same distance per degree of steering wheel rotation, whether you are dead-center or near full lock. This provides immediate, predictable response, an absolute necessity for catching oversteer or navigating tight autocross courses.
+The usual solution is retrofitting a modern, linear steering rack. A linear rack moves the tie rods the exact same distance per degree of steering wheel rotation, whether you are dead-center or near full lock. This provides immediate, predictable response, an absolute necessity for catching oversteer or navigating tight autocross courses.
 
 ## Steering Rack Comparison: Z3 vs. E46 Purple Tag
 
@@ -76,7 +76,7 @@ The E36 power steering pump outputs high pressure to an M14 banjo bolt, and retu
 The high-pressure line, however, will foul against the E46 rack housing. You can make this work by carefully securing the metal hardline section in a bench vise and gently bending it about 15 to 20 degrees. It requires patience to avoid crimping the line.
 
 ### AN-6 Custom Lines (The Motorsport Route)
-In our M50 swap build, the 25-year-old factory rubber lines were weeping fluid anyway. Rather than bending fatigued hardlines, we highly recommend upgrading to a complete AN-6 braided power steering line kit. Companies like Chase Bays or Condor Speed Shop sell E36 specific kits for about €185. 
+On a 25-year-old E36 the factory rubber lines are often weeping fluid already. Rather than bending fatigued hardlines, many builders upgrade to a complete AN-6 braided power steering line kit. Companies like Chase Bays or Condor Speed Shop sell E36 specific kits for about €185. 
 
 If you want to build the lines yourself using standard motorsport plumbing, you will need:
 - 1x M14x1.5 to AN-6 metric adapter (High Pressure Rack Port)

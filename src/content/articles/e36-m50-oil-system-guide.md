@@ -106,8 +106,6 @@ The stock M50 sump holds approximately **5.5 litres** with filter. It is an unmo
 | Custom fabricated baffled pan (local fab shop) | €150–€250 | Variable quality; bring a template |
 | Accusump accumulator system | €200–€350 | Stores pressurised oil; releases on pressure drop, works with stock sump |
 
-In our M50 swap build running a B25TU in an E30 shell, we fitted the Mosselman baffled sump with an updated Febi pickup tube and OEM pump. Oil pressure at hot idle sits at 2.0 bar, and we've seen no pressure anomalies at Hockenheim GP through fast chicanes where the car pulls hard lateral G.
-
 **Sump gasket:** Always replace with a new gasket (BMW 11 13 1 740 045 or Elring equivalent, ~€8–€15). Do not reuse the old one. Clean both mating surfaces thoroughly and use no additional sealant on the standard gasket.
 
 ---

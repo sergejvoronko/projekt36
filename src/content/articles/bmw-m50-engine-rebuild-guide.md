@@ -33,7 +33,7 @@ First, the block must be stripped of everything, freeze plugs, oil galley plugs,
 With the block clean, inspection and machining can begin.
 
 1.  **Decking:** Use a precision straight edge and feeler gauges to check the block deck for warpage. Any deviation over 0.05mm should be corrected. A light skim (~0.10mm) ensures a perfect sealing surface for the head gasket.
-2.  **Cylinder Bores:** Measure the cylinders for out-of-round and taper. On our 280,000 km M50B25, we found 0.04mm of taper, which is typical. At minimum, the bores will need a hone to break the glaze and provide a cross-hatch pattern for new piston rings to seat against. If wear is excessive, an overbore to the next piston size (e.g., 84.5mm) is required.
+2.  **Cylinder Bores:** Measure the cylinders for out-of-round and taper. At minimum, the bores will need a hone to break the glaze and provide a cross-hatch pattern for new piston rings to seat against. If wear is excessive, an overbore to the next piston size (e.g., 84.5mm) is required.
 3.  **Main Journals:** While less common, the main bearing journals can go out of alignment. An align hone ensures the crankshaft has a perfectly straight and true tunnel to spin in. This is critical for high-RPM builds.
 
 Machine shop costs are a significant part of the budget. Expect to pay around **€400-€700** for a full suite of services.
