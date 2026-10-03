@@ -1,153 +1,130 @@
 ---
 title: "BMW E36 Cooling System Overhaul: Every Part You Need"
-description: "Complete E36 cooling system replacement guide. Every part number, every supplier price, and the correct order to replace everything. M50/M52 focus."
+description: "Overhauling the E36 M50/M52 cooling system in one go: what to replace, the replacement order, Bentley's bleeding procedure, capacities, test pressures and torque values."
 pillar: engine
 keywords: "e36 cooling system, m50 cooling system overhaul, e36 water pump replacement, e36 overheating fix"
 date: "2026-03-16"
 hero: "cooling.webp"
+reviewed: "2026-10-03"
+sources:
+  - title: "Bentley Publishers: BMW 3 Series (E36) Service Manual 1992–1998, 020 Maintenance and 170 Radiator and Cooling System"
+  - title: "RealOEM BMW parts catalog (part number checks)"
+    url: "https://www.realoem.com/"
 ---
 
 ## TL;DR
 
-- **What:** Replace every cooling system component at once, water pump, thermostat, expansion tank, all hoses, radiator if needed
-- **Why:** The E36 cooling system is the #1 engine killer. Components fail in cascade, one failure overheats the engine before you can react
-- **Cost:** €180–320 for all new quality parts (DIY)
-- **Time:** 4–6 hours for a complete overhaul with engine in car, significantly less with engine out (for example during an engine swap)
-- **Difficulty:** 3/5 for most components, 2/5 with engine on a stand
+- **What:** Replace the cooling system's wear parts in one go: water pump, thermostat, expansion tank and cap, hoses, clamps, and the radiator and fan clutch if they're tired.
+- **Why:** On a 25-plus-year-old E36 these parts are all the same age. When one fails, the others usually aren't far behind, and an overheated M50 can mean a warped head.
+- **Time:** About a day with the engine in the car, less with the engine out on a stand.
+- **Difficulty:** 3/5
 
 ---
 
-## Why the entire system, not just the failed part
+## Why the whole system at once
 
-Every E36 forum thread about overheating ends the same way: someone replaces the water pump, drives for three months, then the expansion tank cracks and dumps all the coolant. Or the thermostat sticks closed. Or a hose blows.
+Overheating stories on E36 forums tend to follow one pattern: the water pump gets replaced, and a few months later the expansion tank splits or a hose bursts. Much of the system is plastic, and after 25 years of heat cycles every original part is near the end of its life. Replacing everything in one session costs a weekend; an overheated engine costs far more.
 
-The reason is simple. Every cooling system component on a 25+ year old E36 is operating on borrowed time. BMW used plastic where metal would have been more durable, the expansion tank is plastic, the water pump impeller was originally plastic, the thermostat housing is plastic. These components don't fail independently. When one component is original, they're ALL original, and they're ALL ready to fail.
+Bentley's own maintenance schedule recommends replacing the cooling hoses **every four years** as a preventive measure.
 
-The cost of replacing everything at once is €180–320. The cost of an overheated M50 engine with a cracked head or warped block is €1,000+ for a used replacement, or the entire project.
-
-**Our approach:** Since we're doing an M50 swap with the engine on a stand, every cooling component goes on new before the engine goes into the car. Zero excuses.
+**Our approach:** Since we're doing an M50 swap with the engine on a stand, every cooling component goes on new before the engine goes into the car.
 
 ---
 
-## Complete parts list with part numbers
+## What to replace
 
-### The non-negotiable parts (replace these no matter what)
+**Replace regardless of condition:**
 
-| Part | OEM Part Number | Recommended Brand | Est. Price (EU) | Notes |
-|---|---|---|---|---|
-| Water pump | 11 51 7 527 799 | Graf PA432 | €30–45 | **Metal impeller only.** Never reuse a plastic impeller pump. |
-| Water pump gasket | 11 51 7 509 619 | Included with Graf |, | Some pumps include gasket, verify |
-| Thermostat | 11 53 1 712 043 | Wahler 4131.80D | €8–15 | 80°C opening temperature, do not use a "cold" thermostat |
-| Thermostat housing gasket | 11 53 1 265 084 | Elring / Victor Reinz | €3–5 | Paper gasket, replace every time |
-| Expansion tank | 17 11 1 723 520 | Mahle/Behr | €15–28 | The tank cracks at the seam. Always new. |
-| Expansion tank cap | 17 11 1 742 231 | OEM / Mahle | €5–10 | The cap is a pressure valve, old caps lose pressure rating |
-| Upper radiator hose | 11 53 1 740 478 | Continental / Rein | €10–18 | M50/M52 specific, verify for your engine |
-| Lower radiator hose | 11 53 1 740 480 | Continental / Rein | €10–18 | M50/M52 specific |
-| Heater core inlet hose | 64 21 1 394 291 | Continental | €8–12 | The hose from the engine to the heater core |
-| Heater core outlet hose | 64 21 1 394 292 | Continental | €8–12 | Return from heater core to engine |
-| Bleed screw | 17 11 1 712 788 | OEM | €3–5 | The small plastic bleed screw on top of the radiator. They crack and strip. |
-| Overflow hose (tank to radiator) | 17 11 1 723 521 | OEM | €4–8 | Small hose, often forgotten |
-| All hose clamps |, | OEM spring-style | €10–15 set | Replace every single clamp. Use spring clamps, not worm-drive. |
-| Coolant | G48 specification | Zerex G-48 or Pentosin NF | €12–18 (5L) | Mix 50/50 with distilled water. ~7L total system capacity. |
+- water pump (with its gasket or O-ring); choose a pump with a **metal impeller**, because the plastic-impeller originals are a known failure
+- thermostat and its housing seal; an OE-specification thermostat, not a "cooler" one
+- expansion tank and its cap (the cap is a pressure valve)
+- upper and lower radiator hoses, heater hoses, and the expansion tank vent and overflow hoses
+- every hose clamp
+- coolant (see below)
 
-**Subtotal (essentials):** €130–210
+**Replace if worn or old:**
 
-### Strongly recommended (replace if budget allows)
+- radiator: weeping at the tank seams, discoloured plastic tanks, or simply its age
+- viscous fan clutch and fan blade (check for cracks at the blade roots)
+- fan shroud, if cracked
+- coolant temperature sensors, if the gauge is erratic or the engine runs badly when cold
 
-| Part | OEM Part Number | Recommended Brand | Est. Price (EU) | Notes |
-|---|---|---|---|---|
-| Radiator |, | Nissens 60623 / Mahle CR361 | €60–95 | Replace if over 15 years old, if any plastic tanks show yellowing, or if you see weeping at the tank-to-core seam. An M43 to M50 swap needs the 6-cylinder radiator regardless. |
-| Fan clutch | 11 52 1 740 963 | Sachs / Behr | €25–45 | Test: with cold engine off, spin the fan by hand. More than 2 full rotations = worn clutch. |
-| Fan blade | 11 52 1 712 058 | OEM | €15–25 | Inspect for cracks, especially at the root of each blade. A cracked blade at 6,000 rpm goes through the radiator. |
-| Fan shroud | 17 11 1 723 031 | OEM | €15–25 | Often cracked or brittle. Holds the expansion tank mount. |
-| Temperature sensor (for gauge) | 13 62 1 703 993 | FAE / Hella | €8–12 | If your temp gauge is erratic, this is usually why |
-| Coolant temperature sensor (for ECU) | 13 62 1 730 060 | Bosch | €10–15 | Critical for correct fuel mixture and fan activation |
+**Part numbers:** look them up by VIN on [RealOEM](https://www.realoem.com/) under *Engine → Water pump / Thermostat* and *Radiator*. Several part numbers that circulate online for "the E36" actually belong to other models or engines, so check each one against your car.
 
-**Subtotal (recommended):** €130–220
-
-### Total cost: €180–320 (DIY, all new quality parts)
-
-At a workshop, labor adds €200–400 depending on location. The job takes 4–6 hours with the engine in the car.
+**Coolant:** BMW specifies a 50/50 mix of **distilled water** and **phosphate- and nitrate-free** ethylene-glycol antifreeze. Use genuine BMW coolant or one that meets BMW's specification. Bentley warns that other antifreeze types can form deposits that clog the system, and that tap water causes corrosion.
 
 ---
 
-## The correct replacement order
+## Key figures (Bentley)
 
-If working with the engine in the car, this order minimizes coolant spillage and rework:
-
-### Step 1: drain the system
-Open the bleed screw on top of the radiator first (releases vacuum). Place a drain pan under the radiator drain plug (lower driver's side of the radiator). Open the drain plug and let the system drain completely. Also open the engine block drain plug if doing a complete flush (located on the side of the block).
-
-**Expected volume:** 6–7 liters from a complete drain.
-
-### Step 2: remove the fan and shroud
-The fan nut is LEFT-HAND THREAD (reverse thread). It unscrews clockwise when viewed from the front of the engine. Use a 32mm thin wrench or the BMW fan clutch tool. Remove the fan + clutch as one assembly, then remove the fan shroud (two clips at the top, lifts up and out).
-
-### Step 3: remove the expansion tank
-Disconnect the hoses (overflow and bleed). Unclip the tank from the fan shroud bracket. Discard. It's plastic and 25+ years old.
-
-### Step 4: replace the thermostat
-The thermostat housing is at the front of the engine, where the lower radiator hose connects. Remove the two bolts, pull the housing, remove the old thermostat. Clean the mating surface on the engine block. Install new thermostat (the jiggle pin/bleed hole faces up) with a new gasket. Torque the housing bolts to 10 Nm.
-
-### Step 5: replace the water pump
-The water pump is driven by the accessory belt and is located at the front of the engine behind the fan. Remove the belt (release tensioner), remove the four water pump bolts, pull the pump. Clean the mounting surface on the engine thoroughly, any old gasket residue will cause a leak. Install the new pump with a new gasket. Torque to 10 Nm.
-
-**Critical:** Verify the new pump has a METAL impeller before installation. Hold it up and look inside, metal impellers are solid steel/cast iron, plastic impellers are lighter and have visible plastic molding marks.
-
-### Step 6: replace all hoses
-Replace upper hose, lower hose, heater hoses, and overflow hose. Use new spring clamps on every connection.
-
-### Step 7: replace the radiator (if needed)
-If replacing the radiator, now is the time. The old radiator lifts out once all hoses are disconnected and the fan shroud is removed. Install new radiator, reconnect hoses.
-
-### Step 8: install new expansion tank and cap
-Mount the new tank, connect overflow and bleed hoses.
-
-### Step 9: fill and bleed
-This is where most people make mistakes.
-
-**The E36 cooling system bleeds through the small screw on top of the radiator (nearest to the expansion tank).**
-
-1. Open the bleed screw (1–2 turns, don't remove it completely)
-2. Fill coolant through the expansion tank slowly
-3. When coolant flows steadily from the bleed screw with no air bubbles, close the bleed screw
-4. Fill the expansion tank to the MAX line
-5. Start the engine with the expansion tank cap OFF
-6. Run the engine until the thermostat opens (you'll feel the upper hose go from cold to hot suddenly)
-7. With the engine running and thermostat open, observe the expansion tank, air bubbles may still surface
-8. Top up as needed. Replace the cap.
-9. Let the engine reach full operating temperature, then let it cool completely
-10. Check the level when cold, top up to the midpoint between MIN and MAX
-
-**Trapped air is the enemy.** Air pockets in the system cause localized hot spots and the temperature gauge to read erratically. If the gauge spikes after the overhaul, you have trapped air, re-bleed.
-
----
-
-## Common mistakes
-
-**Using a plastic impeller water pump.** Some cheap aftermarket pumps still use plastic impellers. The impeller cracks, the blades shear off, coolant stops flowing, and the engine overheats in minutes. Always verify metal impeller.
-
-**Reusing the expansion tank.** "It looks fine" is the last thing every E36 owner says before the tank cracks at the seam on the highway. It's a €20 part. Replace it.
-
-**Not replacing the cap.** The expansion tank cap is a pressure valve rated to ~1.4 bar. An old cap that doesn't hold pressure allows the coolant to boil at a lower temperature. It's a €5–10 part.
-
-**Using worm-drive hose clamps.** BMW uses spring-type constant-tension clamps from the factory. These maintain consistent pressure as the hose expands and contracts with heat. Worm-drive clamps (the kind with the screw) can over-tighten and cut into the hose, or loosen as the hose shrinks when cold.
-
-**Not bleeding properly.** The E36 cooling system is notorious for trapping air. A single large air pocket in the heater core or cylinder head can cause a hot spot that leads to head gasket failure. Bleed patiently. Some owners raise the front of the car on ramps during bleeding to help air migrate to the bleed screw.
-
----
-
-## Cooling system maintenance schedule
-
-Once overhauled, maintain the system on this schedule:
-
-| Interval | Action |
+| Item | Value |
 |---|---|
-| Every 2 years | Flush and replace coolant |
-| Every 2 years | Inspect all hoses for swelling, cracking, or softness |
-| Every 4–5 years | Replace expansion tank and cap (preventive) |
-| 80,000–100,000 km | Replace water pump and thermostat |
-| Annually | Check coolant level and bleed screw condition |
+| Cooling system capacity, M50/M52 | 10 litres |
+| Cooling system capacity, S50US/S52US | 10.5 litres |
+| Radiator test pressure | 1.5 bar |
+| Radiator cap test pressure | 2 bar |
+| Pressure test: allowable drop | no more than 0.1 bar in two minutes |
+
+| Fastener | Torque |
+|---|---|
+| Water pump to timing cover, M6 / M8 | 10 Nm / 22 Nm |
+| Water pump pulley | 10 Nm |
+| Thermostat housing cover | 10 Nm |
+| Radiator fan (viscous clutch) to water pump | 40 Nm, left-hand thread |
+| Fan to viscous clutch | 10 Nm |
+| Radiator drain plug | 2–3 Nm |
+| Engine block drain plug | 25 Nm, new sealing washer |
+| Bleed screw on thermostat housing | 8 Nm |
+
+---
+
+## Replacement order
+
+### 1. Drain
+
+With the engine cold, set the heater to full warm. Remove the radiator drain plug, then the **engine block drain plug** on the exhaust side of the block, towards the rear. Expect around 10 litres.
+
+### 2. Fan and shroud
+
+The fan nut is **32 mm with a left-hand thread**: turn the wrench sharply **clockwise** (viewed from the front) to loosen it. A pulley holder (BMW tool 11 5 030) stops the pump turning. Remove the shroud's expansion rivets and take the fan and shroud out together. **Store the fan clutch upright**, as fitted, so it doesn't lose its fluid.
+
+### 3. Drive belt
+
+Release the belt tensioner on the six-cylinder by prying off its cover and levering it **clockwise** (facing the engine), then slip the belt off.
+
+### 4. Water pump
+
+The pump is mounted on the front of the **timing cover**. Remove its bolts, clean the mating face completely, and fit the new pump with a new gasket. Tighten M6 bolts to 10 Nm and M8 to 22 Nm.
+
+### 5. Thermostat
+
+The thermostat sits in a housing at the **front of the cylinder head**. Note its orientation before removing it. Fit the new one so its **arrow or vent hole is at the top**, with a new seal, and tighten the housing cover to 10 Nm. Reconnect any ground wires on the housing bolts.
+
+### 6. Hoses, tank, radiator
+
+Replace the hoses, the expansion tank and cap, and the radiator if needed. New clamps on every connection.
+
+### 7. Refill and bleed
+
+Refit both drain plugs with new sealing washers and fill slowly with the 50/50 mix. Then bleed according to your radiator type, as Bentley describes:
+
+- **With a bleed screw** (on the radiator's expansion tank; on M3 models also on the thermostat housing):
+  1. With the engine cold, fill the expansion tank to the COLD (KALT) mark.
+  2. Loosen the bleed screw(s).
+  3. Set the heater to full warm and switch the ignition on, without starting the engine.
+  4. Add coolant slowly until it flows from the bleed screws free of air bubbles, then tighten them.
+  5. Run the engine to operating temperature, let it cool, and top up.
+- **With a separate expansion tank and no bleed screw:** the system bleeds itself through the vent hose on the tank. Fill, run to temperature, let it cool and top up.
+
+Trapped air stops coolant circulating properly. If the temperature gauge behaves erratically after the job, bleed again.
+
+---
+
+## Checks after the job
+
+- **Pressure test** the system cold: it should hold within 0.1 bar for two minutes. Test the cap at 2 bar.
+- **Check the coolant level** cold, against the mark on the expansion tank, for the first few drives.
+- **Look for weeps** at the new hose joints once everything has been hot and cooled down again.
 
 ---
 
