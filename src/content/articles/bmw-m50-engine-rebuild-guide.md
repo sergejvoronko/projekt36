@@ -1,135 +1,136 @@
 ---
 title: "BMW M50 Engine Rebuild: Block to Head, Every Step and Part Explained"
 seoTitle: "BMW M50 Engine Rebuild: Every Step, Block to Head"
-description: "A comprehensive guide to rebuilding the legendary BMW M50 inline-six, from block machining to final head torque."
+description: "Rebuilding the BMW M50 inline-six: the decisions, measurements and machine-shop work that matter, the assembly order, and only torque values and specs confirmed by Bentley or two independent sources."
 pillar: engine
 keywords: "M50 engine rebuild, BMW E36 engine, M50 rebuild guide, engine assembly, cylinder head rebuild, engine block machining, M50 torque specs, engine bearing clearances, E36 M50 restoration"
 date: "2026-05-22"
 hero: "bmw-m50-engine-rebuild-guide.webp"
+reviewed: "2026-10-03"
+sources:
+  - title: "Bentley Publishers: BMW 3 Series (E36) Service Manual 1992–1998, 113, 116, 117, 119 (head, timing, lubrication torque values)"
+  - title: "engine-specs.net: BMW M50B25 specifications (bore, stroke, block material, rod bolt torque)"
+    url: "https://www.engine-specs.net/bmw/m50b25.html"
+  - title: "Brentford Racing: M50/S50/M52/S52 connecting rod bearing replacement (rod bolt procedure, rod bearing clearance)"
+    url: "https://brentfordracing.com/2020/08/21/bmw-e36-m50-s50-m52-s52-connecting-rod-bearing-replacement-upgrade/"
 ---
 
-The BMW M50 is a legend for a reason. It's robust, loves to rev, and forms the heart of the E36. But after 25+ years and hundreds of thousands of kilometers, even the best-kept examples are due for a refresh. A full rebuild is not a small task, but it's the only way to guarantee another quarter-century of reliable performance.
+The M50 is a tough engine, but after 25-plus years even a good one may need a full rebuild: worn rings, tired bearings, a head that has seen an overheat. This guide covers the decisions and the order of work, starting from a bare block and head on stands.
 
-This guide skips the basics of engine removal and teardown. We're starting with a bare block and head on engine stands, ready for the meticulous process of inspection, machining, and reassembly. We'll cover every critical step, part number, and torque spec you need to build a bulletproof M50.
+**Specs policy:** Bentley's E36 manual covers the cylinder head, timing and lubrication, but not the crankshaft, bearings and pistons. Any internal value not confirmed by two independent sources is marked **"check the workshop manual"** instead of being guessed. A rebuild is exactly where a wrong number costs an engine.
 
 ## TL;DR
 
 | | |
 |---|---|
-| **What:** | A step-by-step guide to assembling a BMW M50 long block from bare castings. |
-| **Why:** | To restore a worn engine, build for performance, or ensure maximum reliability. |
-| **Cost:** | €1,500 - €4,000+ (depending on machine work and part choices). |
-| **Time:** | 40-60 hours (excluding machine shop lead time). |
-| **Difficulty:**| 5/5 (Requires precision tools, a clean environment, and meticulous attention to detail). |
+| **What:** | Inspecting, machining and reassembling an M50 long block. |
+| **Why:** | To restore a worn engine, or to start a swap or performance build on a sound base. |
+| **Time:** | Several full weekends, plus machine-shop lead time. |
+| **Difficulty:** | 5/5: precision measuring tools, a clean workspace and patience. |
 
 ---
 
-## The foundation: block preparation and machining
+## Know the engine
 
-Your engine is only as good as its foundation. A clean, straight, and properly toleranced block is non-negotiable. Don't cut corners here; any issues with the block will manifest as problems later.
+| | M50B25 |
+|---|---|
+| Block | Cast iron |
+| Bore × stroke | 84.0 × 75.0 mm |
+| Valvetrain | DOHC, 24 valves, hydraulic lifters, two timing chains |
+| Variants | Non-VANOS (built up to 8/1992) and VANOS (1993 on) |
 
-First, the block must be stripped of everything, freeze plugs, oil galley plugs, dowels. Take it to a reputable machine shop for a hot tank bath. This chemical cleaning process is far superior to any manual scrubbing and will leave your iron block looking factory-fresh, revealing any potential cracks in the process.
+---
 
-With the block clean, inspection and machining can begin.
+## Block: clean, inspect, machine
 
-1.  **Decking:** Use a precision straight edge and feeler gauges to check the block deck for warpage. Any deviation over 0.05mm should be corrected. A light skim (~0.10mm) ensures a perfect sealing surface for the head gasket.
-2.  **Cylinder Bores:** Measure the cylinders for out-of-round and taper. At minimum, the bores will need a hone to break the glaze and provide a cross-hatch pattern for new piston rings to seat against. If wear is excessive, an overbore to the next piston size (e.g., 84.5mm) is required.
-3.  **Main Journals:** While less common, the main bearing journals can go out of alignment. An align hone ensures the crankshaft has a perfectly straight and true tunnel to spin in. This is critical for high-RPM builds.
+1. **Strip it completely:** core plugs, oil gallery plugs and dowels out, so the block can be cleaned properly. A machine shop's hot tank or chemical clean is the standard.
+2. **Inspect for cracks** once it's clean.
+3. **Check the deck** with a precision straight edge and feeler gauges. Have the machine shop decide on a skim.
+4. **Measure the bores** for wear, out-of-round and taper. That decides between a **hone** (glaze breaking and a fresh cross-hatch for new rings) and an **overbore** to the next piston size.
+5. **Main bearing tunnel:** if bearings have spun or the crank shows unusual wear, have the shop check the alignment and align-hone if needed.
 
-Machine shop costs are a significant part of the budget. Expect to pay around **€400-€700** for a full suite of services.
+Have the shop fit new core and gallery plugs before the block comes back.
 
-| Machining Service | Estimated Cost (EU) | Why It's Necessary |
-|---|---|---|
-| Hot Tank / Chemical Clean | €80 - €120 | Removes all grease, grime, and carbon for proper inspection. |
-| Deck Skim | €100 - €150 | Guarantees a flat surface for the head gasket to prevent leaks. |
-| Cylinder Hone | €150 - €200 | Prepares cylinder walls for new rings to seat correctly. |
-| Align Hone (Mains) | €200 - €250 | Ensures the crankshaft spins freely and bearings wear evenly. |
+---
 
-Before leaving the shop, have them install new freeze plugs and oil galley plugs. The peace of mind is worth the small cost.
-
-*   **Freeze Plugs (30mm):** BMW **11111734346** (x7)
-
-## The rotating assembly: crank, rods, and pistons
-
-With a perfect block, it's time to prepare the components that will live inside it. Precision and cleanliness are paramount.
+## Rotating assembly
 
 ### Crankshaft and bearings
 
-The M50's forged crankshaft is incredibly strong. Unless the engine suffered a catastrophic oil failure, it likely only needs a polish. Have your machine shop polish the main and rod journals and verify they are within spec.
+Have the journals measured and polished, and ground undersize only if they're out of spec. Then measure **bearing clearance**: Plastigage works, a bore gauge and micrometer are better.
 
-Next comes the most critical measurement of the entire build: bearing clearance. You'll be using Plastigauge or, preferably, a bore gauge and micrometer to verify this.
+- **Connecting rod bearing clearance:** 0.020–0.055 mm.
+- **Main bearing clearance:** check the workshop manual for your engine.
 
-| Component | Part Number (Standard Size) | Approx. Cost | Target Clearance |
-|---|---|---|---|
-| **Main Bearings** | Glyco **H024/7 STD** | €70 | 0.020 - 0.051 mm |
-| **Rod Bearings** | Glyco **71-3658/6 STD** | €50 | 0.020 - 0.066 mm |
+If a clearance is out of range, correct it with the right bearing size or crank work before going further.
 
-Lay the upper bearing shells into the block and rods, place the crank, and then lay the Plastigauge across the journals. Install the caps and torque them to spec (see table in next section). Remove the caps and measure the crushed Plastiggauge. If your clearances are too tight or too loose, you'll need oversized or undersized bearings. Do not proceed until these clearances are perfect.
+### Pistons, rings and rods
 
-### Pistons and rods
+- Clean the piston ring grooves completely (a broken old ring makes a good groove scraper) and inspect the pistons and rods.
+- **Fit new piston rings,** and check each ring's end gap in its own bore against the ring maker's specification.
+- **Connecting rod bolts are stretch bolts:** fit new ones. Uprated aftermarket rod bolts are a common upgrade for high-rpm or boosted builds; follow their maker's tightening procedure, not the OE one.
 
-Thoroughly clean the stock pistons, paying special attention to the ring grooves. An old, broken piston ring makes an excellent tool for scraping out carbon. Stock rods and pistons are fine for naturally aspirated builds.
+---
 
-Replace the piston rings. This is mandatory.
+## Bottom-end assembly
 
-*   **Piston Rings (84mm):** Mahle **081 RS 00104 0N0** or Goetze **08-112900-00** (~€120)
+Use assembly lube on every bearing surface and on the cylinder walls.
 
-The OEM rod bolts are torque-to-yield (TTY) and *must* be replaced. While you're at it, this is the single best time to upgrade to ARP bolts. They are reusable and provide superior clamping force, which is cheap insurance if you plan on raising the rev limit or adding boost later.
+1. Fit the upper main shells and the thrust bearing, then lay the crankshaft in.
+2. Fit the main caps in their original positions and orientation. The **main cap bolts are tightened with torque plus angle: check the workshop manual for the values and sequence.**
+3. Fit the pistons with a ring compressor, observing their orientation marks.
+4. Tighten the **connecting rod bolts** (new OE bolts, threads and seats lightly oiled):
 
-*   **Rod Bolt Upgrade:** ARP **201-6302** (~€180)
+   | Stage | Value |
+   |---|---|
+   | 1 | 5 Nm |
+   | 2 | 20 Nm |
+   | 3 | +70° |
 
-## Bottom end assembly: torque and sealing
+5. Fit a new rear main seal, pressed in **square**.
+6. Turn the crank by hand after each piston: it should turn smoothly, with resistance rising evenly, not in steps.
 
-With all parts cleaned, measured, and laid out on a clean surface, the fun begins. Use a high-quality assembly lube (like Liqui Moly **3050**) on all bearing surfaces and cylinder walls.
+### Oil pump and pan (Bentley)
 
-1.  **Crankshaft:** Install the upper main bearing shells and thrust bearing into the block. Liberally lube them, then carefully lower the crankshaft into place.
-2.  **Main Caps:** Install the lower bearing shells into the main caps, lube them, and install the caps in the correct orientation. Thread the main bolts in by hand.
-3.  **Main Cap Torque:** Torque the main cap bolts in three stages, following the factory sequence (starting from the center and working outwards).
-    *   **Main Cap Bolts (M10):** Stage 1: 20 Nm. Stage 2: 50 degrees angle.
-4.  **Piston Installation:** Using a piston ring compressor, install the piston/rod assemblies. Ensure the arrow on the piston top points towards the front (timing side) of the engine. Gently tap them into the bores.
-5.  **Rod Cap Torque:** Lube the threads and underside of the nut/bolt head.
-    *   **OEM Rod Bolts (M6):** Stage 1: 5 Nm (to seat). Stage 2: 20 Nm. Stage 3: 70 degrees angle.
-    *   **ARP Rod Bolts:** Follow ARP's specific instructions, which involve a stretch gauge or a torque spec (typically ~60 Nm with their lube).
-6.  **Rear Main Seal:** This is a notorious leak spot. Install a new seal (**Elring 325.155**) using a proper seal driver or a large socket that matches the seal's outer diameter. Ensure it is pressed in perfectly square.
+| Fastener | Torque |
+|---|---|
+| Oil pump to block (M8) | 22 Nm |
+| Oil pump sprocket nut (M10×1, **left-hand thread**) | 25 Nm |
+| Oil pan, M6 grade 8.8 / 10.9 | 10 / 12 Nm |
+| Oil drain plug, M12 / M22 | 25 / 60 Nm |
 
-After torquing, rotate the assembly by hand. It should feel smooth with moderate resistance. Check connecting rod side clearance with a feeler gauge (spec: 0.10 - 0.25 mm).
+---
 
-## The cylinder head
+## Cylinder head
 
-The cylinder head is arguably more complex than the block. Like the block, it needs to be professionally cleaned and inspected.
+1. **Clean it and pressure-test it for cracks.** A cracked head must be replaced.
+2. **Check for warpage** with a straight edge. Bentley's machining limits: no more than **0.3 mm** may be removed, and the head must stay at or above **139.7 mm** high (140.0 mm new). A machined head needs the **0.3 mm thicker head gasket**.
+3. **Valves, guides, seats:** check guide wear and the seats before paying for a skim. A valve job, with resurfaced seats and refaced valves, is the norm on a rebuild. Replace all **24 valve stem seals**.
+4. **Hydraulic lifters:** the M50 has no valve clearances to set. If the camshafts have been out, observe Bentley's waiting time before turning the engine: **10 minutes at 20 °C or above, 30 minutes at 10–20 °C, 75 minutes at 0–10 °C**. Expanded lifters can otherwise hold valves open into the pistons.
 
-1.  **Inspection:** The shop should pressure test the head to check for cracks, especially between valve seats, which is a common failure point on overheated engines. Check the head for warpage; anything over 0.05mm requires decking.
-2.  **Valvetrain:** At this mileage, a full valve job is highly recommended. This involves a 3-angle (or 5-angle) grind on the valve seats and refacing the valves. This restores compression and flow. The valve guides should also be measured for wear and replaced if necessary.
-3.  **Reassembly:** This is the perfect time to replace all 24 valve stem seals. They become hard and brittle with age, leading to oil consumption and smoke on startup.
-    *   **Valve Stem Seals:** Elring **127.680**
-    *   **Full Head Gasket Set:** Victor Reinz **02-29230-01** (~€150). This kit includes the head gasket, valve stem seals, and all other necessary gaskets for the head.
+**VANOS engines:** reseal the VANOS while the head is on the bench. See the [M50TU VANOS guide](/guides/m50tu-vanos-guide).
 
-### The VANOS question
+---
 
-If you have an M50B25TU, you have a single VANOS unit. The original Buna-N seals inside the VANOS piston are almost certainly degraded to hard plastic, causing the infamous "diesel rattle" and poor low-end performance. Rebuilding it is not optional. The kit from Beisan Systems is the industry standard and includes superior Viton seals.
+## Head, timing and front of the engine (Bentley)
 
-*   VANOS Seal Kit: Beisan Systems BS021 (~€30 + shipping)
-*   VANOS Rattle Repair Kit: Beisan Systems BS022 (~€30 + shipping)
+| Item | Value |
+|---|---|
+| Head gasket | New, with **"OBEN"** facing up |
+| Cylinder head bolts (new Torx stretch bolts, lightly oiled) | 30 Nm, then +90°, then +90°, in BMW's sequence |
+| Head to lower timing cover | 10 Nm |
+| Camshaft bearing caps (M7) | 15 Nm |
+| Crankshaft hub (new stretch bolt) | 410 ± 20 Nm |
+| Vibration damper to hub (M8) | 22 Nm |
+| Flywheel (new bolts) | 105 Nm |
+| Cylinder head cover | 10 Nm |
 
-Do this while the head is on the bench. It's infinitely easier than doing it in the car.
+The camshafts have no reassembly timing marks. Timing is set with the crankshaft and camshaft locking tools, then confirmed by turning the engine through two full revolutions and refitting the tools. See the [timing chain guide](/guides/e36-m50-timing-chain-guide) and the [head gasket guide](/guides/e36-m50-head-gasket-replacement) for the procedure and the remaining values.
 
-## Final assembly: timing and torque
+---
 
-This is the final, critical stage. Mating the block and head requires a new head gasket and new head bolts. The OEM head gasket is a high-quality multi-layer steel (MLS) unit. There is no reason to use anything else for most builds. Head bolts are TTY and cannot be reused.
+## First start
 
-| Component | Part Number | Approx. Cost |
-|---|---|---|
-| **Head Gasket** | Included in Victor Reinz kit | - |
-| **Head Bolts** | Elring **113.060** or Febi **01608** | €40 |
-
-1.  **Head Gasket:** Ensure both the block deck and head surface are immaculately clean. Use brake cleaner on a lint-free rag for a final wipe. Place the head gasket on the block. It only fits one way.
-2.  **Install Head:** Carefully lower the cylinder head onto the block. Do not slide it.
-3.  **Head Bolt Torque:** Lube the threads and washers of the new head bolts. Torque them in the specified spiral sequence, starting from the middle and working out.
-
-    | BMW M50 Head Bolt Torque Sequence |
-    |---|
-    | **Stage 1:** 30 Nm |
-    | **Stage 2:** +90 degrees angle |
-    | **Stage 3:** +90 degrees angle |
-
-    
+- Prime the oil system before the first start, so the bearings don't run dry.
+- Fill and bleed the cooling system properly (see the [cooling system guide](/guides/e36-cooling-system-overhaul)).
+- Watch oil pressure, temperature and leaks closely during the first run, and follow your ring maker's break-in advice.
