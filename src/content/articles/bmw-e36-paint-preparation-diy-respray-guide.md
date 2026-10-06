@@ -26,6 +26,11 @@ This isn't a guide for a quick driveway touch-up. This is about taking a 25-year
 | **Time:** | Many weekends: it depends almost entirely on how much rust repair the car needs. |
 | **Difficulty:**| 4/5 - Requires patience, attention to detail, and welding skills for rust repair. |
 
+<figure class="p36-photo">
+<img src="/images/commons/1994-bmw-318i-e36-sedan-2015-05-29-02.webp" alt="1994 BMW E36 318i sedan, rear three-quarter view" loading="lazy" decoding="async">
+<figcaption>A 1994 318i sedan. Bumpers, lower trim, mouldings and lights come off before a proper respray.<span class="p36-credit">Photo: OSX, Public domain, via <a href="https://commons.wikimedia.org/wiki/File:1994_BMW_318i_(E36)_sedan_(2015-05-29)_02.jpg" rel="noopener" target="_blank">Wikimedia Commons</a></span></figcaption>
+</figure>
+
 ## Safety first
 
 Two-component (2K) primers, clear coats and many paints contain **isocyanates**. Spraying them without proper protection can cause serious, lasting lung damage. Use a respirator rated for the product and a ventilated booth, and follow the product's safety data sheet. Sanding dust (filler, old paint) needs a dust mask and extraction as well. If you can't spray 2K safely at home, do the preparation yourself and have a body shop spray the primer and paint.

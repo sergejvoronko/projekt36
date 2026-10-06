@@ -24,6 +24,11 @@ sources:
 
 ---
 
+<figure class="p36-photo">
+<img src="/images/commons/1991-1996-bmw-318i-e36-sedan-03.webp" alt="White BMW E36 318i sedan, rear three-quarter view" loading="lazy" decoding="async">
+<figcaption>On an E36 sedan the sills and the edges of the rear arches take the stones thrown up by the tyres.<span class="p36-credit">Photo: OSX, Public domain, via <a href="https://commons.wikimedia.org/wiki/File:1991-1996_BMW_318i_(E36)_sedan_03.jpg" rel="noopener" target="_blank">Wikimedia Commons</a></span></figcaption>
+</figure>
+
 ## Why PPF matters more on a restored car
 
 A stone chip on factory paint is a touch-up. On a fresh respray, a chip that goes through to primer can mean repainting the panel to keep the finish even, and dark colours show every flaw. Film on the areas that take the hits protects the money spent on paint.

@@ -55,6 +55,37 @@ According to Bentley:
 
 ---
 
+<figure class="p36-diagram">
+<div class="p36-diagram-scroll">
+<svg viewBox="0 0 760 250" role="img" aria-labelledby="ew-title ew-desc">
+<title id="ew-title">EWS II: how the key enables the engine</title>
+<desc id="ew-desc">The transponder chip in the key talks wirelessly to the ring antenna around the ignition lock. The EWS II control module checks the key code. If it matches, it releases the starter and sends a changing code to the engine control module, which then allows the engine to run. If the code does not match, starter and engine management stay disabled.</desc>
+<rect class="d-box" x="20" y="90" width="120" height="56" rx="8"/>
+<text class="d-label" x="34" y="113">Key</text>
+<text class="d-sub" x="34" y="130">transponder chip</text>
+<path class="d-vent" d="M140 118 H180"/>
+<text class="d-tag" x="160" y="108" text-anchor="middle">radio</text>
+<rect class="d-box" x="180" y="90" width="130" height="56" rx="8"/>
+<text class="d-label" x="194" y="113">Ring antenna</text>
+<text class="d-sub" x="194" y="130">around ignition lock</text>
+<path class="d-vac" d="M310 118 H350"/>
+<rect class="d-adapter" x="350" y="84" width="150" height="68" rx="8"/>
+<text class="d-on-accent" x="425" y="114" text-anchor="middle">EWS II MODULE</text>
+<text class="d-on-accent" x="425" y="132" text-anchor="middle">CHECKS KEY CODE</text>
+<path class="d-vac" d="M500 104 H560 V60 H580"/>
+<path class="d-vac" d="M500 132 H560 V176 H580"/>
+<rect class="d-box" x="580" y="36" width="160" height="48" rx="8"/>
+<text class="d-label" x="594" y="57">Starter</text>
+<text class="d-sub" x="594" y="73">released if code matches</text>
+<rect class="d-box" x="580" y="152" width="160" height="48" rx="8"/>
+<text class="d-label" x="594" y="173">DME (engine)</text>
+<text class="d-sub" x="594" y="189">changing code each start</text>
+<text class="d-note" x="20" y="236">EWS II from 1/1995 per Bentley 515. Early EWS (1/1994–1/1995) works through the central locking instead.</text>
+</svg>
+</div>
+<figcaption>EWS II: no matching key code, no starter and no engine management. That's why a used DME or EWS module must be matched to the car.</figcaption>
+</figure>
+
 ## Diagnosing a no-start
 
 1. **Battery first:** a weak battery or bad grounds cause starting faults that look like immobiliser problems. See the [charging guide](/guides/e36-charging-system-diagnosis) and the [ground guide](/guides/e36-ground-distribution-guide).

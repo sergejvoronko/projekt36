@@ -47,6 +47,45 @@ The DME decides when to advance based on engine load, engine speed and engine te
 
 ---
 
+<figure class="p36-diagram">
+<div class="p36-diagram-scroll">
+<svg viewBox="0 0 760 320" role="img" aria-labelledby="vn-title vn-desc">
+<title id="vn-title">How single VANOS moves the intake camshaft</title>
+<desc id="vn-desc">Two states. Solenoid off: engine oil goes to the back of the gear cup piston, holding the gear cup forward, and intake timing stays in the normal late position. Solenoid on: the spool valve directs oil to the front of the piston, the gear cup moves further onto the camshaft drive, and its helical gears turn that movement into rotation, advancing the intake camshaft by 12.5 degrees.</desc>
+<text class="d-title" x="30" y="32">Solenoid OFF</text>
+<text class="d-tag" x="30" y="50">timing: normal (late)</text>
+<rect class="d-box" x="30" y="70" width="90" height="44" rx="8"/>
+<text class="d-label" x="44" y="90">Oil</text>
+<text class="d-sub" x="44" y="105">pressure</text>
+<path class="d-vac d-thick" d="M120 92 H150 V200 H170"/>
+<rect class="d-box d-main" x="170" y="150" width="190" height="100" rx="10"/>
+<rect class="d-adapter" x="316" y="170" width="24" height="60" rx="3"/>
+<text class="d-sub" x="328" y="266" text-anchor="middle">piston</text>
+<text class="d-note" x="180" y="168">back</text>
+<text class="d-note" x="270" y="168">front</text>
+<path class="d-mount" d="M316 200 H130"/>
+<text class="d-note" x="40" y="214">to cam</text>
+<text class="d-sub" x="180" y="140">gear cup held forward</text>
+<text class="d-title" x="410" y="32">Solenoid ON</text>
+<text class="d-tag" x="410" y="50">timing: advanced 12.5°</text>
+<rect class="d-box" x="410" y="70" width="90" height="44" rx="8"/>
+<text class="d-label" x="424" y="90">Oil</text>
+<text class="d-sub" x="424" y="105">pressure</text>
+<path class="d-vac d-thick" d="M500 92 H730 V200 H740"/>
+<rect class="d-box d-main" x="550" y="150" width="190" height="100" rx="10"/>
+<rect class="d-adapter" x="570" y="170" width="24" height="60" rx="3"/>
+<text class="d-sub" x="582" y="266" text-anchor="middle">piston</text>
+<text class="d-note" x="600" y="168">back</text>
+<text class="d-note" x="690" y="168">front</text>
+<path class="d-mount" d="M570 200 H520"/>
+<text class="d-note" x="470" y="214">to cam</text>
+<text class="d-sub" x="560" y="140">gear cup pushed onto cam drive</text>
+<text class="d-note" x="30" y="296">Camshaft is to the left of each housing. Helical gears turn the gear cup's straight movement into camshaft rotation. Schematic per Bentley 100 (M52 shown in Bentley; same principle).</text>
+</svg>
+</div>
+<figcaption>Single VANOS: the ECM switches the solenoid, the spool valve sends oil to one side of the gear cup piston, and the gear cup's helical gears advance or retard the intake camshaft.</figcaption>
+</figure>
+
 ## Failure modes
 
 ### Piston seal failure (most common)

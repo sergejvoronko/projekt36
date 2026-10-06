@@ -21,6 +21,11 @@ Check the **structural** areas first: the **sills**, the **jacking points** and 
 
 ---
 
+<figure class="p36-photo">
+<img src="/images/commons/1994-bmw-318i-e36-sedan-2015-05-29-01.webp" alt="1994 BMW E36 318i sedan, front three-quarter view" loading="lazy" decoding="async">
+<figcaption>A 1994 E36 318i sedan, the same body and year as the Projekt 36 car. Sills, wheel arches and door bottoms run along the lower edge.<span class="p36-credit">Photo: OSX, Public domain, via <a href="https://commons.wikimedia.org/wiki/File:1994_BMW_318i_(E36)_sedan_(2015-05-29)_01.jpg" rel="noopener" target="_blank">Wikimedia Commons</a></span></figcaption>
+</figure>
+
 ## Why E36s rust where they do
 
 The E36 was built between 1990 and 1999. Even the youngest examples are now over 26 years old. BMW's rust protection in this era was decent by 1990s standards, factory undercoating, galvanized panels in some areas, cavity wax in some sections. But "decent by 1990s standards" means it's failing by 2026.

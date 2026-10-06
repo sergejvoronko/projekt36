@@ -24,6 +24,11 @@ sources:
 
 ---
 
+<figure class="p36-photo">
+<img src="/images/commons/e36-interior.webp" alt="BMW E36 front interior with leather seats" loading="lazy" decoding="async">
+<figcaption>E36 front seats in leather: the outer bolster of the driver's seat is usually the first to wear.<span class="p36-credit">Photo: Tim Alexander, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener" target="_blank">CC BY-SA 4.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:E36_interior.jpg" rel="noopener" target="_blank">Wikimedia Commons</a></span></figcaption>
+</figure>
+
 ## Common E36 seat problems
 
 - **Collapsed outer bolster** on the driver's seat, from years of getting in and out

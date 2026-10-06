@@ -21,6 +21,11 @@ sources:
 
 ---
 
+<figure class="p36-photo">
+<img src="/images/commons/e36-interior.webp" alt="BMW E36 front interior showing the door panel" loading="lazy" decoding="async">
+<figcaption>An E36 front door panel with its armrest and handle trim.<span class="p36-credit">Photo: Tim Alexander, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener" target="_blank">CC BY-SA 4.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:E36_interior.jpg" rel="noopener" target="_blank">Wikimedia Commons</a></span></figcaption>
+</figure>
+
 ## Why E36 door panels fail
 
 1. **Insert delamination:** the cloth, vinyl or leather insert is bonded over a thin foam layer. The foam breaks down with age into a sticky or powdery layer, and the cover lets go.

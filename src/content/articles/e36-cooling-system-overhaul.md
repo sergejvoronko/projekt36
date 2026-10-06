@@ -55,6 +55,44 @@ Bentley's own maintenance schedule recommends replacing the cooling hoses **ever
 
 ---
 
+<figure class="p36-diagram">
+<div class="p36-diagram-scroll">
+<svg viewBox="0 0 760 330" role="img" aria-labelledby="cl-title cl-desc">
+<title id="cl-title">Coolant flow, cold and warm</title>
+<desc id="cl-desc">The belt-driven coolant pump pushes coolant through the engine to the thermostat. When the engine is cold, the thermostat is closed and coolant bypasses the radiator, returning directly to the pump. When it reaches operating temperature, the thermostat opens and coolant also flows through the radiator. A heater core branch is fed through the heater valve. The six-cylinder has a separate expansion tank.</desc>
+<rect class="d-box d-main" x="40" y="120" width="160" height="80" rx="10"/>
+<text class="d-label" x="120" y="156" text-anchor="middle">Engine</text>
+<text class="d-sub" x="120" y="174" text-anchor="middle">block and head</text>
+<path class="d-vac d-thick" d="M200 160 H290"/>
+<rect class="d-adapter" x="290" y="136" width="100" height="48" rx="8"/>
+<text class="d-on-accent" x="340" y="164" text-anchor="middle">THERMOSTAT</text>
+<path class="d-vac d-thick" d="M390 160 H480"/>
+<text class="d-tag" x="435" y="150" text-anchor="middle">open: warm</text>
+<rect class="d-box" x="480" y="110" width="160" height="100" rx="10"/>
+<text class="d-label" x="560" y="156" text-anchor="middle">Radiator</text>
+<text class="d-sub" x="560" y="174" text-anchor="middle">crossflow</text>
+<path class="d-vac d-thick" d="M560 210 V280 H120"/>
+<rect class="d-box" x="70" y="250" width="100" height="44" rx="8"/>
+<text class="d-label" x="120" y="270" text-anchor="middle">Pump</text>
+<text class="d-sub" x="120" y="285" text-anchor="middle">belt-driven</text>
+<path class="d-vac d-thick" d="M120 250 V200"/>
+<path class="d-oil" d="M340 184 V236 H170"/>
+<text class="d-tag" x="300" y="230" text-anchor="middle">bypass: cold</text>
+<path class="d-vent" d="M160 120 V70 H300"/>
+<rect class="d-box" x="300" y="48" width="150" height="44" rx="8"/>
+<text class="d-label" x="314" y="68">Heater core</text>
+<text class="d-sub" x="314" y="83">via heater valve</text>
+<path class="d-vent" d="M450 70 H700 V300 H170"/>
+<rect class="d-box" x="660" y="120" width="90" height="44" rx="8"/>
+<text class="d-label" x="670" y="140">Expansion</text>
+<text class="d-sub" x="670" y="155">tank (6-cyl)</text>
+<path class="d-mount" d="M640 142 H660"/>
+<text class="d-note" x="30" y="322">Schematic per Bentley 170: shows the flow paths, not the hose routing on the car.</text>
+</svg>
+</div>
+<figcaption>Cold engine: the thermostat is closed and coolant returns straight to the pump. Warm engine: the thermostat opens and coolant also flows through the radiator. The heater core is a separate branch.</figcaption>
+</figure>
+
 ## Key figures (Bentley)
 
 | Item | Value |

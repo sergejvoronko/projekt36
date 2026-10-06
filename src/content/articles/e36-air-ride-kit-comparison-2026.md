@@ -26,6 +26,11 @@ sources:
 
 ---
 
+<figure class="p36-photo">
+<img src="/images/commons/mike-s-e36-323i-trunk.webp" alt="Open boot of a BMW E36" loading="lazy" decoding="async">
+<figcaption>The E36 boot, where an air ride tank and compressor usually go.<span class="p36-credit">Photo: AJ Hill - Blacklight Propaganda Photography from Florida, USA, <a href="https://creativecommons.org/licenses/by-sa/2.0" rel="license noopener" target="_blank">CC BY-SA 2.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Mike%27s_E36_323i_Trunk.jpg" rel="noopener" target="_blank">Wikimedia Commons</a></span></figcaption>
+</figure>
+
 ## How an E36 air system is built
 
 | Component | Job |

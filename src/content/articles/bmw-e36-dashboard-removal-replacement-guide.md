@@ -21,6 +21,11 @@ sources:
 
 ---
 
+<figure class="p36-photo">
+<img src="/images/commons/1995-bmw-318is-1-8-auto-interior.webp" alt="BMW E36 318is dashboard, right-hand drive" loading="lazy" decoding="async">
+<figcaption>The E36 dashboard: centre vents, heating controls and instrument cluster all come out before the dash itself.<span class="p36-credit">Photo: DieselFordMondeo, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener" target="_blank">CC BY-SA 4.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:1995_BMW_318is_1.8_Auto_(Interior).jpg" rel="noopener" target="_blank">Wikimedia Commons</a></span></figcaption>
+</figure>
+
 ## Safety: airbags
 
 - **Disconnect the negative battery cable and insulate the terminal** before starting.

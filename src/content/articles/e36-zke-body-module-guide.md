@@ -49,6 +49,33 @@ When you turn the key in a front door lock, **microswitches** in the lock cylind
 
 **ZVM (three microswitches per front door):** about 45° locks, about 90° **double locks**, and about 45° the other way unlocks.
 
+<figure class="p36-diagram">
+<div class="p36-diagram-scroll">
+<svg viewBox="0 0 760 270" role="img" aria-labelledby="zk-title zk-desc">
+<title id="zk-title">ZKE IV door lock key positions</title>
+<desc id="zk-desc">Driver's door lock cylinder, key vertical at position 0. Turned about 45 degrees one way, position 1: locks and arms the alarm; holding the key there closes open windows and the sunroof. Turned about 45 degrees the other way, position 2: unlocks and disarms the alarm.</desc>
+<circle class="d-box d-main" cx="380" cy="150" r="70"/>
+<path class="d-vac d-thick" d="M380 150 V82"/>
+<text class="d-size" x="380" y="72" text-anchor="middle">0</text>
+<path class="d-vac" d="M380 150 L334 104" stroke-dasharray="6 5"/>
+<path class="d-vac" d="M380 150 L426 104" stroke-dasharray="6 5"/>
+<text class="d-size" x="318" y="96" text-anchor="middle">1</text>
+<text class="d-size" x="442" y="96" text-anchor="middle">2</text>
+<circle class="d-port" cx="380" cy="150" r="7"/>
+<rect class="d-box" x="40" y="70" width="230" height="98" rx="8"/>
+<text class="d-label" x="54" y="92">Position 1 (≈45°)</text>
+<text class="d-sub" x="54" y="112">locks, arms the alarm</text>
+<text class="d-sub" x="54" y="130">hold the key here: windows</text>
+<text class="d-sub" x="54" y="146">and sunroof close</text>
+<rect class="d-box" x="490" y="70" width="230" height="64" rx="8"/>
+<text class="d-label" x="504" y="92">Position 2 (≈45°)</text>
+<text class="d-sub" x="504" y="112">unlocks, disarms the alarm</text>
+<text class="d-note" x="40" y="250">Which way is 1 and which is 2 depends on the door; check on your car. Positions per Bentley 515, Fig. 20.</text>
+</svg>
+</div>
+<figcaption>ZKE IV key positions in the front door locks. ZVM cars (1992–93) have a third switch position at about 90° for double locking.</figcaption>
+</figure>
+
 **Double locking:** Bentley warns not to double lock with passengers in the car unless the master key is at hand: the doors then can't be opened from inside or outside without it. With a flat battery the car can still be locked and unlocked with the key.
 
 ---
