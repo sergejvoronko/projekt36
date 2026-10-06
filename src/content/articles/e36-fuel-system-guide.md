@@ -116,7 +116,7 @@ Fuel will come out when the filter is removed: no smoking or heaters nearby, and
 
 | Symptom | Likely cause | First check |
 |---|---|---|
-| No start, pump silent at ignition on | Fuel pump relay, fuse or pump | Bridge relay 30–87 (fused) and listen; check voltage at the pump |
+| No start, pump silent **while cranking** | Fuel pump relay, fuse, pump, or no crankshaft signal to the DME | Bridge relay 30–87 (fused) and listen; check voltage at the pump. On the M50's Bosch DMEs the pump runs only while cranking or running, so silence with the ignition merely on is normal |
 | Hard start when hot | Pressure leaking away after shut-off | Residual pressure test |
 | Hesitation or leanness at high load | Weak pump or blocked filter | System pressure under load; replace the filter |
 | Pressure doesn't change with the vacuum hose | Regulator or its vacuum hose | Regulator response test |
