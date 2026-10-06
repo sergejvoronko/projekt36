@@ -1,185 +1,50 @@
 ---
-title: "BMW E36 LCM, Light Control Module Explained"
-description: "What the LCM does, which E36s have it, how it controls every light circuit, common failure modes, and how to code a replacement for your exact option list."
+title: "BMW E36 Light Check Module (LKM) Explained"
+description: "What the E36 light check module does, how it detects failed bulbs, why LED conversions trigger warnings, and how to diagnose lighting faults. Not the same as the E46's LCM."
 pillar: reference
-keywords: "bmw e36 lcm, e36 light control module, e36 lighting module, lcm failure, e36 headlights"
+keywords: "bmw e36 lcm, e36 light check module, e36 lkm, e36 bulb failure warning, e36 led headlights"
 date: "2026-04-13"
 hero: "lcm.webp"
+reviewed: "2026-10-06"
+sources:
+  - title: "Bentley Publishers: BMW 3 Series (E36) Service Manual 1992–1998, 610 Electrical Component Locations, 630 Lights"
+  - title: "ShiftBMW: E36 modification of the light control module for LED headlights"
+    url: "https://www.shiftbmw.com/model/e36/e36-modification-of-light-control-module-for-led-headlights/"
 ---
 
 ## TL;DR
 
-The LCM (Lichtsteuermodul, Light Control Module) is the brain behind every exterior light on later E36s. It replaced simple relay-based lighting with a module that monitors bulb current draw, manages the lighting sequence, and stores fault codes for failed bulbs. When the LCM fails, you lose multiple lights simultaneously. When it's the wrong specification, your lights may behave incorrectly. Coding is required after replacement.
+- The E36's **light check module (LKM, *Lichtkontrollmodul*)** watches the lighting circuits and reports failed bulbs to the instrument cluster or the check control display.
+- It is **not** the E46/E39-style **LCM** that switches every light with transistors and is coded with NCS Expert. Much of what you read online about "the LCM" (xenon coding, per-output transistors, option coding) belongs to those later cars.
+- The module checks for a **minimum current draw** from each monitored bulb. That's why **LED bulbs** and failed bulbs both trigger a warning.
 
 ---
 
-## Which E36s have the LCM
+## What it does
 
-Not all E36s have an LCM. Earlier cars used conventional relay-based lighting:
+The headlight switch and stalks switch the lights through the normal relays and fuses. The light check module sits in those circuits and monitors whether the bulbs draw current when they're switched on. If a monitored bulb draws too little, the module flags it, and the warning appears in the instrument cluster, or as a text message on cars with **check control**.
 
-| Production period | Lighting control |
-|---|---|
-| 1990–1994 (early E36) | Direct relay control, no LCM |
-| 1994–1996 (transition) | LCM introduced progressively by market |
-| 1996–1999 (post-facelift) | LCM standard on most markets |
-
-The easiest way to confirm: look in the fuse box area for a sealed module with a large multi-pin connector, or check INPA, if LCM appears as a module in the vehicle list, it's present.
-
-Schema 4 of the ETM (Exterior Lighting) shows whether your car routes lighting through an LCM or directly through relays.
+Bentley's component location table places the **check control module** (where fitted) **below the left side of the dash**. Owners describe the light check module itself as a small black box mounted up under the driver's side of the dash, hard to reach. Use the electrical troubleshooting manual (ETM) for your car's build date to confirm its position and connector.
 
 ---
 
-## What the LCM controls
+## Why LED bulbs cause warnings
 
-The LCM handles every exterior light output:
+An owner who modified the module for LED headlights found two separate problems:
 
-- Dipped (low) beams, left and right independently
-- Main (high) beams, left and right independently
-- Parking/side lights, front and rear
-- Tail lights
-- Front fog lights (if equipped)
-- Rear fog light
-- Turn signals, front, rear, side repeaters
-- Number plate lights
-- Trailer socket (if equipped)
+1. **Current too low:** LEDs draw less current than the halogen bulb, below the module's "good" range.
+2. **Too slow to start:** an LED's driver electronics need a moment to power up, while the module checks for current almost immediately.
 
-For each output, the LCM:
-1. Receives a **command** from the light switch or indicator stalk
-2. **Switches the output** via an internal transistor or relay
-3. **Monitors current draw** on the circuit
-4. **Stores a fault code** if current is abnormal (too low = bulb blown, too high = short circuit)
-
-This is why INPA can tell you "left front turn signal open circuit" even before you check, the LCM measured the fault and logged it.
+Solutions are a correctly sized **load resistor** across the LED (which gets hot and needs mounting on metal), LED bulbs designed to be "CANbus" or warning-free for older BMWs, or a modification of the module itself. Before fitting LED headlight bulbs on the road, check whether they're legal in your country: in Slovakia, as in much of the EU, retrofitted LED bulbs in halogen headlights are often not type-approved.
 
 ---
 
-## LCM variants and option coding
+## Diagnosing lighting faults
 
-The LCM isn't a single part number, different specifications exist for different option combinations:
+1. **Check the bulb first**, then its socket for corrosion or burnt contacts.
+2. **Check the fuse and relay.** The fuse and relay positions are in the [fuse and relay reference](/guides/e36-fuse-relay-reference).
+3. **Check the ground.** Lighting faults on an old car are often a corroded ground point. See the [ground distribution guide](/guides/e36-ground-distribution-guide).
+4. **Measure at the bulb** with the light switched on: battery voltage at the supply, good ground on the other side.
+5. **If one warning won't go away** with a good bulb and wiring, suspect the module. A common fault on these modules is **cracked solder joints**, often around the relays soldered to the circuit board. A careful resolder can fix it; otherwise, replace the module with one listed for your car on [RealOEM](https://www.realoem.com/).
 
-| Option | Effect on LCM |
-|---|---|
-| Xenon headlights | Different control circuit; LCM must be coded for Xenon |
-| Bi-xenon / AFS | Additional output for leveling motor |
-| Fog lights | LCM must know fogs are fitted to activate the output |
-| Trailer tow | LCM includes trailer turn signal logic (load detection) |
-| US spec (DRL) | Daytime running lights logic differs from European |
-
-A replacement LCM must either:
-1. Have the same option specification as the original, or
-2. Be recoded with NCS Expert to match your car's options
-
-**Running a Xenon-coded LCM with halogen headlights** (or vice versa) will result in lighting faults, incorrect current monitoring thresholds, and permanent warning lights.
-
----
-
-## How the LCM monitors bulbs
-
-Each output circuit has a measured **expected current range**. For a standard halogen H7 headlight (55W at 12V = ~4.6A), the LCM expects roughly 4–5A. If it measures less than ~2A, it flags an open circuit (blown bulb). If it measures more than 7–8A, it flags a short.
-
-**This makes the LCM sensitive to substitutions:**
-
-- Installing LED bulbs in LCM-controlled circuits without a load resistor will trigger permanent "bulb failure" faults, LEDs draw a fraction of the current of halogens.
-- Installing high-wattage aftermarket bulbs (80W vs stock 55W) may trigger overcurrent protection and blow the LCM's internal transistor for that circuit.
-- Poor ground connections at the headlight housing change the apparent current draw and cause false fault codes.
-
----
-
-## Common LCM failures
-
-### 1. internal transistor failure (most common)
-
-The LCM switches each output using high-current transistors (or MOSFETs). These fail with age and thermal stress. When one fails:
-- That output circuit stops working entirely
-- INPA shows a continuous fault for that circuit
-- No other symptoms
-
-A failed transistor for the left headlight means only the left headlight is dead. The right works normally.
-
-**Fix:** Replace the LCM. In rare cases, electronics specialists can reflash or replace the transistor on the PCB, but LCM units are inexpensive enough (€30–80 used) that replacement is usually more sensible.
-
-### 2. corrosion of the connector
-
-The LCM sits in the engine bay and is exposed to moisture. The main connector corrodes, especially the ground pins and output pins. This causes intermittent lighting faults that come and go with temperature.
-
-**Fix:** Remove the connector, clean all pins with electrical contact cleaner, apply dielectric grease, reseat.
-
-### 3. coding mismatch after replacement
-
-A replacement LCM from a different-spec car (different market, different options) will have different coding. The old coding doesn't transfer automatically. You must use NCS Expert to write the correct coding for your car.
-
-**Symptom of mismatch:** Fog lights that don't activate, DRL behaviour incorrect, turn signal timing wrong, permanent fault codes for equipment that isn't fitted (or should be).
-
----
-
-## Replacing the LCM
-
-**Location:** Engine bay, driver's side. On the E36 it's typically mounted near the fuse box or on the inner wing, with a large waterproof connector.
-
-### Procedure
-
-1. Disconnect battery negative
-2. Locate LCM, trace the main lighting wiring to the module
-3. Release connector lock and unplug the large connector
-4. Remove mounting bolts (usually 2–3)
-5. Install replacement
-6. Connect battery
-7. **Code the replacement** before testing
-
-### Coding with ncs expert
-
-1. Connect K-DCAN cable, open NCS Expert
-2. Select vehicle: E36, select LCM from module list
-3. **Read current coding first**: save the .NCS file as a backup
-4. Edit the coding to match your car's options:
-   - `XENON` or `HALOGEN` for headlight type
-   - `NEBEL_VOR` for front fog (yes/no)
-   - `NEBEL_HINT` for rear fog (yes/no)
-   - `AHK` for trailer hitch (yes/no)
-   - Check market-specific options (US/EUR)
-5. Write the coding back to the LCM
-6. Test all lights
-
----
-
-## LCM and aftermarket lights
-
-If you're retrofitting non-standard lights (aftermarket projectors, Angel Eyes, LED upgrades), the LCM interaction changes:
-
-**Angel Eye / CCFL rings (halogen cars):** Connect to the parking light circuit. The LCM monitors current on this circuit, if the CCFL draws less current than a standard parking bulb, add a parallel resistor to maintain the expected load.
-
-**LED headlight conversions:** Require either:
-- A load resistor on each output to simulate halogen current draw
-- An LCM coding change to reduce the current threshold (not always possible)
-- An LCM bypass/delete (removes monitoring entirely, not recommended for road use)
-
-**Projector retrofits into original housings:** The LCM doesn't care what's inside the housing as long as current draw is within expected range. H7 projector with H7 bulb = same current = no LCM issues.
-
----
-
-## Reading LCM fault codes
-
-With INPA → LCM:
-
-| INPA Fault | Meaning | First check |
-|---|---|---|
-| Low beam left open circuit | Left low beam bulb blown or disconnected | Bulb, bulb holder, connector at headlight |
-| Low beam right short circuit | Overcurrent on right low beam | Wiring chafing, water in headlight housing |
-| Turn signal front right open | Right front turn bulb blown | Bulb, parking light/turn signal combination bulb |
-| Tail light left open | Left tail light bulb blown | Bulb in tail cluster |
-| Number plate light open | Either number plate bulb blown | Bulb(s), check both if two-bulb setup |
-
-**The LCM stores faults permanently until cleared.** A fault from a bulb that was replaced a week ago may still show in INPA until you clear it. Always clear faults after completing repairs and recheck.
-
----
-
-## Quick troubleshooting table
-
-| Symptom | Likely cause |
-|---|---|
-| One specific light circuit dead, all others work | LCM transistor failure for that circuit |
-| Multiple unrelated lights intermittent | LCM connector corrosion or ground fault at G200 |
-| Lights work but INPA shows bulb faults | LED conversion without load resistors |
-| All lights dead | LCM fuse blown, LCM power supply fault, or battery issue |
-| Turn signals work but LCM logs fault | Incorrect bulb wattage in one socket |
-| Lights come on with wrong combination | Coding mismatch on replacement LCM |
+To follow any circuit through the module, see [how to read the ETM](/guides/e36-how-to-read-etm).
