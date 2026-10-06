@@ -29,6 +29,38 @@ sources:
 
 ---
 
+<figure class="p36-diagram">
+<div class="p36-diagram-scroll">
+<svg viewBox="0 0 760 330" role="img" aria-labelledby="al-title al-desc">
+<title id="al-title">Camber, caster and toe</title>
+<desc id="al-desc">Camber, seen from the front: negative camber means the top of the wheel leans in towards the car. Caster, seen from the side: positive caster means the steering axis leans back at the top. Toe, seen from above: toe-in means the fronts of the wheels point slightly towards each other.</desc>
+<text class="d-title" x="125" y="30" text-anchor="middle">Camber</text>
+<text class="d-tag" x="125" y="48" text-anchor="middle">front view</text>
+<path class="d-mount" d="M125 70 V270" stroke-dasharray="4 4"/>
+<rect class="d-box d-main" x="105" y="80" width="40" height="180" rx="10" transform="rotate(8 125 170)"/>
+<text class="d-sub" x="40" y="296">negative: top leans in</text>
+<text class="d-note" x="40" y="312">car centre is to the right →</text>
+<text class="d-title" x="380" y="30" text-anchor="middle">Caster</text>
+<text class="d-tag" x="380" y="48" text-anchor="middle">side view</text>
+<circle class="d-box d-main" cx="380" cy="200" r="70"/>
+<path class="d-vac d-thick" d="M410 70 L368 280"/>
+<path class="d-mount" d="M380 70 V280" stroke-dasharray="4 4"/>
+<text class="d-sub" x="300" y="296">positive: steering axis</text>
+<text class="d-sub" x="300" y="312">leans back at the top</text>
+<text class="d-note" x="440" y="90">← front of car</text>
+<text class="d-title" x="630" y="30" text-anchor="middle">Toe</text>
+<text class="d-tag" x="630" y="48" text-anchor="middle">top view</text>
+<rect class="d-box d-main" x="560" y="90" width="26" height="110" rx="6" transform="rotate(6 573 145)"/>
+<rect class="d-box d-main" x="674" y="90" width="26" height="110" rx="6" transform="rotate(-6 687 145)"/>
+<path class="d-mount" d="M573 80 V210 M687 80 V210" stroke-dasharray="4 4"/>
+<text class="d-note" x="630" y="76" text-anchor="middle">front ↑</text>
+<text class="d-sub" x="560" y="296">toe-in: fronts point</text>
+<text class="d-sub" x="560" y="312">slightly inwards</text>
+</svg>
+</div>
+<figcaption>What the three alignment angles describe. Angles exaggerated for clarity; the factory values are in the tables below.</figcaption>
+</figure>
+
 ## Factory alignment specifications (Bentley)
 
 ### Front

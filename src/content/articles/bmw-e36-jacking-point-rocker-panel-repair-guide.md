@@ -30,6 +30,31 @@ Each point has a **plastic jacking pad** fitted into the sill. The pads fall out
 
 ---
 
+<figure class="p36-diagram">
+<div class="p36-diagram-scroll">
+<svg viewBox="0 0 760 300" role="img" aria-labelledby="jp-title jp-desc">
+<title id="jp-title">E36 jacking points</title>
+<desc id="jp-desc">Plan view of the car with the front at the left. There are four jacking points on the sills: on each side just behind the front wheel and just in front of the rear wheel.</desc>
+<rect class="d-box d-main" x="90" y="70" width="560" height="160" rx="60"/>
+<rect class="d-box" x="150" y="48" width="90" height="28" rx="8"/>
+<rect class="d-box" x="150" y="224" width="90" height="28" rx="8"/>
+<rect class="d-box" x="500" y="48" width="90" height="28" rx="8"/>
+<rect class="d-box" x="500" y="224" width="90" height="28" rx="8"/>
+<rect class="d-adapter" x="258" y="64" width="22" height="14" rx="3"/>
+<rect class="d-adapter" x="258" y="222" width="22" height="14" rx="3"/>
+<rect class="d-adapter" x="460" y="64" width="22" height="14" rx="3"/>
+<rect class="d-adapter" x="460" y="222" width="22" height="14" rx="3"/>
+<text class="d-sub" x="269" y="40" text-anchor="middle">behind front wheel</text>
+<text class="d-sub" x="471" y="40" text-anchor="middle">in front of rear wheel</text>
+<text class="d-tag" x="60" y="155" text-anchor="middle">front</text>
+<text class="d-label" x="370" y="155" text-anchor="middle">E36, seen from above</text>
+<text class="d-note" x="40" y="276">Positions per Bentley 010.</text>
+<text class="d-note" x="40" y="292">Put a liner (wood or rubber) between a floor jack or lift pad and the car.</text>
+</svg>
+</div>
+<figcaption>The four jacking points: on each side, just behind the front wheel and just in front of the rear wheel. Schematic, not to scale.</figcaption>
+</figure>
+
 ## Parts and materials
 
 - **Repair panels:** outer sill sections and jacking-point repair sections are sold by body-panel makers. Expect to trim them to fit.

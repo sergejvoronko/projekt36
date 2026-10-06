@@ -24,6 +24,11 @@ The head gasket rarely fails on its own; it fails after overheating. Prevent the
 
 ---
 
+<figure class="p36-photo">
+<img src="/images/commons/bmw-m50-1995.webp" alt="BMW M50 straight-six installed in an engine bay" loading="lazy" decoding="async">
+<figcaption>An M50 straight-six in place, with its long-runner plastic intake manifold.<span class="p36-credit">Photo: C.Bakker, Public domain, via <a href="https://commons.wikimedia.org/wiki/File:BMW_M50_1995.JPG" rel="noopener" target="_blank">Wikimedia Commons</a></span></figcaption>
+</figure>
+
 ## 1. Cooling system
 
 **What fails:** the plastic expansion tank and radiator tanks crack, the thermostat sticks, hoses perish. Old water pumps with plastic impellers are a known weak point. Bentley recommends replacing the cooling hoses **every four years** as a preventive measure.

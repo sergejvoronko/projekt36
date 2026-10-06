@@ -68,6 +68,48 @@ These are the standard German (DIN) terminal designations: you'll see "Kl. 30", 
 
 ---
 
+<figure class="p36-diagram">
+<div class="p36-diagram-scroll">
+<svg viewBox="0 0 760 300" role="img" aria-labelledby="ci-title ci-desc">
+<title id="ci-title">A switched circuit and a relay with their terminal numbers</title>
+<desc id="ci-desc">Left: battery positive, terminal 30, feeds a fuse, a switch and a load, which returns to ground, terminal 31. Right: a relay. The coil sits between terminal 86, power in, and 85, ground side. When the coil is energised, the contact connects terminal 30 to 87, which feeds the load.</desc>
+<text class="d-title" x="30" y="32">Simple circuit</text>
+<rect class="d-box" x="30" y="60" width="90" height="44" rx="8"/>
+<text class="d-label" x="44" y="80">Battery +</text>
+<text class="d-size" x="44" y="96">30</text>
+<path class="d-vac" d="M120 82 H160"/>
+<rect class="d-box" x="160" y="66" width="60" height="32" rx="6"/>
+<text class="d-sub" x="190" y="87" text-anchor="middle">fuse</text>
+<path class="d-vac" d="M220 82 H262"/>
+<path class="d-vac" d="M262 82 L296 66"/>
+<path class="d-vac" d="M300 82 H340"/>
+<text class="d-sub" x="281" y="112" text-anchor="middle">switch</text>
+<circle class="d-box d-main" cx="372" cy="82" r="28"/>
+<text class="d-sub" x="372" y="86" text-anchor="middle">load</text>
+<path class="d-vac" d="M372 110 V200"/>
+<path class="d-mount" d="M352 200 H392 M358 208 H386 M364 216 H380"/>
+<text class="d-label" x="400" y="210">ground</text>
+<text class="d-size" x="400" y="226">31</text>
+<text class="d-title" x="480" y="32">Relay</text>
+<rect class="d-box d-main" x="480" y="50" width="250" height="210" rx="12"/>
+<text class="d-sub" x="540" y="78" text-anchor="middle">power in (+)</text>
+<text class="d-size" x="540" y="96" text-anchor="middle">86</text>
+<rect class="d-box" x="510" y="106" width="60" height="76" rx="6"/>
+<text class="d-sub" x="540" y="148" text-anchor="middle">coil</text>
+<text class="d-size" x="540" y="204" text-anchor="middle">85</text>
+<text class="d-sub" x="540" y="222" text-anchor="middle">ground side</text>
+<text class="d-sub" x="660" y="78" text-anchor="middle">supply</text>
+<text class="d-size" x="660" y="96" text-anchor="middle">30</text>
+<path class="d-vac" d="M660 106 V128 L690 156"/>
+<path class="d-vac" d="M694 162 V184"/>
+<text class="d-size" x="694" y="204" text-anchor="middle">87</text>
+<text class="d-sub" x="694" y="222" text-anchor="middle">to load</text>
+<text class="d-note" x="30" y="284">Terminal numbers per Bentley 600, Table a (DIN). 15 is the ignition-switched feed (RUN and START).</text>
+</svg>
+</div>
+<figcaption>How terminal numbers appear in a circuit: 30 always live, through fuse, switch and load to 31 ground. A relay's coil (86, 85) switches the heavy contact from 30 to 87.</figcaption>
+</figure>
+
 ## Numbers on the diagram
 
 Components, connectors, fuses and **ground points** each have their own identification number, which corresponds to that part throughout the diagrams. Ground points are numbered **G100, G101, G102…**, and their locations are listed in the [ground distribution guide](/guides/e36-ground-distribution-guide). Fuses are numbered as in the [fuse and relay reference](/guides/e36-fuse-relay-reference).

@@ -28,6 +28,11 @@ The E36 328i and 323i with the M52 (up to the 1998 update) use **single VANOS**:
 | **Time:** | A long day for a first-time DIY. |
 | **Difficulty:** | 3/5, but only with the BMW locking tools or exact equivalents. |
 
+<figure class="p36-photo">
+<img src="/images/commons/m52-single-vanos.webp" alt="BMW M52 single-VANOS straight-six in an engine bay" loading="lazy" decoding="async">
+<figcaption>An M52 straight-six. Single VANOS adjusts the intake camshaft only.<span class="p36-credit">Photo: Avolutions, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener" target="_blank">CC BY-SA 4.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:M52_single_vanos.jpg" rel="noopener" target="_blank">Wikimedia Commons</a></span></figcaption>
+</figure>
+
 ## Symptoms
 
 The decline is gradual, so it is easy to put down to age:

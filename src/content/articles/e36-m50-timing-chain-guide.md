@@ -31,6 +31,42 @@ Unlike the four-cylinder M42/M44, which use one double-row chain, the six-cylind
 
 Each chain has its own **hydraulic tensioner**. The chains are lubricated by engine oil and need no routine maintenance.
 
+<figure class="p36-diagram">
+<div class="p36-diagram-scroll">
+<svg viewBox="0 0 700 380" role="img" aria-labelledby="tc-title tc-desc">
+<title id="tc-title">M50 timing drive: two chains, two tensioners</title>
+<desc id="tc-desc">Schematic. The primary chain runs from the crankshaft sprocket to the exhaust camshaft sprocket and has its own hydraulic tensioner. The secondary chain runs from the exhaust camshaft to the intake camshaft and has its own tensioner. On VANOS engines the VANOS unit acts on the intake camshaft.</desc>
+<circle class="d-box d-main" cx="200" cy="80" r="44"/>
+<text class="d-label" x="200" y="76" text-anchor="middle">Exhaust</text>
+<text class="d-sub" x="200" y="93" text-anchor="middle">camshaft</text>
+<circle class="d-box d-main" cx="500" cy="80" r="44"/>
+<text class="d-label" x="500" y="76" text-anchor="middle">Intake</text>
+<text class="d-sub" x="500" y="93" text-anchor="middle">camshaft</text>
+<circle class="d-box d-main" cx="200" cy="300" r="34"/>
+<text class="d-label" x="200" y="297" text-anchor="middle">Crank</text>
+<text class="d-sub" x="200" y="312" text-anchor="middle">shaft</text>
+<path class="d-vac d-thick" d="M156 84 L166 300 M244 84 L234 300"/>
+<text class="d-tag" x="120" y="200" text-anchor="end">primary</text>
+<text class="d-tag" x="120" y="215" text-anchor="end">chain</text>
+<path class="d-vac" d="M200 36 H500 M200 124 H500"/>
+<text class="d-tag" x="350" y="28" text-anchor="middle">secondary chain</text>
+<rect class="d-adapter" x="256" y="176" width="22" height="58" rx="4"/>
+<text class="d-label" x="290" y="200">Primary tensioner</text>
+<text class="d-sub" x="290" y="216">hydraulic, engine oil pressure</text>
+<rect class="d-adapter" x="336" y="132" width="40" height="18" rx="4"/>
+<text class="d-label" x="388" y="146">Secondary tensioner</text>
+<text class="d-sub" x="388" y="162">hydraulic</text>
+<rect class="d-box" x="520" y="180" width="170" height="58" rx="8"/>
+<text class="d-label" x="534" y="202">VANOS engines</text>
+<text class="d-sub" x="534" y="220">unit varies intake</text>
+<text class="d-sub" x="534" y="233">cam timing</text>
+<path class="d-mount" d="M520 120 L560 180"/>
+<text class="d-note" x="20" y="368">Schematic only: shows how the drive is connected, not where parts sit on the engine.</text>
+</svg>
+</div>
+<figcaption>The six-cylinder M50 uses two chains: crankshaft to exhaust camshaft, then exhaust camshaft to intake camshaft, each with its own hydraulic tensioner (Bentley, 117).</figcaption>
+</figure>
+
 There are two generations to know about:
 
 - **Pre-VANOS M50** (engines built up to August 1992): no variable valve timing.

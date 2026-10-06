@@ -24,6 +24,11 @@ The short version, from owners who have done the four-cylinder-to-M50 swap: it's
 
 ---
 
+<figure class="p36-photo">
+<img src="/images/commons/bmw-316-e36-engine-bay-3.webp" alt="Four-cylinder engine bay of an E36 316i" loading="lazy" decoding="async">
+<figcaption>The four-cylinder engine bay of an E36 316i: the starting point for an M50 swap.<span class="p36-credit">Photo: Ultra Magnus, <a href="https://creativecommons.org/licenses/by-sa/3.0" rel="license noopener" target="_blank">CC BY-SA 3.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Bmw_316_e36_engine_bay-3.jpg" rel="noopener" target="_blank">Wikimedia Commons</a></span></figcaption>
+</figure>
+
 ## Decisions to make first
 
 ### Why the M50 non-VANOS?

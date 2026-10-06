@@ -27,6 +27,11 @@ The North American E36 M3 engines, the **S50B30US** and **S52B32**, are close re
 
 ---
 
+<figure class="p36-photo">
+<img src="/images/commons/bmw-s50b32-vanos.webp" alt="BMW S50B32 engine with its double-VANOS unit at the front of the cylinder head" loading="lazy" decoding="async">
+<figcaption>The S50B32 from the later E36 M3, with its double-VANOS unit on the front of the cylinder head.<span class="p36-credit">Photo: Buschtrommler, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener" target="_blank">CC BY-SA 4.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:BMW_S50B32_Vanos.jpg" rel="noopener" target="_blank">Wikimedia Commons</a></span></figcaption>
+</figure>
+
 ## The engines
 
 | | S50B30US | S52B32 |

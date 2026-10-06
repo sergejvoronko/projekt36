@@ -48,6 +48,32 @@ Decouples the mass barrier from the metal, stops trim rattling against panels an
 
 ---
 
+<figure class="p36-diagram">
+<div class="p36-diagram-scroll">
+<svg viewBox="0 0 760 280" role="img" aria-labelledby="sd-title sd-desc">
+<title id="sd-title">Sound deadening layers on the floor</title>
+<desc id="sd-desc">Cross-section from the bottom up: the steel floor panel; damping mat patches covering part of the panel; a continuous layer of closed-cell foam; a continuous mass barrier; then the carpet.</desc>
+<rect class="d-box" x="40" y="66" width="470" height="26" rx="4"/>
+<text class="d-label" x="530" y="84">Carpet</text>
+<rect class="d-adapter" x="40" y="104" width="470" height="22" rx="4"/>
+<text class="d-label" x="530" y="114">Mass barrier (MLV)</text>
+<text class="d-sub" x="530" y="129">continuous, no gaps</text>
+<rect class="d-box d-main" x="40" y="138" width="470" height="34" rx="4"/>
+<text class="d-label" x="530" y="153">Closed-cell foam</text>
+<text class="d-sub" x="530" y="168">decouples, full layer</text>
+<rect class="d-box" x="110" y="184" width="150" height="12" rx="3" style="fill:var(--text-mid)"/>
+<rect class="d-box" x="300" y="184" width="150" height="12" rx="3" style="fill:var(--text-mid)"/>
+<text class="d-label" x="530" y="192">Damping mat (CLD)</text>
+<text class="d-sub" x="530" y="207">patches, centre of panels</text>
+<rect class="d-box d-yblock" x="40" y="198" width="470" height="14" rx="2"/>
+<text class="d-label" x="530" y="232">Steel floor</text>
+<path class="d-mount" d="M522 228 H514 V212"/>
+<text class="d-note" x="40" y="262">Layers drawn apart for clarity; in the car each layer sits directly on the one below. Not to scale.</text>
+</svg>
+</div>
+<figcaption>The three materials do different jobs, so they're applied differently: damping mats as patches, foam and mass barrier as continuous layers.</figcaption>
+</figure>
+
 ## Where to put what in an E36 sedan
 
 | Area | Damping mat | Foam | Mass barrier |
