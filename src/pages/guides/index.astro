@@ -60,6 +60,14 @@ const sbId = 'sb-guides';
   <!-- ═══ MAIN ═══ -->
   <main class="guides-main">
 
+    <div class="guide-search" role="search">
+      <label for="guide-q" class="sr-only">Search guides</label>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input id="guide-q" type="search" placeholder="Search guides: vanos, rust, m50, torque…" autocomplete="off" spellcheck="false" />
+      <span class="guide-search-count" id="guide-count" aria-live="polite"></span>
+    </div>
+    <p class="guide-search-empty" id="guide-empty" hidden>No guides match that search.</p>
+
     <!-- Schemas banner -->
     <a href="/schemas/e36-wiring.html" target="_blank" class="schemas-banner">
       <div class="schemas-banner-inner">
@@ -81,7 +89,8 @@ const sbId = 'sb-guides';
         </div>
         <div class="articles-list">
           {byPillar[p.key].map(a => (
-            <a href={`/guides/${a.id}`} class="article-row">
+            <a href={`/guides/${a.id}`} class="article-row"
+               data-search={`${a.data.title} ${a.data.description} ${a.data.keywords ?? ''}`.toLowerCase()}>
               <div class="article-info">
                 <h3 class="article-title">{a.data.title}</h3>
                 <p class="article-desc">{a.data.description}</p>
@@ -157,7 +166,68 @@ const sbId = 'sb-guides';
   });
 </script>
 
+<script>
+  const q = document.getElementById('guide-q') as HTMLInputElement | null;
+  const count = document.getElementById('guide-count')!;
+  const empty = document.getElementById('guide-empty')!;
+  const rows = Array.from(document.querySelectorAll<HTMLElement>('.article-row[data-search]'));
+  const sections = Array.from(document.querySelectorAll<HTMLElement>('.pillar-section'));
+  const banner = document.querySelector<HTMLElement>('.schemas-banner');
+
+  const apply = () => {
+    const terms = q!.value.toLowerCase().split(/\s+/).filter(Boolean);
+    let shown = 0;
+    for (const r of rows) {
+      const hit = terms.every(t => r.dataset.search!.includes(t));
+      r.hidden = !hit;
+      if (hit) shown++;
+    }
+    for (const s of sections) s.hidden = !s.querySelector('.article-row:not([hidden])');
+    if (banner) banner.hidden = terms.length > 0;
+    count.textContent = terms.length ? `${shown} of ${rows.length}` : '';
+    empty.hidden = shown > 0;
+    const url = new URL(location.href);
+    if (terms.length) url.searchParams.set('q', q!.value); else url.searchParams.delete('q');
+    history.replaceState(null, '', url);
+  };
+
+  if (q) {
+    q.value = new URLSearchParams(location.search).get('q') ?? '';
+    q.addEventListener('input', apply);
+    if (q.value) apply();
+  }
+</script>
+
 <style>
+  /* ── SEARCH ── */
+  .guide-search {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    background: var(--bg2);
+    border: 1px solid var(--border-mid);
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-dim);
+    transition: border-color 0.15s;
+  }
+  .guide-search:focus-within { border-color: var(--accent); color: var(--accent); }
+  .guide-search input {
+    flex: 1;
+    min-width: 0;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0.8rem 0;
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 1rem;
+  }
+  .guide-search input::placeholder { color: var(--text-dim); }
+  .guide-search-count { font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-mid); white-space: nowrap; }
+  .guide-search-empty { color: var(--text-mid); margin-bottom: 1.5rem; }
+  .article-row[hidden], .pillar-section[hidden], .schemas-banner[hidden] { display: none; }
+
   /* ── LAYOUT ── */
   .guides-wrap {
     max-width: var(--wide-w);
