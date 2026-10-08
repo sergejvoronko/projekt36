@@ -190,22 +190,22 @@ const appLd = {
 <style>
   .tool-page { max-width: var(--wide-w); margin: 0 auto; padding: 2rem 1.5rem 5rem; }
 
-  .breadcrumb { font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-dim); display: flex; gap: 0.4rem; align-items: center; margin-bottom: 1.5rem; }
+  .breadcrumb { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-dim); display: flex; gap: 0.4rem; align-items: center; margin-bottom: 1.5rem; }
   .breadcrumb a { color: var(--text-dim); transition: color 0.15s; }
   .breadcrumb a:hover { color: var(--accent); }
   .breadcrumb .sep { color: var(--border-mid); }
 
   .tool-header { margin-bottom: 1.5rem; }
-  .tool-badge { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.15em 0.55em; border: 1px solid; display: inline-block; margin-bottom: 0.75rem; }
+  .tool-badge { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.15em 0.55em; border: 1px solid; display: inline-block; margin-bottom: 0.75rem; }
   .badge-susp { color: #5cb85c; border-color: rgba(92,184,92,0.35); background: rgba(92,184,92,0.06); }
   h1 { font-family: var(--font-display); font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 700; margin-bottom: 0.5rem; }
   .tool-desc { color: var(--text-mid); font-size: 0.95rem; line-height: 1.65; max-width: 58ch; }
-  .tool-print-btn { font-family: var(--font-mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); border: 1px solid var(--border); background: transparent; padding: 0.35em 0.9em; cursor: pointer; margin-top: 1rem; display: inline-block; transition: color 0.15s, border-color 0.15s; }
+  .tool-print-btn { font-family: var(--font-mono); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); border: 1px solid var(--border); background: transparent; padding: 0.35em 0.9em; cursor: pointer; margin-top: 1rem; display: inline-block; transition: color 0.15s, border-color 0.15s; }
   .tool-print-btn:hover { color: var(--accent); border-color: var(--accent); }
 
   .progress-wrap { background: var(--bg2); border: 1px solid var(--border); padding: 1.25rem 1.5rem; margin-bottom: 2rem; }
   .progress-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
-  .progress-label { font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.1em; }
+  .progress-label { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.1em; }
   .progress-count { font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent); }
   .progress-track { height: 6px; background: var(--border); }
   .progress-fill { height: 100%; background: var(--accent); transition: width 0.3s ease; }
@@ -214,7 +214,7 @@ const appLd = {
   @media (max-width: 768px) { .tool-layout { grid-template-columns: 1fr; } }
 
   .checklist-group { margin-bottom: 2rem; }
-  .group-title { font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+  .group-title { font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
 
   .check-item { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.75rem 0; border-bottom: 1px solid var(--border); cursor: pointer; transition: background 0.12s; }
   .check-item:hover { background: var(--bg2); margin: 0 -0.75rem; padding-left: 0.75rem; padding-right: 0.75rem; }
@@ -226,7 +226,7 @@ const appLd = {
   .check-item.done .check-text { color: var(--text-dim); text-decoration: line-through; }
 
   .sidebar-card { background: var(--bg2); border: 1px solid var(--border); padding: 1.25rem; margin-bottom: 1rem; }
-  .sidebar-card h4 { font-family: var(--font-mono); font-size: 0.68rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.9rem; }
+  .sidebar-card h4 { font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.9rem; }
   .pn-list { display: flex; flex-direction: column; gap: 0.35rem; }
   .pn-row { display: flex; justify-content: space-between; gap: 0.5rem; }
   .pn-key { font-size: 0.78rem; color: var(--text-dim); }
@@ -234,7 +234,7 @@ const appLd = {
   .tool-links { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
   .tool-links a { font-size: 0.82rem; color: var(--accent); transition: color 0.15s; }
   .tool-links a:hover { color: var(--text); }
-  .btn-reset { width: 100%; background: transparent; border: 1px solid var(--border-mid); color: var(--text-dim); font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.06em; padding: 0.55rem; cursor: pointer; transition: border-color 0.15s, color 0.15s; }
+  .btn-reset { width: 100%; background: transparent; border: 1px solid var(--border-mid); color: var(--text-dim); font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.06em; padding: 0.55rem; cursor: pointer; transition: border-color 0.15s, color 0.15s; }
   .btn-reset:hover { border-color: var(--red); color: var(--red); }
 
   @media print {

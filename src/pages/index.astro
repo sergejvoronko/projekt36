@@ -287,7 +287,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="dt-line"><span class="dt-key">Interface needed:</span> <span class="dt-hl dt-warn">ADS serial → NOT K+DCAN USB</span></div>
         <div class="dt-line"><span class="dt-key">Software:</span> <span class="dt-hl">INPA 5.0.2 + EDIABAS 7.3.0</span></div>
         <div class="dt-spacer"></div>
-        <div class="dt-line dt-dim"><span class="dt-comment">Stomp test (no laptop): Turn key to pos. 2 → floor gas 5x in 5 sec → CEL flashes codes</span></div>
+        <div class="dt-line"><span class="dt-comment">Stomp test (no laptop): Turn key to pos. 2 → floor gas 5x in 5 sec → CEL flashes codes</span></div>
       </div>
 
       <div class="section-more">
@@ -494,7 +494,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     align-items: baseline;
     gap: 0.6rem;
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     background: rgba(19, 23, 32, 0.82);
     border: 1px solid rgb(var(--accent-rgb) / 0.18);
     padding: 0.3rem 0.75rem;
@@ -504,7 +504,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     color: var(--text-dim);
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     flex-shrink: 0;
   }
   .hud-val {
@@ -565,7 +565,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   .hero-label {
     font-family: var(--font-mono);
-    font-size: 0.65rem;
+    font-size: 0.78rem;
     color: var(--text-dim);
     letter-spacing: 0.15em;
     display: flex;
@@ -632,7 +632,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
   .stat-label {
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     color: var(--accent);
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -654,7 +654,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .section-inner { max-width: var(--wide-w); margin: 0 auto; }
   .section-tag {
     font-family: var(--font-mono);
-    font-size: 0.65rem;
+    font-size: 0.78rem;
     color: var(--accent);
     text-transform: uppercase;
     letter-spacing: 0.15em;
@@ -706,7 +706,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .bs-meta-label {
     display: block;
     font-family: var(--font-mono);
-    font-size: 0.6rem;
+    font-size: 0.75rem;
     color: var(--text-mid);
     text-transform: uppercase;
     letter-spacing: 0.14em;
@@ -748,7 +748,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
   .bs-prog-label {
     font-family: var(--font-mono);
-    font-size: 0.6rem;
+    font-size: 0.75rem;
     color: var(--text-mid);
     text-transform: uppercase;
     letter-spacing: 0.14em;
@@ -844,7 +844,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   .grill-kidney-label {
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     letter-spacing: 0.16em;
     text-transform: uppercase;
     padding: 0.85rem 1.5rem 0.65rem;
@@ -910,7 +910,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .chapter-row:last-child { border-bottom: none; }
   .chapter-num {
     font-family: var(--font-mono);
-    font-size: 0.65rem;
+    font-size: 0.78rem;
     color: var(--accent);
     flex-shrink: 0;
     min-width: 2ch;
@@ -943,7 +943,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .weak-card:hover { background: var(--bg3); }
   .weak-num {
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     color: var(--text-dim);
     letter-spacing: 0.1em;
     display: block;
@@ -991,7 +991,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
   .diag-type {
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     color: var(--accent);
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -999,7 +999,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
   .diag-link {
     font-family: var(--font-mono);
-    font-size: 0.72rem;
+    font-size: 0.8rem;
     color: var(--accent);
     text-decoration: none;
     transition: opacity 0.15s;
@@ -1023,7 +1023,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .dt-hl     { color: var(--text); font-weight: 600; }
   .dt-warn   { color: var(--accent); }
   .dt-comment{ color: var(--text-dim); }
-  .dt-dim    { opacity: 0.6; }
   .dt-spacer { height: 0.75rem; }
 
   /* ── SCHEMAS ── */
@@ -1043,10 +1042,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
   .schema-row:last-child { border-bottom: none; }
   .schema-row.avail:hover { background: var(--bg3); }
-  .schema-row.draft { opacity: 0.5; }
+  .schema-row.draft .schema-num { color: var(--text-dim); }
   .schema-num {
     font-family: var(--font-mono);
-    font-size: 0.6rem;
+    font-size: 0.75rem;
     color: var(--accent);
     letter-spacing: 0.08em;
   }
@@ -1057,7 +1056,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
   .schema-cat {
     font-family: var(--font-mono);
-    font-size: 0.6rem;
+    font-size: 0.75rem;
     color: var(--text-dim);
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -1065,7 +1064,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
   .schema-status {
     font-family: var(--font-mono);
-    font-size: 0.6rem;
+    font-size: 0.75rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     white-space: nowrap;
@@ -1107,7 +1106,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .tools-mini-card:hover { background: var(--bg3); }
   .mini-badge {
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-weight: 600;
@@ -1195,7 +1194,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .nl-btn:hover { opacity: 0.85; }
   .nl-note {
     font-family: var(--font-mono);
-    font-size: 0.68rem;
+    font-size: 0.78rem;
     color: var(--text-dim);
   }
 </style>

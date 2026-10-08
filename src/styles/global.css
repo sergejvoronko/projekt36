@@ -16,8 +16,8 @@
 
   /* Text */
   --text:          #e8eaed;
-  --text-mid:      #8a8f9e;
-  --text-dim:      #4e5568;
+  --text-mid:      #a4a9b6;
+  --text-dim:      #8a91a3;
   --text-inverse:  #0d0f14;
 
   /* Accent — amber */
@@ -29,7 +29,7 @@
   /* Status */
   --green:   #5cb85c;
   --amber:   #e8a83e;
-  --red:     #d9534f;
+  --red:     #e5615d;
 
   /* Typography */
   --font-body:     'Barlow', system-ui, sans-serif;
@@ -168,7 +168,7 @@ pre {
 .p36-diagram .d-sub,
 .p36-diagram .d-note { fill: var(--text-mid); font: 400 11.5px var(--font-mono); }
 .p36-diagram .d-size { fill: var(--accent); font: 500 12px var(--font-mono); }
-.p36-diagram .d-tag { fill: var(--text-mid); font: 500 11px var(--font-mono); letter-spacing: 0.04em; text-transform: uppercase; }
+.p36-diagram .d-tag { fill: var(--text-mid); font: 500 12px var(--font-mono); letter-spacing: 0.04em; text-transform: uppercase; }
 
 /* Third-party photos (Wikimedia Commons): the credit line is a licence requirement. */
 .p36-photo { margin: 2rem 0; }

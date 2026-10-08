@@ -1,0 +1,226 @@
+---
+interface Props { slug: string }
+const { slug } = Astro.props;
+// Shared with airbrushdoc (workers/comments there); the prefix keeps the sites' threads apart.
+const API = 'https://airbrushdoc-comments.airbrushden.workers.dev';
+const AUTHOR = 'projekt36';
+---
+<section class="cmt" data-slug={`p36-${slug}`} data-api={API} data-author={AUTHOR} aria-labelledby="cmt-title">
+  <h2 id="cmt-title" class="cmt-title">Comments</h2>
+  <div class="cmt-list" aria-live="polite"></div>
+  <form class="cmt-form">
+    <div class="cmt-replying" hidden>
+      <span class="cmt-replying-text"></span>
+      <button type="button" class="cmt-reply-cancel">Cancel</button>
+    </div>
+    <input type="text" name="author" maxlength="80" placeholder="Your name" required aria-label="Your name" />
+    <input type="text" name="website" tabindex="-1" autocomplete="off" class="cmt-hp" aria-hidden="true" />
+    <textarea name="body" maxlength="2000" rows="4" placeholder="Questions, corrections, or how it went on your car…" required aria-label="Your comment"></textarea>
+    <div class="cmt-actions">
+      <button type="submit" class="btn-primary cmt-submit">Post comment</button>
+      <span class="cmt-status" role="status"></span>
+    </div>
+    <p class="cmt-note">Comments are reviewed before they appear, usually within a day.</p>
+  </form>
+</section>
+
+<script>
+  const root = document.querySelector('.cmt') as HTMLElement | null;
+  if (root) {
+    const { api, slug, author: siteAuthor } = root.dataset as Record<string, string>;
+    const list = root.querySelector('.cmt-list') as HTMLElement;
+    const form = root.querySelector('.cmt-form') as HTMLFormElement;
+    const status = root.querySelector('.cmt-status') as HTMLElement;
+    const btn = root.querySelector('.cmt-submit') as HTMLButtonElement;
+    const replyBox = root.querySelector('.cmt-replying') as HTMLElement;
+    const replyText = root.querySelector('.cmt-replying-text') as HTMLElement;
+    const replyCancel = root.querySelector('.cmt-reply-cancel') as HTMLButtonElement;
+
+    let parentId: number | null = null;
+
+    const fmtDate = (d: string) => {
+      const t = new Date(d.replace(' ', 'T') + 'Z');
+      return isNaN(+t) ? '' : t.toLocaleDateString('en-GB', { year: 'numeric', month: 'short', day: 'numeric' });
+    };
+
+    const el = (tag: string, cls: string, text?: string) => {
+      const e = document.createElement(tag);
+      e.className = cls;
+      if (text !== undefined) e.textContent = text;
+      return e;
+    };
+
+    const itemEl = (c: any) => {
+      const item = el('div', 'cmt-item');
+      item.id = `comment-${c.id}`;
+      const head = el('div', 'cmt-item-head');
+      head.append(
+        el('span', 'cmt-avatar', (c.author || '?').trim().charAt(0).toUpperCase()),
+        el('span', 'cmt-item-author', c.author),
+      );
+      if (c.author === siteAuthor) head.append(el('span', 'cmt-badge', 'Author'));
+      head.append(el('span', 'cmt-item-date', fmtDate(c.created_at)));
+
+      const reply = el('button', 'cmt-reply-btn', 'Reply') as HTMLButtonElement;
+      reply.type = 'button';
+      reply.addEventListener('click', () => {
+        parentId = c.id;
+        replyText.textContent = `Replying to ${c.author}`;
+        replyBox.hidden = false;
+        (form.querySelector('textarea') as HTMLTextAreaElement).focus();
+        form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+
+      item.append(head, el('p', 'cmt-item-body', c.body), reply);
+      return item;
+    };
+
+    fetch(`${api}/comments?slug=${slug}`)
+      .then(r => r.json())
+      .then(({ comments }) => {
+        if (!comments?.length) {
+          list.append(el('p', 'cmt-empty', 'No comments yet. Be the first.'));
+          return;
+        }
+        // Replies render one level under their top-level ancestor; deeper chains flatten.
+        const byId = new Map(comments.map((c: any) => [c.id, c]));
+        const topAncestor = (c: any) => {
+          let cur = c, guard = 0;
+          while (cur.parent_id && byId.has(cur.parent_id) && guard++ < 50) cur = byId.get(cur.parent_id);
+          return cur.id;
+        };
+        const children = new Map<number, any[]>();
+        const tops: any[] = [];
+        for (const c of comments) {
+          if (!c.parent_id || !byId.has(c.parent_id)) { tops.push(c); continue; }
+          const anc = topAncestor(c);
+          if (!children.has(anc)) children.set(anc, []);
+          children.get(anc)!.push(c);
+        }
+        for (const top of tops) {
+          list.append(itemEl(top));
+          const kids = children.get(top.id) || [];
+          if (kids.length) {
+            const thread = el('div', 'cmt-thread');
+            for (const k of kids) thread.append(itemEl(k));
+            list.append(thread);
+          }
+        }
+      })
+      .catch(() => list.append(el('p', 'cmt-empty', 'Comments could not be loaded.')));
+
+    replyCancel.addEventListener('click', () => {
+      parentId = null;
+      replyBox.hidden = true;
+    });
+
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      const fd = new FormData(form);
+      btn.disabled = true;
+      status.textContent = 'Sending…';
+      try {
+        const r = await fetch(`${api}/comments`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            slug,
+            author: fd.get('author'),
+            body: fd.get('body'),
+            website: fd.get('website'),
+            parent_id: parentId,
+          }),
+        });
+        const d = await r.json();
+        if (r.ok) {
+          form.reset();
+          parentId = null;
+          replyBox.hidden = true;
+          status.textContent = 'Thanks. Your comment is awaiting review.';
+        } else {
+          status.textContent = d.error || 'Something went wrong. Try again.';
+          btn.disabled = false;
+        }
+      } catch {
+        status.textContent = 'Network error. Try again.';
+        btn.disabled = false;
+      }
+    });
+  }
+</script>
+
+<style>
+  .cmt { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+  .cmt-title {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.25rem;
+  }
+  /* Everything inside .cmt-list is created by JS, so it needs :global(). */
+  .cmt :global(.cmt-empty) { font-size: 0.9rem; color: var(--text-mid); }
+  .cmt :global(.cmt-item) {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    padding: 1rem 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+  .cmt :global(.cmt-thread) {
+    margin: 0 0 0.75rem 2rem;
+    padding-left: 1rem;
+    border-left: 2px solid rgb(var(--accent-rgb) / 0.3);
+  }
+  .cmt :global(.cmt-thread .cmt-item) { background: var(--bg3); }
+  .cmt :global(.cmt-item-head) { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.6rem; }
+  .cmt :global(.cmt-avatar) {
+    width: 32px; height: 32px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--bg3); border: 1px solid var(--border-mid);
+    font-family: var(--font-mono); font-weight: 600; font-size: 0.85rem; color: var(--accent);
+  }
+  .cmt :global(.cmt-item-author) { font-weight: 600; color: var(--text); font-size: 0.95rem; }
+  .cmt :global(.cmt-badge) {
+    font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--accent); background: var(--accent-dim);
+    border: 1px solid rgb(var(--accent-rgb) / 0.3); padding: 0 0.45em;
+  }
+  .cmt :global(.cmt-item-date) { font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-dim); margin-left: auto; }
+  .cmt :global(.cmt-item-body) {
+    font-size: 0.97rem; color: var(--text-mid); line-height: 1.7;
+    margin: 0 0 0.6rem; white-space: pre-wrap;
+  }
+  .cmt :global(.cmt-reply-btn) {
+    background: none; border: none; padding: 0; cursor: pointer;
+    font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent);
+  }
+  .cmt :global(.cmt-reply-btn:hover) { color: var(--text); }
+
+  .cmt-form { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
+  .cmt-replying[hidden] { display: none; }
+  .cmt-replying {
+    display: flex; align-items: center; gap: 0.75rem;
+    background: var(--accent-dim); border: 1px solid rgb(var(--accent-rgb) / 0.3);
+    padding: 0.5rem 0.9rem; font-size: 0.88rem; color: var(--text);
+  }
+  .cmt-reply-cancel {
+    background: none; border: none; padding: 0; margin-left: auto; cursor: pointer;
+    font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-mid); text-decoration: underline;
+  }
+  .cmt-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+  .cmt-form input[name="author"] { max-width: 280px; }
+  .cmt-form input[name="author"], .cmt-form textarea {
+    width: 100%;
+    background: var(--bg2); border: 1px solid var(--border-mid);
+    padding: 0.65rem 0.9rem;
+    color: var(--text); font-family: var(--font-body); font-size: 0.97rem;
+  }
+  .cmt-form input::placeholder, .cmt-form textarea::placeholder { color: var(--text-dim); }
+  .cmt-form input:focus-visible, .cmt-form textarea:focus-visible { border-color: var(--accent); }
+  .cmt-actions { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+  .cmt-submit:disabled { opacity: 0.6; cursor: default; }
+  .cmt-status { font-size: 0.88rem; color: var(--text-mid); }
+  .cmt-note { font-size: 0.82rem; color: var(--text-dim); }
+  @media print { .cmt { display: none; } }
+</style>

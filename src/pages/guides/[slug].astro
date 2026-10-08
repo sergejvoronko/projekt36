@@ -3,6 +3,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection, render } from 'astro:content';
 import AuthorBox from '../../components/AuthorBox.astro';
 import SubscribeBox from '../../components/SubscribeBox.astro';
+import RelatedGuides from '../../components/RelatedGuides.astro';
+import Comments from '../../components/Comments.astro';
 
 export async function getStaticPaths() {
   const articles = await getCollection('articles', ({ data }) => !data.draft);
@@ -70,7 +72,6 @@ const jsonLd = {
     {article.data.hero && (
       <div class="article-hero">
         <img src={`/heroes/${article.data.hero}`} alt={article.data.title} width="1344" height="768" loading="eager" decoding="async" fetchpriority="high" />
-        <div class="article-hero-fade"></div>
       </div>
     )}
 
@@ -113,12 +114,15 @@ const jsonLd = {
     )}
 
     <AuthorBox />
+    <RelatedGuides currentId={article.id} pillar={article.data.pillar} keywords={article.data.keywords} />
     <SubscribeBox />
 
     <div class="article-safety-note" role="note">
       <span class="safety-icon">⚠</span>
       <span>DIY automotive work carries real risks. Always disconnect the battery before electrical work, use rated jack stands when working under the car, and wear appropriate PPE when welding or working with fluids. See the full <a href="/legal#safety">workshop safety disclaimer</a>.</span>
     </div>
+
+    <Comments slug={article.id} />
 
     <div class="article-footer">
       <a href="/guides" class="btn-outline">← Back to guides</a>
@@ -263,19 +267,12 @@ const jsonLd = {
     height: auto;
     aspect-ratio: 16 / 9;
     object-fit: cover;
-    filter: brightness(0.82) saturate(0.9);
-  }
-  .article-hero-fade {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, transparent 50%, var(--bg) 100%);
-    pointer-events: none;
   }
 
   /* ── Header ─────────────────────────────────────────────── */
   .breadcrumb {
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     color: var(--text-dim);
     display: flex;
     gap: 0.4rem;
@@ -287,7 +284,7 @@ const jsonLd = {
   .breadcrumb .sep { color: var(--border-mid); }
   .pillar-tag {
     font-family: var(--font-mono);
-    font-size: 0.6rem;
+    font-size: 0.75rem;
     color: var(--accent);
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -322,12 +319,12 @@ const jsonLd = {
   }
   .meta-date {
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     color: var(--text-dim);
   }
   .meta-checked {
     font-family: var(--font-mono);
-    font-size: 0.68rem;
+    font-size: 0.78rem;
     letter-spacing: 0.04em;
     color: var(--green);
     border: 1px solid color-mix(in srgb, var(--green) 45%, transparent);
@@ -360,7 +357,7 @@ const jsonLd = {
     align-items: center;
     gap: 0.4rem;
     font-family: var(--font-mono);
-    font-size: 0.68rem;
+    font-size: 0.78rem;
     letter-spacing: 0.06em;
     color: var(--text-dim);
     background: none;
@@ -384,7 +381,7 @@ const jsonLd = {
   /* ── TL;DR callout ──────────────────────────────────────── */
   .article-body :global(.tldr-heading) {
     font-family: var(--font-mono);
-    font-size: 0.65rem !important;
+    font-size: 0.78rem !important;
     font-weight: 600;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -552,7 +549,7 @@ const jsonLd = {
 
   .toc-label {
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--text-dim);
@@ -573,7 +570,7 @@ const jsonLd = {
   }
   #toc-nav :global(a) {
     display: block;
-    font-size: 0.76rem;
+    font-size: 0.84rem;
     line-height: 1.4;
     color: var(--text-dim);
     padding: 0.28rem 0;
@@ -586,7 +583,7 @@ const jsonLd = {
   #toc-nav :global(li[data-level="h3"] a) {
     margin-left: -2.17rem;
     padding-left: 1.95rem;
-    font-size: 0.72rem;
+    font-size: 0.8rem;
   }
   #toc-nav :global(a:hover) { color: var(--text); }
   #toc-nav :global(a.active) {

@@ -1,0 +1,101 @@
+---
+import { getCollection } from 'astro:content';
+
+interface Props {
+  currentId: string;
+  pillar: string;
+  keywords?: string;
+  limit?: number;
+}
+const { currentId, pillar, keywords, limit = 3 } = Astro.props;
+
+const terms = (s?: string) =>
+  new Set((s ?? '').toLowerCase().split(/[,\s]+/).filter(w => w.length > 3 && !['bmw', 'e36', 'guide'].includes(w)));
+const mine = terms(keywords);
+
+const all = await getCollection('articles', ({ data }) => !data.draft);
+const picks = all
+  .filter(a => a.id !== currentId)
+  .map(a => {
+    let score = a.data.pillar === pillar ? 3 : 0;
+    for (const t of terms(a.data.keywords)) if (mine.has(t)) score += 1;
+    return { a, score };
+  })
+  .sort((x, y) => y.score - x.score || (y.a.data.date ?? '').localeCompare(x.a.data.date ?? ''))
+  .slice(0, limit)
+  .map(x => x.a);
+
+
+const pillarLabels: Record<string, string> = {
+  engine: 'Engine', swap: 'Swap', body: 'Body & Paint',
+  suspension: 'Suspension', interior: 'Interior', reference: 'Reference',
+};
+---
+{picks.length > 0 && (
+  <section class="related" aria-labelledby="related-title">
+    <h2 id="related-title" class="related-title">Related guides</h2>
+    <div class="related-grid">
+      {picks.map(a => (
+        <a href={`/guides/${a.id}`} class="related-card">
+          {a.data.hero && (
+            <img
+              src={`/heroes/thumb/${a.data.hero}`}
+              alt="" width="480" height="274" loading="lazy" decoding="async"
+              onerror={`this.onerror=null;this.src='/heroes/${a.data.hero}'`}
+            />
+          )}
+          <div class="related-body">
+            <span class="related-pillar">{pillarLabels[a.data.pillar]}</span>
+            <span class="related-name">{a.data.title}</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+)}
+
+<style>
+  .related { margin: 3rem 0 1rem; }
+  .related-title {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  .related-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    transition: border-color 0.15s;
+  }
+  .related-card:hover { border-color: var(--accent); color: var(--text); }
+  .related-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border);
+  }
+  .related-body { padding: 0.85rem 1rem 1rem; display: flex; flex-direction: column; gap: 0.4rem; }
+  .related-pillar {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+  .related-name { font-size: 0.95rem; font-weight: 600; line-height: 1.35; }
+  @media (max-width: 700px) {
+    .related-grid { grid-template-columns: 1fr; }
+  }
+  @media print { .related { display: none; } }
+</style>
