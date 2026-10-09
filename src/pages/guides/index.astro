@@ -140,7 +140,7 @@ const sbId = 'sb-guides';
       <div class="side-block-label">// NEWSLETTER</div>
       <p class="side-sub-heading">Follow the swap.</p>
       <p class="side-sub-note">New guides, build chapters, and tool releases — no spam.</p>
-      <form class="side-sub-form" id={sbId}>
+      <form class="side-sub-form" id={sbId} data-subscribe data-note={`${sbId}-note`}>
         <input type="email" placeholder="your@email.com" required aria-label="Email address" class="side-sub-input" />
         <button type="submit" class="side-sub-btn">Subscribe</button>
       </form>
@@ -152,18 +152,9 @@ const sbId = 'sb-guides';
 </div>
 </BaseLayout>
 
-<script define:vars={{ sbId }}>
-  document.getElementById(sbId)?.addEventListener('submit', e => {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const note = document.getElementById(`${sbId}-note`);
-    form.querySelector('.side-sub-input').style.display = 'none';
-    form.querySelector('.side-sub-btn').style.display = 'none';
-    if (note) {
-      note.textContent = '✓ You\'re in. Build updates coming.';
-      note.style.color = 'var(--green)';
-    }
-  });
+<script>
+  import { wireSubscribeForms } from '../../lib/subscribe';
+  wireSubscribeForms();
 </script>
 
 <script>

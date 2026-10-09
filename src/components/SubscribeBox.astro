@@ -13,28 +13,19 @@ const id = `nl-${Math.random().toString(36).slice(2, 7)}`;
       <p class="sub-heading">Follow the swap.</p>
       <p class="sub-note">New guides, build chapters, and tool releases — no spam, just sparks.</p>
     </div>
-    <form class="sub-form" id={id}>
+    <form class="sub-form" id={id} data-subscribe data-note={`${id}-note`}>
       <div class="sub-fields">
         <input type="email" class="sub-input" placeholder="your@email.com" required aria-label="Email address" />
         <button type="submit" class="sub-btn">Subscribe</button>
       </div>
-      <p class="sub-fine" id={`${id}-note`}>Unsubscribe any time. No third parties.</p>
+      <p class="sub-fine" id={`${id}-note`}>Unsubscribe any time. Sent via MailerLite, never sold or shared.</p>
     </form>
   </div>
 </div>
 
-<script define:vars={{ id }}>
-  document.getElementById(id)?.addEventListener('submit', e => {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const note = document.getElementById(`${id}-note`);
-    form.querySelector('.sub-fields').style.display = 'none';
-    if (note) {
-      note.textContent = '✓ You\'re in. Build updates on the way.';
-      note.style.color = 'var(--green)';
-      note.style.fontSize = '0.85rem';
-    }
-  });
+<script>
+  import { wireSubscribeForms } from '../lib/subscribe';
+  wireSubscribeForms();
 </script>
 
 <style>

@@ -4,6 +4,8 @@ interface Env {
   PRINTIFY_API_TOKEN: string;
   PRINTIFY_SHOP_ID: string;
   PRINTIFY_STORE_URL: string;
+  MAILERLITE_API_KEY?: string;
+  MAILERLITE_GROUP_ID?: string;
 }
 
 type Runtime = import("@astrojs/cloudflare").Runtime<Env>;
