@@ -1,0 +1,240 @@
+PROJEKT36 - MACRO HERO PROMPTS (replaces the garage-lock set in hero_prompts.txt)
+=================================================================================
+
+GOAL
+One consistent look for every article hero: a close-up / macro still life of a
+single generic part or material on a dark workshop bench. The wide garage and car
+shots (the current heroes) move INTO the articles as inline photos.
+
+HOW TO USE
+1. Prepend STYLE BLOCK and append NEGATIVES to every SCENE below.
+2. Output 16:9, 1344x768, saved under the filename in each "# name.webp" line.
+3. Do NOT send the garage reference photos. Where a prompt says REF:, send a real
+   photo of that part (yours, or a supplier photo) as the only image input.
+4. Generate 3 variants per scene, keep the best. Reject any frame with a recognisable
+   assembly that looks wrong, extra or fused bolts, readable text, or a hand.
+5. After replacing heroes, regenerate public/heroes/thumb/ (480x275, centre crop).
+
+
+STYLE BLOCK (identical on every prompt, do not edit per scene)
+--------------------------------------------------------------
+Macro product photography of a single subject on a worn dark steel workshop bench.
+Shot on a 100mm macro lens at f/2.8, very shallow depth of field, subject sharp
+at the front edge only. One warm amber key light from the side (about 3000K) with
+a faint cool blue rim light behind. Heavy darkness at the frame edges, soft
+out-of-focus workshop background with a single blurred amber light bokeh.
+Real-world wear: fine scratches on the bench, a thin film of oil, light dust,
+honest metal texture. Muted colour grade, deep blacks, subtle film grain.
+Subject placed in the lower-left third, empty dark space top-right (room for
+the dark gradient overlay and title crop). 16:9.
+
+
+NEGATIVES (append to every prompt)
+----------------------------------
+No text, letters, numbers, logos or BMW roundel. No people, hands or tools in
+frame unless the scene says so. No whole car, no whole engine, no complete
+assemblies. No glowing or neon effects, no sparks, no smoke, no CGI gloss,
+no symmetrical showroom arrangement, no pristine unused parts.
+
+
+RULES THAT KEEP IT LOOKING REAL
+-------------------------------
+- Subject is ONE part or a small loose group (max 3 items), never a built-up assembly.
+- Prefer shapes with no single correct form: gears, rings, bolts, chain, gaskets,
+  bushings, hose, wire, foam, leather, paint, rust, glass. Avoid anything where the
+  exact M50/M52 casting matters (manifolds, VANOS housings, ECUs, full heads).
+- Where the article is about a complex part, show a DETAIL of it (seal, bolt head,
+  gasket edge, connector pin) rather than the part as a whole.
+- Keep fastener counts low and let background items stay out of focus.
+
+
+=================================================================================
+SCENES  (one per article; "# filename" then SCENE; REF = optional real-part photo)
+=================================================================================
+
+--- ENGINE ---
+
+# bmw-e36-m52-single-vanos-guide.webp
+KEEP the current image. It is the style reference for all the others.
+
+# bmw-e36-m52-double-vanos-guide.webp
+SCENE: macro of a pair of small helical-toothed gears and a spring-loaded piston lying beside two worn O-rings on the bench, light oil sheen on the gear teeth, one O-ring slightly flattened.
+REF: optional
+
+# vanos.webp
+SCENE: a single worn rubber piston seal ring resting on a steel disc, cracked and flattened on one side, shallow focus, close enough to see the surface crazing.
+
+# m50tu-vanos-rebuild-seals-replacement-guide.webp
+SCENE: a small tray of new seals and O-rings in assorted sizes (black, brown, blue) next to one old hardened seal for comparison, tray edge in sharp focus.
+
+# bmw-e36-m50-m52-engine-sensor-diagnosis-replacement.webp
+SCENE: a single bare electrical sensor connector with its plug half-pulled apart, brass pins visible and slightly green at the tips, a short length of braided wire loom, extreme close-up on the pins.
+
+# bmw-e36-m50-manifold-conversion-guide.webp
+SCENE: a short length of black vacuum hose with two push-fit plastic connectors lying on the bench beside two new rubber intake hose clamps, close-up on a cracked old hose end.
+
+# bmw-m50-engine-rebuild-guide.webp
+SCENE: one steel piston with its three ring grooves, a connecting rod bearing shell beside it, oil film catching the amber light, bearing shell in sharp focus.
+
+# bmw-m52-engine-rebuild-guide.webp
+SCENE: a set of three plain bearing half-shells stacked loosely on the bench next to a feeler gauge laid flat, macro on the bearing surface with fine wear marks.
+
+# e36-m50-head-gasket-replacement.webp
+SCENE: a multilayer steel head gasket edge in extreme close-up, the layered metal and coolant passage cutouts sharp, a few head bolts blurred behind it.
+
+# e36-m50-oil-system-guide.webp
+SCENE: a drop of dark oil hanging from a drain plug thread, the magnetic tip of the plug covered in fine metal swarf, shallow focus on the thread.
+
+# e36-m50-timing-chain-guide.webp
+SCENE: a loop of steel timing chain lying in a coil, links sharp at the front, a worn plastic chain guide rail with a visible groove behind it, out of focus.
+
+# m50-failures.webp
+SCENE: a cracked plastic coolant flange and a hardened rubber hose end side by side, stress cracks and brittle edges in sharp focus, a dusty oily bench.
+
+# cooling.webp
+SCENE: a brass thermostat with its spring and a rubber seal ring on the bench, a few drops of green-pink coolant beading on the metal.
+
+# engine-compare-v2.webp
+SCENE: three identical-looking steel piston rings of slightly different thicknesses laid in a row, a caliper jaw measuring one, depth of field falling off to the right.
+
+--- SWAP ---
+
+# bmw-e36-m43-to-m50-complete-engine-conversion-guide.webp
+SCENE: a heavy flywheel bolt and a clutch alignment tool lying beside a bare clutch disc edge, macro on the friction material and bolt threads.
+
+# parts-list.webp
+SCENE: an arrangement of three loose parts - a new rubber motor mount, a coil of hose clamps and a short length of fuel line - on the bench like an inventory, only the nearest part sharp.
+
+# wiring-swap.webp
+SCENE: a bundle of colour-coded automotive wires with half-stripped ends and a few crimp terminals, macro on the copper strands, cloth-wrapped loom behind.
+
+# m50-swap-cooling-adaptation.webp
+SCENE: a pair of aluminium hose adapters and two silicone elbow hoses, one blue one black, laid loosely on the bench, a hose clamp catching the amber light.
+
+# gearbox.webp
+SCENE: a clutch release bearing and a worn pilot bearing side by side, macro on the bearing races and grease residue.
+
+# bmw-e36-differential-guide-168-188-swap-compatibility.webp
+SCENE: a ring gear and pinion pair of hypoid gears meshing loosely on the bench, teeth catching amber light, gear oil residue, extreme shallow focus.
+
+# e36-m50-m52-s50-s52-engine-swap-guide.webp
+SCENE: a set of six matching steel pistons seen in a row at low angle, only the nearest one sharp, the rest dissolving into darkness.
+
+# e36-m52-to-m54-engine-swap-guide.webp
+SCENE: a pair of aluminium engine mounting brackets with their bolts, one used and oxidised, one new and machined, both on the dark bench.
+
+--- SUSPENSION ---
+
+# suspension.webp
+SCENE: a worn rubber suspension bushing next to a new one, the old one split and compressed, macro on the cracked rubber and the steel sleeve.
+
+# bmw-e36-rtab-replacement-oem-poly-spherical.webp
+SCENE: three bushings in a row - black rubber, purple polyurethane and a metal spherical bearing - lined up diagonally, nearest one sharp.
+
+# bmw-e36-rear-subframe-bushing-replacement-guide.webp
+SCENE: a large round subframe bushing with a split rubber wall and a bright steel inner sleeve, resting on its side, rust flakes on the bench.
+
+# bmw-e36-chassis-reinforcement-subframe-plates-guide.webp
+SCENE: a flat laser-cut steel reinforcement plate with weld-prep bevels and drilled holes, a bead of fresh weld on its edge, oxidised metal around it.
+
+# bmw-e36-suspension-geometry-setup-guide.webp
+SCENE: an adjustable control arm camber bolt with its eccentric cam washer, thread and cam sharp, graduated marks softly visible on the washer.
+
+# bmw-e36-steering-rack-swap-e46-purple-tag-z3.webp
+SCENE: a rubber steering-rack gaiter boot torn at one fold, with a tie-rod end in the foreground, dark grease residue on the steel.
+
+# air-suspension.webp
+SCENE: a pneumatic air line with a push-to-connect brass fitting and a small air valve, tubing curled in a loop, hint of blue rim light on the brass.
+
+--- BODY & PAINT ---
+
+# rust-map.webp
+SCENE: a section of sheet-metal seam with orange-brown rust blooming along a spot-weld line, flaking paint, macro on the rust texture, surface extremely tactile.
+
+# bmw-e36-jacking-point-rocker-panel-repair-guide.webp
+SCENE: a rusted-through sheet steel panel with a hole, wire-brushed edges bright metal next to the dark corrosion, close angle.
+
+# bmw-e36-paint-preparation-diy-respray-guide.webp
+SCENE: a sanding block with a worn sheet of fine grit paper on a primer-grey panel edge, paint dust on the surface, masking tape line blurred behind.
+
+# ppf.webp
+SCENE: a transparent protective film corner being peeled back from a glossy dark-blue painted panel, reflection of an amber light in the curve, macro on the film edge.
+
+--- INTERIOR ---
+
+# sound-deadening.webp
+SCENE: a square of black bitumen sound-deadening sheet with its foil face, peeled back at one corner to show the sticky underside, textured foil catching the light.
+
+# bmw-e36-seat-restoration-guide.webp
+SCENE: a patch of worn black leather with stitching and a split seam, a thin curved upholstery needle resting across it, macro on the thread.
+
+# bmw-e36-door-panel-restoration-guide.webp
+SCENE: a plastic door-panel trim clip and a fabric-backed vinyl corner peeling away from its backing, adhesive stringing, shallow focus.
+
+# bmw-e36-dashboard-removal-replacement-guide.webp
+SCENE: a cracked dashboard surface section with a hairline split running through its textured plastic, a single trim screw next to it.
+
+--- REFERENCE / ELECTRICS / TOOLS ---
+
+# torque-specs.webp
+SCENE: a clicker torque wrench head and a single socket with a bolt, macro on the wrench scale ring with unreadable blurred markings, bolt thread sharp.
+
+# charging.webp
+SCENE: an alternator drive belt with fine cracks lying over a bare pulley groove, macro on the belt ribs.
+
+# bmw-e36-m52-s52-obd2-diagnostics-guide.webp
+SCENE: a standard 16-pin diagnostic connector, pins glinting, plug resting on the bench with a short coil of cable, amber reflection on the plastic.
+
+# obd1-diag-v2.webp
+SCENE: a round multi-pin diagnostic plug with its dust cap off, pins in sharp focus, cable disappearing into darkness.
+
+# e36-obd1-fault-code-reference.webp
+SCENE: a bare multimeter probe tip touching a bare wire terminal, tiny sparkle of light on the metal, meter body blurred and dark behind.
+
+# e36-obd1-live-data-sensor-reference.webp
+SCENE: a thin two-wire oxygen-sensor-style probe tip with a sooty ceramic end next to coiled sensor wire, macro on the ceramic tip.
+
+# e36-dme-connector-pinout-reference.webp
+SCENE: a large black multi-pin electrical connector face with rows of empty pin cavities, one gold pin partly pulled out, macro with shallow focus across the rows.
+
+# ews.webp
+SCENE: a small transponder key blade lying beside a loose coil ring antenna, key bow slightly worn, polished brass catching light.
+
+# fuel-system.webp
+SCENE: a fuel filter body with a crimp fitting and a braided steel hose end, a thin sheen of fuel on the metal, shallow focus.
+
+# fuse-relay.webp
+SCENE: a row of colour-coded blade fuses spilled loosely, one blown with a visible broken filament, the others softly blurred.
+
+# grounds.webp
+SCENE: a copper ground strap with ring terminals, one terminal green with corrosion, bolt and star washer in the foreground.
+
+# etm.webp
+SCENE: a bundle of wires with heat-shrink and a single printed-circuit relay lying on a bench, only the relay pins sharp.
+
+# inpa.webp
+SCENE: a small diagnostic interface cable ending in a round connector, coiled on the bench, connector pins sharp.
+
+# lcm.webp
+SCENE: a bulb socket with a failed incandescent bulb, filament visibly broken inside the glass, close focus on the glass.
+
+# zke.webp
+SCENE: a small relay with exposed contacts and a plastic electronics module corner with a few solder joints, extreme macro on the solder and contacts.
+
+# e36-critical-wear-items-oem-vs-aftermarket-parts-guide.webp
+SCENE: two nearly identical steel ball joints side by side - one worn black with grit, one bright and new - sharp at the nearer one.
+
+# parts-sourcing.webp
+SCENE: a cardboard parts box corner and a sealed bag of bolts and washers with a hand-written (blurred, unreadable) label, shallow focus on the bag.
+
+# sunroof-drain.webp
+SCENE: a clear flexible drain tube with a plug of dirt and a pine needle inside it, shallow focus on the clog.
+
+
+=================================================================================
+INLINE GARAGE PHOTOS (moved out of the hero slot)
+=================================================================================
+Each article keeps its current garage/car image as an inline figure placed
+under the first H2 that matches its topic. Filenames stay the same, so nothing
+needs regenerating - they only need to be copied to public/heroes/inline/ and
+referenced from the article body once the macro heroes replace them.
