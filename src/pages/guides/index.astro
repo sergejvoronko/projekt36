@@ -91,6 +91,9 @@ const sbId = 'sb-guides';
           {byPillar[p.key].map(a => (
             <a href={`/guides/${a.id}`} class="article-row"
                data-search={`${a.data.title} ${a.data.description} ${a.data.keywords ?? ''}`.toLowerCase()}>
+              {a.data.hero && (
+                <img class="article-thumb" src={`/heroes/thumb/${a.data.hero}`} alt="" width="480" height="275" loading="lazy" decoding="async" />
+              )}
               <div class="article-info">
                 <h3 class="article-title">{a.data.title}</h3>
                 <p class="article-desc">{a.data.description}</p>
@@ -501,6 +504,14 @@ const sbId = 'sb-guides';
   }
   .article-row:last-child { border-bottom: none; }
   .article-row:hover { background: var(--bg2); margin: 0 -1rem; padding-left: 1rem; padding-right: 1rem; }
+  .article-thumb {
+    width: 160px;
+    height: 90px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid var(--border);
+    background: var(--bg3);
+  }
   .article-info { flex: 1; min-width: 0; }
   .article-title { font-size: 0.95rem; font-weight: 600; color: var(--text); margin-bottom: 0.25rem; transition: color 0.15s; }
   .article-row:hover .article-title { color: var(--accent); }
@@ -519,6 +530,9 @@ const sbId = 'sb-guides';
     }
   }
   @media (max-width: 560px) {
+    .article-row { gap: 0.9rem; }
+    .article-thumb { width: 88px; height: 50px; }
+    .article-arrow { display: none; }
     .guides-sidebar { grid-template-columns: 1fr; }
   }
 </style>
