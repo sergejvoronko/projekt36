@@ -6,7 +6,7 @@ public/heroes is touched; pick the best variant and copy it over by hand.
 
 usage: batch_macro.py [--variants 3] [--only name.webp ...] [--out DIR]
 """
-import argparse, base64, io, json, os, re, sys, time, urllib.error, urllib.request
+import argparse, signal, base64, io, json, os, re, sys, time, urllib.error, urllib.request
 from pathlib import Path
 from PIL import Image
 
@@ -38,9 +38,17 @@ def generate(prompt):
         req = urllib.request.Request(URL, data=body, method="POST",
                                      headers={"Content-Type": "application/json", "x-goog-api-key": KEY})
         try:
-            with urllib.request.urlopen(req, timeout=180) as r:
-                res = json.loads(r.read())
+            signal.alarm(200)  # hard cap: urlopen's timeout doesn't cover a stalled proxy
+            try:
+                with urllib.request.urlopen(req, timeout=120) as r:
+                    res = json.loads(r.read())
+            finally:
+                signal.alarm(0)
             break
+        except TimeoutError:
+            if attempt < 3:
+                continue
+            raise RuntimeError("timeout")
         except urllib.error.HTTPError as e:
             msg = e.read().decode()[:300]
             if e.code in (429, 500, 503) and attempt < 3:
@@ -53,7 +61,12 @@ def generate(prompt):
     raise RuntimeError(f"no image: {str(res)[:300]}")
 
 
+def _alarm(*_):
+    raise TimeoutError()
+
+
 def main():
+    signal.signal(signal.SIGALRM, _alarm)
     ap = argparse.ArgumentParser()
     ap.add_argument("--variants", type=int, default=3)
     ap.add_argument("--only", nargs="*")
