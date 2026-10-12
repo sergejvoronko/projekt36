@@ -238,3 +238,6 @@ Each article keeps its current garage/car image as an inline figure placed
 under the first H2 that matches its topic. Filenames stay the same, so nothing
 needs regenerating - they only need to be copied to public/heroes/inline/ and
 referenced from the article body once the macro heroes replace them.
+
+# bmw-e36-fcab-front-control-arm-bushing-replacement-guide.webp
+SCENE: a single worn rubber control arm bushing with a steel inner sleeve, the rubber cracked and split on one side and shiny with oil, a new black polyurethane bushing resting beside it slightly out of focus, close enough to see the surface cracking.
