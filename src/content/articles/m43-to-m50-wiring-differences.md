@@ -18,6 +18,11 @@ Use the **complete M50 engine harness and the DME from the donor engine**. Owner
 
 ---
 
+<figure class="p36-photo">
+<img src="/images/workshop/m43-m50-harness-diy.webp" alt="Four-cylinder M43 engine harness and six-cylinder M50 harness laid side by side on a workbench" width="1344" height="750" loading="lazy" decoding="async">
+<figcaption>The M43 and M50 engine harnesses side by side: the M50 loom feeds six injectors and six coils instead of four.<span class="p36-credit">AI illustration</span></figcaption>
+</figure>
+
 ## What changes with the engine
 
 | | M50 non-VANOS (1992) | M50 VANOS (1993–1995) |

@@ -44,6 +44,11 @@ For comparison, the E36's own M52 has a single VANOS, Siemens MS41.1 and a mecha
 
 ---
 
+<figure class="p36-photo">
+<img src="/images/workshop/engine-on-hoist.webp" alt="Inline-six engine with plastic intake manifold hanging from an engine hoist chain" width="1344" height="750" loading="lazy" decoding="async">
+<figcaption>Lifting a six-cylinder out on the hoist.<span class="p36-credit">AI illustration</span></figcaption>
+</figure>
+
 ## The four problem areas
 
 ### 1. Physical fit: oil system, manifolds, ancillaries

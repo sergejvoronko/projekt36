@@ -78,6 +78,11 @@ The camshafts stay in the head. If you do remove them on the bench, read the wai
 
 ---
 
+<figure class="p36-photo">
+<img src="/images/workshop/six-cylinder-block-head-gasket.webp" alt="Six-cylinder block deck on a stand with the cylinder head and a multi-layer head gasket on the bench" width="1344" height="750" loading="lazy" decoding="async">
+<figcaption>With the head off, the block deck and head face are both open for a straightedge check.<span class="p36-credit">AI illustration</span></figcaption>
+</figure>
+
 ## Inspecting the head and block
 
 **Clean without scratching.** Never use a metal scraper or wire brush on the aluminium head or the pistons; use a hard plastic or wooden scraper, or an abrasive disc made for aluminium. Clean the bolt holes of oil and coolant, then run a thread chaser through them.

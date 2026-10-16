@@ -116,6 +116,11 @@ Bentley's own maintenance schedule recommends replacing the cooling hoses **ever
 
 ---
 
+<figure class="p36-photo">
+<img src="/images/workshop/cooling-overhaul-parts.webp" alt="Expansion tank, thermostat, thermostat housing, silicone hoses and clamps laid out on a workbench" width="1344" height="750" loading="lazy" decoding="async">
+<figcaption>A cooling refresh laid out before the job: expansion tank, thermostat and housing, hoses and clamps.<span class="p36-credit">AI illustration</span></figcaption>
+</figure>
+
 ## Replacement order
 
 ### 1. Drain

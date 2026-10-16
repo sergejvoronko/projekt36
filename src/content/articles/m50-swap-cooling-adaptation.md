@@ -21,6 +21,11 @@ sources:
 
 ---
 
+<figure class="p36-photo">
+<img src="/images/workshop/m50-swap-cooling-parts.webp" alt="Inline-six engine on a stand with expansion tank, thermostat housing and coolant hoses on the bench" width="1344" height="750" loading="lazy" decoding="async">
+<figcaption>Swap engine on the stand with the cooling parts it needs on the bench.<span class="p36-credit">AI illustration</span></figcaption>
+</figure>
+
 ## Radiator, shroud and expansion tank
 
 | | Four-cylinder E36 | Six-cylinder E36 (M50) |

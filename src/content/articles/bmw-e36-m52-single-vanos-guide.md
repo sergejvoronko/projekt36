@@ -78,6 +78,11 @@ Work on a **completely cold engine**.
 5. Disconnect the solenoid connector and the oil line, then remove the two **access plugs** in front of the exhaust sprocket and loosen the exhaust sprocket bolts.
 6. Remove the VANOS mounting nuts and bolt, turn the sprockets with 11 5 490 to give the shaft room to come out, and pull the unit off.
 
+<figure class="p36-photo">
+<img src="/images/workshop/vanos-teardown.webp" alt="Single VANOS unit disassembled on a shop towel with piston, solenoid, seals and bolts" width="1344" height="1008" loading="lazy" decoding="async">
+<figcaption>A single VANOS unit stripped on the bench: housing, piston, solenoid, O-rings and bolts.<span class="p36-credit">AI illustration</span></figcaption>
+</figure>
+
 ## Resealing on the bench
 
 1. Remove the cover bolts and take out the piston and splined shaft. Drain the oil.

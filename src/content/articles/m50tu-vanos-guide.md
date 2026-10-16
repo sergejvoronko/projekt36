@@ -124,6 +124,11 @@ Bentley's test needs three special tools: electrical test lead **12 6 410**, air
 
 ---
 
+<figure class="p36-photo">
+<img src="/images/workshop/m50tu-vanos-parts.webp" alt="VANOS housing, helical gear shaft, piston, solenoid and seal kit on a shop towel" width="1344" height="750" loading="lazy" decoding="async">
+<figcaption>VANOS parts laid out for a seal repair: housing, helical gear, piston, solenoid and the seal kit.<span class="p36-credit">AI illustration</span></figcaption>
+</figure>
+
 ## The seal repair
 
 BMW does not sell the piston seals separately, only complete or rebuilt control units. Aftermarket kits (Beisan Systems is the best known) contain an upgraded O-ring and a new Teflon ring for the M50TU and M52 single VANOS.

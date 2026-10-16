@@ -52,6 +52,11 @@ Settle this before you buy the DME. It's the part of the swap that most often en
 
 ---
 
+<figure class="p36-photo">
+<img src="/images/workshop/m50-swap-parts-bench.webp" alt="Inline-six engine on a stand next to a bench of engine mounts, coolant hoses and a wiring harness" width="1344" height="750" loading="lazy" decoding="async">
+<figcaption>Donor engine on the stand with mounts, hoses and harness sorted on the bench before installation.<span class="p36-credit">AI illustration</span></figcaption>
+</figure>
+
 ## 3. Mechanical installation
 
 1. **Remove the M43** and label every connection on the car side.
@@ -62,6 +67,11 @@ Settle this before you buy the DME. It's the part of the swap that most often en
 6. **Driveshaft:** the four-cylinder front section is too long. Use a front section that matches your gearbox type: a Getrag front section for a Getrag box, because a ZF section won't bolt to the flex disc. Fit a new flex disc and centre bearing.
 
 ---
+
+<figure class="p36-photo">
+<img src="/images/workshop/m43-m50-harness-bench.webp" alt="M43 and M50 engine wiring harnesses compared on a steel workbench" width="1344" height="1008" loading="lazy" decoding="async">
+<figcaption>The two engine harnesses compared: use the donor M50 loom complete, with its own DME, and leave the M43 harness out.<span class="p36-credit">AI illustration</span></figcaption>
+</figure>
 
 ## 4. Wiring
 

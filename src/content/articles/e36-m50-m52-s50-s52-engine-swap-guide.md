@@ -62,6 +62,11 @@ Whatever the combination, treat the immobiliser first. See the [EWS guide](/guid
 
 ---
 
+<figure class="p36-photo">
+<img src="/images/workshop/engine-swap-stand.webp" alt="Inline-six engine on a red engine stand next to a bench with engine mounts, hoses and wiring" width="1344" height="1008" loading="lazy" decoding="async">
+<figcaption>Engine on the stand, mounts, hoses and harness on the bench: everything that gets replaced while the engine is out.<span class="p36-credit">AI illustration</span></figcaption>
+</figure>
+
 ## Before it goes in
 
 The donor engine is 25-plus years old. While it's on a stand:

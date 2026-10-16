@@ -41,6 +41,11 @@ The M50 is a tough engine, but after 25-plus years even a good one may need a fu
 
 ---
 
+<figure class="p36-photo">
+<img src="/images/workshop/m50-block-head-gasket.webp" alt="Bare inline-six block on an engine stand next to a cylinder head and new head gasket" width="1344" height="1008" loading="lazy" decoding="async">
+<figcaption>Bare block on the stand, head on the bench, new gasket laid out: the starting point for this guide.<span class="p36-credit">AI illustration</span></figcaption>
+</figure>
+
 ## Block: clean, inspect, machine
 
 1. **Strip it completely:** core plugs, oil gallery plugs and dowels out, so the block can be cleaned properly. A machine shop's hot tank or chemical clean is the standard.

@@ -35,6 +35,11 @@ sources:
 
 ---
 
+<figure class="p36-photo">
+<img src="/images/workshop/m50-m52-heads.webp" alt="Two six-cylinder heads on a workbench labelled M50 non-TU and M52" width="1344" height="1008" loading="lazy" decoding="async">
+<figcaption>Two heads side by side: bare heads look much alike, so identify the engine by the VANOS unit, DME label and stamped engine code.<span class="p36-credit">AI illustration</span></figcaption>
+</figure>
+
 ## M50 non-VANOS: the original
 
 Built 1990–1992 (E34 525i and the earliest E36 325i). In E36s, Bentley dates the change to VANOS engines to cars built after August 1992.

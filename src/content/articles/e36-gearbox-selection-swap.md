@@ -24,6 +24,11 @@ sources:
 
 ---
 
+<figure class="p36-photo">
+<img src="/images/workshop/getrag-gearbox-bench.webp" alt="Five-speed manual gearbox on a workshop floor, bellhousing facing the camera" width="1344" height="1008" loading="lazy" decoding="async">
+<figcaption>A five-speed manual out of the car: identify it by the label on the case, not by casting numbers.<span class="p36-credit">AI illustration</span></figcaption>
+</figure>
+
 ## Which E36 used which gearbox (Bentley)
 
 | Model | Years | Engine | Manual gearbox |
@@ -89,6 +94,11 @@ On a four-cylinder to M50 swap with a Getrag gearbox, owners report:
 So the front section always has to match the gearbox make. Fit a new flex disc and centre bearing while it's out. Flex disc bolts are tightened by size and grade: M10 8.8 at 48 Nm, M10 10.9 at 64 Nm, M12 8.8 at 81 Nm, M12 10.9 at 100 Nm (Bentley).
 
 ---
+
+<figure class="p36-photo">
+<img src="/images/workshop/gearbox-bellhousing.webp" alt="Manual gearbox bellhousing with input shaft and clutch release fork" width="1344" height="750" loading="lazy" decoding="async">
+<figcaption>Bellhousing side of a manual gearbox, with the input shaft and clutch release fork visible.<span class="p36-credit">AI illustration</span></figcaption>
+</figure>
 
 ## Mounts and crossmember
 
