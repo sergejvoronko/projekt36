@@ -9,6 +9,9 @@
 	},
 	"observability": {
 		"enabled": true
+	},
+	"vars": {
+		"MAILERLITE_GROUP_ID": "200835983215691645"
 	}
 	// Secrets live in Cloudflare dashboard:
 	// Pages → projekt36 → Settings → Environment variables → Production
