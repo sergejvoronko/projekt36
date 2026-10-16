@@ -92,7 +92,7 @@ The six-cylinder pump comes out with the oil pan off: remove the sprocket nut (*
 | Oil drain plug, M12 / M22 | 25 / 60 Nm |
 | Oil filter cover (M8) | 25 Nm |
 
-Inspect the pickup screen while you're in there: sludge or debris on it says a lot about the engine's past, and pieces of black plastic point to the timing chain guides. See the [timing chain guide](/guides/e36-m50-timing-chain-guide).
+Inspect the pickup screen while you're in there: sludge or debris on it says a lot about the engine's past, and pieces of black plastic point to the timing chain guides. See the [timing chain guide](/guides/e36-m50-timing-chain-guide/).
 
 ---
 

@@ -84,4 +84,4 @@ sources:
 - **Start all four mounting fasteners**, then tighten them in this order: **inner front, outer front, inner rear, outer rear**.
 - **Front seat to floor: 55 Nm.**
 
-See also: [door panel restoration](/guides/bmw-e36-door-panel-restoration-guide) · [sound deadening](/guides/e36-sound-deadening-guide)
+See also: [door panel restoration](/guides/bmw-e36-door-panel-restoration-guide/) · [sound deadening](/guides/e36-sound-deadening-guide/)

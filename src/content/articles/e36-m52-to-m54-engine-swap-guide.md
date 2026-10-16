@@ -84,4 +84,4 @@ The **M54 expects the non-return system** it was designed for. The E36 has a **r
 3. Budget for a **specialist** for the DME and immobiliser work.
 4. Solve the electronics on paper before the engine goes in.
 
-If the goal is simply more six-cylinder power with far less electronics work, an **M50** (OBD1 cars) or **M52** (OBD2 cars) swap, possibly with the [M50 intake manifold](/guides/bmw-e36-m50-manifold-conversion-guide), stays within the E36's own electronics generation.
+If the goal is simply more six-cylinder power with far less electronics work, an **M50** (OBD1 cars) or **M52** (OBD2 cars) swap, possibly with the [M50 intake manifold](/guides/bmw-e36-m50-manifold-conversion-guide/), stays within the E36's own electronics generation.

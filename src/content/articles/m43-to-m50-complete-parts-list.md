@@ -35,17 +35,17 @@ The short version, from owners who have done the four-cylinder-to-M50 swap: it's
 
 - **Simpler:** no VANOS unit to maintain or reseal.
 - **Matches the car:** our 1994 316i is OBD1, and so is the M50. Bentley lists the non-VANOS M50 with **Bosch DME M3.1** (1992 engines) and the VANOS M50 with **DME M3.3.1** (1993–95). Use the DME and harness that belong to the donor engine.
-- **The trade-off:** the non-VANOS engine was only built up to August 1992, so donors are older and rarer than the VANOS M50TU. See the [M50 vs M50TU vs M52 comparison](/guides/m50-vs-m50tu-vs-m52-comparison).
+- **The trade-off:** the non-VANOS engine was only built up to August 1992, so donors are older and rarer than the VANOS M50TU. See the [M50 vs M50TU vs M52 comparison](/guides/m50-vs-m50tu-vs-m52-comparison/).
 
 ### Does the car have EWS?
 
 Bentley: the first E36 immobiliser (**EWS**) was introduced in **January 1994**. It's a module under the left side of the dashboard that interrupts ignition, fuel injection and the starter, armed by the central locking. The coded-key **EWS II** followed in January 1995.
 
-A January 1994 car sits right at the changeover, so **check whether yours has the module** before buying a DME. Owners who put an M50 into an EWS-equipped four-cylinder E36 report that it needs wiring work at the EWS module and a suitable DME. See the [EWS guide](/guides/e36-ews-immobilizer-guide).
+A January 1994 car sits right at the changeover, so **check whether yours has the module** before buying a DME. Owners who put an M50 into an EWS-equipped four-cylinder E36 report that it needs wiring work at the EWS module and a suitable DME. See the [EWS guide](/guides/e36-ews-immobilizer-guide/).
 
 ### Gearbox
 
-The M20, M40, M42, M43, M50 and M52 share the **same gearbox bolt pattern**, so the four-cylinder car's gearbox physically bolts to the M50. Owners report the four-cylinder Getrag gearbox works behind an M50, but **its type decides the driveshaft** (see below). See the [gearbox selection guide](/guides/e36-gearbox-selection-swap) for whether it can take the extra torque.
+The M20, M40, M42, M43, M50 and M52 share the **same gearbox bolt pattern**, so the four-cylinder car's gearbox physically bolts to the M50. Owners report the four-cylinder Getrag gearbox works behind an M50, but **its type decides the driveshaft** (see below). See the [gearbox selection guide](/guides/e36-gearbox-selection-swap/) for whether it can take the extra torque.
 
 ### Buy the most complete donor you can
 
@@ -69,7 +69,7 @@ An engine that comes with its harness, DME, alternator, A/C compressor, power st
 - **six-cylinder fan shroud and expansion tank** (the shroud carries the tank), plus the long hose from engine to tank and the short one from tank to radiator
 - **driver's-side lower radiator mount:** owners report the four-cylinder one is too wide for the six-cylinder radiator
 - six-cylinder **auxiliary fan** (it mounts on the bumper side)
-- new water pump, thermostat, cap and clamps: see the [cooling system overhaul](/guides/e36-cooling-system-overhaul)
+- new water pump, thermostat, cap and clamps: see the [cooling system overhaul](/guides/e36-cooling-system-overhaul/)
 
 ### Mounts and chassis
 
@@ -138,4 +138,4 @@ In Slovakia an engine change has to be approved and registered with the vehicle 
 
 *This guide is the cornerstone of the Projekt 36 swap series. We're installing an M50B25 NV into a 1994 E36 316i sedan in Košice, Slovakia. Every step will be documented with photos as we go.*
 
-*→ Related: [M50 vs M50TU vs M52 Comparison](/guides/m50-vs-m50tu-vs-m52-comparison) | [Cooling System Overhaul](/guides/e36-cooling-system-overhaul) | [Swap Wiring Differences](/guides/m43-to-m50-wiring-differences)*
+*→ Related: [M50 vs M50TU vs M52 Comparison](/guides/m50-vs-m50tu-vs-m52-comparison/) | [Cooling System Overhaul](/guides/e36-cooling-system-overhaul/) | [Swap Wiring Differences](/guides/m43-to-m50-wiring-differences/)*

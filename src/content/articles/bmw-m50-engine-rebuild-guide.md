@@ -113,7 +113,7 @@ Use assembly lube on every bearing surface and on the cylinder walls.
 3. **Valves, guides, seats:** check guide wear and the seats before paying for a skim. A valve job, with resurfaced seats and refaced valves, is the norm on a rebuild. Replace all **24 valve stem seals**.
 4. **Hydraulic lifters:** the M50 has no valve clearances to set. If the camshafts have been out, observe Bentley's waiting time before turning the engine: **10 minutes at 20 °C or above, 30 minutes at 10–20 °C, 75 minutes at 0–10 °C**. Expanded lifters can otherwise hold valves open into the pistons.
 
-**VANOS engines:** reseal the VANOS while the head is on the bench. See the [M50TU VANOS guide](/guides/m50tu-vanos-guide).
+**VANOS engines:** reseal the VANOS while the head is on the bench. See the [M50TU VANOS guide](/guides/m50tu-vanos-guide/).
 
 ---
 
@@ -130,12 +130,12 @@ Use assembly lube on every bearing surface and on the cylinder walls.
 | Flywheel (new bolts) | 105 Nm |
 | Cylinder head cover | 10 Nm |
 
-The camshafts have no reassembly timing marks. Timing is set with the crankshaft and camshaft locking tools, then confirmed by turning the engine through two full revolutions and refitting the tools. See the [timing chain guide](/guides/e36-m50-timing-chain-guide) and the [head gasket guide](/guides/e36-m50-head-gasket-replacement) for the procedure and the remaining values.
+The camshafts have no reassembly timing marks. Timing is set with the crankshaft and camshaft locking tools, then confirmed by turning the engine through two full revolutions and refitting the tools. See the [timing chain guide](/guides/e36-m50-timing-chain-guide/) and the [head gasket guide](/guides/e36-m50-head-gasket-replacement/) for the procedure and the remaining values.
 
 ---
 
 ## First start
 
 - Prime the oil system before the first start, so the bearings don't run dry.
-- Fill and bleed the cooling system properly (see the [cooling system guide](/guides/e36-cooling-system-overhaul)).
+- Fill and bleed the cooling system properly (see the [cooling system guide](/guides/e36-cooling-system-overhaul/)).
 - Watch oil pressure, temperature and leaks closely during the first run, and follow your ring maker's break-in advice.

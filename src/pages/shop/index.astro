@@ -9,8 +9,6 @@ import liveProducts from '../../data/merch.json';
 
 const byId = new Map(liveProducts.map((p: any) => [p.id, p]));
 const items = designs.map((d: any) => ({ ...d, live: byId.get(d.productId) }));
-// Printify prices are in the Etsy shop currency, EUR.
-const fmtPrice = (eur: number) => `€${eur.toFixed(2)}`;
 ---
 
 <BaseLayout
@@ -40,7 +38,7 @@ const fmtPrice = (eur: number) => `€${eur.toFixed(2)}`;
             The shop is being put together. It will carry a curated selection of
             projekt36-branded items — designed for E36 owners who appreciate the craft.
           </p>
-          <a href="/guides" class="btn-outline">Browse the guides in the meantime →</a>
+          <a href="/guides/" class="btn-outline">Browse the guides in the meantime →</a>
         </div>
       )}
 
@@ -58,10 +56,7 @@ const fmtPrice = (eur: number) => `€${eur.toFixed(2)}`;
                 {d.blurb && <p class="pc-blurb">{d.blurb}</p>}
                 <div class="pc-footer">
                   {d.live ? (
-                    <>
-                      <span class="pc-price">{fmtPrice(d.live.price)}</span>
-                      <a class="pc-cta" href={d.live.url} target="_blank" rel="noopener">Buy on Etsy →</a>
-                    </>
+                    <a class="pc-cta" href={d.live.url} target="_blank" rel="noopener">Buy on Etsy →</a>
                   ) : (
                     <span class="pc-cta">Listing soon</span>
                   )}
@@ -83,7 +78,7 @@ const fmtPrice = (eur: number) => `€${eur.toFixed(2)}`;
           3, Gnaftis House flat 102, Limassol, Mesa Geitonia, 4003 CY — Cyprus<br />
           <a href="mailto:gpsr@honsonventures.com">gpsr@honsonventures.com</a>
         </div>
-        <a href="/legal#gpsr" class="gpsr-more">Full legal information →</a>
+        <a href="/legal/#gpsr" class="gpsr-more">Full legal information →</a>
       </div>
 
     </div>
@@ -158,7 +153,6 @@ const fmtPrice = (eur: number) => `€${eur.toFixed(2)}`;
   a.pc-cta:hover { color: var(--accent); }
 
   .pc-footer { display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 0.75rem; }
-  .pc-price { font-family: var(--font-mono); font-size: 0.88rem; color: var(--text); font-weight: 600; }
   .pc-cta { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-dim); transition: color 0.15s; }
   .product-card:hover .pc-cta { color: var(--accent); }
 

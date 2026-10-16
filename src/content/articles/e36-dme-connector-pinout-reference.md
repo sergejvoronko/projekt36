@@ -180,5 +180,5 @@ Vacant pins are left out. Note how many functions moved compared with M3.1.
 
 - **Injector or coil complaints:** find the cylinder in the table for your DME, then test from that pin to the component. The pin for "cylinder 1" differs between M3.1 and M3.3.1.
 - **Sensor readings:** the temperature sensors give 0–5 V that changes with temperature. The oxygen sensor fluctuates between 0 and 1 V with the engine running. The crankshaft sensor produces an AC voltage across its two pins while cranking.
-- **Power and grounds first:** before condemning a sensor, check the ECM's supplies (terminal 30, terminal 15, main relay feed) and its ground pins with a voltage-drop test. See the [ground distribution guide](/guides/e36-ground-distribution-guide).
-- **Full circuits:** for wire colours and everything between the ECM and each component, use the electrical wiring diagrams. See [How to read the E36 ETM](/guides/e36-how-to-read-etm).
+- **Power and grounds first:** before condemning a sensor, check the ECM's supplies (terminal 30, terminal 15, main relay feed) and its ground pins with a voltage-drop test. See the [ground distribution guide](/guides/e36-ground-distribution-guide/).
+- **Full circuits:** for wire colours and everything between the ECM and each component, use the electrical wiring diagrams. See [How to read the E36 ETM](/guides/e36-how-to-read-etm/).

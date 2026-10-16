@@ -55,7 +55,7 @@ Relay positions can vary from car to car. Bentley's tip: verify a relay by compa
 
 ### The fuel pump relay and the "priming hum"
 
-On the M50's Bosch DME M3.1 and M3.3.1, Bentley's pin tables state that the DME switches the fuel pump relay **only while the engine is cranking or running**: the crankshaft position signal must be present. So **no pump noise with the ignition just switched on is normal** on these cars, not a fault. To test the pump on its own, Bentley bridges the relay socket's terminals **30 and 87 with a fused jumper**. See the [fuel system guide](/guides/e36-fuel-system-guide).
+On the M50's Bosch DME M3.1 and M3.3.1, Bentley's pin tables state that the DME switches the fuel pump relay **only while the engine is cranking or running**: the crankshaft position signal must be present. So **no pump noise with the ignition just switched on is normal** on these cars, not a fault. To test the pump on its own, Bentley bridges the relay socket's terminals **30 and 87 with a fused jumper**. See the [fuel system guide](/guides/e36-fuel-system-guide/).
 
 ---
 
@@ -113,7 +113,7 @@ Main circuit per fuse; many fuses feed several circuits. This is Bentley's **US-
 
 ## Finding a blown fuse
 
-1. **List what stopped working.** Several unrelated items at once suggest a shared fuse, or a bad ground (see the [ground guide](/guides/e36-ground-distribution-guide)).
+1. **List what stopped working.** Several unrelated items at once suggest a shared fuse, or a bad ground (see the [ground guide](/guides/e36-ground-distribution-guide/)).
 2. **Find the fuse** for that circuit on your lid chart or in the wiring diagrams.
 3. **Ignition off** before pulling fuses or relays. For any other electrical work, also disconnect the battery negative cable (in the boot), observing your car's battery-disconnection cautions. On cars with airbags, follow the airbag precautions first.
 4. **Check it properly:** a hairline crack can hide in the element. Better than looking: measure voltage on **both** sides of the fuse with the circuit switched on.

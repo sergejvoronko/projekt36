@@ -36,7 +36,7 @@ const pillarLabels: Record<string, string> = {
     <h2 id="related-title" class="related-title">Related guides</h2>
     <div class="related-grid">
       {picks.map(a => (
-        <a href={`/guides/${a.id}`} class="related-card">
+        <a href={`/guides/${a.id}/`} class="related-card">
           {a.data.hero && (
             <img
               src={`/heroes/thumb/${a.data.hero}`}

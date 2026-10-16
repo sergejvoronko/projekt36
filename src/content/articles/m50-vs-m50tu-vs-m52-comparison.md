@@ -55,7 +55,7 @@ Built 1992–1996. A **VANOS unit** on the front of the cylinder head varies the
 
 - **Bosch DME M3.3.1** with **two knock sensors** and a Hall-effect camshaft sensor.
 - **Internals change:** single valve springs, 6 mm valve stems and 140 mm rods, so **head and valvetrain parts are not interchangeable** with the non-VANOS engine.
-- The VANOS piston seals age and need resealing: see the [M50TU VANOS guide](/guides/m50tu-vanos-guide).
+- The VANOS piston seals age and need resealing: see the [M50TU VANOS guide](/guides/m50tu-vanos-guide/).
 
 ## M52: the aluminium generation
 
@@ -64,9 +64,9 @@ Built 1995–2000, in the E36 323i/328i from 1996 (OBD2).
 - **Block:** aluminium in most markets. The early **Nikasil** bores wore prematurely on high-sulphur fuel; **iron sleeves** followed from 1998. Original US and Canadian cars kept a **cast-iron** block (except the Z3).
 - **Siemens MS41.1** with OBD2, and single VANOS.
 - **M52B28:** 193 PS and 280 Nm, at 3,950 rpm. The most torque of the three for a naturally aspirated road car.
-- **Buying in Europe:** know which bore surface the block has. Compression and leak-down tests tell you its condition. See the [M52 rebuild guide](/guides/bmw-m52-engine-rebuild-guide).
+- **Buying in Europe:** know which bore surface the block has. Compression and leak-down tests tell you its condition. See the [M52 rebuild guide](/guides/bmw-m52-engine-rebuild-guide/).
 
-The later **M52TU** (1998 on) has double VANOS and different electronics: a different engine for swap purposes. See the [double VANOS guide](/guides/bmw-e36-m52-double-vanos-guide).
+The later **M52TU** (1998 on) has double VANOS and different electronics: a different engine for swap purposes. See the [double VANOS guide](/guides/bmw-e36-m52-double-vanos-guide/).
 
 ---
 
@@ -92,4 +92,4 @@ The later **M52TU** (1998 on) has double VANOS and different electronics: a diff
 
 *This guide is part of the Projekt 36 M50 Engine series. Our build uses the M50B25 Non-VANOS in an E36 316i sedan swap.*
 
-*→ Related: [M43 to M50 parts list](/guides/m43-to-m50-complete-parts-list) | [M50 torque specifications](/guides/e36-m50-torque-specifications) | [Cooling system overhaul](/guides/e36-cooling-system-overhaul)*
+*→ Related: [M43 to M50 parts list](/guides/m43-to-m50-complete-parts-list/) | [M50 torque specifications](/guides/e36-m50-torque-specifications/) | [Cooling system overhaul](/guides/e36-cooling-system-overhaul/)*

@@ -65,8 +65,8 @@ If a hose is cracked or split, replace it. The hoses and clamps are listed on Re
 
 ## What water inside the car can damage
 
-- **Floors and sills:** wet carpet and insulation hold water against the floor for months. That's a direct route to rust. See the [rust map](/guides/e36-rust-map-every-spot).
-- **Electrics:** many modules and connectors sit low in the cabin. On the E36 the central body electronics module is behind the glove compartment and other modules below the dash (Bentley). Water at the ground points causes faults that appear unrelated: see the [ground distribution guide](/guides/e36-ground-distribution-guide).
+- **Floors and sills:** wet carpet and insulation hold water against the floor for months. That's a direct route to rust. See the [rust map](/guides/e36-rust-map-every-spot/).
+- **Electrics:** many modules and connectors sit low in the cabin. On the E36 the central body electronics module is behind the glove compartment and other modules below the dash (Bentley). Water at the ground points causes faults that appear unrelated: see the [ground distribution guide](/guides/e36-ground-distribution-guide/).
 - **Airbag system:** if water has reached airbag components or connectors, have the system checked properly. Don't just dry it and hope.
 
 If you find water in the car, lift the carpets and dry everything thoroughly, not just the surface.

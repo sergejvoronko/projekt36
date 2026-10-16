@@ -67,9 +67,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         Engine swap, wiring, suspension, sound, paint — eleven chapters, one transformation.
       </p>
       <div class="hero-ctas">
-        <a href="/build" class="btn-primary">Build Journal →</a>
-        <a href="/tools" class="btn-outline">Explore Tools</a>
-        <a href="/guides" class="btn-outline">Guides</a>
+        <a href="/build/" class="btn-primary">Build Journal →</a>
+        <a href="/tools/" class="btn-outline">Explore Tools</a>
+        <a href="/guides/" class="btn-outline">Guides</a>
       </div>
     </div>
   </section>
@@ -170,7 +170,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
 
       <div class="bs-cta">
-        <a href="/build" class="btn-primary">Follow the build →</a>
+        <a href="/build/" class="btn-primary">Follow the build →</a>
       </div>
 
     </div>
@@ -187,7 +187,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             From a stock 316i Sedan with a tired M43 to a proper driver's car with an M50 under the bonnet.
             Every decision documented — what worked, what failed, what it cost.
           </p>
-          <a href="/build" class="btn-primary">Start reading →</a>
+          <a href="/build/" class="btn-primary">Start reading →</a>
         </div>
         <div class="chapters-meta">
           <div class="chapter-list">
@@ -238,7 +238,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         ))}
       </div>
       <div class="section-more">
-        <a href="/guides" class="btn-outline">All guides →</a>
+        <a href="/guides/" class="btn-outline">All guides →</a>
       </div>
     </div>
   </section>
@@ -257,7 +257,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <h3 class="diag-title">INPA / EDIABAS</h3>
           <div class="diag-type">SOFTWARE</div>
           <p class="diag-desc">BMW's own dealer diagnostic software. Reads every sensor, every fault code, every live parameter the DME knows. Essential for verifying the M50 swap — confirming O2 readings, idle control, VANOS timing (if TU), and cooling fan triggers.</p>
-          <a href="/guides/e36-inpa-setup-guide" class="diag-link">Setup guide →</a>
+          <a href="/guides/e36-inpa-setup-guide/" class="diag-link">Setup guide →</a>
         </div>
         <div class="diag-card">
           <div class="diag-icon">
@@ -266,7 +266,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <h3 class="diag-title">ADS Serial Interface</h3>
           <div class="diag-type">HARDWARE</div>
           <p class="diag-desc">Not a K+DCAN cable — those won't work on pre-facelift OBD1 cars. You need a true ADS serial interface that connects to the round 20-pin diagnostic connector and speaks BMW's DS2 protocol via RS232.</p>
-          <a href="/guides/e36-obd1-diagnostic-setup" class="diag-link">Which interface to buy →</a>
+          <a href="/guides/e36-obd1-diagnostic-setup/" class="diag-link">Which interface to buy →</a>
         </div>
         <div class="diag-card">
           <div class="diag-icon">
@@ -275,7 +275,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <h3 class="diag-title">Old ThinkPad + RS232</h3>
           <div class="diag-type">SETUP</div>
           <p class="diag-desc">A used ThinkPad T60/T61 with native serial port running Windows XP is the most reliable INPA setup. No USB-serial adapter headaches. Available on bazos.sk for €20–40.</p>
-          <a href="/guides/e36-inpa-setup-guide" class="diag-link">Full setup guide →</a>
+          <a href="/guides/e36-inpa-setup-guide/" class="diag-link">Full setup guide →</a>
         </div>
       </div>
 
@@ -291,7 +291,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
 
       <div class="section-more">
-        <a href="/guides/e36-obd1-diagnostic-setup" class="btn-outline">Read full diagnostic guide →</a>
+        <a href="/guides/e36-obd1-diagnostic-setup/" class="btn-outline">Read full diagnostic guide →</a>
       </div>
     </div>
   </section>
@@ -335,16 +335,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <p class="section-body">
             Wheel fitment, swap checklists, build budget, suspension geometry — tools built around real E36 work.
           </p>
-          <a href="/tools" class="btn-primary">Open tools →</a>
+          <a href="/tools/" class="btn-primary">Open tools →</a>
         </div>
         <div class="tools-mini-grid">
           {[
-            { title: 'Wheel Fitment',   href: '/tools/wheel-fitment' },
-            { title: 'Swap Checklist',  href: '/tools/swap-checklist' },
-            { title: 'Build Budget',    href: '/tools/build-budget' },
-            { title: 'Tire Compare',    href: '/tools/tire-compare' },
-            { title: 'Offset & Spacer', href: '/tools/offset-spacer' },
-            { title: 'Air Suspension',  href: '/tools/air-suspension' },
+            { title: 'Wheel Fitment',   href: '/tools/wheel-fitment/' },
+            { title: 'Swap Checklist',  href: '/tools/swap-checklist/' },
+            { title: 'Build Budget',    href: '/tools/build-budget/' },
+            { title: 'Tire Compare',    href: '/tools/tire-compare/' },
+            { title: 'Offset & Spacer', href: '/tools/offset-spacer/' },
+            { title: 'Air Suspension',  href: '/tools/air-suspension/' },
           ].map(t => (
             <a href={t.href} class="tools-mini-card live">
               <span class="mini-badge">Live</span>
@@ -366,7 +366,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <p class="section-body">
             Apparel and prints from the build. No fast fashion — just clean designs for people who actually wrench.
           </p>
-          <a href="/shop" class="btn-primary">Visit shop →</a>
+          <a href="/shop/" class="btn-primary">Visit shop →</a>
         </div>
         <div class="merch-image">
           <img src="/images/merch-mockup.webp" alt="STATUS: PROJECT. t-shirt and mug" width="600" height="600" loading="lazy" />

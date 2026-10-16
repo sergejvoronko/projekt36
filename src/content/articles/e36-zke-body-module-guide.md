@@ -34,7 +34,7 @@ sources:
 
 On ZKE IV cars, a remote key pad was available on some 1994 and later cars.
 
-**Projekt 36** is a January 1994 build, so it should have ZKE IV, the same month the first **EWS** immobiliser arrived. See the [EWS guide](/guides/e36-ews-immobilizer-guide).
+**Projekt 36** is a January 1994 build, so it should have ZKE IV, the same month the first **EWS** immobiliser arrived. See the [EWS guide](/guides/e36-ews-immobilizer-guide/).
 
 ---
 
@@ -89,7 +89,7 @@ When you turn the key in a front door lock, **microswitches** in the lock cylind
 | 35 | 25A | Central locking, convertible roof, roll-over protection |
 | 43 | 5A | Anti-theft system, airbag, central body electronics |
 
-The full table is in the [fuse and relay reference](/guides/e36-fuse-relay-reference).
+The full table is in the [fuse and relay reference](/guides/e36-fuse-relay-reference/).
 
 ---
 
@@ -103,6 +103,6 @@ The full table is in the [fuse and relay reference](/guides/e36-fuse-relay-refer
 
 **Windows won't close with the key (ZKE IV):** check that the windows work from their switches first; then check the microswitch in the driver's lock.
 
-**Read the fault memory.** The module stores fault codes, readable through the round diagnostic connector in the engine compartment with a suitable tool (see the [INPA setup guide](/guides/e36-inpa-setup-guide)). Clear the codes, test, and read them again.
+**Read the fault memory.** The module stores fault codes, readable through the round diagnostic connector in the engine compartment with a suitable tool (see the [INPA setup guide](/guides/e36-inpa-setup-guide/)). Clear the codes, test, and read them again.
 
-The wiring for your exact car is in the ETM. See [how to read the ETM](/guides/e36-how-to-read-etm).
+The wiring for your exact car is in the ETM. See [how to read the ETM](/guides/e36-how-to-read-etm/).

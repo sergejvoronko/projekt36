@@ -108,4 +108,4 @@ Lowering a strut-suspended car changes the angle of the control arms and tie rod
 - Bring the car at its **normal ride height and load**, with tyre pressures set.
 - After any suspension work (bushings, arms, steering rack, ride height), align again.
 
-See also: [suspension refresh](/guides/e36-suspension-refresh), [steering rack swap](/guides/bmw-e36-steering-rack-swap-e46-purple-tag-z3).
+See also: [suspension refresh](/guides/e36-suspension-refresh/), [steering rack swap](/guides/bmw-e36-steering-rack-swap-e46-purple-tag-z3/).

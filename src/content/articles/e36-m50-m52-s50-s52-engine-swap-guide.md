@@ -58,7 +58,7 @@ These **US engines** are different from the European S50B30/S50B32, which are fa
 | **S52B32 into an OBD2 328i (M52)** | Same generation: Siemens MS41.1 on both. Use the S52's harness and DME. The immobiliser (EWS) pairing between DME, module and keys has to be dealt with. |
 | **S52B32 into an OBD1 car** | Mixing generations. Running an S52 on OBD1 electronics is a known enthusiast route, but it needs adapted sensors and wiring and, above all, a **DME tune made for the engine**. Follow a supplier's documented conversion and tune rather than improvising. |
 
-Whatever the combination, treat the immobiliser first. See the [EWS guide](/guides/e36-ews-immobilizer-guide).
+Whatever the combination, treat the immobiliser first. See the [EWS guide](/guides/e36-ews-immobilizer-guide/).
 
 ---
 
@@ -73,8 +73,8 @@ The donor engine is 25-plus years old. While it's on a stand:
 
 - **Compression and leak-down test** before buying, or at least before installing
 - reseal it: oil pan, rear main seal, oil filter housing, valve cover
-- **reseal the VANOS** (S52: Beisan's single-VANOS kit; see the [M52 single VANOS guide](/guides/bmw-e36-m52-single-vanos-guide))
-- refresh the cooling system: see the [cooling system overhaul](/guides/e36-cooling-system-overhaul)
+- **reseal the VANOS** (S52: Beisan's single-VANOS kit; see the [M52 single VANOS guide](/guides/bmw-e36-m52-single-vanos-guide/))
+- refresh the cooling system: see the [cooling system overhaul](/guides/e36-cooling-system-overhaul/)
 - consider new crankshaft and camshaft sensors while they are easy to reach
 
 Part numbers: look them up by the **donor engine's** VIN on [RealOEM](https://www.realoem.com/).
@@ -83,7 +83,7 @@ Part numbers: look them up by the **donor engine's** VIN on [RealOEM](https://ww
 
 ## Drivetrain
 
-- **Gearbox:** the M3s used ZF five-speeds (S5D 310Z with the S50US, S5D 320Z with the S52). A 325i's Getrag S5D 250G bolts to the engine, since the bolt pattern is shared, but it was never paired with this torque at the factory. See the [gearbox guide](/guides/e36-gearbox-selection-swap).
+- **Gearbox:** the M3s used ZF five-speeds (S5D 310Z with the S50US, S5D 320Z with the S52). A 325i's Getrag S5D 250G bolts to the engine, since the bolt pattern is shared, but it was never paired with this torque at the factory. See the [gearbox guide](/guides/e36-gearbox-selection-swap/).
 - **Driveshaft:** the front section must match the gearbox make (Getrag or ZF).
 - **Clutch and flywheel:** use parts matched to the engine and gearbox you end up with.
 
@@ -92,7 +92,7 @@ Part numbers: look them up by the **donor engine's** VIN on [RealOEM](https://ww
 ## Exhaust, intake, cooling
 
 - Use the **M3's exhaust manifolds** and a matching downpipe and mid-pipe. On OBD2 cars, keep every oxygen sensor the system expects.
-- The S52 accepts the same **M50 intake manifold** upgrade as the M52. See the [M50 manifold guide](/guides/bmw-e36-m50-manifold-conversion-guide).
+- The S52 accepts the same **M50 intake manifold** upgrade as the M52. See the [M50 manifold guide](/guides/bmw-e36-m50-manifold-conversion-guide/).
 - The cooling system needs to be in perfect condition; the radiator suitable for the car's engine bay and the use.
 
 ---

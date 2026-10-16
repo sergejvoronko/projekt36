@@ -23,7 +23,7 @@ sources:
 
 ## Reading the codes with the accelerator pedal (US-spec cars)
 
-This procedure is from the US-market Bentley manual. It needs a working **Check Engine light** in the instrument cluster, which many European-spec cars don't have. Without one, use a diagnostic tool instead (see the [OBD1 diagnostic setup guide](/guides/e36-obd1-diagnostic-setup)). The code meanings below apply either way.
+This procedure is from the US-market Bentley manual. It needs a working **Check Engine light** in the instrument cluster, which many European-spec cars don't have. Without one, use a diagnostic tool instead (see the [OBD1 diagnostic setup guide](/guides/e36-obd1-diagnostic-setup/)). The code meanings below apply either way.
 
 1. Turn the ignition **on** (engine off).
 2. Press the accelerator pedal **fully to the floor five times within five seconds**.
@@ -45,7 +45,7 @@ Fix the cause before erasing: a code that comes back proves the fault is still t
 
 ## OBD1 fault codes (Bentley Table d)
 
-"M3.3.1 only" codes exist only on the VANOS M50 (1993–1995). The 1992 non-VANOS M50 uses DME M3.1. See the [DME pinout reference](/guides/e36-dme-connector-pinout-reference) to tell them apart and to trace the wiring.
+"M3.3.1 only" codes exist only on the VANOS M50 (1993–1995). The 1992 non-VANOS M50 uses DME M3.1. See the [DME pinout reference](/guides/e36-dme-connector-pinout-reference/) to tell them apart and to trace the wiring.
 
 | Code | Meaning | What to check first |
 |---|---|---|
@@ -79,7 +79,7 @@ Fix the cause before erasing: a code that comes back proves the fault is still t
 | **1263** | Evaporative (EVAP) system | The EVAP purge valve |
 | **1264** | Oxygen sensor heater | Oxygen sensor heater and its relay |
 | **1265** | Check Engine lamp (M3.3.1 only) | The bulb and its wiring |
-| **1266** | VANOS (M3.3.1 only) | The VANOS solenoid and the signal to it. See the [M50TU VANOS guide](/guides/m50tu-vanos-guide) |
+| **1266** | VANOS (M3.3.1 only) | The VANOS solenoid and the signal to it. See the [M50TU VANOS guide](/guides/m50tu-vanos-guide/) |
 | **1267** | Air pump relay control (M3.3.1 only) | Air pump relay and wiring, where fitted |
 | **1271** | Ignition coil 1 (M3.3.1 only) | The coil and its wiring |
 | **1272** | Ignition coil 2 (M3.3.1 only) | As above |
@@ -101,7 +101,7 @@ Fix the cause before erasing: a code that comes back proves the fault is still t
 Bentley's basic checks for any driveability fault, worth doing before replacing parts:
 
 1. **Intake leaks:** cracked, loose or disconnected hoses and ducts, and loose clamps. Unmetered air causes lean running and sets the Check Engine light. A classic one is a split in the intake boot between the air flow sensor and the throttle body; a smoke test finds it quickly.
-2. **Battery and grounds:** battery in good condition, cables tight and clean at both ends, ground points tight and corrosion-free, harness connectors undamaged. See the [ground distribution guide](/guides/e36-ground-distribution-guide).
+2. **Battery and grounds:** battery in good condition, cables tight and clean at both ends, ground points tight and corrosion-free, harness connectors undamaged. See the [ground distribution guide](/guides/e36-ground-distribution-guide/).
 3. **Power and ground at the DME,** including its main grounds.
 4. **Fuses, and enough fuel in the tank.** After running out of fuel, pressure takes a moment to build again.
 5. **Spark:** if the tachometer needle bounces while cranking, the ignition is probably working.
@@ -112,6 +112,6 @@ Idle speed, idle mixture and ignition timing **are not adjustable** on these eng
 
 ## Tools
 
-On US-spec cars the pedal method shows the stored codes. On cars without a Check Engine light, and for **live data** (sensor values while the engine runs), you need a BMW-capable diagnostic tool connected to the round 20-pin diagnostic connector under the bonnet. See the [OBD1 diagnostic setup guide](/guides/e36-obd1-diagnostic-setup).
+On US-spec cars the pedal method shows the stored codes. On cars without a Check Engine light, and for **live data** (sensor values while the engine runs), you need a BMW-capable diagnostic tool connected to the round 20-pin diagnostic connector under the bonnet. See the [OBD1 diagnostic setup guide](/guides/e36-obd1-diagnostic-setup/).
 
 Standard OBD2 code readers don't work on OBD1 cars.

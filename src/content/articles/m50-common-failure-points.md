@@ -35,7 +35,7 @@ The head gasket rarely fails on its own; it fails after overheating. Prevent the
 
 **Symptoms:** the temperature gauge reading higher than usual, coolant smell, residue on the tank seams, a falling coolant level, or steam (by then the damage may be done).
 
-**Prevention:** replace the water pump (metal impeller), thermostat, expansion tank and cap, hoses and clamps, and the radiator if it's old. Pressure-test the system: it should hold within **0.1 bar for two minutes**. Full details: [cooling system overhaul](/guides/e36-cooling-system-overhaul).
+**Prevention:** replace the water pump (metal impeller), thermostat, expansion tank and cap, hoses and clamps, and the radiator if it's old. Pressure-test the system: it should hold within **0.1 bar for two minutes**. Full details: [cooling system overhaul](/guides/e36-cooling-system-overhaul/).
 
 ---
 
@@ -61,7 +61,7 @@ The six-cylinder uses **two chains** (primary and secondary), each with a **hydr
 
 **Symptoms:** rattle from the front of the engine, especially at start-up; persistent rattle when warm; pieces of plastic guide in the oil pan.
 
-**Prevention:** inspect during any major work, and replace the tensioners and guides if in doubt. Chain removal on the six-cylinder means taking the **oil pan** off and using the BMW **locking tools**. See the [timing chain guide](/guides/e36-m50-timing-chain-guide).
+**Prevention:** inspect during any major work, and replace the tensioners and guides if in doubt. Chain removal on the six-cylinder means taking the **oil pan** off and using the BMW **locking tools**. See the [timing chain guide](/guides/e36-m50-timing-chain-guide/).
 
 ---
 
@@ -73,13 +73,13 @@ This doesn't apply to the non-VANOS M50 (built up to 8/1992).
 
 **Symptoms:** flat response at lower revs, rough idle, a stored VANOS fault.
 
-**Fix:** reseal the unit with an aftermarket kit. See the [M50TU VANOS guide](/guides/m50tu-vanos-guide) for the BMW test, which needs at least 8.5 mm of travel, and the repair.
+**Fix:** reseal the unit with an aftermarket kit. See the [M50TU VANOS guide](/guides/m50tu-vanos-guide/) for the BMW test, which needs at least 8.5 mm of travel, and the repair.
 
 ---
 
 ## 5. Head gasket: a consequence, not a cause
 
-Head gaskets on these engines usually fail after an **overheating** event. Signs: white exhaust smoke that doesn't clear, coolant loss with no visible leak, milky residue under the oil cap, combustion gas in the coolant. Confirm with a block (combustion leak) tester and a compression test. Repair: [head gasket guide](/guides/e36-m50-head-gasket-replacement).
+Head gaskets on these engines usually fail after an **overheating** event. Signs: white exhaust smoke that doesn't clear, coolant loss with no visible leak, milky residue under the oil cap, combustion gas in the coolant. Confirm with a block (combustion leak) tester and a compression test. Repair: [head gasket guide](/guides/e36-m50-head-gasket-replacement/).
 
 ---
 
@@ -99,7 +99,7 @@ Head gaskets on these engines usually fail after an **overheating** event. Signs
 
 **Symptoms:** hesitation, poor running, mixture faults.
 
-**Checks:** on the 1992 M50's hot-wire meter, the wire should glow about four seconds after a 2,500 rpm shutdown (the burn-off). Rule out **air leaks** after the meter before blaming it. See the [sensor values guide](/guides/e36-obd1-live-data-sensor-reference).
+**Checks:** on the 1992 M50's hot-wire meter, the wire should glow about four seconds after a 2,500 rpm shutdown (the burn-off). Rule out **air leaks** after the meter before blaming it. See the [sensor values guide](/guides/e36-obd1-live-data-sensor-reference/).
 
 ---
 
@@ -125,4 +125,4 @@ Follow BMW's service schedule for your car as a minimum. On an old engine of unk
 
 *This guide is part of the Projekt 36 M50 Engine series. Our M50B25 NV is getting a complete reseal and preventive replacement of all wear items before installation.*
 
-*→ Related: [M50 vs M50TU vs M52 Comparison](/guides/m50-vs-m50tu-vs-m52-comparison) | [Cooling System Overhaul](/guides/e36-cooling-system-overhaul) | [M50 Torque Specifications](/guides/e36-m50-torque-specifications)*
+*→ Related: [M50 vs M50TU vs M52 Comparison](/guides/m50-vs-m50tu-vs-m52-comparison/) | [Cooling System Overhaul](/guides/e36-cooling-system-overhaul/) | [M50 Torque Specifications](/guides/e36-m50-torque-specifications/)*

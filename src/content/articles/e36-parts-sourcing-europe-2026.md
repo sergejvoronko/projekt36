@@ -34,7 +34,7 @@ Prices and shipping terms change constantly, so this guide doesn't quote any: co
 
 Enter the last 7 characters of your VIN (or pick the model, body and market) and browse the exploded diagrams. Each item shows the BMW part number, quantity and the production dates it applies to. Those dates matter on the E36, where many parts changed during production.
 
-**For swap projects:** look up the same group for your car and for the donor model (for example a 316i and a 325i). The differences between the two lists are the parts the swap needs. See the [M43 to M50 parts list](/guides/m43-to-m50-complete-parts-list).
+**For swap projects:** look up the same group for your car and for the donor model (for example a 316i and a 325i). The differences between the two lists are the parts the swap needs. See the [M43 to M50 parts list](/guides/m43-to-m50-complete-parts-list/).
 
 ### bmwfans.info
 
@@ -67,8 +67,8 @@ Search the part number **without spaces** (11 digits) as well as with them: shop
 3. **Combine orders** by system (all cooling parts in one order) to save shipping and avoid forgetting a gasket.
 4. **Don't economise on engine-critical parts:** water pump, thermostat, timing parts, gaskets, bearings. Use established brands.
 5. **Buy used where wear doesn't matter:** engine mount arms, airboxes, brackets, trim, wiring harnesses.
-6. **Inspect used electronics carefully:** a used control module must match your car's version, and some modules (EWS, DME) must be matched to the car. See the [EWS guide](/guides/e36-ews-immobilizer-guide).
+6. **Inspect used electronics carefully:** a used control module must match your car's version, and some modules (EWS, DME) must be matched to the car. See the [EWS guide](/guides/e36-ews-immobilizer-guide/).
 
 ---
 
-*→ Related: [M43 to M50 Swap Parts List](/guides/m43-to-m50-complete-parts-list) | [M50 Common Failure Points](/guides/m50-common-failure-points)*
+*→ Related: [M43 to M50 Swap Parts List](/guides/m43-to-m50-complete-parts-list/) | [M50 Common Failure Points](/guides/m50-common-failure-points/)*

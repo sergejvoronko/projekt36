@@ -13,7 +13,7 @@ sources:
 
 Failing sensors cause a large share of running problems on a 25-year-old M50 or M52. The fastest way to the cause is to know **which sensors your engine actually has**, read the fault memory, then test the suspect against its factory values before buying parts.
 
-For the test values (resistances, voltages), see the [M50 sensor values guide](/guides/e36-obd1-live-data-sensor-reference).
+For the test values (resistances, voltages), see the [M50 sensor values guide](/guides/e36-obd1-live-data-sensor-reference/).
 
 ## TL;DR
 
@@ -46,7 +46,7 @@ Bentley states it plainly: every engine in the manual except the **1992 M50** ha
 
 - The **crankshaft position / rpm sensor** tells the DME engine speed and crank position. Without its signal, the DME sets no ignition point **and doesn't switch the fuel pump relay**, so the engine cranks but won't start. A tachometer that doesn't move while cranking is a clue. On the 1992–1995 M50, the sensor is on the **timing cover**.
 - The **camshaft sensor** tells the DME which cylinder is on its firing stroke.
-- **OBD1 codes:** 1243 (crankshaft sensor) and 1244 (camshaft sensor) are stored by M3.3.1 only. See the [fault code reference](/guides/e36-obd1-fault-code-reference).
+- **OBD1 codes:** 1243 (crankshaft sensor) and 1244 (camshaft sensor) are stored by M3.3.1 only. See the [fault code reference](/guides/e36-obd1-fault-code-reference/).
 
 **Replacing the camshaft position sensor (six-cylinder with VANOS, Bentley):**
 

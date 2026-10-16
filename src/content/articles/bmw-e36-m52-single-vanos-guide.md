@@ -17,7 +17,7 @@ sources:
     url: "https://www.realoem.com/"
 ---
 
-The E36 328i and 323i with the M52 (up to the 1998 update) use **single VANOS**: the intake camshaft timing is varied, the exhaust is fixed. The unit works the same way as on the M50TU and fails the same way: with age, the original O-ring on the VANOS piston hardens and shrinks, the piston can no longer hold oil pressure, and the engine loses response below about 3,000 rpm. This guide covers the M52 specifics; for how VANOS works and the BMW test procedure, see the [M50TU VANOS guide](/guides/m50tu-vanos-guide).
+The E36 328i and 323i with the M52 (up to the 1998 update) use **single VANOS**: the intake camshaft timing is varied, the exhaust is fixed. The unit works the same way as on the M50TU and fails the same way: with age, the original O-ring on the VANOS piston hardens and shrinks, the piston can no longer hold oil pressure, and the engine loses response below about 3,000 rpm. This guide covers the M52 specifics; for how VANOS works and the BMW test procedure, see the [M50TU VANOS guide](/guides/m50tu-vanos-guide/).
 
 ## TL;DR
 
@@ -43,7 +43,7 @@ The decline is gradual, so it is easy to put down to age:
 
 Some units also **rattle** at the front of the cylinder head. That is a separate issue from seal wear, caused by play inside the unit; Beisan sells a separate rattle kit for it.
 
-Before condemning the seals, rule out the other causes: a solenoid or control-unit fault, incorrect base timing, or a unit installed wrongly after earlier work on the sprockets. The BMW test (compressed air on the oil inlet, solenoid energized, at least 8.5 mm of travel) separates these. It is described in the [M50TU VANOS guide](/guides/m50tu-vanos-guide).
+Before condemning the seals, rule out the other causes: a solenoid or control-unit fault, incorrect base timing, or a unit installed wrongly after earlier work on the sprockets. The BMW test (compressed air on the oil inlet, solenoid energized, at least 8.5 mm of travel) separates these. It is described in the [M50TU VANOS guide](/guides/m50tu-vanos-guide/).
 
 ## Parts and tools
 

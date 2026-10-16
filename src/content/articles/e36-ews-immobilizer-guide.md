@@ -88,11 +88,11 @@ According to Bentley:
 
 ## Diagnosing a no-start
 
-1. **Battery first:** a weak battery or bad grounds cause starting faults that look like immobiliser problems. See the [charging guide](/guides/e36-charging-system-diagnosis) and the [ground guide](/guides/e36-ground-distribution-guide).
+1. **Battery first:** a weak battery or bad grounds cause starting faults that look like immobiliser problems. See the [charging guide](/guides/e36-charging-system-diagnosis/) and the [ground guide](/guides/e36-ground-distribution-guide/).
 2. **Try every key.** If a spare key works and the main one doesn't, the main key is the suspect.
 3. **On a pre-1995 EWS car,** remember it's tied to the **central locking**: lock and unlock the car with the key and try again.
 4. **Check the connections** at the ring antenna, the transmitter/receiver module and the control module, especially if anything was disturbed in the dashboard or steering column area.
-5. **Rule out the rest:** EWS shouldn't be blamed by default. If the engine cranks, check for spark and injector pulses. Read the DME's fault codes with a diagnostic tool, or on US-spec OBD1 cars with the accelerator-pedal method (see the [fault code reference](/guides/e36-obd1-fault-code-reference)), and check fuel pressure.
+5. **Rule out the rest:** EWS shouldn't be blamed by default. If the engine cranks, check for spark and injector pulses. Read the DME's fault codes with a diagnostic tool, or on US-spec OBD1 cars with the accelerator-pedal method (see the [fault code reference](/guides/e36-obd1-fault-code-reference/)), and check fuel pressure.
 
 Interrupting a starter, ignition and injection circuit is exactly what this system is designed to do. A diagnostic tool that talks to the immobiliser makes the diagnosis much quicker, if you have access to one.
 
@@ -112,6 +112,6 @@ Whatever route you choose, check how it affects **theft protection, your insuran
 
 ## Related guides
 
-- [M43 to M50 wiring differences](/guides/m43-to-m50-wiring-differences)
-- [M43 to M50 conversion guide](/guides/bmw-e36-m43-to-m50-complete-engine-conversion-guide)
-- [OBD1 fault code reference](/guides/e36-obd1-fault-code-reference)
+- [M43 to M50 wiring differences](/guides/m43-to-m50-wiring-differences/)
+- [M43 to M50 conversion guide](/guides/bmw-e36-m43-to-m50-complete-engine-conversion-guide/)
+- [OBD1 fault code reference](/guides/e36-obd1-fault-code-reference/)

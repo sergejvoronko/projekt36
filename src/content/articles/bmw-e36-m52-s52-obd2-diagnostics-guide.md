@@ -18,7 +18,7 @@ From the 1996 model year, the E36 uses **OBD2**. The M52 and the US-market S52 a
 
 | | |
 | :--- | :--- |
-| **Which cars:** | 1996–1998 E36 with M52 or S52US (Siemens MS41.1). For 1992–1995 OBD1 cars, see the [OBD1 fault code reference](/guides/e36-obd1-fault-code-reference). |
+| **Which cars:** | 1996–1998 E36 with M52 or S52US (Siemens MS41.1). For 1992–1995 OBD1 cars, see the [OBD1 fault code reference](/guides/e36-obd1-fault-code-reference/). |
 | **Connector:** | 16-pin OBD2 socket on the **lower left dash panel**. |
 | **Tools:** | A generic OBD2 scanner reads and clears the engine's generic P-codes; BMW-capable software also reads the BMW-specific faults and the other control units. |
 | **Important:** | On OBD2 cars the fault memory (and the Check Engine light) **can only be reset with a scan tool**. Disconnecting the battery or the DME does **not** erase it (Bentley). |
@@ -44,7 +44,7 @@ The definitions are the standard generic (SAE) meanings; the "where to look" col
 |---|---|---|
 | **P0170 / P0173** | Fuel trim malfunction, bank 1 / bank 2 | **Unmetered air:** intake boot, vacuum hoses, the crankcase vent (CCV) valve and its hoses. Then fuel pressure (M52 spec: 3.5 ± 0.2 bar). |
 | **P0300–P0306** | Random / cylinder-specific misfire | Spark plug and ignition coil of that cylinder (swap a coil to see if the misfire follows it), then the injector and compression |
-| **P0340** | Camshaft position sensor circuit | Sensor wiring and connector, then the sensor. On VANOS engines, also the VANOS (see the [M52 single VANOS guide](/guides/bmw-e36-m52-single-vanos-guide)) |
+| **P0340** | Camshaft position sensor circuit | Sensor wiring and connector, then the sensor. On VANOS engines, also the VANOS (see the [M52 single VANOS guide](/guides/bmw-e36-m52-single-vanos-guide/)) |
 | **P0335** | Crankshaft position sensor circuit | Sensor wiring and connector, then the sensor |
 | **P0442 / P0455** | Evaporative system leak, small / large | Fuel filler cap and its seal first, then the EVAP lines and purge valve |
 | **P0500** | Vehicle speed sensor | The speed signal circuit and its source; check what your car uses with the wiring diagram |
@@ -76,6 +76,6 @@ A **smoke test** of the intake system finds most air leaks in minutes.
 
 ## Related
 
-- [M52 single VANOS guide](/guides/bmw-e36-m52-single-vanos-guide)
-- [Fuel system guide](/guides/e36-fuel-system-guide)
-- [Engine sensor guide](/guides/bmw-e36-m50-m52-engine-sensor-diagnosis-replacement)
+- [M52 single VANOS guide](/guides/bmw-e36-m52-single-vanos-guide/)
+- [Fuel system guide](/guides/e36-fuel-system-guide/)
+- [Engine sensor guide](/guides/bmw-e36-m50-m52-engine-sensor-diagnosis-replacement/)

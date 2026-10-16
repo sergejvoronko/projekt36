@@ -26,7 +26,7 @@ sources:
 | M50, 1992 | Bosch DME M3.1 | Hot-wire mass air flow sensor |
 | M50 with VANOS, 1993–1995 | Bosch DME M3.3.1 | Hot-film mass air flow sensor |
 
-The M52 (1996 on) uses Siemens MS41.1 with OBD2, and is not covered here. Many pin assignments also differ between M3.1 and M3.3.1. See the [DME pinout reference](/guides/e36-dme-connector-pinout-reference).
+The M52 (1996 on) uses Siemens MS41.1 with OBD2, and is not covered here. Many pin assignments also differ between M3.1 and M3.3.1. See the [DME pinout reference](/guides/e36-dme-connector-pinout-reference/).
 
 **Measurement rule:** use a **digital** multimeter. Bentley warns that an analog meter can damage the air flow sensor and that a bulb test light can damage the ECM.
 
@@ -125,12 +125,12 @@ Two values every live-data session should be checked against:
 | Fuel pressure, M50 (pump running, no vacuum) | 3.0 ± 0.2 bar; 0.4–0.7 bar lower at idle |
 | Charging voltage, engine running | 13.5–14.5 V |
 
-See the [fuel system guide](/guides/e36-fuel-system-guide) and the [charging system guide](/guides/e36-charging-system-diagnosis) for the full tests.
+See the [fuel system guide](/guides/e36-fuel-system-guide/) and the [charging system guide](/guides/e36-charging-system-diagnosis/) for the full tests.
 
 ---
 
 ## Reading live data
 
-Live data needs a BMW-capable diagnostic tool on the round **20-pin diagnostic connector** under the bonnet. See the [OBD1 diagnostic setup guide](/guides/e36-obd1-diagnostic-setup). Labels and units differ between tools, so the most reliable baseline is a **recording from your own car when it runs well**: log idle, part throttle and a few full-throttle runs, and compare later readings with that.
+Live data needs a BMW-capable diagnostic tool on the round **20-pin diagnostic connector** under the bonnet. See the [OBD1 diagnostic setup guide](/guides/e36-obd1-diagnostic-setup/). Labels and units differ between tools, so the most reliable baseline is a **recording from your own car when it runs well**: log idle, part throttle and a few full-throttle runs, and compare later readings with that.
 
-For stored fault codes, US-spec cars with a Check Engine light can use the accelerator-pedal blink method; other cars need the diagnostic tool. See the [OBD1 fault code reference](/guides/e36-obd1-fault-code-reference).
+For stored fault codes, US-spec cars with a Check Engine light can use the accelerator-pedal blink method; other cars need the diagnostic tool. See the [OBD1 fault code reference](/guides/e36-obd1-fault-code-reference/).

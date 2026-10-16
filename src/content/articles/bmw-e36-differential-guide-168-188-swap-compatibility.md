@@ -29,7 +29,7 @@ The E36 Compact (318ti, 323ti) and the BMW Z3 utilize an older semi-trailing arm
 
 The differential gear ratio dictates how engine RPM translates to wheel speed. A "shorter" ratio (a numerically higher number, like 3.91) multiplies torque for aggressive acceleration but results in higher cruising RPMs on the highway. A "taller" ratio (a numerically lower number, like 2.93) provides relaxed highway cruising and higher top speed in gear but numbs acceleration.
 
-When altering your ratio, you must account for your transmission gearing. For a deep dive into transmission variants, consult the [BMW E36 Gearbox Selection, ZF, Getrag, and What to Use for an M50 Swap](/guides/e36-gearbox-selection-swap) guide. 
+When altering your ratio, you must account for your transmission gearing. For a deep dive into transmission variants, consult the [BMW E36 Gearbox Selection, ZF, Getrag, and What to Use for an M50 Swap](/guides/e36-gearbox-selection-swap/) guide. 
 
 Below are the most common factory E36 differential ratios:
 
@@ -102,4 +102,4 @@ Tags can be swapped. To verify the internals mechanically, place the differentia
 
 Dropping the differential provides completely unobstructed access to the rear subframe. On a 25-year-old E36, installing a shorter ratio differential and stickier tires exponentially increases the torsional load applied to the chassis mounting points. This is a notorious failure point where the sheet metal floor will literally tear itself apart. 
 
-Before subjecting the car to aggressive launches with your newly acquired gearing, it is highly advised to inspect the floor pan and execute the procedures outlined in the [BMW E36 Chassis Reinforcement Guide: Welding Rear Subframe Plates and Structural Weak Points](/guides/bmw-e36-chassis-reinforcement-subframe-plates-guide), as well as refreshing aging rubber via the [BMW E36 Rear Subframe Bushing Replacement: A Definitive Guide](/guides/bmw-e36-rear-subframe-bushing-replacement-guide). Do the preventative labor while the drivetrain is already on the floor.
+Before subjecting the car to aggressive launches with your newly acquired gearing, it is highly advised to inspect the floor pan and execute the procedures outlined in the [BMW E36 Chassis Reinforcement Guide: Welding Rear Subframe Plates and Structural Weak Points](/guides/bmw-e36-chassis-reinforcement-subframe-plates-guide/), as well as refreshing aging rubber via the [BMW E36 Rear Subframe Bushing Replacement: A Definitive Guide](/guides/bmw-e36-rear-subframe-bushing-replacement-guide/). Do the preventative labor while the drivetrain is already on the floor.

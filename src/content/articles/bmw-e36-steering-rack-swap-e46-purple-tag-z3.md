@@ -76,4 +76,4 @@ Fit new boots while the rack is out. Use part numbers for the exact combination 
 1. **Centre the rack** before connecting the steering column, so the steering wheel ends up straight.
 2. **Check the steering column joint** while it's disconnected: replace a worn flex disc or joint now.
 3. **Bleed the system:** fill the reservoir and turn the steering slowly from lock to lock with the front wheels off the ground, topping up as the level drops. Then run the engine and repeat until no more air comes out. Check every banjo joint for weeping.
-4. **Alignment:** a new rack and tie rods change the toe. Have the car aligned before driving it hard. See the [suspension geometry guide](/guides/bmw-e36-suspension-geometry-setup-guide).
+4. **Alignment:** a new rack and tie rods change the toe. Have the car aligned before driving it hard. See the [suspension geometry guide](/guides/bmw-e36-suspension-geometry-setup-guide/).

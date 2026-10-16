@@ -89,7 +89,7 @@ A note on software sources: INPA and its companion tools are BMW's proprietary p
 ### DME (engine)
 
 - **Fault memory:** read it, note it, fix the causes, then clear it.
-- **Live data:** coolant and air temperature (compare with the real engine temperature), throttle position from idle to full, oxygen sensor switching once warm, battery voltage. Compare with the factory values in the [M50 sensor values guide](/guides/e36-obd1-live-data-sensor-reference): for example **13.5–14.5 V** with the engine running.
+- **Live data:** coolant and air temperature (compare with the real engine temperature), throttle position from idle to full, oxygen sensor switching once warm, battery voltage. Compare with the factory values in the [M50 sensor values guide](/guides/e36-obd1-live-data-sensor-reference/): for example **13.5–14.5 V** with the engine running.
 - **Adaptations:** after cleaning or replacing idle and throttle components, the DME needs to relearn. Bentley notes that after a new idle control valve, the idle settles after about 10 minutes of driving.
 
 ### ABS
@@ -104,7 +104,7 @@ Wheel-speed live data finds which sensor drops out. **Have a passenger watch the
 
 ### EWS
 
-Shows the immobiliser's status and faults. Very useful on a crank-no-start. See the [EWS guide](/guides/e36-ews-immobilizer-guide).
+Shows the immobiliser's status and faults. Very useful on a crank-no-start. See the [EWS guide](/guides/e36-ews-immobilizer-guide/).
 
 ---
 

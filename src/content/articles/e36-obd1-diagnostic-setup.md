@@ -38,7 +38,7 @@ Other control units (ABS, airbag, body electronics and so on) also have diagnosi
 
 ### 1. Accelerator-pedal blink codes (US-spec cars)
 
-Ignition on, accelerator fully down five times within five seconds, and the Check Engine light blinks the DME codes. It costs nothing, but it needs a working Check Engine light, it shows **DME codes only**, and no live data. Details and the code list: [OBD1 fault code reference](/guides/e36-obd1-fault-code-reference).
+Ignition on, accelerator fully down five times within five seconds, and the Check Engine light blinks the DME codes. It costs nothing, but it needs a working Check Engine light, it shows **DME codes only**, and no live data. Details and the code list: [OBD1 fault code reference](/guides/e36-obd1-fault-code-reference/).
 
 ### 2. A dedicated BMW OBD1 code reader
 
@@ -68,7 +68,7 @@ BMW's own workshop diagnostic programs, run on a laptop through an interface to 
 With a working tool, before and after the first start:
 
 - **DME fault memory:** read it, note everything, fix the causes, clear it, and read again after a drive.
-- **Live data vs. factory values:** coolant and air temperature against a known engine temperature, throttle position from idle to full, oxygen sensor switching once warm, and battery voltage at **13.5–14.5 V** running. Compare with the [sensor values guide](/guides/e36-obd1-live-data-sensor-reference).
+- **Live data vs. factory values:** coolant and air temperature against a known engine temperature, throttle position from idle to full, oxygen sensor switching once warm, and battery voltage at **13.5–14.5 V** running. Compare with the [sensor values guide](/guides/e36-obd1-live-data-sensor-reference/).
 - **Other control units:** read the ABS, airbag and body electronics fault memories too. A swap involves a lot of unplugging, and those faults also need clearing.
 
 ---

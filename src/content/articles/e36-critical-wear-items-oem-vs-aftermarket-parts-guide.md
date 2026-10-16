@@ -38,7 +38,7 @@ Much of the E36 cooling system is plastic, and after decades of heat cycles it a
 | Hoses and clamps | OE quality, all at once | Silicone hoses are an option, not a necessity |
 | Viscous fan clutch | OE quality | Check for slip and leaks; store upright |
 
-The full procedure, capacities and torque values are in the [cooling system overhaul](/guides/e36-cooling-system-overhaul).
+The full procedure, capacities and torque values are in the [cooling system overhaul](/guides/e36-cooling-system-overhaul/).
 
 ---
 
@@ -58,7 +58,7 @@ Perished rubber is why many E36s feel vague, shimmy under braking or wander at t
 
 **When fitting new rear shock mounts**, a popular addition is the Z3 rear reinforcement plate (RealOEM **51 71 8 413 359**, listed for the Z3). Confirm fitment for your body. Tighten all rubber bushings at normal ride height.
 
-Details and Bentley torque values: [suspension refresh](/guides/e36-suspension-refresh), [RTAB guide](/guides/bmw-e36-rtab-replacement-oem-poly-spherical), [rear subframe guide](/guides/bmw-e36-rear-subframe-bushing-replacement-guide).
+Details and Bentley torque values: [suspension refresh](/guides/e36-suspension-refresh/), [RTAB guide](/guides/bmw-e36-rtab-replacement-oem-poly-spherical/), [rear subframe guide](/guides/bmw-e36-rear-subframe-bushing-replacement-guide/).
 
 ---
 
@@ -67,9 +67,9 @@ Details and Bentley torque values: [suspension refresh](/guides/e36-suspension-r
 Worn engine, gearbox and differential mounts let the drivetrain move: clunks on and off the throttle, a shifter that rocks back and forth under acceleration, more vibration in the cabin.
 
 - **Engine and gearbox mounts:** fresh OE-quality rubber suits a road car. Stiffer or polyurethane mounts sharpen the response but bring much more vibration at idle.
-- **Differential and rear subframe mounts:** worn ones cause clunks on take-off and gear changes. See the [rear subframe guide](/guides/bmw-e36-rear-subframe-bushing-replacement-guide).
+- **Differential and rear subframe mounts:** worn ones cause clunks on take-off and gear changes. See the [rear subframe guide](/guides/bmw-e36-rear-subframe-bushing-replacement-guide/).
 
-Part numbers differ by engine and gearbox: on an engine swap, use the mounts for the **new** engine and gearbox. See the [M43 to M50 parts list](/guides/m43-to-m50-complete-parts-list).
+Part numbers differ by engine and gearbox: on an engine swap, use the mounts for the **new** engine and gearbox. See the [M43 to M50 parts list](/guides/m43-to-m50-complete-parts-list/).
 
 ---
 
@@ -92,4 +92,4 @@ Pads and discs get attention; the hydraulics often don't.
 2. **Choose the maker:** original equipment makers' parts in their own boxes are usually the best value for genuine quality.
 3. **Avoid unbranded parts** for anything engine-critical or safety-related.
 
-See the [parts sourcing guide](/guides/e36-parts-sourcing-europe-2026) for where to buy in Europe.
+See the [parts sourcing guide](/guides/e36-parts-sourcing-europe-2026/) for where to buy in Europe.

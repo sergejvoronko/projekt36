@@ -58,7 +58,7 @@ BMW numbers each ground point; the same numbers appear in the electrical wiring 
 | G400 | 1992–1998 | Left front side of boot |
 | G404 | 1992–1998 | Left rear side of boot |
 
-**Which circuits use which ground:** look up the circuit in the wiring diagrams for your car. Each diagram shows the ground number the component returns to. See [How to read the E36 ETM](/guides/e36-how-to-read-etm).
+**Which circuits use which ground:** look up the circuit in the wiring diagrams for your car. Each diagram shows the ground number the component returns to. See [How to read the E36 ETM](/guides/e36-how-to-read-etm/).
 
 Besides these points, the **battery negative cable to the body** and the **ground strap between engine and body** carry the heavy currents for starting and charging. Bentley lists a loose or dirty body ground strap as a cause of both slow cranking and charging problems.
 

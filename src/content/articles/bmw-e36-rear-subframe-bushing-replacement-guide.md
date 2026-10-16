@@ -63,7 +63,7 @@ Press the old bushings out and the new ones in with a **purpose-made bushing pre
 
 ### While it's down: reinforcement
 
-With the carrier out, the body mounting points are fully exposed. This is the moment to inspect them for cracks and, on hard-driven cars, to fit **weld-in reinforcement plates**. That is a job for a competent welder. See the [chassis reinforcement guide](/guides/bmw-e36-chassis-reinforcement-subframe-plates-guide).
+With the carrier out, the body mounting points are fully exposed. This is the moment to inspect them for cracks and, on hard-driven cars, to fit **weld-in reinforcement plates**. That is a job for a competent welder. See the [chassis reinforcement guide](/guides/bmw-e36-chassis-reinforcement-subframe-plates-guide/).
 
 ---
 

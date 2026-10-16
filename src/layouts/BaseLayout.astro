@@ -61,11 +61,11 @@ const ogImage   = heroImage ?? defaultOg;
           <img src="/images/projekt36-logo-horizontal.svg" alt="projekt36" class="logo-svg" width="160" height="40" />
         </a>
         <nav class="site-nav" id="site-nav">
-          <a href="/build"   class:list={[{ active: Astro.url.pathname.startsWith('/build')  }]}>Build</a>
-          <a href="/guides"  class:list={[{ active: Astro.url.pathname.startsWith('/guides') }]}>Guides</a>
-          <a href="/tools"   class:list={[{ active: Astro.url.pathname.startsWith('/tools')  }]}>Tools</a>
-          <a href="/shop"    class:list={[{ active: Astro.url.pathname.startsWith('/shop')   }]}>Shop</a>
-          <a href="/about"   class:list={[{ active: Astro.url.pathname.startsWith('/about')  }]}>About</a>
+          <a href="/build/"   class:list={[{ active: Astro.url.pathname.startsWith('/build')  }]}>Build</a>
+          <a href="/guides/"  class:list={[{ active: Astro.url.pathname.startsWith('/guides') }]}>Guides</a>
+          <a href="/tools/"   class:list={[{ active: Astro.url.pathname.startsWith('/tools')  }]}>Tools</a>
+          <a href="/shop/"    class:list={[{ active: Astro.url.pathname.startsWith('/shop')   }]}>Shop</a>
+          <a href="/about/"   class:list={[{ active: Astro.url.pathname.startsWith('/about')  }]}>About</a>
         </nav>
         <button class="nav-toggle" aria-label="Toggle menu" id="nav-toggle" aria-expanded="false">☰</button>
       </div>
@@ -94,23 +94,23 @@ const ogImage   = heroImage ?? defaultOg;
         <span class="footer-guides-label">Popular guides</span>
         <a href="/guides/e36-m50-m52-s50-s52-engine-swap-guide/">M50/M52/S50/S52 Engine Swap</a>
         <a href="/guides/bmw-e36-m52-double-vanos-guide/">Double VANOS Rebuild</a>
-        <a href="/guides/bmw-e36-m50-cooling-system-guide/">Cooling System Overhaul</a>
+        <a href="/guides/e36-cooling-system-overhaul/">Cooling System Overhaul</a>
         <a href="/guides/bmw-m50-engine-rebuild-guide/">M50 Engine Rebuild</a>
         <a href="/guides/bmw-e36-suspension-geometry-setup-guide/">Suspension Geometry Setup</a>
       </nav>
       <nav class="footer-nav">
-        <a href="/build">Build</a>
-        <a href="/guides">Guides</a>
-        <a href="/tools">Tools</a>
-        <a href="/shop">Shop</a>
-        <a href="/about">About</a>
+        <a href="/build/">Build</a>
+        <a href="/guides/">Guides</a>
+        <a href="/tools/">Tools</a>
+        <a href="/shop/">Shop</a>
+        <a href="/about/">About</a>
       </nav>
     </div>
     <div class="footer-legal">
-      <a href="/legal">Privacy &amp; Cookies</a>
-      <a href="/legal#safety">Safety Disclaimer</a>
-      <a href="/legal#gpsr">GPSR</a>
-      <a href="/legal#affiliate">Affiliate Policy</a>
+      <a href="/legal/">Privacy &amp; Cookies</a>
+      <a href="/legal/#safety">Safety Disclaimer</a>
+      <a href="/legal/#gpsr">GPSR</a>
+      <a href="/legal/#affiliate">Affiliate Policy</a>
       <span>© {new Date().getFullYear()} projekt36.com</span>
     </div>
   </footer>

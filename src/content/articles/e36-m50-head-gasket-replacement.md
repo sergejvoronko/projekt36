@@ -121,7 +121,7 @@ The M50 has **hydraulic valve lifters**, so there are no valve clearances to set
 
    Then tighten the head-to-lower-timing-cover bolts to **10 Nm**. The angle stages do the clamping: don't substitute a torque figure for them.
 6. **Return the crankshaft to TDC** in the normal direction of rotation and lock it again with 11 2 300, guiding the primary chain.
-7. **Re-time the chains** as described in Bentley's timing chain procedure (see our [M50 timing chain guide](/guides/e36-m50-timing-chain-guide) for the critical points and torque values).
+7. **Re-time the chains** as described in Bentley's timing chain procedure (see our [M50 timing chain guide](/guides/e36-m50-timing-chain-guide/) for the critical points and torque values).
 8. **Reassemble the rest** in reverse order: intake manifold nuts **15 Nm**, exhaust manifold nuts **20 Nm**, front pipes to manifolds **30 Nm** with new nuts.
 
 **If the camshafts were removed:** the hydraulic lifters expand while the cams are out. Bentley requires a waiting time after the cams are refitted, before the engine is turned, or open valves can hit pistons:
@@ -144,4 +144,4 @@ The M50 has **hydraulic valve lifters**, so there are no valve clearances to set
 
 ## What's next
 
-With the head off, the cooling system is the obvious companion job. On VANOS engines, the VANOS unit is already off the engine, which makes it the right moment to reseal it. See the [cooling system overhaul](/guides/e36-cooling-system-overhaul) for the rest of the cooling refresh.
+With the head off, the cooling system is the obvious companion job. On VANOS engines, the VANOS unit is already off the engine, which makes it the right moment to reseal it. See the [cooling system overhaul](/guides/e36-cooling-system-overhaul/) for the rest of the cooling refresh.

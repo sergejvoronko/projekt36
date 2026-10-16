@@ -55,7 +55,7 @@ const breadcrumbLd = {
   '@context': 'https://schema.org', '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home',  item: siteBase },
-    { '@type': 'ListItem', position: 2, name: 'Tools', item: `${siteBase}/tools` },
+    { '@type': 'ListItem', position: 2, name: 'Tools', item: `${siteBase}/tools/` },
     { '@type': 'ListItem', position: 3, name: 'Air Suspension Checklist', item: `${siteBase}/tools/air-suspension` },
   ],
 };
@@ -78,7 +78,7 @@ const appLd = {
 <script type="application/ld+json" set:html={JSON.stringify(appLd)} slot="head" />
 <div class="tool-page">
   <div class="breadcrumb">
-    <a href="/tools">Tools</a>
+    <a href="/tools/">Tools</a>
     <span class="sep">/</span>
     <span>Air Suspension Checklist</span>
   </div>
@@ -145,9 +145,9 @@ const appLd = {
       <div class="sidebar-card">
         <h4>Related</h4>
         <ul class="tool-links">
-          <li><a href="/tools/swap-checklist">M43→M50 Swap Checklist</a></li>
-          <li><a href="/tools/build-budget">Build Budget Planner</a></li>
-          <li><a href="/guides/e36-air-ride-kit-comparison-2026">Air Ride Kit Comparison</a></li>
+          <li><a href="/tools/swap-checklist/">M43→M50 Swap Checklist</a></li>
+          <li><a href="/tools/build-budget/">Build Budget Planner</a></li>
+          <li><a href="/guides/e36-air-ride-kit-comparison-2026/">Air Ride Kit Comparison</a></li>
         </ul>
       </div>
       <button class="btn-reset" onclick="resetChecklist()">Reset checklist</button>

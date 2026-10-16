@@ -62,9 +62,9 @@ On a 25–30-year-old E36, every rubber bush has hardened or cracked and the dam
 
 - **Dampers and springs:** replace dampers in pairs. Compare ride height side to side: a sagging spring shows up as a lean.
 - **Shock absorber mounts:** fit new upper mounts with the dampers.
-- **Trailing arm bushings:** see the [RTAB guide](/guides/bmw-e36-rtab-replacement-oem-poly-spherical).
+- **Trailing arm bushings:** see the [RTAB guide](/guides/bmw-e36-rtab-replacement-oem-poly-spherical/).
 - **Upper and lower control arms:** complete arms with fresh bushings avoid pressing work.
-- **Subframe and final-drive mounts:** see the [rear subframe guide](/guides/bmw-e36-rear-subframe-bushing-replacement-guide).
+- **Subframe and final-drive mounts:** see the [rear subframe guide](/guides/bmw-e36-rear-subframe-bushing-replacement-guide/).
 
 | Fastener (Bentley) | Torque |
 |---|---|
@@ -98,7 +98,7 @@ Bentley specifies tightening the shock-to-trailing-arm bolt **with the car in it
 | Toe (total) | 0°24′ ± 6′ | 0°24′ ± 6′ |
 | Camber | −1°40′ ± 15′ | −2°0′ ± 15′ |
 
-Ask the alignment shop for a before-and-after printout. More aggressive settings for track use are covered in the [geometry guide](/guides/bmw-e36-suspension-geometry-setup-guide).
+Ask the alignment shop for a before-and-after printout. More aggressive settings for track use are covered in the [geometry guide](/guides/bmw-e36-suspension-geometry-setup-guide/).
 
 ---
 

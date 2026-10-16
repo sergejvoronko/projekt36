@@ -41,7 +41,7 @@ Sensor locations worth knowing on the M50:
 - **Coolant temperature sensor:** left side of the cylinder head, under the intake manifold. It's a dual sensor: one circuit feeds the DME, the other the temperature gauge.
 - **Intake air temperature sensor:** in the intake manifold, behind the throttle position sensor.
 
-Pin assignments for both DMEs are in the [DME pinout reference](/guides/e36-dme-connector-pinout-reference), and sensor test values in the [sensor values guide](/guides/e36-obd1-live-data-sensor-reference).
+Pin assignments for both DMEs are in the [DME pinout reference](/guides/e36-dme-connector-pinout-reference/), and sensor test values in the [sensor values guide](/guides/e36-obd1-live-data-sensor-reference/).
 
 ---
 
@@ -58,7 +58,7 @@ Bentley's timeline:
 **What to do:**
 
 1. **Look for the module** under the left side of the dashboard (on EWS II cars, owners report it under the glovebox area). No module means no EWS work: the donor DME and harness go straight in.
-2. **If your car has EWS,** plan the solution before buying the DME. In an owner's write-up of an M50TU going into a 1995 (EWS II) 318is, a **"red label" DME ending in 413** was used, and wiring changes at the EWS module were still needed. Details are in the [EWS guide](/guides/e36-ews-immobilizer-guide).
+2. **If your car has EWS,** plan the solution before buying the DME. In an owner's write-up of an M50TU going into a 1995 (EWS II) 318is, a **"red label" DME ending in 413** was used, and wiring changes at the EWS module were still needed. Details are in the [EWS guide](/guides/e36-ews-immobilizer-guide/).
 
 A swap that is mechanically complete, cranks well and won't start points at the immobiliser first: check it before chasing sensors.
 
@@ -77,8 +77,8 @@ The DME doesn't switch these. Fit the six-cylinder auxiliary fan and make sure t
 
 ## Post-swap electrical checks
 
-1. **Grounds:** the engine-to-body ground strap, the battery negative cable and the engine ground points. Test with a voltage-drop test under load. See the [ground guide](/guides/e36-ground-distribution-guide).
+1. **Grounds:** the engine-to-body ground strap, the battery negative cable and the engine ground points. Test with a voltage-drop test under load. See the [ground guide](/guides/e36-ground-distribution-guide/).
 2. **DME supplies:** battery voltage at all times (terminal 30), with the key on (terminal 15), and from the main relay. Check at the DME connector following Bentley's safe-testing rules.
-3. **Charging:** the alternator's **D+** wire connected; the charge warning light on with the ignition on; **13.5–14.5 V** at the battery with the engine running. See the [charging guide](/guides/e36-charging-system-diagnosis).
+3. **Charging:** the alternator's **D+** wire connected; the charge warning light on with the ignition on; **13.5–14.5 V** at the battery with the engine running. See the [charging guide](/guides/e36-charging-system-diagnosis/).
 4. **Fuel pump:** the DME switches the fuel pump relay only when it sees the crankshaft signal. No pump while cranking points at the crankshaft sensor or its wiring.
-5. **Fault codes:** read them with a diagnostic tool on the 20-pin connector (the accelerator-pedal blink method only works on cars with a Check Engine light). See the [OBD1 fault code reference](/guides/e36-obd1-fault-code-reference).
+5. **Fault codes:** read them with a diagnostic tool on the 20-pin connector (the accelerator-pedal blink method only works on cars with a Check Engine light). See the [OBD1 fault code reference](/guides/e36-obd1-fault-code-reference/).

@@ -42,9 +42,9 @@ Solutions are a correctly sized **load resistor** across the LED (which gets hot
 ## Diagnosing lighting faults
 
 1. **Check the bulb first**, then its socket for corrosion or burnt contacts.
-2. **Check the fuse and relay.** The fuse and relay positions are in the [fuse and relay reference](/guides/e36-fuse-relay-reference).
-3. **Check the ground.** Lighting faults on an old car are often a corroded ground point. See the [ground distribution guide](/guides/e36-ground-distribution-guide).
+2. **Check the fuse and relay.** The fuse and relay positions are in the [fuse and relay reference](/guides/e36-fuse-relay-reference/).
+3. **Check the ground.** Lighting faults on an old car are often a corroded ground point. See the [ground distribution guide](/guides/e36-ground-distribution-guide/).
 4. **Measure at the bulb** with the light switched on: battery voltage at the supply, good ground on the other side.
 5. **If one warning won't go away** with a good bulb and wiring, suspect the module. A common fault on these modules is **cracked solder joints**, often around the relays soldered to the circuit board. A careful resolder can fix it; otherwise, replace the module with one listed for your car on [RealOEM](https://www.realoem.com/).
 
-To follow any circuit through the module, see [how to read the ETM](/guides/e36-how-to-read-etm).
+To follow any circuit through the module, see [how to read the ETM](/guides/e36-how-to-read-etm/).

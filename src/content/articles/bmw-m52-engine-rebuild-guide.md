@@ -16,7 +16,7 @@ sources:
     url: "https://beisansystems.com/single-vanos-6-cyl-e36-e34-e39/"
 ---
 
-The M52 (E36 328i and 323i from 1995/96) is the M50's successor, and much of a rebuild is the same job. See the [M50 rebuild guide](/guides/bmw-m50-engine-rebuild-guide) for the general order of work. The big difference is the **block**, and it decides what machine work is even possible. This guide covers the M52-specific points.
+The M52 (E36 328i and 323i from 1995/96) is the M50's successor, and much of a rebuild is the same job. See the [M50 rebuild guide](/guides/bmw-m50-engine-rebuild-guide/) for the general order of work. The big difference is the **block**, and it decides what machine work is even possible. This guide covers the M52-specific points.
 
 **Specs policy:** Bentley's E36 manual covers the head, timing and lubrication, but not the crankshaft, bearings and pistons. Internal values not confirmed by two independent sources are marked **"check the workshop manual"**.
 
@@ -97,7 +97,7 @@ Machine-shop basics, as for the M50: chemical clean, crack inspection, deck chec
 - Pressure-test the head for cracks and check it for warpage. Bentley's limits: no more than **0.3 mm** may be removed, minimum height **139.7 mm** (140.0 new). A machined head needs the **0.3 mm thicker gasket**.
 - A valve job, with new valve stem seals, is the norm.
 - The M52 has **hydraulic lifters**. If the camshafts are removed, observe Bentley's waiting time before turning the engine: **10 minutes at 20 °C or above, 30 minutes at 10–20 °C, 75 minutes at 0–10 °C**.
-- **Reseal the single VANOS** while the head is on the bench: Beisan's **BS011** kit. See the [M52 single VANOS guide](/guides/bmw-e36-m52-single-vanos-guide).
+- **Reseal the single VANOS** while the head is on the bench: Beisan's **BS011** kit. See the [M52 single VANOS guide](/guides/bmw-e36-m52-single-vanos-guide/).
 
 ---
 
@@ -114,12 +114,12 @@ Machine-shop basics, as for the M50: chemical clean, crack inspection, deck chec
 | Crankshaft hub (new stretch bolt) | 410 ± 20 Nm |
 | Flywheel (new bolts) | 105 Nm |
 
-Timing is set with the crankshaft locking pin **11 2 300** and camshaft locking tool **11 3 240**. There are no reassembly marks on the camshafts. Confirm the timing by turning the engine through two full revolutions and refitting the tools. See the [timing chain guide](/guides/e36-m50-timing-chain-guide) for the critical points; the M52 procedure follows the same logic.
+Timing is set with the crankshaft locking pin **11 2 300** and camshaft locking tool **11 3 240**. There are no reassembly marks on the camshafts. Confirm the timing by turning the engine through two full revolutions and refitting the tools. See the [timing chain guide](/guides/e36-m50-timing-chain-guide/) for the critical points; the M52 procedure follows the same logic.
 
 ---
 
 ## First start
 
 - **Prime the oil system** before the first start, so the bearings don't run dry.
-- Fill with BMW-approved coolant, 50/50 with distilled water, and bleed the system (see the [cooling system guide](/guides/e36-cooling-system-overhaul)).
+- Fill with BMW-approved coolant, 50/50 with distilled water, and bleed the system (see the [cooling system guide](/guides/e36-cooling-system-overhaul/)).
 - Expect some valvetrain noise for the first moments while the hydraulic lifters and VANOS fill with oil. Watch oil pressure, temperature and leaks closely, and follow your ring maker's break-in advice.

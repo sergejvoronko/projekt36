@@ -148,4 +148,4 @@ On pre-VANOS engines (built up to 8/92) the camshaft tool may not seat correctly
 
 ## What's next
 
-With the front of the engine open, it is the natural moment to look at the water pump, the thermostat and, on VANOS engines, the VANOS seals. See the [M50 vs M50TU vs M52 comparison](/guides/m50-vs-m50tu-vs-m52-comparison) for which engine generation you have.
+With the front of the engine open, it is the natural moment to look at the water pump, the thermostat and, on VANOS engines, the VANOS seals. See the [M50 vs M50TU vs M52 comparison](/guides/m50-vs-m50tu-vs-m52-comparison/) for which engine generation you have.

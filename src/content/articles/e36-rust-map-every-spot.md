@@ -50,7 +50,7 @@ These areas affect the structural integrity of the car. If rust is severe here, 
 
 **Why it matters:** These points carry the whole rear axle. Damage here has to be repaired properly before the car is driven hard.
 
-**Repair difficulty:** High. Proper repair means dropping the subframe, cutting out damaged metal, welding in new metal and usually reinforcement plates. See the [chassis reinforcement guide](/guides/bmw-e36-chassis-reinforcement-subframe-plates-guide) and the [rear subframe guide](/guides/bmw-e36-rear-subframe-bushing-replacement-guide).
+**Repair difficulty:** High. Proper repair means dropping the subframe, cutting out damaged metal, welding in new metal and usually reinforcement plates. See the [chassis reinforcement guide](/guides/bmw-e36-chassis-reinforcement-subframe-plates-guide/) and the [rear subframe guide](/guides/bmw-e36-rear-subframe-bushing-replacement-guide/).
 
 **Reinforcement even without damage:** many experienced owners weld in reinforcement plates on cars that will see more power or hard use, even when the mounts look fine.
 
@@ -78,7 +78,7 @@ These areas affect the structural integrity of the car. If rust is severe here, 
 
 **What to look for:** Missing or broken pads, crushed flanges, rust bubbles around the jacking point. If the area is soft or crumbles, the sill behind it is compromised.
 
-**Repair difficulty:** Medium. With a sound sill, refit new pads and protect the area. If the jacking point is rusted, repair it with the sill. See the [jacking point and sill repair guide](/guides/bmw-e36-jacking-point-rocker-panel-repair-guide).
+**Repair difficulty:** Medium. With a sound sill, refit new pads and protect the area. If the jacking point is rusted, repair it with the sill. See the [jacking point and sill repair guide](/guides/bmw-e36-jacking-point-rocker-panel-repair-guide/).
 
 ---
 

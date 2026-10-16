@@ -91,7 +91,7 @@ Decouples the mass barrier from the metal, stops trim rattling against panels an
 ## Keep these clear
 
 - **Drain holes** in the floor and door bottoms. Water must still be able to get out.
-- **The door's water path:** the outer door skin gets wet on the inside, which is normal. Keep mats away from the bottom edge and drain holes, and **renew the vapour barrier** on the inner door skin (see the [door panel guide](/guides/bmw-e36-door-panel-restoration-guide)).
+- **The door's water path:** the outer door skin gets wet on the inside, which is normal. Keep mats away from the bottom edge and drain holes, and **renew the vapour barrier** on the inner door skin (see the [door panel guide](/guides/bmw-e36-door-panel-restoration-guide/)).
 - **Wiring routes and grommets**, so the harness still fits.
 - **Service openings:** fuel pump access under the rear seat, sender access, and any bolts you'll need again.
 - **Hot areas:** near the exhaust tunnel, use materials rated for the temperature.
@@ -103,7 +103,7 @@ Decouples the mass barrier from the metal, stops trim rattling against panels an
 1. **Clean and degrease** every panel; the butyl only sticks to clean metal.
 2. **Work warm.** In a cold garage, warm the mats and panels so the butyl bonds.
 3. **Roll every mat down firmly** with a hard roller, especially the edges. Air bubbles under the foil reduce the effect.
-4. **Treat rust first.** Never cover rust or bare metal: weld, prime and seal it before deadening goes on. See the [rust map](/guides/e36-rust-map-every-spot).
+4. **Treat rust first.** Never cover rust or bare metal: weld, prime and seal it before deadening goes on. See the [rust map](/guides/e36-rust-map-every-spot/).
 
 ---
 
@@ -120,4 +120,4 @@ The plan is to fit sound deadening **after the metalwork and rust repair** and *
 
 Before-and-after noise measurements will be documented in the build journal when the work is done.
 
-See also: [air ride kit comparison](/guides/e36-air-ride-kit-comparison-2026)
+See also: [air ride kit comparison](/guides/e36-air-ride-kit-comparison-2026/)

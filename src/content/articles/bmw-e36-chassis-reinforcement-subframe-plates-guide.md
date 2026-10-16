@@ -37,7 +37,7 @@ BMW itself lists reinforcement parts for the E36. RealOEM shows **41 11 2 256 49
 
 **Before welding:**
 
-- The rear subframe, exhaust and driveshaft come out. Bentley's removal procedure is in the [rear subframe guide](/guides/bmw-e36-rear-subframe-bushing-replacement-guide).
+- The rear subframe, exhaust and driveshaft come out. Bentley's removal procedure is in the [rear subframe guide](/guides/bmw-e36-rear-subframe-bushing-replacement-guide/).
 - **Remove the fuel tank.** Welding near a fuel tank, fuel lines or vapour is how cars burn down.
 - Strip paint and undercoating to bare metal around the plates.
 
@@ -45,7 +45,7 @@ BMW itself lists reinforcement parts for the E36. RealOEM shows **41 11 2 256 49
 
 ## Trailing arm bracket areas
 
-Weld-in plates that spread the load around the trailing arm brackets are sold for the E36. They are worth fitting with firm RTABs. See the [RTAB guide](/guides/bmw-e36-rtab-replacement-oem-poly-spherical). The floor here is thin, so weld in short stitches with time to cool between them, to limit heat and distortion.
+Weld-in plates that spread the load around the trailing arm brackets are sold for the E36. They are worth fitting with firm RTABs. See the [RTAB guide](/guides/bmw-e36-rtab-replacement-oem-poly-spherical/). The floor here is thin, so weld in short stitches with time to cool between them, to limit heat and distortion.
 
 ---
 
@@ -77,4 +77,4 @@ If you're not a confident welder, this is a job for a professional body or fabri
 
 ## What's next
 
-With the body reinforced, firmer bushings can do their job without tearing the car apart. See the [suspension refresh](/guides/e36-suspension-refresh) and [geometry setup](/guides/bmw-e36-suspension-geometry-setup-guide) guides.
+With the body reinforced, firmer bushings can do their job without tearing the car apart. See the [suspension refresh](/guides/e36-suspension-refresh/) and [geometry setup](/guides/bmw-e36-suspension-geometry-setup-guide/) guides.

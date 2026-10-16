@@ -66,7 +66,7 @@ The M50's **heater hoses connect at the rear of the cylinder head** and run to t
 
 ## Wear parts: replace everything
 
-The cooling system on a donor engine is as old as the engine. While it's on the stand, fit a new water pump (with a metal impeller), thermostat and seal, hoses, clamps and expansion tank cap. See the [cooling system overhaul](/guides/e36-cooling-system-overhaul) for the details and torque values.
+The cooling system on a donor engine is as old as the engine. While it's on the stand, fit a new water pump (with a metal impeller), thermostat and seal, hoses, clamps and expansion tank cap. See the [cooling system overhaul](/guides/e36-cooling-system-overhaul/) for the details and torque values.
 
 ---
 
@@ -90,4 +90,4 @@ If the temperature gauge acts up after the swap, suspect trapped air or a missin
 - Leaks at every new joint after a full heat cycle
 - The auxiliary fan comes on when the coolant is hot or the A/C is switched on
 
-Related: [M43 to M50 parts list](/guides/m43-to-m50-complete-parts-list) and [conversion guide](/guides/bmw-e36-m43-to-m50-complete-engine-conversion-guide).
+Related: [M43 to M50 parts list](/guides/m43-to-m50-complete-parts-list/) and [conversion guide](/guides/bmw-e36-m43-to-m50-complete-engine-conversion-guide/).

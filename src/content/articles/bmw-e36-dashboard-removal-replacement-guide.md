@@ -64,7 +64,7 @@ Label every connector and bag every set of screws as they come out. Photos at ea
 - **Wiring:** remove bad previous-owner wiring (alarms, audio), re-wrap brittle harness tape with cloth harness tape, and run any new wiring (gauges, audio) now.
 - **Heater box flap foam:** if bits of foam blow out of the vents, the flap seals have broken down. With the dash out, the heater box is much easier to reach.
 - **Heater core:** you can replace it now too, although it doesn't require dash removal. Part numbers by VIN on [RealOEM](https://www.realoem.com/) (*Heater and air conditioning*).
-- **Sound deadening** on the bulkhead and front floor. See the [sound deadening guide](/guides/e36-sound-deadening-guide).
+- **Sound deadening** on the bulkhead and front floor. See the [sound deadening guide](/guides/e36-sound-deadening-guide/).
 
 ---
 

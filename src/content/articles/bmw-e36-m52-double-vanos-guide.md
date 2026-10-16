@@ -20,7 +20,7 @@ sources:
 
 The M52TU ("technical update", 1998 on) adds VANOS to the **exhaust** camshaft as well as the intake, which is called double VANOS. Among E36-platform cars it was fitted to the Z3. Most E36 3 Series cars with an M52 have the earlier **single VANOS** engine, so in those cars a double-VANOS M52TU usually means an engine swap. Its weak points are the same as the single unit's, times two: piston seals that harden with age, plus a rattle from play in the piston bearings.
 
-If your engine has single VANOS, see the [M52 single VANOS guide](/guides/bmw-e36-m52-single-vanos-guide) instead.
+If your engine has single VANOS, see the [M52 single VANOS guide](/guides/bmw-e36-m52-single-vanos-guide/) instead.
 
 ## TL;DR
 

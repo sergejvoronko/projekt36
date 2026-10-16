@@ -76,4 +76,4 @@ Bentley's procedure removes the trailing arm and presses the bushing on a bench.
 
 ## While you're there
 
-With the rear apart, check the rear shock mounts, the control arm bushings and the subframe mounts. See the [suspension refresh guide](/guides/e36-suspension-refresh) and the [rear subframe guide](/guides/bmw-e36-rear-subframe-bushing-replacement-guide). Firm RTABs pass more load into the body around their brackets, so look at the floor there too. See the [chassis reinforcement guide](/guides/bmw-e36-chassis-reinforcement-subframe-plates-guide).
+With the rear apart, check the rear shock mounts, the control arm bushings and the subframe mounts. See the [suspension refresh guide](/guides/e36-suspension-refresh/) and the [rear subframe guide](/guides/bmw-e36-rear-subframe-bushing-replacement-guide/). Firm RTABs pass more load into the body around their brackets, so look at the floor there too. See the [chassis reinforcement guide](/guides/bmw-e36-chassis-reinforcement-subframe-plates-guide/).

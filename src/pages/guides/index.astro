@@ -25,12 +25,12 @@ const pillarImages: Record<string, string> = {
 };
 
 const sidebarTools = [
-  { label: 'Wheel Fitment Calculator', href: '/tools/wheel-fitment', badge: 'Calc' },
-  { label: 'Tire Size Compare',        href: '/tools/tire-compare',  badge: 'Calc' },
-  { label: 'Offset & Spacer Tool',     href: '/tools/offset-spacer', badge: 'Calc' },
-  { label: 'M43 → M50 Swap Checklist',href: '/tools/swap-checklist',badge: 'Swap' },
-  { label: 'Build Budget Planner',     href: '/tools/build-budget',  badge: 'Plan' },
-  { label: 'Air Suspension Checklist', href: '/tools/air-suspension',badge: 'Susp' },
+  { label: 'Wheel Fitment Calculator', href: '/tools/wheel-fitment/', badge: 'Calc' },
+  { label: 'Tire Size Compare',        href: '/tools/tire-compare/',  badge: 'Calc' },
+  { label: 'Offset & Spacer Tool',     href: '/tools/offset-spacer/', badge: 'Calc' },
+  { label: 'M43 → M50 Swap Checklist',href: '/tools/swap-checklist/',badge: 'Swap' },
+  { label: 'Build Budget Planner',     href: '/tools/build-budget/',  badge: 'Plan' },
+  { label: 'Air Suspension Checklist', href: '/tools/air-suspension/',badge: 'Susp' },
 ];
 
 const sbId = 'sb-guides';
@@ -89,7 +89,7 @@ const sbId = 'sb-guides';
         </div>
         <div class="articles-list">
           {byPillar[p.key].map(a => (
-            <a href={`/guides/${a.id}`} class="article-row"
+            <a href={`/guides/${a.id}/`} class="article-row"
                data-search={`${a.data.title} ${a.data.description} ${a.data.keywords ?? ''}`.toLowerCase()}>
               {a.data.hero && (
                 <img class="article-thumb" src={`/heroes/thumb/${a.data.hero}`} alt="" width="480" height="275" loading="lazy" decoding="async" />

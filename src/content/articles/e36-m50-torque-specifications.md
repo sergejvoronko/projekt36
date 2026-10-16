@@ -197,4 +197,4 @@ These bolts are designed to stretch during tightening to reach a precise clampin
 
 *Values are for the BMW E36 with the M50 or M52 six-cylinder, from the Bentley E36 service manual. A few figures differ for the M3 and the four-cylinder engines; where your car differs, your workshop manual wins.*
 
-*→ Related: [Cooling System Overhaul](/guides/e36-cooling-system-overhaul) | [Suspension Refresh](/guides/e36-suspension-refresh)*
+*→ Related: [Cooling System Overhaul](/guides/e36-cooling-system-overhaul/) | [Suspension Refresh](/guides/e36-suspension-refresh/)*

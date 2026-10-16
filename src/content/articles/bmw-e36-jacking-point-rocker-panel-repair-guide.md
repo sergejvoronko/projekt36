@@ -93,4 +93,4 @@ Each point has a **plastic jacking pad** fitted into the sill. The pads fall out
 
 If you're new to welding, practise on non-structural panels first, or let a professional body shop do the structural part.
 
-See also: [E36 rust map](/guides/e36-rust-map-every-spot) · [chassis reinforcement](/guides/bmw-e36-chassis-reinforcement-subframe-plates-guide)
+See also: [E36 rust map](/guides/e36-rust-map-every-spot/) · [chassis reinforcement](/guides/bmw-e36-chassis-reinforcement-subframe-plates-guide/)

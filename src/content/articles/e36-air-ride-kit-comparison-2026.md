@@ -41,7 +41,7 @@ sources:
 | Valves and management | Route air to each corner, with presets and control from a controller or phone |
 | Air lines and fittings | Connect it all; quality and routing decide reliability |
 
-The compressor and tank usually go in the boot. Plan the boot layout **before** any boot sound deadening or trim work, so nothing has to be stuck down around them later. See the [sound deadening guide](/guides/e36-sound-deadening-guide).
+The compressor and tank usually go in the boot. Plan the boot layout **before** any boot sound deadening or trim work, so nothing has to be stuck down around them later. See the [sound deadening guide](/guides/e36-sound-deadening-guide/).
 
 ---
 
@@ -83,7 +83,7 @@ Other brands offer E36 air struts as well. Whatever you consider, check the poin
 3. **Management and parts:** what's included and what costs extra (compressor, tank, sensors, controller).
 4. **Installation:** lines away from heat and moving parts, a properly fused power supply, and tight fittings. Leaks are the most common air-ride problem.
 5. **Registration and inspection:** in Slovakia, as across much of the EU, suspension changes may need approval. Ask the inspection authority **before** buying.
-6. **Alignment:** any new suspension, and every ride-height change you drive on regularly, needs an alignment. See the [geometry guide](/guides/bmw-e36-suspension-geometry-setup-guide).
+6. **Alignment:** any new suspension, and every ride-height change you drive on regularly, needs an alignment. See the [geometry guide](/guides/bmw-e36-suspension-geometry-setup-guide/).
 
 ---
 

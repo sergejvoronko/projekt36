@@ -112,7 +112,7 @@ These are the standard German (DIN) terminal designations: you'll see "Kl. 30", 
 
 ## Numbers on the diagram
 
-Components, connectors, fuses and **ground points** each have their own identification number, which corresponds to that part throughout the diagrams. Ground points are numbered **G100, G101, G102…**, and their locations are listed in the [ground distribution guide](/guides/e36-ground-distribution-guide). Fuses are numbered as in the [fuse and relay reference](/guides/e36-fuse-relay-reference).
+Components, connectors, fuses and **ground points** each have their own identification number, which corresponds to that part throughout the diagrams. Ground points are numbered **G100, G101, G102…**, and their locations are listed in the [ground distribution guide](/guides/e36-ground-distribution-guide/). Fuses are numbered as in the [fuse and relay reference](/guides/e36-fuse-relay-reference/).
 
 Most component terminals are also numbered on the part and on its connector, so the pin on the diagram is the pin you probe.
 

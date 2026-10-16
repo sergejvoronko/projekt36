@@ -173,4 +173,4 @@ Trapped air stops coolant circulating properly. If the temperature gauge behaves
 
 *This guide is part of the Projekt 36 M50 Engine series. We're replacing every cooling component on our M50B25 NV while it's on the engine stand before installation into our 316i sedan.*
 
-*→ Related: [M43 to M50 Swap Parts List](/guides/m43-to-m50-complete-parts-list) | [M50 Common Failure Points](/guides/m50-common-failure-points)*
+*→ Related: [M43 to M50 Swap Parts List](/guides/m43-to-m50-complete-parts-list/) | [M50 Common Failure Points](/guides/m50-common-failure-points/)*
