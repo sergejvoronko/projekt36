@@ -31,8 +31,7 @@ export const GET: APIRoute = async ({ params, redirect }) => {
     if (handle && storeUrl) {
       return redirect(`${storeUrl}/products/${handle}`, 302);
     }
-    // Fall back to product detail page if no external URL configured
-    return redirect(`/shop/${id}/`, 302);
+    return redirect('/shop/', 302);
   } catch {
     return redirect('/shop/', 302);
   }
