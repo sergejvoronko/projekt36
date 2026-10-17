@@ -1,3 +1,4 @@
-# Site under construction — not ready for indexing
 User-agent: *
-Disallow: /
+Allow: /
+
+Sitemap: https://projekt36.com/sitemap-index.xml
